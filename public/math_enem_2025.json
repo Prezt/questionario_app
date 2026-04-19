@@ -1,0 +1,961 @@
+[
+  {
+    "number": 136,
+    "text": "Uma pessoa pretende instalar um kit de gás natural veicular (GNV) em seu carro. Na loja que escolheu para realizar a compra e instalação desse kit, havia cinco modelos de cilindro para armazenamento do gás, cujas capacidades, em metro cúbico, eram, respectivamente: 10, 14, 17, 21 e 25. O preço do cilindro é proporcional à sua capacidade. Esse carro rodará 30 km diariamente, 7 dias por semana, e o consumo do GNV é de 1 m³ a cada 13 km rodados. A pessoa escolherá o modelo de cilindro de menor preço e que garanta apenas um abastecimento semanal.\n\nNessas condições, qual será a capacidade, em metro cúbico, do cilindro escolhido por essa pessoa?",
+    "alternatives": {
+      "a": "10",
+      "b": "14",
+      "c": "17",
+      "d": "21",
+      "e": "25"
+    },
+    "images": [],
+    "tags": [
+      "aritmética",
+      "proporcionalidade",
+      "raciocínio lógico"
+    ],
+    "year": 2025,
+    "area": "math",
+    "answer": "c"
+  },
+  {
+    "number": 137,
+    "text": "A reportagem de uma revista abordou o uso de redes sociais pelos internautas brasileiros. Alguns dos dados apurados pela reportagem estão apresentados no infográfico.\n\n[Infográfico - Perfil dos brasileiros nas redes sociais: 90% dos internautas brasileiros acessam redes sociais; Mulheres x Homens: 60% da quantidade de internautas brasileiros que acessam redes sociais são mulheres]\n\nSegundo os dados do infográfico, ao se escolher aleatoriamente um internauta brasileiro no período ao qual se refere a reportagem, a probabilidade de ele ser um homem que acessa alguma rede social é",
+    "alternatives": {
+      "a": "30/90",
+      "b": "36/100",
+      "c": "40/100",
+      "d": "40/90",
+      "e": "46/90"
+    },
+    "images": [
+      "figuras/q137_infografico.png"
+    ],
+    "tags": [
+      "probabilidade",
+      "porcentagem",
+      "leitura de infográfico"
+    ],
+    "year": 2025,
+    "area": "math",
+    "answer": "b"
+  },
+  {
+    "number": 138,
+    "text": "Em um jogo de computador, um cubo se encontra inicialmente posicionado conforme indicado na figura.\n\n[Figura: cubo posicionado no espaço tridimensional com projeções nos planos coordenados xy, xz e yz]\n\nCada deslocamento efetuado por esse cubo se dá sempre em uma das direções definidas pelos três eixos coordenados. Ao se movimentar a partir da posição inicial, esse cubo se aproximou 3 unidades do plano yz, se afastou 5 unidades do plano xz e se aproximou 4 unidades do plano xy.\n\nA figura que apresenta as projeções ortogonais desse cubo sobre os três planos coordenados, após efetuar as movimentações descritas, é",
+    "alternatives": {
+      "a": "[Projeções ortogonais - opção A]",
+      "b": "[Projeções ortogonais - opção B]",
+      "c": "[Projeções ortogonais - opção C]",
+      "d": "[Projeções ortogonais - opção D]",
+      "e": "[Projeções ortogonais - opção E]"
+    },
+    "images": [
+      "figuras/q138_enunciado.png",
+      "figuras/q138_alt_a.png",
+      "figuras/q138_alt_b.png",
+      "figuras/q138_alt_c.png",
+      "figuras/q138_alt_d.png",
+      "figuras/q138_alt_e.png"
+    ],
+    "tags": [
+      "geometria espacial",
+      "geometria analítica",
+      "projeções ortogonais"
+    ],
+    "year": 2025,
+    "area": "math",
+    "answer": "e"
+  },
+  {
+    "number": 139,
+    "text": "No entorno de uma lagoa circular, cujo raio mede 1 km, há uma ciclovia. Devido aos frequentes roubos de bicicleta, a prefeitura planeja alocar policiais em posições estratégicas para patrulhar essa ciclovia, de forma a torná-la totalmente protegida. Um ponto da ciclovia é considerado protegido se houver pelo menos um policial a, no máximo, 200 m de distância daquele ponto, posicionado sobre a ciclovia. A figura ilustra um ponto P sobre a ciclovia, que estará protegido se houver pelo menos um policial posicionado sobre a região de cor cinza escuro.\n\nDesconsidere a largura da pista da ciclovia e utilize 3 como aproximação para π.\n\n[Figura: círculo com raio de 1 km representando a lagoa, com um arco de 200 m de cada lado do ponto P indicando a região protegida]\n\nNessas condições, a quantidade mínima necessária de policiais a serem alocados ao longo dessa ciclovia para torná-la protegida é",
+    "alternatives": {
+      "a": "4.",
+      "b": "8.",
+      "c": "15.",
+      "d": "30.",
+      "e": "60."
+    },
+    "images": [
+      "figuras/q139_ciclovia.png"
+    ],
+    "tags": [
+      "geometria plana",
+      "comprimento de circunferência",
+      "raciocínio lógico"
+    ],
+    "year": 2025,
+    "area": "math",
+    "answer": "c"
+  },
+  {
+    "number": 140,
+    "text": "Em um laboratório, um recipiente contém 10 litros de uma solução composta apenas pelas substâncias S₁ e S₂. Dessa solução, 99,95% é de S₁. Uma quantidade de S₁ será retirada dessa solução, mantendo a quantidade inicial de S₂, de modo que 99,90% da nova solução seja de S₁.\n\nQual é a quantidade de S₁, em litro, que será retirada?",
+    "alternatives": {
+      "a": "0,0050",
+      "b": "0,0100",
+      "c": "0,5000",
+      "d": "4,9775",
+      "e": "5,0000"
+    },
+    "images": [],
+    "tags": [
+      "porcentagem",
+      "equações",
+      "concentração de soluções"
+    ],
+    "year": 2025,
+    "area": "math",
+    "answer": "e"
+  },
+  {
+    "number": 141,
+    "text": "Uma distribuidora de combustível possui caminhões-tanque com capacidade de 30 000 litros cada. Em qualquer transporte realizado por esses caminhões, um mesmo volume de combustível é descartado, pois fica com muitas impurezas. Esse volume descartado independe da quantidade transportada.\n\nUm posto de combustível encomendou 10 000 litros de gasolina dessa distribuidora, que enviou 10 200 litros, considerando o volume descartado no transporte. Mesmo assim, a quantidade de gasolina entregue ao posto foi de 9 900 litros.\n\nEm um novo pedido, esse posto solicitou que fosse entregue exatamente o dobro do volume de gasolina encomendado no pedido anterior.\n\nUtilizando o mesmo caminhão da entrega anterior, qual é o volume mínimo de gasolina, em litro, que a distribuidora deverá enviar para garantir a entrega da quantidade encomendada nesse novo pedido?",
+    "alternatives": {
+      "a": "20 100",
+      "b": "20 200",
+      "c": "20 300",
+      "d": "20 400",
+      "e": "20 600"
+    },
+    "images": [],
+    "tags": [
+      "aritmética",
+      "raciocínio lógico",
+      "resolução de problemas"
+    ],
+    "year": 2025,
+    "area": "math",
+    "answer": "c"
+  },
+  {
+    "number": 142,
+    "text": "Uma empresa de tecnologia vai padronizar a velocidade de conexão de internet que oferece a seus clientes em dez cidades. A direção da empresa decide que seu novo padrão de velocidade de referência será a mediana dos valores das velocidades de referência de conexões nessas dez cidades. Esses valores, em megabyte por segundo (MB/s), são apresentados no quadro.\n\n| Cidades | Velocidade de referência (MB/s) |\n|---------|--------------------------------|\n| C1 | 390 |\n| C2 | 380 |\n| C3 | 320 |\n| C4 | 390 |\n| C5 | 340 |\n| C6 | 380 |\n| C7 | 390 |\n| C8 | 400 |\n| C9 | 350 |\n| C10 | 360 |\n\nA velocidade de referência, em megabyte por segundo, a ser adotada por essa empresa é",
+    "alternatives": {
+      "a": "360.",
+      "b": "370.",
+      "c": "380.",
+      "d": "390.",
+      "e": "400."
+    },
+    "images": [],
+    "tags": [
+      "estatística",
+      "mediana",
+      "medidas de tendência central"
+    ],
+    "year": 2025,
+    "area": "math",
+    "answer": "c"
+  },
+  {
+    "number": 143,
+    "text": "Na cantina de uma escola, há cinco alimentos vendidos em pacotes com diferentes quantidades de porções.\n\nAs informações nutricionais contidas nos rótulos desses produtos estão indicadas nas imagens.\n\n[Figura: rótulos dos produtos com informações nutricionais]\n\nBatata chips: Pacote com 3 porções de 50 g - 170 mg de sódio por porção\nPalitos salgados: Pacote com 4 porções de 20 g - 501 mg de sódio por porção\nBiscoito multigrãos: Pacote com 8 porções de 25 g - 264 mg de sódio por porção\nBiscoito de polvilho: Pacote com 6 porções de 15 g - 175 mg de sódio por porção\nBiscoito de água e sal: Pacote com 5 porções de 40 g - 166 mg de sódio por porção\n\nUma estudante opta sempre pelo alimento com a menor quantidade total de sódio por pacote.\n\nQual desses produtos deve ser o escolhido pela estudante?",
+    "alternatives": {
+      "a": "Batata chips.",
+      "b": "Palitos salgados.",
+      "c": "Biscoito multigrãos.",
+      "d": "Biscoito de polvilho.",
+      "e": "Biscoito de água e sal."
+    },
+    "images": [
+      "figuras/q143_rotulos.png"
+    ],
+    "tags": [
+      "aritmética",
+      "multiplicação",
+      "resolução de problemas"
+    ],
+    "year": 2025,
+    "area": "math",
+    "answer": "a"
+  },
+  {
+    "number": 144,
+    "text": "Uma fábrica utilizou uma impressora 3D para produzir o protótipo de uma peça. O protótipo tem forma de um poliedro convexo, obtido pela justaposição de dois sólidos distintos, um com a forma de um prisma hexagonal regular reto e o outro com a forma de um tronco de pirâmide hexagonal reta. A base maior do tronco de pirâmide coincide com uma das bases do prisma.\n\nApós a impressão do protótipo, ele foi encaminhado ao setor de customização para realização da pintura de sua superfície. O critério definido para realização da pintura considera que faces congruentes entre si devem ser pintadas com uma mesma cor, e faces não congruentes entre si devem apresentar cores distintas.\n\nQual é a quantidade de cores utilizadas para pintar o protótipo?",
+    "alternatives": {
+      "a": "9",
+      "b": "8",
+      "c": "6",
+      "d": "4",
+      "e": "3"
+    },
+    "images": [],
+    "tags": [
+      "geometria espacial",
+      "poliedros",
+      "prisma",
+      "tronco de pirâmide"
+    ],
+    "year": 2025,
+    "area": "math",
+    "answer": "d"
+  },
+  {
+    "number": 145,
+    "text": "Pesquisas na área de neurobiologia confirmam que a prática meditativa é responsável por diminuir consideravelmente a frequência respiratória para praticantes avançados, que, após iniciarem a meditação, têm suas frequências respiratórias reduzidas até se estabilizarem em um nível mais baixo. O gráfico apresenta a relação da frequência respiratória, em incursões de respirações por minuto (rpm), em relação ao tempo, em minuto, de um praticante avançado, em que (f₁) representa a frequência no instante t₁, no qual se inicia a prática meditativa; e (f₂), a frequência no instante t₂, a partir do qual esta se estabiliza durante a meditação.\n\n[Gráfico: Frequência respiratória (rpm) x Tempo (min). A curva se mantém em f₁ até t₁ (início da prática meditativa), depois decresce até t₂, onde se estabiliza em f₂]\n\nA partir do instante t₁, em que se inicia a prática meditativa, o comportamento da frequência respiratória, em relação ao tempo,",
+    "alternatives": {
+      "a": "mantém-se constante.",
+      "b": "é diretamente proporcional ao tempo.",
+      "c": "é inversamente proporcional ao tempo.",
+      "d": "diminui até o instante t₂, a partir do qual se torna constante.",
+      "e": "diminui de forma proporcional ao tempo, tanto entre t₁ e t₂ quanto após t₂."
+    },
+    "images": [
+      "figuras/q145_grafico.png"
+    ],
+    "tags": [
+      "funções",
+      "análise de gráficos",
+      "interpretação"
+    ],
+    "year": 2025,
+    "area": "math",
+    "answer": "d"
+  },
+  {
+    "number": 146,
+    "text": "No atletismo, um grande desafio da prova de 100 metros rasos é a sua conclusão num tempo abaixo da marca de referência dos 10,00 segundos. Vários atletas já alcançaram esse feito. Em 2009, o jamaicano Usain Bolt estabeleceu o recorde mundial masculino dessa prova, com o tempo de 9,58 segundos.\n\nQual é a diferença, em segundo, entre a marca de referência e a marca estabelecida por Usain Bolt em 2009?",
+    "alternatives": {
+      "a": "0,02",
+      "b": "0,42",
+      "c": "0,52",
+      "d": "1,02",
+      "e": "1,42"
+    },
+    "images": [],
+    "tags": [
+      "aritmética",
+      "números decimais",
+      "subtração"
+    ],
+    "year": 2025,
+    "area": "math",
+    "answer": "b"
+  },
+  {
+    "number": 147,
+    "text": "Uma escola de idiomas oferece cursos de inglês, espanhol, francês e alemão. Os gráficos apresentam a distribuição percentual das matrículas, por idioma, em 2023, e a distribuição da quantidade de matrículas, por idioma, em 2024.\n\n[Gráfico de pizza - Porcentagem de matrículas por idioma - 2023: Inglês 60%, Espanhol 25%, Francês 10%, Alemão 5%]\n[Gráfico de barras - Quantidade de matrículas por idioma - 2024: Inglês 280, Espanhol 80, Francês 20, Alemão 20]\n\nPara planejar as atividades de 2025, o gerente da escola estimou que o total de matrículas será o mesmo de 2024, e a distribuição percentual das matrículas, por idioma, será igual à registrada em 2023.\n\nSegundo essa estimativa, o número de matrículas no curso de francês para o ano de 2025 será",
+    "alternatives": {
+      "a": "2.",
+      "b": "12.",
+      "c": "20.",
+      "d": "22.",
+      "e": "40."
+    },
+    "images": [
+      "figuras/q147_graficos.png"
+    ],
+    "tags": [
+      "porcentagem",
+      "leitura de gráficos",
+      "estatística"
+    ],
+    "year": 2025,
+    "area": "math",
+    "answer": "e"
+  },
+  {
+    "number": 148,
+    "text": "O controle remoto de um carrinho de brinquedo vem equipado com uma tela que ajusta automaticamente a escala empregada na exibição de cada deslocamento. A tela apresenta a imagem do deslocamento, a escala utilizada na geração dessa imagem e o comprimento desse deslocamento, em centímetro, em conformidade com a escala empregada. As figuras representam a tela do controle remoto exibindo os dados de cinco deslocamentos realizados por esse carrinho.\n\n[Figura: cinco telas de controle remoto]\nI: 9 cm, escala 1:100 (pontos A e B)\nII: 5 cm, escala 1:300 (pontos B e C)\nIII: 5 cm, escala 1:600 (pontos C e D)\nIV: 3 cm, escala 1:700 (pontos D e E)\nV: 2 cm, escala 1:1000 (pontos E e F)\n\nA opção que indica o deslocamento de maior comprimento realizado pelo carrinho de brinquedo é",
+    "alternatives": {
+      "a": "I.",
+      "b": "II.",
+      "c": "III.",
+      "d": "IV.",
+      "e": "V."
+    },
+    "images": [
+      "figuras/q148_telas.png"
+    ],
+    "tags": [
+      "escala",
+      "proporcionalidade",
+      "razão"
+    ],
+    "year": 2025,
+    "area": "math",
+    "answer": "c"
+  },
+  {
+    "number": 149,
+    "text": "A cúpula pentagonal giralongada é um poliedro de Johnson, cujas faces são polígonos regulares, mas que não é um poliedro de Platão, de Arquimedes, prisma ou antiprisma.\n\nAs figuras apresentam esse poliedro em duas posições e uma de suas planificações.\n\n[Figuras: cúpula pentagonal giralongada em duas vistas e sua planificação, composta por um pentágono (topo), triângulos, quadrados e um decágono (base)]\n\nQuantos vértices tem esse poliedro?",
+    "alternatives": {
+      "a": "21",
+      "b": "25",
+      "c": "55",
+      "d": "80",
+      "e": "110"
+    },
+    "images": [
+      "figuras/q149_poliedro.png"
+    ],
+    "tags": [
+      "geometria espacial",
+      "poliedros",
+      "relação de Euler"
+    ],
+    "year": 2025,
+    "area": "math",
+    "answer": "b"
+  },
+  {
+    "number": 150,
+    "text": "Uma fábrica de tijolos ecológicos com 3 funcionários, cada um trabalhando 6 horas diárias, produz 720 unidades por dia. Para atender ao crescimento da demanda por esse tipo de tijolo, essa fábrica passou a ter 5 funcionários, cada um trabalhando 9 horas por dia, aumentando, assim, sua capacidade de produção. Todos os funcionários produzem igual quantidade de tijolos a cada hora, independentemente de trabalharem 6 ou 9 horas diárias.\n\nO número de tijolos fabricados diariamente após o aumento da capacidade de produção é",
+    "alternatives": {
+      "a": "800.",
+      "b": "1 080.",
+      "c": "1 200.",
+      "d": "1 800.",
+      "e": "2 520."
+    },
+    "images": [],
+    "tags": [
+      "regra de três composta",
+      "proporcionalidade"
+    ],
+    "year": 2025,
+    "area": "math",
+    "answer": "d"
+  },
+  {
+    "number": 151,
+    "text": "Para acompanhar o fluxo de visitantes em seu prédio, uma empresa estabeleceu um código de identificação para a visitação. De acordo com a regra estabelecida, cada visitante será identificado com um código sequencial numérico com 7 dígitos, determinado, da esquerda para a direita, da seguinte forma:\n\n• o primeiro dígito indica o andar ao qual o visitante se dirige, que é um número de 1 a 4;\n• os dois próximos dígitos correspondem ao número do setor da empresa ao qual o visitante se destina. Esse número varia de 01 a 20;\n• os três dígitos seguintes correspondem ao número do funcionário da empresa com quem o visitante irá se reunir. Esse número varia de 001 a 135;\n• o último dígito indica se o visitante chegou à empresa pela manhã, dígito 0, ou à tarde, dígito 1.\n\nUm visitante chegou à empresa às 10 horas da manhã para se reunir com o funcionário identificado pelo número 109, que trabalha no setor 08 da empresa, localizado no 2º andar.\n\nO código de identificação desse visitante é",
+    "alternatives": {
+      "a": "0109082.",
+      "b": "0281090.",
+      "c": "1010982.",
+      "d": "2081090.",
+      "e": "2810910."
+    },
+    "images": [],
+    "tags": [
+      "raciocínio lógico",
+      "sistema de numeração",
+      "resolução de problemas"
+    ],
+    "year": 2025,
+    "area": "math",
+    "answer": "d"
+  },
+  {
+    "number": 152,
+    "text": "Quatro candidatos se apresentaram para realizar a prova de um concurso. Antes de iniciar a prova, os celulares dos quatro candidatos foram recolhidos pelo aplicador, que os guardou, cada um, dentro de um envelope preto. Ao término da prova, o aplicador devolveu os quatro envelopes com os celulares aos quatro candidatos, de maneira aleatória, já que não havia feito a identificação dos envelopes.\n\nA probabilidade de que todos os candidatos tenham recebido de volta os envelopes com os seus respectivos celulares é",
+    "alternatives": {
+      "a": "1/2",
+      "b": "1/10",
+      "c": "1/16",
+      "d": "1/24",
+      "e": "1/256"
+    },
+    "images": [],
+    "tags": [
+      "probabilidade",
+      "análise combinatória",
+      "permutação"
+    ],
+    "year": 2025,
+    "area": "math",
+    "answer": "d"
+  },
+  {
+    "number": 153,
+    "text": "Em um jogo digital, há três personagens: um herói e dois vilões. A programação é feita de tal forma que o herói sempre será atacado pelo vilão que estiver mais próximo dele. Uma das maneiras de \"confundir\" os vilões é movimentar o herói por trajetórias que o mantenha equidistante dos vilões, gerando indefinição entre eles e, com isso, não sendo atacado.\n\nPara a programação de uma das etapas desse jogo, o programador considerou, no plano cartesiano, o quadrado STUV como a região de movimentação dos personagens, onde V e T representam as posições fixas dos vilões, e S, a posição inicial do herói, como apresentado na figura.\n\n[Figura: plano cartesiano com o quadrado STUV, onde S(6;2), V(8;6), T está à esquerda e U está acima]\n\nQual é a equação da trajetória em que o herói poderá se movimentar sem ser atacado?",
+    "alternatives": {
+      "a": "y = −3x + 20",
+      "b": "y = −3x + 16",
+      "c": "y = −3x − 20",
+      "d": "y = 3x + 16",
+      "e": "y = 3x − 16"
+    },
+    "images": [
+      "figuras/q153_plano.png"
+    ],
+    "tags": [
+      "geometria analítica",
+      "mediatriz",
+      "equação da reta"
+    ],
+    "year": 2025,
+    "area": "math",
+    "answer": "a"
+  },
+  {
+    "number": 154,
+    "text": "Uma livraria comercializa livros dos seguintes gêneros literários: ficção científica, autoajuda, romance e biografia. O gráfico apresenta o estoque dos livros que essa livraria tem, por gênero literário e por nacionalidade do autor, bem como a demanda por gênero literário, obtida por meio de uma enquete feita com seus clientes habituais.\n\n[Gráfico: Estoque e demanda por livros - mostra barras para Autor brasileiro e Autor estrangeiro, além de uma linha para Demanda, por gênero (Ficção, Autoajuda, Romance, Biografia). Valores aproximados: Ficção - 80 brasileiro, 120 estrangeiro, demanda 160; Autoajuda - 50 brasileiro, 80 estrangeiro, demanda 135; Romance - 40 brasileiro, 105 estrangeiro, demanda 140; Biografia - 45 brasileiro, 50 estrangeiro, demanda 80]\n\nO gerente da livraria fará a encomenda de novos exemplares somente do gênero cuja quantidade em estoque seja insuficiente para atender a demanda constatada pela enquete.\n\nO gênero de livro do qual o gerente deverá encomendar mais exemplares é",
+    "alternatives": {
+      "a": "ficção, pois é o que apresenta maior demanda.",
+      "b": "biografia, pois é o gênero que tem a menor demanda.",
+      "c": "autoajuda, pois a quantidade em estoque é inferior à demanda.",
+      "d": "biografia, pois é o gênero que tem a menor quantidade de livros em estoque.",
+      "e": "romance, pois é o que apresenta o menor estoque de livros de autores brasileiros."
+    },
+    "images": [
+      "figuras/q154_grafico.png"
+    ],
+    "tags": [
+      "leitura de gráficos",
+      "estatística",
+      "interpretação de dados"
+    ],
+    "year": 2025,
+    "area": "math",
+    "answer": "c"
+  },
+  {
+    "number": 155,
+    "text": "Dez casais fundaram um grupo de dança e decidiram constituir uma diretoria com três cargos: presidente, secretário e tesoureiro. Para maior representatividade, decidiu-se que no máximo uma pessoa por casal poderá ocupar um cargo nessa diretoria.\n\nQuantas diretorias diferentes podem ser constituídas por esses 10 casais?",
+    "alternatives": {
+      "a": "10 × 9 × 8",
+      "b": "20 × 18 × 16",
+      "c": "20 × 19 × 18",
+      "d": "10 × 9 × 8 × 2",
+      "e": "20 × 18 × 16 × 2"
+    },
+    "images": [],
+    "tags": [
+      "análise combinatória",
+      "princípio multiplicativo",
+      "arranjo"
+    ],
+    "year": 2025,
+    "area": "math",
+    "answer": "b"
+  },
+  {
+    "number": 156,
+    "text": "Um artista, que costuma fazer desenhos com areia na praia, pediu a um banhista que fizesse um pequeno desenho, que serviria de esboço para uma grande obra de arte a ser feita na areia. Esse desenho está representado na figura.\n\n[Figura: desenho de um sol com raios, medindo 20 cm × 20 cm]\n\nApós a conclusão, a obra de arte obtida manteve as mesmas proporções do desenho feito pelo banhista, sendo que as medidas indicadas na figura foram ampliadas para 30 m.\n\nEm qual escala esse desenho representa a obra de arte?",
+    "alternatives": {
+      "a": "1 : 1,5",
+      "b": "1 : 2,25",
+      "c": "1 : 10",
+      "d": "1 : 100",
+      "e": "1 : 150"
+    },
+    "images": [
+      "figuras/q156_sol.png"
+    ],
+    "tags": [
+      "escala",
+      "proporcionalidade",
+      "conversão de unidades"
+    ],
+    "year": 2025,
+    "area": "math",
+    "answer": "e"
+  },
+  {
+    "number": 157,
+    "text": "O cortisol é um hormônio produzido pelas glândulas adrenais e pode ser considerado um importante marcador do estresse fisiológico. Em um estudo desenvolvido com enfermeiros, foi verificado que a concentração de cortisol salivar em um dia de trabalho, denotada por T, era, em média, 1,59 vezes a concentração de cortisol salivar em um dia de folga, denotada por F.\n\nNesse estudo, a relação obtida entre T e F foi",
+    "alternatives": {
+      "a": "T = 1,59 + F",
+      "b": "F = 1,59 + T",
+      "c": "T/F = 1,59",
+      "d": "F/T = 1,59",
+      "e": "F · T = 1,59"
+    },
+    "images": [],
+    "tags": [
+      "razão",
+      "proporção",
+      "equações"
+    ],
+    "year": 2025,
+    "area": "math",
+    "answer": "c"
+  },
+  {
+    "number": 158,
+    "text": "Um estacionamento possui 120 vagas para veículos, e todas essas vagas estão ocupadas. Cada cliente paga uma mensalidade para utilizar uma vaga, que é calculada com base nas despesas mensais do estacionamento e no lucro pretendido. As despesas mensais do estacionamento são: R$ 14 240,00 com manutenção mais R$ 36,00 de seguro por veículo. O lucro do estacionamento é determinado pela diferença do valor arrecadado com as mensalidades pelas despesas efetuadas. A partir do mês seguinte, o valor do seguro por veículo aumentará em 20%, e as despesas com manutenção permanecerão sem alterações. Com isso, o dono do estacionamento reajustará as mensalidades para obter um lucro mensal de R$ 10 000,00. Apesar desse reajuste, todas as vagas continuarão ocupadas.\n\nO valor, em real, da mensalidade reajustada será",
+    "alternatives": {
+      "a": "185,60.",
+      "b": "226,09.",
+      "c": "245,20.",
+      "d": "268,93.",
+      "e": "285,60."
+    },
+    "images": [],
+    "tags": [
+      "matemática financeira",
+      "porcentagem",
+      "resolução de problemas"
+    ],
+    "year": 2025,
+    "area": "math",
+    "answer": "c"
+  },
+  {
+    "number": 159,
+    "text": "O dono de uma sorveteria armazena sorvete em potes de 20 000 cm³. Ele serve o sorvete em taças, em porções de 250 mL.\n\nA quantidade de taças que ele consegue servir a partir de um pote cheio de sorvete é",
+    "alternatives": {
+      "a": "5.",
+      "b": "8.",
+      "c": "50.",
+      "d": "80.",
+      "e": "800."
+    },
+    "images": [],
+    "tags": [
+      "conversão de unidades",
+      "volume",
+      "aritmética"
+    ],
+    "year": 2025,
+    "area": "math",
+    "answer": "d"
+  },
+  {
+    "number": 160,
+    "text": "Um recipiente tem um formato que faz com que, ao ser enchido de água com uma vazão constante, a distância D da lâmina de água ao tampo da mesa, em centímetro, aumente em relação ao tempo T, em minuto, de acordo com uma função do tipo\n\nD = k + tg[p(T + m)],\n\nsendo os parâmetros k, p e m números reais, para T variando entre 0 e 4 minutos, conforme ilustrado na figura, na qual estão apresentadas assíntotas verticais da função tangente utilizada na definição de D.\n\n[Figura: gráfico da função D em relação ao tempo T. O gráfico passa pelo ponto (2,5; 30) e tem assíntotas verticais em T = (5-2π)/2 e T = (5+2π)/2]\n\nA expressão algébrica que representa a relação entre D e T é",
+    "alternatives": {
+      "a": "D = 2,5 + tg[30(T − (5−2π)/2)]",
+      "b": "D = 4 + tg[30(T + 5/2)]",
+      "c": "D = 4 + tg[2,5(T + (5+2π)/2)]",
+      "d": "D = 30 + tg[(1/2)(T − 5)]",
+      "e": "D = 30 + tg[(1/2)(T − 5/2)]"
+    },
+    "images": [
+      "figuras/q160_grafico.png"
+    ],
+    "tags": [
+      "funções trigonométricas",
+      "tangente",
+      "análise de gráficos"
+    ],
+    "year": 2025,
+    "area": "math",
+    "answer": "e"
+  },
+  {
+    "number": 161,
+    "text": "Os quadrados em cinza na figura representam os quarteirões de uma parte do bairro onde moram João e seu amigo. O quadrado pequeno (A), pintado em preto e localizado no canto superior esquerdo de um quadrado maior, indica a casa do amigo de João. João também mora em uma casa de esquina, mas na extremidade nordeste de um quarteirão. Para chegar à casa de seu amigo, ao sair de casa, João deve caminhar pelo quarteirão onde mora na direção oeste, dobrar à direita, caminhar por três quarteirões na direção norte e dobrar à esquerda. A casa de seu amigo fica no segundo quarteirão a oeste.\n\n[Figura: grade de quarteirões com letras P, Q, R, S, T marcando posições específicas. A casa A está no canto superior esquerdo de um quarteirão, S à direita dela, R no canto inferior esquerdo, P no inferior centro-direita, T no inferior direito, Q no superior direito. Uma rosa dos ventos indica as direções N, S, L, O]\n\nO quarteirão onde se encontra a casa de João é representado pelo quadrado com a letra",
+    "alternatives": {
+      "a": "P.",
+      "b": "Q.",
+      "c": "R.",
+      "d": "S.",
+      "e": "T."
+    },
+    "images": [
+      "figuras/q161_grade.png"
+    ],
+    "tags": [
+      "raciocínio lógico",
+      "orientação espacial",
+      "geometria"
+    ],
+    "year": 2025,
+    "area": "math",
+    "answer": "a"
+  },
+  {
+    "number": 162,
+    "text": "Uma empresa produziu, em um determinado mês, 110 toneladas de plástico a partir de derivados de petróleo e 80 toneladas a partir de plásticos reciclados. O custo para reciclar uma tonelada de plástico é de R$ 500,00, que equivale a 5% do custo para produzir a mesma quantidade de plástico a partir de derivados de petróleo. Para o mês seguinte, a meta dessa empresa é produzir a mesma quantidade de plástico que foi produzida nesse mês, mas com redução de, pelo menos, 50% no custo de produção.\n\nPara que no mês seguinte a empresa atinja a meta, a quantidade mínima de toneladas de plástico que devem ser produzidas a partir de reciclagem deverá ser",
+    "alternatives": {
+      "a": "135.",
+      "b": "140.",
+      "c": "155.",
+      "d": "160.",
+      "e": "175."
+    },
+    "images": [],
+    "tags": [
+      "porcentagem",
+      "matemática financeira",
+      "equações",
+      "inequações"
+    ],
+    "year": 2025,
+    "area": "math",
+    "answer": "b"
+  },
+  {
+    "number": 163,
+    "text": "Em uma escola, todos os estudantes do ensino médio praticam uma das três modalidades esportivas oferecidas como atividade física, e cada um deles pratica somente uma dessas atividades. Os gráficos trazem alguns dados relativos aos quantitativos de estudantes que praticam essas modalidades esportivas nessa escola, apesar de algumas quantidades não terem sido informadas.\n\n[Gráfico de barras - Modalidades esportivas no ensino médio, por série: para 1ª, 2ª e 3ª séries, mostrando barras para Futebol, Vôlei e Basquete]\n[Gráfico de pizza - Quantidade de estudantes, por modalidade esportiva: Basquete 80, com fatias para Futebol, Vôlei e Basquete]\n\nQual é a quantidade de estudantes no ensino médio dessa escola?",
+    "alternatives": {
+      "a": "720",
+      "b": "360",
+      "c": "320",
+      "d": "288",
+      "e": "240"
+    },
+    "images": [
+      "figuras/q163_graficos.png"
+    ],
+    "tags": [
+      "leitura de gráficos",
+      "proporção",
+      "porcentagem"
+    ],
+    "year": 2025,
+    "area": "math",
+    "answer": "b"
+  },
+  {
+    "number": 164,
+    "text": "O dono de uma embarcação deve partir do ponto P e chegar ao ponto R por meio de dois deslocamentos lineares e navegando a uma velocidade constante. Essa viagem será feita durante a noite, e como ele dispõe somente de uma bússola e de um relógio, planejou sua rota da seguinte forma:\n\n1º – partir do ponto P na direção 110 e navegar por 4 horas, alcançando um ponto Q;\n2º – partir do ponto Q na direção 90 e navegar por 2 horas, alcançando o ponto de destino R.\n\nNo entanto, ao direcionar o barco para o primeiro deslocamento, o fez na direção 340, em vez de 110. Com isso, realizou os seguintes deslocamentos:\n\n1º – partiu do ponto P na direção 340 e navegou por 4 horas, alcançando um ponto S;\n2º – partiu do ponto S na direção 90 e navegou por 2 horas, alcançando o ponto T.\n\n[Figura: bússola com direções em graus e diagrama mostrando a rota planejada (P → Q → R) e a rota executada (P → S → T), com linha pontilhada indicando o trajeto necessário de T a R]\n\nO dono da embarcação só percebeu o equívoco ao chegar ao ponto T. Com isso, agora ele precisa definir a direção e o tempo de navegação que lhe permita, partindo do ponto T, chegar ao ponto de destino R por meio de uma rota retilínea.\n\nConsidere 0,64 como aproximação para cos 50°.\n\nA direção e o tempo aproximado de navegação que o dono da embarcação deve utilizar são, respectivamente,",
+    "alternatives": {
+      "a": "135 e 7 horas e 15 minutos.",
+      "b": "45 e 7 horas e 15 minutos.",
+      "c": "135 e 12 horas.",
+      "d": "135 e 6 horas.",
+      "e": "45 e 6 horas."
+    },
+    "images": [
+      "figuras/q164_rota.png"
+    ],
+    "tags": [
+      "trigonometria",
+      "lei dos cossenos",
+      "geometria plana",
+      "resolução de triângulos"
+    ],
+    "year": 2025,
+    "area": "math",
+    "answer": "a"
+  },
+  {
+    "number": 165,
+    "text": "Em um estudo clínico, 55 mulheres foram distribuídas, aleatoriamente, em 5 grupos de 11 pessoas. Para testar uma nova medicação, será escolhido um grupo no qual a maioria das mulheres tenham idades entre 20 e 30 anos. Os demais grupos tomarão placebo ou medicações já existentes no mercado. O quadro, parcialmente preenchido, informa alguns dados relativos às idades das mulheres desses grupos.\n\n| Grupos | Menor idade | Maior idade | Média | Mediana | Moda | Desvio padrão |\n|--------|-------------|-------------|-------|---------|------|---------------|\n| 1 | | | 25 | | | 10 |\n| 2 | | | | 25 | | 9 |\n| 3 | | | | | 25 | |\n| 4 | | | 25 | | | 1 |\n| 5 | 20 | 35 | | | | |\n\nMesmo com o quadro incompleto, foi possível selecionar um desses grupos porque, apenas com os dados apresentados no quadro, foi identificado um grupo que, certamente, atendia ao critério de escolha.\n\nO grupo escolhido foi o",
+    "alternatives": {
+      "a": "1.",
+      "b": "2.",
+      "c": "3.",
+      "d": "4.",
+      "e": "5."
+    },
+    "images": [],
+    "tags": [
+      "estatística",
+      "medidas de dispersão",
+      "desvio padrão",
+      "média"
+    ],
+    "year": 2025,
+    "area": "math",
+    "answer": "d"
+  },
+  {
+    "number": 166,
+    "text": "Pace é um termo usado por um corredor para denominar o seu ritmo médio em uma corrida. Representa o tempo médio, em segundo, que esse corredor leva para percorrer 1 km.\n\nO esquema apresenta o tempo, em segundo, que um corredor levou para cruzar as marcas que definem os quatro primeiros trechos de 1 km, em uma corrida de 5 km, e o tempo gasto para percorrer cada trecho de 1 km.\n\n[Esquema: Tempo de corrida - 0s, 272s, 556s, 844s, 1132s nas marcas de 0, 1, 2, 3 e 4 km. Tempo gasto em cada trecho de 1 km: 272s (1º), 284s (2º), 288s (3º), 288s (4º)]\n\nO melhor pace que esse corredor alcançou em corridas de 5 km foi 281 s/km.\n\nPara que consiga repetir nessa corrida seu melhor pace em corridas de 5 km, seu tempo, no 5º trecho, deve ser quantos segundos menor do que o que ele gastou para percorrer o 4º trecho?",
+    "alternatives": {
+      "a": "1",
+      "b": "2",
+      "c": "8",
+      "d": "9",
+      "e": "15"
+    },
+    "images": [
+      "figuras/q166_corrida.png"
+    ],
+    "tags": [
+      "média aritmética",
+      "aritmética",
+      "resolução de problemas"
+    ],
+    "year": 2025,
+    "area": "math",
+    "answer": "e"
+  },
+  {
+    "number": 167,
+    "text": "Uma pessoa tem um carro bicombustível, que funciona a gás natural veicular (GNV) e a gasolina. O rendimento do carro, medido em km/m³, no caso do gás, ou medido em km/L, no caso da gasolina, depende, entre outros fatores, da velocidade, em km/h, em que o carro trafega. Essa relação está em conformidade com estes gráficos.\n\n[Gráfico 1: Rendimento (km/m³) x Velocidade (km/h) - curva do GNV que a 60 km/h está em torno de 10 km/m³, pico próximo a 100 km/h em 12]\n[Gráfico 2: Rendimento (km/L) x Velocidade (km/h) - curva da Gasolina que a 60 km/h está em torno de 8 km/L, pico próximo a 100 km/h em 11]\n\nDurante um feriado, essa pessoa realizou uma viagem de 240 km. Para obter uma estimativa de gasto de combustível, assuma que em todo o trajeto se manteve uma velocidade constante de 60 km/h. Considere que, durante metade do caminho, foi utilizado apenas GNV e, na outra metade, apenas gasolina. O que foi pago pelo metro cúbico de GNV e pelo litro de gasolina correspondeu, respectivamente, a R$ 2,00 e a R$ 3,00.\n\nQual foi a diferença, em real, entre os gastos totais com gasolina e com GNV?",
+    "alternatives": {
+      "a": "4",
+      "b": "8",
+      "c": "14",
+      "d": "21",
+      "e": "30"
+    },
+    "images": [
+      "figuras/q167_graficos.png"
+    ],
+    "tags": [
+      "leitura de gráficos",
+      "matemática financeira",
+      "aritmética"
+    ],
+    "year": 2025,
+    "area": "math",
+    "answer": "d"
+  },
+  {
+    "number": 168,
+    "text": "Em um país, a primeira etapa para obtenção da carteira de motorista é a contratação de três produtos:\n\n• pacote com 20 aulas teóricas;\n• pacote com 10 aulas práticas;\n• aluguel do veículo para realização das aulas práticas.\n\nUma pessoa que pretende obter a carteira de motorista pesquisou o valor do aluguel do veículo e os valores de cada aula teórica e de cada aula prática em três autoescolas. O quadro apresenta esses valores.\n\n| Autoescola | Valor de cada aula teórica (R$) | Valor de cada aula prática (R$) | Aluguel do veículo (R$) |\n|------------|--------------------------------|--------------------------------|------------------------|\n| I | 10 | 80 | 400 |\n| II | 30 | 50 | 200 |\n| III | 20 | 40 | 400 |\n\nEla contratará os três produtos numa mesma autoescola de modo que o custo total nessa primeira etapa seja o menor possível.\n\nA autoescola que será contratada é a",
+    "alternatives": {
+      "a": "I, com o custo total de R$ 1 400,00.",
+      "b": "II, com o custo total de R$ 280,00.",
+      "c": "II, com o custo total de R$ 1 300,00.",
+      "d": "III, com o custo total de R$ 460,00.",
+      "e": "III, com o custo total de R$ 1 200,00."
+    },
+    "images": [],
+    "tags": [
+      "matemática financeira",
+      "aritmética",
+      "comparação"
+    ],
+    "year": 2025,
+    "area": "math",
+    "answer": "e"
+  },
+  {
+    "number": 169,
+    "text": "A produtividade de soja em uma área cultivada é a média da quantidade de sacas de 50 quilogramas que são produzidas por hectare. O quadro apresenta a área cultivada e a produtividade de soja em certa propriedade, ao longo de cinco safras, com períodos de um ano, de 2011 a 2016.\n\n| Safra | 11-12 | 12-13 | 13-14 | 14-15 | 15-16 |\n|-------|-------|-------|-------|-------|-------|\n| Área cultivada (hectare) | 200 | 220 | 250 | 250 | 200 |\n| Produtividade (sacas de 50 kg por hectare) | 40 | 30 | 45 | 45 | 50 |\n\n[Figura: gráficos das alternativas de produção de soja em toneladas, por safra]\n\nO gráfico de linhas que representa a produção de soja dessa propriedade, em tonelada, nessas cinco safras é",
+    "alternatives": {
+      "a": "[Gráfico A: produção em toneladas - 400, 330, 562,5, 562,5, 500]",
+      "b": "[Gráfico B: produção em toneladas - 40, 30, 45, 45, 50]",
+      "c": "[Gráfico C: produção em toneladas - 200, 220, 250, 250, 200]",
+      "d": "[Gráfico D: produção em toneladas - 240, 250, 295, 295, 250]",
+      "e": "[Gráfico E: produção em toneladas - 8, 6,6, 11,25, 11,25, 10]"
+    },
+    "images": [
+      "figuras/q169_alternativas.png"
+    ],
+    "tags": [
+      "leitura de gráficos",
+      "estatística",
+      "conversão de unidades",
+      "aritmética"
+    ],
+    "year": 2025,
+    "area": "math",
+    "answer": "a"
+  },
+  {
+    "number": 170,
+    "text": "Uma caixa de descarga, acoplada a um vaso sanitário, tem a forma de paralelepípedo reto retângulo cujas dimensões internas da base são 2,5 dm e 1,5 dm. Nessa caixa há uma boia que interrompe o abastecimento quando a altura da coluna de água atinge 2 dm, conforme a figura.\n\n[Figura: duas vistas de uma caixa de descarga - uma mostrando a boia em altura alta (1,5 dm de água) e outra mostrando o nível máximo (2 dm de água), com base de 2,5 dm × 1,5 dm]\n\nA cada acionamento da descarga, todo o volume de água contida na caixa é despejado no vaso. Para reduzir o volume de água despejado a cada acionamento, uma pessoa colocará, no interior dessa caixa, garrafas de 300 mL, cheias de areia e tampadas, de modo a ficarem submersas quando o abastecimento for interrompido.\n\nPara garantir o funcionamento eficiente, o mínimo de água despejada a cada acionamento deve ser de 5 L.\n\nA quantidade máxima de garrafas que serão colocadas nessa caixa, garantindo um funcionamento eficiente, é igual a",
+    "alternatives": {
+      "a": "10.",
+      "b": "8.",
+      "c": "4.",
+      "d": "3.",
+      "e": "2."
+    },
+    "images": [
+      "figuras/q170_caixa.png"
+    ],
+    "tags": [
+      "geometria espacial",
+      "volume",
+      "paralelepípedo",
+      "conversão de unidades"
+    ],
+    "year": 2025,
+    "area": "math",
+    "answer": "b"
+  },
+  {
+    "number": 171,
+    "text": "Um confeiteiro passou a produzir tortas em formato de cilindro circular reto, com raio da base variando entre 12 cm e 16 cm e altura de 6 cm. Essas tortas deverão ser embaladas em caixas com formato de prisma reto de base quadrada, de modo que seja possível acomodar a torta em seu interior e ainda restar pelo menos 1 cm de distância entre a torta e as superfícies internas da caixa, lateral e superior. Ele dispõe, originalmente, de caixas no formato pretendido, cujas dimensões internas são 14 cm de comprimento do lado da base e 7 cm de altura, que não atendem às suas necessidades. Portanto, ele comprará novas caixas, com o mesmo formato das caixas originais, mas com comprimento do lado da base maior, que sejam adequadas para embalar todos os tipos de torta que produz.\n\nA aresta da base das novas caixas deve ser, no mínimo, quantos centímetros maior do que a das caixas originais?",
+    "alternatives": {
+      "a": "4",
+      "b": "12",
+      "c": "16",
+      "d": "18",
+      "e": "20"
+    },
+    "images": [],
+    "tags": [
+      "geometria espacial",
+      "cilindro",
+      "prisma",
+      "resolução de problemas"
+    ],
+    "year": 2025,
+    "area": "math",
+    "answer": "e"
+  },
+  {
+    "number": 172,
+    "text": "Um empresário utiliza máquinas cuja pressão interna P, em atmosfera, depende do tempo contínuo de utilização t, em hora, e de um parâmetro positivo K, que define o modelo da máquina, segundo a expressão:\n\nP = 4 · log[−K · (t + 1) · (t − 19)]\n\nO fabricante dessas máquinas recomenda ao usuário que a pressão interna desse tipo de máquina não ultrapasse 10 atmosferas durante seu funcionamento.\n\nO empresário pretende comprar novas máquinas desse tipo que deverão funcionar, diariamente, por um período contínuo de 10 horas. Para isso, precisa definir o modelo de máquina a ser adquirida escolhendo o maior valor possível do parâmetro K, atendendo à recomendação do fabricante.\n\nO maior valor a ser escolhido para K é",
+    "alternatives": {
+      "a": "10^0,5",
+      "b": "10^8",
+      "c": "10^2,5 / 84",
+      "d": "10^2,5 / 99",
+      "e": "25 × 10^−2"
+    },
+    "images": [],
+    "tags": [
+      "função logarítmica",
+      "logaritmo",
+      "inequação",
+      "função quadrática"
+    ],
+    "year": 2025,
+    "area": "math",
+    "answer": "a"
+  },
+  {
+    "number": 173,
+    "text": "Em uma cidade, será construído um túnel que atravessa uma montanha para facilitar o trânsito de automóveis e bicicletas. Dois projetos foram elaborados e os esquemas com as vistas frontais desses projetos são apresentados na figura.\n\n[Figura: Projeto 1 - dois túneis semicilíndricos separados: túnel para automóveis com diâmetro 12 m (volta e ida) e túnel para bicicletas com diâmetro 6 m (volta e ida). Projeto 2 - túnel único de uso misto com diâmetro total 18 m, dividido em 4 seções: volta bicicletas (3 m), volta automóveis (6 m), ida automóveis (6 m), ida bicicletas (3 m)]\n\nO Projeto 1 conta com dois túneis, um exclusivo para bicicletas e o outro, para automóveis. O Projeto 2 conta com um único túnel, com espaços reservados para o trânsito exclusivo de bicicletas e automóveis. Nos dois projetos, os túneis têm o formato de semicilindro reto de mesma extensão, com vias de ida e volta para os dois tipos de veículos, separados por muretas.\n\nO projeto a ser aprovado será aquele que apresentar a menor área da seção transversal, pois implicará menor volume de material retirado da montanha.\n\nConsidere 3 como aproximação para π e desconsidere as espessuras das muretas.\n\nO projeto a ser aprovado é",
+    "alternatives": {
+      "a": "o 1, pois apresenta área de seção transversal medindo 67,5 m².",
+      "b": "o 2, pois apresenta área de seção transversal medindo 121,5 m².",
+      "c": "o 1, pois apresenta área de seção transversal medindo 135 m².",
+      "d": "o 2, pois apresenta área de seção transversal medindo 243 m².",
+      "e": "qualquer um dos dois, pois apresentam áreas de suas seções transversais com medidas iguais."
+    },
+    "images": [
+      "figuras/q173_tuneis.png"
+    ],
+    "tags": [
+      "geometria plana",
+      "área do círculo",
+      "semicírculo",
+      "comparação"
+    ],
+    "year": 2025,
+    "area": "math",
+    "answer": "a"
+  },
+  {
+    "number": 174,
+    "text": "Um carro que custa 60 mil reais é comercializado por uma revendedora que oferece duas opções de pagamento, todas sem entrada e sem juros:\n\n• opção 1: pagamento em n parcelas iguais;\n• opção 2: pagamento em 6 parcelas a mais do que na opção 1 e, com isso, o valor de cada parcela se torna R$ 500,00 menor do que o valor da parcela na opção 1.\n\nNas duas opções de pagamento, o valor total a ser pago pelo carro é o mesmo.\n\nQual é a quantidade n de parcelas contidas na opção 1 de pagamento?",
+    "alternatives": {
+      "a": "18",
+      "b": "24",
+      "c": "30",
+      "d": "42",
+      "e": "48"
+    },
+    "images": [],
+    "tags": [
+      "equação do 2º grau",
+      "matemática financeira",
+      "sistemas de equações"
+    ],
+    "year": 2025,
+    "area": "math",
+    "answer": "annulled"
+  },
+  {
+    "number": 175,
+    "text": "Um pai comprou oito presentes diferentes (dentre os quais, uma bicicleta e um celular) para dar a seus três filhos. Ele pretende distribuir os presentes de modo que o filho mais velho e o mais novo recebam três presentes cada um, e o do meio receba os dois presentes restantes. O mais velho ganhará, entre seus presentes, ou uma bicicleta ou um celular, mas não ambos.\n\nDe quantas maneiras distintas a distribuição dos presentes pode ser feita?",
+    "alternatives": {
+      "a": "36",
+      "b": "53",
+      "c": "300",
+      "d": "360",
+      "e": "560"
+    },
+    "images": [],
+    "tags": [
+      "análise combinatória",
+      "combinação",
+      "princípio multiplicativo"
+    ],
+    "year": 2025,
+    "area": "math",
+    "answer": "c"
+  },
+  {
+    "number": 176,
+    "text": "A final de um campeonato de futebol foi disputada em 2 tempos regulamentares, de 45 minutos cada, sem acréscimos, com uma prorrogação de 30 minutos, também sem acréscimos. Um jogador entrou no início do segundo tempo, com um equipamento para medir a distância percorrida durante sua participação no jogo. Ao final do segundo tempo regulamentar, esse jogador havia percorrido 4,5 km. Ele manteve na prorrogação a mesma velocidade média que havia mantido no segundo tempo regulamentar.\n\nA distância percorrida por esse jogador durante sua participação na partida, em quilômetro, foi",
+    "alternatives": {
+      "a": "4,5.",
+      "b": "6,0.",
+      "c": "7,5.",
+      "d": "9,0.",
+      "e": "12,0."
+    },
+    "images": [],
+    "tags": [
+      "proporcionalidade",
+      "velocidade média",
+      "regra de três"
+    ],
+    "year": 2025,
+    "area": "math",
+    "answer": "c"
+  },
+  {
+    "number": 177,
+    "text": "A figura ilustra o projeto visual para confecção de uma medalha comemorativa, com a forma de um cilindro circular reto, de diâmetro 6 cm e espessura 3 mm.\n\n[Figura: medalha circular com diâmetro 6 cm, contendo um quadrado ABCD inscrito. Vista lateral mostra espessura de 3 mm]\n\nA figura ABCD tem a forma de um quadrado e é a base de um prisma que atravessa toda a medalha. A região da medalha externa a esse prisma será cunhada em ouro. Pretende-se cunhar 100 dessas medalhas.\n\nConsidere 3,1 como valor aproximado para π.\n\nQual é o volume de ouro, em centímetro cúbico, necessário para a confecção dessas medalhas?",
+    "alternatives": {
+      "a": "288",
+      "b": "297",
+      "c": "567",
+      "d": "990",
+      "e": "1 134"
+    },
+    "images": [
+      "figuras/q177_medalha.png"
+    ],
+    "tags": [
+      "geometria espacial",
+      "volume",
+      "cilindro",
+      "prisma",
+      "quadrado inscrito"
+    ],
+    "year": 2025,
+    "area": "math",
+    "answer": "b"
+  },
+  {
+    "number": 178,
+    "text": "Três dados cúbicos, com faces numeradas de 1 a 6, foram utilizados em um jogo. Artur escolheu dois dados, e João ficou com o terceiro. O jogo consiste em ambos lançarem seus dados, observarem os números nas faces voltadas para cima e compararem o maior número obtido por Artur com o número obtido por João. Vence o jogador que obtiver o maior número. Em caso de empate, a vitória é de João.\n\nO jogador que tem a maior probabilidade de vitória é",
+    "alternatives": {
+      "a": "Artur, com probabilidade de 2/3",
+      "b": "João, com probabilidade de 4/9",
+      "c": "Artur, com probabilidade de 91/216",
+      "d": "João, com probabilidade de 91/216",
+      "e": "Artur, com probabilidade de 125/216"
+    },
+    "images": [],
+    "tags": [
+      "probabilidade",
+      "eventos independentes",
+      "análise combinatória"
+    ],
+    "year": 2025,
+    "area": "math",
+    "answer": "e"
+  },
+  {
+    "number": 179,
+    "text": "A luminância de um objeto é a grandeza que descreve a quantidade de luz produzida ou refletida por sua superfície. Ela está definida como a razão entre a intensidade luminosa, medida em candela (cd), e o quadrado da distância do objeto até o foco de luz, medida em metro (m).\n\nA unidade de medida da luminância de um objeto é",
+    "alternatives": {
+      "a": "cd/m²",
+      "b": "m²/cd",
+      "c": "cd/m",
+      "d": "m/cd",
+      "e": "m/cd²"
+    },
+    "images": [],
+    "tags": [
+      "grandezas e unidades",
+      "razão",
+      "física matemática"
+    ],
+    "year": 2025,
+    "area": "math",
+    "answer": "a"
+  },
+  {
+    "number": 180,
+    "text": "Quatro amigos, cada um com 100 moedas, criaram um jogo, no qual cada um assume uma das quatro posições, 1, 2, 3 ou 4, indicadas na figura, e nela permanece até o final.\n\n[Figura: diagrama circular com quatro posições numeradas 1, 2, 3, 4, dispostas em círculo com setas indicando o fluxo de transferência das moedas entre elas]\n\nO desenvolvimento do jogo se dá em rodadas e, em todas elas, cada jogador transfere e recebe uma quantidade de moedas, da seguinte maneira:\n\n• o jogador na posição 1 transfere 1 moeda para o jogador na posição 2;\n• o jogador na posição 2 transfere 2 moedas para o jogador na posição 3;\n• o jogador na posição 3 transfere 3 moedas para o jogador na posição 4;\n• o jogador na posição 4 transfere 4 moedas para o jogador na posição 1, completando a rodada.\n\nAo final da rodada n, qual é a expressão algébrica que representa o número de moedas do jogador na posição 1?",
+    "alternatives": {
+      "a": "103 + 4n",
+      "b": "103 + 3n",
+      "c": "100 + 4n",
+      "d": "100 + 3n",
+      "e": "99 + 4n"
+    },
+    "images": [
+      "figuras/q180_diagrama.png"
+    ],
+    "tags": [
+      "sequências",
+      "progressão aritmética",
+      "raciocínio algébrico"
+    ],
+    "year": 2025,
+    "area": "math",
+    "answer": "d"
+  }
+]

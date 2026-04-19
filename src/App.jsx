@@ -1,8 +1,19 @@
-import { useState, useEffect, useCallback } from 'react'
+import { useState, useEffect, useCallback, useMemo } from 'react'
 import './App.css'
+import {
+  parseStemSegments,
+  alternativeLabelForDisplay,
+  captionFromBracketText,
+} from './parseQuestionFigures.js'
 
 function getRandomQuestion(questions) {
   return questions[Math.floor(Math.random() * questions.length)]
+}
+
+/** Paths in JSON are like `figuras/name.png`; serve from /public via Vite. */
+function publicImageSrc(path) {
+  if (!path) return ''
+  return path.startsWith('/') ? path : `/${path}`
 }
 
 function SunIcon() {
@@ -46,7 +57,7 @@ export default function App() {
   }, [dark])
 
   useEffect(() => {
-    fetch('/math_2025.json')
+    fetch('/math_enem_2025.json')
       .then((r) => r.json())
       .then((data) => {
         setQuestions(data)
@@ -60,9 +71,29 @@ export default function App() {
     setQuestion(getRandomQuestion(questions))
   }, [questions])
 
-  if (loading) return <div className="center">Carregando...</div>
+  const stemSegments = useMemo(() => {
+    if (!question) return []
+    const imgs = question.images ?? []
+    const letters = Object.keys(question.alternatives)
+    const splitStemAndAlts =
+      imgs.length > 1 && imgs.length === letters.length + 1
+    const paths = splitStemAndAlts
+      ? [imgs[0]]
+      : imgs.length > 0
+        ? imgs
+        : []
+    return parseStemSegments(question.text, paths)
+  }, [question])
+
+  if (loading || !question) return <div className="center">Carregando...</div>
 
   const letters = Object.keys(question.alternatives)
+  const images = question.images ?? []
+  /** Uma figura no enunciado e uma por alternativa (ex.: questão 138). */
+  const splitStemAndAlts =
+    images.length > 1 && images.length === letters.length + 1
+  const altImageFor = (index) =>
+    splitStemAndAlts ? images[index + 1] : null
 
   return (
     <div className="container">
@@ -77,20 +108,64 @@ export default function App() {
       </header>
 
       <div className="card">
-        <p className="question-text">{question.text}</p>
+        <div className="question-stem" aria-label="Enunciado">
+          {stemSegments.map((seg, i) =>
+            seg.type === 'text' ? (
+              <div key={i} className="question-text-block">
+                {seg.text}
+              </div>
+            ) : (
+              <figure key={i} className="q-figure">
+                <img
+                  src={publicImageSrc(seg.src)}
+                  alt={seg.caption ? String(seg.caption).slice(0, 200) : 'Figura do enunciado'}
+                  loading="lazy"
+                  decoding="async"
+                />
+                {seg.caption != null && seg.caption !== '' && (
+                  <figcaption className="q-figure-caption">{seg.caption}</figcaption>
+                )}
+              </figure>
+            ),
+          )}
+        </div>
 
         <ul className="alternatives">
-          {letters.map((letter) => {
+          {letters.map((letter, index) => {
             const isSelected = selected === letter
+            const altImg = altImageFor(index)
+            const stacked = Boolean(altImg)
+            const rawAlt = question.alternatives[letter]
+            const altCaption = stacked ? captionFromBracketText(rawAlt) : ''
+            const altLabel = alternativeLabelForDisplay(rawAlt, stacked)
             return (
               <li key={letter}>
                 <button
-                  className={`alt-btn ${isSelected ? 'selected' : ''}`}
+                  type="button"
+                  className={`alt-btn ${isSelected ? 'selected' : ''} ${stacked ? 'alt-btn--stack' : ''}`}
                   onClick={() => setSelected(letter)}
                   disabled={selected !== null}
                 >
-                  <span className="alt-letter">{letter.toUpperCase()}</span>
-                  <span className="alt-text">{question.alternatives[letter]}</span>
+                  <div className="alt-row">
+                    <span className="alt-letter">{letter.toUpperCase()}</span>
+                    {altLabel !== '' && (
+                      <span className="alt-text">{altLabel}</span>
+                    )}
+                  </div>
+                  {altImg && (
+                    <figure className="alt-figure">
+                      <img
+                        className="alt-figure-img"
+                        src={publicImageSrc(altImg)}
+                        alt={altCaption || 'Figura da alternativa'}
+                        loading="lazy"
+                        decoding="async"
+                      />
+                      {altCaption && (
+                        <figcaption className="alt-figure-caption">{altCaption}</figcaption>
+                      )}
+                    </figure>
+                  )}
                 </button>
               </li>
             )
