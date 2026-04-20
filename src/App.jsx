@@ -397,7 +397,7 @@ export default function App() {
           <div className="home-card">
             <div className="home-logo-wrap">
               <img
-                src={dark ? '/figuras/logos/integrar-logo-dark.png' : '/figuras/logos/integrar-logo-light.png'}
+                src={dark ? '/figuras/logos/integrar-logo-dark-old.png' : '/figuras/logos/integrar-logo-light-old.png'}
                 alt="Integrar"
                 className="home-logo"
               />
