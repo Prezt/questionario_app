@@ -1,4 +1,4 @@
-import { useState, useEffect, useCallback, useMemo } from 'react'
+import { useState, useEffect, useCallback, useMemo, useRef } from 'react'
 import './App.css'
 import {
   parseStemSegments,
@@ -40,6 +40,37 @@ function MoonIcon() {
   )
 }
 
+function NotebookIcon() {
+  return (
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
+      <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
+      <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
+      <line x1="8" y1="7" x2="16" y2="7"/>
+      <line x1="8" y1="11" x2="16" y2="11"/>
+      <line x1="8" y1="15" x2="12" y2="15"/>
+    </svg>
+  )
+}
+
+const SESSION_NOTES_KEY = 'questionario-caderno'
+
+function readNotesFromSession() {
+  if (typeof sessionStorage === 'undefined') return ''
+  try {
+    return sessionStorage.getItem(SESSION_NOTES_KEY) ?? ''
+  } catch {
+    return ''
+  }
+}
+
+function writeNotesToSession(value) {
+  try {
+    sessionStorage.setItem(SESSION_NOTES_KEY, value)
+  } catch {
+    /* ignore quota / private mode */
+  }
+}
+
 export default function App() {
   const [questions, setQuestions] = useState([])
   const [question, setQuestion] = useState(null)
@@ -50,6 +81,9 @@ export default function App() {
     if (saved !== null) return saved === 'true'
     return window.matchMedia('(prefers-color-scheme: dark)').matches
   })
+  const [notebookOpen, setNotebookOpen] = useState(false)
+  const [notes, setNotes] = useState(readNotesFromSession)
+  const notebookTextareaRef = useRef(null)
 
   useEffect(() => {
     document.documentElement.classList.toggle('dark', dark)
@@ -64,6 +98,35 @@ export default function App() {
         setQuestion(getRandomQuestion(data))
         setLoading(false)
       })
+  }, [])
+
+  useEffect(() => {
+    if (!notebookOpen) return
+    const onKey = (e) => {
+      if (e.key === 'Escape') setNotebookOpen(false)
+    }
+    window.addEventListener('keydown', onKey)
+    return () => window.removeEventListener('keydown', onKey)
+  }, [notebookOpen])
+
+  useEffect(() => {
+    if (notebookOpen) document.body.style.overflow = 'hidden'
+    else document.body.style.overflow = ''
+    return () => {
+      document.body.style.overflow = ''
+    }
+  }, [notebookOpen])
+
+  useEffect(() => {
+    if (notebookOpen && notebookTextareaRef.current) {
+      notebookTextareaRef.current.focus()
+    }
+  }, [notebookOpen])
+
+  const onNotesChange = useCallback((e) => {
+    const v = e.target.value
+    setNotes(v)
+    writeNotesToSession(v)
   }, [])
 
   const next = useCallback(() => {
@@ -96,15 +159,29 @@ export default function App() {
     splitStemAndAlts ? images[index + 1] : null
 
   return (
+    <>
     <div className="container">
       <header className="header">
         <div className="badges">
           <span className="badge">Questão {question.number}</span>
           <span className="badge badge-year">{question.year}</span>
         </div>
-        <button className="theme-toggle" onClick={() => setDark((d) => !d)} aria-label="Alternar tema">
-          {dark ? <SunIcon /> : <MoonIcon />}
-        </button>
+        <div className="header-actions">
+          <button
+            type="button"
+            className={`notebook-toggle ${notebookOpen ? 'active' : ''}`}
+            onClick={() => setNotebookOpen((o) => !o)}
+            aria-expanded={notebookOpen}
+            aria-controls="session-notebook"
+            aria-label={notebookOpen ? 'Fechar caderno' : 'Abrir caderno'}
+          >
+            <NotebookIcon />
+            <span className="notebook-toggle-text">Caderno</span>
+          </button>
+          <button type="button" className="theme-toggle" onClick={() => setDark((d) => !d)} aria-label="Alternar tema">
+            {dark ? <SunIcon /> : <MoonIcon />}
+          </button>
+        </div>
       </header>
 
       <div className="card">
@@ -189,5 +266,39 @@ export default function App() {
         Próxima questão →
       </button>
     </div>
+
+    <div
+      className={`notebook-backdrop ${notebookOpen ? 'is-open' : ''}`}
+      onClick={() => setNotebookOpen(false)}
+      aria-hidden={!notebookOpen}
+    />
+    <aside
+      id="session-notebook"
+      className={`notebook-panel ${notebookOpen ? 'is-open' : ''}`}
+      aria-label="Bloco de notas da sessão"
+      aria-hidden={!notebookOpen}
+    >
+      <div className="notebook-panel-head">
+        <h2 className="notebook-panel-title">Caderno</h2>
+        <button
+          type="button"
+          className="notebook-close"
+          onClick={() => setNotebookOpen(false)}
+          aria-label="Fechar caderno"
+        >
+          ×
+        </button>
+      </div>
+      <p className="notebook-hint">Anotações ficam nesta aba do navegador até você fechá-la.</p>
+      <textarea
+        ref={notebookTextareaRef}
+        className="notebook-textarea"
+        value={notes}
+        onChange={onNotesChange}
+        placeholder="Rascunhos, contas, lembretes…"
+        spellCheck
+      />
+    </aside>
+    </>
   )
 }

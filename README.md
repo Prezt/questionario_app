@@ -10,6 +10,10 @@ Aplicação em React + Vite que carrega questões de `public/math_enem_2025.json
 
 No componente principal, todos os Hooks do React (incluindo `useMemo` para o enunciado segmentado) ficam **acima** do retorno condicional de “Carregando…”, para respeitar a regra de ordem estável dos Hooks.
 
+## Caderno (bloco de notas)
+
+No canto superior direito há o botão **Caderno**, que abre um painel lateral com um campo de texto para rascunhos. O conteúdo é salvo automaticamente em **`sessionStorage`** (chave `questionario-caderno`): permanece enquanto a **aba do navegador** estiver aberta (incluindo ao trocar de questão ou recarregar a página). Ao **fechar a aba ou o navegador**, as anotações são apagadas. **Esc** ou o botão **×** fecham o painel; o fundo escurecido também fecha ao ser clicado.
+
 ## Figuras das questões
 
 As imagens ficam na pasta **`figuras/`** na raiz do repositório (onde você adiciona os PNGs).
