@@ -161,14 +161,14 @@
   background-size: 85px 85px, 135px 135px;
   background-position: 0 0, 42px 55px;
   background-repeat: repeat;
-  opacity: 0.8;
+  opacity: 0.4;
 }
 
 .dark .content-center::before {
   background-image: 
     url('/figuras/logos/integrar-logo-dark.png'), 
     url('/figuras/logos/integrar-logo-dark.png');
-  opacity: 0.6;
+  opacity: 0.3;
 }
 
 

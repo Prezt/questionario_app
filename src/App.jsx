@@ -132,6 +132,7 @@ function legacyPlainToHtml(raw) {
 export default function App() {
   const [questions, setQuestions] = useState([])
   const [question, setQuestion] = useState(null)
+  const [filteredQuestions, setFilteredQuestions] = useState([]) // O que será exibido no quiz
   const [attempts, setAttempts] = useState(loadAttemptsFromSession)
   const [loading, setLoading] = useState(true)
   const [dark, setDark] = useState(() => {
@@ -150,6 +151,7 @@ export default function App() {
   const [questionElapsed, setQuestionElapsed] = useState(0)
   const [questionTimes, setQuestionTimes] = useState({}) // snapshot for summary
 
+
   const startTimeRef = useRef(null)
   const questionStartRef = useRef(null)
   const accQuestionTimesRef = useRef({})   // { [number]: seconds } accumulated
@@ -166,17 +168,21 @@ export default function App() {
   useEffect(() => {
     const loadData = async () => {
       try {
-        const [mathRes, natureRes] = await Promise.all([
+        const [mathRes, natureRes, langRes, socialRes] = await Promise.all([
           fetch('/math_enem_2025.json'),
-          fetch('/nature_enem_2025.json')
+          fetch('/nature_enem_2025.json'),
+          fetch('/lang_enem_2025.json'),
+          fetch('/social_enem_2025.json'),
         ])
 
-        const [mathData, natureData] = await Promise.all([
+        const [mathData, natureData, langData, socialData] = await Promise.all([
           mathRes.json(),
-          natureRes.json()
+          natureRes.json(),
+          langRes.json(),
+          socialRes.json()
         ])
 
-        const sorted = [...mathData, ...natureData]
+        const sorted = [...langData, ...socialData, ...natureData, ...mathData]
           .sort((a, b) => a.number - b.number)
 
         setQuestions(sorted)
@@ -230,8 +236,8 @@ export default function App() {
   }, [notebookOpen])
 
   const sortedQuestions = useMemo(
-    () => [...questions].sort((a, b) => a.number - b.number),
-    [questions],
+    () => [...filteredQuestions].sort((a, b) => a.number - b.number),
+    [filteredQuestions],
   )
 
   // Reset pending selection and track question time on navigation
@@ -323,16 +329,29 @@ export default function App() {
     setPendingSelection(null)
   }, [pendingSelection, pickAlternative])
 
-  const startQuiz = useCallback(() => {
+  const startQuiz = useCallback((quizType) => {
     const now = Date.now()
     startTimeRef.current = now
     questionStartRef.current = now
     accQuestionTimesRef.current = {}
     prevQuestionNumRef.current = null
+    
+    // Filtragem por quizType
+    let subset = []
+    if (quizType === 1) {
+      subset = questions.filter(q => q.number >= 1 && q.number <= 90)
+    } else if (quizType === 2) {
+      subset = questions.filter(q => q.number >= 91 && q.number <= 180)
+    } else {
+      subset = questions // Fallback para todas
+    }
+
+    setFilteredQuestions(subset)
+    setQuestion(subset[0] ?? null) // Começa na primeira questão do dia
     setTotalElapsed(0)
     setQuestionElapsed(0)
     setPhase('quiz')
-  }, [])
+  }, [questions])
 
   const finishQuiz = useCallback(() => {
     // Save time for the current question
@@ -404,10 +423,13 @@ export default function App() {
             </div>
             <h1 className="home-title">Simulador Integrar</h1>
             <p className="home-subtitle">
-              {sortedQuestions.length} questões &middot; ENEM 2025 &middot; Dia 2
+              ENEM 2025
             </p>
-            <button type="button" className="home-start-btn" onClick={startQuiz}>
-              Iniciar
+            <button type="button" className="home-start-btn" onClick={() => startQuiz(1)}>
+              Dia 1
+            </button>
+            <button type="button" className="home-start-btn" onClick={() => startQuiz(2)}>
+              Dia 2
             </button>
           </div>
         </div>
