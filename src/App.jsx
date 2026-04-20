@@ -42,6 +42,17 @@ function saveAttemptsToSession(attempts) {
   }
 }
 
+const AREA_LABELS = {
+  math:    'Matemática',
+  nature:  'Ciências da Natureza',
+  lang:    'Linguagens',
+  social:  'Ciências Humanas',
+}
+
+function areaLabel(area) {
+  return AREA_LABELS[area] ?? area ?? null
+}
+
 /** Paths in JSON are like `figuras/name.png`; serve from /public via Vite. */
 function publicImageSrc(path) {
   if (!path) return ''
@@ -127,6 +138,7 @@ export default function App() {
     return window.matchMedia('(prefers-color-scheme: dark)').matches
   })
   const [notebookOpen, setNotebookOpen] = useState(false)
+  const [pendingSelection, setPendingSelection] = useState(null)
   const notebookEditorRef = useRef(null)
   const notebookEditorHydrated = useRef(false)
 
@@ -189,26 +201,44 @@ export default function App() {
     [questions],
   )
 
+  useEffect(() => {
+    setPendingSelection(null)
+  }, [question])
+
   const questionIndex = useMemo(() => {
     if (!question) return -1
     return sortedQuestions.findIndex((q) => q.number === question.number)
   }, [question, sortedQuestions])
 
+  const railRef = useRef(null)
   const railInnerRef = useRef(null)
 
-  useEffect(() => {
-    if (!question || !railInnerRef.current) return
-    const btn = railInnerRef.current.querySelector(
-      `[data-qnum="${question.number}"]`,
-    )
-    btn?.scrollIntoView({ block: 'nearest', behavior: 'smooth' })
-  }, [question])
+  useLayoutEffect(() => {
+    if (!question || !railRef.current || !railInnerRef.current) return
+    const railHeight = railRef.current.getBoundingClientRect().height
+    const firstBtn = railInnerRef.current.querySelector('.question-rail-btn')
+    if (!firstBtn) return
+    const btnHeight = firstBtn.getBoundingClientRect().height
+    const gap = parseFloat(getComputedStyle(railInnerRef.current).gap) || 0
+    const idx = sortedQuestions.findIndex((q) => q.number === question.number)
+    if (idx < 0) return
+    const btnCenterNatural = idx * (btnHeight + gap) + btnHeight / 2
+    const translateY = railHeight / 2 - btnCenterNatural
+    railInnerRef.current.style.transform = `translateY(${translateY}px)`
+  }, [question, sortedQuestions])
 
   const next = useCallback(() => {
     if (!question || sortedQuestions.length === 0) return
     const idx = sortedQuestions.findIndex((q) => q.number === question.number)
-    const nextIdx = idx < 0 ? 0 : (idx + 1) % sortedQuestions.length
-    setQuestion(sortedQuestions[nextIdx])
+    if (idx < 0 || idx >= sortedQuestions.length - 1) return
+    setQuestion(sortedQuestions[idx + 1])
+  }, [question, sortedQuestions])
+
+  const prev = useCallback(() => {
+    if (!question || sortedQuestions.length === 0) return
+    const idx = sortedQuestions.findIndex((q) => q.number === question.number)
+    if (idx <= 0) return
+    setQuestion(sortedQuestions[idx - 1])
   }, [question, sortedQuestions])
 
   const goToQuestion = useCallback((q) => {
@@ -228,6 +258,12 @@ export default function App() {
       return next
     })
   }, [question])
+
+  const confirmAnswer = useCallback(() => {
+    if (!pendingSelection) return
+    pickAlternative(pendingSelection)
+    setPendingSelection(null)
+  }, [pendingSelection, pickAlternative])
 
   const stemSegments = useMemo(() => {
     if (!question) return []
@@ -250,6 +286,9 @@ export default function App() {
   /** Uma figura no enunciado e uma por alternativa (ex.: questão 138). */
   const splitStemAndAlts =
     images.length > 1 && images.length === letters.length + 1
+
+  const isPrevDisabled = questionIndex <= 0
+  const isNextDisabled = questionIndex >= sortedQuestions.length - 1
   const altImageFor = (index) =>
     splitStemAndAlts ? images[index + 1] : null
 
@@ -257,45 +296,10 @@ export default function App() {
   const selected = attempt?.selected ?? null
 
   return (
-    <>
     <div className="app-shell">
-      <nav className="question-rail" aria-label="Lista de questões">
-        <div className="question-rail-scroll" ref={railInnerRef}>
-          {sortedQuestions.map((q) => {
-            const att = attempts[q.number]
-            const isCurrent = q.number === question.number
-            let stateClass = 'question-rail-btn--idle'
-            if (att) stateClass = att.correct ? 'question-rail-btn--ok' : 'question-rail-btn--bad'
-            return (
-              <button
-                key={q.number}
-                type="button"
-                data-qnum={q.number}
-                className={`question-rail-btn ${stateClass} ${isCurrent ? 'question-rail-btn--current' : ''}`}
-                onClick={() => goToQuestion(q)}
-                aria-current={isCurrent ? 'true' : undefined}
-                aria-label={`Questão ${q.number}${att ? (att.correct ? ', correta' : ', incorreta') : ', não respondida'}`}
-              >
-                {q.number}
-              </button>
-            )
-          })}
-        </div>
-      </nav>
-
-      <div className="app-main">
-    <div className="container">
-      <header className="header">
-        <div className="badges">
-          <span className="badge badge-progress">
-            {questionIndex + 1} / {sortedQuestions.length}
-          </span>
-          {question.test != null && String(question.test).trim() !== '' && (
-            <span className="badge badge-test">{question.test}</span>
-          )}
-          <span className="badge badge-year">{question.year}</span>
-        </div>
-        <div className="header-actions">
+      <header className="app-header">
+        <span className="app-header-title">Questionário ENEM</span>
+        <div className="app-header-actions">
           <button
             type="button"
             className={`notebook-toggle ${notebookOpen ? 'active' : ''}`}
@@ -310,6 +314,26 @@ export default function App() {
           <button type="button" className="theme-toggle" onClick={() => setDark((d) => !d)} aria-label="Alternar tema">
             {dark ? <SunIcon /> : <MoonIcon />}
           </button>
+        </div>
+      </header>
+
+      <div className="app-main">
+        <div className="content-center">
+        <div className="question-content">
+          <div className="question-scroll">
+            <div className="container">
+      <header className="header">
+        <div className="badges">
+          <span className="badge badge-progress">
+            {questionIndex + 1} / {sortedQuestions.length}
+          </span>
+          {question.test != null && String(question.test).trim() !== '' && (
+            <span className="badge badge-test">{question.test}</span>
+          )}
+          <span className="badge badge-year">{question.year}</span>
+          {areaLabel(question.area) && (
+            <span className="badge badge-area">{areaLabel(question.area)}</span>
+          )}
         </div>
       </header>
 
@@ -339,6 +363,7 @@ export default function App() {
         <ul className="alternatives">
           {letters.map((letter, index) => {
             const isSelected = selected === letter
+            const isPending = !selected && pendingSelection === letter
             const altImg = altImageFor(index)
             const stacked = Boolean(altImg)
             const rawAlt = question.alternatives[letter]
@@ -348,8 +373,8 @@ export default function App() {
               <li key={letter}>
                 <button
                   type="button"
-                  className={`alt-btn ${isSelected ? 'selected' : ''} ${stacked ? 'alt-btn--stack' : ''}`}
-                  onClick={() => pickAlternative(letter)}
+                  className={`alt-btn ${isSelected ? 'selected' : ''} ${isPending ? 'alt-btn--pending' : ''} ${stacked ? 'alt-btn--stack' : ''}`}
+                  onClick={() => !selected && setPendingSelection(letter)}
                   disabled={selected !== null}
                 >
                   <div className="alt-row">
@@ -397,74 +422,127 @@ export default function App() {
           <span key={tag} className="tag">{tag}</span>
         ))}
       </div>
+            </div>
+          </div>
+        </div>
 
-      <button type="button" className="next-btn" onClick={next}>
-        Próxima questão →
-      </button>
-    </div>
-      </div>
-    </div>
+        <aside
+          id="session-notebook"
+          className={`notebook-panel ${notebookOpen ? 'is-open' : ''}`}
+          aria-label="Bloco de notas da sessão"
+          aria-hidden={!notebookOpen}
+        >
+          <div className="notebook-panel-inner">
+            <div className="notebook-panel-head">
+              <h2 className="notebook-panel-title">Caderno</h2>
+              <button
+                type="button"
+                className="notebook-close"
+                onClick={() => setNotebookOpen(false)}
+                aria-label="Fechar caderno"
+              >
+                ×
+              </button>
+            </div>
+            <p className="notebook-hint">
+              Anotações nesta aba até fechá-la. Você pode usar o restante da página com o caderno aberto.
+            </p>
+            <div className="notebook-toolbar" role="toolbar" aria-label="Formatação do texto">
+              <button
+                type="button"
+                className="notebook-tool"
+                onMouseDown={applyNotebookFormat('bold')}
+                aria-label="Negrito"
+                title="Negrito"
+              >
+                <strong>B</strong>
+              </button>
+              <button
+                type="button"
+                className="notebook-tool"
+                onMouseDown={applyNotebookFormat('italic')}
+                aria-label="Itálico"
+                title="Itálico"
+              >
+                <em>I</em>
+              </button>
+              <button
+                type="button"
+                className="notebook-tool"
+                onMouseDown={applyNotebookFormat('underline')}
+                aria-label="Sublinhado"
+                title="Sublinhado"
+              >
+                <span className="notebook-tool-u">U</span>
+              </button>
+            </div>
+            <div
+              ref={notebookEditorRef}
+              className="notebook-editor"
+              contentEditable
+              suppressContentEditableWarning
+              role="textbox"
+              aria-multiline="true"
+              spellCheck
+              onInput={syncNotebookFromEditor}
+            />
+          </div>
+        </aside>
+        </div>
 
-    <aside
-      id="session-notebook"
-      className={`notebook-panel ${notebookOpen ? 'is-open' : ''}`}
-      aria-label="Bloco de notas da sessão"
-      aria-hidden={!notebookOpen}
-    >
-      <div className="notebook-panel-head">
-        <h2 className="notebook-panel-title">Caderno</h2>
-        <button
-          type="button"
-          className="notebook-close"
-          onClick={() => setNotebookOpen(false)}
-          aria-label="Fechar caderno"
-        >
-          ×
-        </button>
+        <nav className="question-rail" ref={railRef} aria-label="Lista de questões">
+          <div className="question-rail-scroll" ref={railInnerRef}>
+            {sortedQuestions.map((q) => {
+              const att = attempts[q.number]
+              const isCurrent = q.number === question.number
+              let stateClass = 'question-rail-btn--idle'
+              if (att) stateClass = att.correct ? 'question-rail-btn--ok' : 'question-rail-btn--bad'
+              return (
+                <button
+                  key={q.number}
+                  type="button"
+                  data-qnum={q.number}
+                  className={`question-rail-btn ${stateClass} ${isCurrent ? 'question-rail-btn--current' : ''}`}
+                  onClick={() => goToQuestion(q)}
+                  aria-current={isCurrent ? 'true' : undefined}
+                  aria-label={`Questão ${q.number}${att ? (att.correct ? ', correta' : ', incorreta') : ', não respondida'}`}
+                >
+                  {q.number}
+                </button>
+              )
+            })}
+          </div>
+        </nav>
       </div>
-      <p className="notebook-hint">
-        Anotações nesta aba até fechá-la. Você pode usar o restante da página com o caderno aberto.
-      </p>
-      <div className="notebook-toolbar" role="toolbar" aria-label="Formatação do texto">
+
+      <footer className="question-footer">
         <button
           type="button"
-          className="notebook-tool"
-          onMouseDown={applyNotebookFormat('bold')}
-          aria-label="Negrito"
-          title="Negrito"
+          className="footer-nav-btn"
+          onClick={prev}
+          disabled={isPrevDisabled}
+          aria-label="Questão anterior"
         >
-          <strong>B</strong>
+          ←
         </button>
         <button
           type="button"
-          className="notebook-tool"
-          onMouseDown={applyNotebookFormat('italic')}
-          aria-label="Itálico"
-          title="Itálico"
+          className="footer-responder-btn"
+          onClick={confirmAnswer}
+          disabled={!pendingSelection || !!selected}
         >
-          <em>I</em>
+          {selected ? 'Respondida' : 'Responder'}
         </button>
         <button
           type="button"
-          className="notebook-tool"
-          onMouseDown={applyNotebookFormat('underline')}
-          aria-label="Sublinhado"
-          title="Sublinhado"
+          className="footer-nav-btn"
+          onClick={next}
+          disabled={isNextDisabled}
+          aria-label="Próxima questão"
         >
-          <span className="notebook-tool-u">U</span>
+          →
         </button>
-      </div>
-      <div
-        ref={notebookEditorRef}
-        className="notebook-editor"
-        contentEditable
-        suppressContentEditableWarning
-        role="textbox"
-        aria-multiline="true"
-        spellCheck
-        onInput={syncNotebookFromEditor}
-      />
-    </aside>
-    </>
+      </footer>
+    </div>
   )
 }
