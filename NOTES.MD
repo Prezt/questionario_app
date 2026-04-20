@@ -5,33 +5,39 @@ FUNCIONALIDADES
 [x] Resumo final
 [x] Marcacao das questoes na barra lateral
 [x] No celular, scrollar para baixo no site faz desconfigura um pouco a tela
+[] Seletor de qual prova e qual dia fazer
 [] Randomizador da ordem das alternativas
+[] Resumo com assuntos de menor dominio e maior tempo medio de resolucao
 
 LOGIN
 [] Login para os alunos
-
-MODOS DE USO
-[] Seletor de qual prova e qual dia fazer
     [] Armazenar o que o aluno ja fez
     [] Armazenar o historico desse aluno (melhor/pior, etc)
+[] Persistencia por aluno, provas feitas, performance, tempo, login e senha
+
+MODOS DE USO
+[] Opcao de pausar o simulado
 [] Modo simulado (sem saber as respostas, correcao no fila)
 [] Selecao de AREA
-[] Selecao de ASSUNTO
+[] Selecao de MULTIPLOS ASSUNTOS
 [] Selecao de PROVA COMPLETA (com timer)
 
 ENRIQUECIMENTO DE DADOS
 [] Nivel da dificuldade da questao
 [] Comentario de resolucao da questao
 
+NICE TO HAVE
 [] Tutorial de uso da plataforma
 [] Legal disclaimer
 [] Resumo usando IA das questoes que foram erradas
 
+FERRAMENTAS DE LONGO PRAZO
 [] Ferramenta para criar questoes
 [] Ferramenta para reportar bugs
 
-[] Subir prova completa 
- [x] 2025
+
+DADOS:
+ [x] ENEM 2025
     [x] matematica 
         [x] texto
         [x] imagens
@@ -48,7 +54,7 @@ ENRIQUECIMENTO DE DADOS
         [] texto
         [] imagens
         [] HQ imagens
- [] 2024
+ [] ENEM 2024
     [] matematica 
         [] texto
         [] imagens
@@ -65,7 +71,7 @@ ENRIQUECIMENTO DE DADOS
         [] texto
         [] imagens
         [] HQ imagens
- [] 2023
+ [] ENEM 2023
     [] matematica 
         [] texto
         [] imagens
@@ -82,7 +88,7 @@ ENRIQUECIMENTO DE DADOS
         [] texto
         [] imagens
         [] HQ imagens
- [] 2022
+ [] ENEM 2022
     [] matematica 
         [] texto
         [] imagens
@@ -99,7 +105,7 @@ ENRIQUECIMENTO DE DADOS
         [] texto
         [] imagens
         [] HQ imagens
- [] 2021
+ [] ENEM 2021
     [] matematica 
         [] texto
         [] imagens
@@ -116,7 +122,7 @@ ENRIQUECIMENTO DE DADOS
         [] texto
         [] imagens
         [] HQ imagens
- [] 2020
+ [] ENEM 2020
     [] matematica 
         [] texto
         [] imagens
