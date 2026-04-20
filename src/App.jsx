@@ -22,7 +22,6 @@ function loadAttemptsFromSession() {
     if (!raw) return {}
     const o = JSON.parse(raw)
     if (typeof o !== 'object' || o === null) return {}
-    /** Chaves do JSON viram string; normalizamos para número da questão. */
     const out = {}
     for (const [k, v] of Object.entries(o)) {
       const n = Number(k)
@@ -42,6 +41,12 @@ function saveAttemptsToSession(attempts) {
   }
 }
 
+function formatTime(seconds) {
+  const m = Math.floor(seconds / 60)
+  const s = seconds % 60
+  return `${m}:${String(s).padStart(2, '0')}`
+}
+
 const AREA_LABELS = {
   math:    'Matemática',
   nature:  'Ciências da Natureza',
@@ -53,7 +58,6 @@ function areaLabel(area) {
   return AREA_LABELS[area] ?? area ?? null
 }
 
-/** Paths in JSON are like `figuras/name.png`; serve from /public via Vite. */
 function publicImageSrc(path) {
   if (!path) return ''
   return path.startsWith('/') ? path : `/${path}`
@@ -114,7 +118,6 @@ function writeNotesToSession(value) {
   }
 }
 
-/** Texto puro antigo → HTML; HTML já salvo é mantido. */
 function legacyPlainToHtml(raw) {
   if (!raw || !String(raw).trim()) return '<p><br></p>'
   const t = String(raw).trim()
@@ -129,7 +132,6 @@ function legacyPlainToHtml(raw) {
 export default function App() {
   const [questions, setQuestions] = useState([])
   const [question, setQuestion] = useState(null)
-  /** { [numeroQuestao]: { selected: 'a'|'b'..., correct: boolean } } */
   const [attempts, setAttempts] = useState(loadAttemptsFromSession)
   const [loading, setLoading] = useState(true)
   const [dark, setDark] = useState(() => {
@@ -139,6 +141,20 @@ export default function App() {
   })
   const [notebookOpen, setNotebookOpen] = useState(false)
   const [pendingSelection, setPendingSelection] = useState(null)
+
+  // Phase: 'home' | 'quiz' | 'summary'
+  const [phase, setPhase] = useState('home')
+
+  // Timers
+  const [totalElapsed, setTotalElapsed] = useState(0)
+  const [questionElapsed, setQuestionElapsed] = useState(0)
+  const [questionTimes, setQuestionTimes] = useState({}) // snapshot for summary
+
+  const startTimeRef = useRef(null)
+  const questionStartRef = useRef(null)
+  const accQuestionTimesRef = useRef({})   // { [number]: seconds } accumulated
+  const prevQuestionNumRef = useRef(null)
+
   const notebookEditorRef = useRef(null)
   const notebookEditorHydrated = useRef(false)
 
@@ -201,9 +217,34 @@ export default function App() {
     [questions],
   )
 
+  // Reset pending selection and track question time on navigation
   useEffect(() => {
     setPendingSelection(null)
-  }, [question])
+    if (phase !== 'quiz' || !question) return
+    const prevNum = prevQuestionNumRef.current
+    if (prevNum !== null && prevNum !== question.number && questionStartRef.current) {
+      accQuestionTimesRef.current[prevNum] =
+        (accQuestionTimesRef.current[prevNum] || 0) +
+        Math.floor((Date.now() - questionStartRef.current) / 1000)
+      questionStartRef.current = Date.now()
+      setQuestionElapsed(0)
+    }
+    prevQuestionNumRef.current = question.number
+  }, [question, phase])
+
+  // Timer tick
+  useEffect(() => {
+    if (phase !== 'quiz') return
+    const id = setInterval(() => {
+      if (startTimeRef.current) {
+        setTotalElapsed(Math.floor((Date.now() - startTimeRef.current) / 1000))
+      }
+      if (questionStartRef.current) {
+        setQuestionElapsed(Math.floor((Date.now() - questionStartRef.current) / 1000))
+      }
+    }, 1000)
+    return () => clearInterval(id)
+  }, [phase])
 
   const questionIndex = useMemo(() => {
     if (!question) return -1
@@ -265,6 +306,34 @@ export default function App() {
     setPendingSelection(null)
   }, [pendingSelection, pickAlternative])
 
+  const startQuiz = useCallback(() => {
+    const now = Date.now()
+    startTimeRef.current = now
+    questionStartRef.current = now
+    accQuestionTimesRef.current = {}
+    prevQuestionNumRef.current = null
+    setTotalElapsed(0)
+    setQuestionElapsed(0)
+    setPhase('quiz')
+  }, [])
+
+  const finishQuiz = useCallback(() => {
+    // Save time for the current question
+    if (questionStartRef.current && question) {
+      accQuestionTimesRef.current[question.number] =
+        (accQuestionTimesRef.current[question.number] || 0) +
+        Math.floor((Date.now() - questionStartRef.current) / 1000)
+    }
+    const finalTotal = startTimeRef.current
+      ? Math.floor((Date.now() - startTimeRef.current) / 1000)
+      : totalElapsed
+    setTotalElapsed(finalTotal)
+    setQuestionTimes({ ...accQuestionTimesRef.current })
+    startTimeRef.current = null
+    questionStartRef.current = null
+    setPhase('summary')
+  }, [question, totalElapsed])
+
   const stemSegments = useMemo(() => {
     if (!question) return []
     const imgs = question.images ?? []
@@ -279,27 +348,206 @@ export default function App() {
     return parseStemSegments(question.text, paths)
   }, [question])
 
-  if (loading || !question) return <div className="center">Carregando...</div>
+  // ── Loading ──────────────────────────────────────────────────────────────
+  if (loading) return <div className="center">Carregando...</div>
+  if (!question) return <div className="center">Carregando...</div>
 
   const letters = Object.keys(question.alternatives)
   const images = question.images ?? []
-  /** Uma figura no enunciado e uma por alternativa (ex.: questão 138). */
   const splitStemAndAlts =
     images.length > 1 && images.length === letters.length + 1
-
   const isPrevDisabled = questionIndex <= 0
   const isNextDisabled = questionIndex >= sortedQuestions.length - 1
   const altImageFor = (index) =>
     splitStemAndAlts ? images[index + 1] : null
-
   const attempt = attempts[question.number]
   const selected = attempt?.selected ?? null
 
+  // ── Homepage ─────────────────────────────────────────────────────────────
+  if (phase === 'home') {
+    return (
+      <div className="app-shell">
+        <div className="home-screen">
+          <button
+            type="button"
+            className="theme-toggle home-theme-btn"
+            onClick={() => setDark((d) => !d)}
+            aria-label="Alternar tema"
+          >
+            {dark ? <SunIcon /> : <MoonIcon />}
+          </button>
+
+          <div className="home-card">
+            <div className="home-logo-wrap">
+              <img
+                src={dark ? '/figuras/logos/integrar-logo-dark.png' : '/figuras/logos/integrar-logo-light.png'}
+                alt="Integrar"
+                className="home-logo"
+              />
+            </div>
+            <h1 className="home-title">Questionário ENEM</h1>
+            <p className="home-subtitle">
+              {sortedQuestions.length} questões &middot; Matemática
+            </p>
+            <button type="button" className="home-start-btn" onClick={startQuiz}>
+              Iniciar
+            </button>
+          </div>
+        </div>
+      </div>
+    )
+  }
+
+  // ── Summary ───────────────────────────────────────────────────────────────
+  if (phase === 'summary') {
+    const answeredCount = Object.keys(attempts).length
+    const correctCount = Object.values(attempts).filter((a) => a.correct).length
+    const wrongCount = answeredCount - correctCount
+    const unansweredCount = sortedQuestions.length - answeredCount
+    const avgTime = answeredCount > 0
+      ? Math.round(Object.values(questionTimes).reduce((s, t) => s + t, 0) / answeredCount)
+      : 0
+
+    return (
+      <div className="app-shell">
+        <header className="app-header">
+          <span className="app-header-title">Resultado</span>
+          <div className="app-header-actions">
+            <button
+              type="button"
+              className="home-start-btn summary-restart-btn"
+              onClick={() => {
+                setAttempts({})
+                saveAttemptsToSession({})
+                setQuestion(sortedQuestions[0])
+                setPhase('home')
+              }}
+            >
+              Reiniciar
+            </button>
+            <button
+              type="button"
+              className="theme-toggle"
+              onClick={() => setDark((d) => !d)}
+              aria-label="Alternar tema"
+            >
+              {dark ? <SunIcon /> : <MoonIcon />}
+            </button>
+          </div>
+        </header>
+
+        <div className="summary-screen">
+          <div className="summary-stats">
+            <div className="summary-stat summary-stat--correct">
+              <span className="summary-stat-value">{correctCount}</span>
+              <span className="summary-stat-label">Corretas</span>
+            </div>
+            <div className="summary-stat summary-stat--wrong">
+              <span className="summary-stat-value">{wrongCount}</span>
+              <span className="summary-stat-label">Incorretas</span>
+            </div>
+            <div className="summary-stat summary-stat--skip">
+              <span className="summary-stat-value">{unansweredCount}</span>
+              <span className="summary-stat-label">Não respondidas</span>
+            </div>
+            <div className="summary-stat summary-stat--time">
+              <span className="summary-stat-value">{formatTime(totalElapsed)}</span>
+              <span className="summary-stat-label">Tempo total</span>
+            </div>
+            <div className="summary-stat summary-stat--avg">
+              <span className="summary-stat-value">{formatTime(avgTime)}</span>
+              <span className="summary-stat-label">Média por questão</span>
+            </div>
+          </div>
+
+          <div className="summary-score-bar-wrap">
+            <div className="summary-score-bar">
+              {correctCount > 0 && (
+                <div
+                  className="summary-score-bar-fill summary-score-bar-fill--ok"
+                  style={{ width: `${(correctCount / sortedQuestions.length) * 100}%` }}
+                />
+              )}
+              {wrongCount > 0 && (
+                <div
+                  className="summary-score-bar-fill summary-score-bar-fill--bad"
+                  style={{ width: `${(wrongCount / sortedQuestions.length) * 100}%` }}
+                />
+              )}
+            </div>
+            <span className="summary-score-pct">
+              {sortedQuestions.length > 0
+                ? Math.round((correctCount / sortedQuestions.length) * 100)
+                : 0}%
+            </span>
+          </div>
+
+          <div className="summary-table-wrap">
+            <table className="summary-table">
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th>Sua resposta</th>
+                  <th>Gabarito</th>
+                  <th>Resultado</th>
+                  <th>Tempo</th>
+                </tr>
+              </thead>
+              <tbody>
+                {sortedQuestions.map((q) => {
+                  const att = attempts[q.number]
+                  const t = questionTimes[q.number]
+                  let rowClass = ''
+                  if (att) rowClass = att.correct ? 'summary-row--ok' : 'summary-row--bad'
+                  return (
+                    <tr key={q.number} className={rowClass}>
+                      <td className="summary-td-num">{q.number}</td>
+                      <td>{att?.selected?.toUpperCase() ?? <span className="summary-dash">—</span>}</td>
+                      <td>{q.answer.toUpperCase()}</td>
+                      <td className="summary-td-result">
+                        {att ? (
+                          att.correct
+                            ? <span className="summary-tick">✓</span>
+                            : <span className="summary-cross">✗</span>
+                        ) : <span className="summary-dash">—</span>}
+                      </td>
+                      <td className="summary-td-time">{t ? formatTime(t) : <span className="summary-dash">—</span>}</td>
+                    </tr>
+                  )
+                })}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    )
+  }
+
+  // ── Quiz ──────────────────────────────────────────────────────────────────
   return (
     <div className="app-shell">
       <header className="app-header">
         <span className="app-header-title">Questionário ENEM</span>
+
+        <div className="header-timers">
+          <div className="header-timer">
+            <span className="header-timer-label">Total</span>
+            <span className="header-timer-value">{formatTime(totalElapsed)}</span>
+          </div>
+          <div className="header-timer">
+            <span className="header-timer-label">Questão</span>
+            <span className="header-timer-value">{formatTime(questionElapsed)}</span>
+          </div>
+        </div>
+
         <div className="app-header-actions">
+          <button
+            type="button"
+            className="header-finish-btn"
+            onClick={finishQuiz}
+          >
+            Finalizar
+          </button>
           <button
             type="button"
             className={`notebook-toggle ${notebookOpen ? 'active' : ''}`}
@@ -362,8 +610,9 @@ export default function App() {
 
         <ul className="alternatives">
           {letters.map((letter, index) => {
-            const isSelected = selected === letter
             const isPending = !selected && pendingSelection === letter
+            const isConfirmedCorrect = selected !== null && letter === question.answer
+            const isConfirmedWrong = selected !== null && letter === selected && !attempt?.correct
             const altImg = altImageFor(index)
             const stacked = Boolean(altImg)
             const rawAlt = question.alternatives[letter]
@@ -373,7 +622,7 @@ export default function App() {
               <li key={letter}>
                 <button
                   type="button"
-                  className={`alt-btn ${isSelected ? 'selected' : ''} ${isPending ? 'alt-btn--pending' : ''} ${stacked ? 'alt-btn--stack' : ''}`}
+                  className={`alt-btn ${isConfirmedCorrect ? 'alt-btn--confirmed-correct' : ''} ${isConfirmedWrong ? 'alt-btn--confirmed-wrong' : ''} ${isPending ? 'alt-btn--pending' : ''} ${stacked ? 'alt-btn--stack' : ''}`}
                   onClick={() => !selected && setPendingSelection(letter)}
                   disabled={selected !== null}
                 >
@@ -507,7 +756,7 @@ export default function App() {
                   aria-current={isCurrent ? 'true' : undefined}
                   aria-label={`Questão ${q.number}${att ? (att.correct ? ', correta' : ', incorreta') : ', não respondida'}`}
                 >
-                  {q.number}
+                  {att ? (att.correct ? '✓' : '✗') : q.number}
                 </button>
               )
             })}
@@ -525,14 +774,25 @@ export default function App() {
         >
           ←
         </button>
-        <button
-          type="button"
-          className="footer-responder-btn"
-          onClick={confirmAnswer}
-          disabled={!pendingSelection || !!selected}
-        >
-          {selected ? 'Respondida' : 'Responder'}
-        </button>
+        {selected ? (
+          <button
+            type="button"
+            className="footer-responder-btn footer-responder-btn--next"
+            onClick={next}
+            disabled={isNextDisabled}
+          >
+            Próxima →
+          </button>
+        ) : (
+          <button
+            type="button"
+            className="footer-responder-btn"
+            onClick={confirmAnswer}
+            disabled={!pendingSelection}
+          >
+            Responder
+          </button>
+        )}
         <button
           type="button"
           className="footer-nav-btn"

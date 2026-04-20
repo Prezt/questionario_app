@@ -1,9 +1,12 @@
+FUNCIONALIDADES
 - Respostas
 - Timer da questao
 - Timer total
 - Resumo final
 - Marcacao das questoes na barra lateral
+- No celular, scrollar para baixo no site faz desconfigura um pouco a tela
 
+LOGIN
 - Login para os alunos
 
 MODOS DE USO
@@ -12,6 +15,7 @@ MODOS DE USO
 - Selecao de ASSUNTO
 - Selecao de PROVA COMPLETA (com timer)
 
+ENRIQUECIMENTO DE DADOS
 - Nivel da dificuldade da questao
 - Comentario de resolucao da questao
 
