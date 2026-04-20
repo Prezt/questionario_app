@@ -164,14 +164,31 @@ export default function App() {
   }, [dark])
 
   useEffect(() => {
-    fetch('/math_enem_2025.json')
-      .then((r) => r.json())
-      .then((data) => {
-        const sorted = [...data].sort((a, b) => a.number - b.number)
+    const loadData = async () => {
+      try {
+        const [mathRes, natureRes] = await Promise.all([
+          fetch('/math_enem_2025.json'),
+          fetch('/nature_enem_2025.json')
+        ])
+
+        const [mathData, natureData] = await Promise.all([
+          mathRes.json(),
+          natureRes.json()
+        ])
+
+        const sorted = [...mathData, ...natureData]
+          .sort((a, b) => a.number - b.number)
+
         setQuestions(sorted)
         setQuestion(sorted[0] ?? null)
+      } catch (err) {
+        console.error('Erro ao carregar questões:', err)
+      } finally {
         setLoading(false)
-      })
+      }
+    }
+
+    loadData()
   }, [])
 
   useEffect(() => {
@@ -385,9 +402,9 @@ export default function App() {
                 className="home-logo"
               />
             </div>
-            <h1 className="home-title">Questionário ENEM</h1>
+            <h1 className="home-title">Simulador Integrar</h1>
             <p className="home-subtitle">
-              {sortedQuestions.length} questões &middot; Matemática
+              {sortedQuestions.length} questões &middot; ENEM 2025 &middot; Dia 2
             </p>
             <button type="button" className="home-start-btn" onClick={startQuiz}>
               Iniciar

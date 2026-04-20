@@ -1,32 +1,37 @@
 FUNCIONALIDADES
-- Respostas
-- Timer da questao
-- Timer total
-- Resumo final
-- Marcacao das questoes na barra lateral
-- No celular, scrollar para baixo no site faz desconfigura um pouco a tela
+[x] Respostas
+[x] Timer da questao
+[x] Timer total
+[x] Resumo final
+[x] Marcacao das questoes na barra lateral
+[x] No celular, scrollar para baixo no site faz desconfigura um pouco a tela
+[] Randomizador da ordem das alternativas
 
 LOGIN
-- Login para os alunos
+[] Login para os alunos
 
 MODOS DE USO
-- Modo simulado (sem saber as respostas, correcao no fila)
-- Selecao de AREA
-- Selecao de ASSUNTO
-- Selecao de PROVA COMPLETA (com timer)
+[] Seletor de qual prova e qual dia fazer
+    [] Armazenar o que o aluno ja fez
+    [] Armazenar o historico desse aluno (melhor/pior, etc)
+[] Modo simulado (sem saber as respostas, correcao no fila)
+[] Selecao de AREA
+[] Selecao de ASSUNTO
+[] Selecao de PROVA COMPLETA (com timer)
 
 ENRIQUECIMENTO DE DADOS
-- Nivel da dificuldade da questao
-- Comentario de resolucao da questao
+[] Nivel da dificuldade da questao
+[] Comentario de resolucao da questao
 
-- Tutorial de uso da plataforma
-- Legal disclaimer
-- Resumo usando IA das questoes que foram erradas
+[] Tutorial de uso da plataforma
+[] Legal disclaimer
+[] Resumo usando IA das questoes que foram erradas
 
-- Ferramenta para criar questoes
+[] Ferramenta para criar questoes
+[] Ferramenta para reportar bugs
 
-- Subir prova completa 
- - 2025
+[] Subir prova completa 
+ [x] 2025
     [x] matematica 
         [x] texto
         [x] imagens
@@ -37,13 +42,13 @@ ENRIQUECIMENTO DE DADOS
         [] HQ imagens
     [x] ciencias da natureza
         [x] texto
-        [] imagens
+        [x] imagens
         [] HQ imagens
     [] ciencias sociais
         [] texto
         [] imagens
         [] HQ imagens
- - 2024
+ [] 2024
     [] matematica 
         [] texto
         [] imagens
@@ -60,7 +65,7 @@ ENRIQUECIMENTO DE DADOS
         [] texto
         [] imagens
         [] HQ imagens
- - 2023
+ [] 2023
     [] matematica 
         [] texto
         [] imagens
@@ -77,7 +82,7 @@ ENRIQUECIMENTO DE DADOS
         [] texto
         [] imagens
         [] HQ imagens
- - 2022
+ [] 2022
     [] matematica 
         [] texto
         [] imagens
@@ -94,7 +99,7 @@ ENRIQUECIMENTO DE DADOS
         [] texto
         [] imagens
         [] HQ imagens
- - 2021
+ [] 2021
     [] matematica 
         [] texto
         [] imagens
@@ -111,7 +116,7 @@ ENRIQUECIMENTO DE DADOS
         [] texto
         [] imagens
         [] HQ imagens
- - 2020
+ [] 2020
     [] matematica 
         [] texto
         [] imagens

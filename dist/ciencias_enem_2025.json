@@ -10,7 +10,7 @@
       "e": "Condutividade."
     },
     "images": [
-      "figuras_ciencias/q91_carvao.png"
+      "figuras/q91_carvao.png"
     ],
     "tags": [
       "química",
@@ -77,7 +77,7 @@
       "e": "0"
     },
     "images": [
-      "figuras_ciencias/q94_regua.png"
+      "figuras/q94_regua.png"
     ],
     "tags": [
       "física",
@@ -145,7 +145,7 @@
       "e": "mantém a quantidade de anticorpos preexistentes."
     },
     "images": [
-      "figuras_ciencias/q97_vacina.png"
+      "figuras/q97_vacina.png"
     ],
     "tags": [
       "biologia",
@@ -322,7 +322,7 @@
       "e": "diminuição da solubilidade do gás oxigênio."
     },
     "images": [
-      "figuras_ciencias/q105_usina.png"
+      "figuras/q105_usina.png"
     ],
     "tags": [
       "física",
@@ -346,7 +346,7 @@
       "e": "HAzO² e KCl"
     },
     "images": [
-      "figuras_ciencias/q106_foto.png"
+      "figuras/q106_foto.png"
     ],
     "tags": [
       "química",
@@ -369,12 +369,12 @@
       "e": "[Opção E - machos e fêmeas com padrões mistos]"
     },
     "images": [
-      "figuras_ciencias/q107_enunciado.png",
-      "figuras_ciencias/q107_alt_a.png",
-      "figuras_ciencias/q107_alt_b.png",
-      "figuras_ciencias/q107_alt_c.png",
-      "figuras_ciencias/q107_alt_d.png",
-      "figuras_ciencias/q107_alt_e.png"
+      "figuras/q107_enunciado.png",
+      "figuras/q107_alt_a.png",
+      "figuras/q107_alt_b.png",
+      "figuras/q107_alt_c.png",
+      "figuras/q107_alt_d.png",
+      "figuras/q107_alt_e.png"
     ],
     "tags": [
       "biologia",
@@ -398,11 +398,11 @@
       "e": "[Gráfico E - força de atrito com subida e queda gradual]"
     },
     "images": [
-      "figuras_ciencias/q108_alt_a.png",
-      "figuras_ciencias/q108_alt_b.png",
-      "figuras_ciencias/q108_alt_c.png",
-      "figuras_ciencias/q108_alt_d.png",
-      "figuras_ciencias/q108_alt_e.png"
+      "figuras/q108_alt_a.png",
+      "figuras/q108_alt_b.png",
+      "figuras/q108_alt_c.png",
+      "figuras/q108_alt_d.png",
+      "figuras/q108_alt_e.png"
     ],
     "tags": [
       "física",
@@ -426,7 +426,7 @@
       "e": "descarboxilação."
     },
     "images": [
-      "figuras_ciencias/q109_estruturas.png"
+      "figuras/q109_estruturas.png"
     ],
     "tags": [
       "química",
@@ -471,7 +471,7 @@
       "e": "produção de chuva ácida."
     },
     "images": [
-      "figuras_ciencias/q111_biodigestao.png"
+      "figuras/q111_biodigestao.png"
     ],
     "tags": [
       "biologia",
@@ -517,7 +517,7 @@
       "e": "5"
     },
     "images": [
-      "figuras_ciencias/q113_tubo.png"
+      "figuras/q113_tubo.png"
     ],
     "tags": [
       "física",
@@ -541,7 +541,7 @@
       "e": "reflexão e amplitude."
     },
     "images": [
-      "figuras_ciencias/q114_tirinha.png"
+      "figuras/q114_tirinha.png"
     ],
     "tags": [
       "física",
@@ -565,7 +565,7 @@
       "e": "C₁₀H₁₈O₂"
     },
     "images": [
-      "figuras_ciencias/q115_borneol.png"
+      "figuras/q115_borneol.png"
     ],
     "tags": [
       "química",
@@ -654,12 +654,12 @@
       "e": "[Circuito E: 102 V, 5,3 Ω, com bomba]"
     },
     "images": [
-      "figuras_ciencias/q119_enunciado.png",
-      "figuras_ciencias/q119_alt_a.png",
-      "figuras_ciencias/q119_alt_b.png",
-      "figuras_ciencias/q119_alt_c.png",
-      "figuras_ciencias/q119_alt_d.png",
-      "figuras_ciencias/q119_alt_e.png"
+      "figuras/q119_enunciado.png",
+      "figuras/q119_alt_a.png",
+      "figuras/q119_alt_b.png",
+      "figuras/q119_alt_c.png",
+      "figuras/q119_alt_d.png",
+      "figuras/q119_alt_e.png"
     ],
     "tags": [
       "física",
@@ -683,7 +683,7 @@
       "e": "700 ms."
     },
     "images": [
-      "figuras_ciencias/q120_sensor.png"
+      "figuras/q120_sensor.png"
     ],
     "tags": [
       "física",
@@ -728,7 +728,7 @@
       "e": "gerar um fluxo de corrente de convecção no ar contido entre a região da bobina e o vidro cerâmico."
     },
     "images": [
-      "figuras_ciencias/q122_inducao.png"
+      "figuras/q122_inducao.png"
     ],
     "tags": [
       "física",
@@ -816,7 +816,7 @@
       "e": "170 km/h para Leste, 180 km/h para Norte e 11 km/h para cima."
     },
     "images": [
-      "figuras_ciencias/q126_diagrama.png"
+      "figuras/q126_diagrama.png"
     ],
     "tags": [
       "física",
@@ -840,11 +840,11 @@
       "e": "[Gráfico E - com linha pontilhada em diferente posição]"
     },
     "images": [
-      "figuras_ciencias/q127_alt_a.png",
-      "figuras_ciencias/q127_alt_b.png",
-      "figuras_ciencias/q127_alt_c.png",
-      "figuras_ciencias/q127_alt_d.png",
-      "figuras_ciencias/q127_alt_e.png"
+      "figuras/q127_alt_a.png",
+      "figuras/q127_alt_b.png",
+      "figuras/q127_alt_c.png",
+      "figuras/q127_alt_d.png",
+      "figuras/q127_alt_e.png"
     ],
     "tags": [
       "química",
@@ -868,7 +868,7 @@
       "e": "2 e 5."
     },
     "images": [
-      "figuras_ciencias/q128_grafico.png"
+      "figuras/q128_grafico.png"
     ],
     "tags": [
       "física",
@@ -913,11 +913,11 @@
       "e": "[Circuito E: série, Rp = 0,2 Rc]"
     },
     "images": [
-      "figuras_ciencias/q130_alt_a.png",
-      "figuras_ciencias/q130_alt_b.png",
-      "figuras_ciencias/q130_alt_c.png",
-      "figuras_ciencias/q130_alt_d.png",
-      "figuras_ciencias/q130_alt_e.png"
+      "figuras/q130_alt_a.png",
+      "figuras/q130_alt_b.png",
+      "figuras/q130_alt_c.png",
+      "figuras/q130_alt_d.png",
+      "figuras/q130_alt_e.png"
     ],
     "tags": [
       "física",
@@ -984,7 +984,7 @@
       "e": "na malha de aço."
     },
     "images": [
-      "figuras_ciencias/q133_filtro.png"
+      "figuras/q133_filtro.png"
     ],
     "tags": [
       "química",
@@ -1007,7 +1007,7 @@
       "e": "Noretindrona."
     },
     "images": [
-      "figuras_ciencias/q134_hormonios.png"
+      "figuras/q134_hormonios.png"
     ],
     "tags": [
       "química",
@@ -1031,12 +1031,12 @@
       "e": "[Gráfico E: final do tratamento idêntico ao início]"
     },
     "images": [
-      "figuras_ciencias/q135_enunciado.png",
-      "figuras_ciencias/q135_alt_a.png",
-      "figuras_ciencias/q135_alt_b.png",
-      "figuras_ciencias/q135_alt_c.png",
-      "figuras_ciencias/q135_alt_d.png",
-      "figuras_ciencias/q135_alt_e.png"
+      "figuras/q135_enunciado.png",
+      "figuras/q135_alt_a.png",
+      "figuras/q135_alt_b.png",
+      "figuras/q135_alt_c.png",
+      "figuras/q135_alt_d.png",
+      "figuras/q135_alt_e.png"
     ],
     "tags": [
       "física",
