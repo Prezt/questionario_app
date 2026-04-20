@@ -1,6 +1,6 @@
 # Questionário (matemática)
 
-Aplicação em React + Vite que carrega questões de `public/math_enem_2025.json` e exibe uma questão aleatória por vez, com alternativas clicáveis e alternância de tema claro/escuro.
+Aplicação em React + Vite que carrega questões de `public/math_enem_2025.json`, ordenadas pelo **número da questão**, com **barra vertical à esquerda** para saltar entre elas, feedback de acerto/erro, caderno de anotações e alternância de tema claro/escuro.
 
 ## Como rodar
 
@@ -10,9 +10,19 @@ Aplicação em React + Vite que carrega questões de `public/math_enem_2025.json
 
 No componente principal, todos os Hooks do React (incluindo `useMemo` para o enunciado segmentado) ficam **acima** do retorno condicional de “Carregando…”, para respeitar a regra de ordem estável dos Hooks.
 
+## Layout e navegação
+
+- **Esquerda:** lista rolável de botões circulares com o **número oficial** de cada questão (ex.: 136, 137…). O item da questão atual fica destacado em roxo; depois de responder, o contorno fica **verde** se acertou e **vermelho** se errou.
+- **Centro:** enunciado, alternativas, tags e botão **Próxima questão** (avança na ordem do JSON e volta ao início depois da última).
+- **Topo do centro:** indicador **posição / total** (ex.: `5 / 45`), tipo de prova (`test`, se existir) e ano.
+
+As respostas são guardadas na sessão (`sessionStorage`, chave `questionario-tentativas`) para manter o estado ao recarregar a página na mesma aba.
+
 ## Caderno (bloco de notas)
 
-No canto superior direito há o botão **Caderno**, que abre um painel lateral com um campo de texto para rascunhos. O conteúdo é salvo automaticamente em **`sessionStorage`** (chave `questionario-caderno`): permanece enquanto a **aba do navegador** estiver aberta (incluindo ao trocar de questão ou recarregar a página). Ao **fechar a aba ou o navegador**, as anotações são apagadas. **Esc** ou o botão **×** fecham o painel; o fundo escurecido também fecha ao ser clicado.
+No canto superior direito há o botão **Caderno**, que desliza um painel pela direita. **Não há bloqueio do restante da página**: dá para continuar a ler a questão, marcar alternativas e usar os botões enquanto o caderno está aberto (só a faixa ocupada pelo painel fica reservada ao caderno).
+
+O conteúdo é um editor **rich text** (HTML) com barra **Negrito**, **Itálico** e **Sublinhado**; a seleção de texto recebe a formatação ao clicar nos botões. Tudo é salvo automaticamente em **`sessionStorage`** (chave `questionario-caderno`). Texto antigo só em texto puro é convertido na primeira carga. As notas duram enquanto a **aba** estiver aberta; ao **fechar a aba ou o navegador**, são apagadas. **Esc** ou **×** fecham o painel (sem escurecer o fundo).
 
 ## Figuras das questões
 
@@ -29,6 +39,10 @@ Se o link quebrar em outra máquina, recrie na raiz do projeto:
 ```bash
 ln -sfn ../figuras public/figuras
 ```
+
+## Campo `test` (tipo de prova)
+
+Cada questão pode incluir o campo opcional **`test`** (por exemplo `"ENEM"`). Na interface, ele aparece como etiqueta no topo, junto com o progresso e o **ano** (o ano continua com o destaque em roxo).
 
 ## Campo `images` no JSON
 

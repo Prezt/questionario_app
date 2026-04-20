@@ -1,4 +1,11 @@
-import { useState, useEffect, useCallback, useMemo, useRef } from 'react'
+import {
+  useState,
+  useEffect,
+  useLayoutEffect,
+  useCallback,
+  useMemo,
+  useRef,
+} from 'react'
 import './App.css'
 import {
   parseStemSegments,
@@ -6,8 +13,33 @@ import {
   captionFromBracketText,
 } from './parseQuestionFigures.js'
 
-function getRandomQuestion(questions) {
-  return questions[Math.floor(Math.random() * questions.length)]
+const ATTEMPTS_SESSION_KEY = 'questionario-tentativas'
+
+function loadAttemptsFromSession() {
+  if (typeof sessionStorage === 'undefined') return {}
+  try {
+    const raw = sessionStorage.getItem(ATTEMPTS_SESSION_KEY)
+    if (!raw) return {}
+    const o = JSON.parse(raw)
+    if (typeof o !== 'object' || o === null) return {}
+    /** Chaves do JSON viram string; normalizamos para número da questão. */
+    const out = {}
+    for (const [k, v] of Object.entries(o)) {
+      const n = Number(k)
+      if (!Number.isNaN(n) && v && typeof v === 'object') out[n] = v
+    }
+    return out
+  } catch {
+    return {}
+  }
+}
+
+function saveAttemptsToSession(attempts) {
+  try {
+    sessionStorage.setItem(ATTEMPTS_SESSION_KEY, JSON.stringify(attempts))
+  } catch {
+    /* ignore */
+  }
 }
 
 /** Paths in JSON are like `figuras/name.png`; serve from /public via Vite. */
@@ -71,10 +103,23 @@ function writeNotesToSession(value) {
   }
 }
 
+/** Texto puro antigo → HTML; HTML já salvo é mantido. */
+function legacyPlainToHtml(raw) {
+  if (!raw || !String(raw).trim()) return '<p><br></p>'
+  const t = String(raw).trim()
+  if (t.startsWith('<')) return raw
+  const esc = String(raw)
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+  return `<p>${esc.replace(/\n/g, '<br>')}</p>`
+}
+
 export default function App() {
   const [questions, setQuestions] = useState([])
   const [question, setQuestion] = useState(null)
-  const [selected, setSelected] = useState(null)
+  /** { [numeroQuestao]: { selected: 'a'|'b'..., correct: boolean } } */
+  const [attempts, setAttempts] = useState(loadAttemptsFromSession)
   const [loading, setLoading] = useState(true)
   const [dark, setDark] = useState(() => {
     const saved = localStorage.getItem('dark')
@@ -82,8 +127,8 @@ export default function App() {
     return window.matchMedia('(prefers-color-scheme: dark)').matches
   })
   const [notebookOpen, setNotebookOpen] = useState(false)
-  const [notes, setNotes] = useState(readNotesFromSession)
-  const notebookTextareaRef = useRef(null)
+  const notebookEditorRef = useRef(null)
+  const notebookEditorHydrated = useRef(false)
 
   useEffect(() => {
     document.documentElement.classList.toggle('dark', dark)
@@ -94,8 +139,9 @@ export default function App() {
     fetch('/math_enem_2025.json')
       .then((r) => r.json())
       .then((data) => {
-        setQuestions(data)
-        setQuestion(getRandomQuestion(data))
+        const sorted = [...data].sort((a, b) => a.number - b.number)
+        setQuestions(sorted)
+        setQuestion(sorted[0] ?? null)
         setLoading(false)
       })
   }, [])
@@ -109,30 +155,79 @@ export default function App() {
     return () => window.removeEventListener('keydown', onKey)
   }, [notebookOpen])
 
-  useEffect(() => {
-    if (notebookOpen) document.body.style.overflow = 'hidden'
-    else document.body.style.overflow = ''
-    return () => {
-      document.body.style.overflow = ''
-    }
-  }, [notebookOpen])
+  useLayoutEffect(() => {
+    if (!question) return
+    const el = notebookEditorRef.current
+    if (!el || notebookEditorHydrated.current) return
+    el.innerHTML = legacyPlainToHtml(readNotesFromSession())
+    notebookEditorHydrated.current = true
+  }, [question])
 
-  useEffect(() => {
-    if (notebookOpen && notebookTextareaRef.current) {
-      notebookTextareaRef.current.focus()
-    }
-  }, [notebookOpen])
-
-  const onNotesChange = useCallback((e) => {
-    const v = e.target.value
-    setNotes(v)
-    writeNotesToSession(v)
+  const syncNotebookFromEditor = useCallback(() => {
+    const html = notebookEditorRef.current?.innerHTML ?? ''
+    writeNotesToSession(html)
   }, [])
 
+  const applyNotebookFormat = useCallback(
+    (command) => (e) => {
+      e.preventDefault()
+      notebookEditorRef.current?.focus({ preventScroll: true })
+      document.execCommand(command, false)
+      syncNotebookFromEditor()
+    },
+    [syncNotebookFromEditor],
+  )
+
+  useEffect(() => {
+    if (notebookOpen && notebookEditorRef.current) {
+      notebookEditorRef.current.focus({ preventScroll: true })
+    }
+  }, [notebookOpen])
+
+  const sortedQuestions = useMemo(
+    () => [...questions].sort((a, b) => a.number - b.number),
+    [questions],
+  )
+
+  const questionIndex = useMemo(() => {
+    if (!question) return -1
+    return sortedQuestions.findIndex((q) => q.number === question.number)
+  }, [question, sortedQuestions])
+
+  const railInnerRef = useRef(null)
+
+  useEffect(() => {
+    if (!question || !railInnerRef.current) return
+    const btn = railInnerRef.current.querySelector(
+      `[data-qnum="${question.number}"]`,
+    )
+    btn?.scrollIntoView({ block: 'nearest', behavior: 'smooth' })
+  }, [question])
+
   const next = useCallback(() => {
-    setSelected(null)
-    setQuestion(getRandomQuestion(questions))
-  }, [questions])
+    if (!question || sortedQuestions.length === 0) return
+    const idx = sortedQuestions.findIndex((q) => q.number === question.number)
+    const nextIdx = idx < 0 ? 0 : (idx + 1) % sortedQuestions.length
+    setQuestion(sortedQuestions[nextIdx])
+  }, [question, sortedQuestions])
+
+  const goToQuestion = useCallback((q) => {
+    setQuestion(q)
+  }, [])
+
+  const pickAlternative = useCallback((letter) => {
+    if (!question) return
+    setAttempts((a) => {
+      if (a[question.number]) return a
+      const correct = letter === question.answer
+      const next = {
+        ...a,
+        [question.number]: { selected: letter, correct },
+      }
+      saveAttemptsToSession(next)
+      return next
+    })
+  }, [question])
 
   const stemSegments = useMemo(() => {
     if (!question) return []
@@ -158,12 +253,46 @@ export default function App() {
   const altImageFor = (index) =>
     splitStemAndAlts ? images[index + 1] : null
 
+  const attempt = attempts[question.number]
+  const selected = attempt?.selected ?? null
+
   return (
     <>
+    <div className="app-shell">
+      <nav className="question-rail" aria-label="Lista de questões">
+        <div className="question-rail-scroll" ref={railInnerRef}>
+          {sortedQuestions.map((q) => {
+            const att = attempts[q.number]
+            const isCurrent = q.number === question.number
+            let stateClass = 'question-rail-btn--idle'
+            if (att) stateClass = att.correct ? 'question-rail-btn--ok' : 'question-rail-btn--bad'
+            return (
+              <button
+                key={q.number}
+                type="button"
+                data-qnum={q.number}
+                className={`question-rail-btn ${stateClass} ${isCurrent ? 'question-rail-btn--current' : ''}`}
+                onClick={() => goToQuestion(q)}
+                aria-current={isCurrent ? 'true' : undefined}
+                aria-label={`Questão ${q.number}${att ? (att.correct ? ', correta' : ', incorreta') : ', não respondida'}`}
+              >
+                {q.number}
+              </button>
+            )
+          })}
+        </div>
+      </nav>
+
+      <div className="app-main">
     <div className="container">
       <header className="header">
         <div className="badges">
-          <span className="badge">Questão {question.number}</span>
+          <span className="badge badge-progress">
+            {questionIndex + 1} / {sortedQuestions.length}
+          </span>
+          {question.test != null && String(question.test).trim() !== '' && (
+            <span className="badge badge-test">{question.test}</span>
+          )}
           <span className="badge badge-year">{question.year}</span>
         </div>
         <div className="header-actions">
@@ -220,7 +349,7 @@ export default function App() {
                 <button
                   type="button"
                   className={`alt-btn ${isSelected ? 'selected' : ''} ${stacked ? 'alt-btn--stack' : ''}`}
-                  onClick={() => setSelected(letter)}
+                  onClick={() => pickAlternative(letter)}
                   disabled={selected !== null}
                 >
                   <div className="alt-row">
@@ -249,9 +378,16 @@ export default function App() {
           })}
         </ul>
 
-        {selected && (
-          <div className="feedback">
-            Você escolheu a alternativa <strong>{selected.toUpperCase()}</strong>.
+        {selected && attempt && (
+          <div
+            className={`feedback ${attempt.correct ? 'feedback--correct' : 'feedback--wrong'}`}
+            role="status"
+          >
+            {attempt.correct
+              ? 'Correto.'
+              : `Incorreto. A alternativa correta é ${String(question.answer).toUpperCase()}.`}
+            {' '}
+            Sua resposta: <strong>{selected.toUpperCase()}</strong>.
           </div>
         )}
       </div>
@@ -262,16 +398,13 @@ export default function App() {
         ))}
       </div>
 
-      <button className="next-btn" onClick={next}>
+      <button type="button" className="next-btn" onClick={next}>
         Próxima questão →
       </button>
     </div>
+      </div>
+    </div>
 
-    <div
-      className={`notebook-backdrop ${notebookOpen ? 'is-open' : ''}`}
-      onClick={() => setNotebookOpen(false)}
-      aria-hidden={!notebookOpen}
-    />
     <aside
       id="session-notebook"
       className={`notebook-panel ${notebookOpen ? 'is-open' : ''}`}
@@ -289,14 +422,47 @@ export default function App() {
           ×
         </button>
       </div>
-      <p className="notebook-hint">Anotações ficam nesta aba do navegador até você fechá-la.</p>
-      <textarea
-        ref={notebookTextareaRef}
-        className="notebook-textarea"
-        value={notes}
-        onChange={onNotesChange}
-        placeholder="Rascunhos, contas, lembretes…"
+      <p className="notebook-hint">
+        Anotações nesta aba até fechá-la. Você pode usar o restante da página com o caderno aberto.
+      </p>
+      <div className="notebook-toolbar" role="toolbar" aria-label="Formatação do texto">
+        <button
+          type="button"
+          className="notebook-tool"
+          onMouseDown={applyNotebookFormat('bold')}
+          aria-label="Negrito"
+          title="Negrito"
+        >
+          <strong>B</strong>
+        </button>
+        <button
+          type="button"
+          className="notebook-tool"
+          onMouseDown={applyNotebookFormat('italic')}
+          aria-label="Itálico"
+          title="Itálico"
+        >
+          <em>I</em>
+        </button>
+        <button
+          type="button"
+          className="notebook-tool"
+          onMouseDown={applyNotebookFormat('underline')}
+          aria-label="Sublinhado"
+          title="Sublinhado"
+        >
+          <span className="notebook-tool-u">U</span>
+        </button>
+      </div>
+      <div
+        ref={notebookEditorRef}
+        className="notebook-editor"
+        contentEditable
+        suppressContentEditableWarning
+        role="textbox"
+        aria-multiline="true"
         spellCheck
+        onInput={syncNotebookFromEditor}
       />
     </aside>
     </>
