@@ -2,7 +2,7 @@
  * Marcadores de figura no enunciado: [Infográfico …], [Figura …], [Gráfico …], [Esquema …]
  */
 export const STEM_FIGURE_MARKER_RE =
-  /\[(Infográfico[^\]]*|Figuras?[^\]]*|Gráfico[^\]]*|Esquema[^\]]*)\]/g
+  /\[(Imagem[^\]]*|Infográfico[^\]]*|Figuras?[^\]]*|Gráfico[^\]]*|Esquema[^\]]*)\]/g
 
 /**
  * Segmenta o texto do enunciado e intercala figuras na ordem dos marcadores.

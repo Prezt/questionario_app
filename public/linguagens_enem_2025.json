@@ -591,7 +591,8 @@
   },
   {
     "number": 22,
-    "text": "TEXTO I: reportagem (imaterial.art.br, 2025) sobre a Ilha do Ferro, povoado às margens do Rio São Francisco (AL) onde dezenas de artistas populares trabalham com entalhe em madeira, transformando troncos e galhos retorcidos em bancos, bonecos, pássaros, cobras e bailarinas. TEXTO II: fotografia da obra \"Bailarino entalhado em gravetos de madeira\" de Y. Farias, com cinco figuras de bailarinos talhados em gravetos naturais, 20×13×51 cm, Ilha do Ferro (AL). A originalidade do trabalho dos artistas da Ilha do Ferro se dá pela [Imagem: q22_bailarino.png]",
+    "text": "A originalidade do trabalho dos artistas da Ilha do Ferro se dá pela",
+    "contextIds": ["enem_2025_lang_ctx12a", "enem_2025_lang_ctx12b"],
     "alternatives": {
       "a": "reutilização de materiais para redução do impacto ambiental.",
       "b": "ressignificação da matéria-prima atribuindo-lhe nova função.",
@@ -599,9 +600,7 @@
       "d": "representação de práticas corporais da comunidade.",
       "e": "replicação seriada para distribuição em larga escala."
     },
-    "images": [
-      "figuras/q22_bailarino.png"
-    ],
+    "images": [],
     "tags": [
       "arte popular",
       "Ilha do Ferro",
@@ -615,7 +614,8 @@
   },
   {
     "number": 23,
-    "text": "TEXTO I: descrição (pinacoteca.org.br, 2025) da exposição \"Adriana Varejão: suturas, fissuras, ruínas\", que examina a história visual, as tradições iconográficas europeias e o fazer artístico ocidental; corte, rachadura, talho e fissura são elementos recorrentes nos trabalhos da artista desde 1992, incluindo as séries \"Ruínas de charque\" e \"Línguas\". TEXTO II: imagem da obra \"Azulejaria em carne viva\" (óleo sobre tela, poliuretano, madeira e alumínio, 160×200×25 cm, 1999), mostrando uma \"ferida\" em carne viva rompendo uma parede de azulejos portugueses. A utilização de recursos visuais como suturas, cortes e ruínas por Adriana Varejão, na obra Azulejaria em carne viva, remete à(s) [Imagem: q23_varejao_azulejaria.png]",
+    "contextIds": ["enem_2025_lang_ctx13a", "enem_2025_lang_ctx13b"],
+    "text": "A utilização de recursos visuais como suturas, cortes e ruínas por Adriana Varejão, na obra Azulejaria em carne viva, remete à(s)",
     "alternatives": {
       "a": "sobreposição da cultura brasileira à arte portuguesa.",
       "b": "manutenção da representação realista na arte brasileira.",
@@ -623,9 +623,7 @@
       "d": "desigualdades nos incentivos à produção artística brasileira.",
       "e": "negligência na conservação do patrimônio arquitetônico luso-brasileiro."
     },
-    "images": [
-      "figuras/q23_varejao_azulejaria.png"
-    ],
+    "images": [],
     "tags": [
       "artes visuais",
       "Adriana Varejão",
@@ -639,7 +637,7 @@
   },
   {
     "number": 24,
-    "text": "Cartaz da UNICEF (unicef.org.br, 2024) com duas fotografias: à esquerda, menina indígena com pintura facial e a frase \"Carlos Pataxicoré, aos 36 anos, médico e o futuro todo pela frente\"; à direita, menina negra sorrindo com a frase \"Quézia Silva, aos 29 anos, advogada e o futuro todo pela frente\". Título: \"EM UM MUNDO DE DIFERENÇAS ENXERGUE A IGUALDADE\". Texto: \"O Brasil tem 31 milhões de crianças negras e indígenas. A maioria sofre com discriminação racial, sem ter acesso à educação, à saúde e ao desenvolvimento. Ajude a mudar essa realidade. Contribua para uma infância sem racismo.\" Nesse cartaz, a utilização de frases que projetam a vida profissional de duas crianças tem como objetivo [Imagem: q24_unicef.png]",
+    "text": "[Figura: Disponível em: www.unicef.org.br. Acesso em: 15 jan. 2024 (adaptado).]\n\nNesse cartaz, a utilização de frases que projetam a vida profissional de duas crianças tem como objetivo ",
     "alternatives": {
       "a": "sugerir a arrecadação de fundos para o sustento de povos originários no país.",
       "b": "sensibilizar a sociedade sobre os benefícios decorrentes do combate ao racismo.",
@@ -685,7 +683,7 @@
   },
   {
     "number": 26,
-    "text": "Infográfico \"Doce mistura\" (Revista Língua Portuguesa, 2008) apresentando variações regionais do nome do prato à base de milho no Brasil: \"curau\" (MG, SP, MT, GO), \"corá / piruruca / pururuca / jimbelê\" (MG), \"canjiquinha\" (RJ), \"coral e papa de milho\" (RJ, MG), \"canjica de milho verde\" (BA). Observa que o creme amarelo é \"canjica\" no norte e \"curau\" no sul; o creme branco com grãos é \"canjica\" no sul e \"curau\" no norte. Esse texto, que apresenta um prato da culinária brasileira, evidencia [Imagem: q26_canjica.png]",
+    "text": "[Infográfico \"Doce mistura\" (Revista Língua Portuguesa, 2008)]Esse texto, que apresenta um prato da culinária brasileira, evidencia",
     "alternatives": {
       "a": "valor afetivo nas nomenclaturas.",
       "b": "variedade linguística entre regiões.",
@@ -708,7 +706,7 @@
   },
   {
     "number": 27,
-    "text": "Texto de C. Barreira (O Estado de S. Paulo, 2010) que distingue briga de luta: a briga desumaniza o outro e pode matá-lo; na luta, consideram-se as intenções, habilidades e a meta de vencer do adversário; o desenvolvimento passa pelo contato com agressividade, raiva, frustração, orgulho, determinação e fraqueza — é combate também consigo mesmo, contra as próprias limitações e o próprio orgulho. Esse texto apresenta as diferenças entre briga e luta, na medida em que aponta o(a)",
+    "text": "Esse texto apresenta as diferenças entre briga e luta, na medida em que aponta o(a)",
     "alternatives": {
       "a": "superação pessoal na luta.",
       "b": "violência evidenciada na luta.",
@@ -722,6 +720,7 @@
       "lutas",
       "filosofia do esporte"
     ],
+    "contextIds": ["enem_2025_lang_ctx14"], 
     "year": 2025,
     "area": "linguagens",
     "test": "ENEM",

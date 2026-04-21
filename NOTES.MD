@@ -7,12 +7,12 @@ FUNCIONALIDADES
 [x] No celular, scrollar para baixo no site faz desconfigura um pouco a tela
 [x] Seletor de qual prova e qual dia fazer
 [x] Alternar Ingles e Espanhol
-[] Textos faltando. Link para a leitura do texto OU texto completo presente
-[] Conectar um banco de dados + bug report tool
+[x] Textos faltando. Link para a leitura do texto OU texto completo presente
 [] Randomizador da ordem das alternativas
-[] Resumo com assuntos de menor dominio e maior tempo medio de resolucao
+[x] Resumo com assuntos de menor dominio e maior tempo medio de resolucao
 
 LOGIN
+[] Conectar um banco de dados + bug report tool
 [] Login para os alunos
     [] Armazenar o que o aluno ja fez
     [] Armazenar o historico desse aluno (melhor/pior, etc)
@@ -45,26 +45,26 @@ DADOS:
         [x] texto
         [x] imagens
         [] HQ imagens
-    [] linguagens
-        [] texto
-        [] imagens
+    [x] linguagens
+        [x] texto
+        [x] imagens
         [] HQ imagens
     [x] ciencias da natureza
         [x] texto
         [x] imagens
         [] HQ imagens
-    [] ciencias sociais
-        [] texto
-        [] imagens
+    [x] ciencias sociais
+        [x] texto
+        [x] imagens
         [] HQ imagens
- [] ENEM 2024
+ [x] ENEM 2024
     [] matematica 
         [] texto
         [] imagens
         [] HQ imagens
-    [] linguagens
-        [] texto
-        [] imagens
+    [x] linguagens
+        [x] texto
+        [x] imagens
         [] HQ imagens
     [] ciencias da natureza
         [] texto

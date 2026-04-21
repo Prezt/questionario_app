@@ -710,6 +710,14 @@
 
 .ctx-text {
   margin: 0;
+  text-align: justify;
+}
+
+.ctx-text--caption {
+  font-size: 0.88rem;
+  color: var(--text-soft);
+  text-align: center;
+  font-style: italic;
 }
 
 .ctx-reference {

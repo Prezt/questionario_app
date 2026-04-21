@@ -39,6 +39,13 @@ function saveAttemptsToSession(attempts) {
   } catch { /* ignore */ }
 }
 
+// Normalize contextId (string) or contextIds (array) → always an array
+function getContextIds(question) {
+  if (Array.isArray(question.contextIds)) return question.contextIds
+  if (question.contextId) return [question.contextId]
+  return []
+}
+
 function formatTime(seconds) {
   const m = Math.floor(seconds / 60)
   const s = seconds % 60
@@ -127,8 +134,8 @@ export default function App() {
   })
   const [notebookOpen, setNotebookOpen] = useState(false)
   const [pendingSelection, setPendingSelection] = useState(null)
-  const [contextExpanded, setContextExpanded] = useState(true)
-  const prevContextIdRef = useRef(null)
+  const [contextExpanded, setContextExpanded] = useState({}) // { [contextId]: boolean }
+  const prevContextIdRef = useRef([])
 
   // Phase: 'home' | 'quiz' | 'summary'
   const [phase, setPhase] = useState('home')
@@ -230,12 +237,18 @@ export default function App() {
   useEffect(() => {
     setPendingSelection(null)
     if (phase !== 'quiz' || !question) return
-    // Auto-expand context panel when entering a new context group
-    const cid = question.contextId ?? null
-    if (cid !== prevContextIdRef.current) {
-      setContextExpanded(true)
-      prevContextIdRef.current = cid
+    // Auto-expand any context that wasn't present in the previous question
+    const cids = getContextIds(question)
+    const prevCids = prevContextIdRef.current
+    const newCids = cids.filter((id) => !prevCids.includes(id))
+    if (newCids.length > 0) {
+      setContextExpanded((prev) => {
+        const next = { ...prev }
+        newCids.forEach((id) => { next[id] = true })
+        return next
+      })
     }
+    prevContextIdRef.current = cids
     const prevNum = prevQuestionNumRef.current
     if (prevNum !== null && prevNum !== question.number && questionStartRef.current) {
       accQuestionTimesRef.current[prevNum] =
@@ -827,32 +840,49 @@ export default function App() {
                   )}
                 </header>
 
-                {(() => {
-                  const ctx = question.contextId ? contexts[question.contextId] : null
+                {getContextIds(question).map((cid) => {
+                  const ctx = contexts[cid]
                   if (!ctx) return null
                   const ctxObj = typeof ctx === 'object' ? ctx : { text: ctx }
+                  const isExpanded = contextExpanded[cid] !== false
                   return (
-                    <div className="question-context">
+                    <div key={cid} className="question-context">
                       <button
                         type="button"
                         className="question-context-toggle"
-                        onClick={() => setContextExpanded((v) => !v)}
-                        aria-expanded={contextExpanded}
+                        onClick={() => setContextExpanded((prev) => ({ ...prev, [cid]: !isExpanded }))}
+                        aria-expanded={isExpanded}
                       >
-                        <span className="question-context-chevron">{contextExpanded ? '▲' : '▼'}</span>
+                        <span className="question-context-chevron">{isExpanded ? '▲' : '▼'}</span>
                         <span className="question-context-title">{ctxObj.title ?? 'Texto de referência'}</span>
-                        <span className="question-context-chevron">{contextExpanded ? '▲' : '▼'}</span>
+                        <span className="question-context-chevron">{isExpanded ? '▲' : '▼'}</span>
                       </button>
-                      {contextExpanded && (
+                      {isExpanded && (
                         <div className="question-context-body">
                           {ctxObj.subtitle && <p className="ctx-subtitle">{ctxObj.subtitle}</p>}
-                          {ctxObj.text && <p className="ctx-text">{ctxObj.text}</p>}
+                          {ctxObj.images && ctxObj.images.length > 0 ? (
+                            <>
+                              {ctxObj.images.map((src, i) => (
+                                <figure key={i} className="q-figure">
+                                  <img
+                                    src={publicImageSrc(src)}
+                                    alt=""
+                                    loading="lazy"
+                                    decoding="async"
+                                  />
+                                </figure>
+                              ))}
+                              {ctxObj.text && <p className="ctx-text ctx-text--caption">{ctxObj.text}</p>}
+                            </>
+                          ) : (
+                            ctxObj.text && <p className="ctx-text">{ctxObj.text}</p>
+                          )}
                           {ctxObj.reference && <p className="ctx-reference">{ctxObj.reference}</p>}
                         </div>
                       )}
                     </div>
                   )
-                })()}
+                })}
 
                 <div className="card">
                   <div className="question-stem" aria-label="Enunciado">
@@ -978,11 +1008,12 @@ export default function App() {
               let stateClass = 'question-rail-btn--idle'
               if (att) stateClass = att.correct ? 'question-rail-btn--ok' : 'question-rail-btn--bad'
               let groupClass = ''
-              if (q.contextId) {
+              const primaryCid = getContextIds(q)[0] ?? null
+              if (primaryCid) {
                 const prev = sortedQuestions[idx - 1]
                 const next = sortedQuestions[idx + 1]
-                const isStart = q.contextId !== prev?.contextId
-                const isEnd   = q.contextId !== next?.contextId
+                const isStart = primaryCid !== (getContextIds(prev)[0] ?? null)
+                const isEnd   = primaryCid !== (getContextIds(next)[0] ?? null)
                 groupClass = isStart && isEnd ? 'question-rail-btn--group-only'
                            : isStart          ? 'question-rail-btn--group-start'
                            : isEnd            ? 'question-rail-btn--group-end'
