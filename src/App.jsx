@@ -114,6 +114,7 @@ function legacyPlainToHtml(raw) {
 export default function App() {
   // All questions loaded from manifest
   const [allQuestions, setAllQuestions] = useState([])
+  const [contexts, setContexts] = useState({}) // { [contextId]: { title, subtitle, text, reference } }
   // Active set for current quiz session (set when quiz starts)
   const [questions, setQuestions] = useState([])
   const [question, setQuestion] = useState(null)
@@ -160,12 +161,16 @@ export default function App() {
   useEffect(() => {
     async function load() {
       try {
-        const manifest = await fetch('/questions-manifest.json').then((r) => r.json())
+        const [manifest, ctxMap] = await Promise.all([
+          fetch('/questions-manifest.json').then((r) => r.json()),
+          fetch('/contexts.json').then((r) => r.json()).catch(() => ({})),
+        ])
         const datasets = await Promise.all(
           manifest.map((file) => fetch(`/${file}`).then((r) => r.json()))
         )
         const all = datasets.flat().sort((a, b) => a.number - b.number)
         setAllQuestions(all)
+        setContexts(ctxMap)
       } catch (err) {
         console.error('Erro ao carregar questões:', err)
       } finally {
@@ -822,42 +827,32 @@ export default function App() {
                   )}
                 </header>
 
-                {question.context && (
-                  <div className="question-context">
-                    <button
-                      type="button"
-                      className="question-context-toggle"
-                      onClick={() => setContextExpanded((v) => !v)}
-                      aria-expanded={contextExpanded}
-                    >
-                      <span>
-                        {typeof question.context === 'object' && question.context.title
-                          ? question.context.title
-                          : 'Texto de referência'}
-                      </span>
-                      <span className="question-context-chevron">{contextExpanded ? '▲' : '▼'}</span>
-                    </button>
-                    {contextExpanded && (
-                      <div className="question-context-body">
-                        {typeof question.context === 'object' ? (
-                          <>
-                            {question.context.subtitle && (
-                              <p className="ctx-subtitle">{question.context.subtitle}</p>
-                            )}
-                            {question.context.text && (
-                              <p className="ctx-text">{question.context.text}</p>
-                            )}
-                            {question.context.reference && (
-                              <p className="ctx-reference">{question.context.reference}</p>
-                            )}
-                          </>
-                        ) : (
-                          question.context
-                        )}
-                      </div>
-                    )}
-                  </div>
-                )}
+                {(() => {
+                  const ctx = question.contextId ? contexts[question.contextId] : null
+                  if (!ctx) return null
+                  const ctxObj = typeof ctx === 'object' ? ctx : { text: ctx }
+                  return (
+                    <div className="question-context">
+                      <button
+                        type="button"
+                        className="question-context-toggle"
+                        onClick={() => setContextExpanded((v) => !v)}
+                        aria-expanded={contextExpanded}
+                      >
+                        <span className="question-context-chevron">{contextExpanded ? '▲' : '▼'}</span>
+                        <span className="question-context-title">{ctxObj.title ?? 'Texto de referência'}</span>
+                        <span className="question-context-chevron">{contextExpanded ? '▲' : '▼'}</span>
+                      </button>
+                      {contextExpanded && (
+                        <div className="question-context-body">
+                          {ctxObj.subtitle && <p className="ctx-subtitle">{ctxObj.subtitle}</p>}
+                          {ctxObj.text && <p className="ctx-text">{ctxObj.text}</p>}
+                          {ctxObj.reference && <p className="ctx-reference">{ctxObj.reference}</p>}
+                        </div>
+                      )}
+                    </div>
+                  )
+                })()}
 
                 <div className="card">
                   <div className="question-stem" aria-label="Enunciado">

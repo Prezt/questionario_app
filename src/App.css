@@ -654,17 +654,14 @@
 
 .question-context-toggle {
   width: 100%;
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1rem 1fr 1rem;
   align-items: center;
+  gap: 0.5rem;
   padding: 0.65rem 1rem;
   background: var(--alt-bg);
   border: none;
   cursor: pointer;
-  font-size: 0.72rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
   color: var(--text-soft);
   -webkit-tap-highlight-color: transparent;
   transition: background 0.15s;
@@ -674,22 +671,34 @@
   background: var(--alt-hover-bg);
 }
 
+.question-context-title {
+  text-align: center;
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
 .question-context-chevron {
   font-size: 0.6rem;
   opacity: 0.7;
+  text-align: center;
 }
 
 .question-context-body {
-  padding: 1rem 1.1rem;
-  background: var(--card-bg);
+  padding: 1rem 1.1rem 0.75rem;
+  background: color-mix(in srgb, var(--accent) 4%, var(--card-bg));
   font-size: 0.95rem;
   line-height: 1.75;
   color: var(--text);
-  border-top: 1px solid var(--border);
+  border-top: 1px solid color-mix(in srgb, var(--accent) 18%, transparent);
   white-space: pre-wrap;
   display: flex;
   flex-direction: column;
   gap: 0.6rem;
+  max-height: 45vh;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
 }
 
 .ctx-subtitle {
@@ -705,7 +714,7 @@
 
 .ctx-reference {
   margin: 0;
-  font-size: 0.8rem;
+  font-size: 0.78rem;
   color: var(--text-soft);
   text-align: right;
   border-top: 1px solid var(--border);
