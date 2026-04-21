@@ -5,7 +5,10 @@ FUNCIONALIDADES
 [x] Resumo final
 [x] Marcacao das questoes na barra lateral
 [x] No celular, scrollar para baixo no site faz desconfigura um pouco a tela
-[] Seletor de qual prova e qual dia fazer
+[x] Seletor de qual prova e qual dia fazer
+[x] Alternar Ingles e Espanhol
+[] Textos faltando. Link para a leitura do texto OU texto completo presente
+[] Conectar um banco de dados + bug report tool
 [] Randomizador da ordem das alternativas
 [] Resumo com assuntos de menor dominio e maior tempo medio de resolucao
 

@@ -48,8 +48,8 @@ function formatTime(seconds) {
 const AREA_LABELS = {
   math:       'Matemática',
   nature:     'Ciências da Natureza',
-  lang:       'Linguagens',
-  social:     'Ciências Humanas'
+  linguagens:       'Linguagens',
+  humanas:     'Ciências Humanas'
 }
 
 function areaLabel(area) {
@@ -134,6 +134,13 @@ export default function App() {
   const [selectedTest, setSelectedTest] = useState(null)   // 'ENEM' | 'UFSC' | …
   const [selectedYear, setSelectedYear] = useState(null)   // number
   const [selectedDay, setSelectedDay] = useState(null)     // 1 | 2
+
+  // Foreign language toggle (EN / ES) — only relevant for Dia 1 q1-5
+  const [foreignLang, setForeignLang] = useState('en')
+
+  // Sidebar visibility — closed by default on narrow screens
+  const [railOpen, setRailOpen] = useState(() => window.innerWidth >= 600)
+  const langVariantsRef = useRef({}) // { [number]: { en: Q, es: Q } }
 
   // Timers
   const [totalElapsed, setTotalElapsed] = useState(0)
@@ -292,7 +299,7 @@ export default function App() {
   }, [pendingSelection, pickAlternative])
 
   const DAY_AREAS = {
-    1: ['lang', 'social'],
+    1: ['linguagens', 'humanas'],
     2: ['math', 'nature'],
   }
 
@@ -305,7 +312,22 @@ export default function App() {
       .filter((q) => areas.includes(q.area))
     if (filtered.length === 0) return
 
-    const sorted = [...filtered].sort((a, b) => a.number - b.number)
+    // Build language variant lookup and deduplicate
+    const variants = {}
+    filtered.forEach((q) => {
+      if (q.language) {
+        if (!variants[q.number]) variants[q.number] = {}
+        variants[q.number][q.language] = q
+      }
+    })
+    langVariantsRef.current = variants
+
+    // Keep only the active language for questions that have variants
+    const deduped = filtered.filter(
+      (q) => !q.language || q.language === foreignLang
+    )
+    const sorted = [...deduped].sort((a, b) => a.number - b.number)
+
     const now = Date.now()
     startTimeRef.current = now
     questionStartRef.current = now
@@ -316,7 +338,17 @@ export default function App() {
     setTotalElapsed(0)
     setQuestionElapsed(0)
     setPhase('quiz')
-  }, [allQuestions, selectedTest, selectedYear, selectedDay])
+  }, [allQuestions, selectedTest, selectedYear, selectedDay, foreignLang])
+
+  const switchLang = useCallback((lang) => {
+    if (!question?.language || lang === foreignLang) return
+    const variant = langVariantsRef.current[question.number]?.[lang]
+    if (!variant) return
+    setForeignLang(lang)
+    setQuestion(variant)
+    setQuestions((prev) => prev.map((q) => q.number === variant.number ? variant : q))
+    setPendingSelection(null)
+  }, [question, foreignLang])
 
   const finishQuiz = useCallback(() => {
     if (questionStartRef.current && question) {
@@ -758,6 +790,28 @@ export default function App() {
                       <span className="badge badge-area">{areaLabel(question.area)}</span>
                     )}
                   </div>
+                  {question.language && langVariantsRef.current[question.number] && (
+                    <div className="lang-toggle" aria-label="Escolha o idioma">
+                      <button
+                        type="button"
+                        className={`lang-toggle-btn ${foreignLang === 'en' ? 'active' : ''}`}
+                        onClick={() => switchLang('en')}
+                        disabled={!!attempts[question.number]}
+                        title="Inglês"
+                      >
+                        EN
+                      </button>
+                      <button
+                        type="button"
+                        className={`lang-toggle-btn ${foreignLang === 'es' ? 'active' : ''}`}
+                        onClick={() => switchLang('es')}
+                        disabled={!!attempts[question.number]}
+                        title="Espanhol"
+                      >
+                        ES
+                      </button>
+                    </div>
+                  )}
                 </header>
 
                 <div className="card">
@@ -876,7 +930,7 @@ export default function App() {
           </aside>
         </div>
 
-        <nav className="question-rail" ref={railRef} aria-label="Lista de questões">
+        <nav className={`question-rail ${railOpen ? 'is-open' : ''}`} ref={railRef} aria-label="Lista de questões">
           <div className="question-rail-scroll" ref={railInnerRef}>
             {sortedQuestions.map((q) => {
               const att = attempts[q.number]
@@ -902,6 +956,15 @@ export default function App() {
       </div>
 
       <footer className="question-footer">
+        <button
+          type="button"
+          className={`footer-nav-btn footer-rail-toggle ${railOpen ? 'active' : ''}`}
+          onClick={() => setRailOpen((o) => !o)}
+          aria-label={railOpen ? 'Ocultar lista de questões' : 'Mostrar lista de questões'}
+          title={railOpen ? 'Ocultar lista' : 'Mostrar lista'}
+        >
+          ☰
+        </button>
         <button type="button" className="footer-nav-btn" onClick={prev} disabled={isPrevDisabled} aria-label="Questão anterior">←</button>
         {selected ? (
           <button type="button" className="footer-responder-btn footer-responder-btn--next" onClick={next} disabled={isNextDisabled}>
