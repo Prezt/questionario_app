@@ -644,6 +644,98 @@
   background: var(--surface);
 }
 
+/* ── Shared context panel ── */
+.question-context {
+  margin-bottom: 0.85rem;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1.5px solid var(--border);
+}
+
+.question-context-toggle {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.65rem 1rem;
+  background: var(--alt-bg);
+  border: none;
+  cursor: pointer;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--text-soft);
+  -webkit-tap-highlight-color: transparent;
+  transition: background 0.15s;
+}
+
+.question-context-toggle:hover {
+  background: var(--alt-hover-bg);
+}
+
+.question-context-chevron {
+  font-size: 0.6rem;
+  opacity: 0.7;
+}
+
+.question-context-body {
+  padding: 1rem 1.1rem;
+  background: var(--card-bg);
+  font-size: 0.95rem;
+  line-height: 1.75;
+  color: var(--text);
+  border-top: 1px solid var(--border);
+  white-space: pre-wrap;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.ctx-subtitle {
+  font-style: italic;
+  color: var(--text-soft);
+  font-size: 0.88rem;
+  margin: 0;
+}
+
+.ctx-text {
+  margin: 0;
+}
+
+.ctx-reference {
+  margin: 0;
+  font-size: 0.8rem;
+  color: var(--text-soft);
+  text-align: right;
+  border-top: 1px solid var(--border);
+  padding-top: 0.5rem;
+}
+
+/* ── Rail grouping bracket ── */
+.question-rail-btn--group-start,
+.question-rail-btn--group-mid,
+.question-rail-btn--group-end,
+.question-rail-btn--group-only {
+  position: relative;
+}
+
+.question-rail-btn--group-start::before,
+.question-rail-btn--group-mid::before,
+.question-rail-btn--group-end::before {
+  content: '';
+  position: absolute;
+  left: -2px;
+  width: 2px;
+  background: var(--accent);
+  opacity: 0.6;
+  border-radius: 2px;
+}
+
+.question-rail-btn--group-start::before { top: 50%; bottom: calc(-0.45rem - 1px); }
+.question-rail-btn--group-mid::before   { top: calc(-0.45rem - 1px); bottom: calc(-0.45rem - 1px); }
+.question-rail-btn--group-end::before   { top: calc(-0.45rem - 1px); bottom: 50%; }
+
 /* ── Alternatives ── */
 .alternatives {
   list-style: none;

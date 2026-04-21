@@ -126,6 +126,8 @@ export default function App() {
   })
   const [notebookOpen, setNotebookOpen] = useState(false)
   const [pendingSelection, setPendingSelection] = useState(null)
+  const [contextExpanded, setContextExpanded] = useState(true)
+  const prevContextIdRef = useRef(null)
 
   // Phase: 'home' | 'quiz' | 'summary'
   const [phase, setPhase] = useState('home')
@@ -219,10 +221,16 @@ export default function App() {
     [questions],
   )
 
-  // Reset pending selection and track question time on navigation
+  // Reset pending selection, track question time, and manage context panel on navigation
   useEffect(() => {
     setPendingSelection(null)
     if (phase !== 'quiz' || !question) return
+    // Auto-expand context panel when entering a new context group
+    const cid = question.contextId ?? null
+    if (cid !== prevContextIdRef.current) {
+      setContextExpanded(true)
+      prevContextIdRef.current = cid
+    }
     const prevNum = prevQuestionNumRef.current
     if (prevNum !== null && prevNum !== question.number && questionStartRef.current) {
       accQuestionTimesRef.current[prevNum] =
@@ -814,6 +822,43 @@ export default function App() {
                   )}
                 </header>
 
+                {question.context && (
+                  <div className="question-context">
+                    <button
+                      type="button"
+                      className="question-context-toggle"
+                      onClick={() => setContextExpanded((v) => !v)}
+                      aria-expanded={contextExpanded}
+                    >
+                      <span>
+                        {typeof question.context === 'object' && question.context.title
+                          ? question.context.title
+                          : 'Texto de referência'}
+                      </span>
+                      <span className="question-context-chevron">{contextExpanded ? '▲' : '▼'}</span>
+                    </button>
+                    {contextExpanded && (
+                      <div className="question-context-body">
+                        {typeof question.context === 'object' ? (
+                          <>
+                            {question.context.subtitle && (
+                              <p className="ctx-subtitle">{question.context.subtitle}</p>
+                            )}
+                            {question.context.text && (
+                              <p className="ctx-text">{question.context.text}</p>
+                            )}
+                            {question.context.reference && (
+                              <p className="ctx-reference">{question.context.reference}</p>
+                            )}
+                          </>
+                        ) : (
+                          question.context
+                        )}
+                      </div>
+                    )}
+                  </div>
+                )}
+
                 <div className="card">
                   <div className="question-stem" aria-label="Enunciado">
                     {stemSegments.map((seg, i) =>
@@ -932,17 +977,28 @@ export default function App() {
 
         <nav className={`question-rail ${railOpen ? 'is-open' : ''}`} ref={railRef} aria-label="Lista de questões">
           <div className="question-rail-scroll" ref={railInnerRef}>
-            {sortedQuestions.map((q) => {
+            {sortedQuestions.map((q, idx) => {
               const att = attempts[q.number]
               const isCurrent = q.number === question.number
               let stateClass = 'question-rail-btn--idle'
               if (att) stateClass = att.correct ? 'question-rail-btn--ok' : 'question-rail-btn--bad'
+              let groupClass = ''
+              if (q.contextId) {
+                const prev = sortedQuestions[idx - 1]
+                const next = sortedQuestions[idx + 1]
+                const isStart = q.contextId !== prev?.contextId
+                const isEnd   = q.contextId !== next?.contextId
+                groupClass = isStart && isEnd ? 'question-rail-btn--group-only'
+                           : isStart          ? 'question-rail-btn--group-start'
+                           : isEnd            ? 'question-rail-btn--group-end'
+                           :                    'question-rail-btn--group-mid'
+              }
               return (
                 <button
                   key={q.number}
                   type="button"
                   data-qnum={q.number}
-                  className={`question-rail-btn ${stateClass} ${isCurrent ? 'question-rail-btn--current' : ''}`}
+                  className={`question-rail-btn ${stateClass} ${isCurrent ? 'question-rail-btn--current' : ''} ${groupClass}`}
                   onClick={() => goToQuestion(q)}
                   aria-current={isCurrent ? 'true' : undefined}
                   aria-label={`Questão ${q.number}${att ? (att.correct ? ', correta' : ', incorreta') : ', não respondida'}`}
