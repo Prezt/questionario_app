@@ -13,7 +13,7 @@
     "tags": ["geografia", "geopolítica", "europa"],
     "year": 2025,
     "test": "ENEM",
-    "area": "humanities",
+    "area": "social",
     "answer": "e"
   },
   {
@@ -30,7 +30,7 @@
     "tags": ["geografia", "meio ambiente", "climatologia"],
     "year": 2025,
     "test": "ENEM",
-    "area": "humanities",
+    "area": "social",
     "answer": "d"
   },
   {
@@ -47,7 +47,7 @@
     "tags": ["filosofia", "empirismo", "Hume"],
     "year": 2025,
     "test": "ENEM",
-    "area": "humanities",
+    "area": "social",
     "answer": "e"
   },
   {
@@ -64,7 +64,7 @@
     "tags": ["história", "modernidade", "economia"],
     "year": 2025,
     "test": "ENEM",
-    "area": "humanities",
+    "area": "social",
     "answer": "c"
   },
   {
@@ -81,7 +81,7 @@
     "tags": ["filosofia", "ética", "direito"],
     "year": 2025,
     "test": "ENEM",
-    "area": "humanities",
+    "area": "social",
     "answer": "a"
   },
   {

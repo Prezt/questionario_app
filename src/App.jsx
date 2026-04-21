@@ -36,9 +36,7 @@ function loadAttemptsFromSession() {
 function saveAttemptsToSession(attempts) {
   try {
     sessionStorage.setItem(ATTEMPTS_SESSION_KEY, JSON.stringify(attempts))
-  } catch {
-    /* ignore */
-  }
+  } catch { /* ignore */ }
 }
 
 function formatTime(seconds) {
@@ -48,10 +46,10 @@ function formatTime(seconds) {
 }
 
 const AREA_LABELS = {
-  math:    'Matemática',
-  nature:  'Ciências da Natureza',
-  lang:    'Linguagens',
-  social:  'Ciências Humanas',
+  math:       'Matemática',
+  nature:     'Ciências da Natureza',
+  lang:       'Linguagens',
+  social:     'Ciências Humanas'
 }
 
 function areaLabel(area) {
@@ -63,18 +61,15 @@ function publicImageSrc(path) {
   return path.startsWith('/') ? path : `/${path}`
 }
 
+
 function SunIcon() {
   return (
     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
       <circle cx="12" cy="12" r="5"/>
-      <line x1="12" y1="1" x2="12" y2="3"/>
-      <line x1="12" y1="21" x2="12" y2="23"/>
-      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
-      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
-      <line x1="1" y1="12" x2="3" y2="12"/>
-      <line x1="21" y1="12" x2="23" y2="12"/>
-      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
-      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+      <line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+      <line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
     </svg>
   )
 }
@@ -92,9 +87,7 @@ function NotebookIcon() {
     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
       <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
       <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
-      <line x1="8" y1="7" x2="16" y2="7"/>
-      <line x1="8" y1="11" x2="16" y2="11"/>
-      <line x1="8" y1="15" x2="12" y2="15"/>
+      <line x1="8" y1="7" x2="16" y2="7"/><line x1="8" y1="11" x2="16" y2="11"/><line x1="8" y1="15" x2="12" y2="15"/>
     </svg>
   )
 }
@@ -103,36 +96,27 @@ const SESSION_NOTES_KEY = 'questionario-caderno'
 
 function readNotesFromSession() {
   if (typeof sessionStorage === 'undefined') return ''
-  try {
-    return sessionStorage.getItem(SESSION_NOTES_KEY) ?? ''
-  } catch {
-    return ''
-  }
+  try { return sessionStorage.getItem(SESSION_NOTES_KEY) ?? '' } catch { return '' }
 }
 
 function writeNotesToSession(value) {
-  try {
-    sessionStorage.setItem(SESSION_NOTES_KEY, value)
-  } catch {
-    /* ignore quota / private mode */
-  }
+  try { sessionStorage.setItem(SESSION_NOTES_KEY, value) } catch { /* ignore */ }
 }
 
 function legacyPlainToHtml(raw) {
   if (!raw || !String(raw).trim()) return '<p><br></p>'
   const t = String(raw).trim()
   if (t.startsWith('<')) return raw
-  const esc = String(raw)
-    .replace(/&/g, '&amp;')
-    .replace(/</g, '&lt;')
-    .replace(/>/g, '&gt;')
+  const esc = String(raw).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
   return `<p>${esc.replace(/\n/g, '<br>')}</p>`
 }
 
 export default function App() {
+  // All questions loaded from manifest
+  const [allQuestions, setAllQuestions] = useState([])
+  // Active set for current quiz session (set when quiz starts)
   const [questions, setQuestions] = useState([])
   const [question, setQuestion] = useState(null)
-  const [filteredQuestions, setFilteredQuestions] = useState([]) // O que será exibido no quiz
   const [attempts, setAttempts] = useState(loadAttemptsFromSession)
   const [loading, setLoading] = useState(true)
   const [dark, setDark] = useState(() => {
@@ -146,19 +130,41 @@ export default function App() {
   // Phase: 'home' | 'quiz' | 'summary'
   const [phase, setPhase] = useState('home')
 
+  // Homepage filters (step-by-step single select)
+  const [selectedTest, setSelectedTest] = useState(null)   // 'ENEM' | 'UFSC' | …
+  const [selectedYear, setSelectedYear] = useState(null)   // number
+  const [selectedDay, setSelectedDay] = useState(null)     // 1 | 2
+
   // Timers
   const [totalElapsed, setTotalElapsed] = useState(0)
   const [questionElapsed, setQuestionElapsed] = useState(0)
-  const [questionTimes, setQuestionTimes] = useState({}) // snapshot for summary
-
+  const [questionTimes, setQuestionTimes] = useState({})
 
   const startTimeRef = useRef(null)
   const questionStartRef = useRef(null)
-  const accQuestionTimesRef = useRef({})   // { [number]: seconds } accumulated
+  const accQuestionTimesRef = useRef({})
   const prevQuestionNumRef = useRef(null)
-
   const notebookEditorRef = useRef(null)
   const notebookEditorHydrated = useRef(false)
+
+  // ── Load all questions from manifest ──────────────────────────────────────
+  useEffect(() => {
+    async function load() {
+      try {
+        const manifest = await fetch('/questions-manifest.json').then((r) => r.json())
+        const datasets = await Promise.all(
+          manifest.map((file) => fetch(`/${file}`).then((r) => r.json()))
+        )
+        const all = datasets.flat().sort((a, b) => a.number - b.number)
+        setAllQuestions(all)
+      } catch (err) {
+        console.error('Erro ao carregar questões:', err)
+      } finally {
+        setLoading(false)
+      }
+    }
+    load()
+  }, [])
 
   useEffect(() => {
     document.documentElement.classList.toggle('dark', dark)
@@ -166,42 +172,8 @@ export default function App() {
   }, [dark])
 
   useEffect(() => {
-    const loadData = async () => {
-      try {
-        const [mathRes, natureRes, langRes, socialRes] = await Promise.all([
-          fetch('/math_enem_2025.json'),
-          fetch('/nature_enem_2025.json'),
-          fetch('/lang_enem_2025.json'),
-          fetch('/social_enem_2025.json'),
-        ])
-
-        const [mathData, natureData, langData, socialData] = await Promise.all([
-          mathRes.json(),
-          natureRes.json(),
-          langRes.json(),
-          socialRes.json()
-        ])
-
-        const sorted = [...langData, ...socialData, ...natureData, ...mathData]
-          .sort((a, b) => a.number - b.number)
-
-        setQuestions(sorted)
-        setQuestion(sorted[0] ?? null)
-      } catch (err) {
-        console.error('Erro ao carregar questões:', err)
-      } finally {
-        setLoading(false)
-      }
-    }
-
-    loadData()
-  }, [])
-
-  useEffect(() => {
     if (!notebookOpen) return
-    const onKey = (e) => {
-      if (e.key === 'Escape') setNotebookOpen(false)
-    }
+    const onKey = (e) => { if (e.key === 'Escape') setNotebookOpen(false) }
     window.addEventListener('keydown', onKey)
     return () => window.removeEventListener('keydown', onKey)
   }, [notebookOpen])
@@ -236,8 +208,8 @@ export default function App() {
   }, [notebookOpen])
 
   const sortedQuestions = useMemo(
-    () => [...filteredQuestions].sort((a, b) => a.number - b.number),
-    [filteredQuestions],
+    () => [...questions].sort((a, b) => a.number - b.number),
+    [questions],
   )
 
   // Reset pending selection and track question time on navigation
@@ -259,12 +231,8 @@ export default function App() {
   useEffect(() => {
     if (phase !== 'quiz') return
     const id = setInterval(() => {
-      if (startTimeRef.current) {
-        setTotalElapsed(Math.floor((Date.now() - startTimeRef.current) / 1000))
-      }
-      if (questionStartRef.current) {
-        setQuestionElapsed(Math.floor((Date.now() - questionStartRef.current) / 1000))
-      }
+      if (startTimeRef.current) setTotalElapsed(Math.floor((Date.now() - startTimeRef.current) / 1000))
+      if (questionStartRef.current) setQuestionElapsed(Math.floor((Date.now() - questionStartRef.current) / 1000))
     }, 1000)
     return () => clearInterval(id)
   }, [phase])
@@ -286,8 +254,7 @@ export default function App() {
     const gap = parseFloat(getComputedStyle(railInnerRef.current).gap) || 0
     const idx = sortedQuestions.findIndex((q) => q.number === question.number)
     if (idx < 0) return
-    const btnCenterNatural = idx * (btnHeight + gap) + btnHeight / 2
-    const translateY = railHeight / 2 - btnCenterNatural
+    const translateY = railHeight / 2 - (idx * (btnHeight + gap) + btnHeight / 2)
     railInnerRef.current.style.transform = `translateY(${translateY}px)`
   }, [question, sortedQuestions])
 
@@ -305,19 +272,14 @@ export default function App() {
     setQuestion(sortedQuestions[idx - 1])
   }, [question, sortedQuestions])
 
-  const goToQuestion = useCallback((q) => {
-    setQuestion(q)
-  }, [])
+  const goToQuestion = useCallback((q) => setQuestion(q), [])
 
   const pickAlternative = useCallback((letter) => {
     if (!question) return
     setAttempts((a) => {
       if (a[question.number]) return a
       const correct = letter === question.answer
-      const next = {
-        ...a,
-        [question.number]: { selected: letter, correct },
-      }
+      const next = { ...a, [question.number]: { selected: letter, correct } }
       saveAttemptsToSession(next)
       return next
     })
@@ -329,32 +291,34 @@ export default function App() {
     setPendingSelection(null)
   }, [pendingSelection, pickAlternative])
 
-  const startQuiz = useCallback((quizType) => {
+  const DAY_AREAS = {
+    1: ['lang', 'social'],
+    2: ['math', 'nature'],
+  }
+
+  const startQuiz = useCallback(() => {
+    if (!selectedTest || !selectedYear || !selectedDay) return
+    const areas = DAY_AREAS[selectedDay]
+    const filtered = allQuestions
+      .filter((q) => q.test === selectedTest)
+      .filter((q) => q.year === selectedYear)
+      .filter((q) => areas.includes(q.area))
+    if (filtered.length === 0) return
+
+    const sorted = [...filtered].sort((a, b) => a.number - b.number)
     const now = Date.now()
     startTimeRef.current = now
     questionStartRef.current = now
     accQuestionTimesRef.current = {}
     prevQuestionNumRef.current = null
-    
-    // Filtragem por quizType
-    let subset = []
-    if (quizType === 1) {
-      subset = questions.filter(q => q.number >= 1 && q.number <= 90)
-    } else if (quizType === 2) {
-      subset = questions.filter(q => q.number >= 91 && q.number <= 180)
-    } else {
-      subset = questions // Fallback para todas
-    }
-
-    setFilteredQuestions(subset)
-    setQuestion(subset[0] ?? null) // Começa na primeira questão do dia
+    setQuestions(sorted)
+    setQuestion(sorted[0])
     setTotalElapsed(0)
     setQuestionElapsed(0)
     setPhase('quiz')
-  }, [questions])
+  }, [allQuestions, selectedTest, selectedYear, selectedDay])
 
   const finishQuiz = useCallback(() => {
-    // Save time for the current question
     if (questionStartRef.current && question) {
       accQuestionTimesRef.current[question.number] =
         (accQuestionTimesRef.current[question.number] || 0) +
@@ -374,33 +338,25 @@ export default function App() {
     if (!question) return []
     const imgs = question.images ?? []
     const letters = Object.keys(question.alternatives)
-    const splitStemAndAlts =
-      imgs.length > 1 && imgs.length === letters.length + 1
-    const paths = splitStemAndAlts
-      ? [imgs[0]]
-      : imgs.length > 0
-        ? imgs
-        : []
+    const splitStemAndAlts = imgs.length > 1 && imgs.length === letters.length + 1
+    const paths = splitStemAndAlts ? [imgs[0]] : imgs.length > 0 ? imgs : []
     return parseStemSegments(question.text, paths)
   }, [question])
 
-  // ── Loading ──────────────────────────────────────────────────────────────
+  // ── Loading ───────────────────────────────────────────────────────────────
   if (loading) return <div className="center">Carregando...</div>
-  if (!question) return <div className="center">Carregando...</div>
 
-  const letters = Object.keys(question.alternatives)
-  const images = question.images ?? []
-  const splitStemAndAlts =
-    images.length > 1 && images.length === letters.length + 1
-  const isPrevDisabled = questionIndex <= 0
-  const isNextDisabled = questionIndex >= sortedQuestions.length - 1
-  const altImageFor = (index) =>
-    splitStemAndAlts ? images[index + 1] : null
-  const attempt = attempts[question.number]
-  const selected = attempt?.selected ?? null
-
-  // ── Homepage ─────────────────────────────────────────────────────────────
+  // ── Homepage ──────────────────────────────────────────────────────────────
   if (phase === 'home') {
+    const availableTests = [...new Set(allQuestions.map((q) => q.test).filter(Boolean))].sort()
+    const availableYears = [...new Set(
+      allQuestions
+        .filter((q) => !selectedTest || q.test === selectedTest)
+        .map((q) => q.year)
+    )].sort((a, b) => b - a)
+
+    const canStart = selectedTest && selectedYear && selectedDay
+
     return (
       <div className="app-shell">
         <div className="home-screen">
@@ -416,26 +372,104 @@ export default function App() {
           <div className="home-card">
             <div className="home-logo-wrap">
               <img
-                src={dark ? '/figuras/logos/integrar-logo-dark-old.png' : '/figuras/logos/integrar-logo-light-old.png'}
+                src={dark ? '/figuras/logos/integrar-logo-dark.png' : '/figuras/logos/integrar-logo-light.png'}
                 alt="Integrar"
                 className="home-logo"
               />
             </div>
-            <h1 className="home-title">Simulador Integrar</h1>
-            <p className="home-subtitle">
-              ENEM 2025
-            </p>
-            <button type="button" className="home-start-btn" onClick={() => startQuiz(1)}>
-              Dia 1
-            </button>
-            <button type="button" className="home-start-btn" onClick={() => startQuiz(2)}>
-              Dia 2
+            <h1 className="home-title">Questionário</h1>
+
+            <div className="home-filters">
+              {/* Step 1 — Prova */}
+              <div className="home-filter-group">
+                <span className="home-filter-label">Prova</span>
+                <div className="home-filter-pills">
+                  {availableTests.map((t) => (
+                    <button
+                      key={t}
+                      type="button"
+                      className={`home-filter-pill ${selectedTest === t ? 'active' : ''}`}
+                      onClick={() => {
+                        setSelectedTest(t)
+                        setSelectedYear(null)
+                        setSelectedDay(null)
+                      }}
+                    >
+                      {t}
+                    </button>
+                  ))}
+                </div>
+              </div>
+
+              {/* Step 2 — Ano */}
+              <div className={`home-filter-group ${!selectedTest ? 'home-filter-group--locked' : ''}`}>
+                <span className="home-filter-label">Ano</span>
+                <div className="home-filter-pills">
+                  {availableYears.map((y) => (
+                    <button
+                      key={y}
+                      type="button"
+                      className={`home-filter-pill ${selectedYear === y ? 'active' : ''}`}
+                      disabled={!selectedTest}
+                      onClick={() => {
+                        setSelectedYear(y)
+                        setSelectedDay(null)
+                      }}
+                    >
+                      {y}
+                    </button>
+                  ))}
+                </div>
+              </div>
+
+              {/* Step 3 — Dia */}
+              <div className={`home-filter-group ${!selectedYear ? 'home-filter-group--locked' : ''}`}>
+                <span className="home-filter-label">Dia</span>
+                <div className="home-filter-pills">
+                  <button
+                    type="button"
+                    className={`home-filter-pill home-filter-pill--wide ${selectedDay === 1 ? 'active' : ''}`}
+                    disabled={!selectedYear}
+                    onClick={() => setSelectedDay(1)}
+                  >
+                    Dia 1 · Linguagens e Ciências Humanas
+                  </button>
+                  <button
+                    type="button"
+                    className={`home-filter-pill home-filter-pill--wide ${selectedDay === 2 ? 'active' : ''}`}
+                    disabled={!selectedYear}
+                    onClick={() => setSelectedDay(2)}
+                  >
+                    Dia 2 · Matemática e Ciências da Natureza
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <button
+              type="button"
+              className="home-start-btn"
+              onClick={startQuiz}
+              disabled={!canStart}
+            >
+              Iniciar
             </button>
           </div>
         </div>
       </div>
     )
   }
+
+  if (!question) return <div className="center">Carregando...</div>
+
+  const letters = Object.keys(question.alternatives)
+  const images = question.images ?? []
+  const splitStemAndAlts = images.length > 1 && images.length === letters.length + 1
+  const isPrevDisabled = questionIndex <= 0
+  const isNextDisabled = questionIndex >= sortedQuestions.length - 1
+  const altImageFor = (index) => splitStemAndAlts ? images[index + 1] : null
+  const attempt = attempts[question.number]
+  const selected = attempt?.selected ?? null
 
   // ── Summary ───────────────────────────────────────────────────────────────
   if (phase === 'summary') {
@@ -446,6 +480,58 @@ export default function App() {
     const avgTime = answeredCount > 0
       ? Math.round(Object.values(questionTimes).reduce((s, t) => s + t, 0) / answeredCount)
       : 0
+
+    // ── Subject breakdown ────────────────────────────────────────────────
+    const tagStats = {}
+    sortedQuestions.forEach((q) => {
+      const att = attempts[q.number]
+      const t = questionTimes[q.number] || 0
+      ;(q.tags || []).forEach((tag) => {
+        if (!tagStats[tag]) tagStats[tag] = { total: 0, answered: 0, correct: 0, time: 0 }
+        tagStats[tag].total++
+        if (att) {
+          tagStats[tag].answered++
+          if (att.correct) tagStats[tag].correct++
+          tagStats[tag].time += t
+        }
+      })
+    })
+
+    const tagList = Object.entries(tagStats)
+      .filter(([, s]) => s.answered >= 1)
+      .map(([tag, s]) => ({
+        tag,
+        total: s.total,
+        answered: s.answered,
+        correct: s.correct,
+        time: s.time,
+        hitRate: Math.round((s.correct / s.answered) * 100),
+        avgTime: Math.round(s.time / s.answered),
+      }))
+      .sort((a, b) => a.hitRate - b.hitRate)
+
+    const weakTags = tagList.filter((t) => t.hitRate < 60)
+
+    let insight
+    if (answeredCount === 0) {
+      insight = null
+    } else if (correctCount === sortedQuestions.length) {
+      insight = { type: 'great', msg: 'Parabéns! Você acertou todas as questões. Desempenho impecável!' }
+    } else if (weakTags.length === 0) {
+      const bottom = tagList.slice(0, 2).map((t) => t.tag)
+      insight = {
+        type: 'good',
+        msg: `Bom trabalho! Seu desempenho foi sólido em todos os tópicos. Para chegar ainda mais alto, vale reforçar: ${bottom.join(' e ')}.`,
+      }
+    } else {
+      const names = weakTags.slice(0, 4).map((t) => t.tag)
+      const last = names.pop()
+      const list = names.length > 0 ? `${names.join(', ')} e ${last}` : last
+      insight = {
+        type: 'improve',
+        msg: `Você tem maior potencial de melhoria em ${list}. Dedique um tempo extra a esses tópicos — pequenos avanços aqui vão refletir diretamente na sua nota.`,
+      }
+    }
 
     return (
       <div className="app-shell">
@@ -458,7 +544,8 @@ export default function App() {
               onClick={() => {
                 setAttempts({})
                 saveAttemptsToSession({})
-                setQuestion(sortedQuestions[0])
+                setQuestions([])
+                setQuestion(null)
                 setPhase('home')
               }}
             >
@@ -476,6 +563,7 @@ export default function App() {
         </header>
 
         <div className="summary-screen">
+          {/* Fixed top: overall stats */}
           <div className="summary-stats">
             <div className="summary-stat summary-stat--correct">
               <span className="summary-stat-value">{correctCount}</span>
@@ -521,41 +609,93 @@ export default function App() {
             </span>
           </div>
 
-          <div className="summary-table-wrap">
-            <table className="summary-table">
-              <thead>
-                <tr>
-                  <th>#</th>
-                  <th>Sua resposta</th>
-                  <th>Gabarito</th>
-                  <th>Resultado</th>
-                  <th>Tempo</th>
-                </tr>
-              </thead>
-              <tbody>
-                {sortedQuestions.map((q) => {
-                  const att = attempts[q.number]
-                  const t = questionTimes[q.number]
-                  let rowClass = ''
-                  if (att) rowClass = att.correct ? 'summary-row--ok' : 'summary-row--bad'
-                  return (
-                    <tr key={q.number} className={rowClass}>
-                      <td className="summary-td-num">{q.number}</td>
-                      <td>{att?.selected?.toUpperCase() ?? <span className="summary-dash">—</span>}</td>
-                      <td>{q.answer.toUpperCase()}</td>
-                      <td className="summary-td-result">
-                        {att ? (
-                          att.correct
-                            ? <span className="summary-tick">✓</span>
-                            : <span className="summary-cross">✗</span>
-                        ) : <span className="summary-dash">—</span>}
-                      </td>
-                      <td className="summary-td-time">{t ? formatTime(t) : <span className="summary-dash">—</span>}</td>
-                    </tr>
-                  )
-                })}
-              </tbody>
-            </table>
+          {/* Scrollable body: insight + subjects + question table */}
+          <div className="summary-body">
+
+            {insight && (
+              <div className={`summary-insight summary-insight--${insight.type}`}>
+                <span className="summary-insight-icon">
+                  {insight.type === 'great' ? '🏆' : insight.type === 'good' ? '👍' : '🎯'}
+                </span>
+                <p className="summary-insight-msg">{insight.msg}</p>
+              </div>
+            )}
+
+            {tagList.length > 0 && (
+              <div className="summary-subjects-wrap">
+                <h2 className="summary-section-title">Desempenho por assunto</h2>
+                <div className="summary-subjects">
+                  {tagList.map(({ tag, answered, total, correct, hitRate, avgTime: at }) => (
+                    <div
+                      key={tag}
+                      className={`summary-subject-card ${hitRate < 50 ? 'summary-subject-card--weak' : hitRate >= 80 ? 'summary-subject-card--strong' : ''}`}
+                    >
+                      <div className="summary-subject-header">
+                        <span className="summary-subject-name">{tag}</span>
+                        <span className={`summary-subject-rate ${hitRate < 50 ? 'rate--bad' : hitRate >= 80 ? 'rate--ok' : 'rate--mid'}`}>
+                          {hitRate}%
+                        </span>
+                      </div>
+                      <div className="summary-subject-bar">
+                        <div
+                          className="summary-subject-bar-fill"
+                          style={{
+                            width: `${hitRate}%`,
+                            background: hitRate < 50
+                              ? 'var(--rail-bad)'
+                              : hitRate >= 80
+                                ? 'var(--rail-ok)'
+                                : 'var(--accent)',
+                          }}
+                        />
+                      </div>
+                      <div className="summary-subject-meta">
+                        <span>{correct}/{answered} corretas</span>
+                        {at > 0 && <span>~{formatTime(at)}/questão</span>}
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
+
+            <div className="summary-questions-wrap">
+              <h2 className="summary-section-title">Questão a questão</h2>
+              <table className="summary-table">
+                <thead>
+                  <tr>
+                    <th>#</th>
+                    <th>Sua resposta</th>
+                    <th>Gabarito</th>
+                    <th>Resultado</th>
+                    <th>Tempo</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {sortedQuestions.map((q) => {
+                    const att = attempts[q.number]
+                    const t = questionTimes[q.number]
+                    const rowClass = att ? (att.correct ? 'summary-row--ok' : 'summary-row--bad') : ''
+                    return (
+                      <tr key={q.number} className={rowClass}>
+                        <td className="summary-td-num">{q.number}</td>
+                        <td>{att?.selected?.toUpperCase() ?? <span className="summary-dash">—</span>}</td>
+                        <td>{q.answer.toUpperCase()}</td>
+                        <td className="summary-td-result">
+                          {att
+                            ? att.correct
+                              ? <span className="summary-tick">✓</span>
+                              : <span className="summary-cross">✗</span>
+                            : <span className="summary-dash">—</span>}
+                        </td>
+                        <td className="summary-td-time">{t ? formatTime(t) : <span className="summary-dash">—</span>}</td>
+                      </tr>
+                    )
+                  })}
+                </tbody>
+              </table>
+            </div>
+
           </div>
         </div>
       </div>
@@ -580,11 +720,7 @@ export default function App() {
         </div>
 
         <div className="app-header-actions">
-          <button
-            type="button"
-            className="header-finish-btn"
-            onClick={finishQuiz}
-          >
+          <button type="button" className="header-finish-btn" onClick={finishQuiz}>
             Finalizar
           </button>
           <button
@@ -606,176 +742,138 @@ export default function App() {
 
       <div className="app-main">
         <div className="content-center">
-        <div className="question-content">
-          <div className="question-scroll">
-            <div className="container">
-      <header className="header">
-        <div className="badges">
-          <span className="badge badge-progress">
-            {questionIndex + 1} / {sortedQuestions.length}
-          </span>
-          {question.test != null && String(question.test).trim() !== '' && (
-            <span className="badge badge-test">{question.test}</span>
-          )}
-          <span className="badge badge-year">{question.year}</span>
-          {areaLabel(question.area) && (
-            <span className="badge badge-area">{areaLabel(question.area)}</span>
-          )}
-        </div>
-      </header>
-
-      <div className="card">
-        <div className="question-stem" aria-label="Enunciado">
-          {stemSegments.map((seg, i) =>
-            seg.type === 'text' ? (
-              <div key={i} className="question-text-block">
-                {seg.text}
-              </div>
-            ) : (
-              <figure key={i} className="q-figure">
-                <img
-                  src={publicImageSrc(seg.src)}
-                  alt={seg.caption ? String(seg.caption).slice(0, 200) : 'Figura do enunciado'}
-                  loading="lazy"
-                  decoding="async"
-                />
-                {seg.caption != null && seg.caption !== '' && (
-                  <figcaption className="q-figure-caption">{seg.caption}</figcaption>
-                )}
-              </figure>
-            ),
-          )}
-        </div>
-
-        <ul className="alternatives">
-          {letters.map((letter, index) => {
-            const isPending = !selected && pendingSelection === letter
-            const isConfirmedCorrect = selected !== null && letter === question.answer
-            const isConfirmedWrong = selected !== null && letter === selected && !attempt?.correct
-            const altImg = altImageFor(index)
-            const stacked = Boolean(altImg)
-            const rawAlt = question.alternatives[letter]
-            const altCaption = stacked ? captionFromBracketText(rawAlt) : ''
-            const altLabel = alternativeLabelForDisplay(rawAlt, stacked)
-            return (
-              <li key={letter}>
-                <button
-                  type="button"
-                  className={`alt-btn ${isConfirmedCorrect ? 'alt-btn--confirmed-correct' : ''} ${isConfirmedWrong ? 'alt-btn--confirmed-wrong' : ''} ${isPending ? 'alt-btn--pending' : ''} ${stacked ? 'alt-btn--stack' : ''}`}
-                  onClick={() => !selected && setPendingSelection(letter)}
-                  disabled={selected !== null}
-                >
-                  <div className="alt-row">
-                    <span className="alt-letter">{letter.toUpperCase()}</span>
-                    {altLabel !== '' && (
-                      <span className="alt-text">{altLabel}</span>
+          <div className="question-content">
+            <div className="question-scroll">
+              <div className="container">
+                <header className="header">
+                  <div className="badges">
+                    <span className="badge badge-progress">
+                      {questionIndex + 1} / {sortedQuestions.length}
+                    </span>
+                    {question.test != null && String(question.test).trim() !== '' && (
+                      <span className="badge badge-test">{question.test}</span>
+                    )}
+                    <span className="badge badge-year">{question.year}</span>
+                    {areaLabel(question.area) && (
+                      <span className="badge badge-area">{areaLabel(question.area)}</span>
                     )}
                   </div>
-                  {altImg && (
-                    <figure className="alt-figure">
-                      <img
-                        className="alt-figure-img"
-                        src={publicImageSrc(altImg)}
-                        alt={altCaption || 'Figura da alternativa'}
-                        loading="lazy"
-                        decoding="async"
-                      />
-                      {altCaption && (
-                        <figcaption className="alt-figure-caption">{altCaption}</figcaption>
-                      )}
-                    </figure>
+                </header>
+
+                <div className="card">
+                  <div className="question-stem" aria-label="Enunciado">
+                    {stemSegments.map((seg, i) =>
+                      seg.type === 'text' ? (
+                        <div key={i} className="question-text-block">{seg.text}</div>
+                      ) : (
+                        <figure key={i} className="q-figure">
+                          <img
+                            src={publicImageSrc(seg.src)}
+                            alt={seg.caption ? String(seg.caption).slice(0, 200) : 'Figura do enunciado'}
+                            loading="lazy"
+                            decoding="async"
+                          />
+                          {seg.caption != null && seg.caption !== '' && (
+                            <figcaption className="q-figure-caption">{seg.caption}</figcaption>
+                          )}
+                        </figure>
+                      ),
+                    )}
+                  </div>
+
+                  <ul className="alternatives">
+                    {letters.map((letter, index) => {
+                      const isPending = !selected && pendingSelection === letter
+                      const isConfirmedCorrect = selected !== null && letter === question.answer
+                      const isConfirmedWrong = selected !== null && letter === selected && !attempt?.correct
+                      const altImg = altImageFor(index)
+                      const stacked = Boolean(altImg)
+                      const rawAlt = question.alternatives[letter]
+                      const altCaption = stacked ? captionFromBracketText(rawAlt) : ''
+                      const altLabel = alternativeLabelForDisplay(rawAlt, stacked)
+                      return (
+                        <li key={letter}>
+                          <button
+                            type="button"
+                            className={`alt-btn ${isConfirmedCorrect ? 'alt-btn--confirmed-correct' : ''} ${isConfirmedWrong ? 'alt-btn--confirmed-wrong' : ''} ${isPending ? 'alt-btn--pending' : ''} ${stacked ? 'alt-btn--stack' : ''}`}
+                            onClick={() => !selected && setPendingSelection(letter)}
+                            disabled={selected !== null}
+                          >
+                            <div className="alt-row">
+                              <span className="alt-letter">{letter.toUpperCase()}</span>
+                              {altLabel !== '' && <span className="alt-text">{altLabel}</span>}
+                            </div>
+                            {altImg && (
+                              <figure className="alt-figure">
+                                <img
+                                  className="alt-figure-img"
+                                  src={publicImageSrc(altImg)}
+                                  alt={altCaption || 'Figura da alternativa'}
+                                  loading="lazy"
+                                  decoding="async"
+                                />
+                                {altCaption && (
+                                  <figcaption className="alt-figure-caption">{altCaption}</figcaption>
+                                )}
+                              </figure>
+                            )}
+                          </button>
+                        </li>
+                      )
+                    })}
+                  </ul>
+
+                  {selected && attempt && (
+                    <div
+                      className={`feedback ${attempt.correct ? 'feedback--correct' : 'feedback--wrong'}`}
+                      role="status"
+                    >
+                      {attempt.correct
+                        ? 'Correto.'
+                        : `Incorreto. A alternativa correta é ${String(question.answer).toUpperCase()}.`}
+                      {' '}Sua resposta: <strong>{selected.toUpperCase()}</strong>.
+                    </div>
                   )}
-                </button>
-              </li>
-            )
-          })}
-        </ul>
+                </div>
 
-        {selected && attempt && (
-          <div
-            className={`feedback ${attempt.correct ? 'feedback--correct' : 'feedback--wrong'}`}
-            role="status"
+                <div className="tags">
+                  {question.tags.map((tag) => (
+                    <span key={tag} className="tag">{tag}</span>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <aside
+            id="session-notebook"
+            className={`notebook-panel ${notebookOpen ? 'is-open' : ''}`}
+            aria-label="Bloco de notas da sessão"
+            aria-hidden={!notebookOpen}
           >
-            {attempt.correct
-              ? 'Correto.'
-              : `Incorreto. A alternativa correta é ${String(question.answer).toUpperCase()}.`}
-            {' '}
-            Sua resposta: <strong>{selected.toUpperCase()}</strong>.
-          </div>
-        )}
-      </div>
-
-      <div className="tags">
-        {question.tags.map((tag) => (
-          <span key={tag} className="tag">{tag}</span>
-        ))}
-      </div>
+            <div className="notebook-panel-inner">
+              <div className="notebook-panel-head">
+                <h2 className="notebook-panel-title">Caderno</h2>
+                <button type="button" className="notebook-close" onClick={() => setNotebookOpen(false)} aria-label="Fechar caderno">×</button>
+              </div>
+              <p className="notebook-hint">Anotações nesta aba até fechá-la.</p>
+              <div className="notebook-toolbar" role="toolbar" aria-label="Formatação do texto">
+                <button type="button" className="notebook-tool" onMouseDown={applyNotebookFormat('bold')} aria-label="Negrito" title="Negrito"><strong>B</strong></button>
+                <button type="button" className="notebook-tool" onMouseDown={applyNotebookFormat('italic')} aria-label="Itálico" title="Itálico"><em>I</em></button>
+                <button type="button" className="notebook-tool" onMouseDown={applyNotebookFormat('underline')} aria-label="Sublinhado" title="Sublinhado"><span className="notebook-tool-u">U</span></button>
+              </div>
+              <div
+                ref={notebookEditorRef}
+                className="notebook-editor"
+                contentEditable
+                suppressContentEditableWarning
+                role="textbox"
+                aria-multiline="true"
+                spellCheck
+                onInput={syncNotebookFromEditor}
+              />
             </div>
-          </div>
-        </div>
-
-        <aside
-          id="session-notebook"
-          className={`notebook-panel ${notebookOpen ? 'is-open' : ''}`}
-          aria-label="Bloco de notas da sessão"
-          aria-hidden={!notebookOpen}
-        >
-          <div className="notebook-panel-inner">
-            <div className="notebook-panel-head">
-              <h2 className="notebook-panel-title">Caderno</h2>
-              <button
-                type="button"
-                className="notebook-close"
-                onClick={() => setNotebookOpen(false)}
-                aria-label="Fechar caderno"
-              >
-                ×
-              </button>
-            </div>
-            <p className="notebook-hint">
-              Anotações nesta aba até fechá-la. Você pode usar o restante da página com o caderno aberto.
-            </p>
-            <div className="notebook-toolbar" role="toolbar" aria-label="Formatação do texto">
-              <button
-                type="button"
-                className="notebook-tool"
-                onMouseDown={applyNotebookFormat('bold')}
-                aria-label="Negrito"
-                title="Negrito"
-              >
-                <strong>B</strong>
-              </button>
-              <button
-                type="button"
-                className="notebook-tool"
-                onMouseDown={applyNotebookFormat('italic')}
-                aria-label="Itálico"
-                title="Itálico"
-              >
-                <em>I</em>
-              </button>
-              <button
-                type="button"
-                className="notebook-tool"
-                onMouseDown={applyNotebookFormat('underline')}
-                aria-label="Sublinhado"
-                title="Sublinhado"
-              >
-                <span className="notebook-tool-u">U</span>
-              </button>
-            </div>
-            <div
-              ref={notebookEditorRef}
-              className="notebook-editor"
-              contentEditable
-              suppressContentEditableWarning
-              role="textbox"
-              aria-multiline="true"
-              spellCheck
-              onInput={syncNotebookFromEditor}
-            />
-          </div>
-        </aside>
+          </aside>
         </div>
 
         <nav className="question-rail" ref={railRef} aria-label="Lista de questões">
@@ -804,43 +902,17 @@ export default function App() {
       </div>
 
       <footer className="question-footer">
-        <button
-          type="button"
-          className="footer-nav-btn"
-          onClick={prev}
-          disabled={isPrevDisabled}
-          aria-label="Questão anterior"
-        >
-          ←
-        </button>
+        <button type="button" className="footer-nav-btn" onClick={prev} disabled={isPrevDisabled} aria-label="Questão anterior">←</button>
         {selected ? (
-          <button
-            type="button"
-            className="footer-responder-btn footer-responder-btn--next"
-            onClick={next}
-            disabled={isNextDisabled}
-          >
+          <button type="button" className="footer-responder-btn footer-responder-btn--next" onClick={next} disabled={isNextDisabled}>
             Próxima →
           </button>
         ) : (
-          <button
-            type="button"
-            className="footer-responder-btn"
-            onClick={confirmAnswer}
-            disabled={!pendingSelection}
-          >
+          <button type="button" className="footer-responder-btn" onClick={confirmAnswer} disabled={!pendingSelection}>
             Responder
           </button>
         )}
-        <button
-          type="button"
-          className="footer-nav-btn"
-          onClick={next}
-          disabled={isNextDisabled}
-          aria-label="Próxima questão"
-        >
-          →
-        </button>
+        <button type="button" className="footer-nav-btn" onClick={next} disabled={isNextDisabled} aria-label="Próxima questão">→</button>
       </footer>
     </div>
   )
