@@ -99,6 +99,31 @@ function NotebookIcon() {
   )
 }
 
+function LogoutIcon() {
+  return (
+    <svg
+      width="18"
+      height="18"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      {/* Porta */}
+      <path d="M3 21h12V3H3z" />
+
+      {/* Maçaneta */}
+      <circle cx="10" cy="12" r="1" />
+
+      {/* Seta de saída */}
+      <path d="M15 12h6" />
+      <path d="M18 9l3 3-3 3" />
+    </svg>
+  )
+}
+
 const SESSION_NOTES_KEY = 'questionario-caderno'
 
 function readNotesFromSession() {
@@ -119,6 +144,8 @@ function legacyPlainToHtml(raw) {
 }
 
 export default function App() {
+  
+  const [user, setUser] = useState(null)
   // All questions loaded from manifest
   const [allQuestions, setAllQuestions] = useState([])
   const [contexts, setContexts] = useState({}) // { [contextId]: { title, subtitle, text, reference } }
@@ -137,8 +164,8 @@ export default function App() {
   const [contextExpanded, setContextExpanded] = useState({}) // { [contextId]: boolean }
   const prevContextIdRef = useRef([])
 
-  // Phase: 'home' | 'quiz' | 'summary'
-  const [phase, setPhase] = useState('home')
+  // Phase: 'home' | 'quiz' | 'summary' | 'login'
+  const [phase, setPhase] = useState('login')
 
   // Homepage filters (step-by-step single select)
   const [selectedTest, setSelectedTest] = useState(null)   // 'ENEM' | 'UFSC' | …
@@ -222,6 +249,16 @@ export default function App() {
     [syncNotebookFromEditor],
   )
 
+  const handleLogin = useCallback((email, password) => {
+    // MOCK — substituir por API depois
+    if (email === 'integrar@test' && password === '123') {
+      setUser({ email })
+      setPhase('home')
+    } else {
+      alert('Credenciais inválidas')
+    }
+  }, [])
+
   useEffect(() => {
     if (notebookOpen && notebookEditorRef.current) {
       notebookEditorRef.current.focus({ preventScroll: true })
@@ -269,6 +306,21 @@ export default function App() {
     }, 1000)
     return () => clearInterval(id)
   }, [phase])
+
+  // Keep login
+  useEffect(() => {
+    const saved = localStorage.getItem('user')
+    if (saved) {
+      setUser(JSON.parse(saved))
+      setPhase('home')
+    }
+  }, [])
+
+  useEffect(() => {
+    if (user) {
+      localStorage.setItem('user', JSON.stringify(user))
+    }
+  }, [user])
 
   const questionIndex = useMemo(() => {
     if (!question) return -1
@@ -327,6 +379,12 @@ export default function App() {
   const DAY_AREAS = {
     1: ['linguagens', 'humanas'],
     2: ['math', 'nature'],
+  }
+
+  function handleLogout() {
+    setUser(null)
+    localStorage.removeItem('user')
+    setPhase('login')
   }
 
   const startQuiz = useCallback(() => {
@@ -512,6 +570,55 @@ export default function App() {
             >
               Iniciar
             </button>
+            <button
+              type="button"
+              className="btn--ghost"
+              onClick={handleLogout}
+            >
+              Sair
+            </button>
+          </div>
+        </div>
+      </div>
+    )
+  }
+
+  if(phase === 'login') {
+    return (
+      <div className="app-shell">
+        <div className="home-screen">
+          <div className="home-card">
+            <h1 className="home-title">Login</h1>
+
+            <form
+              onSubmit={(e) => {
+                e.preventDefault()
+                const email = e.target.email.value
+                const password = e.target.password.value
+                handleLogin(email, password)
+              }}
+              className="home-filters"
+            >
+              <input
+                name="email"
+                type="email"
+                placeholder="Email"
+                className="home-input"
+                required
+              />
+
+              <input
+                name="password"
+                type="password"
+                placeholder="Senha"
+                className="home-input"
+                required
+              />
+
+              <button type="submit" className="home-start-btn">
+                Entrar
+              </button>
+            </form>
           </div>
         </div>
       </div>
@@ -794,6 +901,9 @@ export default function App() {
           </button>
           <button type="button" className="theme-toggle" onClick={() => setDark((d) => !d)} aria-label="Alternar tema">
             {dark ? <SunIcon /> : <MoonIcon />}
+          </button>
+          <button type="button" className="btn--ghost" onClick={handleLogout} aria-label="Alternar tema">
+            {<LogoutIcon />}
           </button>
         </div>
       </header>

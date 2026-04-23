@@ -1,0 +1,955 @@
+[
+  {
+    "number": 46,
+    "text": "TEXTO I\n\nUm terremoto de magnitude 5,9 atingiu a cidade de Valparaíso, na costa chilena. O terremoto ocorreu a uma profundidade de 112 quilômetros.\n\nTerremoto de magnitude 5,9 atinge Valparaíso, no Chile. Disponível em: www.cnnbrasil.com.br. Acesso em: 6 nov. 2021 (adaptado).\n\nTEXTO II\n\nUm tremor de terra de magnitude 4,8 foi registrado no município de Atalaia do Norte, no interior do estado do Amazonas. O abalo é de magnitude considerada mediana para os níveis do Brasil. Os eventos dessa região costumam ser resultado das atividades da placa de Nazca.\n\nTremor de terra de magnitude 4,8 é registrado no interior do Amazonas. Disponível em: https://g1.globo.com. Acesso em: 6 nov. 2021 (adaptado).\n\nTEXTO III\n\nMoradores usaram as redes sociais para relatar tremores de terra no interior de São Paulo. As atividades foram registradas nas cidades de Júlio Mesquita e Guaimbê e tiveram magnitude 3,0 na escala Richter, o que é considerado pequeno e sem previsão de danos.\n\nMoradores do interior de SP relatam tremores de terra. Disponível em: https://noticias.r7.com. Acesso em: 6 nov. 2021 (adaptado).\n\nAs diferenças entre os eventos geológicos relatados decorrem de distintas posições geográficas das cidades em relação a:",
+    "alternatives": {
+      "a": "Planícies costeiras.",
+      "b": "Bacias continentais.",
+      "c": "Zonas de subducção.",
+      "d": "Áreas de denudação.",
+      "e": "Vertentes escarpadas."
+    },
+    "images": [],
+    "tags": [
+      "geologia",
+      "tectônica de placas"
+    ],
+    "year": 2024,
+    "test": "ENEM",
+    "area": "humanas",
+    "answer": "c"
+  },
+  {
+    "number": 47,
+    "text": "Tal qual num exército, não se compreende um efetivo composto apenas de oficiais. Também na saúde pública, os funcionários técnicos graduados necessitam ser assistidos por auxiliares em número suficiente e com preparo adequado, constituído pelas enfermeiras de saúde pública, educadoras ou visitadoras sanitárias, técnicos de laboratório, inspetores ou guardas etc., para não falarmos no pessoal burocrático, não especializado.\n\nPAULA SOUZA, G. H.; VIEIRA, F. B. Centro de saúde \"eixo\" de organização sanitária. Boletim do Instituto de Higiene de São Paulo, n. 59 (adaptado).\n\nO texto dos sanitaristas atuantes nas décadas de 1920 e 1930 veicula uma mensagem caracterizada pela",
+    "alternatives": {
+      "a": "higienização moral.",
+      "b": "imposição eugênica.",
+      "c": "assimilação cultural.",
+      "d": "hegemonização identitária.",
+      "e": "hierarquização profissional."
+    },
+    "images": [],
+    "tags": [
+      "saúde pública",
+      "Era Vargas",
+      "sanitarismo"
+    ],
+    "year": 2024,
+    "test": "ENEM",
+    "area": "humanas",
+    "answer": "e"
+  },
+  {
+    "number": 48,
+    "text": "O rompimento da barragem de Fundão levou muito consigo. A lama soterrou sonhos e modificou de forma permanente centenas de vidas nascidas e criadas em Bento Rodrigues e Paracatu, em Mariana (MG). Mas não somente. Ao se estender ao longo do rio, outras famílias e histórias foram atingidas de formas diferentes. Ao fugirem dos rejeitos que rapidamente tomaram as localidades, deixaram para trás os resquícios da vida que tiveram até o 5 de novembro de 2015. Nada jamais seria igual.\n\nSANTOS, P. Histórias soterradas. Curinga, n. 19, nov. 2016 (adaptado).\n\nConforme o texto, o evento gerou o seguinte impacto na relação entre as pessoas e o seu espaço vivido:",
+    "alternatives": {
+      "a": "Flexibilização de parâmetros ambientais.",
+      "b": "Consolidação de identidades regionais.",
+      "c": "Fragilização de vínculos afetivos.",
+      "d": "Supressão de práticas exploratórias.",
+      "e": "Recuperação de tradições ancestrais."
+    },
+    "images": [],
+    "tags": [
+      "desastres ambientais",
+      "Mariana",
+      "espaço vivido"
+    ],
+    "year": 2024,
+    "test": "ENEM",
+    "area": "humanas",
+    "answer": "c"
+  },
+  {
+    "number": 49,
+    "text": "Com a proximidade do final do século XIX, amplificam-se as expectativas com relação ao século seguinte. Se muitas eram as utopias, talvez uma das mais evidentes tenha se concentrado nas potencialidades da nova ciência, com suas invenções e projetos. Não é por mera coincidência que a agenda do país tenha sido tomada pela introdução de uma série de inventos. De forma acelerada, entraram no Brasil a luz elétrica e, com ela, o telégrafo, o telefone, o cinematógrafo. Na área dos transportes, o trem a vapor é substituído pelo elétrico, que assiste à entrada do automóvel e até do aeroplano.\n\nCOSTA, A. M.; SCHWARCZ, L. M. 1890-1914, no tempo das certezas. São Paulo: Cia. das Letras, 2000 (adaptado).\n\nNo Brasil, os eventos descritos ganharam conotação política ao serem vinculados à",
+    "alternatives": {
+      "a": "expansão estratégica do imperialismo.",
+      "b": "ascensão gradual do mercantilismo.",
+      "c": "laicidade da educação.",
+      "d": "retomada do absolutismo.",
+      "e": "visão republicana de nação."
+    },
+    "images": [],
+    "tags": [
+      "Primeira República",
+      "modernização",
+      "história do Brasil"
+    ],
+    "year": 2024,
+    "test": "ENEM",
+    "area": "humanas",
+    "answer": "e"
+  },
+  {
+    "number": 50,
+    "text": "O bispo Bartolomeu de Las Casas é o homem mais odiado da América, o anti-Cristo dos senhores, o açoite destas terras. Por sua culpa, o imperador promulgou novas leis que despojam de escravos índios os filhos dos conquistadores. O que será deles sem os braços que os sustentam nas minas e nas lavouras? As novas leis estão arrancando a comida de suas bocas. Las Casas é o homem mais amado da América. Voz dos mudos, teimoso defensor dos que recebem pior tratamento que o esterco das praças, denunciador de quem por cobiça converte Jesus Cristo no mais cruel dos deuses e o rei em lobo faminto de carne humana.\n\nGALEANO, E. Os nascimentos. Porto Alegre: L&PM, 2011 (adaptado).\n\nOs diferentes pontos de vista presentes no texto expressam que o bispo era, ao mesmo tempo,",
+    "alternatives": {
+      "a": "execrado pelos reis e reverenciado pelos religiosos do local.",
+      "b": "detestado pelos colonizadores e respeitado pelos povos do lugar.",
+      "c": "menosprezado pela colônia e idolatrado pelos governantes da região.",
+      "d": "desrespeitado pela metrópole e adorado pelos invasores da Espanha.",
+      "e": "desacatado pelos excluídos e valorizado pelos negociantes de negros."
+    },
+    "images": [],
+    "tags": [
+      "colonização espanhola",
+      "América Latina",
+      "escravidão indígena"
+    ],
+    "year": 2024,
+    "test": "ENEM",
+    "area": "humanas",
+    "answer": "b"
+  },
+  {
+    "number": 51,
+    "text": "A valsa vienense é a mais antiga das danças de salão tradicional. É dançada desde a Idade Média, quando os pares davam voltas pelo salão realizando giros em torno de si mesmos em postura fechada. Pelo fato de ser dançada aos pares em contato íntimo, a valsa encantava a sociedade medieval, como também sofria proibições por infringir os \"bons costumes\". Originária das danças campestres e folclóricas, no século XVI, a aristocracia francesa abandonou a valsa por sua estreita relação com a cultura plebeia, retomando-a posteriormente.\n\nFRANCO, N.; FERREIRA, N. Evolução da dança no contexto histórico: aproximações iniciais com o tema. Repertório, n. 26, 2016 (adaptado).\n\nA expressão cultural descrita no texto foi rejeitada no início da Idade Moderna por congregar",
+    "alternatives": {
+      "a": "traços advindos da feitiçaria nórdica.",
+      "b": "práticas inspiradas em rituais pagãos.",
+      "c": "regras decorrentes do período renascentista.",
+      "d": "compassos produzidos em territórios colonizados.",
+      "e": "elementos provenientes de segmentos populares."
+    },
+    "images": [],
+    "tags": [
+      "cultura medieval",
+      "história da dança"
+    ],
+    "year": 2024,
+    "test": "ENEM",
+    "area": "humanas",
+    "answer": "e"
+  },
+  {
+    "number": 52,
+    "text": "O Black Lives Matter vai para além do nacionalismo estreito que pode prevalecer no seio das comunidades negras, que se limita a apelar aos negros a amar os negros, viver como os negros e comprar produtos dos negros, e mantém à frente do movimento homens negros heterossexuais. Black Lives Matter estima as vidas dos negros e negras homossexuais e transexuais, pessoas incapacitadas, negros sem documentos ou com antecedentes criminais, mulheres e as vidas de todos os negros de todo o espectro de gêneros.\n\nLA BOTZ, D. O movimento Black Lives Matter organiza-se e procura definir-se politicamente. Disponível em: www.ufes.br. Acesso em: 4 out. 2021 (adaptado).\n\nA reivindicação do movimento norte-americano apresentada no texto consiste na necessidade de",
+    "alternatives": {
+      "a": "manter a conquista de direitos sociais.",
+      "b": "integrar a diversidade do grupo identitário.",
+      "c": "priorizar a preservação de culturas africanas.",
+      "d": "defender a adoção de valores supremacistas.",
+      "e": "permitir a permanência do modelo androcêntrico."
+    },
+    "images": [],
+    "tags": [
+      "movimentos sociais",
+      "Black Lives Matter",
+      "interseccionalidade"
+    ],
+    "year": 2024,
+    "test": "ENEM",
+    "area": "humanas",
+    "answer": "b"
+  },
+  {
+    "number": 53,
+    "text": "[Imagem: q53_inundacao.png]\n\nDiferenças entre inundação gradual e brusca\n\nTOMINAGA, L. K.; SANTORO, J.; AMARAL, R. Desastres naturais: conhecer para prevenir. São Paulo: Instituto Geológico, 2009 (adaptado).\n\nA desproporção de velocidade e tempo de duração nos tipos de inundação destacados é condicionada pela",
+    "alternatives": {
+      "a": "variabilidade solar anual.",
+      "b": "temperatura média mensal.",
+      "c": "declividade do relevo local.",
+      "d": "dinâmica tectônica regional.",
+      "e": "gradação da turbidez fluvial."
+    },
+    "images": [
+      "figuras/q53_inundacao.png"
+    ],
+    "tags": [
+      "hidrografia",
+      "desastres naturais",
+      "relevo"
+    ],
+    "year": 2024,
+    "test": "ENEM",
+    "area": "humanas",
+    "answer": "c"
+  },
+  {
+    "number": 54,
+    "text": "Os grupos dominantes são beneficiados em termos de credibilidade e podem, com isso, controlar falas de membros de outros grupos, descredibilizando seus testemunhos com base em concepções compartilhadas de preconceito de identidade (gênero e raça). Algumas formas de preconceito tornam as declarações das pessoas menos importantes devido ao seu pertencimento a determinado grupo social. Assim, um falante recebe menos credibilidade devido ao preconceito do ouvinte.\n\nKUHNEN, T. Resenha de The Power and Ethics of Knowing, de Miranda Fricker. Revista Princípios, n. 33, 2013.\n\nCom base na reflexão suscitada no texto, o preconceito de identidade é responsável por um tipo de injustiça",
+    "alternatives": {
+      "a": "estética, que normatiza os padrões corporais.",
+      "b": "sensorial, que privilegia as habilidades visuais.",
+      "c": "afetiva, que impede as expressões emocionais.",
+      "d": "epistêmica, que prejudica as trocas informacionais.",
+      "e": "econômica, que perpetua as desigualdades materiais."
+    },
+    "images": [],
+    "tags": [
+      "injustiça epistêmica",
+      "filosofia contemporânea",
+      "preconceito"
+    ],
+    "year": 2024,
+    "test": "ENEM",
+    "area": "humanas",
+    "answer": "d"
+  },
+  {
+    "number": 55,
+    "text": "A alma funciona no meu corpo de maneira maravilhosa. Nele se aloja, certamente, mas sabe bem dele escapar: escapa para ver as coisas através da janela dos meus olhos, escapa para sonhar quando durmo, para sobreviver quando morro. Minha alma durará muito tempo e mais que muito tempo, quando meu corpo vier a apodrecer. Viva minha alma! É meu corpo luminoso, purificado, virtuoso, ágil, móvel, tépido, viçoso; é meu corpo liso, castrado, arredondado como uma bolha de sabão.\n\nFOUCAULT, M. O corpo utópico, as heterotopias. São Paulo: Edições N-1, 2013.\n\nEsse texto reforça uma concepção metafísica clássica que remete a um(a)",
+    "alternatives": {
+      "a": "pressuposto lógico.",
+      "b": "pensamento dicotômico.",
+      "c": "contemplação da natureza.",
+      "d": "raciocínio argumentativo.",
+      "e": "crítica à individualidade."
+    },
+    "images": [],
+    "tags": [
+      "filosofia",
+      "dualismo corpo-alma",
+      "metafísica"
+    ],
+    "year": 2024,
+    "test": "ENEM",
+    "area": "humanas",
+    "answer": "b"
+  },
+  {
+    "number": 56,
+    "text": "No primeiro dia, foi colocada uma panela de barro no centro do barracão, a qual representava o espírito do morto presente na sala. Aqueles que dançavam depositavam moedas ao passarem junto dela e, ao seu redor, milho branco, mel, água, acaçás, cachaça. No segundo dia, os ogãs, antes de iniciar a cerimônia, caminharam pelo corredor formado pelas casas, batendo com longas varas de bambus nos seus beirais, até alcançarem o portão de entrada. No terceiro dia, quatro pessoas, as mais influentes do culto, carregaram um lençol, que aparentemente continha um corpo em seu interior. No entanto, esse corpo era formado por folhas verdes de plantas, que foram derramadas sobre uma pessoa.\n\nMANZOCHI, H. M. Axexe, um rito de passagem. Revista do Museu de Arqueologia e Etnologia, n. 5, 1995 (adaptado).\n\nO ritual brasileiro apresentado no texto representa, para seus adeptos, a",
+    "alternatives": {
+      "a": "manutenção de uma memória coletiva.",
+      "b": "contestação de uma identidade étnica.",
+      "c": "imolação de uma divindade africana.",
+      "d": "legitimação de uma prática pagã.",
+      "e": "promissão de uma revolta social."
+    },
+    "images": [],
+    "tags": [
+      "religiões afro-brasileiras",
+      "candomblé",
+      "ritual"
+    ],
+    "year": 2024,
+    "test": "ENEM",
+    "area": "humanas",
+    "answer": "a"
+  },
+  {
+    "number": 57,
+    "text": "Espaços públicos não são produtos dados e acabados, uma instituição que, uma vez estabelecida, traria a paz da consensualidade e a perfeita igualdade. São os lugares em que os problemas aparecem e se transformam em debates, em diálogo e em possibilidade de ajuste e compromissos. Por isso, não anulam os conflitos, ao contrário, são canais de comunicação e de visibilidade de oposições.\n\nGOMES, P. C. C. Espaço público, espaços públicos. Geographia, n. 44, set.-dez. 2018 (adaptado).\n\nAs características descritas no texto exibem a importância dos espaços públicos para a",
+    "alternatives": {
+      "a": "prática do lazer.",
+      "b": "vigilância da sociedade.",
+      "c": "erradicação da violência.",
+      "d": "construção da democracia.",
+      "e": "diversificação do trabalho."
+    },
+    "images": [],
+    "tags": [
+      "geografia urbana",
+      "espaço público",
+      "democracia"
+    ],
+    "year": 2024,
+    "test": "ENEM",
+    "area": "humanas",
+    "answer": "d"
+  },
+  {
+    "number": 58,
+    "text": "TEXTO I\n\nAristóteles entendia que a felicidade era diretamente ligada ao respeito pela própria natureza e, de certa maneira, a uma vida que tivesse na natureza de si mesma uma referência inabalável. Isso lhe permitiu formular o conceito de excelência. O que seria excelência? Seria, justamente, ao longo da vida, tirar de si mesmo, em forma de performance, de conduta, de comportamento, de disposição, o que a natureza permitiria de melhor.\n\nCOEN, M.; BARROS FILHO, C. A monja e o professor: reflexões sobre ética, preceitos e valores. Rio de Janeiro: Best Seller, 2018.\n\nTEXTO II\n\nA noção de eudaimonia é central para a ética aristotélica. A eudaimonia é uma atividade e não um estado psicológico, pois é definida na Ética a Nicômaco como uma atividade da alma com base na virtude moral. A virtude moral é definida em termos de uma disposição diretamente ligada à deliberação, o que o leva a estudar a virtude intelectual que opera em seu interior, isto é, a prudência. A estrutura conceitual da ética aristotélica responde a uma tentativa de elucidar conceitualmente em que consiste isto, agir bem, ou, na linguagem aristotélica, o que significa ser feliz.\n\nZINGANO, M. Eudaimonia, razão e contemplação na ética aristotélica. Analytica, n. 1, 2017 (adaptado).\n\nOs textos indicam que a prática de ações virtuosas, sempre efetivada na pólis, ocorre por meio do(a)",
+    "alternatives": {
+      "a": "teoria das formas essenciais.",
+      "b": "identificação dos princípios racionais.",
+      "c": "desenvolvimento das técnicas retóricas.",
+      "d": "aperfeiçoamento das condutas humanas.",
+      "e": "conhecimento das epistemes verdadeiras."
+    },
+    "images": [],
+    "tags": [
+      "Aristóteles",
+      "ética",
+      "eudaimonia",
+      "virtude"
+    ],
+    "year": 2024,
+    "test": "ENEM",
+    "area": "humanas",
+    "answer": "d"
+  },
+  {
+    "number": 59,
+    "text": "As instituições que a Idade Média nos legou são de um valor maior e mais imperecível do que suas catedrais. E a universidade é nitidamente uma instituição medieval — tanto quanto a monarquia constitucional, ou os parlamentos, ou o julgamento por meio do júri. As universidades e os produtos imediatos das suas atividades constituem a grande realização da Idade Média na esfera intelectual.\n\nRASHDALL, H. apud OLIVEIRA, T. Origem e memória das universidades medievais. Varia História, n. 37, jan.-jun. 2007.\n\nDe acordo com o texto, o legado das universidades medievais torna-se um relevante patrimônio histórico-cultural por",
+    "alternatives": {
+      "a": "adotar currículo e método padronizado.",
+      "b": "rejeitar ideologias e costumes orientais.",
+      "c": "possuir organização e função mercantil.",
+      "d": "transmitir técnicas e valores ecumênicos.",
+      "e": "agregar tradição e conhecimento científico."
+    },
+    "images": [],
+    "tags": [
+      "Idade Média",
+      "universidades medievais"
+    ],
+    "year": 2024,
+    "test": "ENEM",
+    "area": "humanas",
+    "answer": "e"
+  },
+  {
+    "number": 60,
+    "text": "Há experiências de lutas sociais de reapropriação cultural da natureza que são movimentos emblemáticos, como a dos seringueiros no Brasil, que da luta sindical para a comercialização da borracha chegaram a inventar o conceito de reserva extrativista e estão avançando para um novo modo de produção, uma nova racionalidade produtiva, mostrando que é possível viver bem, e não apenas sobreviver, em harmonia com a natureza que habitam. O novo planeta que podemos imaginar é feito desses territórios produtivos que não são apenas economias de autossubsistência mas economias que potencializam a produtividade ecológica de seus territórios.\n\nLEFF, E. Discursos sustentáveis. São Paulo: Cortez, 2010 (adaptado).\n\nO texto expõe a possibilidade de uma nova racionalidade produtiva por meio de uma gestão territorial que se baseia na",
+    "alternatives": {
+      "a": "integração de mercados regidos por pressões regionais.",
+      "b": "conexão de valores fundamentados por decisões locais.",
+      "c": "unificação de preços delimitados por demandas nacionais.",
+      "d": "normatização de regras construídas por instituições mundiais.",
+      "e": "valorização de tradições orientadas por determinações globais."
+    },
+    "images": [],
+    "tags": [
+      "sustentabilidade",
+      "seringueiros",
+      "reserva extrativista"
+    ],
+    "year": 2024,
+    "test": "ENEM",
+    "area": "humanas",
+    "answer": "b"
+  },
+  {
+    "number": 61,
+    "text": "Eu sentia falta do futuro. É claro que eu sabia, muito mesmo antes da recorrência dele, que nunca envelheceria. Era muito provável que eu nunca mais fosse ver o oceano de uma altura de trinta mil pés de novo, uma distância tão grande que não dá nem para distinguir as ondas, nem nenhum barco, de um jeito que faz o oceano parecer um enorme e infinito monólito. Eu poderia imaginá-lo. Eu poderia me lembrar dele. Mas não poderia vê-lo de novo, e me ocorreu que a ambição voraz dos seres humanos nunca é saciada quando os sonhos são realizados, porque há sempre a sensação de que tudo poderia ter sido feito melhor e ser feito outra vez.\n\nGREEN, J. A culpa é das estrelas. Rio de Janeiro: Intrínseca, 2012.\n\nO texto apresenta uma reflexão da personagem acerca de um problema característico da filosofia contemporânea, que trata da(s)",
+    "alternatives": {
+      "a": "implicações éticas.",
+      "b": "finitude humana.",
+      "c": "limitações da linguagem.",
+      "d": "pressuposição existencial.",
+      "e": "objetividade do conhecimento."
+    },
+    "images": [],
+    "tags": [
+      "filosofia contemporânea",
+      "existencialismo",
+      "finitude"
+    ],
+    "year": 2024,
+    "test": "ENEM",
+    "area": "humanas",
+    "answer": "b"
+  },
+  {
+    "number": 62,
+    "text": "TEXTO I\n\nO empirismo moderno foi, em grande parte, condicionado por dois dogmas. Um deles é a crença em certa divisão fundamental entre verdades analíticas, ou fundadas em significados independentemente de questões de fato, e verdades sintéticas, ou fundadas em fatos. O outro dogma é o reducionismo: a crença de que todo enunciado significativo é equivalente a algum construto lógico sobre termos que se referem à experiência imediata.\n\nQUINE, W. V. O. Dois dogmas do empirismo. In: RYLE, G. et al. Ensaios. São Paulo: Abril Cultural, 1975.\n\nTEXTO II\n\nTeses: 1. Somente os enunciados que possuem conteúdo factual são teoricamente significativos; enunciados que não podem, em princípio, estar fundamentados pela experiência são carentes de significado. 2. As ciências empíricas usam somente o conteúdo empírico da realidade. 3. A filosofia usa um conceito não empírico da realidade.\n\nCARNAP, R. Pseudoproblemas na filosofia. In: SCHLICK, M.; CARNAP, R.; POPPER, K. Coletânea de textos. São Paulo: Abril Cultural, 1975.\n\nAo comparar os textos, conclui-se que eles apresentam posicionamentos filosóficos divergentes com relação ao",
+    "alternatives": {
+      "a": "estatuto epistemológico da linguagem.",
+      "b": "alicerce estruturante da moralidade.",
+      "c": "conteúdo essencial da metafísica.",
+      "d": "princípio constitutivo da ontologia.",
+      "e": "domínio reflexivo da estética."
+    },
+    "images": [],
+    "tags": [
+      "filosofia",
+      "empirismo",
+      "Quine",
+      "Carnap",
+      "epistemologia"
+    ],
+    "year": 2024,
+    "test": "ENEM",
+    "area": "humanas",
+    "answer": "a"
+  },
+  {
+    "number": 63,
+    "text": "Uma das principais atividades provocadas pela arte, a reflexão, é abandonada pela indústria cultural. A indústria cultural seria como uma isca que ilude os indivíduos, com o sonho de que eles são livres, originais, únicos e especiais quando, na verdade, os trata como servos e partes de uma massa homogênea.\n\nFONTES, B.; MAGALHÃES, R. O que é indústria cultural? In: BODART, C. N. (Org.). Conceitos e categorias do ensino de sociologia. Maceió: Café com Sociologia, 2021 (adaptado).\n\nAo analisar as consequências da dinâmica apresentada no texto, as autoras destacam a importância do conceito como:",
+    "alternatives": {
+      "a": "Ferramenta de luta coletiva.",
+      "b": "Mecanismo de controle social.",
+      "c": "Instituição de interesse público.",
+      "d": "Organização da iniciativa privada.",
+      "e": "Instrumento de manipulação estatal."
+    },
+    "images": [],
+    "tags": [
+      "indústria cultural",
+      "Escola de Frankfurt",
+      "sociologia"
+    ],
+    "year": 2024,
+    "test": "ENEM",
+    "area": "humanas",
+    "answer": "b"
+  },
+  {
+    "number": 64,
+    "text": "TEXTO I\n\nNeta de Tomásia, uma escravizada alforriada, Chiquinha Gonzaga foi uma das primeiras mulheres a se destacar na música popular brasileira. Entre suas obras mais famosas estão a marcha Ó abre alas, sucesso nos blocos de Carnaval até hoje, e o tango Gaúcho, além de inúmeras peças musicais para teatro e óperas. Chiquinha também teve uma atuação em defesa dos direitos das mulheres e pelo fim da escravatura.\n\nDisponível em: www.uol.com.br. Acesso em: 7 out. 2023 (adaptado).\n\nTEXTO II\n\nDepois da estreia de sua peça Gonzaga, em 1867, que tem como um de seus núcleos dramáticos dois escravizados, pai e filha, separados há muitos anos, Castro Alves escreve talvez o maior conjunto de poemas antiescravistas do Romantismo brasileiro, publicados em 1883 no livro Os escravos, doze anos após a sua morte. Os textos Vozes d'África e Navio negreiro, por exemplo, publicados em folhetos, já em 1878, tiveram enorme repercussão desde a sua circulação, a ponto de Afrânio Coutinho (um importante crítico brasileiro) afirmar ter sido Castro Alves, no que diz respeito à poesia antiescravista, um dos primeiros que o Brasil ouviu.\n\nDisponível em: www.uol.com.br. Acesso em: 8 out. 2023 (adaptado).\n\nOs textos indicam a participação de artistas e intelectuais brasileiros em defesa do(a)",
+    "alternatives": {
+      "a": "ação integralista.",
+      "b": "literatura realista.",
+      "c": "movimento abolicionista.",
+      "d": "política indigenista.",
+      "e": "nacionalismo desenvolvimentista."
+    },
+    "images": [],
+    "tags": [
+      "abolicionismo",
+      "Castro Alves",
+      "Chiquinha Gonzaga"
+    ],
+    "year": 2024,
+    "test": "ENEM",
+    "area": "humanas",
+    "answer": "c"
+  },
+  {
+    "number": 65,
+    "text": "Como conclusão provisória, parece então que a globalização tem, sim, o efeito de contestar e deslocar as identidades centradas e \"fechadas\" de uma cultura nacional. Ela tem um efeito pluralizante sobre as identidades, produzindo uma variedade de possibilidades e novas posições de identificação, e tornando as identidades mais posicionais, mais políticas, mais plurais e diversas; menos fixas, unificadas ou trans-históricas.\n\nHALL, S. A identidade cultural na pós-modernidade. Rio de Janeiro: DP&A, 2011.\n\nDe acordo com o texto, o processo apresentado contribuiu para",
+    "alternatives": {
+      "a": "elevar a renda da população.",
+      "b": "abandonar os valores morais.",
+      "c": "estabelecer a igualdade racial.",
+      "d": "fortalecer as pautas das minorias.",
+      "e": "inverter os fluxos das migrações."
+    },
+    "images": [],
+    "tags": [
+      "globalização",
+      "identidade cultural",
+      "Stuart Hall"
+    ],
+    "year": 2024,
+    "test": "ENEM",
+    "area": "humanas",
+    "answer": "d"
+  },
+  {
+    "number": 66,
+    "text": "Em 1960, a primeira pílula anticoncepcional foi comercializada nos EUA, e, em poucos anos, o método contraceptivo se difundiu pelo mundo, inclusive no Brasil. Em nosso país, a chegada das pílulas anticoncepcionais foi simultânea às discussões neomalthusianas sobre a crise demográfica, à aceleração dos processos de modernização e ao boom da indústria farmacêutica multinacional.\n\nDIAS, T. M. et al. A pílula da oportunidade: discursos sobre as pílulas anticoncepcionais em A Gazeta da Farmácia, 1960-1981. História, Ciências, Saúde — Manguinhos, n. 3, jul.-set. 2018 (adaptado).\n\nQual foi o efeito social resultante do avanço tecnológico mencionado no texto?",
+    "alternatives": {
+      "a": "O afastamento da autoridade médica na regulação da fecundidade.",
+      "b": "A superação do discurso da moralidade pela ação da mídia estatal.",
+      "c": "A ampliação do debate público sobre o planejamento familiar.",
+      "d": "A centralização da pesquisa científica pelo sistema privado de saúde.",
+      "e": "O enrijecimento das doutrinas religiosas sobre a organização da vida doméstica."
+    },
+    "images": [],
+    "tags": [
+      "demografia",
+      "planejamento familiar",
+      "história do corpo"
+    ],
+    "year": 2024,
+    "test": "ENEM",
+    "area": "humanas",
+    "answer": "c"
+  },
+  {
+    "number": 67,
+    "text": "A internet fortalece o engajamento e a visibilidade de populações tradicionais e indígenas por meio de redes sociais, rádios e veículos de mídia digital. Ela também promove a criação e o fortalecimento de mercados e a inovação nos sistemas de financiamento, integrando pequenos agricultores e produtores da comunidade florestal a cadeias de abastecimento maiores.\n\nGROTTERA, C.; CASTRO, L. M.; BRITO, M. C. Como a tecnologia pode ser uma aliada na conservação ambiental. Nexo Jornal, 14 ago. 2021.\n\nA adoção da tecnologia mencionada amplia a rentabilidade das comunidades citadas, ao possibilitar o(a):",
+    "alternatives": {
+      "a": "Valorização da economia local.",
+      "b": "Elaboração de projetos culturais.",
+      "c": "Estabelecimento de regras comerciais.",
+      "d": "Incremento da infraestrutura educacional.",
+      "e": "Homogeneização da qualificação profissional."
+    },
+    "images": [],
+    "tags": [
+      "tecnologia",
+      "comunidades tradicionais",
+      "economia local"
+    ],
+    "year": 2024,
+    "test": "ENEM",
+    "area": "humanas",
+    "answer": "a"
+  },
+  {
+    "number": 68,
+    "text": "TEXTO I\n\nUma única árvore joga entre 300 e 1 000 litros de água por dia para a atmosfera. Considerando a demanda mínima que uma pessoa consome de água, ou seja, 120 litros por dia, uma única árvore pode ser capaz de produzir água para até oito pessoas.\n\nMAGNO, C. Estudiosos explicam o motivo de chover tanto em Belém. Disponível em: www.diarioonline.com.br. Acesso em: 6 nov. 2021.\n\nTEXTO II\n\nA Amazônia perdeu diariamente uma área de floresta maior do que 4 mil campos de futebol apenas em setembro de 2021. Em todo o mês, foram devastados 1 224 km², o que corresponde ao tamanho da cidade do Rio de Janeiro e é a pior marca para setembro em 10 anos. Os dados são do Sistema de Alerta de Desmatamento (SAD) do Instituto do Homem e Meio Ambiente da Amazônia (Imazon), que monitora a floresta por meio de imagens de satélites.\n\nFREITAS, A. Desmatamento na Amazônia em setembro foi o maior para o período em 10 anos. Disponível em: www.cnnbrasil.com.br. Acesso em: 6 nov. 2021.\n\nPara a região amazônica, a relação entre as informações dos textos indica uma redução do(a)",
+    "alternatives": {
+      "a": "circulação de ventos alísios.",
+      "b": "aquecimento dos solos locais.",
+      "c": "média de temperatura oceânica.",
+      "d": "índice de refletividade superficial.",
+      "e": "intensidade de chuvas convectivas."
+    },
+    "images": [],
+    "tags": [
+      "Amazônia",
+      "desmatamento",
+      "ciclo da água"
+    ],
+    "year": 2024,
+    "test": "ENEM",
+    "area": "humanas",
+    "answer": "e"
+  },
+  {
+    "number": 69,
+    "text": "Atribuo a causa desse florescimento estéril a um sistema de educação falso, extraído de livros sobre o assunto escrito por homens que, ao considerar as mulheres mais como fêmeas do que como criaturas humanas, estão mais ansiosos em torná-las damas sedutoras do que esposas afetuosas e mães racionais. O entendimento do sexo feminino tem sido tão distorcido por essa homenagem ilusória de que as mulheres civilizadas de nosso século, com raras exceções, anseiam apenas inspirar amor, quando deveriam nutrir uma ambição mais nobre e exigir respeito por suas capacidades e virtudes.\n\nWOLLSTONECRAFT, M. Reivindicação dos direitos da mulher. São Paulo: Boitempo, 2016.\n\nNesse texto, escrito no século XVIII, a autora reivindica para as mulheres a",
+    "alternatives": {
+      "a": "recuperação de sua participação política.",
+      "b": "equiparação de ganhos salariais.",
+      "c": "valorização de seu papel social.",
+      "d": "distinção de padrões biológicos.",
+      "e": "ocupação de cargos públicos."
+    },
+    "images": [],
+    "tags": [
+      "feminismo",
+      "Iluminismo",
+      "Wollstonecraft"
+    ],
+    "year": 2024,
+    "test": "ENEM",
+    "area": "humanas",
+    "answer": "c"
+  },
+  {
+    "number": 70,
+    "text": "Cada objeto é, em si mesmo, um sistema funcionando sistemicamente. Um grande supermercado ou shopping center seria incapaz de existir se não fossem servidos por vias rápidas, estacionamentos adequados e acessíveis, sistemas de transportes públicos com horários regulares e conhecidos e se, no seu próprio interior, as atividades não estivessem subordinadas a uma coordenação. Esse é o caso dos armazéns, dos silos etc. Os portos, a rede rodoviária de um país e, sobretudo, a rede ferroviária são exemplos de objetos complexos e sistêmicos.\n\nSANTOS, M. A natureza do espaço: técnica, tempo, razão e emoção. São Paulo: Hucitec, 1996 (adaptado).\n\nDe acordo com o texto, o território torna-se cada vez mais dotado de objetos com a finalidade de intensificar a",
+    "alternatives": {
+      "a": "desindustrialização da economia.",
+      "b": "desregulamentação do mercado.",
+      "c": "concentração da produção.",
+      "d": "distribuição de renda.",
+      "e": "dinamização dos fluxos."
+    },
+    "images": [],
+    "tags": [
+      "geografia",
+      "Milton Santos",
+      "território"
+    ],
+    "year": 2024,
+    "test": "ENEM",
+    "area": "humanas",
+    "answer": "e"
+  },
+  {
+    "number": 71,
+    "text": "A 26ª Conferência do Clima das Nações Unidas foi realizada com a perspectiva de que os países tornassem ainda mais ambiciosos os compromissos assumidos no enfrentamento das mudanças climáticas, de modo a evitar que a temperatura global se eleve acima de 1,5 °C, marca que já vinha sendo discutida desde o Acordo de Paris, de 2015.\n\nA pressão do setor empresarial, que se posicionou de maneira contundente nesta COP-26, gerou impacto positivo. O Conselho Empresarial Brasileiro para o Desenvolvimento Sustentável (CEBDS) capitaneou, por meio do movimento Empresários pelo Clima, a adesão de 119 CEOs de importantes empresas e 14 instituições do setor privado, de setores tão diversos como agronegócio, alimentício, aviação, elétrico, farmacêutico, finanças, infraestrutura, logística, papel e celulose, petroquímico, saúde, tecnologia, telefonia e varejo.\n\nO Brasil deixa a conferência com o compromisso de fazer valer sua meta e reduzir 50% dos gases de efeito estufa até 2030 em relação aos níveis de 2005 — anteriormente, a meta de redução era de 43%.\n\nGROSSI, M. A mais plural das COPs e a lição de casa para o Brasil. Disponível em: www.nexojornal.com.br. Acesso em: 24 nov. 2021 (adaptado).\n\nConforme o texto, o compromisso assumido pelo Brasil foi resultado dos tensionamentos promovidos por",
+    "alternatives": {
+      "a": "povos ribeirinhos e segmentos culturais.",
+      "b": "blocos econômicos e instituições militares.",
+      "c": "grupos científicos e universidades públicas.",
+      "d": "organismos supranacionais e sociedade civil.",
+      "e": "agentes governamentais e demanda turística."
+    },
+    "images": [],
+    "tags": [
+      "mudança climática",
+      "COP-26",
+      "sociedade civil"
+    ],
+    "year": 2024,
+    "test": "ENEM",
+    "area": "humanas",
+    "answer": "d"
+  },
+  {
+    "number": 72,
+    "text": "A pessoa com deficiência de qualquer modalidade — seja visual, auditiva, física ou mental — encontra-se em uma posição de grande vulnerabilidade em relação às pessoas sem deficiência, sendo frequentemente marcante a assimetria das relações de poder na interação entre ambas. Tal assimetria de relação hierárquica é multiplicada conforme a severidade de cada caso, sendo ampliada se a pessoa com necessidades especiais pertencer a um outro grupo de risco, por exemplo, se for mulher ou criança.\n\nPASIAN, M. S. A negligência parental e a relação com a deficiência: o que mostra a pesquisa nacional. Revista Educação Especial, n. 53, set.-dez. 2015 (adaptado).\n\nA realidade abordada no texto indica a necessidade de se promover uma ética interpessoal centrada no",
+    "alternatives": {
+      "a": "cuidado, proteção e valorização dos indivíduos.",
+      "b": "entendimento, perdão e tolerância dos responsáveis.",
+      "c": "cerceamento, arregimentação e controle de entidades.",
+      "d": "regramento, legislação e responsabilização de culpados.",
+      "e": "ensimesmamento, interiorização e indulgência dos agentes."
+    },
+    "images": [],
+    "tags": [
+      "ética",
+      "deficiência",
+      "vulnerabilidade social"
+    ],
+    "year": 2024,
+    "test": "ENEM",
+    "area": "humanas",
+    "answer": "a"
+  },
+  {
+    "number": 73,
+    "text": "As capas dos folhetos de cordel, já então ilustradas por postais fotográficos, desenhos ou fotogramas de filmes, demoravam mais de uma semana para serem transformadas em clichês em Recife ou Fortaleza, o que levou a que santeiros e artesãos locais fossem requisitados para cortar na umburana — madeira preferida para o taco xilográfico pela facilidade do talhe e abundância — princesas, dragões, cangaceiros.\n\nCARVALHO, G. Xilogravura: os percursos da criação popular. Revista do Instituto de Estudos Brasileiros, n. 39, 1986 (adaptado).\n\nNo início do século XX, a incorporação da técnica de produção descrita no texto promoveu uma renovação da",
+    "alternatives": {
+      "a": "manifestação jornalística.",
+      "b": "narrativa literária.",
+      "c": "indústria regional.",
+      "d": "estética editorial.",
+      "e": "cultura erudita."
+    },
+    "images": [],
+    "tags": [
+      "cordel",
+      "xilogravura",
+      "cultura popular"
+    ],
+    "year": 2024,
+    "test": "ENEM",
+    "area": "humanas",
+    "answer": "d"
+  },
+  {
+    "number": 74,
+    "text": "O Círio de Nazaré é uma festa que ocorre, anualmente, na cidade de Belém do Pará, no segundo domingo do mês de outubro. Sua estrutura ritualística tem origem no catolicismo devocional que surge em Portugal por volta do século XV. Até 1789, a festa em louvor a Nossa Senhora de Nazaré, em Belém, era marcada pelas ladainhas e novenas. Em 1790, a Igreja Católica autorizou a realização de festa em homenagem à Virgem. A primeira procissão ocorreu em 1793. Existindo há mais de duzentos anos, a Festa congrega um extenso mosaico de elementos integrados em diferentes planos e graus de intensidade.\n\nALMEIDA, I. M. A. Revisitando o Círio de Nazaré a partir da lente sociológica de Eidorfe Moreira. Boletim do Museu Paraense Emílio Goeldi, n. 3, set.-dez. 2015 (adaptado).\n\nO reconhecimento da festa descrita no texto, como patrimônio histórico, encontra sustentação no(a)",
+    "alternatives": {
+      "a": "instituição de políticas públicas de âmbito local.",
+      "b": "registro de bens culturais de natureza imaterial.",
+      "c": "tombamento de sítios arqueológicos de propriedade privada.",
+      "d": "salvaguarda de elementos sacros de expressão regional.",
+      "e": "categorização de manifestações cristãs de caráter oficial."
+    },
+    "images": [],
+    "tags": [
+      "patrimônio imaterial",
+      "Círio de Nazaré",
+      "cultura popular"
+    ],
+    "year": 2024,
+    "test": "ENEM",
+    "area": "humanas",
+    "answer": "b"
+  },
+  {
+    "number": 75,
+    "text": "Os salões permitiam aos escritores da época do Iluminismo adentrar no universo dos poderosos. Figuras como as de Voltaire e Duclos exortavam seus \"irmãos\" a aproveitarem da mobilidade que era oferecida pela ordem social do Antigo Regime, juntando-se à elite. Nos últimos decênios do Ancien Régime, ele foi se tornando cada vez mais o reduto dos filósofos do Alto Iluminismo, que deixavam os cafés para os tipos inferiores de literário. Com efeito, os cafés se constituíram na antítese lógica dos salões. Eles eram abertos a todos, a um passo da rua. Como é possível constatar, salões e cafés constituem interessantes instituições do espaço público literário através das quais é possível vislumbrar as bases sociais nas quais se assentavam o Alto e o Baixo Iluminismo.\n\nHABERMAS, J. Mudança estrutural da esfera pública: investigações quanto a uma categoria da sociedade burguesa. Rio de Janeiro: Tempo Brasileiro, 1984 (adaptado).\n\nNo período iluminista, os espaços sociais mencionados contribuíram para",
+    "alternatives": {
+      "a": "segregar pensadores e aumentar a circulação de ideias.",
+      "b": "apoiar revolucionários e perseguir a nobreza local.",
+      "c": "rejeitar poetisas e proibir a entrada de mulheres.",
+      "d": "censurar cronistas e coibir o patrocínio editorial.",
+      "e": "integrar artistas e ampliar o comércio urbano."
+    },
+    "images": [],
+    "tags": [
+      "Iluminismo",
+      "esfera pública",
+      "Habermas"
+    ],
+    "year": 2024,
+    "test": "ENEM",
+    "area": "humanas",
+    "answer": "a"
+  },
+  {
+    "number": 76,
+    "text": "Resumamos os principais caracteres de um rizoma: diferentemente das árvores ou de suas raízes, o rizoma conecta um ponto qualquer com outro ponto qualquer e cada um de seus traços não remete necessariamente a traços de mesma natureza. Contra os sistemas centrados (e mesmo policentrados), de comunicação hierárquica e ligações preestabelecidas, o rizoma é um sistema a-centrado não hierárquico e não significante, sem general, sem memória organizadora ou autômato central, unicamente definido por uma circulação de estados.\n\nDELEUZE, G.; GUATTARI, F. Mil platôs. São Paulo: Editora 34, 1995 (adaptado).\n\nQual elemento da cultura contemporânea se relaciona às características do conceito de rizoma, conforme descrito no texto?",
+    "alternatives": {
+      "a": "Estrutura fixa.",
+      "b": "Lógica binária.",
+      "c": "Controle homogêneo.",
+      "d": "Uniformidade de opiniões.",
+      "e": "Pluralidade de interações."
+    },
+    "images": [],
+    "tags": [
+      "filosofia contemporânea",
+      "Deleuze",
+      "rizoma"
+    ],
+    "year": 2024,
+    "test": "ENEM",
+    "area": "humanas",
+    "answer": "e"
+  },
+  {
+    "number": 77,
+    "text": "[Imagem: q77_travel_brazil.png]\n\nVIEIRA, A. P. L. O Departamento de Imprensa e Propaganda e a política editorial do Estado Novo (1937-1945). Rio de Janeiro: Unirio, 2019.\n\nO que as capas da revista Travel in Brazil, publicadas entre 1941 e 1944 pelo Departamento de Imprensa e Propaganda (DIP), evidenciam?",
+    "alternatives": {
+      "a": "Estereótipos da cultura nacional.",
+      "b": "Exploração da população pobre.",
+      "c": "Preconceitos de ordem racial.",
+      "d": "Política de censura midiática.",
+      "e": "Projeto de país industrial."
+    },
+    "images": [
+      "figuras/q77_travel_brazil.png"
+    ],
+    "tags": [
+      "Estado Novo",
+      "propaganda",
+      "DIP",
+      "Era Vargas"
+    ],
+    "year": 2024,
+    "test": "ENEM",
+    "area": "humanas",
+    "answer": "a"
+  },
+  {
+    "number": 78,
+    "text": "A regra de ouro, popularmente conhecida pelo provérbio \"Trate os outros como gostaria de ser tratado\", é um dos princípios morais mais onipresentes. A noção subjacente, que apela para o senso ético mais básico, se expressa de uma forma ou de outra em praticamente todas as tradições religiosas, e poucos filósofos morais deixaram de invocar a regra ou pelo menos de tecer comentários a respeito da relação com seus próprios princípios.\n\nDUPRÉ, B. 50 grandes ideias da humanidade. São Paulo: Planeta do Brasil, 2016.\n\nO princípio ético apresentado no texto, como elemento estruturante da vida em sociedade, se traduz pela seguinte formulação teórica:",
+    "alternatives": {
+      "a": "Doutrina teleológica.",
+      "b": "Imperativo categórico.",
+      "c": "Pensamento utilitarista.",
+      "d": "Secularização inautêntica.",
+      "e": "Raciocínio consequencialista."
+    },
+    "images": [],
+    "tags": [
+      "ética",
+      "Kant",
+      "imperativo categórico"
+    ],
+    "year": 2024,
+    "test": "ENEM",
+    "area": "humanas",
+    "answer": "b"
+  },
+  {
+    "number": 79,
+    "text": "O que alicerça, portanto, o acolhimento de refugiados pelos Estados gira em torno da fronteira erguida entre inclusão e exclusão, admissão e rejeição, desejáveis e indesejáveis; ao mesmo tempo, enseja vulnerabilidade, indefinição e incerteza a esses migrantes internacionais forçados.\n\nMOREIRA, J. B. Refugiados no Brasil. REMHU, n. 43, jul.-dez. 2014.\n\nA eliminação, para os refugiados, do tipo de fronteira descrita no texto necessita de políticas públicas de",
+    "alternatives": {
+      "a": "planejamento familiar.",
+      "b": "segregação territorial.",
+      "c": "homogeneização cultural.",
+      "d": "diferenciação étnico-racial.",
+      "e": "integração socioeconômica."
+    },
+    "images": [],
+    "tags": [
+      "refugiados",
+      "migração",
+      "políticas públicas"
+    ],
+    "year": 2024,
+    "test": "ENEM",
+    "area": "humanas",
+    "answer": "e"
+  },
+  {
+    "number": 80,
+    "text": "TEXTO I\n\n\"As novelas brasileiras foram as primeiras a aparecer na TV russa ainda na época de Gorbachov, nos anos 1980. Elas causaram sensação. Houve casos anedóticos, como quando o Parlamento da Federação Russa terminou a sessão mais cedo para ver o último capítulo de Escrava Isaura\", conta o russo Anatoli Sostanov, consultor na área de TV internacional e ex-diretor da emissora estatal russa Canal.\n\nDisponível em: www.bbc.com. Acesso em: 16 out. 2021.\n\nTEXTO II\n\nAs novelas de maior impacto em Angola foram as produções brasileiras. Fizeram tanto sucesso que um mercado popular, na época era o maior a céu aberto na África, chegou a receber o nome de Roque Santeiro, novela brasileira exibida naquele país na década de 1980. A influência das produções brasileiras fez com que os angolanos conhecessem o Brasil por meio das novelas. Além de entreter, os folhetins brasileiros até hoje ditam a moda em Angola. Figurinos e acessórios de personagens se transformam em uma verdadeira febre e influenciam o comportamento.\n\nDisponível em: https://tvbrasil.ebc.com.br. Acesso em: 16 out. 2021 (adaptado).\n\nEmbora situados em continentes diferentes com práticas sociais distintas, Rússia e Angola se aproximam, conforme os textos I e II, no aspecto",
+    "alternatives": {
+      "a": "cultural, ao subjetivarem costumes da teledramaturgia estrangeira.",
+      "b": "econômico, ao importarem confecções de estilistas famosos.",
+      "c": "geográfico, ao encurtarem distâncias de caráter ideológico.",
+      "d": "antropológico, ao adaptarem valores de povos tradicionais.",
+      "e": "político, ao adotarem sistemas de governos democráticos."
+    },
+    "images": [],
+    "tags": [
+      "globalização",
+      "teledramaturgia",
+      "cultura brasileira"
+    ],
+    "year": 2024,
+    "test": "ENEM",
+    "area": "humanas",
+    "answer": "a"
+  },
+  {
+    "number": 81,
+    "text": "No Brasil, os remanescentes de antigos quilombos, \"mocambos\", \"comunidades negras rurais\", \"quilombos contemporâneos\", \"comunidades quilombolas\" ou \"terras de preto\" referem-se a um mesmo patrimônio territorial e cultural inestimável, que só recentemente passaram a ter atenção do Estado e ser do interesse de algumas autoridades e organismos oficiais.\n\nANJOS, R. S. A. Cartografia e quilombos: territórios étnicos africanos no Brasil. Africana Studia, n. 9, 2007.\n\nNa esfera de ação do Estado, com a Constituição de 1988, os espaços mencionados tornaram-se objeto de",
+    "alternatives": {
+      "a": "iniciativas de planejamento familiar.",
+      "b": "projetos de reorientação religiosa.",
+      "c": "programas de moradias sustentáveis.",
+      "d": "políticas de inserção social.",
+      "e": "medidas de homogeneização educacional."
+    },
+    "images": [],
+    "tags": [
+      "quilombolas",
+      "Constituição de 1988",
+      "políticas públicas"
+    ],
+    "year": 2024,
+    "test": "ENEM",
+    "area": "humanas",
+    "answer": "d"
+  },
+  {
+    "number": 82,
+    "text": "Bertrand Russell conta a história de um peru que descobrira, em sua primeira manhã na fazenda de perus, que fora alimentado às 9 da manhã. Contudo, ele não tirou conclusões apressadas. Esperou até recolher um grande número de observações do fato de que era alimentado às 9 da manhã e fez essas observações sob uma ampla variedade de circunstâncias, às quartas e quintas-feiras, em dias quentes e dias frios, em dias chuvosos e dias secos. A cada dia acrescentava uma outra proposição de observação à sua lista. Finalmente, sua consciência ficou satisfeita e ele concluiu. \"Eu sou alimentado sempre às 9 da manhã\".\n\nCHALMERS, A. O que é ciência, afinal? São Paulo: Brasiliense, 1993 (adaptado).\n\nQual tipo de raciocínio corresponde ao padrão de pensamento exibido pelo personagem do texto?",
+    "alternatives": {
+      "a": "Prático, porque recolhe evidências e recomenda ações.",
+      "b": "Absoluto, porque busca confirmações e bloqueia refutações.",
+      "c": "Indutivo, porque observa eventos particulares e infere leis universais.",
+      "d": "Demonstrativo, porque encadeia premissas e extrai conclusões indubitáveis.",
+      "e": "Analógico, porque compara diferentes situações e detecta elementos semelhantes."
+    },
+    "images": [],
+    "tags": [
+      "filosofia da ciência",
+      "indução",
+      "Russell"
+    ],
+    "year": 2024,
+    "test": "ENEM",
+    "area": "humanas",
+    "answer": "c"
+  },
+  {
+    "number": 83,
+    "text": "A finalidade mais marcante em toda a história dos mapas, desde o seu início, teria sido a de estarem sempre voltados à prática, principalmente a serviço da dominação, do poder. Sempre registraram o que mais interessava a uma minoria, fato este que acabou estimulando o incessante aperfeiçoamento deles.\n\nMARTINELLI, M. Mapas da geografia e cartografia temática. São Paulo: Contexto, 2011 (adaptado).\n\nNo texto, a cartografia é apresentada como um instrumento usado essencialmente para a",
+    "alternatives": {
+      "a": "preservação de espaços naturais.",
+      "b": "emancipação de sujeitos marginais.",
+      "c": "revalorização de culturas reprimidas.",
+      "d": "inversão de hierarquias estabelecidas.",
+      "e": "sustentação de hegemonias territoriais."
+    },
+    "images": [],
+    "tags": [
+      "cartografia",
+      "poder",
+      "geografia"
+    ],
+    "year": 2024,
+    "test": "ENEM",
+    "area": "humanas",
+    "answer": "e"
+  },
+  {
+    "number": 84,
+    "text": "TEXTO I\n\nO bufarinheiro, conhecido nas cidades por teque-teque, chama-se, nos recônditos da Amazônia, \"regatão\". Em lugar de transportar nas costas o mundo de miudezas, transporta-o no bojo de uma gaiola que desloca duas, três, quatro toneladas, divididas em seções de secos e molhados e é movido por remo de faia. Cortando comunidades e matas da Amazônia por rios, dentro dessas gaiolas, riscadas de prateleiras, encontram-se os artigos mais díspares, que vão da agulha à espingarda, do lenço ao cobertor, da chita à escova de dentes.\n\nMORAES, R. Na Planície Amazônica. São Paulo: Editora Nacional, 1936 (adaptado).\n\nTEXTO II\n\nNo século XIX, o comércio dos regatões era feito, então, com base em relações tecidas com quilombolas, pequenos produtores, comerciantes locais e indígenas, constituindo relação comercial alternativa ao abastecimento da população.\n\nHENRIQUE, M. C.; MORAIS, L. T. Estradas líquidas, comércio sólido: índios e regatões na Amazônia (século XIX). Rev. Hist., n. 171, jul.-dez. 2014 (adaptado).\n\nComo parte do patrimônio cultural da Amazônia, o regatão foi fundamental, no século XIX, para a",
+    "alternatives": {
+      "a": "organização de rotas de fuga na floresta tropical.",
+      "b": "criação de postos de trabalho nos seringais nortistas.",
+      "c": "divulgação de receitas de fármacos nas zonas ribeirinhas.",
+      "d": "construção de redes de sociabilidade no interior brasileiro.",
+      "e": "ampliação de ambientes de lazer nos territórios autóctones."
+    },
+    "images": [],
+    "tags": [
+      "Amazônia",
+      "comércio",
+      "regatão"
+    ],
+    "year": 2024,
+    "test": "ENEM",
+    "area": "humanas",
+    "answer": "d"
+  },
+  {
+    "number": 85,
+    "text": "Era uma vez um país, uma cidade, uma praça, algumas mães... Las Madres de Plaza de Mayo! Silenciosas, com lenços brancos na cabeça, rondavam a Praça de Maio. Incansáveis, caminharam por dias, meses, anos. Foram chamadas de loucas. Em silêncio, criaram um fato político, escancararam as entranhas da repressão, desafiaram o aparato militar e suas dores ecoaram pelo mundo. Como observou Oliveira, \"à luz do dia, sob as janelas do ditador, sob chuva, sob sol, no silêncio entrecortado de gritos, faziam ouvir como que a alucinação de uma litania, que ecoou no país, na América Latina e além-mar\". Era impossível ignorá-las, estavam lá, sempre em silêncio, mas estavam lá.\n\nGONÇALVES, R. De antigas e novas loucas: Madres e Mães de Maio contra a violência de Estado. Lutas Sociais, n. 29, jul.-dez. 2012.\n\nQual problema de âmbito nacional argentino o movimento social mencionado expôs ao mundo?",
+    "alternatives": {
+      "a": "Violação dos direitos humanos.",
+      "b": "Insegurança da juventude periférica.",
+      "c": "Naturalização da violência doméstica.",
+      "d": "Ampliação das desigualdades sociais.",
+      "e": "Relativização dos princípios democráticos."
+    },
+    "images": [],
+    "tags": [
+      "ditadura militar",
+      "Argentina",
+      "direitos humanos"
+    ],
+    "year": 2024,
+    "test": "ENEM",
+    "area": "humanas",
+    "answer": "a"
+  },
+  {
+    "number": 86,
+    "text": "TEXTO I e TEXTO II\n\n[Imagem: q86_satelite.png]\n\nDisponível em: https://earth.google.com. Acesso em: 13 out. 2023.\n\nA comparação entre as imagens de satélite indica a ocorrência de um processo de",
+    "alternatives": {
+      "a": "conservação de lugares afetivos.",
+      "b": "aumento de áreas desertificadas.",
+      "c": "redefinição de fronteiras nacionais.",
+      "d": "artificialização do espaço geográfico.",
+      "e": "mudança da dinâmica macroclimática."
+    },
+    "images": [
+      "figuras/q86_satelite.png"
+    ],
+    "tags": [
+      "sensoriamento remoto",
+      "urbanização",
+      "espaço geográfico"
+    ],
+    "year": 2024,
+    "test": "ENEM",
+    "area": "humanas",
+    "answer": "d"
+  },
+  {
+    "number": 87,
+    "text": "A democracia responde a esta pergunta: quem deve exercer o poder público? A resposta é: o exercício do poder público corresponde à coletividade dos cidadãos. Contudo, nessa pergunta não se fala sobre qual extensão deva ter o poder público. Trata-se somente de determinar o sujeito a quem o mando compete. A democracia propõe que mandemos todos; quer dizer, que todos intervenham nos fatos sociais.\n\nORTEGA Y GASSET, J. apud MAIA, E. C. Mario Vargas Llosa e o indivíduo para além da tribo. Disponível em: www.estadodaarte.estadao.com.br. Acesso em: 10 out. 2021 (adaptado).\n\nO que sustenta o exercício do poder, conforme a configuração apresentada no texto escrito na década de 1920?",
+    "alternatives": {
+      "a": "Soberania popular.",
+      "b": "Divisão de classes.",
+      "c": "Acúmulo de capital.",
+      "d": "Defesa da propriedade.",
+      "e": "Centralização administrativa."
+    },
+    "images": [],
+    "tags": [
+      "democracia",
+      "soberania popular",
+      "teoria política"
+    ],
+    "year": 2024,
+    "test": "ENEM",
+    "area": "humanas",
+    "answer": "a"
+  },
+  {
+    "number": 88,
+    "text": "A mudança do clima nas cidades brasileiras é um desafio de adaptação e equidade. Inundações, alagamentos e ondas de calor são cada vez mais frequentes e intensas. Cidades precisam se adaptar com urgência, a começar pelas áreas e populações mais vulneráveis. Implementar soluções baseadas na natureza de forma sistêmica pode contribuir para a redução de desastres relacionados às mudanças do clima e ainda gerar múltiplos benefícios para a economia, o ambiente e as pessoas.\n\nEVERS, H. et al. Soluções baseadas na natureza para adaptação em cidades. Disponível em: www.wribrasil.org.br. Acesso em: 19 out. 2023 (adaptado).\n\nQual medida atenua os problemas abordados no texto?",
+    "alternatives": {
+      "a": "Criação de faixas sinalizadoras.",
+      "b": "Incineração de resíduos sólidos.",
+      "c": "Implantação de parques públicos.",
+      "d": "Verticalização de espaços centrais.",
+      "e": "Construção de estacionamentos privados."
+    },
+    "images": [],
+    "tags": [
+      "mudanças climáticas",
+      "cidades",
+      "sustentabilidade urbana"
+    ],
+    "year": 2024,
+    "test": "ENEM",
+    "area": "humanas",
+    "answer": "c"
+  },
+  {
+    "number": 89,
+    "text": "O Conselho de Segurança da Organização das Nações Unidas (ONU) é, junto com a Assembleia-Geral, um dos principais órgãos de tomada de decisão dentro da entidade. O Conselho lida com questões de segurança e paz internacionais, além de recomendar a admissão de novos membros à Assembleia-Geral e aprovar mudanças na Carta das Nações Unidas. Cinco dos quinze membros são permanentes e podem vetar resoluções, o que ocorreu 261 vezes até 2020.\n\nGOMES, L.; PRETTO, N. O funcionamento do Conselho de Segurança das Nações Unidas. Disponível em: www.nexojornal.com.br. Acesso em: 10 nov. 2021 (adaptado).\n\nA composição e o funcionamento do organismo internacional apresentados revelam a seguinte característica das relações internacionais entre os países-membros:",
+    "alternatives": {
+      "a": "Igualdade militar.",
+      "b": "Assimetria política.",
+      "c": "Consenso multipolar.",
+      "d": "Equilíbrio estratégico.",
+      "e": "Soberania compartilhada."
+    },
+    "images": [],
+    "tags": [
+      "ONU",
+      "Conselho de Segurança",
+      "relações internacionais"
+    ],
+    "year": 2024,
+    "test": "ENEM",
+    "area": "humanas",
+    "answer": "b"
+  },
+  {
+    "number": 90,
+    "text": "Uma fábrica na qual os operários fossem, efetiva e integralmente, simples peças de máquinas executando cegamente as ordens da direção pararia em quinze minutos. O capitalismo só pode funcionar com a contribuição constante da atividade propriamente humana de seus subjugados que, ao mesmo tempo, tenta reduzir e desumanizar o mais possível.\n\nCASTORIADIS, C. A instituição imaginária da sociedade. Rio de Janeiro: Paz e Terra, 1982.\n\nO texto apresenta uma contradição interna do capitalismo caracterizada pela",
+    "alternatives": {
+      "a": "obsolescência associada ao uso da tecnologia.",
+      "b": "orientação voltada à administração de conflitos.",
+      "c": "alienação decorrente da organização do trabalho.",
+      "d": "isonomia remanescente da geração de riquezas.",
+      "e": "produtividade vinculada ao fortalecimento da autonomia."
+    },
+    "images": [],
+    "tags": [
+      "capitalismo",
+      "alienação",
+      "trabalho",
+      "Castoriadis"
+    ],
+    "year": 2024,
+    "test": "ENEM",
+    "area": "humanas",
+    "answer": "c"
+  }
+]
