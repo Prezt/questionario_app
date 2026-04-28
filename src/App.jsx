@@ -319,14 +319,14 @@ export default function App() {
     [syncNotebookFromEditor],
   )
 
-  const handleLogin = useCallback(async (email, password) => {
+  const handleLogin = useCallback(async (username, password) => {
     setAuthLoading(true)
     setAuthError('')
     try {
       const res = await fetch('/api/auth/login', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email, password }),
+        body: JSON.stringify({ username, password }),
       })
       const data = await res.json()
       if (!res.ok) { setAuthError(data.error ?? 'Erro ao entrar'); return }
@@ -342,14 +342,14 @@ export default function App() {
     }
   }, [])
 
-  const handleRegister = useCallback(async (email, password) => {
+  const handleRegister = useCallback(async (username, password) => {
     setAuthLoading(true)
     setAuthError('')
     try {
       const res = await fetch('/api/auth/register', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email, password }),
+        body: JSON.stringify({ username, password }),
       })
       const data = await res.json()
       if (!res.ok) { setAuthError(data.error ?? 'Erro ao criar conta'); return }
@@ -859,17 +859,17 @@ export default function App() {
             <form
               onSubmit={(e) => {
                 e.preventDefault()
-                const email = e.target.email.value
+                const username = e.target.username.value
                 const password = e.target.password.value
-                if (isRegister) handleRegister(email, password)
-                else handleLogin(email, password)
+                if (isRegister) handleRegister(username, password)
+                else handleLogin(username, password)
               }}
               className="home-filters"
             >
               <input
-                name="email"
-                type="email"
-                placeholder="Email"
+                name="username"
+                type="text"
+                placeholder="Nome de usuário"
                 className="home-input"
                 required
               />
