@@ -164,6 +164,13 @@ export default function App() {
   const [contextExpanded, setContextExpanded] = useState({}) // { [contextId]: boolean }
   const prevContextIdRef = useRef([])
 
+  const [token, setToken] = useState(() => localStorage.getItem('token') ?? null)
+  const [authMode, setAuthMode] = useState('login') // 'login' | 'register'
+  const [authError, setAuthError] = useState('')
+  const [authLoading, setAuthLoading] = useState(false)
+  const [feedbackOpen, setFeedbackOpen] = useState(false)
+  const [feedbackQuestion, setFeedbackQuestion] = useState(null)
+
   // Phase: 'home' | 'quiz' | 'summary' | 'login'
   const [phase, setPhase] = useState('login')
 
@@ -249,13 +256,49 @@ export default function App() {
     [syncNotebookFromEditor],
   )
 
-  const handleLogin = useCallback((email, password) => {
-    // MOCK — substituir por API depois
-    if (email === 'integrar@test' && password === '123') {
-      setUser({ email })
+  const handleLogin = useCallback(async (email, password) => {
+    setAuthLoading(true)
+    setAuthError('')
+    try {
+      const res = await fetch('/api/auth/login', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email, password }),
+      })
+      const data = await res.json()
+      if (!res.ok) { setAuthError(data.error ?? 'Erro ao entrar'); return }
+      setUser(data.user)
+      setToken(data.token)
+      localStorage.setItem('user', JSON.stringify(data.user))
+      localStorage.setItem('token', data.token)
       setPhase('home')
-    } else {
-      alert('Credenciais inválidas')
+    } catch {
+      setAuthError('Erro de conexão')
+    } finally {
+      setAuthLoading(false)
+    }
+  }, [])
+
+  const handleRegister = useCallback(async (email, password) => {
+    setAuthLoading(true)
+    setAuthError('')
+    try {
+      const res = await fetch('/api/auth/register', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email, password }),
+      })
+      const data = await res.json()
+      if (!res.ok) { setAuthError(data.error ?? 'Erro ao criar conta'); return }
+      setUser(data.user)
+      setToken(data.token)
+      localStorage.setItem('user', JSON.stringify(data.user))
+      localStorage.setItem('token', data.token)
+      setPhase('home')
+    } catch {
+      setAuthError('Erro de conexão')
+    } finally {
+      setAuthLoading(false)
     }
   }, [])
 
@@ -307,20 +350,16 @@ export default function App() {
     return () => clearInterval(id)
   }, [phase])
 
-  // Keep login
+  // Restore session on mount
   useEffect(() => {
     const saved = localStorage.getItem('user')
-    if (saved) {
+    const savedToken = localStorage.getItem('token')
+    if (saved && savedToken) {
       setUser(JSON.parse(saved))
+      setToken(savedToken)
       setPhase('home')
     }
   }, [])
-
-  useEffect(() => {
-    if (user) {
-      localStorage.setItem('user', JSON.stringify(user))
-    }
-  }, [user])
 
   const questionIndex = useMemo(() => {
     if (!question) return -1
@@ -383,7 +422,9 @@ export default function App() {
 
   function handleLogout() {
     setUser(null)
+    setToken(null)
     localStorage.removeItem('user')
+    localStorage.removeItem('token')
     setPhase('login')
   }
 
@@ -447,8 +488,27 @@ export default function App() {
     setQuestionTimes({ ...accQuestionTimesRef.current })
     startTimeRef.current = null
     questionStartRef.current = null
+
+    // Persist result to DB (fire-and-forget — never blocks UI)
+    if (token) {
+      const score = Object.values(attempts).filter((a) => a.correct).length
+      fetch('/api/results', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', Authorization: `Bearer ${token}` },
+        body: JSON.stringify({
+          test: selectedTest,
+          year: selectedYear,
+          day: selectedDay,
+          score,
+          total: questions.length,
+          elapsed_secs: finalTotal,
+          question_times: accQuestionTimesRef.current,
+        }),
+      }).catch(() => {})
+    }
+
     setPhase('summary')
-  }, [question, totalElapsed])
+  }, [question, totalElapsed, token, attempts, questions, selectedTest, selectedYear, selectedDay])
 
   const stemSegments = useMemo(() => {
     if (!question) return []
@@ -583,19 +643,21 @@ export default function App() {
     )
   }
 
-  if(phase === 'login') {
+  if (phase === 'login') {
+    const isRegister = authMode === 'register'
     return (
       <div className="app-shell">
         <div className="home-screen">
           <div className="home-card">
-            <h1 className="home-title">Login</h1>
+            <h1 className="home-title">{isRegister ? 'Criar conta' : 'Login'}</h1>
 
             <form
               onSubmit={(e) => {
                 e.preventDefault()
                 const email = e.target.email.value
                 const password = e.target.password.value
-                handleLogin(email, password)
+                if (isRegister) handleRegister(email, password)
+                else handleLogin(email, password)
               }}
               className="home-filters"
             >
@@ -606,17 +668,24 @@ export default function App() {
                 className="home-input"
                 required
               />
-
               <input
                 name="password"
                 type="password"
-                placeholder="Senha"
+                placeholder={isRegister ? 'Senha (mín. 6 caracteres)' : 'Senha'}
                 className="home-input"
                 required
+                minLength={isRegister ? 6 : undefined}
               />
-
-              <button type="submit" className="home-start-btn">
-                Entrar
+              {authError && <p className="auth-error">{authError}</p>}
+              <button type="submit" className="home-start-btn" disabled={authLoading}>
+                {authLoading ? 'Aguarde…' : isRegister ? 'Criar conta' : 'Entrar'}
+              </button>
+              <button
+                type="button"
+                className="btn--ghost"
+                onClick={() => { setAuthMode(isRegister ? 'login' : 'register'); setAuthError('') }}
+              >
+                {isRegister ? 'Já tenho conta' : 'Criar conta'}
               </button>
             </form>
           </div>
@@ -887,6 +956,14 @@ export default function App() {
         <div className="app-header-actions">
           <button type="button" className="header-finish-btn" onClick={finishQuiz}>
             Finalizar
+          </button>
+          <button
+            type="button"
+            className="notebook-toggle"
+            onClick={() => { setFeedbackQuestion(question?.number ?? null); setFeedbackOpen(true) }}
+            aria-label="Enviar feedback ou reportar problema"
+          >
+            <span className="notebook-toggle-text">Feedback</span>
           </button>
           <button
             type="button"
@@ -1169,6 +1246,93 @@ export default function App() {
         )}
         <button type="button" className="footer-nav-btn" onClick={next} disabled={isNextDisabled} aria-label="Próxima questão">→</button>
       </footer>
+
+      {feedbackOpen && (
+        <FeedbackModal
+          questionNumber={feedbackQuestion}
+          token={token}
+          onClose={() => setFeedbackOpen(false)}
+        />
+      )}
+    </div>
+  )
+}
+
+function FeedbackModal({ questionNumber, token, onClose }) {
+  const [type, setType] = useState('feedback')
+  const [body, setBody] = useState('')
+  const [submitting, setSubmitting] = useState(false)
+  const [done, setDone] = useState(false)
+
+  async function handleSubmit(e) {
+    e.preventDefault()
+    if (!body.trim()) return
+    setSubmitting(true)
+    try {
+      await fetch('/api/feedback', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          ...(token ? { Authorization: `Bearer ${token}` } : {}),
+        },
+        body: JSON.stringify({ question_number: questionNumber, type, body }),
+      })
+      setDone(true)
+      setTimeout(onClose, 1500)
+    } catch {
+      // ignore
+    } finally {
+      setSubmitting(false)
+    }
+  }
+
+  return (
+    <div className="fb-overlay" onClick={onClose}>
+      <div className="fb-modal" onClick={(e) => e.stopPropagation()}>
+        <div className="fb-head">
+          <h2 className="fb-title">
+            {questionNumber ? `Questão ${questionNumber}` : 'Feedback geral'}
+          </h2>
+          <button type="button" className="notebook-close" onClick={onClose}>×</button>
+        </div>
+        {done ? (
+          <p className="fb-done">Enviado! Obrigado.</p>
+        ) : (
+          <form onSubmit={handleSubmit} className="fb-form">
+            <div className="fb-type-row">
+              <button
+                type="button"
+                className={`fb-type-btn ${type === 'feedback' ? 'active' : ''}`}
+                onClick={() => setType('feedback')}
+              >
+                Sugestão
+              </button>
+              <button
+                type="button"
+                className={`fb-type-btn ${type === 'bug' ? 'active' : ''}`}
+                onClick={() => setType('bug')}
+              >
+                Problema
+              </button>
+            </div>
+            <textarea
+              className="fb-textarea"
+              placeholder="Descreva aqui…"
+              value={body}
+              onChange={(e) => setBody(e.target.value)}
+              rows={4}
+              required
+            />
+            <button
+              type="submit"
+              className="home-start-btn"
+              disabled={submitting || !body.trim()}
+            >
+              {submitting ? 'Enviando…' : 'Enviar'}
+            </button>
+          </form>
+        )}
+      </div>
     </div>
   )
 }
