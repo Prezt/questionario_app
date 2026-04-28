@@ -14,6 +14,22 @@ import {
 } from './parseQuestionFigures.js'
 
 const ATTEMPTS_SESSION_KEY = 'questionario-tentativas'
+const PAUSED_SESSION_KEY   = 'questionario-sessao'
+
+function readPausedSession() {
+  try {
+    const raw = localStorage.getItem(PAUSED_SESSION_KEY)
+    return raw ? JSON.parse(raw) : null
+  } catch { return null }
+}
+
+function clearPausedSession() {
+  localStorage.removeItem(PAUSED_SESSION_KEY)
+}
+
+function savePausedSession(data) {
+  try { localStorage.setItem(PAUSED_SESSION_KEY, JSON.stringify(data)) } catch {}
+}
 
 function loadAttemptsFromSession() {
   if (typeof sessionStorage === 'undefined') return {}
@@ -212,6 +228,53 @@ export default function App() {
         const all = datasets.flat().sort((a, b) => a.number - b.number)
         setAllQuestions(all)
         setContexts(ctxMap)
+
+        // Auto-restore a paused session if the user is logged in
+        const savedUser  = localStorage.getItem('user')
+        const savedToken = localStorage.getItem('token')
+        const saved      = readPausedSession()
+        if (savedUser && savedToken && saved) {
+          const DAY_AREAS_MAP = { 1: ['linguagens', 'humanas'], 2: ['math', 'nature'] }
+          const areas = DAY_AREAS_MAP[saved.selectedDay]
+          if (areas) {
+            const lang     = saved.foreignLang ?? 'en'
+            const filtered = all.filter((q) =>
+              q.test === saved.selectedTest &&
+              q.year === saved.selectedYear &&
+              areas.includes(q.area)
+            )
+            const variants = {}
+            filtered.forEach((q) => {
+              if (q.language) {
+                if (!variants[q.number]) variants[q.number] = {}
+                variants[q.number][q.language] = q
+              }
+            })
+            langVariantsRef.current = variants
+            const deduped  = filtered.filter((q) => !q.language || q.language === lang)
+            const sorted   = [...deduped].sort((a, b) => a.number - b.number)
+            const currentQ = sorted.find((q) => q.number === saved.currentNumber) ?? sorted[0]
+            if (sorted.length > 0 && currentQ) {
+              const restoredAttempts = saved.attempts ?? {}
+              setSelectedTest(saved.selectedTest)
+              setSelectedYear(saved.selectedYear)
+              setSelectedDay(saved.selectedDay)
+              setForeignLang(lang)
+              setQuestions(sorted)
+              setQuestion(currentQ)
+              setAttempts(restoredAttempts)
+              saveAttemptsToSession(restoredAttempts)
+              setTotalElapsed(saved.totalElapsed ?? 0)
+              setQuestionTimes(saved.questionTimes ?? {})
+              accQuestionTimesRef.current = { ...(saved.questionTimes ?? {}) }
+              const now = Date.now()
+              startTimeRef.current   = now - (saved.totalElapsed ?? 0) * 1000
+              questionStartRef.current = now
+              prevQuestionNumRef.current = null
+              setPhase('quiz')
+            }
+          }
+        }
       } catch (err) {
         console.error('Erro ao carregar questões:', err)
       } finally {
@@ -415,6 +478,21 @@ export default function App() {
     setPendingSelection(null)
   }, [pendingSelection, pickAlternative])
 
+  // Auto-save session whenever answers or current question change
+  useEffect(() => {
+    if (phase !== 'quiz' || !question) return
+    savePausedSession({
+      selectedTest, selectedYear, selectedDay, foreignLang,
+      currentNumber: question.number,
+      attempts,
+      totalElapsed,
+      questionTimes,
+    })
+  // totalElapsed ticks every second — exclude to avoid writing on every tick.
+  // It is saved precisely when pausing or finishing.
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [phase, question?.number, attempts])
+
   const DAY_AREAS = {
     1: ['linguagens', 'humanas'],
     2: ['math', 'nature'],
@@ -427,6 +505,80 @@ export default function App() {
     localStorage.removeItem('token')
     setPhase('login')
   }
+
+  const pauseQuiz = useCallback(() => {
+    // Snapshot times before leaving
+    if (questionStartRef.current && question) {
+      accQuestionTimesRef.current[question.number] =
+        (accQuestionTimesRef.current[question.number] || 0) +
+        Math.floor((Date.now() - questionStartRef.current) / 1000)
+    }
+    const currentTotal = startTimeRef.current
+      ? Math.floor((Date.now() - startTimeRef.current) / 1000)
+      : totalElapsed
+    savePausedSession({
+      selectedTest, selectedYear, selectedDay, foreignLang,
+      currentNumber: question?.number,
+      attempts,
+      totalElapsed: currentTotal,
+      questionTimes: { ...accQuestionTimesRef.current },
+    })
+    startTimeRef.current   = null
+    questionStartRef.current = null
+    setPhase('home')
+  }, [question, totalElapsed, attempts, selectedTest, selectedYear, selectedDay, foreignLang])
+
+  const resumeQuiz = useCallback(() => {
+    const saved = readPausedSession()
+    if (!saved) return
+    const areas    = DAY_AREAS[saved.selectedDay]
+    const lang     = saved.foreignLang ?? 'en'
+    const filtered = allQuestions.filter((q) =>
+      q.test === saved.selectedTest &&
+      q.year === saved.selectedYear &&
+      areas.includes(q.area)
+    )
+    const variants = {}
+    filtered.forEach((q) => {
+      if (q.language) {
+        if (!variants[q.number]) variants[q.number] = {}
+        variants[q.number][q.language] = q
+      }
+    })
+    langVariantsRef.current = variants
+    const deduped  = filtered.filter((q) => !q.language || q.language === lang)
+    const sorted   = [...deduped].sort((a, b) => a.number - b.number)
+    const currentQ = sorted.find((q) => q.number === saved.currentNumber) ?? sorted[0]
+    if (!currentQ) return
+    const restoredAttempts = saved.attempts ?? {}
+    setSelectedTest(saved.selectedTest)
+    setSelectedYear(saved.selectedYear)
+    setSelectedDay(saved.selectedDay)
+    setForeignLang(lang)
+    setQuestions(sorted)
+    setQuestion(currentQ)
+    setAttempts(restoredAttempts)
+    saveAttemptsToSession(restoredAttempts)
+    setTotalElapsed(saved.totalElapsed ?? 0)
+    setQuestionTimes(saved.questionTimes ?? {})
+    accQuestionTimesRef.current    = { ...(saved.questionTimes ?? {}) }
+    const now = Date.now()
+    startTimeRef.current           = now - (saved.totalElapsed ?? 0) * 1000
+    questionStartRef.current       = now
+    prevQuestionNumRef.current     = null
+    setPhase('quiz')
+  }, [allQuestions])
+
+  const abandonQuiz = useCallback(() => {
+    clearPausedSession()
+    setQuestions([])
+    setQuestion(null)
+    setAttempts({})
+    saveAttemptsToSession({})
+    setSelectedTest(null)
+    setSelectedYear(null)
+    setSelectedDay(null)
+  }, [])
 
   const startQuiz = useCallback(() => {
     if (!selectedTest || !selectedYear || !selectedDay) return
@@ -453,6 +605,9 @@ export default function App() {
     )
     const sorted = [...deduped].sort((a, b) => a.number - b.number)
 
+    clearPausedSession()
+    setAttempts({})
+    saveAttemptsToSession({})
     const now = Date.now()
     startTimeRef.current = now
     questionStartRef.current = now
@@ -488,6 +643,7 @@ export default function App() {
     setQuestionTimes({ ...accQuestionTimesRef.current })
     startTimeRef.current = null
     questionStartRef.current = null
+    clearPausedSession()
 
     // Persist result to DB (fire-and-forget — never blocks UI)
     if (token) {
@@ -524,6 +680,55 @@ export default function App() {
 
   // ── Homepage ──────────────────────────────────────────────────────────────
   if (phase === 'home') {
+    const pausedSession = readPausedSession()
+
+    if (pausedSession) {
+      const answeredCount = Object.keys(pausedSession.attempts ?? {}).length
+      return (
+        <div className="app-shell">
+          <div className="home-screen">
+            <button
+              type="button"
+              className="theme-toggle home-theme-btn"
+              onClick={() => setDark((d) => !d)}
+              aria-label="Alternar tema"
+            >
+              {dark ? <SunIcon /> : <MoonIcon />}
+            </button>
+            <div className="home-card">
+              <div className="home-logo-wrap">
+                <img
+                  src={dark ? '/figuras/logos/integrar-logo-dark.png' : '/figuras/logos/integrar-logo-light.png'}
+                  alt="Integrar"
+                  className="home-logo"
+                />
+              </div>
+              <h1 className="home-title">Prova em andamento</h1>
+              <div className="paused-info">
+                <p className="paused-info-line">
+                  <strong>{pausedSession.selectedTest} {pausedSession.selectedYear}</strong>
+                  {' '}— Dia {pausedSession.selectedDay}
+                </p>
+                <p className="paused-info-line paused-info-sub">
+                  {answeredCount} {answeredCount === 1 ? 'questão respondida' : 'questões respondidas'}
+                  {pausedSession.totalElapsed > 0 && ` · ${formatTime(pausedSession.totalElapsed)} registrados`}
+                </p>
+              </div>
+              <button type="button" className="home-start-btn" onClick={resumeQuiz}>
+                Retomar prova
+              </button>
+              <button type="button" className="btn--ghost" onClick={abandonQuiz}>
+                Abandonar simulado
+              </button>
+              <button type="button" className="btn--ghost" onClick={handleLogout}>
+                Sair
+              </button>
+            </div>
+          </div>
+        </div>
+      )
+    }
+
     const availableTests = [...new Set(allQuestions.map((q) => q.test).filter(Boolean))].sort()
     const availableYears = [...new Set(
       allQuestions
@@ -776,6 +981,7 @@ export default function App() {
               type="button"
               className="home-start-btn summary-restart-btn"
               onClick={() => {
+                clearPausedSession()
                 setAttempts({})
                 saveAttemptsToSession({})
                 setQuestions([])
@@ -954,6 +1160,9 @@ export default function App() {
         </div>
 
         <div className="app-header-actions">
+          <button type="button" className="btn--ghost header-pause-btn" onClick={pauseQuiz}>
+            Pausar
+          </button>
           <button type="button" className="header-finish-btn" onClick={finishQuiz}>
             Finalizar
           </button>
