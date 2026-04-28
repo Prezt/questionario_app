@@ -12,14 +12,14 @@ FUNCIONALIDADES
 [x] Resumo com assuntos de menor dominio e maior tempo medio de resolucao
 
 LOGIN
-[] Conectar um banco de dados + bug report tool
-[] Login para os alunos
-    [] Armazenar o que o aluno ja fez
-    [] Armazenar o historico desse aluno (melhor/pior, etc)
-[] Persistencia por aluno, provas feitas, performance, tempo, login e senha
+[x] Conectar um banco de dados + bug report tool
+[x] Login para os alunos
+    [x] Armazenar o que o aluno ja fez
+    [x] Armazenar o historico desse aluno (melhor/pior, etc)
+[x] Persistencia por aluno, provas feitas, performance, tempo, login e senha
 
 MODOS DE USO
-[] Opcao de pausar o simulado
+[x] Opcao de pausar o simulado
 [] Modo simulado (sem saber as respostas, correcao no fila)
 [] Selecao de AREA
 [] Selecao de MULTIPLOS ASSUNTOS
