@@ -951,24 +951,41 @@ export default function App() {
 
     const weakTags = tagList.filter((t) => t.hitRate < 60)
 
-    let insight
+    const insights = []
+
+    // ── Completion insight ───────────────────────────────────────────────────
     if (answeredCount === 0) {
-      insight = null
+      insights.push({ type: 'improve', msg: 'Você saiu sem responder nenhuma questão. Na próxima, tente ir até o fim — cada questão respondida conta para o seu resultado!' })
+    } else if (unansweredCount > 0) {
+      insights.push({ type: 'improve', msg: `Você deixou ${unansweredCount} ${unansweredCount === 1 ? 'questão sem resposta' : 'questões sem resposta'}. Tente concluir o simulado completo da próxima vez — responder todas as questões maximiza suas chances no dia da prova!` })
     } else if (correctCount === sortedQuestions.length) {
-      insight = { type: 'great', msg: 'Parabéns! Você acertou todas as questões. Desempenho impecável!' }
+      insights.push({ type: 'great', msg: 'Parabéns! Você acertou todas as questões. Desempenho impecável!' })
     } else if (weakTags.length === 0) {
       const bottom = tagList.slice(0, 2).map((t) => t.tag)
-      insight = {
+      insights.push({
         type: 'good',
         msg: `Bom trabalho! Seu desempenho foi sólido em todos os tópicos. Para chegar ainda mais alto, vale reforçar: ${bottom.join(' e ')}.`,
-      }
+      })
     } else {
       const names = weakTags.slice(0, 4).map((t) => t.tag)
       const last = names.pop()
       const list = names.length > 0 ? `${names.join(', ')} e ${last}` : last
-      insight = {
+      insights.push({
         type: 'improve',
         msg: `Você tem maior potencial de melhoria em ${list}. Dedique um tempo extra a esses tópicos — pequenos avanços aqui vão refletir diretamente na sua nota.`,
+      })
+    }
+
+    // ── Time insight ─────────────────────────────────────────────────────────
+    if (answeredCount > 0) {
+      if (avgTime < 45) {
+        insights.push({ type: 'improve', msg: `Você levou em média apenas ${avgTime}s por questão — bem abaixo do ideal. Leia os enunciados com calma; a pressa pode custar acertos que você sabe fazer.` })
+      } else if (avgTime < 90) {
+        insights.push({ type: 'good', msg: `Boa velocidade! Média de ${avgTime}s por questão. Continue assim, mas certifique-se de que está lendo os enunciados por completo.` })
+      } else if (avgTime > 300) {
+        insights.push({ type: 'improve', msg: `Sua média foi de ${Math.round(avgTime / 60)}min por questão. No ENEM você tem cerca de 3,5 min por questão — treinar para ganhar velocidade vai ajudar a terminar a prova no tempo.` })
+      } else if (avgTime > 210) {
+        insights.push({ type: 'improve', msg: `Sua média foi de ${Math.round(avgTime / 60)}min por questão. Tente ganhar um pouco de velocidade — no ENEM o tempo é apertado e cada minuto economizado conta.` })
       }
     }
 
@@ -1052,14 +1069,14 @@ export default function App() {
           {/* Scrollable body: insight + subjects + question table */}
           <div className="summary-body">
 
-            {insight && (
-              <div className={`summary-insight summary-insight--${insight.type}`}>
+            {insights.map((insight, i) => (
+              <div key={i} className={`summary-insight summary-insight--${insight.type}`}>
                 <span className="summary-insight-icon">
                   {insight.type === 'great' ? '🏆' : insight.type === 'good' ? '👍' : '🎯'}
                 </span>
                 <p className="summary-insight-msg">{insight.msg}</p>
               </div>
-            )}
+            ))}
 
             {tagList.length > 0 && (
               <div className="summary-subjects-wrap">
