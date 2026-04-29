@@ -1301,6 +1301,77 @@
   transform: scale(0.97);
 }
 
+/* ── Daily Challenge button ── */
+.home-divider {
+  width: 100%;
+  height: 1px;
+  background: var(--border);
+  margin: 0.25rem 0;
+}
+
+.home-daily-btn {
+  margin-top: 0;
+  height: 2.75rem;
+  padding: 0 2.5rem;
+  border: 2px solid #c89a00;
+  border-radius: 999px;
+  background: transparent;
+  color: #c89a00;
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s, transform 0.1s;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.home-daily-btn:hover:not(:disabled) {
+  background: #c89a00;
+  color: #fff;
+}
+
+.home-daily-btn:active:not(:disabled) {
+  transform: scale(0.97);
+}
+
+.home-daily-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.dark .home-daily-btn {
+  border-color: #f5c842;
+  color: #f5c842;
+}
+
+.dark .home-daily-btn:hover:not(:disabled) {
+  background: #f5c842;
+  color: #1a1a1a;
+}
+
+.daily-done-banner {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.65rem 1.25rem;
+  border-radius: 999px;
+  background: rgba(200, 154, 0, 0.12);
+  border: 1.5px solid #c89a00;
+  color: #c89a00;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.dark .daily-done-banner {
+  background: rgba(245, 200, 66, 0.1);
+  border-color: #f5c842;
+  color: #f5c842;
+}
+
+.daily-done-icon {
+  font-size: 1.1rem;
+}
+
 /* ── Header timers ── */
 .header-timers {
   display: flex;

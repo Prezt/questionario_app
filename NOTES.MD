@@ -36,7 +36,7 @@ NICE TO HAVE
 
 FERRAMENTAS DE LONGO PRAZO
 [] Ferramenta para criar questoes
-[] Ferramenta para reportar bugs
+[x] Ferramenta para reportar bugs
 
 
 DADOS:

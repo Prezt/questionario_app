@@ -187,6 +187,10 @@ export default function App() {
   const [feedbackOpen, setFeedbackOpen] = useState(false)
   const [feedbackQuestion, setFeedbackQuestion] = useState(null)
 
+  const [isDailyChallenge, setIsDailyChallenge] = useState(false)
+  const [dailyChallengeLoading, setDailyChallengeLoading] = useState(false)
+  const [dailyChallengeResult, setDailyChallengeResult] = useState(null) // {score, total} if already done today
+
   // Phase: 'home' | 'quiz' | 'summary' | 'login'
   const [phase, setPhase] = useState('login')
 
@@ -234,31 +238,30 @@ export default function App() {
         const savedToken = localStorage.getItem('token')
         const saved      = readPausedSession()
         if (savedUser && savedToken && saved) {
-          const DAY_AREAS_MAP = { 1: ['linguagens', 'humanas'], 2: ['math', 'nature'] }
-          const areas = DAY_AREAS_MAP[saved.selectedDay]
-          if (areas) {
-            const lang     = saved.foreignLang ?? 'en'
-            const filtered = all.filter((q) =>
-              q.test === saved.selectedTest &&
-              q.year === saved.selectedYear &&
-              areas.includes(q.area)
-            )
+          if (saved.isDailyChallenge && saved.dailyQuestionRefs) {
+            // Restore a paused daily challenge session
+            const lang = saved.foreignLang ?? 'en'
+            const resolved = []
             const variants = {}
-            filtered.forEach((q) => {
-              if (q.language) {
-                if (!variants[q.number]) variants[q.number] = {}
-                variants[q.number][q.language] = q
+            for (const qRef of saved.dailyQuestionRefs) {
+              const matches = all.filter(
+                (q) => q.area === qRef.area && q.year === qRef.year &&
+                        q.test === qRef.test && q.number === qRef.number
+              )
+              for (const q of matches) {
+                if (q.language) {
+                  if (!variants[q.number]) variants[q.number] = {}
+                  variants[q.number][q.language] = q
+                }
+                resolved.push(q)
               }
-            })
+            }
             langVariantsRef.current = variants
-            const deduped  = filtered.filter((q) => !q.language || q.language === lang)
+            const deduped  = resolved.filter((q) => !q.language || q.language === lang)
             const sorted   = [...deduped].sort((a, b) => a.number - b.number)
             const currentQ = sorted.find((q) => q.number === saved.currentNumber) ?? sorted[0]
             if (sorted.length > 0 && currentQ) {
               const restoredAttempts = saved.attempts ?? {}
-              setSelectedTest(saved.selectedTest)
-              setSelectedYear(saved.selectedYear)
-              setSelectedDay(saved.selectedDay)
               setForeignLang(lang)
               setQuestions(sorted)
               setQuestion(currentQ)
@@ -268,10 +271,52 @@ export default function App() {
               setQuestionTimes(saved.questionTimes ?? {})
               accQuestionTimesRef.current = { ...(saved.questionTimes ?? {}) }
               const now = Date.now()
-              startTimeRef.current   = now - (saved.totalElapsed ?? 0) * 1000
+              startTimeRef.current     = now - (saved.totalElapsed ?? 0) * 1000
               questionStartRef.current = now
               prevQuestionNumRef.current = null
+              setIsDailyChallenge(true)
               setPhase('quiz')
+            }
+          } else {
+            const DAY_AREAS_MAP = { 1: ['linguagens', 'humanas'], 2: ['math', 'nature'] }
+            const areas = DAY_AREAS_MAP[saved.selectedDay]
+            if (areas) {
+              const lang     = saved.foreignLang ?? 'en'
+              const filtered = all.filter((q) =>
+                q.test === saved.selectedTest &&
+                q.year === saved.selectedYear &&
+                areas.includes(q.area)
+              )
+              const variants = {}
+              filtered.forEach((q) => {
+                if (q.language) {
+                  if (!variants[q.number]) variants[q.number] = {}
+                  variants[q.number][q.language] = q
+                }
+              })
+              langVariantsRef.current = variants
+              const deduped  = filtered.filter((q) => !q.language || q.language === lang)
+              const sorted   = [...deduped].sort((a, b) => a.number - b.number)
+              const currentQ = sorted.find((q) => q.number === saved.currentNumber) ?? sorted[0]
+              if (sorted.length > 0 && currentQ) {
+                const restoredAttempts = saved.attempts ?? {}
+                setSelectedTest(saved.selectedTest)
+                setSelectedYear(saved.selectedYear)
+                setSelectedDay(saved.selectedDay)
+                setForeignLang(lang)
+                setQuestions(sorted)
+                setQuestion(currentQ)
+                setAttempts(restoredAttempts)
+                saveAttemptsToSession(restoredAttempts)
+                setTotalElapsed(saved.totalElapsed ?? 0)
+                setQuestionTimes(saved.questionTimes ?? {})
+                accQuestionTimesRef.current = { ...(saved.questionTimes ?? {}) }
+                const now = Date.now()
+                startTimeRef.current   = now - (saved.totalElapsed ?? 0) * 1000
+                questionStartRef.current = now
+                prevQuestionNumRef.current = null
+                setPhase('quiz')
+              }
             }
           }
         }
@@ -481,8 +526,15 @@ export default function App() {
   // Auto-save session whenever answers or current question change
   useEffect(() => {
     if (phase !== 'quiz' || !question) return
+    const sessionData = isDailyChallenge
+      ? {
+          isDailyChallenge: true,
+          dailyQuestionRefs: questions.map((q) => ({ area: q.area, year: q.year, test: q.test, number: q.number })),
+        }
+      : { selectedTest, selectedYear, selectedDay }
     savePausedSession({
-      selectedTest, selectedYear, selectedDay, foreignLang,
+      ...sessionData,
+      foreignLang,
       currentNumber: question.number,
       attempts,
       totalElapsed,
@@ -516,8 +568,15 @@ export default function App() {
     const currentTotal = startTimeRef.current
       ? Math.floor((Date.now() - startTimeRef.current) / 1000)
       : totalElapsed
+    const sessionData = isDailyChallenge
+      ? {
+          isDailyChallenge: true,
+          dailyQuestionRefs: questions.map((q) => ({ area: q.area, year: q.year, test: q.test, number: q.number })),
+        }
+      : { selectedTest, selectedYear, selectedDay }
     savePausedSession({
-      selectedTest, selectedYear, selectedDay, foreignLang,
+      ...sessionData,
+      foreignLang,
       currentNumber: question?.number,
       attempts,
       totalElapsed: currentTotal,
@@ -531,29 +590,55 @@ export default function App() {
   const resumeQuiz = useCallback(() => {
     const saved = readPausedSession()
     if (!saved) return
-    const areas    = DAY_AREAS[saved.selectedDay]
-    const lang     = saved.foreignLang ?? 'en'
-    const filtered = allQuestions.filter((q) =>
-      q.test === saved.selectedTest &&
-      q.year === saved.selectedYear &&
-      areas.includes(q.area)
-    )
+    const lang = saved.foreignLang ?? 'en'
+
+    let sorted = []
     const variants = {}
-    filtered.forEach((q) => {
-      if (q.language) {
-        if (!variants[q.number]) variants[q.number] = {}
-        variants[q.number][q.language] = q
+
+    if (saved.isDailyChallenge && saved.dailyQuestionRefs) {
+      const resolved = []
+      for (const qRef of saved.dailyQuestionRefs) {
+        const matches = allQuestions.filter(
+          (q) => q.area === qRef.area && q.year === qRef.year &&
+                  q.test === qRef.test && q.number === qRef.number
+        )
+        for (const q of matches) {
+          if (q.language) {
+            if (!variants[q.number]) variants[q.number] = {}
+            variants[q.number][q.language] = q
+          }
+          resolved.push(q)
+        }
       }
-    })
+      const deduped = resolved.filter((q) => !q.language || q.language === lang)
+      sorted = [...deduped].sort((a, b) => a.number - b.number)
+    } else {
+      const areas    = DAY_AREAS[saved.selectedDay]
+      const filtered = allQuestions.filter((q) =>
+        q.test === saved.selectedTest &&
+        q.year === saved.selectedYear &&
+        areas.includes(q.area)
+      )
+      filtered.forEach((q) => {
+        if (q.language) {
+          if (!variants[q.number]) variants[q.number] = {}
+          variants[q.number][q.language] = q
+        }
+      })
+      const deduped = filtered.filter((q) => !q.language || q.language === lang)
+      sorted = [...deduped].sort((a, b) => a.number - b.number)
+    }
+
     langVariantsRef.current = variants
-    const deduped  = filtered.filter((q) => !q.language || q.language === lang)
-    const sorted   = [...deduped].sort((a, b) => a.number - b.number)
     const currentQ = sorted.find((q) => q.number === saved.currentNumber) ?? sorted[0]
     if (!currentQ) return
     const restoredAttempts = saved.attempts ?? {}
-    setSelectedTest(saved.selectedTest)
-    setSelectedYear(saved.selectedYear)
-    setSelectedDay(saved.selectedDay)
+
+    if (!saved.isDailyChallenge) {
+      setSelectedTest(saved.selectedTest)
+      setSelectedYear(saved.selectedYear)
+      setSelectedDay(saved.selectedDay)
+    }
     setForeignLang(lang)
     setQuestions(sorted)
     setQuestion(currentQ)
@@ -566,6 +651,7 @@ export default function App() {
     startTimeRef.current           = now - (saved.totalElapsed ?? 0) * 1000
     questionStartRef.current       = now
     prevQuestionNumRef.current     = null
+    if (saved.isDailyChallenge) setIsDailyChallenge(true)
     setPhase('quiz')
   }, [allQuestions])
 
@@ -578,6 +664,7 @@ export default function App() {
     setSelectedTest(null)
     setSelectedYear(null)
     setSelectedDay(null)
+    setIsDailyChallenge(false)
   }, [])
 
   const startQuiz = useCallback(() => {
@@ -620,6 +707,94 @@ export default function App() {
     setPhase('quiz')
   }, [allQuestions, selectedTest, selectedYear, selectedDay, foreignLang])
 
+  const startDailyChallenge = useCallback(async () => {
+    setDailyChallengeLoading(true)
+    setDailyChallengeResult(null)
+    try {
+      // Check if today's challenge exists and if user already completed it
+      const res = await fetch('/api/daily-challenge', {
+        headers: { Authorization: `Bearer ${token}` },
+      })
+      const data = await res.json()
+
+      if (data.completed) {
+        setDailyChallengeResult({ score: data.completed.score, total: data.completed.total })
+        return
+      }
+
+      let questionRefs = data.questions
+
+      if (!questionRefs) {
+        // First access today — send candidates so server can create the challenge
+        const seen = new Set()
+        const candidates = allQuestions
+          .filter((q) => {
+            const key = `${q.area}:${q.year}:${q.test}:${q.number}`
+            if (seen.has(key)) return false
+            seen.add(key)
+            return true
+          })
+          .map((q) => ({ area: q.area, year: q.year, test: q.test, number: q.number }))
+
+        const postRes = await fetch('/api/daily-challenge', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', Authorization: `Bearer ${token}` },
+          body: JSON.stringify({ candidates }),
+        })
+        const postData = await postRes.json()
+
+        if (postData.completed) {
+          setDailyChallengeResult({ score: postData.completed.score, total: postData.completed.total })
+          return
+        }
+        questionRefs = postData.questions
+      }
+
+      if (!questionRefs?.length) return
+
+      // Resolve question objects from the local question pool
+      const resolved = []
+      const variants = {}
+      for (const qRef of questionRefs) {
+        const matches = allQuestions.filter(
+          (q) => q.area === qRef.area && q.year === qRef.year &&
+                  q.test === qRef.test && q.number === qRef.number
+        )
+        for (const q of matches) {
+          if (q.language) {
+            if (!variants[q.number]) variants[q.number] = {}
+            variants[q.number][q.language] = q
+          }
+          resolved.push(q)
+        }
+      }
+
+      langVariantsRef.current = variants
+      const deduped = resolved.filter((q) => !q.language || q.language === foreignLang)
+      const sorted  = [...deduped].sort((a, b) => a.number - b.number)
+      if (sorted.length === 0) return
+
+      clearPausedSession()
+      setAttempts({})
+      saveAttemptsToSession({})
+      const now = Date.now()
+      startTimeRef.current       = now
+      questionStartRef.current   = now
+      accQuestionTimesRef.current = {}
+      prevQuestionNumRef.current = null
+      setIsDailyChallenge(true)
+      setQuestions(sorted)
+      setQuestion(sorted[0])
+      setTotalElapsed(0)
+      setQuestionElapsed(0)
+      setPhase('quiz')
+    } catch (err) {
+      console.error('Erro ao carregar desafio diário:', err)
+    } finally {
+      setDailyChallengeLoading(false)
+    }
+  }, [allQuestions, token, foreignLang])
+
   const switchLang = useCallback((lang) => {
     if (!question?.language || lang === foreignLang) return
     const variant = langVariantsRef.current[question.number]?.[lang]
@@ -648,19 +823,32 @@ export default function App() {
     // Persist result to DB (fire-and-forget — never blocks UI)
     if (token) {
       const score = Object.values(attempts).filter((a) => a.correct).length
-      fetch('/api/results', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json', Authorization: `Bearer ${token}` },
-        body: JSON.stringify({
-          test: selectedTest,
-          year: selectedYear,
-          day: selectedDay,
-          score,
-          total: questions.length,
-          elapsed_secs: finalTotal,
-          question_times: accQuestionTimesRef.current,
-        }),
-      }).catch(() => {})
+      if (isDailyChallenge) {
+        fetch('/api/daily-challenge/result', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', Authorization: `Bearer ${token}` },
+          body: JSON.stringify({
+            score,
+            total: questions.length,
+            elapsed_secs: finalTotal,
+            answers: attempts,
+          }),
+        }).catch(() => {})
+      } else {
+        fetch('/api/results', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', Authorization: `Bearer ${token}` },
+          body: JSON.stringify({
+            test: selectedTest,
+            year: selectedYear,
+            day: selectedDay,
+            score,
+            total: questions.length,
+            elapsed_secs: finalTotal,
+            question_times: accQuestionTimesRef.current,
+          }),
+        }).catch(() => {})
+      }
     }
 
     setPhase('summary')
@@ -835,6 +1023,28 @@ export default function App() {
             >
               Iniciar
             </button>
+
+            <div className="home-divider" />
+
+            {dailyChallengeResult ? (
+              <div className="daily-done-banner">
+                <span className="daily-done-icon">★</span>
+                <span>
+                  Desafio de hoje concluído!{' '}
+                  <strong>{dailyChallengeResult.score}/{dailyChallengeResult.total}</strong> corretas
+                </span>
+              </div>
+            ) : (
+              <button
+                type="button"
+                className="home-daily-btn"
+                onClick={startDailyChallenge}
+                disabled={dailyChallengeLoading}
+              >
+                {dailyChallengeLoading ? 'Carregando…' : '★ Desafio Diário'}
+              </button>
+            )}
+
             <button
               type="button"
               className="btn--ghost"
@@ -992,7 +1202,9 @@ export default function App() {
     return (
       <div className="app-shell">
         <header className="app-header">
-          <span className="app-header-title">Resultado</span>
+          <span className="app-header-title">
+            {isDailyChallenge ? 'Desafio Diário — Resultado' : 'Resultado'}
+          </span>
           <div className="app-header-actions">
             <button
               type="button"
@@ -1003,10 +1215,16 @@ export default function App() {
                 saveAttemptsToSession({})
                 setQuestions([])
                 setQuestion(null)
+                if (isDailyChallenge) {
+                  setIsDailyChallenge(false)
+                  // Show the completed banner on home
+                  const score = Object.values(attempts).filter((a) => a.correct).length
+                  setDailyChallengeResult({ score, total: sortedQuestions.length })
+                }
                 setPhase('home')
               }}
             >
-              Reiniciar
+              {isDailyChallenge ? 'Voltar ao início' : 'Reiniciar'}
             </button>
             <button
               type="button"
