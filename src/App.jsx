@@ -191,8 +191,12 @@ export default function App() {
   const [dailyChallengeLoading, setDailyChallengeLoading] = useState(false)
   const [dailyChallengeResult, setDailyChallengeResult] = useState(null) // {score, total} if already done today
 
-  // Phase: 'home' | 'quiz' | 'summary' | 'login'
+  // Phase: 'home' | 'quiz' | 'summary' | 'login' | 'admin'
   const [phase, setPhase] = useState('login')
+
+  const [adminStats, setAdminStats] = useState(null)
+  const [adminLoading, setAdminLoading] = useState(false)
+  const [adminError, setAdminError] = useState('')
 
   // Homepage filters (step-by-step single select)
   const [selectedTest, setSelectedTest] = useState(null)   // 'ENEM' | 'UFSC' | …
@@ -557,6 +561,24 @@ export default function App() {
     localStorage.removeItem('token')
     setPhase('login')
   }
+
+  const openAdminPanel = useCallback(async () => {
+    setAdminLoading(true)
+    setAdminError('')
+    try {
+      const res = await fetch('/api/admin/stats', {
+        headers: { Authorization: `Bearer ${token}` },
+      })
+      const data = await res.json()
+      if (!res.ok) { setAdminError(data.error ?? 'Erro'); return }
+      setAdminStats(data)
+      setPhase('admin')
+    } catch {
+      setAdminError('Erro de conexão')
+    } finally {
+      setAdminLoading(false)
+    }
+  }, [token])
 
   const pauseQuiz = useCallback(() => {
     // Snapshot times before leaving
@@ -1045,6 +1067,18 @@ export default function App() {
               </button>
             )}
 
+            {user?.username === 'admin' && (
+              <button
+                type="button"
+                className="btn--ghost admin-btn"
+                onClick={openAdminPanel}
+                disabled={adminLoading}
+              >
+                {adminLoading ? 'Carregando…' : 'Painel Admin'}
+              </button>
+            )}
+            {adminError && <p className="auth-error">{adminError}</p>}
+
             <button
               type="button"
               className="btn--ghost"
@@ -1056,6 +1090,10 @@ export default function App() {
         </div>
       </div>
     )
+  }
+
+  if (phase === 'admin' && adminStats) {
+    return <AdminPanel stats={adminStats} onBack={() => setPhase('home')} dark={dark} setDark={setDark} />
   }
 
   if (phase === 'login') {
@@ -1698,6 +1736,224 @@ export default function App() {
           onClose={() => setFeedbackOpen(false)}
         />
       )}
+    </div>
+  )
+}
+
+function AdminPanel({ stats, onBack, dark, setDark }) {
+  const { users, testResults, dailyResults, feedback } = stats
+  const [tab, setTab] = useState('students')
+
+  function formatTime(seconds) {
+    const m = Math.floor(seconds / 60)
+    const s = seconds % 60
+    return `${m}:${String(s).padStart(2, '0')}`
+  }
+
+  function formatDate(iso) {
+    return new Date(iso).toLocaleString('pt-BR', { dateStyle: 'short', timeStyle: 'short' })
+  }
+
+  // Aggregate per-user stats
+  const userMap = {}
+  for (const u of users) {
+    userMap[u.id] = {
+      ...u,
+      testCount: 0,
+      dailyCount: 0,
+      bestScore: null,
+      totalCorrect: 0,
+      totalQuestions: 0,
+    }
+  }
+  for (const r of testResults) {
+    if (userMap[r.user_id]) {
+      userMap[r.user_id].testCount++
+      userMap[r.user_id].totalCorrect += r.score
+      userMap[r.user_id].totalQuestions += r.total
+      const pct = r.total > 0 ? Math.round((r.score / r.total) * 100) : 0
+      if (userMap[r.user_id].bestScore === null || pct > userMap[r.user_id].bestScore) {
+        userMap[r.user_id].bestScore = pct
+      }
+    }
+  }
+  for (const d of dailyResults) {
+    if (userMap[d.user_id]) userMap[d.user_id].dailyCount++
+  }
+
+  const sortedUsers = Object.values(userMap).sort((a, b) => new Date(b.created_at) - new Date(a.created_at))
+
+  return (
+    <div className="app-shell">
+      <div className="admin-panel">
+        <div className="admin-header">
+          <button type="button" className="btn--ghost" onClick={onBack}>← Voltar</button>
+          <h1 className="admin-title">Painel Administrativo</h1>
+          <button
+            type="button"
+            className="theme-toggle"
+            onClick={() => setDark((d) => !d)}
+            aria-label="Alternar tema"
+          >
+            {dark ? <SunIcon /> : <MoonIcon />}
+          </button>
+        </div>
+
+        <div className="admin-summary-cards">
+          <div className="admin-card">
+            <span className="admin-card-value">{users.length}</span>
+            <span className="admin-card-label">Alunos</span>
+          </div>
+          <div className="admin-card">
+            <span className="admin-card-value">{testResults.length}</span>
+            <span className="admin-card-label">Simulados feitos</span>
+          </div>
+          <div className="admin-card">
+            <span className="admin-card-value">{dailyResults.length}</span>
+            <span className="admin-card-label">Desafios diários</span>
+          </div>
+          <div className="admin-card">
+            <span className="admin-card-value">{feedback.length}</span>
+            <span className="admin-card-label">Feedbacks</span>
+          </div>
+        </div>
+
+        <div className="admin-tabs">
+          {[
+            { key: 'students', label: 'Alunos' },
+            { key: 'tests', label: 'Simulados' },
+            { key: 'daily', label: 'Desafios Diários' },
+            { key: 'feedback', label: 'Feedbacks' },
+          ].map(({ key, label }) => (
+            <button
+              key={key}
+              type="button"
+              className={`admin-tab ${tab === key ? 'active' : ''}`}
+              onClick={() => setTab(key)}
+            >
+              {label}
+            </button>
+          ))}
+        </div>
+
+        <div className="admin-table-wrap">
+          {tab === 'students' && (
+            <table className="admin-table">
+              <thead>
+                <tr>
+                  <th>Usuário</th>
+                  <th>Cadastrado em</th>
+                  <th>Simulados</th>
+                  <th>Desafios</th>
+                  <th>Acertos totais</th>
+                  <th>Melhor nota</th>
+                </tr>
+              </thead>
+              <tbody>
+                {sortedUsers.filter(u => u.username !== 'admin').map((u) => (
+                  <tr key={u.id}>
+                    <td><strong>{u.username}</strong></td>
+                    <td>{formatDate(u.created_at)}</td>
+                    <td>{u.testCount}</td>
+                    <td>{u.dailyCount}</td>
+                    <td>
+                      {u.totalQuestions > 0
+                        ? `${u.totalCorrect}/${u.totalQuestions} (${Math.round((u.totalCorrect / u.totalQuestions) * 100)}%)`
+                        : '—'}
+                    </td>
+                    <td>{u.bestScore !== null ? `${u.bestScore}%` : '—'}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          )}
+
+          {tab === 'tests' && (
+            <table className="admin-table">
+              <thead>
+                <tr>
+                  <th>Aluno</th>
+                  <th>Prova</th>
+                  <th>Ano</th>
+                  <th>Dia</th>
+                  <th>Nota</th>
+                  <th>%</th>
+                  <th>Tempo</th>
+                  <th>Data</th>
+                </tr>
+              </thead>
+              <tbody>
+                {testResults.map((r) => (
+                  <tr key={r.id}>
+                    <td>{r.username}</td>
+                    <td>{r.test}</td>
+                    <td>{r.year}</td>
+                    <td>{r.day}</td>
+                    <td>{r.score}/{r.total}</td>
+                    <td>{r.total > 0 ? `${Math.round((r.score / r.total) * 100)}%` : '—'}</td>
+                    <td>{formatTime(r.elapsed_secs)}</td>
+                    <td>{formatDate(r.answered_at)}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          )}
+
+          {tab === 'daily' && (
+            <table className="admin-table">
+              <thead>
+                <tr>
+                  <th>Aluno</th>
+                  <th>Data do desafio</th>
+                  <th>Nota</th>
+                  <th>%</th>
+                  <th>Tempo</th>
+                  <th>Concluído em</th>
+                </tr>
+              </thead>
+              <tbody>
+                {dailyResults.map((r) => (
+                  <tr key={r.id}>
+                    <td>{r.username}</td>
+                    <td>{r.challenge_date}</td>
+                    <td>{r.score}/{r.total}</td>
+                    <td>{r.total > 0 ? `${Math.round((r.score / r.total) * 100)}%` : '—'}</td>
+                    <td>{formatTime(r.elapsed_secs)}</td>
+                    <td>{formatDate(r.completed_at)}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          )}
+
+          {tab === 'feedback' && (
+            <table className="admin-table">
+              <thead>
+                <tr>
+                  <th>Aluno</th>
+                  <th>Tipo</th>
+                  <th>Questão</th>
+                  <th>Mensagem</th>
+                  <th>Data</th>
+                </tr>
+              </thead>
+              <tbody>
+                {feedback.map((f) => (
+                  <tr key={f.id}>
+                    <td>{f.username ?? 'anônimo'}</td>
+                    <td>
+                      <span className={`admin-badge admin-badge--${f.type}`}>{f.type}</span>
+                    </td>
+                    <td>{f.question_number ?? '—'}</td>
+                    <td className="admin-feedback-body">{f.body}</td>
+                    <td>{formatDate(f.created_at)}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          )}
+        </div>
+      </div>
     </div>
   )
 }
