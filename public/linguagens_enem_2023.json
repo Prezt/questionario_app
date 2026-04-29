@@ -1,106 +1,6 @@
 [
   {
     "number": 1,
-    "text": "The average american tosses 300 pounds of food each year, making food the number one contributor to America’s landfills. Eat your leftovers and keep your perishables in the fridge – the Earth is counting on it. Disponível em: https://mir-s3-cdn-cf.behance.net. Acesso em: 29 out. 2021 (adaptado Esse cartaz de campanha sugere que)",
-    "alternatives": {
-      "a": "os lixões precisam de ampliação.",
-      "b": "o desperdício degrada o ambiente.",
-      "c": "os mercados doam alimentos perecíveis.",
-      "d": "a desnutrição compromete o raciocínio.",
-      "e": "as residências carecem de refrigeradores."
-    },
-    "images": [],
-    "tags": [
-      "ambiente",
-      "desperdício"
-    ],
-    "year": 2023,
-    "test": "ENEM",
-    "area": "linguagens",
-    "answer": null
-  },
-  {
-    "number": 2,
-    "text": "No man is an island,\\nEntire of itself;\\nEvery man is a piece of the continent,\\nA part of the main.\\n[...]\\nAny man’s death diminishes me,\\nBecause I am involved in mankind.",
-    "alternatives": {
-      "a": "medo da morte",
-      "b": "ideia de conexão",
-      "c": "conceito de solidão",
-      "d": "risco de devastação",
-      "e": "necessidade de empatia"
-    },
-    "images": [],
-    "tags": [
-      "poesia",
-      "filosofia"
-    ],
-    "year": 2023,
-    "test": "ENEM",
-    "area": "linguagens",
-    "answer": null
-  },
-  {
-    "number": 3,
-    "text": "Ao retratar a trajetória de refugiados, o poema recorre à magem de viagem marítima para destacar o(a)",
-    "alternatives": {
-      "a": "risco de choques culturais",
-      "b": "impacto do ensino de história",
-      "c": "importância da luta ambiental",
-      "d": "existência de experiências plurais",
-      "e": "necessidade de capacitação profissional"
-    },
-    "images": [],
-    "tags": [
-      "poesia",
-      "refugiados"
-    ],
-    "year": 2023,
-    "test": "ENEM",
-    "area": "linguagens",
-    "answer": null
-  },
-  {
-    "number": 4,
-    "text": "Spanglish\npues estoy creando Spanglish\nbi-cultural systems\nscientific lexicographical\ninter-textual integrations\ntwo expressions\nexistentially wired\ntwo dominant languages\ncontinentally abrazándose\nin colloquial combate\nimperio spanglish emerges\nsobre territorio bi-lingual\nlas novelas mexicanas\nmixing with radiorocknroll\nimmigrant/migrant\nnasal mispronouncements\nhip-hop, street salsa, spanish pop\nstandard english classroom\nwith computer technicalities\nspanglish is literally perfect",
-    "alternatives": {
-      "a": "convergência linguístico-cultural.",
-      "b": "caráterística histórico-cultural.",
-      "c": "tendência estilístico-literária.",
-      "d": "discriminação cultural.",
-      "e": "censura musical."
-    },
-    "images": [],
-    "tags": [
-      "poesia",
-      "cultura"
-    ],
-    "year": 2023,
-    "test": "ENEM",
-    "area": "linguagens",
-    "answer": null
-  },
-  {
-    "number": 5,
-    "text": "“Oh, you’ll love working here. Nobody treats you any differently just because of your age, race, or gender.” Disponível em: www.cartoonstock.com. Acesso em: 25 out. 2021. Ao retratar o ambiente de trabalho em um escritório, esse artum tem por objetivo",
-    "alternatives": {
-      "a": "criticar um padrão de vestimenta.",
-      "b": "destacar a falta de diversidade.",
-      "c": "indicar um modo de interação.",
-      "d": "elogiar um modelo de organização.",
-      "e": "salientar o espírito de cooperação."
-    },
-    "images": [],
-    "tags": [
-      "ambiente-de-trabalho",
-      "diversidade"
-    ],
-    "year": 2023,
-    "test": "ENEM",
-    "area": "linguagens",
-    "answer": null
-  },
-  {
-    "number": 1,
     "text": "O filme 'Como estrelas em la terra' aborda o tema da dislexia. Relacionando o cartaz do filme com a sinopse, constata-se que o(a) ...",
     "alternatives": {
       "a": "olhar diferenciado para com o outro gera mudanças",
@@ -117,7 +17,7 @@
     "year": 2023,
     "test": "ENEM",
     "area": "linguagens",
-    "answer": null
+    "answer": "b"
   },
   {
     "number": 2,
@@ -137,7 +37,7 @@
     "year": 2023,
     "test": "ENEM",
     "area": "linguagens",
-    "answer": null
+    "answer": "b"
   },
   {
     "number": 3,
@@ -158,7 +58,7 @@
     "year": 2023,
     "test": "ENEM",
     "area": "linguagens",
-    "answer": null
+    "answer": "d"
   },
   {
     "number": 4,
@@ -178,7 +78,7 @@
     "year": 2023,
     "test": "ENEM",
     "area": "linguagens",
-    "answer": null
+    "answer": "a"
   },
   {
     "number": 5,
@@ -199,7 +99,107 @@
     "year": 2023,
     "test": "ENEM",
     "area": "linguagens",
-    "answer": null
+    "answer": "b"
+  },
+  {
+    "number": 1,
+    "text": "Relacionando o cartaz do filme com a sinopse, constata-se que o(a)",
+    "alternatives": {
+      "a": "olhar diferenciado para com o outro gera mudanças",
+      "b": "estudante com dislexia apresenta um tom questionado",
+      "c": "abordagem para lidar com a dislexia é pautada na disciplina.",
+      "d": "contato com os pais prejudica o acompanhamento da dislexia.",
+      "e": "mudança de interesses ocorre na transição da infância para a vida adulta."
+    },
+    "images": [],
+    "tags": [
+      "dislexia",
+      "educação"
+    ],
+    "year": 2023,
+    "test": "ENEM",
+    "area": "linguagens",
+    "answer": "b"
+  },
+  {
+    "number": 2,
+    "text": "Para enfatizar características e atitudes que reforçam identidade da mulher negra, o poema da escritora ostarriquenha apresenta",
+    "alternatives": {
+      "a": "advérbios como “ rotundamente ” e “ categóricamente ”.",
+      "b": "verbos reflexivos como “ me niego ” e “ me acepto ”.",
+      "c": "adjetivos como “ grande ” e “ hermosa ”.",
+      "d": "substantivos como “ sangre ” e “ piel ”.",
+      "e": "adjetivos possessivos como “ mi ” e “ mis ”."
+    },
+    "images": [],
+    "tags": [
+      "poesia",
+      "identidade cultural"
+    ],
+    "year": 2023,
+    "test": "ENEM",
+    "area": "linguagens",
+    "answer": "b"
+  },
+  {
+    "number": 3,
+    "text": "Nesse poema, o eu poético enaltece a",
+    "alternatives": {
+      "a": "característica amistosa do povo espanhol.",
+      "b": "beleza das paisagens naturais da Espanha.",
+      "c": "variedade de pratos na gastronomia espanhola.",
+      "d": "relação entre os sentidos do paladar e do olfato ngastronomia.",
+      "e": "gastronomia como representação da identidad cultural de um povo."
+    },
+    "images": [],
+    "tags": [
+      "poesia",
+      "cultura"
+    ],
+    "year": 2023,
+    "test": "ENEM",
+    "area": "linguagens",
+    "answer": "d"
+  },
+  {
+    "number": 4,
+    "text": "Nesse texto, a expressão “ cortina de humo ” revela que o manipulador",
+    "alternatives": {
+      "a": "amadurece tardiamente.",
+      "b": "busca mascarar a verdade.",
+      "c": "rejeita questionamentos alheios.",
+      "d": "aproxima-se de pessoas indefesas.",
+      "e": "faz-se presente de forma controladora."
+    },
+    "images": [],
+    "tags": [
+      "manipulação",
+      "linguagem"
+    ],
+    "year": 2023,
+    "test": "ENEM",
+    "area": "linguagens",
+    "answer": "a"
+  },
+  {
+    "number": 5,
+    "text": "A letra da canção Que quede claro, da banda cubana Orishas, revela o(a)",
+    "alternatives": {
+      "a": "indignação diante do desrespeito à diversidade",
+      "b": "violência característica das grandes metrópoles",
+      "c": "preconceito da sociedade com relação ao misticismo",
+      "d": "descuido da população com os sonhos dos imigrantes",
+      "e": "falta de segurança existente no transporte público urbano"
+    },
+    "images": [],
+    "tags": [
+      "música",
+      "sociedad"
+    ],
+    "year": 2023,
+    "test": "ENEM",
+    "area": "linguagens",
+    "answer": "b"
   },
   {
     "number": 6,
@@ -219,7 +219,7 @@
     "year": 2023,
     "test": "ENEM",
     "area": "linguagens",
-    "answer": null
+    "answer": "d"
   },
   {
     "number": 7,
@@ -241,7 +241,7 @@
     "year": 2023,
     "test": "ENEM",
     "area": "linguagens",
-    "answer": null
+    "answer": "a"
   },
   {
     "number": 8,
@@ -262,7 +262,7 @@
     "year": 2023,
     "test": "ENEM",
     "area": "linguagens",
-    "answer": null
+    "answer": "c"
   },
   {
     "number": 9,
@@ -283,7 +283,7 @@
     "year": 2023,
     "test": "ENEM",
     "area": "linguagens",
-    "answer": null
+    "answer": "e"
   },
   {
     "number": 10,

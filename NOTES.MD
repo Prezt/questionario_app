@@ -66,30 +66,30 @@ DADOS:
         [x] texto
         [x] imagens
         [] HQ imagens
-    [] ciencias da natureza
-        [] texto
-        [] imagens
+    [x] ciencias da natureza
+        [x] texto
+        [x] imagens
         [] HQ imagens
-    [] ciencias sociais
-        [] texto
-        [] imagens
+    [x] ciencias sociais
+        [x] texto
+        [x] imagens
         [] HQ imagens
- [] ENEM 2023
-    [] matematica 
-        [] texto
-        [] imagens
+ [x] ENEM 2023
+    [x] matematica 
+        [x] texto
+        [x] imagens
         [] HQ imagens
-    [] linguagens
-        [] texto
-        [] imagens
+    [x] linguagens
+        [x] texto
+        [x] imagens
         [] HQ imagens
-    [] ciencias da natureza
-        [] texto
-        [] imagens
+    [x] ciencias da natureza
+        [x] texto
+        [x] imagens
         [] HQ imagens
-    [] ciencias sociais
-        [] texto
-        [] imagens
+    [x] ciencias sociais
+        [x] texto
+        [x] imagens
         [] HQ imagens
  [] ENEM 2022
     [] matematica 
