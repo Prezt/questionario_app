@@ -867,7 +867,6 @@ export default function App() {
             score,
             total: questions.length,
             elapsed_secs: finalTotal,
-            question_times: accQuestionTimesRef.current,
           }),
         }).catch(() => {})
       }
