@@ -1833,24 +1833,12 @@ export default function App() {
               const isCurrent = q.number === question.number
               let stateClass = 'question-rail-btn--idle'
               if (att) stateClass = att.correct ? 'question-rail-btn--ok' : 'question-rail-btn--bad'
-              let groupClass = ''
-              const primaryCid = getContextIds(q)[0] ?? null
-              if (primaryCid) {
-                const prev = sortedQuestions[idx - 1]
-                const next = sortedQuestions[idx + 1]
-                const isStart = primaryCid !== (getContextIds(prev)[0] ?? null)
-                const isEnd   = primaryCid !== (getContextIds(next)[0] ?? null)
-                groupClass = isStart && isEnd ? 'question-rail-btn--group-only'
-                           : isStart          ? 'question-rail-btn--group-start'
-                           : isEnd            ? 'question-rail-btn--group-end'
-                           :                    'question-rail-btn--group-mid'
-              }
               return (
                 <button
                   key={q.number}
                   type="button"
                   data-qnum={q.number}
-                  className={`question-rail-btn ${stateClass} ${isCurrent ? 'question-rail-btn--current' : ''} ${groupClass}`}
+                  className={`question-rail-btn ${stateClass} ${isCurrent ? 'question-rail-btn--current' : ''}`}
                   onClick={() => goToQuestion(q)}
                   aria-current={isCurrent ? 'true' : undefined}
                   aria-label={`Questão ${q.number}${att ? (att.correct ? ', correta' : ', incorreta') : ', não respondida'}`}
