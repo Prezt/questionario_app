@@ -1281,6 +1281,41 @@
   margin-top: 0.1rem;
 }
 
+.home-test-select {
+  height: 2rem;
+  padding: 0 0.6rem;
+  border-radius: 0.4rem;
+  border: 1.5px solid var(--border);
+  background: var(--card-bg);
+  color: var(--text);
+  font-size: 0.85rem;
+  cursor: pointer;
+  outline: none;
+  width: 100%;
+}
+
+.home-test-select:focus {
+  border-color: var(--accent);
+}
+
+.randomize-toggle {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-size: 0.78rem;
+  color: var(--text-soft);
+  cursor: pointer;
+  user-select: none;
+  margin-top: 0.25rem;
+}
+
+.randomize-toggle input {
+  accent-color: var(--accent);
+  width: 0.9rem;
+  height: 0.9rem;
+  cursor: pointer;
+}
+
 .home-start-btn {
   margin-top: 0.5rem;
   height: 2.75rem;

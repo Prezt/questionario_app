@@ -175,6 +175,10 @@ export default function App() {
     if (saved !== null) return saved === 'true'
     return window.matchMedia('(prefers-color-scheme: dark)').matches
   })
+  const [randomizeAlts, setRandomizeAlts] = useState(() => {
+    const saved = localStorage.getItem('randomize-alts')
+    return saved === null ? true : saved === 'true'
+  })
   const [notebookOpen, setNotebookOpen] = useState(false)
   const [pendingSelection, setPendingSelection] = useState(null)
   const [contextExpanded, setContextExpanded] = useState({}) // { [contextId]: boolean }
@@ -200,7 +204,7 @@ export default function App() {
   const [adminError, setAdminError] = useState('')
 
   // Homepage filters (step-by-step single select)
-  const [selectedTest, setSelectedTest] = useState(null)   // 'ENEM' | 'UFSC' | …
+  const [selectedTest, setSelectedTest] = useState('ENEM')   // 'ENEM' | 'UFSC' | …
   const [selectedYear, setSelectedYear] = useState(null)   // number
   const [selectedDay, setSelectedDay] = useState(null)     // 1 | 2
 
@@ -942,6 +946,33 @@ export default function App() {
     return parseStemSegments(question.text, paths)
   }, [question])
 
+  // Stable per-question shuffled alternatives (seeded by question.number)
+  const displayAlts = useMemo(() => {
+    if (!question) return []
+    const imgs = question.images ?? []
+    const origLetters = Object.keys(question.alternatives)
+    const hasSplitImgs = imgs.length > 1 && imgs.length === origLetters.length + 1
+    const items = origLetters.map((letter, idx) => ({
+      origLetter: letter,
+      rawContent: question.alternatives[letter],
+      altImg: hasSplitImgs ? imgs[idx + 1] : null,
+    }))
+    if (!randomizeAlts) {
+      return items.map((item, idx) => ({ ...item, displayLabel: origLetters[idx] }))
+    }
+    // Seeded Fisher-Yates — stable for the same question.number
+    let seed = question.number
+    for (let i = items.length - 1; i > 0; i--) {
+      seed = (seed * 1664525 + 1013904223) & 0xffffffff
+      const j = Math.abs(seed) % (i + 1)
+      ;[items[i], items[j]] = [items[j], items[i]]
+    }
+    return items.map((item, idx) => ({
+      ...item,
+      displayLabel: String.fromCharCode(65 + idx), // A, B, C, D, E
+    }))
+  }, [question?.number, randomizeAlts])
+
   // ── Loading ───────────────────────────────────────────────────────────────
   if (loading) return <div className="center">Carregando...</div>
 
@@ -996,7 +1027,7 @@ export default function App() {
       )
     }
 
-    const availableTests = [...new Set(allQuestions.map((q) => q.test).filter(Boolean))].sort()
+    const availableTests = [...new Set(['ENEM', 'UFSC', ...allQuestions.map((q) => q.test).filter(Boolean)])]
     const availableYears = [...new Set(
       allQuestions
         .filter((q) => !selectedTest || q.test === selectedTest)
@@ -1031,26 +1062,23 @@ export default function App() {
               {/* Step 1 — Prova */}
               <div className="home-filter-group">
                 <span className="home-filter-label">Prova</span>
-                <div className="home-filter-pills">
+                <select
+                  className="home-test-select"
+                  value={selectedTest}
+                  onChange={(e) => {
+                    setSelectedTest(e.target.value)
+                    setSelectedYear(null)
+                    setSelectedDay(null)
+                  }}
+                >
                   {availableTests.map((t) => (
-                    <button
-                      key={t}
-                      type="button"
-                      className={`home-filter-pill ${selectedTest === t ? 'active' : ''}`}
-                      onClick={() => {
-                        setSelectedTest(t)
-                        setSelectedYear(null)
-                        setSelectedDay(null)
-                      }}
-                    >
-                      {t}
-                    </button>
+                    <option key={t} value={t}>{t}</option>
                   ))}
-                </div>
+                </select>
               </div>
 
               {/* Step 2 — Ano */}
-              <div className={`home-filter-group ${!selectedTest ? 'home-filter-group--locked' : ''}`}>
+              <div className="home-filter-group">
                 <span className="home-filter-label">Ano</span>
                 <div className="home-filter-pills">
                   {availableYears.map((y) => (
@@ -1058,7 +1086,6 @@ export default function App() {
                       key={y}
                       type="button"
                       className={`home-filter-pill ${selectedYear === y ? 'active' : ''}`}
-                      disabled={!selectedTest}
                       onClick={() => {
                         setSelectedYear(y)
                         setSelectedDay(null)
@@ -1093,6 +1120,18 @@ export default function App() {
                 </div>
               </div>
             </div>
+
+            <label className="randomize-toggle">
+              <input
+                type="checkbox"
+                checked={randomizeAlts}
+                onChange={(e) => {
+                  setRandomizeAlts(e.target.checked)
+                  localStorage.setItem('randomize-alts', e.target.checked)
+                }}
+              />
+              Embaralhar alternativas
+            </label>
 
             <button
               type="button"
@@ -1653,25 +1692,23 @@ export default function App() {
                   </div>
 
                   <ul className="alternatives">
-                    {letters.map((letter, index) => {
-                      const isPending = !selected && pendingSelection === letter
-                      const isConfirmedCorrect = selected !== null && letter === question.answer
-                      const isConfirmedWrong = selected !== null && letter === selected && !attempt?.correct
-                      const altImg = altImageFor(index)
+                    {displayAlts.map(({ displayLabel, origLetter, rawContent, altImg }) => {
+                      const isPending = !selected && pendingSelection === origLetter
+                      const isConfirmedCorrect = selected !== null && origLetter === question.answer
+                      const isConfirmedWrong = selected !== null && origLetter === selected && !attempt?.correct
                       const stacked = Boolean(altImg)
-                      const rawAlt = question.alternatives[letter]
-                      const altCaption = stacked ? captionFromBracketText(rawAlt) : ''
-                      const altLabel = alternativeLabelForDisplay(rawAlt, stacked)
+                      const altCaption = stacked ? captionFromBracketText(rawContent) : ''
+                      const altLabel = alternativeLabelForDisplay(rawContent, stacked)
                       return (
-                        <li key={letter}>
+                        <li key={origLetter}>
                           <button
                             type="button"
                             className={`alt-btn ${isConfirmedCorrect ? 'alt-btn--confirmed-correct' : ''} ${isConfirmedWrong ? 'alt-btn--confirmed-wrong' : ''} ${isPending ? 'alt-btn--pending' : ''} ${stacked ? 'alt-btn--stack' : ''}`}
-                            onClick={() => !selected && setPendingSelection(letter)}
+                            onClick={() => !selected && setPendingSelection(origLetter)}
                             disabled={selected !== null}
                           >
                             <div className="alt-row">
-                              <span className="alt-letter">{letter.toUpperCase()}</span>
+                              <span className="alt-letter">{displayLabel.toUpperCase()}</span>
                               {altLabel !== '' && <span className="alt-text">{altLabel}</span>}
                             </div>
                             {altImg && (
@@ -1694,17 +1731,21 @@ export default function App() {
                     })}
                   </ul>
 
-                  {selected && attempt && (
-                    <div
-                      className={`feedback ${attempt.correct ? 'feedback--correct' : 'feedback--wrong'}`}
-                      role="status"
-                    >
-                      {attempt.correct
-                        ? 'Correto.'
-                        : `Incorreto. A alternativa correta é ${String(question.answer).toUpperCase()}.`}
-                      {' '}Sua resposta: <strong>{selected.toUpperCase()}</strong>.
-                    </div>
-                  )}
+                  {selected && attempt && (() => {
+                    const correctLabel = (displayAlts.find(a => a.origLetter === question.answer)?.displayLabel ?? question.answer).toUpperCase()
+                    const selectedLabel = (displayAlts.find(a => a.origLetter === selected)?.displayLabel ?? selected).toUpperCase()
+                    return (
+                      <div
+                        className={`feedback ${attempt.correct ? 'feedback--correct' : 'feedback--wrong'}`}
+                        role="status"
+                      >
+                        {attempt.correct
+                          ? 'Correto.'
+                          : `Incorreto. A alternativa correta é ${correctLabel}.`}
+                        {' '}Sua resposta: <strong>{selectedLabel}</strong>.
+                      </div>
+                    )
+                  })()}
                 </div>
 
                 <div className="tags">
