@@ -1204,16 +1204,19 @@ export default function App() {
         <div className="options-fab-wrap">
           {optionsOpen && (
             <div className="options-popover">
-              <label className="options-row">
-                <input
-                  type="checkbox"
-                  checked={randomizeAlts}
-                  onChange={(e) => {
-                    setRandomizeAlts(e.target.checked)
-                    localStorage.setItem('randomize-alts', e.target.checked)
-                  }}
-                />
-                Embaralhar alternativas
+              <label className="options-toggle-row">
+                <span className="options-toggle-label">Embaralhar alternativas</span>
+                <span className={`options-toggle-switch${randomizeAlts ? ' on' : ''}`}>
+                  <input
+                    type="checkbox"
+                    checked={randomizeAlts}
+                    onChange={(e) => {
+                      setRandomizeAlts(e.target.checked)
+                      localStorage.setItem('randomize-alts', e.target.checked)
+                    }}
+                  />
+                  <span className="options-toggle-thumb" />
+                </span>
               </label>
               {user?.username === 'admin' && (
                 <button
