@@ -1842,7 +1842,7 @@ export default function App() {
                   aria-current={isCurrent ? 'true' : undefined}
                   aria-label={`Questão ${q.number}${att ? (att.correct ? ', correta' : ', incorreta') : ', não respondida'}`}
                 >
-                  {att ? (att.correct ? '✓' : '✗') : q.number}
+                  {att ? (att.correct ? '✓' : '✗') : (isDailyChallenge || selectedArea) ? idx + 1 : q.number}
                 </button>
               )
             })}
