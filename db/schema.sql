@@ -16,7 +16,6 @@ CREATE TABLE IF NOT EXISTS test_results (
   score          INTEGER NOT NULL,
   total          INTEGER NOT NULL,
   elapsed_secs   INTEGER NOT NULL,
-  question_times JSONB,
   answered_at    TIMESTAMPTZ DEFAULT NOW()
 );
 
@@ -45,7 +44,9 @@ CREATE TABLE IF NOT EXISTS daily_challenge_results (
   score          INTEGER NOT NULL,
   total          INTEGER NOT NULL,
   elapsed_secs   INTEGER NOT NULL,
-  answers        JSONB,  -- {questionNumber: {selected, correct}}
   completed_at   TIMESTAMPTZ DEFAULT NOW(),
   UNIQUE(user_id, challenge_date)
 );
+
+-- Indexes
+CREATE INDEX IF NOT EXISTS idx_test_results_user_id ON test_results(user_id);
