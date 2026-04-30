@@ -10,11 +10,11 @@ export default async function handler(req, res) {
   const sql = neon(process.env.DATABASE_URL)
   const today = new Date().toISOString().split('T')[0]
 
-  const { score, total, elapsed_secs, answers } = req.body ?? {}
+  const { score, total, elapsed_secs } = req.body ?? {}
 
   await sql`
-    INSERT INTO daily_challenge_results (user_id, challenge_date, score, total, elapsed_secs, answers)
-    VALUES (${payload.userId}, ${today}, ${score}, ${total}, ${elapsed_secs}, ${JSON.stringify(answers ?? {})})
+    INSERT INTO daily_challenge_results (user_id, challenge_date, score, total, elapsed_secs)
+    VALUES (${payload.userId}, ${today}, ${score}, ${total}, ${elapsed_secs})
     ON CONFLICT (user_id, challenge_date) DO NOTHING
   `
 
