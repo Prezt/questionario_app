@@ -1309,6 +1309,45 @@
   margin: 0.25rem 0;
 }
 
+/* ── Study by area ── */
+.home-area-section {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 100%;
+}
+
+.home-area-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.4rem;
+}
+
+.home-area-pill {
+  height: 2.5rem;
+  padding: 0 0.85rem;
+  border-radius: 0.5rem;
+  border: 1.5px solid var(--border);
+  background: transparent;
+  color: var(--text);
+  font-size: 0.8rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: border-color 0.15s, color 0.15s, background 0.15s;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.home-area-pill:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.home-area-pill:active {
+  transform: scale(0.97);
+}
+
 .home-daily-btn {
   margin-top: 0;
   height: 2.75rem;

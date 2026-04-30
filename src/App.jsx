@@ -190,6 +190,7 @@ export default function App() {
   const [isDailyChallenge, setIsDailyChallenge] = useState(false)
   const [dailyChallengeLoading, setDailyChallengeLoading] = useState(false)
   const [dailyChallengeResult, setDailyChallengeResult] = useState(null) // {score, total} if already done today
+  const [selectedArea, setSelectedArea] = useState(null) // 'math' | 'nature' | 'linguagens' | 'humanas'
 
   // Phase: 'home' | 'quiz' | 'summary' | 'login' | 'admin'
   const [phase, setPhase] = useState('login')
@@ -550,7 +551,9 @@ export default function App() {
           isDailyChallenge: true,
           dailyQuestionRefs: questions.map((q) => ({ area: q.area, year: q.year, test: q.test, number: q.number })),
         }
-      : { selectedTest, selectedYear, selectedDay }
+      : selectedArea
+        ? { isAreaMode: true, selectedArea, areaQuestionRefs: questions.map((q) => ({ area: q.area, year: q.year, test: q.test, number: q.number })) }
+        : { selectedTest, selectedYear, selectedDay }
     savePausedSession({
       ...sessionData,
       foreignLang,
@@ -610,7 +613,9 @@ export default function App() {
           isDailyChallenge: true,
           dailyQuestionRefs: questions.map((q) => ({ area: q.area, year: q.year, test: q.test, number: q.number })),
         }
-      : { selectedTest, selectedYear, selectedDay }
+      : selectedArea
+        ? { isAreaMode: true, selectedArea, areaQuestionRefs: questions.map((q) => ({ area: q.area, year: q.year, test: q.test, number: q.number })) }
+        : { selectedTest, selectedYear, selectedDay }
     savePausedSession({
       ...sessionData,
       foreignLang,
@@ -622,7 +627,7 @@ export default function App() {
     startTimeRef.current   = null
     questionStartRef.current = null
     setPhase('home')
-  }, [question, totalElapsed, attempts, selectedTest, selectedYear, selectedDay, foreignLang])
+  }, [question, totalElapsed, attempts, selectedTest, selectedYear, selectedDay, selectedArea, foreignLang])
 
   const resumeQuiz = useCallback(() => {
     const saved = readPausedSession()
@@ -649,6 +654,17 @@ export default function App() {
       }
       const deduped = resolved.filter((q) => !q.language || q.language === lang)
       sorted = [...deduped].sort((a, b) => a.number - b.number)
+    } else if (saved.isAreaMode && saved.areaQuestionRefs) {
+      const resolved = []
+      for (const qRef of saved.areaQuestionRefs) {
+        const matches = allQuestions.filter(
+          (q) => q.area === qRef.area && q.year === qRef.year &&
+                  q.test === qRef.test && q.number === qRef.number
+        )
+        resolved.push(...matches)
+      }
+      sorted = resolved.filter((q) => !q.language || q.language === lang)
+      setSelectedArea(saved.selectedArea)
     } else {
       const areas    = DAY_AREAS[saved.selectedDay]
       const filtered = allQuestions.filter((q) =>
@@ -671,7 +687,7 @@ export default function App() {
     if (!currentQ) return
     const restoredAttempts = saved.attempts ?? {}
 
-    if (!saved.isDailyChallenge) {
+    if (!saved.isDailyChallenge && !saved.isAreaMode) {
       setSelectedTest(saved.selectedTest)
       setSelectedYear(saved.selectedYear)
       setSelectedDay(saved.selectedDay)
@@ -702,6 +718,7 @@ export default function App() {
     setSelectedYear(null)
     setSelectedDay(null)
     setIsDailyChallenge(false)
+    setSelectedArea(null)
   }, [])
 
   const startQuiz = useCallback(() => {
@@ -832,6 +849,33 @@ export default function App() {
     }
   }, [allQuestions, token, foreignLang])
 
+  const startAreaQuiz = useCallback((area) => {
+    const pool = allQuestions.filter((q) => q.area === area && (!q.language || q.language === foreignLang))
+    if (pool.length === 0) return
+    const shuffled = [...pool]
+    for (let i = shuffled.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1))
+      ;[shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]]
+    }
+    const picked = shuffled.slice(0, 10)
+
+    clearPausedSession()
+    setAttempts({})
+    saveAttemptsToSession({})
+    setSelectedArea(area)
+    setIsDailyChallenge(false)
+    const now = Date.now()
+    startTimeRef.current = now
+    questionStartRef.current = now
+    accQuestionTimesRef.current = {}
+    prevQuestionNumRef.current = null
+    setQuestions(picked)
+    setQuestion(picked[0])
+    setTotalElapsed(0)
+    setQuestionElapsed(0)
+    setPhase('quiz')
+  }, [allQuestions, foreignLang])
+
   const switchLang = useCallback((lang) => {
     if (!question?.language || lang === foreignLang) return
     const variant = langVariantsRef.current[question.number]?.[lang]
@@ -870,7 +914,7 @@ export default function App() {
             elapsed_secs: finalTotal,
           }),
         }).catch(() => {})
-      } else {
+      } else if (!selectedArea) {
         fetch('/api/results', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json', Authorization: `Bearer ${token}` },
@@ -887,7 +931,7 @@ export default function App() {
     }
 
     setPhase('summary')
-  }, [question, totalElapsed, token, attempts, questions, selectedTest, selectedYear, selectedDay])
+  }, [question, totalElapsed, token, attempts, questions, selectedTest, selectedYear, selectedDay, selectedArea])
 
   const stemSegments = useMemo(() => {
     if (!question) return []
@@ -929,8 +973,8 @@ export default function App() {
               <h1 className="home-title">Prova em andamento</h1>
               <div className="paused-info">
                 <p className="paused-info-line">
-                  <strong>{pausedSession.selectedTest} {pausedSession.selectedYear}</strong>
-                  {' '}— Dia {pausedSession.selectedDay}
+                  <strong>{pausedSession.isAreaMode ? areaLabel(pausedSession.selectedArea) : `${pausedSession.selectedTest} ${pausedSession.selectedYear}`}</strong>
+                  {!pausedSession.isAreaMode && <>{' '}— Dia {pausedSession.selectedDay}</>}
                 </p>
                 <p className="paused-info-line paused-info-sub">
                   {answeredCount} {answeredCount === 1 ? 'questão respondida' : 'questões respondidas'}
@@ -1079,6 +1123,24 @@ export default function App() {
                 {dailyChallengeLoading ? 'Carregando…' : '★ Desafio Diário'}
               </button>
             )}
+
+            <div className="home-divider" />
+
+            <div className="home-area-section">
+              <span className="home-filter-label">Estudar por área</span>
+              <div className="home-area-grid">
+                {(['math', 'nature', 'linguagens', 'humanas']).map((area) => (
+                  <button
+                    key={area}
+                    type="button"
+                    className="home-area-pill"
+                    onClick={() => startAreaQuiz(area)}
+                  >
+                    {areaLabel(area)}
+                  </button>
+                ))}
+              </div>
+            </div>
 
             {user?.username === 'admin' && (
               <button
