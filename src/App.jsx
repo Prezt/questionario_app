@@ -115,6 +115,15 @@ function NotebookIcon() {
   )
 }
 
+function GearIcon() {
+  return (
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <circle cx="12" cy="12" r="3" />
+      <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z" />
+    </svg>
+  )
+}
+
 function LogoutIcon() {
   return (
     <svg
@@ -195,6 +204,7 @@ export default function App() {
   const [dailyChallengeLoading, setDailyChallengeLoading] = useState(false)
   const [dailyChallengeResult, setDailyChallengeResult] = useState(null) // {score, total} if already done today
   const [selectedArea, setSelectedArea] = useState(null) // 'math' | 'nature' | 'linguagens' | 'humanas'
+  const [optionsOpen, setOptionsOpen] = useState(false)
 
   // Phase: 'home' | 'quiz' | 'summary' | 'login' | 'admin'
   const [phase, setPhase] = useState('login')
@@ -726,12 +736,13 @@ export default function App() {
   }, [])
 
   const startQuiz = useCallback(() => {
-    if (!selectedTest || !selectedYear || !selectedDay) return
-    const areas = DAY_AREAS[selectedDay]
+    if (!selectedTest || !selectedYear) return
+    if (selectedTest === 'ENEM' && !selectedDay) return
+    const areas = selectedDay ? DAY_AREAS[selectedDay] : null
     const filtered = allQuestions
       .filter((q) => q.test === selectedTest)
       .filter((q) => q.year === selectedYear)
-      .filter((q) => areas.includes(q.area))
+      .filter((q) => !areas || areas.includes(q.area))
     if (filtered.length === 0) return
 
     // Build language variant lookup and deduplicate
@@ -1034,7 +1045,7 @@ export default function App() {
         .map((q) => q.year)
     )].sort((a, b) => b - a)
 
-    const canStart = selectedTest && selectedYear && selectedDay
+    const canStart = selectedTest && selectedYear && (selectedTest === 'ENEM' ? !!selectedDay : true)
 
     return (
       <div className="app-shell">
@@ -1062,19 +1073,22 @@ export default function App() {
               {/* Step 1 — Prova */}
               <div className="home-filter-group">
                 <span className="home-filter-label">Prova</span>
-                <select
-                  className="home-test-select"
-                  value={selectedTest}
-                  onChange={(e) => {
-                    setSelectedTest(e.target.value)
-                    setSelectedYear(null)
-                    setSelectedDay(null)
-                  }}
-                >
+                <div className="home-test-seg">
                   {availableTests.map((t) => (
-                    <option key={t} value={t}>{t}</option>
+                    <button
+                      key={t}
+                      type="button"
+                      className={`home-test-seg-btn${selectedTest === t ? ' active' : ''}`}
+                      onClick={() => {
+                        setSelectedTest(t)
+                        setSelectedYear(null)
+                        setSelectedDay(null)
+                      }}
+                    >
+                      {t}
+                    </button>
                   ))}
-                </select>
+                </div>
               </div>
 
               {/* Step 2 — Ano */}
@@ -1097,41 +1111,29 @@ export default function App() {
                 </div>
               </div>
 
-              {/* Step 3 — Dia */}
-              <div className={`home-filter-group ${!selectedYear ? 'home-filter-group--locked' : ''}`}>
-                <span className="home-filter-label">Dia</span>
-                <div className="home-filter-pills">
-                  <button
-                    type="button"
-                    className={`home-filter-pill home-filter-pill--wide ${selectedDay === 1 ? 'active' : ''}`}
-                    disabled={!selectedYear}
-                    onClick={() => setSelectedDay(1)}
-                  >
-                    Dia 1 · Linguagens e Ciências Humanas
-                  </button>
-                  <button
-                    type="button"
-                    className={`home-filter-pill home-filter-pill--wide ${selectedDay === 2 ? 'active' : ''}`}
-                    disabled={!selectedYear}
-                    onClick={() => setSelectedDay(2)}
-                  >
-                    Dia 2 · Matemática e Ciências da Natureza
-                  </button>
+              {/* Step 3 — Dia (ENEM only) */}
+              {selectedTest === 'ENEM' && (
+                <div className="home-filter-group">
+                  <span className="home-filter-label">Dia</span>
+                  <div className="home-filter-pills">
+                    <button
+                      type="button"
+                      className={`home-filter-pill home-filter-pill--wide ${selectedDay === 1 ? 'active' : ''}`}
+                      onClick={() => setSelectedDay(1)}
+                    >
+                      Dia 1 · Linguagens e Ciências Humanas
+                    </button>
+                    <button
+                      type="button"
+                      className={`home-filter-pill home-filter-pill--wide ${selectedDay === 2 ? 'active' : ''}`}
+                      onClick={() => setSelectedDay(2)}
+                    >
+                      Dia 2 · Matemática e Ciências da Natureza
+                    </button>
+                  </div>
                 </div>
-              </div>
+              )}
             </div>
-
-            <label className="randomize-toggle">
-              <input
-                type="checkbox"
-                checked={randomizeAlts}
-                onChange={(e) => {
-                  setRandomizeAlts(e.target.checked)
-                  localStorage.setItem('randomize-alts', e.target.checked)
-                }}
-              />
-              Embaralhar alternativas
-            </label>
 
             <button
               type="button"
@@ -1142,56 +1144,48 @@ export default function App() {
               Iniciar
             </button>
 
-            <div className="home-divider" />
+            {selectedTest === 'ENEM' && (
+              <>
+                <div className="home-divider" />
 
-            {dailyChallengeResult ? (
-              <div className="daily-done-banner">
-                <span className="daily-done-icon">★</span>
-                <span>
-                  Desafio de hoje concluído!{' '}
-                  <strong>{dailyChallengeResult.score}/{dailyChallengeResult.total}</strong> corretas
-                </span>
-              </div>
-            ) : (
-              <button
-                type="button"
-                className="home-daily-btn"
-                onClick={startDailyChallenge}
-                disabled={dailyChallengeLoading}
-              >
-                {dailyChallengeLoading ? 'Carregando…' : '★ Desafio Diário'}
-              </button>
-            )}
-
-            <div className="home-divider" />
-
-            <div className="home-area-section">
-              <span className="home-filter-label">Estudar por área</span>
-              <div className="home-area-grid">
-                {(['math', 'nature', 'linguagens', 'humanas']).map((area) => (
+                {dailyChallengeResult ? (
+                  <div className="daily-done-banner">
+                    <span className="daily-done-icon">★</span>
+                    <span>
+                      Desafio de hoje concluído!{' '}
+                      <strong>{dailyChallengeResult.score}/{dailyChallengeResult.total}</strong> corretas
+                    </span>
+                  </div>
+                ) : (
                   <button
-                    key={area}
                     type="button"
-                    className="home-area-pill"
-                    onClick={() => startAreaQuiz(area)}
+                    className="home-daily-btn"
+                    onClick={startDailyChallenge}
+                    disabled={dailyChallengeLoading}
                   >
-                    {areaLabel(area)}
+                    {dailyChallengeLoading ? 'Carregando…' : '★ Desafio Diário'}
                   </button>
-                ))}
-              </div>
-            </div>
+                )}
 
-            {user?.username === 'admin' && (
-              <button
-                type="button"
-                className="btn--ghost admin-btn"
-                onClick={openAdminPanel}
-                disabled={adminLoading}
-              >
-                {adminLoading ? 'Carregando…' : 'Painel Admin'}
-              </button>
+                <div className="home-divider" />
+
+                <div className="home-area-section">
+                  <span className="home-filter-label">Estudar por área</span>
+                  <div className="home-area-grid">
+                    {(['math', 'nature', 'linguagens', 'humanas']).map((area) => (
+                      <button
+                        key={area}
+                        type="button"
+                        className="home-area-pill"
+                        onClick={() => startAreaQuiz(area)}
+                      >
+                        {areaLabel(area)}
+                      </button>
+                    ))}
+                  </div>
+                </div>
+              </>
             )}
-            {adminError && <p className="auth-error">{adminError}</p>}
 
             <button
               type="button"
@@ -1201,6 +1195,47 @@ export default function App() {
               Sair
             </button>
           </div>
+        </div>
+
+        {/* ── Gear options FAB ── */}
+        {optionsOpen && (
+          <div className="options-overlay" onClick={() => setOptionsOpen(false)} />
+        )}
+        <div className="options-fab-wrap">
+          {optionsOpen && (
+            <div className="options-popover">
+              <label className="options-row">
+                <input
+                  type="checkbox"
+                  checked={randomizeAlts}
+                  onChange={(e) => {
+                    setRandomizeAlts(e.target.checked)
+                    localStorage.setItem('randomize-alts', e.target.checked)
+                  }}
+                />
+                Embaralhar alternativas
+              </label>
+              {user?.username === 'admin' && (
+                <button
+                  type="button"
+                  className="options-admin-btn"
+                  onClick={() => { setOptionsOpen(false); openAdminPanel() }}
+                  disabled={adminLoading}
+                >
+                  {adminLoading ? 'Carregando…' : 'Painel Admin'}
+                </button>
+              )}
+              {adminError && <p className="auth-error" style={{ margin: 0 }}>{adminError}</p>}
+            </div>
+          )}
+          <button
+            type="button"
+            className={`options-fab${optionsOpen ? ' active' : ''}`}
+            onClick={() => setOptionsOpen((o) => !o)}
+            aria-label="Opções"
+          >
+            <GearIcon />
+          </button>
         </div>
       </div>
     )

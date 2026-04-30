@@ -1281,39 +1281,126 @@
   margin-top: 0.1rem;
 }
 
-.home-test-select {
-  height: 2rem;
-  padding: 0 0.6rem;
-  border-radius: 0.4rem;
+/* ── Test segmented control ── */
+.home-test-seg {
+  display: flex;
+  border-radius: 999px;
   border: 1.5px solid var(--border);
-  background: var(--card-bg);
-  color: var(--text);
-  font-size: 0.85rem;
-  cursor: pointer;
-  outline: none;
+  overflow: hidden;
+  background: var(--alt-bg);
   width: 100%;
 }
 
-.home-test-select:focus {
-  border-color: var(--accent);
+.home-test-seg-btn {
+  flex: 1;
+  height: 2rem;
+  border: none;
+  background: transparent;
+  color: var(--text-soft);
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s;
+  -webkit-tap-highlight-color: transparent;
 }
 
-.randomize-toggle {
+.home-test-seg-btn:not(:last-child) {
+  border-right: 1.5px solid var(--border);
+}
+
+.home-test-seg-btn.active {
+  background: var(--accent);
+  color: #fff;
+}
+
+/* ── Gear FAB + popover ── */
+.options-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 49;
+}
+
+.options-fab-wrap {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  z-index: 50;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.6rem;
+}
+
+.options-fab {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  border: none;
+  background: var(--surface);
+  color: var(--text-soft);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+  cursor: pointer;
   display: flex;
   align-items: center;
-  gap: 0.45rem;
-  font-size: 0.78rem;
-  color: var(--text-soft);
-  cursor: pointer;
-  user-select: none;
-  margin-top: 0.25rem;
+  justify-content: center;
+  transition: background 0.15s, color 0.15s, transform 0.2s;
+  -webkit-tap-highlight-color: transparent;
 }
 
-.randomize-toggle input {
-  accent-color: var(--accent);
-  width: 0.9rem;
-  height: 0.9rem;
+.options-fab.active {
+  background: var(--accent);
+  color: #fff;
+  transform: rotate(45deg);
+}
+
+.options-popover {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 0.85rem 1rem;
+  box-shadow: 0 6px 24px rgba(0,0,0,0.15);
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+  min-width: 200px;
+}
+
+.options-row {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+  color: var(--text);
   cursor: pointer;
+  user-select: none;
+}
+
+.options-row input[type="checkbox"] {
+  accent-color: var(--accent);
+  width: 1rem;
+  height: 1rem;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.options-admin-btn {
+  height: 2rem;
+  padding: 0 0.85rem;
+  border-radius: 999px;
+  border: 1.5px solid var(--accent);
+  background: transparent;
+  color: var(--accent);
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.options-admin-btn:hover:not(:disabled) {
+  background: var(--accent);
+  color: #fff;
 }
 
 .home-start-btn {
