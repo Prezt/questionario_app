@@ -8,7 +8,7 @@ FUNCIONALIDADES
 [x] Seletor de qual prova e qual dia fazer
 [x] Alternar Ingles e Espanhol
 [x] Textos faltando. Link para a leitura do texto OU texto completo presente
-[] Randomizador da ordem das alternativas
+[x] Randomizador da ordem das alternativas
 [x] Resumo com assuntos de menor dominio e maior tempo medio de resolucao
 
 LOGIN
@@ -21,7 +21,7 @@ LOGIN
 MODOS DE USO
 [x] Opcao de pausar o simulado
 [] Modo simulado (sem saber as respostas, correcao no fila)
-[] Selecao de AREA
+[x] Selecao de AREA
 [] Selecao de MULTIPLOS ASSUNTOS
 [] Selecao de PROVA COMPLETA (com timer)
 
@@ -45,103 +45,127 @@ DADOS:
         [x] texto
         [x] imagens
         [] HQ imagens
+        [] HQ texto
     [x] linguagens
         [x] texto
         [x] imagens
         [] HQ imagens
+        [] HQ texto
     [x] ciencias da natureza
         [x] texto
         [x] imagens
         [] HQ imagens
+        [] HQ texto
     [x] ciencias sociais
         [x] texto
         [x] imagens
         [] HQ imagens
+        [] HQ texto
  [x] ENEM 2024
     [] matematica 
         [] texto
         [] imagens
         [] HQ imagens
+        [] HQ texto
     [x] linguagens
         [x] texto
         [x] imagens
         [] HQ imagens
+        [] HQ texto
     [x] ciencias da natureza
         [x] texto
         [x] imagens
         [] HQ imagens
+        [] HQ texto
     [x] ciencias sociais
         [x] texto
         [x] imagens
         [] HQ imagens
+        [] HQ texto
  [x] ENEM 2023
     [x] matematica 
         [x] texto
         [x] imagens
         [] HQ imagens
+        [] HQ texto
     [x] linguagens
         [x] texto
         [x] imagens
         [] HQ imagens
+        [] HQ texto
     [x] ciencias da natureza
         [x] texto
         [x] imagens
         [] HQ imagens
+        [] HQ texto
     [x] ciencias sociais
         [x] texto
         [x] imagens
         [] HQ imagens
- [] ENEM 2022
-    [] matematica 
-        [] texto
-        [] imagens
+        [] HQ texto
+ [x] ENEM 2022
+    [x] matematica 
+        [x] texto
+        [x] imagens
         [] HQ imagens
-    [] linguagens
-        [] texto
-        [] imagens
+        [] HQ texto
+    [x] linguagens
+        [x] texto
+        [x] imagens
         [] HQ imagens
-    [] ciencias da natureza
-        [] texto
-        [] imagens
+        [] HQ texto
+    [x] ciencias da natureza
+        [x] texto
+        [x] imagens
         [] HQ imagens
-    [] ciencias sociais
-        [] texto
-        [] imagens
+        [] HQ texto
+    [x] ciencias sociais
+        [x] texto
+        [x] imagens
         [] HQ imagens
+        [] HQ texto
  [] ENEM 2021
     [] matematica 
         [] texto
         [] imagens
         [] HQ imagens
+        [] HQ texto
     [] linguagens
         [] texto
         [] imagens
         [] HQ imagens
+        [] HQ texto
     [] ciencias da natureza
         [] texto
         [] imagens
         [] HQ imagens
+        [] HQ texto
     [] ciencias sociais
         [] texto
         [] imagens
         [] HQ imagens
+        [] HQ texto
  [] ENEM 2020
     [] matematica 
         [] texto
         [] imagens
         [] HQ imagens
+        [] HQ texto
     [] linguagens
         [] texto
         [] imagens
         [] HQ imagens
+        [] HQ texto
     [] ciencias da natureza
         [] texto
         [] imagens
         [] HQ imagens
+        [] HQ texto
     [] ciencias sociais
         [] texto
         [] imagens
         [] HQ imagens
+        [] HQ texto
 
 ETAPA 2:
 UFSC
