@@ -277,12 +277,11 @@ export default function App() {
             }
             langVariantsRef.current = variants
             const deduped  = resolved.filter((q) => !q.language || q.language === lang)
-            const sorted   = [...deduped].sort((a, b) => a.number - b.number)
-            const currentQ = sorted.find((q) => q.number === saved.currentNumber) ?? sorted[0]
-            if (sorted.length > 0 && currentQ) {
+            const currentQ = deduped.find((q) => q.number === saved.currentNumber) ?? deduped[0]
+            if (deduped.length > 0 && currentQ) {
               const restoredAttempts = saved.attempts ?? {}
               setForeignLang(lang)
-              setQuestions(sorted)
+              setQuestions(deduped)
               setQuestion(currentQ)
               setAttempts(restoredAttempts)
               saveAttemptsToSession(restoredAttempts)
@@ -436,8 +435,10 @@ export default function App() {
   }, [notebookOpen])
 
   const sortedQuestions = useMemo(
-    () => [...questions].sort((a, b) => a.number - b.number),
-    [questions],
+    () => (isDailyChallenge || selectedArea)
+      ? [...questions]
+      : [...questions].sort((a, b) => a.number - b.number),
+    [questions, isDailyChallenge, selectedArea],
   )
 
   // Reset pending selection, track question time, and manage context panel on navigation
@@ -666,8 +667,7 @@ export default function App() {
           resolved.push(q)
         }
       }
-      const deduped = resolved.filter((q) => !q.language || q.language === lang)
-      sorted = [...deduped].sort((a, b) => a.number - b.number)
+      sorted = resolved.filter((q) => !q.language || q.language === lang)
     } else if (saved.isAreaMode && saved.areaQuestionRefs) {
       const resolved = []
       for (const qRef of saved.areaQuestionRefs) {
@@ -839,8 +839,7 @@ export default function App() {
       }
 
       langVariantsRef.current = variants
-      const deduped = resolved.filter((q) => !q.language || q.language === foreignLang)
-      const sorted  = [...deduped].sort((a, b) => a.number - b.number)
+      const sorted = resolved.filter((q) => !q.language || q.language === foreignLang)
       if (sorted.length === 0) return
 
       clearPausedSession()
