@@ -853,7 +853,6 @@ export default function App() {
             score,
             total: questions.length,
             elapsed_secs: finalTotal,
-            answers: attempts,
           }),
         }).catch(() => {})
       } else {
