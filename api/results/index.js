@@ -8,15 +8,34 @@ export default async function handler(req, res) {
   const sql = neon(process.env.DATABASE_URL)
 
   if (req.method === 'POST') {
-    const { test, year, day, score, total, elapsed_secs, question_times } = req.body ?? {}
+    const { test, year, day, score, total, elapsed_secs } = req.body ?? {}
     await sql`
-      INSERT INTO test_results (user_id, test, year, day, score, total, elapsed_secs, question_times)
+      INSERT INTO test_results (user_id, test, year, day, score, total, elapsed_secs)
       VALUES (
         ${payload.userId}, ${test}, ${year}, ${day},
-        ${score}, ${total}, ${elapsed_secs},
-        ${JSON.stringify(question_times ?? {})}
+        ${score}, ${total}, ${elapsed_secs}
       )
     `
+
+    // Retention: keep top score per (test, year) + 20 most recent per user
+    await sql`
+      DELETE FROM test_results
+      WHERE user_id = ${payload.userId}
+        AND id NOT IN (
+          SELECT DISTINCT ON (test, year) id
+          FROM test_results
+          WHERE user_id = ${payload.userId}
+          ORDER BY test, year, score DESC
+        )
+        AND id NOT IN (
+          SELECT id
+          FROM test_results
+          WHERE user_id = ${payload.userId}
+          ORDER BY answered_at DESC
+          LIMIT 20
+        )
+    `
+
     return res.status(201).json({ ok: true })
   }
 
