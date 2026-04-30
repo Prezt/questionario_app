@@ -1420,13 +1420,19 @@
   -webkit-tap-highlight-color: transparent;
 }
 
-.home-start-btn:hover {
+.home-start-btn:hover:not(:disabled) {
   background: var(--accent-dark);
   box-shadow: 0 4px 20px rgba(204, 34, 34, 0.5);
 }
 
-.home-start-btn:active {
+.home-start-btn:active:not(:disabled) {
   transform: scale(0.97);
+}
+
+.home-start-btn:disabled {
+  opacity: 0.38;
+  box-shadow: none;
+  cursor: not-allowed;
 }
 
 /* ── Daily Challenge button ── */
