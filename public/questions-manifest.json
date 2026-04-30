@@ -1,8 +1,18 @@
 [
   "math_enem_2025.json",
+  "math_enem_2024.json",
+  "math_enem_2023.json",
+  "math_enem_2022.json",
   "nature_enem_2025.json",
+  "nature_enem_2024.json",
+  "nature_enem_2023.json",
+  "nature_enem_2022.json",
   "linguagens_enem_2025.json",
   "linguagens_enem_2024.json",
+  "linguagens_enem_2023.json",
+  "linguagens_enem_2022.json",
+  "humanas_enem_2025.json",
   "humanas_enem_2024.json",
-  "humanas_enem_2025.json"
+  "humanas_enem_2023.json",
+  "humanas_enem_2022.json"
 ]
