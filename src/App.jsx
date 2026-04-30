@@ -473,6 +473,21 @@ export default function App() {
     }
   }, [])
 
+  // Check daily challenge completion status on home load
+  useEffect(() => {
+    if (phase !== 'home' || !token) return
+    fetch('/api/daily-challenge', {
+      headers: { Authorization: `Bearer ${token}` },
+    })
+      .then(r => r.json())
+      .then(data => {
+        if (data.completed) {
+          setDailyChallengeResult({ score: data.completed.score, total: data.completed.total })
+        }
+      })
+      .catch(() => {})
+  }, [phase, token])
+
   const questionIndex = useMemo(() => {
     if (!question) return -1
     return sortedQuestions.findIndex((q) => q.number === question.number)
