@@ -569,6 +569,12 @@
   border: 1.5px solid var(--rail-btn-border);
 }
 
+.badge-qnum {
+  background: transparent;
+  color: var(--text-soft);
+  border: 1px solid var(--border);
+}
+
 .badge-progress {
   background: var(--tag-bg);
   color: var(--tag-color);

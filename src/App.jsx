@@ -1552,6 +1552,9 @@ export default function App() {
                     <span className="badge badge-progress">
                       {questionIndex + 1} / {sortedQuestions.length}
                     </span>
+                    {(isDailyChallenge || selectedArea) && (
+                      <span className="badge badge-qnum">Q{question.number}</span>
+                    )}
                     {question.test != null && String(question.test).trim() !== '' && (
                       <span className="badge badge-test">{question.test}</span>
                     )}
