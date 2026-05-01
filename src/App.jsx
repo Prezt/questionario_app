@@ -255,7 +255,7 @@ export default function App() {
           fetch('/contexts.json').then((r) => r.json()).catch(() => ({})),
         ])
         const datasets = await Promise.all(
-          manifest.map((file) => fetch(`/${file}`).then((r) => r.json()))
+          manifest.map((file) => fetch(`/${file}`).then((r) => r.json()).catch(() => []))
         )
         const all = datasets.flat().sort((a, b) => a.number - b.number)
         setAllQuestions(all)

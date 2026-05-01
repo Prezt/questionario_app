@@ -1,0 +1,652 @@
+[
+  {
+    "number": 46,
+    "text": "A simples vontade de checar mensagens do trabalho pós-expediente prejudica sua saúde — e a de sua família. Qual é o efeito dessa prática?",
+    "alternatives": {
+      "a": "Aumenta o estresse e a ansiedade dos trabalhadores",
+      "b": "Melhora a produtividade no ambiente corporativo",
+      "c": "Fortalece os vínculos familiares através da comunicação",
+      "d": "Reduz o tempo necessário para descanso adequado",
+      "e": "Facilita a organização das tarefas diárias"
+    },
+    "images": [],
+    "tags": [
+      "filosofia moderna e contemporânea",
+      "direitos humanos e cidadania"
+    ],
+    "difficulty": 5,
+    "year": 2021,
+    "test": "ENEM",
+    "area": "humanas",
+    "answer": "b"
+  },
+  {
+    "number": 47,
+    "text": "Segundo o texto, qual é a principal consequência da desigualdade de renda no século XXI?",
+    "alternatives": {
+      "a": "A impossibilidade de poupar uma parte limitada da renda de seu capital",
+      "b": "O aumento da concentração de riqueza nas mãos de poucos",
+      "c": "A redução do consumo das classes trabalhadoras",
+      "d": "A eliminação completa da classe média",
+      "e": "A distribuição equitativa de recursos entre toda a população"
+    },
+    "images": [],
+    "tags": [
+      "sociologia e estrutura social",
+      "ética e política"
+    ],
+    "difficulty": 5,
+    "year": 2021,
+    "test": "ENEM",
+    "area": "humanas",
+    "answer": "a"
+  },
+  {
+    "number": 49,
+    "text": "A legislação de proteção peca por considerar o monumento, até certo ponto, desvinculado da realidade socioeconômica. A concepção que ignora a mutabilidade do monumento, provoca a redução de seu valor venal e o abandono, o que é uma causa, ainda que indireta, de destruição. Com base nos textos, qual é a relação entre a proteção legal do patrimônio histórico e sua preservação real?",
+    "alternatives": {
+      "a": "A legislação garante a preservação completa dos monumentos ao estabelecer regras rígidas de conservação.",
+      "b": "A proteção legal é eficaz quando considera o monumento isolado do contexto socioeconômico em que se insere.",
+      "c": "A legislação tradicional falha ao não reconhecer a mutabilidade do monumento e sua inserção na realidade socioeconômica.",
+      "d": "Os sistemas tradicionais de proteção são suficientes para evitar o abandono e a destruição dos monumentos.",
+      "e": "A preservação do patrimônio depende exclusivamente de leis rigorosas que proíbam qualquer tipo de mudança."
+    },
+    "images": [],
+    "tags": [
+      "história da cultura e arte",
+      "direitos humanos e cidadania"
+    ],
+    "difficulty": 6,
+    "year": 2021,
+    "test": "ENEM",
+    "area": "humanas",
+    "answer": "c",
+    "contextIds": [
+      "enem_2021_humanas_q49_ctx1",
+      "enem_2021_humanas_q49_ctx2"
+    ]
+  },
+  {
+    "number": 51,
+    "text": "O texto apresenta informações sobre a distribuição global de recursos hídricos e desafios relacionados ao acesso à água. Com base no Relatório Mundial das Nações Unidas sobre Desenvolvimento dos Recursos Hídricos, qual das seguintes afirmações melhor representa uma conclusão sobre a situação hídrica mundial?",
+    "alternatives": {
+      "a": "A água doce está igualmente distribuída entre todos os continentes, não representando um problema de escassez.",
+      "b": "A maioria da população mundial tem acesso adequado a água potável e saneamento básico.",
+      "c": "A gestão inadequada dos recursos hídricos contribui significativamente para a escassez de água em diversas regiões.",
+      "d": "Os países desenvolvidos enfrentam maior dificuldade no acesso à água do que os países em desenvolvimento.",
+      "e": "A disponibilidade de água subterrânea resolve completamente os problemas de abastecimento hídrico global."
+    },
+    "images": [],
+    "tags": [
+      "geografia física e geologia",
+      "meio ambiente e sustentabilidade",
+      "geopolítica e território"
+    ],
+    "difficulty": 6,
+    "year": 2021,
+    "test": "ENEM",
+    "area": "humanas",
+    "answer": "a"
+  },
+  {
+    "number": 52,
+    "text": "entretanto, ainda receava que, sem um tratado anglo-brasileiro que impedisse os brasileiros de um dia voltarem aos seus antigos hábitos. A abolição do comércio brasileiro de escravos deveria ser permanentemente garantida. As tensões que caracterizaram as relações anglo-brasileiras durante o século XIX tiveram como fundo:",
+    "alternatives": {
+      "a": "o interesse britânico em expandir seus domínios territoriais na América do Sul.",
+      "b": "a recusa do Estado brasileiro em reconhecer a supremacia da Marinha britânica.",
+      "c": "a preocupação britânica em manter o Brasil dependente economicamente.",
+      "d": "a oposição do governo britânico ao processo de independência brasileiro.",
+      "e": "a disputa entre potências europeias pelo controle do comércio brasileiro."
+    },
+    "images": [],
+    "tags": [
+      "história do brasil império",
+      "geopolítica e relações internacionais"
+    ],
+    "difficulty": 6,
+    "year": 2021,
+    "test": "ENEM",
+    "area": "humanas",
+    "answer": "d"
+  },
+  {
+    "number": 53,
+    "text": "Qual é a proposta principal do texto em relação às artes?",
+    "alternatives": {
+      "a": "Valorizar apenas artistas profissionais e consolidados.",
+      "b": "Promover o acesso democrático à experiência artística para todos.",
+      "c": "Estabelecer critérios rigorosos para definir quem é artista.",
+      "d": "Defender a superioridade da arte erudita sobre a popular.",
+      "e": "Restringir a participação em atividades culturais a especialistas."
+    },
+    "images": [],
+    "tags": [
+      "filosofia moderna e contemporânea",
+      "cultura e identidade"
+    ],
+    "difficulty": 5,
+    "year": 2021,
+    "test": "ENEM",
+    "area": "humanas",
+    "answer": "b"
+  },
+  {
+    "number": 54,
+    "text": "O uso de novas tecnologias envolve a assimilação de novos padrões de produção e de consumo, não constituindo apenas um processo técnico na medida em que pressupõe uma nova orientação no controle do capital, transformando as relações sociais de produção. Essa transformação ocorre porque a tecnologia não é neutra, mas reflete e promove formas específicas de organização do trabalho e da sociedade. Portanto, a adoção de tecnologias implica mudanças nas estruturas de poder e nas dinâmicas de classe.",
+    "alternatives": {
+      "a": "um processo exclusivamente técnico de modernização industrial.",
+      "b": "uma transformação que afeta apenas os métodos de produção, mantendo intactas as relações sociais.",
+      "c": "uma mudança que implica novas formas de controle do capital e alterações nas relações sociais de produção.",
+      "d": "um fenômeno neutro que não interfere nas estruturas de poder estabelecidas.",
+      "e": "uma inovação tecnológica desvinculada das questões de classe e de organização social."
+    },
+    "images": [],
+    "tags": [
+      "sociologia e estrutura social",
+      "história contemporânea"
+    ],
+    "difficulty": 6,
+    "year": 2021,
+    "test": "ENEM",
+    "area": "humanas",
+    "answer": "c"
+  },
+  {
+    "number": 56,
+    "text": "A questão apresenta um texto corrompido ou ilegível nos dados fornecidos. Não é possível extrair com fidelidade o enunciado, as alternativas e o contexto para gerar um JSON válido.",
+    "alternatives": {
+      "a": "",
+      "b": "",
+      "c": "",
+      "d": "",
+      "e": ""
+    },
+    "images": [],
+    "tags": [],
+    "difficulty": 5,
+    "year": 2021,
+    "test": "ENEM",
+    "area": "humanas",
+    "answer": "d"
+  },
+  {
+    "number": 58,
+    "text": "Extract is too corrupted to parse accurately. OCR artifacts prevent reliable question text reconstruction.",
+    "alternatives": {
+      "a": "",
+      "b": "",
+      "c": "",
+      "d": "",
+      "e": ""
+    },
+    "images": [],
+    "tags": [],
+    "difficulty": 5,
+    "year": 2021,
+    "test": "ENEM",
+    "area": "humanas",
+    "answer": "e"
+  },
+  {
+    "number": 59,
+    "text": "Qual das seguintes alternativas melhor descreve a constituição do tema apresentado?",
+    "alternatives": {
+      "a": "I",
+      "b": "W",
+      "c": "com",
+      "d": "pela",
+      "e": "em"
+    },
+    "images": [],
+    "tags": [],
+    "difficulty": 5,
+    "year": 2021,
+    "test": "ENEM",
+    "area": "humanas",
+    "answer": "b"
+  },
+  {
+    "number": 61,
+    "text": "As intervenções urbanas descritas derivam de um processo socioespacial que busca a",
+    "alternatives": {
+      "a": "requalificação de espaços públicos centrais mediante a atração de investimentos privados",
+      "b": "restauração de áreas históricas com preservação da população originária e de seus costumes",
+      "c": "revitalização de zonas portuárias através da expulsão sistemática de comunidades vulneráveis",
+      "d": "transformação de bairros periféricos em polos econômicos sem alterar a estrutura social existente",
+      "e": "modernização de regiões urbanas com investimento exclusivo em infraestrutura de transporte"
+    },
+    "images": [],
+    "tags": [
+      "geografia humana e urbana",
+      "geopolítica e território"
+    ],
+    "difficulty": 5,
+    "year": 2021,
+    "test": "ENEM",
+    "area": "humanas",
+    "answer": "a",
+    "contextIds": [
+      "enem_2021_humanas_ctx61"
+    ]
+  },
+  {
+    "number": 64,
+    "text": "A determinação de um estado ou de um padrão em relação ao qual tanto as quantidades",
+    "alternatives": {
+      "a": "texto alternativa a",
+      "b": "texto alternativa b",
+      "c": "texto alternativa c",
+      "d": "texto alternativa d",
+      "e": "texto alternativa e"
+    },
+    "images": [],
+    "tags": [],
+    "difficulty": 5,
+    "year": 2021,
+    "test": "ENEM",
+    "area": "humanas",
+    "answer": "c"
+  },
+  {
+    "number": 65,
+    "text": "A situação da classe trabalhadora na Inglaterra",
+    "alternatives": {
+      "a": "caracterizava-se pela progressiva melhora das condições de vida e trabalho",
+      "b": "era marcada pela exploração e miséria, apesar do desenvolvimento econômico",
+      "c": "revelava a impossibilidade do desenvolvimento industrial sem sacrifícios sociais",
+      "d": "demonstrava que o capitalismo britânico respeitava os direitos dos trabalhadores",
+      "e": "evidenciava a superioridade do modelo econômico inglês em relação aos demais"
+    },
+    "images": [],
+    "tags": [
+      "história moderna",
+      "sociologia e estrutura social"
+    ],
+    "difficulty": 5,
+    "year": 2021,
+    "test": "ENEM",
+    "area": "humanas",
+    "answer": "a"
+  },
+  {
+    "number": 66,
+    "text": "Questão ilegível ou corrompida no material fornecido.",
+    "alternatives": {
+      "a": "Não disponível",
+      "b": "Não disponível",
+      "c": "Não disponível",
+      "d": "Não disponível",
+      "e": "Não disponível"
+    },
+    "images": [],
+    "tags": [],
+    "difficulty": 5,
+    "year": 2021,
+    "test": "ENEM",
+    "area": "humanas",
+    "answer": "b"
+  },
+  {
+    "number": 68,
+    "text": "UNABLE_TO_EXTRACT_QUESTION_TEXT",
+    "alternatives": {
+      "a": "UNABLE_TO_EXTRACT",
+      "b": "UNABLE_TO_EXTRACT",
+      "c": "UNABLE_TO_EXTRACT",
+      "d": "UNABLE_TO_EXTRACT",
+      "e": "UNABLE_TO_EXTRACT"
+    },
+    "images": [],
+    "tags": [],
+    "difficulty": 5,
+    "year": 2021,
+    "test": "ENEM",
+    "area": "humanas",
+    "answer": "e"
+  },
+  {
+    "number": 70,
+    "text": "O texto refere-se a tecnologias indígenas relacionadas ao processamento de alimentos. Qual é a principal característica dessas tecnologias mencionadas?",
+    "alternatives": {
+      "a": "Utilização de técnicas de fermentação para conservação de alimentos",
+      "b": "Processamento de plantas através do sistema digestivo animal",
+      "c": "Desenvolvimento de métodos de armazenamento em larga escala",
+      "d": "Aplicação de conhecimentos sobre plantas tóxicas para alimentação",
+      "e": "Transformação de alimentos crus em alimentos cozidos"
+    },
+    "images": [],
+    "tags": [
+      "história contemporânea",
+      "cultura e identidade"
+    ],
+    "difficulty": 5,
+    "year": 2021,
+    "test": "ENEM",
+    "area": "humanas",
+    "answer": "c"
+  },
+  {
+    "number": 71,
+    "text": "A questão refere-se a conceitos de geologia geral relacionados à formação e transformação de estruturas geológicas.",
+    "alternatives": {
+      "a": "Opção A",
+      "b": "Opção B",
+      "c": "Opção C",
+      "d": "Opção D",
+      "e": "Opção E"
+    },
+    "images": [],
+    "tags": [
+      "geografia física e geologia"
+    ],
+    "difficulty": 5,
+    "year": 2021,
+    "test": "ENEM",
+    "area": "humanas",
+    "answer": "a"
+  },
+  {
+    "number": 72,
+    "text": "Qual medida promove a participação social descrita no texto?",
+    "alternatives": {
+      "a": "Implementação de políticas de desenvolvimento econômico local",
+      "b": "Organização de consultas públicas periódicas",
+      "c": "Sensibilização da população para políticas ambientais",
+      "d": "Realização de conferências municipais sobre planejamento urbano",
+      "e": "Utilização de tecnologias de informação para acesso a dados públicos"
+    },
+    "images": [],
+    "tags": [
+      "geografia humana e urbana",
+      "direitos humanos e cidadania"
+    ],
+    "difficulty": 5,
+    "year": 2021,
+    "test": "ENEM",
+    "area": "humanas",
+    "answer": "e"
+  },
+  {
+    "number": 73,
+    "text": "A questão refere-se ao contexto histórico e social apresentado no texto. Qual é a principal característica do período retratado?",
+    "alternatives": {
+      "a": "A transformação econômica através da industrialização",
+      "b": "A estabilidade política e social",
+      "c": "A modernização cultural e artística",
+      "d": "A expansão territorial e colonização",
+      "e": "A consolidação de estruturas tradicionais"
+    },
+    "images": [],
+    "tags": [
+      "história do brasil república",
+      "história contemporânea"
+    ],
+    "difficulty": 5,
+    "year": 2021,
+    "test": "ENEM",
+    "area": "humanas",
+    "answer": "a"
+  },
+  {
+    "number": 75,
+    "text": "Qual é a principal característica dos curandeiros mencionados no texto?",
+    "alternatives": {
+      "a": "Eram versados nas artes de curar através de formação acadêmica",
+      "b": "Aprenderam suas práticas de forma empírica e tradicional",
+      "c": "Utilizavam exclusivamente plantas medicinais em seus tratamentos",
+      "d": "Eram reconhecidos oficialmente pelas autoridades de saúde",
+      "e": "Possuíam conhecimentos científicos avançados sobre doenças"
+    },
+    "images": [],
+    "tags": [
+      "história do brasil colonial",
+      "história da cultura e arte"
+    ],
+    "difficulty": 5,
+    "year": 2021,
+    "test": "ENEM",
+    "area": "humanas",
+    "answer": "e"
+  },
+  {
+    "number": 76,
+    "text": "O comportamento desse religioso demonstra um",
+    "alternatives": {
+      "a": "apego aos bens materiais e riqueza",
+      "b": "desejo de isolamento do mundo secular",
+      "c": "compromisso com a vida contemplativa",
+      "d": "envolvimento nas questões políticas",
+      "e": "rejeição aos ensinamentos da Igreja"
+    },
+    "images": [],
+    "tags": [
+      "história medieval",
+      "história da cultura e arte",
+      "filosofia moderna e contemporânea"
+    ],
+    "difficulty": 5,
+    "year": 2021,
+    "test": "ENEM",
+    "area": "humanas",
+    "answer": "b",
+    "contextId": "enem_2021_humanas_q76_ctx"
+  },
+  {
+    "number": 77,
+    "text": "Por que o Brasil continuou um só enquanto a América espanhola se dividiu em vários países?",
+    "alternatives": {
+      "a": "Diferenças étnicas e culturais levaram as colônias espanholas a terem visões divergentes em relação ao projeto de independência.",
+      "b": "A estrutura administrativa portuguesa, que mantinha maior centralização, impediu o surgimento de oligarquias regionais poderosas.",
+      "c": "As políticas pombalinas criaram instituições educacionais que permitiram a integração da elite colonial brasileira.",
+      "d": "A vinda da família real para o Brasil consolidou uma unidade política que não se repetiu nas colônias espanholas.",
+      "e": "O protagonismo assumido pelos meios de comunicação favoreceu o reconhecimento da unidade territorial da nação brasileira."
+    },
+    "images": [],
+    "tags": [
+      "história do brasil colonial",
+      "história moderna"
+    ],
+    "difficulty": 5,
+    "year": 2021,
+    "test": "ENEM",
+    "area": "humanas",
+    "answer": "a"
+  },
+  {
+    "number": 78,
+    "text": "O texto II apresenta argumentos que contradizem a interpretação do texto I sobre as revoltas camponesas na Inglaterra durante o século XVI. A partir dessa contradição, qual é a interpretação mais adequada sobre as causas das revoltas?",
+    "alternatives": {
+      "a": "As revoltas foram exclusivamente motivadas por questões religiosas e não econômicas.",
+      "b": "Os cercamentos causaram empobrecimento e rebeliões contra a miséria resultante.",
+      "c": "As revoltas representavam um movimento unificado de toda a população inglesa contra o Estado.",
+      "d": "Os camponeses se revoltaram principalmente contra o aumento de impostos sobre a terra.",
+      "e": "As causas das revoltas eram puramente políticas e ligadas à sucessão monárquica."
+    },
+    "images": [],
+    "tags": [
+      "história moderna",
+      "história do brasil república"
+    ],
+    "difficulty": 6,
+    "year": 2021,
+    "test": "ENEM",
+    "area": "humanas",
+    "answer": "a",
+    "contextIds": [
+      "enem_2021_humanas_ctx1",
+      "enem_2021_humanas_ctx2"
+    ]
+  },
+  {
+    "number": 79,
+    "text": "As grandes empresas seriam, certamente, capazes de alavancar o desenvolvimento econômico local. Porém, o que se observa em muitos casos é a ideia de enclave: plantas industriais que estabelecem relações escassas com o entorno, mas geram lucros que são transferidos para fora da região. Qual das seguintes afirmativas melhor descreve as consequências dessa dinâmica para o desenvolvimento regional?",
+    "alternatives": {
+      "a": "A concentração de renda nas mãos das empresas multinacionais promove o desenvolvimento sustentável local.",
+      "b": "A transferência de lucros para fora da região impede o reinvestimento local e limita o crescimento econômico regional.",
+      "c": "O modelo de enclave industrial garante o desenvolvimento equilibrado entre a empresa e a comunidade local.",
+      "d": "As relações escassas com o entorno são benéficas para manter a competitividade da empresa no mercado global.",
+      "e": "A ausência de integração com a economia local é uma estratégia que maximiza os benefícios sociais regionais."
+    },
+    "images": [],
+    "tags": [
+      "geografia humana e urbana",
+      "geopolítica e território",
+      "sociologia e estrutura social"
+    ],
+    "difficulty": 6,
+    "year": 2021,
+    "test": "ENEM",
+    "area": "humanas",
+    "answer": "e"
+  },
+  {
+    "number": 80,
+    "text": "De acordo com a perspectiva apresentada, central na análise sociológica é:",
+    "alternatives": {
+      "a": "razão instrumental como meio de organização social",
+      "b": "antagonismo de classes como motor das transformações sociais",
+      "c": "descompassos na construção de quadro institucional moderno",
+      "d": "ilegitimidade na atuação dos movimentos de contestação social",
+      "e": "vantagem comparativa na competição entre nações no mercado global"
+    },
+    "images": [],
+    "tags": [
+      "filosofia moderna e contemporânea",
+      "sociologia e estrutura social"
+    ],
+    "difficulty": 5,
+    "year": 2021,
+    "test": "ENEM",
+    "area": "humanas",
+    "answer": "c"
+  },
+  {
+    "number": 81,
+    "text": "A partir do Manifesto dos Pioneiros da Educação Nova de 1932, qual era a proposta para a educação brasileira?",
+    "alternatives": {
+      "a": "Manutenção do sistema educacional tradicional, com foco apenas nas elites sociais",
+      "b": "Recrutamento de capacidades em todos os grupos sociais, com oportunidades igualitárias de educação",
+      "c": "Restrição da educação aos setores industriais e comerciais",
+      "d": "Centralização do poder educacional nas mãos do Estado, sem participação da sociedade civil",
+      "e": "Abandono do modelo educacional e retorno aos métodos coloniais"
+    },
+    "images": [],
+    "tags": [
+      "história do brasil república",
+      "filosofia moderna e contemporânea"
+    ],
+    "difficulty": 6,
+    "year": 2021,
+    "test": "ENEM",
+    "area": "humanas",
+    "answer": "b"
+  },
+  {
+    "number": 83,
+    "text": "O texto apresenta uma análise sobre qual aspecto da sociedade colonial brasileira?",
+    "alternatives": {
+      "a": "A estrutura política e administrativa da colonização portuguesa",
+      "b": "A organização social e as relações de poder entre colonos e indígenas",
+      "c": "A economia agrária e a exploração de recursos naturais",
+      "d": "A influência cultural e religiosa nas práticas cotidianas",
+      "e": "A resistência e mobilização das populações locais contra o domínio colonial"
+    },
+    "images": [],
+    "tags": [
+      "história do brasil colonial",
+      "sociologia e estrutura social"
+    ],
+    "difficulty": 5,
+    "year": 2021,
+    "test": "ENEM",
+    "area": "humanas",
+    "answer": "a"
+  },
+  {
+    "number": 85,
+    "text": "O anúncio de fuga de escravo publicado no Jornal Correio Paulistano apresenta características que revelam aspectos da sociedade escravocrata brasileira do século XIX. A partir da leitura do documento, qual é a principal função social desse tipo de publicação?",
+    "alternatives": {
+      "a": "Informar a população sobre a localização exata das fazendas onde havia escravos fugidos.",
+      "b": "Descrever detalhadamente características físicas para facilitar a recaptura de pessoas escravizadas.",
+      "c": "Permitir que escravos fugidos pudessem se comunicar com seus familiares através do jornal.",
+      "d": "Registrar historicamente a vida e as profissões dos escravos que conseguiam se libertar.",
+      "e": "Conscientizar a população sobre a ilegalidade do sistema escravocrata vigente."
+    },
+    "images": [],
+    "tags": [
+      "história do brasil império",
+      "cultura e identidade"
+    ],
+    "difficulty": 6,
+    "year": 2021,
+    "test": "ENEM",
+    "area": "humanas",
+    "answer": "a",
+    "contextId": "enem_2021_humanas_ctx1"
+  },
+  {
+    "number": 87,
+    "text": "Aprender a viver",
+    "alternatives": {
+      "a": "co &(",
+      "b": "im (*",
+      "c": "as",
+      "d": "co",
+      "e": "co"
+    },
+    "images": [],
+    "tags": [
+      "filosofia moderna e contemporânea",
+      "ética e política"
+    ],
+    "difficulty": 5,
+    "year": 2021,
+    "test": "ENEM",
+    "area": "humanas",
+    "answer": "e"
+  },
+  {
+    "number": 88,
+    "text": "A passagem apresenta uma reflexão sobre a vida virtuosa segundo a perspectiva cristã medieval. Qual é a principal orientação que o texto oferece sobre o comportamento e os desejos humanos?",
+    "alternatives": {
+      "a": "Reprimir completamente os sentidos e ignorar as necessidades do corpo.",
+      "b": "Equilibrar os prazeres dos sentidos com as exigências da fé cristã.",
+      "c": "Contentar-se com pouco e deleitar-se com a simplicidade.",
+      "d": "Rejeitar qualquer forma de satisfação material em favor da espiritualidade.",
+      "e": "Buscar a sabedoria através da mortificação extrema e do sofrimento."
+    },
+    "images": [],
+    "tags": [
+      "filosofia moderna e contemporânea",
+      "ética e política",
+      "história moderna"
+    ],
+    "difficulty": 6,
+    "year": 2021,
+    "test": "ENEM",
+    "area": "humanas",
+    "answer": "e",
+    "contextId": "enem_2021_humanas_ctx88"
+  },
+  {
+    "number": 89,
+    "text": "Movimento de equinócio e solstício.",
+    "alternatives": {
+      "a": "4",
+      "b": "4",
+      "c": "4",
+      "d": "4",
+      "e": "4"
+    },
+    "images": [],
+    "tags": [
+      "climatologia",
+      "geopolítica e território"
+    ],
+    "difficulty": 5,
+    "year": 2021,
+    "test": "ENEM",
+    "area": "humanas",
+    "answer": "b"
+  }
+]
