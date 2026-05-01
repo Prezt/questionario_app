@@ -1207,43 +1207,36 @@ export default function App() {
 
                 <div className="home-area-section">
                   <span className="home-filter-label">Estudar por área</span>
-                  {(['math', 'nature', 'linguagens', 'humanas']).map((area) => {
-                    const isOpen = expandedArea === area
-                    return (
-                      <div key={area} className="home-area-block">
+                  <div className="home-area-day-group">
+                    <span className="home-area-day-label">Dia 1</span>
+                    <div className="home-area-grid">
+                      {(['linguagens', 'humanas']).map((area) => (
                         <button
+                          key={area}
                           type="button"
-                          className={`home-area-pill home-area-pill--toggle${isOpen ? ' is-open' : ''}`}
-                          onClick={() => setExpandedArea(isOpen ? null : area)}
+                          className="home-area-pill"
+                          onClick={() => startAreaQuiz(area)}
                         >
-                          <span>{areaLabel(area)}</span>
-                          <span className="home-area-chevron">{isOpen ? '▾' : '▸'}</span>
+                          {areaLabel(area)}
                         </button>
-                        {isOpen && (
-                          <div className="home-area-tags">
-                            <button
-                              type="button"
-                              className="home-tag-pill home-tag-pill--all"
-                              onClick={() => startAreaQuiz(area)}
-                            >
-                              todas as questões
-                            </button>
-                            {(tagsByArea[area] ?? []).map(({ tag, count }) => (
-                              <button
-                                key={tag}
-                                type="button"
-                                className="home-tag-pill"
-                                onClick={() => startAreaQuiz(area, tag)}
-                              >
-                                {tag}
-                                <span className="home-tag-count">{count}</span>
-                              </button>
-                            ))}
-                          </div>
-                        )}
-                      </div>
-                    )
-                  })}
+                      ))}
+                    </div>
+                  </div>
+                  <div className="home-area-day-group">
+                    <span className="home-area-day-label">Dia 2</span>
+                    <div className="home-area-grid">
+                      {(['math', 'nature']).map((area) => (
+                        <button
+                          key={area}
+                          type="button"
+                          className="home-area-pill"
+                          onClick={() => startAreaQuiz(area)}
+                        >
+                          {areaLabel(area)}
+                        </button>
+                      ))}
+                    </div>
+                  </div>
                 </div>
               </>
             )}

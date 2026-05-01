@@ -20,7 +20,7 @@ LOGIN
 
 MODOS DE USO
 [x] Opcao de pausar o simulado
-[] Modo simulado (sem saber as respostas, correcao no fila)
+[x] Modo simulado (sem saber as respostas, correcao no fila)
 [x] Selecao de AREA
 [x] Selecao de MULTIPLOS ASSUNTOS
 [x] Selecao de PROVA COMPLETA (com timer)

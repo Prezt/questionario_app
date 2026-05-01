@@ -1165,10 +1165,13 @@
 .home-screen {
   position: relative;
   flex: 1;
+  min-height: 0;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  overflow: hidden;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  padding: 1rem 0;
 }
 
 .home-screen::before {
@@ -1213,6 +1216,7 @@
   max-width: 380px;
   width: calc(100% - 2rem);
   text-align: center;
+  margin: auto;
 }
 
 .home-logo-wrap {
@@ -1554,80 +1558,21 @@
   transform: scale(0.97);
 }
 
-.home-area-block {
+.home-area-day-group {
+  border: 1.5px solid var(--border);
+  border-radius: 0.65rem;
+  padding: 0.55rem 0.6rem 0.6rem;
   display: flex;
   flex-direction: column;
-  gap: 0;
+  gap: 0.4rem;
 }
 
-.home-area-pill--toggle {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border-radius: 0.5rem;
-  transition: border-color 0.15s, color 0.15s, background 0.15s, border-radius 0.15s;
-}
-
-.home-area-pill--toggle.is-open {
-  border-color: var(--accent);
-  color: var(--accent);
-  border-bottom-left-radius: 0;
-  border-bottom-right-radius: 0;
-  border-bottom-color: transparent;
-}
-
-.home-area-chevron {
-  font-size: 0.7rem;
-  opacity: 0.6;
-}
-
-.home-area-tags {
-  border: 1.5px solid var(--accent);
-  border-top: none;
-  border-bottom-left-radius: 0.5rem;
-  border-bottom-right-radius: 0.5rem;
-  padding: 0.6rem;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.35rem;
-  background: var(--surface);
-}
-
-.home-tag-pill {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.35rem;
-  padding: 0.3rem 0.65rem;
-  border-radius: 999px;
-  border: 1.5px solid var(--border);
-  background: transparent;
-  color: var(--text);
-  font-size: 0.75rem;
-  font-weight: 500;
-  cursor: pointer;
-  transition: border-color 0.12s, color 0.12s, background 0.12s;
-  line-height: 1.2;
-}
-
-.home-tag-pill:hover {
-  border-color: var(--accent);
-  color: var(--accent);
-}
-
-.home-tag-pill:active {
-  transform: scale(0.97);
-}
-
-.home-tag-pill--all {
-  border-style: dashed;
-  font-style: italic;
-}
-
-.home-tag-count {
+.home-area-day-label {
   font-size: 0.68rem;
-  opacity: 0.55;
-  font-weight: 400;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color: var(--text-soft);
 }
 
 .home-daily-btn {
