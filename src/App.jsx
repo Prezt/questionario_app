@@ -211,6 +211,8 @@ export default function App() {
   const [dailyChallengeLoading, setDailyChallengeLoading] = useState(false)
   const [dailyChallengeResult, setDailyChallengeResult] = useState(null) // {score, total} if already done today
   const [selectedArea, setSelectedArea] = useState(null) // 'math' | 'nature' | 'linguagens' | 'humanas'
+  const [selectedTag, setSelectedTag] = useState(null)   // unified tag string | null
+  const [expandedArea, setExpandedArea] = useState(null) // area panel open on home screen
   const [optionsOpen, setOptionsOpen] = useState(false)
 
   // Phase: 'home' | 'quiz' | 'summary' | 'login' | 'admin'
@@ -448,6 +450,25 @@ export default function App() {
     [questions, isDailyChallenge, selectedArea],
   )
 
+  // Tags available per area, with question counts, sorted by frequency
+  const tagsByArea = useMemo(() => {
+    const areas = ['math', 'nature', 'linguagens', 'humanas']
+    const counts = Object.fromEntries(areas.map((a) => [a, {}]))
+    for (const q of allQuestions) {
+      if (!counts[q.area]) continue
+      for (const tag of q.tags ?? []) {
+        counts[q.area][tag] = (counts[q.area][tag] ?? 0) + 1
+      }
+    }
+    const result = {}
+    for (const area of areas) {
+      result[area] = Object.entries(counts[area])
+        .map(([tag, count]) => ({ tag, count }))
+        .sort((a, b) => b.count - a.count)
+    }
+    return result
+  }, [allQuestions])
+
   // Reset pending selection, track question time, and manage context panel on navigation
   useEffect(() => {
     setPendingSelection(null)
@@ -574,7 +595,7 @@ export default function App() {
           dailyQuestionRefs: questions.map((q) => ({ area: q.area, year: q.year, test: q.test, number: q.number })),
         }
       : selectedArea
-        ? { isAreaMode: true, selectedArea, areaQuestionRefs: questions.map((q) => ({ area: q.area, year: q.year, test: q.test, number: q.number })) }
+        ? { isAreaMode: true, selectedArea, selectedTag, areaQuestionRefs: questions.map((q) => ({ area: q.area, year: q.year, test: q.test, number: q.number })) }
         : { selectedTest, selectedYear, selectedDay }
     savePausedSession({
       ...sessionData,
@@ -636,7 +657,7 @@ export default function App() {
           dailyQuestionRefs: questions.map((q) => ({ area: q.area, year: q.year, test: q.test, number: q.number })),
         }
       : selectedArea
-        ? { isAreaMode: true, selectedArea, areaQuestionRefs: questions.map((q) => ({ area: q.area, year: q.year, test: q.test, number: q.number })) }
+        ? { isAreaMode: true, selectedArea, selectedTag, areaQuestionRefs: questions.map((q) => ({ area: q.area, year: q.year, test: q.test, number: q.number })) }
         : { selectedTest, selectedYear, selectedDay }
     savePausedSession({
       ...sessionData,
@@ -649,7 +670,7 @@ export default function App() {
     startTimeRef.current   = null
     questionStartRef.current = null
     setPhase('home')
-  }, [question, totalElapsed, attempts, selectedTest, selectedYear, selectedDay, selectedArea, foreignLang])
+  }, [question, totalElapsed, attempts, selectedTest, selectedYear, selectedDay, selectedArea, selectedTag, foreignLang])
 
   const resumeQuiz = useCallback(() => {
     const saved = readPausedSession()
@@ -686,6 +707,7 @@ export default function App() {
       }
       sorted = resolved.filter((q) => !q.language || q.language === lang)
       setSelectedArea(saved.selectedArea)
+      setSelectedTag(saved.selectedTag ?? null)
     } else {
       const areas    = DAY_AREAS[saved.selectedDay]
       const filtered = allQuestions.filter((q) =>
@@ -740,6 +762,7 @@ export default function App() {
     setSelectedDay(null)
     setIsDailyChallenge(false)
     setSelectedArea(null)
+    setSelectedTag(null)
   }, [])
 
   const startQuiz = useCallback(() => {
@@ -870,8 +893,12 @@ export default function App() {
     }
   }, [allQuestions, token, foreignLang])
 
-  const startAreaQuiz = useCallback((area) => {
-    const pool = allQuestions.filter((q) => q.area === area && (!q.language || q.language === foreignLang))
+  const startAreaQuiz = useCallback((area, tag = null) => {
+    const pool = allQuestions.filter((q) =>
+      q.area === area &&
+      (!q.language || q.language === foreignLang) &&
+      (tag === null || q.tags?.includes(tag))
+    )
     if (pool.length === 0) return
     const shuffled = [...pool]
     for (let i = shuffled.length - 1; i > 0; i--) {
@@ -884,6 +911,8 @@ export default function App() {
     setAttempts({})
     saveAttemptsToSession({})
     setSelectedArea(area)
+    setSelectedTag(tag)
+    setExpandedArea(null)
     setIsDailyChallenge(false)
     const now = Date.now()
     startTimeRef.current = now
@@ -1022,6 +1051,7 @@ export default function App() {
               <div className="paused-info">
                 <p className="paused-info-line">
                   <strong>{pausedSession.isAreaMode ? areaLabel(pausedSession.selectedArea) : `${pausedSession.selectedTest} ${pausedSession.selectedYear}`}</strong>
+                  {pausedSession.isAreaMode && pausedSession.selectedTag && <>{' '}— {pausedSession.selectedTag}</>}
                   {!pausedSession.isAreaMode && <>{' '}— Dia {pausedSession.selectedDay}</>}
                 </p>
                 <p className="paused-info-line paused-info-sub">
@@ -1177,18 +1207,43 @@ export default function App() {
 
                 <div className="home-area-section">
                   <span className="home-filter-label">Estudar por área</span>
-                  <div className="home-area-grid">
-                    {(['math', 'nature', 'linguagens', 'humanas']).map((area) => (
-                      <button
-                        key={area}
-                        type="button"
-                        className="home-area-pill"
-                        onClick={() => startAreaQuiz(area)}
-                      >
-                        {areaLabel(area)}
-                      </button>
-                    ))}
-                  </div>
+                  {(['math', 'nature', 'linguagens', 'humanas']).map((area) => {
+                    const isOpen = expandedArea === area
+                    return (
+                      <div key={area} className="home-area-block">
+                        <button
+                          type="button"
+                          className={`home-area-pill home-area-pill--toggle${isOpen ? ' is-open' : ''}`}
+                          onClick={() => setExpandedArea(isOpen ? null : area)}
+                        >
+                          <span>{areaLabel(area)}</span>
+                          <span className="home-area-chevron">{isOpen ? '▾' : '▸'}</span>
+                        </button>
+                        {isOpen && (
+                          <div className="home-area-tags">
+                            <button
+                              type="button"
+                              className="home-tag-pill home-tag-pill--all"
+                              onClick={() => startAreaQuiz(area)}
+                            >
+                              todas as questões
+                            </button>
+                            {(tagsByArea[area] ?? []).map(({ tag, count }) => (
+                              <button
+                                key={tag}
+                                type="button"
+                                className="home-tag-pill"
+                                onClick={() => startAreaQuiz(area, tag)}
+                              >
+                                {tag}
+                                <span className="home-tag-count">{count}</span>
+                              </button>
+                            ))}
+                          </div>
+                        )}
+                      </div>
+                    )
+                  })}
                 </div>
               </>
             )}
@@ -1385,6 +1440,26 @@ export default function App() {
 
     const weakTags = tagList.filter((t) => t.hitRate < 60)
 
+    // ── Subject diagnosis ────────────────────────────────────────────────────
+    // Reference: 1.5× the session average time (min 120s) marks "slow"
+    const slowThreshold = Math.max(120, Math.round(avgTime * 1.5))
+    const diagnosis = {
+      mastery: [],    // ≥ 70% correct AND not slow
+      slow:    [],    // ≥ 70% correct BUT slow
+      weak:    [],    // < 70% correct (sorted worst first)
+    }
+    tagList.forEach((t) => {
+      if (t.hitRate >= 70) {
+        if (t.avgTime > slowThreshold) diagnosis.slow.push(t)
+        else diagnosis.mastery.push(t)
+      } else {
+        diagnosis.weak.push(t)
+      }
+    })
+    // mastery sorted best first; weak sorted worst first (tagList already ascending hitRate)
+    diagnosis.mastery.sort((a, b) => b.hitRate - a.hitRate)
+    diagnosis.weak.sort((a, b) => a.hitRate - b.hitRate)
+
     const insights = []
 
     // ── Completion insight ───────────────────────────────────────────────────
@@ -1519,6 +1594,67 @@ export default function App() {
                 <p className="summary-insight-msg">{insight.msg}</p>
               </div>
             ))}
+
+            {tagList.length > 0 && (
+              <div className="summary-diagnosis">
+                <h2 className="summary-section-title">Diagnóstico de assuntos</h2>
+
+                {diagnosis.mastery.length > 0 && (
+                  <div className="diag-group diag-group--mastery">
+                    <div className="diag-group-header">
+                      <span className="diag-group-icon">✓</span>
+                      <span className="diag-group-label">Você domina</span>
+                    </div>
+                    <div className="diag-chips">
+                      {diagnosis.mastery.map(({ tag, hitRate, avgTime: at }) => (
+                        <span key={tag} className="diag-chip diag-chip--mastery">
+                          <span className="diag-chip-tag">{tag}</span>
+                          <span className="diag-chip-meta">{hitRate}% · {formatTime(at)}/q</span>
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                )}
+
+                {diagnosis.slow.length > 0 && (
+                  <div className="diag-group diag-group--slow">
+                    <div className="diag-group-header">
+                      <span className="diag-group-icon">⏱</span>
+                      <span className="diag-group-label">Acerta mas demora</span>
+                    </div>
+                    <div className="diag-chips">
+                      {diagnosis.slow.map(({ tag, hitRate, avgTime: at }) => (
+                        <span key={tag} className="diag-chip diag-chip--slow">
+                          <span className="diag-chip-tag">{tag}</span>
+                          <span className="diag-chip-meta">{hitRate}% · {formatTime(at)}/q</span>
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                )}
+
+                {diagnosis.weak.length > 0 && (
+                  <div className="diag-group diag-group--weak">
+                    <div className="diag-group-header">
+                      <span className="diag-group-icon">↗</span>
+                      <span className="diag-group-label">Para reforçar</span>
+                    </div>
+                    <div className="diag-chips">
+                      {diagnosis.weak.map(({ tag, hitRate, avgTime: at }) => (
+                        <span key={tag} className="diag-chip diag-chip--weak">
+                          <span className="diag-chip-tag">{tag}</span>
+                          <span className="diag-chip-meta">{hitRate}% · {formatTime(at)}/q</span>
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                )}
+
+                {diagnosis.mastery.length === 0 && diagnosis.slow.length === 0 && diagnosis.weak.length === 0 && (
+                  <p className="diag-empty">Responda mais questões para ver seu diagnóstico.</p>
+                )}
+              </div>
+            )}
 
             {tagList.length > 0 && (
               <div className="summary-subjects-wrap">

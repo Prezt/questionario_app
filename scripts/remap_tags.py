@@ -1454,7 +1454,7 @@ def remap_tags(tags: list, area: str) -> list:
 # PROCESS ALL FILES
 # ─────────────────────────────────────────────────────────────────────────────
 changed_total = 0
-files = sorted(f for f in glob.glob("dist/*.json") if "manifest" not in f and "contexts" not in f)
+files = sorted(f for f in glob.glob("public/*.json") if "manifest" not in f and "contexts" not in f)
 
 for filepath in files:
     with open(filepath, "r", encoding="utf-8") as f:

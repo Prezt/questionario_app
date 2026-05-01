@@ -11,8 +11,7 @@
     },
     "images": [],
     "tags": [
-      "segurança veicular",
-      "física"
+      "mecânica newtoniana"
     ],
     "year": 2024,
     "test": "ENEM",
@@ -35,8 +34,8 @@
       "figuras/q092_2024_fig2.png"
     ],
     "tags": [
-      "química",
-      "energia"
+      "química geral e inorgânica",
+      "termoquímica e cinética"
     ],
     "year": 2024,
     "test": "ENEM",
@@ -56,8 +55,7 @@
     },
     "images": [],
     "tags": [
-      "química",
-      "ciência"
+      "química geral e inorgânica"
     ],
     "year": 2024,
     "test": "ENEM",
@@ -80,8 +78,7 @@
       "figuras/q094_2024_fig2.png"
     ],
     "tags": [
-      "química",
-      "reações ácido-base"
+      "química geral e inorgânica"
     ],
     "year": 2024,
     "test": "ENEM",
@@ -102,8 +99,7 @@
     "images": [],
     "tags": [
       "biotecnologia",
-      "clonagem",
-      "PCR"
+      "genética e hereditariedade"
     ],
     "year": 2024,
     "test": "ENEM",
@@ -126,9 +122,8 @@
       "figuras/q096_2024_fig2.png"
     ],
     "tags": [
-      "física",
-      "balanceamento",
-      "centro de massa"
+      "estequiometria",
+      "mecânica newtoniana"
     ],
     "year": 2024,
     "test": "ENEM",
@@ -148,9 +143,9 @@
     },
     "images": [],
     "tags": [
-      "soro caseiro",
-      "massa molar",
-      "nítrio"
+      "estequiometria",
+      "fisiologia humana",
+      "química geral e inorgânica"
     ],
     "year": 2024,
     "test": "ENEM",
@@ -174,7 +169,7 @@
     ],
     "tags": [
       "evolução",
-      "reprodução animal"
+      "fisiologia humana"
     ],
     "year": 2024,
     "test": "ENEM",
@@ -194,9 +189,8 @@
     },
     "images": [],
     "tags": [
-      "física",
-      "ondas",
-      "relatividade"
+      "física moderna",
+      "ondulatória e acústica"
     ],
     "year": 2024,
     "test": "ENEM",
@@ -219,9 +213,7 @@
       "figuras/q100_2024_fig2.png"
     ],
     "tags": [
-      "optica",
-      "espelhos",
-      "tecnologia"
+      "óptica"
     ],
     "year": 2024,
     "test": "ENEM",
@@ -245,9 +237,8 @@
       "figuras/q101_2024_fig3.png"
     ],
     "tags": [
-      "acústica",
-      "arquitetura",
-      "educação"
+      "direitos humanos e cidadania",
+      "ondulatória e acústica"
     ],
     "year": 2024,
     "test": "ENEM",
@@ -267,8 +258,8 @@
     },
     "images": [],
     "tags": [
-      "agricultura",
-      "química"
+      "ecologia",
+      "química geral e inorgânica"
     ],
     "year": 2024,
     "test": "ENEM",
@@ -291,8 +282,8 @@
       "figuras/q103_2024_fig2.png"
     ],
     "tags": [
-      "energia solar",
-      "transferência de calor"
+      "meio ambiente e sustentabilidade",
+      "termologia"
     ],
     "year": 2024,
     "test": "ENEM",
@@ -314,9 +305,9 @@
       "figuras/q104_2024_fig1.png"
     ],
     "tags": [
-      "saúde",
-      "urbanização",
-      "arboviroses"
+      "ecologia",
+      "fisiologia humana",
+      "microbiologia e imunologia"
     ],
     "year": 2024,
     "test": "ENEM",
@@ -336,9 +327,7 @@
     },
     "images": [],
     "tags": [
-      "microplásticos",
-      "poluentes",
-      "tecnologia"
+      "química geral e inorgânica"
     ],
     "year": 2024,
     "test": "ENEM",
@@ -358,9 +347,7 @@
     },
     "images": [],
     "tags": [
-      "raios-x",
-      "segurança-aeroportos",
-      "física"
+      "física nuclear e radioatividade"
     ],
     "year": 2024,
     "test": "ENEM",
@@ -380,8 +367,7 @@
     },
     "images": [],
     "tags": [
-      "biologia",
-      "química"
+      "química geral e inorgânica"
     ],
     "year": 2024,
     "test": "ENEM",
@@ -401,8 +387,7 @@
     },
     "images": [],
     "tags": [
-      "biologia",
-      "fisiologia muscular"
+      "fisiologia humana"
     ],
     "year": 2024,
     "test": "ENEM",
@@ -424,9 +409,8 @@
       "figuras/q110_2024_fig1.png"
     ],
     "tags": [
-      "serpentes",
-      "Amazônia",
-      "Cerrado"
+      "meio ambiente e sustentabilidade",
+      "zoologia"
     ],
     "year": 2024,
     "test": "ENEM",
@@ -446,8 +430,7 @@
     },
     "images": [],
     "tags": [
-      "artrópodes",
-      "exoesqueleto"
+      "zoologia"
     ],
     "year": 2024,
     "test": "ENEM",
@@ -469,8 +452,7 @@
       "figuras/q112_2024_fig1.png"
     ],
     "tags": [
-      "genética",
-      "hereditariedade"
+      "genética e hereditariedade"
     ],
     "year": 2024,
     "test": "ENEM",
@@ -492,9 +474,8 @@
       "figuras/q113_2024_fig1.png"
     ],
     "tags": [
-      "metabolismo",
-      "procariontes",
-      "ciclo do nitrogênio"
+      "citologia",
+      "ecologia"
     ],
     "year": 2024,
     "test": "ENEM",
@@ -518,9 +499,9 @@
       "figuras/q114_2024_fig3.png"
     ],
     "tags": [
-      "poluição",
-      "combustão interna",
-      "gases"
+      "ecologia",
+      "mecânica newtoniana",
+      "termologia"
     ],
     "year": 2024,
     "test": "ENEM",
@@ -542,9 +523,7 @@
       "figuras/q115_2024_fig1.png"
     ],
     "tags": [
-      "biologia",
-      "celular",
-      "experimento"
+      "citologia"
     ],
     "year": 2024,
     "test": "ENEM",
@@ -564,8 +543,7 @@
     },
     "images": [],
     "tags": [
-      "química",
-      "processos-industriais"
+      "química geral e inorgânica"
     ],
     "year": 2024,
     "test": "ENEM",
@@ -587,8 +565,8 @@
       "figuras/q117_2024_fig1.png"
     ],
     "tags": [
-      "anfíbios",
-      "ecologia urbana"
+      "geografia humana e urbana",
+      "zoologia"
     ],
     "year": 2024,
     "test": "ENEM",
@@ -610,8 +588,8 @@
       "figuras/q118_2024_fig1.png"
     ],
     "tags": [
-      "química",
-      "odontologia"
+      "fisiologia humana",
+      "química geral e inorgânica"
     ],
     "year": 2024,
     "test": "ENEM",
@@ -634,9 +612,8 @@
       "figuras/q119_2024_fig2.png"
     ],
     "tags": [
-      "física",
-      "corrente marinha",
-      "maratonas aquáticas"
+      "climatologia",
+      "fisiologia humana"
     ],
     "year": 2024,
     "test": "ENEM",
@@ -656,8 +633,8 @@
     },
     "images": [],
     "tags": [
-      "virologia",
-      "sistema imunológico"
+      "fisiologia humana",
+      "microbiologia e imunologia"
     ],
     "year": 2024,
     "test": "ENEM",
@@ -680,8 +657,7 @@
       "figuras/q121_2024_fig2.png"
     ],
     "tags": [
-      "física",
-      "força gravitacional"
+      "mecânica newtoniana"
     ],
     "year": 2024,
     "test": "ENEM",
@@ -701,9 +677,7 @@
     },
     "images": [],
     "tags": [
-      "física",
-      "temperatura",
-      "isolamento térmico"
+      "termologia"
     ],
     "year": 2024,
     "test": "ENEM",
@@ -726,9 +700,9 @@
       "figuras/q123_2024_fig2.png"
     ],
     "tags": [
-      "química",
-      "agricultura",
-      "sustentabilidade"
+      "ecologia",
+      "meio ambiente e sustentabilidade",
+      "química geral e inorgânica"
     ],
     "year": 2024,
     "test": "ENEM",
@@ -751,8 +725,8 @@
       "figuras/q124_2024_fig2.png"
     ],
     "tags": [
-      "bacteriologia",
-      "metabolismo energético"
+      "citologia",
+      "microbiologia e imunologia"
     ],
     "year": 2024,
     "test": "ENEM",
@@ -777,8 +751,7 @@
       "figuras/q125_2024_fig4.png"
     ],
     "tags": [
-      "física",
-      "química"
+      "química geral e inorgânica"
     ],
     "year": 2024,
     "test": "ENEM",
@@ -798,9 +771,7 @@
     },
     "images": [],
     "tags": [
-      "vacinas",
-      "coronavírus",
-      "ciência"
+      "microbiologia e imunologia"
     ],
     "year": 2024,
     "test": "ENEM",
@@ -828,8 +799,7 @@
       "figuras/q127_2024_fig7.png"
     ],
     "tags": [
-      "física",
-      "eletricidade"
+      "eletricidade e magnetismo"
     ],
     "year": 2024,
     "test": "ENEM",
@@ -852,9 +822,9 @@
       "figuras/q128_2024_fig2.png"
     ],
     "tags": [
-      "energia",
-      "grafeno",
-      "chuva"
+      "climatologia",
+      "eletricidade e magnetismo",
+      "termoquímica e cinética"
     ],
     "year": 2024,
     "test": "ENEM",
@@ -874,8 +844,7 @@
     },
     "images": [],
     "tags": [
-      "ciencias-da-natureza",
-      "energia"
+      "termoquímica e cinética"
     ],
     "year": 2024,
     "test": "ENEM",
@@ -898,9 +867,8 @@
       "figuras/q130_2024_fig2.png"
     ],
     "tags": [
-      "física",
-      "energia",
-      "motor de combustão interna"
+      "mecânica newtoniana",
+      "termoquímica e cinética"
     ],
     "year": 2024,
     "test": "ENEM",
@@ -920,9 +888,8 @@
     },
     "images": [],
     "tags": [
-      "eletrônica",
-      "circuito",
-      "LED"
+      "eletricidade e magnetismo",
+      "óptica"
     ],
     "year": 2024,
     "test": "ENEM",
@@ -948,8 +915,7 @@
       "figuras/q132_2024_fig5.png"
     ],
     "tags": [
-      "física",
-      "circuito elétrico"
+      "eletricidade e magnetismo"
     ],
     "year": 2024,
     "test": "ENEM",
@@ -973,9 +939,9 @@
       "figuras/q133_2024_fig3.png"
     ],
     "tags": [
-      "energia",
-      "biogás",
-      "metano"
+      "ecologia",
+      "química geral e inorgânica",
+      "termoquímica e cinética"
     ],
     "year": 2024,
     "test": "ENEM",
@@ -997,8 +963,8 @@
       "figuras/q134_2024_fig1.png"
     ],
     "tags": [
-      "fitorremediação",
-      "mercúrio"
+      "ecologia",
+      "química geral e inorgânica"
     ],
     "year": 2024,
     "test": "ENEM",
@@ -1018,9 +984,8 @@
     },
     "images": [],
     "tags": [
-      "reciclagem",
-      "alumínio",
-      "bauxita"
+      "ecologia",
+      "química geral e inorgânica"
     ],
     "year": 2024,
     "test": "ENEM",

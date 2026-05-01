@@ -21,7 +21,8 @@
     "test": "ENEM",
     "area": "linguagens",
     "language": "en",
-    "answer": "c"
+    "answer": "c",
+    "difficulty": 3
   },
   {
     "number": 2,
@@ -43,7 +44,8 @@
     "test": "ENEM",
     "area": "linguagens",
     "language": "en",
-    "answer": "a"
+    "answer": "a",
+    "difficulty": 3
   },
   {
     "number": 3,
@@ -67,7 +69,8 @@
     "test": "ENEM",
     "area": "linguagens",
     "language": "en",
-    "answer": "a"
+    "answer": "a",
+    "difficulty": 4
   },
   {
     "number": 4,
@@ -88,7 +91,8 @@
     "test": "ENEM",
     "area": "linguagens",
     "language": "en",
-    "answer": "a"
+    "answer": "a",
+    "difficulty": 4
   },
   {
     "number": 5,
@@ -111,7 +115,8 @@
     "test": "ENEM",
     "area": "linguagens",
     "language": "en",
-    "answer": "e"
+    "answer": "e",
+    "difficulty": 3
   },
   {
     "number": 1,
@@ -133,7 +138,8 @@
     "test": "ENEM",
     "area": "linguagens",
     "language": "es",
-    "answer": "c"
+    "answer": "c",
+    "difficulty": 5
   },
   {
     "number": 2,
@@ -154,7 +160,8 @@
     "test": "ENEM",
     "area": "linguagens",
     "language": "es",
-    "answer": "d"
+    "answer": "d",
+    "difficulty": 4
   },
   {
     "number": 3,
@@ -176,7 +183,8 @@
     "test": "ENEM",
     "area": "linguagens",
     "language": "es",
-    "answer": "d"
+    "answer": "d",
+    "difficulty": 5
   },
   {
     "number": 4,
@@ -198,7 +206,8 @@
     "test": "ENEM",
     "area": "linguagens",
     "language": "es",
-    "answer": "d"
+    "answer": "d",
+    "difficulty": 5
   },
   {
     "number": 5,
@@ -220,7 +229,8 @@
     "test": "ENEM",
     "area": "linguagens",
     "language": "es",
-    "answer": "a"
+    "answer": "a",
+    "difficulty": 5
   },
   {
     "number": 6,
@@ -240,7 +250,8 @@
     "year": 2024,
     "test": "ENEM",
     "area": "linguagens",
-    "answer": "e"
+    "answer": "e",
+    "difficulty": 3
   },
   {
     "number": 7,
@@ -260,7 +271,8 @@
     "year": 2024,
     "test": "ENEM",
     "area": "linguagens",
-    "answer": "c"
+    "answer": "c",
+    "difficulty": 3
   },
   {
     "number": 8,
@@ -279,7 +291,8 @@
     "year": 2024,
     "test": "ENEM",
     "area": "linguagens",
-    "answer": "b"
+    "answer": "b",
+    "difficulty": 5
   },
   {
     "number": 9,
@@ -300,7 +313,8 @@
     "year": 2024,
     "test": "ENEM",
     "area": "linguagens",
-    "answer": "e"
+    "answer": "e",
+    "difficulty": 3
   },
   {
     "number": 10,
@@ -320,7 +334,8 @@
     "year": 2024,
     "test": "ENEM",
     "area": "linguagens",
-    "answer": "c"
+    "answer": "c",
+    "difficulty": 3
   },
   {
     "number": 11,
@@ -339,7 +354,8 @@
     "year": 2024,
     "test": "ENEM",
     "area": "linguagens",
-    "answer": "e"
+    "answer": "e",
+    "difficulty": 5
   },
   {
     "number": 12,
@@ -359,7 +375,8 @@
     "year": 2024,
     "test": "ENEM",
     "area": "linguagens",
-    "answer": "d"
+    "answer": "d",
+    "difficulty": 5
   },
   {
     "number": 13,
@@ -379,7 +396,8 @@
     "year": 2024,
     "test": "ENEM",
     "area": "linguagens",
-    "answer": "d"
+    "answer": "d",
+    "difficulty": 3
   },
   {
     "number": 14,
@@ -398,7 +416,8 @@
     "year": 2024,
     "test": "ENEM",
     "area": "linguagens",
-    "answer": "c"
+    "answer": "c",
+    "difficulty": 3
   },
   {
     "number": 15,
@@ -417,7 +436,8 @@
     "year": 2024,
     "test": "ENEM",
     "area": "linguagens",
-    "answer": "b"
+    "answer": "b",
+    "difficulty": 4
   },
   {
     "number": 16,
@@ -437,7 +457,8 @@
     "year": 2024,
     "test": "ENEM",
     "area": "linguagens",
-    "answer": "d"
+    "answer": "d",
+    "difficulty": 6
   },
   {
     "number": 17,
@@ -456,7 +477,8 @@
     "year": 2024,
     "test": "ENEM",
     "area": "linguagens",
-    "answer": "e"
+    "answer": "e",
+    "difficulty": 3
   },
   {
     "number": 18,
@@ -476,7 +498,8 @@
     "year": 2024,
     "test": "ENEM",
     "area": "linguagens",
-    "answer": "d"
+    "answer": "d",
+    "difficulty": 4
   },
   {
     "number": 19,
@@ -497,7 +520,8 @@
     "year": 2024,
     "test": "ENEM",
     "area": "linguagens",
-    "answer": "d"
+    "answer": "d",
+    "difficulty": 7
   },
   {
     "number": 20,
@@ -517,7 +541,8 @@
     "year": 2024,
     "test": "ENEM",
     "area": "linguagens",
-    "answer": "c"
+    "answer": "c",
+    "difficulty": 6
   },
   {
     "number": 21,
@@ -539,7 +564,8 @@
     "year": 2024,
     "test": "ENEM",
     "area": "linguagens",
-    "answer": "e"
+    "answer": "e",
+    "difficulty": 7
   },
   {
     "number": 22,
@@ -560,7 +586,8 @@
     "year": 2024,
     "test": "ENEM",
     "area": "linguagens",
-    "answer": "c"
+    "answer": "c",
+    "difficulty": 7
   },
   {
     "number": 23,
@@ -580,7 +607,8 @@
     "year": 2024,
     "test": "ENEM",
     "area": "linguagens",
-    "answer": "b"
+    "answer": "b",
+    "difficulty": 5
   },
   {
     "number": 24,
@@ -600,7 +628,8 @@
     "year": 2024,
     "test": "ENEM",
     "area": "linguagens",
-    "answer": "d"
+    "answer": "d",
+    "difficulty": 7
   },
   {
     "number": 25,
@@ -622,7 +651,8 @@
     "year": 2024,
     "test": "ENEM",
     "area": "linguagens",
-    "answer": "c"
+    "answer": "c",
+    "difficulty": 6
   },
   {
     "number": 26,
@@ -642,7 +672,8 @@
     "year": 2024,
     "test": "ENEM",
     "area": "linguagens",
-    "answer": "b"
+    "answer": "b",
+    "difficulty": 4
   },
   {
     "number": 27,
@@ -663,7 +694,8 @@
     "year": 2024,
     "test": "ENEM",
     "area": "linguagens",
-    "answer": "c"
+    "answer": "c",
+    "difficulty": 4
   },
   {
     "number": 28,
@@ -683,7 +715,8 @@
     "year": 2024,
     "test": "ENEM",
     "area": "linguagens",
-    "answer": "e"
+    "answer": "e",
+    "difficulty": 8
   },
   {
     "number": 29,
@@ -703,7 +736,8 @@
     "year": 2024,
     "test": "ENEM",
     "area": "linguagens",
-    "answer": "a"
+    "answer": "a",
+    "difficulty": 7
   },
   {
     "number": 30,
@@ -723,7 +757,8 @@
     "year": 2024,
     "test": "ENEM",
     "area": "linguagens",
-    "answer": "d"
+    "answer": "d",
+    "difficulty": 8
   },
   {
     "number": 31,
@@ -743,7 +778,8 @@
     "year": 2024,
     "test": "ENEM",
     "area": "linguagens",
-    "answer": "b"
+    "answer": "b",
+    "difficulty": 7
   },
   {
     "number": 32,
@@ -763,7 +799,8 @@
     "year": 2024,
     "test": "ENEM",
     "area": "linguagens",
-    "answer": "b"
+    "answer": "b",
+    "difficulty": 6
   },
   {
     "number": 33,
@@ -784,7 +821,8 @@
     "year": 2024,
     "test": "ENEM",
     "area": "linguagens",
-    "answer": "d"
+    "answer": "d",
+    "difficulty": 3
   },
   {
     "number": 34,
@@ -804,7 +842,8 @@
     "year": 2024,
     "test": "ENEM",
     "area": "linguagens",
-    "answer": "b"
+    "answer": "b",
+    "difficulty": 4
   },
   {
     "number": 35,
@@ -824,7 +863,8 @@
     "year": 2024,
     "test": "ENEM",
     "area": "linguagens",
-    "answer": "d"
+    "answer": "d",
+    "difficulty": 5
   },
   {
     "number": 36,
@@ -846,7 +886,8 @@
     "year": 2024,
     "test": "ENEM",
     "area": "linguagens",
-    "answer": "d"
+    "answer": "d",
+    "difficulty": 5
   },
   {
     "number": 37,
@@ -866,7 +907,8 @@
     "year": 2024,
     "test": "ENEM",
     "area": "linguagens",
-    "answer": "c"
+    "answer": "c",
+    "difficulty": 6
   },
   {
     "number": 38,
@@ -886,7 +928,8 @@
     "year": 2024,
     "test": "ENEM",
     "area": "linguagens",
-    "answer": "b"
+    "answer": "b",
+    "difficulty": 6
   },
   {
     "number": 39,
@@ -905,7 +948,8 @@
     "year": 2024,
     "test": "ENEM",
     "area": "linguagens",
-    "answer": "e"
+    "answer": "e",
+    "difficulty": 5
   },
   {
     "number": 40,
@@ -925,7 +969,8 @@
     "year": 2024,
     "test": "ENEM",
     "area": "linguagens",
-    "answer": "d"
+    "answer": "d",
+    "difficulty": 5
   },
   {
     "number": 41,
@@ -945,7 +990,8 @@
     "year": 2024,
     "test": "ENEM",
     "area": "linguagens",
-    "answer": "a"
+    "answer": "a",
+    "difficulty": 3
   },
   {
     "number": 42,
@@ -965,7 +1011,8 @@
     "year": 2024,
     "test": "ENEM",
     "area": "linguagens",
-    "answer": "d"
+    "answer": "d",
+    "difficulty": 6
   },
   {
     "number": 43,
@@ -986,7 +1033,8 @@
     "year": 2024,
     "test": "ENEM",
     "area": "linguagens",
-    "answer": "e"
+    "answer": "e",
+    "difficulty": 5
   },
   {
     "number": 44,
@@ -1005,7 +1053,8 @@
     "year": 2024,
     "test": "ENEM",
     "area": "linguagens",
-    "answer": "e"
+    "answer": "e",
+    "difficulty": 3
   },
   {
     "number": 45,
@@ -1025,6 +1074,7 @@
     "year": 2024,
     "test": "ENEM",
     "area": "linguagens",
-    "answer": "b"
+    "answer": "b",
+    "difficulty": 4
   }
 ]

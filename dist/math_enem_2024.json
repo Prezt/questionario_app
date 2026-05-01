@@ -17,7 +17,8 @@
     "year": 2024,
     "test": "ENEM",
     "area": "math",
-    "answer": "a"
+    "answer": "a",
+    "difficulty": 4
   },
   {
     "number": 137,
@@ -36,7 +37,8 @@
     "year": 2024,
     "test": "ENEM",
     "area": "math",
-    "answer": "b"
+    "answer": "b",
+    "difficulty": 3
   },
   {
     "number": 138,
@@ -59,7 +61,8 @@
     "year": 2024,
     "test": "ENEM",
     "area": "math",
-    "answer": "b"
+    "answer": "b",
+    "difficulty": 8
   },
   {
     "number": 139,
@@ -80,7 +83,8 @@
     "year": 2024,
     "test": "ENEM",
     "area": "math",
-    "answer": "a"
+    "answer": "a",
+    "difficulty": 4
   },
   {
     "number": 140,
@@ -99,7 +103,8 @@
     "year": 2024,
     "test": "ENEM",
     "area": "math",
-    "answer": "b"
+    "answer": "b",
+    "difficulty": 3
   },
   {
     "number": 141,
@@ -122,7 +127,8 @@
     "year": 2024,
     "test": "ENEM",
     "area": "math",
-    "answer": "b"
+    "answer": "b",
+    "difficulty": 6
   },
   {
     "number": 142,
@@ -143,7 +149,8 @@
     "year": 2024,
     "test": "ENEM",
     "area": "math",
-    "answer": "a"
+    "answer": "a",
+    "difficulty": 4
   },
   {
     "number": 143,
@@ -163,7 +170,8 @@
     "year": 2024,
     "test": "ENEM",
     "area": "math",
-    "answer": "d"
+    "answer": "d",
+    "difficulty": 7
   },
   {
     "number": 144,
@@ -185,7 +193,8 @@
     "year": 2024,
     "test": "ENEM",
     "area": "math",
-    "answer": "d"
+    "answer": "d",
+    "difficulty": 5
   },
   {
     "number": 145,
@@ -204,7 +213,8 @@
     "year": 2024,
     "test": "ENEM",
     "area": "math",
-    "answer": "d"
+    "answer": "d",
+    "difficulty": 2
   },
   {
     "number": 146,
@@ -227,7 +237,8 @@
     "year": 2024,
     "test": "ENEM",
     "area": "math",
-    "answer": "b"
+    "answer": "b",
+    "difficulty": 7
   },
   {
     "number": 147,
@@ -247,7 +258,8 @@
     "year": 2024,
     "test": "ENEM",
     "area": "math",
-    "answer": "b"
+    "answer": "b",
+    "difficulty": 4
   },
   {
     "number": 148,
@@ -271,7 +283,8 @@
     "year": 2024,
     "test": "ENEM",
     "area": "math",
-    "answer": "c"
+    "answer": "c",
+    "difficulty": 6
   },
   {
     "number": 149,
@@ -293,7 +306,8 @@
     "year": 2024,
     "test": "ENEM",
     "area": "math",
-    "answer": "e"
+    "answer": "e",
+    "difficulty": 5
   },
   {
     "number": 150,
@@ -316,7 +330,8 @@
     "year": 2024,
     "test": "ENEM",
     "area": "math",
-    "answer": "c"
+    "answer": "c",
+    "difficulty": 7
   },
   {
     "number": 151,
@@ -336,7 +351,8 @@
     "year": 2024,
     "test": "ENEM",
     "area": "math",
-    "answer": "e"
+    "answer": "e",
+    "difficulty": 4
   },
   {
     "number": 152,
@@ -360,7 +376,8 @@
     "year": 2024,
     "test": "ENEM",
     "area": "math",
-    "answer": "a"
+    "answer": "a",
+    "difficulty": 5
   },
   {
     "number": 153,
@@ -380,7 +397,8 @@
     "year": 2024,
     "test": "ENEM",
     "area": "math",
-    "answer": "d"
+    "answer": "d",
+    "difficulty": 1
   },
   {
     "number": 154,
@@ -399,7 +417,8 @@
     "year": 2024,
     "test": "ENEM",
     "area": "math",
-    "answer": "c"
+    "answer": "c",
+    "difficulty": 2
   },
   {
     "number": 155,
@@ -418,7 +437,8 @@
     "year": 2024,
     "test": "ENEM",
     "area": "math",
-    "answer": "e"
+    "answer": "e",
+    "difficulty": 5
   },
   {
     "number": 156,
@@ -440,7 +460,8 @@
     "year": 2024,
     "test": "ENEM",
     "area": "math",
-    "answer": "b"
+    "answer": "b",
+    "difficulty": 2
   },
   {
     "number": 157,
@@ -460,7 +481,8 @@
     "year": 2024,
     "test": "ENEM",
     "area": "math",
-    "answer": "c"
+    "answer": "c",
+    "difficulty": 3
   },
   {
     "number": 158,
@@ -481,7 +503,8 @@
     "year": 2024,
     "test": "ENEM",
     "area": "math",
-    "answer": "c"
+    "answer": "c",
+    "difficulty": 5
   },
   {
     "number": 159,
@@ -503,7 +526,8 @@
     "year": 2024,
     "test": "ENEM",
     "area": "math",
-    "answer": "c"
+    "answer": "c",
+    "difficulty": 4
   },
   {
     "number": 160,
@@ -524,7 +548,8 @@
     "year": 2024,
     "test": "ENEM",
     "area": "math",
-    "answer": "d"
+    "answer": "d",
+    "difficulty": 4
   },
   {
     "number": 161,
@@ -551,7 +576,8 @@
     "year": 2024,
     "test": "ENEM",
     "area": "math",
-    "answer": "b"
+    "answer": "b",
+    "difficulty": 8
   },
   {
     "number": 162,
@@ -573,7 +599,8 @@
     "year": 2024,
     "test": "ENEM",
     "area": "math",
-    "answer": "a"
+    "answer": "a",
+    "difficulty": 7
   },
   {
     "number": 163,
@@ -592,7 +619,8 @@
     "year": 2024,
     "test": "ENEM",
     "area": "math",
-    "answer": "d"
+    "answer": "d",
+    "difficulty": 7
   },
   {
     "number": 164,
@@ -615,7 +643,8 @@
     "year": 2024,
     "test": "ENEM",
     "area": "math",
-    "answer": "c"
+    "answer": "c",
+    "difficulty": 6
   },
   {
     "number": 165,
@@ -637,7 +666,8 @@
     "year": 2024,
     "test": "ENEM",
     "area": "math",
-    "answer": "b"
+    "answer": "b",
+    "difficulty": 6
   },
   {
     "number": 167,
@@ -653,12 +683,14 @@
       "figuras/q167_2024_fig1.png"
     ],
     "tags": [
+      "aritmética e números",
       "geometria plana"
     ],
     "year": 2024,
     "test": "ENEM",
     "area": "math",
-    "answer": "d"
+    "answer": "d",
+    "difficulty": 5
   },
   {
     "number": 168,
@@ -683,7 +715,8 @@
     "year": 2024,
     "test": "ENEM",
     "area": "math",
-    "answer": "a"
+    "answer": "a",
+    "difficulty": 5
   },
   {
     "number": 169,
@@ -703,7 +736,8 @@
     "year": 2024,
     "test": "ENEM",
     "area": "math",
-    "answer": "e"
+    "answer": "e",
+    "difficulty": 5
   },
   {
     "number": 170,
@@ -723,7 +757,8 @@
     "year": 2024,
     "test": "ENEM",
     "area": "math",
-    "answer": "c"
+    "answer": "c",
+    "difficulty": 6
   },
   {
     "number": 171,
@@ -742,7 +777,8 @@
     "year": 2024,
     "test": "ENEM",
     "area": "math",
-    "answer": "a"
+    "answer": "a",
+    "difficulty": 7
   },
   {
     "number": 172,
@@ -764,7 +800,8 @@
     "year": 2024,
     "test": "ENEM",
     "area": "math",
-    "answer": "d"
+    "answer": "d",
+    "difficulty": 6
   },
   {
     "number": 173,
@@ -784,7 +821,8 @@
     "year": 2024,
     "test": "ENEM",
     "area": "math",
-    "answer": "a"
+    "answer": "a",
+    "difficulty": 5
   },
   {
     "number": 174,
@@ -812,7 +850,8 @@
     "year": 2024,
     "test": "ENEM",
     "area": "math",
-    "answer": "c"
+    "answer": "c",
+    "difficulty": 8
   },
   {
     "number": 175,
@@ -832,7 +871,8 @@
     "year": 2024,
     "test": "ENEM",
     "area": "math",
-    "answer": "d"
+    "answer": "d",
+    "difficulty": 6
   },
   {
     "number": 176,
@@ -854,7 +894,8 @@
     "year": 2024,
     "test": "ENEM",
     "area": "math",
-    "answer": "b"
+    "answer": "b",
+    "difficulty": 4
   },
   {
     "number": 177,
@@ -874,7 +915,8 @@
     "year": 2024,
     "test": "ENEM",
     "area": "math",
-    "answer": "c"
+    "answer": "c",
+    "difficulty": 4
   },
   {
     "number": 178,
@@ -893,6 +935,7 @@
     "year": 2024,
     "test": "ENEM",
     "area": "math",
-    "answer": "e"
+    "answer": "e",
+    "difficulty": 2
   }
 ]
