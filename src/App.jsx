@@ -188,6 +188,13 @@ export default function App() {
     const saved = localStorage.getItem('randomize-alts')
     return saved === null ? true : saved === 'true'
   })
+  const [showDifficulty, setShowDifficulty] = useState(() => {
+    return localStorage.getItem('show-difficulty') === 'true'
+  })
+  const [showAnswer, setShowAnswer] = useState(() => {
+    const saved = localStorage.getItem('show-answer')
+    return saved === null ? true : saved === 'true'
+  })
   const [notebookOpen, setNotebookOpen] = useState(false)
   const [pendingSelection, setPendingSelection] = useState(null)
   const [contextExpanded, setContextExpanded] = useState({}) // { [contextId]: boolean }
@@ -1217,6 +1224,34 @@ export default function App() {
                   <span className="options-toggle-thumb" />
                 </span>
               </label>
+              <label className="options-toggle-row">
+                <span className="options-toggle-label">Mostrar resposta</span>
+                <span className={`options-toggle-switch${showAnswer ? ' on' : ''}`}>
+                  <input
+                    type="checkbox"
+                    checked={showAnswer}
+                    onChange={(e) => {
+                      setShowAnswer(e.target.checked)
+                      localStorage.setItem('show-answer', e.target.checked)
+                    }}
+                  />
+                  <span className="options-toggle-thumb" />
+                </span>
+              </label>
+              <label className="options-toggle-row">
+                <span className="options-toggle-label">Mostrar dificuldade</span>
+                <span className={`options-toggle-switch${showDifficulty ? ' on' : ''}`}>
+                  <input
+                    type="checkbox"
+                    checked={showDifficulty}
+                    onChange={(e) => {
+                      setShowDifficulty(e.target.checked)
+                      localStorage.setItem('show-difficulty', e.target.checked)
+                    }}
+                  />
+                  <span className="options-toggle-thumb" />
+                </span>
+              </label>
               {user?.username === 'admin' && (
                 <button
                   type="button"
@@ -1638,6 +1673,12 @@ export default function App() {
                     {areaLabel(question.area) && (
                       <span className="badge badge-area">{areaLabel(question.area)}</span>
                     )}
+                    {showDifficulty && question.difficulty != null && (() => {
+                      const d = question.difficulty
+                      const label = d <= 3 ? 'Fácil' : d <= 6 ? 'Médio' : 'Difícil'
+                      const cls = d <= 3 ? 'easy' : d <= 6 ? 'medium' : 'hard'
+                      return <span className={`badge badge-difficulty badge-difficulty--${cls}`}>{label}</span>
+                    })()}
                   </div>
                   {question.language && langVariantsRef.current[question.number] && (
                     <div className="lang-toggle" aria-label="Escolha o idioma">
@@ -1731,8 +1772,8 @@ export default function App() {
                   <ul className="alternatives">
                     {displayAlts.map(({ displayLabel, origLetter, rawContent, altImg }) => {
                       const isPending = !selected && pendingSelection === origLetter
-                      const isConfirmedCorrect = selected !== null && origLetter === question.answer
-                      const isConfirmedWrong = selected !== null && origLetter === selected && !attempt?.correct
+                      const isConfirmedCorrect = showAnswer && selected !== null && origLetter === question.answer
+                      const isConfirmedWrong = showAnswer && selected !== null && origLetter === selected && !attempt?.correct
                       const stacked = Boolean(altImg)
                       const altCaption = stacked ? captionFromBracketText(rawContent) : ''
                       const altLabel = alternativeLabelForDisplay(rawContent, stacked)
@@ -1768,7 +1809,7 @@ export default function App() {
                     })}
                   </ul>
 
-                  {selected && attempt && (() => {
+                  {showAnswer && selected && attempt && (() => {
                     const correctLabel = (displayAlts.find(a => a.origLetter === question.answer)?.displayLabel ?? question.answer).toUpperCase()
                     const selectedLabel = (displayAlts.find(a => a.origLetter === selected)?.displayLabel ?? selected).toUpperCase()
                     return (
@@ -1831,7 +1872,8 @@ export default function App() {
               const att = attempts[q.number]
               const isCurrent = q.number === question.number
               let stateClass = 'question-rail-btn--idle'
-              if (att) stateClass = att.correct ? 'question-rail-btn--ok' : 'question-rail-btn--bad'
+              if (att && showAnswer) stateClass = att.correct ? 'question-rail-btn--ok' : 'question-rail-btn--bad'
+              else if (att) stateClass = 'question-rail-btn--answered'
               return (
                 <button
                   key={q.number}
@@ -1840,9 +1882,9 @@ export default function App() {
                   className={`question-rail-btn ${stateClass} ${isCurrent ? 'question-rail-btn--current' : ''}`}
                   onClick={() => goToQuestion(q)}
                   aria-current={isCurrent ? 'true' : undefined}
-                  aria-label={`Questão ${q.number}${att ? (att.correct ? ', correta' : ', incorreta') : ', não respondida'}`}
+                  aria-label={`Questão ${q.number}${att ? (showAnswer ? (att.correct ? ', correta' : ', incorreta') : ', respondida') : ', não respondida'}`}
                 >
-                  {att ? (att.correct ? '✓' : '✗') : (isDailyChallenge || selectedArea) ? idx + 1 : q.number}
+                  {att ? (showAnswer ? (att.correct ? '✓' : '✗') : '·') : (isDailyChallenge || selectedArea) ? idx + 1 : q.number}
                 </button>
               )
             })}

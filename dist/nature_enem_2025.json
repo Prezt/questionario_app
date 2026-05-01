@@ -13,9 +13,7 @@
       "figuras/q91_carvao.png"
     ],
     "tags": [
-      "química",
-      "adsorção",
-      "propriedades dos materiais"
+      "química geral e inorgânica"
     ],
     "year": 2025,
     "test": "ENEM",
@@ -34,10 +32,9 @@
     },
     "images": [],
     "tags": [
-      "biologia",
-      "genética",
-      "engenharia genética",
-      "ciclo circadiano"
+      "biotecnologia",
+      "fisiologia humana",
+      "genética e hereditariedade"
     ],
     "year": 2025,
     "test": "ENEM",
@@ -56,10 +53,8 @@
     },
     "images": [],
     "tags": [
-      "biologia",
-      "zoologia",
-      "aves",
-      "fisiologia animal"
+      "fisiologia humana",
+      "zoologia"
     ],
     "year": 2025,
     "test": "ENEM",
@@ -80,10 +75,7 @@
       "figuras/q94_regua.png"
     ],
     "tags": [
-      "física",
-      "eletricidade",
-      "potência elétrica",
-      "corrente elétrica"
+      "eletricidade e magnetismo"
     ],
     "year": 2025,
     "test": "ENEM",
@@ -102,10 +94,8 @@
     },
     "images": [],
     "tags": [
-      "física",
-      "termologia",
-      "transferência de calor",
-      "irradiação"
+      "física nuclear e radioatividade",
+      "termologia"
     ],
     "year": 2025,
     "test": "ENEM",
@@ -124,10 +114,8 @@
     },
     "images": [],
     "tags": [
-      "biologia",
       "ecologia",
-      "cadeia alimentar",
-      "toxicologia"
+      "microbiologia e imunologia"
     ],
     "year": 2025,
     "test": "ENEM",
@@ -148,10 +136,8 @@
       "figuras/q97_vacina.png"
     ],
     "tags": [
-      "biologia",
-      "imunologia",
-      "vacinas",
-      "sistema imune"
+      "fisiologia humana",
+      "microbiologia e imunologia"
     ],
     "year": 2025,
     "test": "ENEM",
@@ -170,11 +156,8 @@
     },
     "images": [],
     "tags": [
-      "biologia",
       "ecologia",
-      "biomas",
-      "espécies invasoras",
-      "Cerrado"
+      "meio ambiente e sustentabilidade"
     ],
     "year": 2025,
     "test": "ENEM",
@@ -193,10 +176,8 @@
     },
     "images": [],
     "tags": [
-      "biologia",
       "ecologia",
-      "biomas brasileiros",
-      "adaptação"
+      "evolução"
     ],
     "year": 2025,
     "test": "ENEM",
@@ -215,9 +196,8 @@
     },
     "images": [],
     "tags": [
-      "química",
-      "purificação de água",
-      "destilação"
+      "química geral e inorgânica",
+      "soluções e solubilidade"
     ],
     "year": 2025,
     "test": "ENEM",
@@ -236,10 +216,8 @@
     },
     "images": [],
     "tags": [
-      "biologia",
-      "anatomia",
-      "olho humano",
-      "fisiologia"
+      "fisiologia humana",
+      "óptica"
     ],
     "year": 2025,
     "test": "ENEM",
@@ -258,9 +236,8 @@
     },
     "images": [],
     "tags": [
-      "biologia",
-      "toxicologia",
-      "alimentação"
+      "fisiologia humana",
+      "microbiologia e imunologia"
     ],
     "year": 2025,
     "test": "ENEM",
@@ -279,10 +256,7 @@
     },
     "images": [],
     "tags": [
-      "biologia",
-      "citologia",
-      "organelas celulares",
-      "enzimas"
+      "citologia"
     ],
     "year": 2025,
     "test": "ENEM",
@@ -301,10 +275,8 @@
     },
     "images": [],
     "tags": [
-      "biologia",
       "ecologia",
-      "aquecimento global",
-      "meio ambiente"
+      "meio ambiente e sustentabilidade"
     ],
     "year": 2025,
     "test": "ENEM",
@@ -325,10 +297,9 @@
       "figuras/q105_usina.png"
     ],
     "tags": [
-      "física",
-      "química",
-      "energia nuclear",
-      "poluição térmica"
+      "física nuclear e radioatividade",
+      "química geral e inorgânica",
+      "termologia"
     ],
     "year": 2025,
     "test": "ENEM",
@@ -349,9 +320,7 @@
       "figuras/q106_foto.png"
     ],
     "tags": [
-      "química",
-      "notação química",
-      "história da química"
+      "química geral e inorgânica"
     ],
     "year": 2025,
     "test": "ENEM",
@@ -377,10 +346,7 @@
       "figuras/q107_alt_e.png"
     ],
     "tags": [
-      "biologia",
-      "genética",
-      "herança genética",
-      "cruzamento"
+      "genética e hereditariedade"
     ],
     "year": 2025,
     "test": "ENEM",
@@ -405,10 +371,7 @@
       "figuras/q108_alt_e.png"
     ],
     "tags": [
-      "física",
-      "mecânica",
-      "força de atrito",
-      "plano inclinado"
+      "mecânica newtoniana"
     ],
     "year": 2025,
     "test": "ENEM",
@@ -429,9 +392,8 @@
       "figuras/q109_estruturas.png"
     ],
     "tags": [
-      "química",
-      "química orgânica",
-      "reações orgânicas"
+      "química geral e inorgânica",
+      "química orgânica"
     ],
     "year": 2025,
     "test": "ENEM",
@@ -450,10 +412,8 @@
     },
     "images": [],
     "tags": [
-      "química",
-      "radioatividade",
-      "meia-vida",
-      "decaimento radioativo"
+      "física nuclear e radioatividade",
+      "química geral e inorgânica"
     ],
     "year": 2025,
     "test": "ENEM",
@@ -474,10 +434,8 @@
       "figuras/q111_biodigestao.png"
     ],
     "tags": [
-      "biologia",
       "ecologia",
-      "sustentabilidade",
-      "biodigestão"
+      "meio ambiente e sustentabilidade"
     ],
     "year": 2025,
     "test": "ENEM",
@@ -496,10 +454,8 @@
     },
     "images": [],
     "tags": [
-      "biologia",
-      "nutrição",
-      "vitaminas",
-      "engenharia genética"
+      "biotecnologia",
+      "fisiologia humana"
     ],
     "year": 2025,
     "test": "ENEM",
@@ -520,10 +476,7 @@
       "figuras/q113_tubo.png"
     ],
     "tags": [
-      "física",
-      "eletromagnetismo",
-      "campo elétrico",
-      "movimento de cargas"
+      "eletricidade e magnetismo"
     ],
     "year": 2025,
     "test": "ENEM",
@@ -544,10 +497,7 @@
       "figuras/q114_tirinha.png"
     ],
     "tags": [
-      "física",
-      "ondulatória",
-      "ressonância",
-      "som"
+      "ondulatória e acústica"
     ],
     "year": 2025,
     "test": "ENEM",
@@ -568,10 +518,8 @@
       "figuras/q115_borneol.png"
     ],
     "tags": [
-      "química",
-      "química orgânica",
-      "funções orgânicas",
-      "oxidação"
+      "química geral e inorgânica",
+      "química orgânica"
     ],
     "year": 2025,
     "test": "ENEM",
@@ -590,10 +538,8 @@
     },
     "images": [],
     "tags": [
-      "biologia",
       "ecologia",
-      "adaptação",
-      "biodiversidade"
+      "evolução"
     ],
     "year": 2025,
     "test": "ENEM",
@@ -612,9 +558,8 @@
     },
     "images": [],
     "tags": [
-      "química",
       "equilíbrio químico",
-      "princípio de Le Chatelier"
+      "química geral e inorgânica"
     ],
     "year": 2025,
     "test": "ENEM",
@@ -633,10 +578,7 @@
     },
     "images": [],
     "tags": [
-      "física",
-      "hidrostática",
-      "pressão",
-      "densidade"
+      "mecânica newtoniana"
     ],
     "year": 2025,
     "test": "ENEM",
@@ -662,10 +604,7 @@
       "figuras/q119_alt_e.png"
     ],
     "tags": [
-      "física",
-      "eletricidade",
-      "geradores",
-      "associação de circuitos"
+      "eletricidade e magnetismo"
     ],
     "year": 2025,
     "test": "ENEM",
@@ -686,10 +625,7 @@
       "figuras/q120_sensor.png"
     ],
     "tags": [
-      "física",
-      "cinemática",
-      "velocidade",
-      "tempo"
+      "mecânica newtoniana"
     ],
     "year": 2025,
     "test": "ENEM",
@@ -708,9 +644,7 @@
     },
     "images": [],
     "tags": [
-      "química",
-      "reações ácido-base",
-      "neutralização"
+      "química geral e inorgânica"
     ],
     "year": 2025,
     "test": "ENEM",
@@ -731,10 +665,7 @@
       "figuras/q122_inducao.png"
     ],
     "tags": [
-      "física",
-      "eletromagnetismo",
-      "indução eletromagnética",
-      "efeito Joule"
+      "eletricidade e magnetismo"
     ],
     "year": 2025,
     "test": "ENEM",
@@ -753,9 +684,8 @@
     },
     "images": [],
     "tags": [
-      "biologia",
-      "fotossíntese",
-      "bioquímica"
+      "botânica",
+      "citologia"
     ],
     "year": 2025,
     "test": "ENEM",
@@ -774,9 +704,8 @@
     },
     "images": [],
     "tags": [
-      "química",
       "eletroquímica",
-      "potencial de redução"
+      "química geral e inorgânica"
     ],
     "year": 2025,
     "test": "ENEM",
@@ -795,10 +724,9 @@
     },
     "images": [],
     "tags": [
-      "química",
       "estequiometria",
-      "gases ideais",
-      "rendimento"
+      "química geral e inorgânica",
+      "termologia"
     ],
     "year": 2025,
     "test": "ENEM",
@@ -819,10 +747,7 @@
       "figuras/q126_diagrama.png"
     ],
     "tags": [
-      "física",
-      "cinemática",
-      "vetores",
-      "movimento tridimensional"
+      "mecânica newtoniana"
     ],
     "year": 2025,
     "test": "ENEM",
@@ -847,10 +772,9 @@
       "figuras/q127_alt_e.png"
     ],
     "tags": [
-      "química",
-      "cinética química",
-      "enzimas",
-      "catálise"
+      "citologia",
+      "química geral e inorgânica",
+      "termoquímica e cinética"
     ],
     "year": 2025,
     "test": "ENEM",
@@ -871,10 +795,8 @@
       "figuras/q128_grafico.png"
     ],
     "tags": [
-      "física",
-      "termometria",
-      "leitura de gráficos",
-      "resistência elétrica"
+      "eletricidade e magnetismo",
+      "termologia"
     ],
     "year": 2025,
     "test": "ENEM",
@@ -893,9 +815,7 @@
     },
     "images": [],
     "tags": [
-      "biologia",
-      "parasitologia",
-      "doenças transmissíveis"
+      "microbiologia e imunologia"
     ],
     "year": 2025,
     "test": "ENEM",
@@ -920,10 +840,7 @@
       "figuras/q130_alt_e.png"
     ],
     "tags": [
-      "física",
-      "eletricidade",
-      "circuitos",
-      "resistores"
+      "eletricidade e magnetismo"
     ],
     "year": 2025,
     "test": "ENEM",
@@ -942,9 +859,8 @@
     },
     "images": [],
     "tags": [
-      "química",
       "estequiometria",
-      "reações químicas"
+      "química geral e inorgânica"
     ],
     "year": 2025,
     "test": "ENEM",
@@ -963,10 +879,7 @@
     },
     "images": [],
     "tags": [
-      "física",
-      "ondulatória",
-      "som",
-      "logaritmos"
+      "ondulatória e acústica"
     ],
     "year": 2025,
     "test": "ENEM",
@@ -987,9 +900,7 @@
       "figuras/q133_filtro.png"
     ],
     "tags": [
-      "química",
-      "polaridade",
-      "interações moleculares"
+      "química geral e inorgânica"
     ],
     "year": 2025,
     "test": "ENEM",
@@ -1010,10 +921,8 @@
       "figuras/q134_hormonios.png"
     ],
     "tags": [
-      "química",
-      "polaridade",
-      "solubilidade",
-      "interações intermoleculares"
+      "química geral e inorgânica",
+      "soluções e solubilidade"
     ],
     "year": 2025,
     "test": "ENEM",
@@ -1039,10 +948,8 @@
       "figuras/q135_alt_e.png"
     ],
     "tags": [
-      "física",
-      "óptica",
-      "espectro eletromagnético",
-      "fotoluminescência"
+      "eletricidade e magnetismo",
+      "óptica"
     ],
     "year": 2025,
     "test": "ENEM",

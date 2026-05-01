@@ -17,11 +17,12 @@
     "year": 2022,
     "test": "ENEM",
     "area": "math",
-    "answer": "e"
+    "answer": "e",
+    "difficulty": 6
   },
   {
     "number": 137,
-    "text": "A World Series é a decisão do campeonato norte-americano de beisebol. Considere que, em todas as partidas, a probabilidade de qualquer um dos dois times vencer é sempre 1/2. Qual é a probabilidade de o time campeão ser aquele que venceu a primeira partida da World Series?",
+    "text": "A World Series é a decisão do campeonato norte-americano de beisebol. Os dois times que chegam a essa fase jogam, entre si, até sete partidas. O primeiro desses times que completar quatro vitórias é declarado campeão.\nConsidere que, em todas as partidas, a probabilidade de qualquer um dos dois times vencer é sempre 1/2.\n\nQual é a probabilidade de o time campeão ser aquele que venceu a primeira partida da World Series?",
     "alternatives": {
       "a": "35",
       "b": "40",
@@ -37,7 +38,8 @@
     "year": 2022,
     "test": "ENEM",
     "area": "math",
-    "answer": "c"
+    "answer": "c",
+    "difficulty": 8
   },
   {
     "number": 138,
@@ -57,7 +59,8 @@
     "year": 2022,
     "test": "ENEM",
     "area": "math",
-    "answer": "d"
+    "answer": "d",
+    "difficulty": 6
   },
   {
     "number": 139,
@@ -77,7 +80,8 @@
     "year": 2022,
     "test": "ENEM",
     "area": "math",
-    "answer": "a"
+    "answer": "a",
+    "difficulty": 4
   },
   {
     "number": 140,
@@ -98,7 +102,8 @@
     "year": 2022,
     "test": "ENEM",
     "area": "math",
-    "answer": "b"
+    "answer": "b",
+    "difficulty": 7
   },
   {
     "number": 141,
@@ -118,7 +123,8 @@
     "year": 2022,
     "test": "ENEM",
     "area": "math",
-    "answer": "e"
+    "answer": "e",
+    "difficulty": 6
   },
   {
     "number": 142,
@@ -138,7 +144,8 @@
     "year": 2022,
     "test": "ENEM",
     "area": "math",
-    "answer": "b"
+    "answer": "b",
+    "difficulty": 6
   },
   {
     "number": 143,
@@ -158,7 +165,8 @@
     "year": 2022,
     "test": "ENEM",
     "area": "math",
-    "answer": "d"
+    "answer": "d",
+    "difficulty": 7
   },
   {
     "number": 144,
@@ -178,7 +186,8 @@
     "year": 2022,
     "test": "ENEM",
     "area": "math",
-    "answer": "c"
+    "answer": "c",
+    "difficulty": 5
   },
   {
     "number": 145,
@@ -198,7 +207,8 @@
     "year": 2022,
     "test": "ENEM",
     "area": "math",
-    "answer": "e"
+    "answer": "e",
+    "difficulty": 4
   },
   {
     "number": 146,
@@ -218,7 +228,8 @@
     "year": 2022,
     "test": "ENEM",
     "area": "math",
-    "answer": "e"
+    "answer": "e",
+    "difficulty": 6
   },
   {
     "number": 147,
@@ -238,7 +249,8 @@
     "year": 2022,
     "test": "ENEM",
     "area": "math",
-    "answer": "c"
+    "answer": "c",
+    "difficulty": 7
   },
   {
     "number": 148,
@@ -258,7 +270,8 @@
     "year": 2022,
     "test": "ENEM",
     "area": "math",
-    "answer": "d"
+    "answer": "d",
+    "difficulty": 7
   },
   {
     "number": 149,
@@ -278,7 +291,8 @@
     "year": 2022,
     "test": "ENEM",
     "area": "math",
-    "answer": "b"
+    "answer": "b",
+    "difficulty": 5
   },
   {
     "number": 150,
@@ -298,7 +312,8 @@
     "year": 2022,
     "test": "ENEM",
     "area": "math",
-    "answer": "d"
+    "answer": "d",
+    "difficulty": 7
   },
   {
     "number": 151,
@@ -318,7 +333,8 @@
     "year": 2022,
     "test": "ENEM",
     "area": "math",
-    "answer": "c"
+    "answer": "c",
+    "difficulty": 5
   },
   {
     "number": 152,
@@ -338,7 +354,8 @@
     "year": 2022,
     "test": "ENEM",
     "area": "math",
-    "answer": "c"
+    "answer": "c",
+    "difficulty": 7
   },
   {
     "number": 153,
@@ -358,7 +375,8 @@
     "year": 2022,
     "test": "ENEM",
     "area": "math",
-    "answer": "c"
+    "answer": "c",
+    "difficulty": 6
   },
   {
     "number": 154,
@@ -378,7 +396,8 @@
     "year": 2022,
     "test": "ENEM",
     "area": "math",
-    "answer": "c"
+    "answer": "c",
+    "difficulty": 5
   },
   {
     "number": 155,
@@ -398,7 +417,8 @@
     "year": 2022,
     "test": "ENEM",
     "area": "math",
-    "answer": "b"
+    "answer": "b",
+    "difficulty": 7
   },
   {
     "number": 156,
@@ -418,7 +438,8 @@
     "year": 2022,
     "test": "ENEM",
     "area": "math",
-    "answer": "c"
+    "answer": "c",
+    "difficulty": 8
   },
   {
     "number": 157,
@@ -442,7 +463,8 @@
     "images": [],
     "contextId": null,
     "contextIds": null,
-    "language": null
+    "language": null,
+    "difficulty": 7
   },
   {
     "number": 158,
@@ -462,7 +484,8 @@
     "year": 2022,
     "test": "ENEM",
     "area": "math",
-    "answer": "c"
+    "answer": "c",
+    "difficulty": 6
   },
   {
     "number": 159,
@@ -482,7 +505,8 @@
     "year": 2022,
     "test": "ENEM",
     "area": "math",
-    "answer": "b"
+    "answer": "b",
+    "difficulty": 5
   },
   {
     "number": 160,
@@ -502,7 +526,8 @@
     "year": 2022,
     "test": "ENEM",
     "area": "math",
-    "answer": "a"
+    "answer": "a",
+    "difficulty": 9
   },
   {
     "number": 161,
@@ -522,7 +547,8 @@
     "year": 2022,
     "test": "ENEM",
     "area": "math",
-    "answer": "a"
+    "answer": "a",
+    "difficulty": 5
   },
   {
     "number": 162,
@@ -542,7 +568,8 @@
     "year": 2022,
     "test": "ENEM",
     "area": "math",
-    "answer": "c"
+    "answer": "c",
+    "difficulty": 6
   },
   {
     "number": 163,
@@ -562,7 +589,8 @@
     "year": 2022,
     "test": "ENEM",
     "area": "math",
-    "answer": "d"
+    "answer": "d",
+    "difficulty": 7
   },
   {
     "number": 164,
@@ -582,7 +610,8 @@
     "year": 2022,
     "test": "ENEM",
     "area": "math",
-    "answer": "b"
+    "answer": "b",
+    "difficulty": 4
   },
   {
     "number": 165,
@@ -602,7 +631,8 @@
     "year": 2022,
     "test": "ENEM",
     "area": "math",
-    "answer": "a"
+    "answer": "a",
+    "difficulty": 5
   },
   {
     "number": 166,
@@ -622,7 +652,8 @@
     "year": 2022,
     "test": "ENEM",
     "area": "math",
-    "answer": "a"
+    "answer": "a",
+    "difficulty": 5
   },
   {
     "number": 167,
@@ -643,7 +674,8 @@
     "year": 2022,
     "test": "ENEM",
     "area": "math",
-    "answer": "a"
+    "answer": "a",
+    "difficulty": 5
   },
   {
     "number": 168,
@@ -663,7 +695,8 @@
     "year": 2022,
     "test": "ENEM",
     "area": "math",
-    "answer": "c"
+    "answer": "c",
+    "difficulty": 7
   },
   {
     "number": 169,
@@ -683,7 +716,8 @@
     "year": 2022,
     "test": "ENEM",
     "area": "math",
-    "answer": "e"
+    "answer": "e",
+    "difficulty": 6
   },
   {
     "number": 170,
@@ -703,7 +737,8 @@
     "year": 2022,
     "test": "ENEM",
     "area": "math",
-    "answer": "b"
+    "answer": "b",
+    "difficulty": 5
   },
   {
     "number": 171,
@@ -723,7 +758,8 @@
     "year": 2022,
     "test": "ENEM",
     "area": "math",
-    "answer": "a"
+    "answer": "a",
+    "difficulty": 5
   },
   {
     "number": 172,
@@ -743,7 +779,8 @@
     "year": 2022,
     "test": "ENEM",
     "area": "math",
-    "answer": "b"
+    "answer": "b",
+    "difficulty": 7
   },
   {
     "number": 173,
@@ -763,7 +800,8 @@
     "year": 2022,
     "test": "ENEM",
     "area": "math",
-    "answer": "d"
+    "answer": "d",
+    "difficulty": 5
   },
   {
     "number": 174,
@@ -783,7 +821,8 @@
     "year": 2022,
     "test": "ENEM",
     "area": "math",
-    "answer": "d"
+    "answer": "d",
+    "difficulty": 5
   },
   {
     "number": 175,
@@ -803,7 +842,8 @@
     "year": 2022,
     "test": "ENEM",
     "area": "math",
-    "answer": "e"
+    "answer": "e",
+    "difficulty": 1
   },
   {
     "number": 176,
@@ -823,7 +863,8 @@
     "year": 2022,
     "test": "ENEM",
     "area": "math",
-    "answer": "d"
+    "answer": "d",
+    "difficulty": 8
   },
   {
     "number": 177,
@@ -843,7 +884,8 @@
     "year": 2022,
     "test": "ENEM",
     "area": "math",
-    "answer": "a"
+    "answer": "a",
+    "difficulty": 4
   },
   {
     "number": 178,
@@ -863,7 +905,8 @@
     "year": 2022,
     "test": "ENEM",
     "area": "math",
-    "answer": "e"
+    "answer": "e",
+    "difficulty": 7
   },
   {
     "number": 179,
@@ -883,7 +926,8 @@
     "year": 2022,
     "test": "ENEM",
     "area": "math",
-    "answer": "b"
+    "answer": "b",
+    "difficulty": 5
   },
   {
     "number": 180,
@@ -903,6 +947,7 @@
     "year": 2022,
     "test": "ENEM",
     "area": "math",
-    "answer": "e"
+    "answer": "e",
+    "difficulty": 9
   }
 ]

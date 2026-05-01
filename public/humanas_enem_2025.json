@@ -19,7 +19,8 @@
     "area": "humanas",
     "test": "ENEM",
     "year": 2025,
-    "answer": "e"
+    "answer": "e",
+    "difficulty": 3
   },
   {
     "number": 47,
@@ -43,7 +44,8 @@
     "area": "humanas",
     "test": "ENEM",
     "year": 2025,
-    "answer": "d"
+    "answer": "d",
+    "difficulty": 5
   },
   {
     "number": 48,
@@ -65,7 +67,8 @@
     "area": "humanas",
     "test": "ENEM",
     "year": 2025,
-    "answer": "e"
+    "answer": "e",
+    "difficulty": 8
   },
   {
     "number": 49,
@@ -89,7 +92,8 @@
     "area": "humanas",
     "test": "ENEM",
     "year": 2025,
-    "answer": "c"
+    "answer": "c",
+    "difficulty": 6
   },
   {
     "number": 50,
@@ -111,7 +115,8 @@
     "area": "humanas",
     "test": "ENEM",
     "year": 2025,
-    "answer": "a"
+    "answer": "a",
+    "difficulty": 9
   },
   {
     "number": 51,
@@ -133,7 +138,8 @@
     "area": "humanas",
     "test": "ENEM",
     "year": 2025,
-    "answer": "d"
+    "answer": "d",
+    "difficulty": 3
   },
   {
     "number": 52,
@@ -155,7 +161,8 @@
     "area": "humanas",
     "test": "ENEM",
     "year": 2025,
-    "answer": "c"
+    "answer": "c",
+    "difficulty": 5
   },
   {
     "number": 53,
@@ -177,7 +184,8 @@
     "area": "humanas",
     "test": "ENEM",
     "year": 2025,
-    "answer": "e"
+    "answer": "e",
+    "difficulty": 6
   },
   {
     "number": 54,
@@ -199,7 +207,8 @@
     "area": "humanas",
     "test": "ENEM",
     "year": 2025,
-    "answer": "e"
+    "answer": "e",
+    "difficulty": 6
   },
   {
     "number": 55,
@@ -221,7 +230,8 @@
     "area": "humanas",
     "test": "ENEM",
     "year": 2025,
-    "answer": "d"
+    "answer": "d",
+    "difficulty": 8
   },
   {
     "number": 56,
@@ -243,7 +253,8 @@
     "area": "humanas",
     "test": "ENEM",
     "year": 2025,
-    "answer": "c"
+    "answer": "c",
+    "difficulty": 3
   },
   {
     "number": 57,
@@ -265,7 +276,8 @@
     "area": "humanas",
     "test": "ENEM",
     "year": 2025,
-    "answer": "a"
+    "answer": "a",
+    "difficulty": 5
   },
   {
     "number": 58,
@@ -287,7 +299,8 @@
     "area": "humanas",
     "test": "ENEM",
     "year": 2025,
-    "answer": "d"
+    "answer": "d",
+    "difficulty": 6
   },
   {
     "number": 59,
@@ -309,7 +322,8 @@
     "area": "humanas",
     "test": "ENEM",
     "year": 2025,
-    "answer": "b"
+    "answer": "b",
+    "difficulty": 5
   },
   {
     "number": 60,
@@ -331,7 +345,8 @@
     "area": "humanas",
     "test": "ENEM",
     "year": 2025,
-    "answer": "d"
+    "answer": "d",
+    "difficulty": 7
   },
   {
     "number": 61,
@@ -353,7 +368,8 @@
     "area": "humanas",
     "test": "ENEM",
     "year": 2025,
-    "answer": "e"
+    "answer": "e",
+    "difficulty": 6
   },
   {
     "number": 62,
@@ -375,7 +391,8 @@
     "area": "humanas",
     "test": "ENEM",
     "year": 2025,
-    "answer": "b"
+    "answer": "b",
+    "difficulty": 5
   },
   {
     "number": 63,
@@ -399,7 +416,8 @@
     "area": "humanas",
     "test": "ENEM",
     "year": 2025,
-    "answer": "b"
+    "answer": "b",
+    "difficulty": 5
   },
   {
     "number": 64,
@@ -421,7 +439,8 @@
     "area": "humanas",
     "test": "ENEM",
     "year": 2025,
-    "answer": "a"
+    "answer": "a",
+    "difficulty": 7
   },
   {
     "number": 65,
@@ -443,7 +462,8 @@
     "area": "humanas",
     "test": "ENEM",
     "year": 2025,
-    "answer": "c"
+    "answer": "c",
+    "difficulty": 7
   },
   {
     "number": 66,
@@ -465,7 +485,8 @@
     "area": "humanas",
     "test": "ENEM",
     "year": 2025,
-    "answer": "d"
+    "answer": "d",
+    "difficulty": 8
   },
   {
     "number": 67,
@@ -487,7 +508,8 @@
     "area": "humanas",
     "test": "ENEM",
     "year": 2025,
-    "answer": "d"
+    "answer": "d",
+    "difficulty": 5
   },
   {
     "number": 68,
@@ -511,7 +533,8 @@
     "area": "humanas",
     "test": "ENEM",
     "year": 2025,
-    "answer": "e"
+    "answer": "e",
+    "difficulty": 3
   },
   {
     "number": 69,
@@ -533,7 +556,8 @@
     "area": "humanas",
     "test": "ENEM",
     "year": 2025,
-    "answer": "c"
+    "answer": "c",
+    "difficulty": 5
   },
   {
     "number": 70,
@@ -555,7 +579,8 @@
     "area": "humanas",
     "test": "ENEM",
     "year": 2025,
-    "answer": "b"
+    "answer": "b",
+    "difficulty": 5
   },
   {
     "number": 71,
@@ -577,7 +602,8 @@
     "area": "humanas",
     "test": "ENEM",
     "year": 2025,
-    "answer": "a"
+    "answer": "a",
+    "difficulty": 3
   },
   {
     "number": 72,
@@ -599,7 +625,8 @@
     "area": "humanas",
     "test": "ENEM",
     "year": 2025,
-    "answer": "d"
+    "answer": "d",
+    "difficulty": 7
   },
   {
     "number": 73,
@@ -621,7 +648,8 @@
     "area": "humanas",
     "test": "ENEM",
     "year": 2025,
-    "answer": "a"
+    "answer": "a",
+    "difficulty": 6
   },
   {
     "number": 74,
@@ -643,7 +671,8 @@
     "area": "humanas",
     "test": "ENEM",
     "year": 2025,
-    "answer": "b"
+    "answer": "b",
+    "difficulty": 7
   },
   {
     "number": 75,
@@ -665,7 +694,8 @@
     "area": "humanas",
     "test": "ENEM",
     "year": 2025,
-    "answer": "b"
+    "answer": "b",
+    "difficulty": 5
   },
   {
     "number": 76,
@@ -687,7 +717,8 @@
     "area": "humanas",
     "test": "ENEM",
     "year": 2025,
-    "answer": "c"
+    "answer": "c",
+    "difficulty": 7
   },
   {
     "number": 77,
@@ -711,7 +742,8 @@
     "area": "humanas",
     "test": "ENEM",
     "year": 2025,
-    "answer": "a"
+    "answer": "a",
+    "difficulty": 6
   },
   {
     "number": 78,
@@ -733,7 +765,8 @@
     "area": "humanas",
     "test": "ENEM",
     "year": 2025,
-    "answer": "b"
+    "answer": "b",
+    "difficulty": 5
   },
   {
     "number": 79,
@@ -755,7 +788,8 @@
     "area": "humanas",
     "test": "ENEM",
     "year": 2025,
-    "answer": "a"
+    "answer": "a",
+    "difficulty": 7
   },
   {
     "number": 80,
@@ -777,7 +811,8 @@
     "area": "humanas",
     "test": "ENEM",
     "year": 2025,
-    "answer": "c"
+    "answer": "c",
+    "difficulty": 5
   },
   {
     "number": 81,
@@ -799,7 +834,8 @@
     "area": "humanas",
     "test": "ENEM",
     "year": 2025,
-    "answer": "e"
+    "answer": "e",
+    "difficulty": 5
   },
   {
     "number": 82,
@@ -821,7 +857,8 @@
     "area": "humanas",
     "test": "ENEM",
     "year": 2025,
-    "answer": "e"
+    "answer": "e",
+    "difficulty": 7
   },
   {
     "number": 83,
@@ -843,7 +880,8 @@
     "area": "humanas",
     "test": "ENEM",
     "year": 2025,
-    "answer": "d"
+    "answer": "d",
+    "difficulty": 6
   },
   {
     "number": 84,
@@ -865,7 +903,8 @@
     "area": "humanas",
     "test": "ENEM",
     "year": 2025,
-    "answer": "d"
+    "answer": "d",
+    "difficulty": 3
   },
   {
     "number": 85,
@@ -887,7 +926,8 @@
     "area": "humanas",
     "test": "ENEM",
     "year": 2025,
-    "answer": "b"
+    "answer": "b",
+    "difficulty": 5
   },
   {
     "number": 86,
@@ -909,7 +949,8 @@
     "area": "humanas",
     "test": "ENEM",
     "year": 2025,
-    "answer": "c"
+    "answer": "c",
+    "difficulty": 3
   },
   {
     "number": 87,
@@ -931,7 +972,8 @@
     "area": "humanas",
     "test": "ENEM",
     "year": 2025,
-    "answer": "b"
+    "answer": "b",
+    "difficulty": 5
   },
   {
     "number": 88,
@@ -953,7 +995,8 @@
     "area": "humanas",
     "test": "ENEM",
     "year": 2025,
-    "answer": "c"
+    "answer": "c",
+    "difficulty": 3
   },
   {
     "number": 89,
@@ -975,7 +1018,8 @@
     "area": "humanas",
     "test": "ENEM",
     "year": 2025,
-    "answer": "e"
+    "answer": "e",
+    "difficulty": 7
   },
   {
     "number": 90,
@@ -997,6 +1041,7 @@
     "area": "humanas",
     "test": "ENEM",
     "year": 2025,
-    "answer": "a"
+    "answer": "a",
+    "difficulty": 7
   }
 ]

@@ -17,7 +17,8 @@
     "year": 2023,
     "test": "ENEM",
     "area": "math",
-    "answer": "b"
+    "answer": "b",
+    "difficulty": 7
   },
   {
     "number": 137,
@@ -37,7 +38,8 @@
     "year": 2023,
     "test": "ENEM",
     "area": "math",
-    "answer": "c"
+    "answer": "c",
+    "difficulty": 2
   },
   {
     "number": 138,
@@ -57,7 +59,8 @@
     "year": 2023,
     "test": "ENEM",
     "area": "math",
-    "answer": "c"
+    "answer": "c",
+    "difficulty": 6
   },
   {
     "number": 139,
@@ -77,7 +80,8 @@
     "year": 2023,
     "test": "ENEM",
     "area": "math",
-    "answer": "d"
+    "answer": "d",
+    "difficulty": 5
   },
   {
     "number": 140,
@@ -97,7 +101,8 @@
     "year": 2023,
     "test": "ENEM",
     "area": "math",
-    "answer": "e"
+    "answer": "e",
+    "difficulty": 6
   },
   {
     "number": 141,
@@ -117,7 +122,8 @@
     "year": 2023,
     "test": "ENEM",
     "area": "math",
-    "answer": "e"
+    "answer": "e",
+    "difficulty": 4
   },
   {
     "number": 142,
@@ -137,7 +143,8 @@
     "year": 2023,
     "test": "ENEM",
     "area": "math",
-    "answer": "a"
+    "answer": "a",
+    "difficulty": 6
   },
   {
     "number": 143,
@@ -157,7 +164,8 @@
     "year": 2023,
     "test": "ENEM",
     "area": "math",
-    "answer": "b"
+    "answer": "b",
+    "difficulty": 5
   },
   {
     "number": 144,
@@ -179,7 +187,8 @@
     "year": 2023,
     "test": "ENEM",
     "area": "math",
-    "answer": "c"
+    "answer": "c",
+    "difficulty": 4
   },
   {
     "number": 145,
@@ -199,7 +208,8 @@
     "year": 2023,
     "test": "ENEM",
     "area": "math",
-    "answer": "b"
+    "answer": "b",
+    "difficulty": 7
   },
   {
     "number": 146,
@@ -221,7 +231,8 @@
     "year": 2023,
     "test": "ENEM",
     "area": "math",
-    "answer": "e"
+    "answer": "e",
+    "difficulty": 7
   },
   {
     "number": 147,
@@ -241,7 +252,8 @@
     "year": 2023,
     "test": "ENEM",
     "area": "math",
-    "answer": "d"
+    "answer": "d",
+    "difficulty": 2
   },
   {
     "number": 148,
@@ -261,7 +273,8 @@
     "year": 2023,
     "test": "ENEM",
     "area": "math",
-    "answer": "c"
+    "answer": "c",
+    "difficulty": 5
   },
   {
     "number": 149,
@@ -281,7 +294,8 @@
     "year": 2023,
     "test": "ENEM",
     "area": "math",
-    "answer": "e"
+    "answer": "e",
+    "difficulty": 5
   },
   {
     "number": 150,
@@ -301,7 +315,8 @@
     "year": 2023,
     "test": "ENEM",
     "area": "math",
-    "answer": "a"
+    "answer": "a",
+    "difficulty": 1
   },
   {
     "number": 151,
@@ -321,7 +336,8 @@
     "year": 2023,
     "test": "ENEM",
     "area": "math",
-    "answer": "b"
+    "answer": "b",
+    "difficulty": 3
   },
   {
     "number": 152,
@@ -341,7 +357,8 @@
     "year": 2023,
     "test": "ENEM",
     "area": "math",
-    "answer": "b"
+    "answer": "b",
+    "difficulty": 5
   },
   {
     "number": 153,
@@ -362,7 +379,8 @@
     "year": 2023,
     "test": "ENEM",
     "area": "math",
-    "answer": "e"
+    "answer": "e",
+    "difficulty": 2
   },
   {
     "number": 154,
@@ -382,7 +400,8 @@
     "year": 2023,
     "test": "ENEM",
     "area": "math",
-    "answer": "b"
+    "answer": "b",
+    "difficulty": 3
   },
   {
     "number": 155,
@@ -402,7 +421,8 @@
     "year": 2023,
     "test": "ENEM",
     "area": "math",
-    "answer": "d"
+    "answer": "d",
+    "difficulty": 3
   },
   {
     "number": 156,
@@ -422,7 +442,8 @@
     "year": 2023,
     "test": "ENEM",
     "area": "math",
-    "answer": "a"
+    "answer": "a",
+    "difficulty": 3
   },
   {
     "number": 157,
@@ -442,7 +463,8 @@
     "year": 2023,
     "test": "ENEM",
     "area": "math",
-    "answer": "b"
+    "answer": "b",
+    "difficulty": 4
   },
   {
     "number": 158,
@@ -463,7 +485,8 @@
     "year": 2023,
     "test": "ENEM",
     "area": "math",
-    "answer": "d"
+    "answer": "d",
+    "difficulty": 7
   },
   {
     "number": 159,
@@ -484,7 +507,8 @@
     "year": 2023,
     "test": "ENEM",
     "area": "math",
-    "answer": "d"
+    "answer": "d",
+    "difficulty": 5
   },
   {
     "number": 160,
@@ -504,7 +528,8 @@
     "year": 2023,
     "test": "ENEM",
     "area": "math",
-    "answer": "a"
+    "answer": "a",
+    "difficulty": 7
   },
   {
     "number": 161,
@@ -524,7 +549,8 @@
     "year": 2023,
     "test": "ENEM",
     "area": "math",
-    "answer": "d"
+    "answer": "d",
+    "difficulty": 7
   },
   {
     "number": 162,
@@ -544,7 +570,8 @@
     "year": 2023,
     "test": "ENEM",
     "area": "math",
-    "answer": "d"
+    "answer": "d",
+    "difficulty": 1
   },
   {
     "number": 163,
@@ -564,7 +591,8 @@
     "year": 2023,
     "test": "ENEM",
     "area": "math",
-    "answer": "a"
+    "answer": "a",
+    "difficulty": 4
   },
   {
     "number": 164,
@@ -584,7 +612,8 @@
     "year": 2023,
     "test": "ENEM",
     "area": "math",
-    "answer": "annulled"
+    "answer": "annulled",
+    "difficulty": 2
   },
   {
     "number": 165,
@@ -606,7 +635,8 @@
     "year": 2023,
     "test": "ENEM",
     "area": "math",
-    "answer": "e"
+    "answer": "e",
+    "difficulty": 5
   },
   {
     "number": 166,
@@ -626,7 +656,8 @@
     "year": 2023,
     "test": "ENEM",
     "area": "math",
-    "answer": "c"
+    "answer": "c",
+    "difficulty": 3
   },
   {
     "number": 167,
@@ -647,7 +678,8 @@
     "year": 2023,
     "test": "ENEM",
     "area": "math",
-    "answer": "a"
+    "answer": "a",
+    "difficulty": 5
   },
   {
     "number": 168,
@@ -667,7 +699,8 @@
     "year": 2023,
     "test": "ENEM",
     "area": "math",
-    "answer": "a"
+    "answer": "a",
+    "difficulty": 7
   },
   {
     "number": 169,
@@ -687,7 +720,8 @@
     "year": 2023,
     "test": "ENEM",
     "area": "math",
-    "answer": "d"
+    "answer": "d",
+    "difficulty": 4
   },
   {
     "number": 170,
@@ -707,7 +741,8 @@
     "year": 2023,
     "test": "ENEM",
     "area": "math",
-    "answer": "d"
+    "answer": "d",
+    "difficulty": 5
   },
   {
     "number": 171,
@@ -727,7 +762,8 @@
     "year": 2023,
     "test": "ENEM",
     "area": "math",
-    "answer": "c"
+    "answer": "c",
+    "difficulty": 3
   },
   {
     "number": 172,
@@ -747,7 +783,8 @@
     "year": 2023,
     "test": "ENEM",
     "area": "math",
-    "answer": "c"
+    "answer": "c",
+    "difficulty": 6
   },
   {
     "number": 173,
@@ -767,7 +804,8 @@
     "year": 2023,
     "test": "ENEM",
     "area": "math",
-    "answer": "b"
+    "answer": "b",
+    "difficulty": 2
   },
   {
     "number": 174,
@@ -787,7 +825,8 @@
     "year": 2023,
     "test": "ENEM",
     "area": "math",
-    "answer": "e"
+    "answer": "e",
+    "difficulty": 3
   },
   {
     "number": 175,
@@ -807,7 +846,8 @@
     "year": 2023,
     "test": "ENEM",
     "area": "math",
-    "answer": "b"
+    "answer": "b",
+    "difficulty": 4
   },
   {
     "number": 176,
@@ -827,7 +867,8 @@
     "year": 2023,
     "test": "ENEM",
     "area": "math",
-    "answer": "e"
+    "answer": "e",
+    "difficulty": 5
   },
   {
     "number": 177,
@@ -848,7 +889,8 @@
     "year": 2023,
     "test": "ENEM",
     "area": "math",
-    "answer": "a"
+    "answer": "a",
+    "difficulty": 5
   },
   {
     "number": 178,
@@ -868,7 +910,8 @@
     "year": 2023,
     "test": "ENEM",
     "area": "math",
-    "answer": "b"
+    "answer": "b",
+    "difficulty": 3
   },
   {
     "number": 179,
@@ -890,11 +933,12 @@
     "year": 2023,
     "test": "ENEM",
     "area": "math",
-    "answer": "c"
+    "answer": "c",
+    "difficulty": 4
   },
   {
     "number": 180,
-    "text": "Um tipo de semente necessita de bastante água nos dois primeiros meses após o plantio. Um produtor pretende estabelecer o melhor momento para o plantio desse tipo de semente, nos meses de outubro a março. Após consultar previsão do índice mensal de precipitação de chuva (ImPC) da região onde ocorrerá o plantio, para o período chuvoso de 2020 - 2021, ele obteve os seguintes dados: outubro/2020: ImPC = 250 mm; novembro/2020: ImPC = 150 mm; dezembro/2020: ImPC = 200 mm; janeiro/2021: ImPC = 450 mm; fevereiro/2021: ImPC = 100 mm; março/2021: ImPC = 200 mm. Com base nessas previsões, ele precisa escolher dois meses consecutivos em que a média mensal de precipitação seja a maior possível. No início de qual desses meses o produtor deverá plantar esse tipo de semente?",
+    "text": "Um tipo de semente necessita de bastante água nos dois primeiros meses após o plantio. Um produtor pretende estabelecer o melhor momento para o plantio desse tipo de semente, nos meses de outubro a março. Após consultar previsão do índice mensal de precipitação de chuva (ImPC) da região onde ocorrerá o plantio, para o período chuvoso de 2020 - 2021, ele obteve os seguintes dados:\n  - outubro/2020: ImPC = 250 mm;\n  - novembro/2020: ImPC = 150 mm;\n  - dezembro/2020: ImPC = 200 mm;\n  - janeiro/2021: ImPC = 450 mm;\n  - fevereiro/2021: ImPC = 100 mm;\n  - março/2021: ImPC = 200 mm.\n\nCom base nessas previsões, ele precisa escolher dois meses consecutivos em que a média mensal de precipitação seja a maior possível. No início de qual desses meses o produtor deverá plantar esse tipo de semente?",
     "alternatives": {
       "a": "Outubro.",
       "b": "Novembro.",
@@ -910,6 +954,7 @@
     "year": 2023,
     "test": "ENEM",
     "area": "math",
-    "answer": "c"
+    "answer": "c",
+    "difficulty": 2
   }
 ]

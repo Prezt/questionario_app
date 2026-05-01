@@ -11,9 +11,8 @@
     },
     "images": [],
     "tags": [
-      "microscopia",
-      "ampliação",
-      "matemática"
+      "estatística",
+      "geometria plana"
     ],
     "year": 2024,
     "test": "ENEM",
@@ -32,9 +31,7 @@
     },
     "images": [],
     "tags": [
-      "média",
-      "notas",
-      "matemática"
+      "estatística"
     ],
     "year": 2024,
     "test": "ENEM",
@@ -56,8 +53,8 @@
       "figuras/q138_2024_fig2.png"
     ],
     "tags": [
-      "probabilidade",
-      "combinatória"
+      "análise combinatória",
+      "probabilidade"
     ],
     "year": 2024,
     "test": "ENEM",
@@ -78,7 +75,6 @@
       "figuras/q139_2024_fig1.png"
     ],
     "tags": [
-      "preços",
       "matemática financeira"
     ],
     "year": 2024,
@@ -98,9 +94,7 @@
     },
     "images": [],
     "tags": [
-      "porcentagem",
-      "conceitos",
-      "matemática"
+      "aritmética e números"
     ],
     "year": 2024,
     "test": "ENEM",
@@ -122,9 +116,8 @@
       "figuras/q141_2024_fig2.png"
     ],
     "tags": [
-      "grandezas",
-      "gráficos",
-      "relações"
+      "aritmética e números",
+      "estatística"
     ],
     "year": 2024,
     "test": "ENEM",
@@ -145,8 +138,7 @@
       "figuras/q142_2024_fig1.png"
     ],
     "tags": [
-      "matemática",
-      "sequências"
+      "sequências e progressões"
     ],
     "year": 2024,
     "test": "ENEM",
@@ -165,8 +157,8 @@
     },
     "images": [],
     "tags": [
-      "finanças",
-      "percentagem"
+      "aritmética e números",
+      "matemática financeira"
     ],
     "year": 2024,
     "test": "ENEM",
@@ -187,8 +179,8 @@
       "figuras/q144_2024_fig1.png"
     ],
     "tags": [
-      "geometria",
-      "solidos-de-revolucao"
+      "geometria espacial",
+      "geometria plana"
     ],
     "year": 2024,
     "test": "ENEM",
@@ -207,8 +199,7 @@
     },
     "images": [],
     "tags": [
-      "área",
-      "geometria"
+      "geometria plana"
     ],
     "year": 2024,
     "test": "ENEM",
@@ -229,9 +220,9 @@
       "figuras/q146_2024_fig1.png"
     ],
     "tags": [
-      "área retangular",
-      "custo",
-      "otimização"
+      "funções",
+      "geometria plana",
+      "matemática financeira"
     ],
     "year": 2024,
     "test": "ENEM",
@@ -250,8 +241,8 @@
     },
     "images": [],
     "tags": [
-      "números racionais",
-      "representação"
+      "aritmética e números",
+      "estatística"
     ],
     "year": 2024,
     "test": "ENEM",
@@ -273,9 +264,9 @@
       "figuras/q148_2024_fig2.png"
     ],
     "tags": [
-      "função",
-      "temperatura",
-      "gráfico"
+      "aritmética e números",
+      "estatística",
+      "funções"
     ],
     "year": 2024,
     "test": "ENEM",
@@ -296,8 +287,8 @@
       "figuras/q149_2024_fig1.png"
     ],
     "tags": [
-      "geometria",
-      "volume"
+      "geometria espacial",
+      "geometria plana"
     ],
     "year": 2024,
     "test": "ENEM",
@@ -319,7 +310,7 @@
       "figuras/q150_2024_fig2.png"
     ],
     "tags": [
-      "geometria",
+      "geometria plana",
       "matemática financeira"
     ],
     "year": 2024,
@@ -339,8 +330,8 @@
     },
     "images": [],
     "tags": [
-      "escala",
-      "área"
+      "aritmética e números",
+      "geometria plana"
     ],
     "year": 2024,
     "test": "ENEM",
@@ -362,9 +353,9 @@
       "figuras/q152_2024_fig2.png"
     ],
     "tags": [
-      "balança comercial",
-      "gráfico",
-      "exportações"
+      "aritmética e números",
+      "estatística",
+      "matemática financeira"
     ],
     "year": 2024,
     "test": "ENEM",
@@ -383,8 +374,8 @@
     },
     "images": [],
     "tags": [
-      "população",
-      "taxa percentual"
+      "geografia humana e urbana",
+      "matemática financeira"
     ],
     "year": 2024,
     "test": "ENEM",
@@ -403,8 +394,7 @@
     },
     "images": [],
     "tags": [
-      "estatística",
-      "média"
+      "estatística"
     ],
     "year": 2024,
     "test": "ENEM",
@@ -423,7 +413,6 @@
     },
     "images": [],
     "tags": [
-      "área de setor circular",
       "geometria plana"
     ],
     "year": 2024,
@@ -445,8 +434,8 @@
       "figuras/q156_2024_fig1.png"
     ],
     "tags": [
-      "função",
-      "equação"
+      "funções",
+      "álgebra"
     ],
     "year": 2024,
     "test": "ENEM",
@@ -465,8 +454,8 @@
     },
     "images": [],
     "tags": [
-      "matemática financeira",
-      "proporcionalidade"
+      "aritmética e números",
+      "matemática financeira"
     ],
     "year": 2024,
     "test": "ENEM",
@@ -485,9 +474,9 @@
     },
     "images": [],
     "tags": [
-      "área",
-      "custo",
-      "defensivos agrícolas"
+      "aritmética e números",
+      "geometria plana",
+      "matemática financeira"
     ],
     "year": 2024,
     "test": "ENEM",
@@ -508,8 +497,8 @@
       "figuras/q159_2024_fig1.png"
     ],
     "tags": [
-      "física",
-      "proporção"
+      "aritmética e números",
+      "mecânica newtoniana"
     ],
     "year": 2024,
     "test": "ENEM",
@@ -530,8 +519,7 @@
       "figuras/q160_2024_fig1.png"
     ],
     "tags": [
-      "matemática",
-      "razão e proporção"
+      "aritmética e números"
     ],
     "year": 2024,
     "test": "ENEM",
@@ -557,8 +545,8 @@
       "figuras/q161_2024_fig6.png"
     ],
     "tags": [
-      "geometria",
-      "razão e proporção"
+      "aritmética e números",
+      "geometria plana"
     ],
     "year": 2024,
     "test": "ENEM",
@@ -579,8 +567,8 @@
       "figuras/q162_2024_fig1.png"
     ],
     "tags": [
-      "financiamento",
-      "sequência matemática"
+      "matemática financeira",
+      "sequências e progressões"
     ],
     "year": 2024,
     "test": "ENEM",
@@ -599,8 +587,7 @@
     },
     "images": [],
     "tags": [
-      "geometria",
-      "circunferência"
+      "geometria plana"
     ],
     "year": 2024,
     "test": "ENEM",
@@ -622,8 +609,8 @@
       "figuras/q164_2024_fig2.png"
     ],
     "tags": [
-      "geometria",
-      "distância"
+      "aritmética e números",
+      "geometria plana"
     ],
     "year": 2024,
     "test": "ENEM",
@@ -644,9 +631,8 @@
       "figuras/q165_2024_fig1.png"
     ],
     "tags": [
-      "probabilidade",
-      "tempo",
-      "trânsito"
+      "aritmética e números",
+      "probabilidade"
     ],
     "year": 2024,
     "test": "ENEM",
@@ -667,8 +653,7 @@
       "figuras/q167_2024_fig1.png"
     ],
     "tags": [
-      "geometria",
-      "medidas"
+      "geometria plana"
     ],
     "year": 2024,
     "test": "ENEM",
@@ -693,9 +678,7 @@
       "figuras/q168_2024_fig5.png"
     ],
     "tags": [
-      "matemática",
-      "física",
-      "oscilações"
+      "mecânica newtoniana"
     ],
     "year": 2024,
     "test": "ENEM",
@@ -714,8 +697,8 @@
     },
     "images": [],
     "tags": [
-      "criptografia",
-      "probabilidade"
+      "probabilidade",
+      "álgebra"
     ],
     "year": 2024,
     "test": "ENEM",
@@ -734,8 +717,8 @@
     },
     "images": [],
     "tags": [
-      "terremotos",
-      "escala_richter"
+      "cartografia",
+      "gravitação e astronomia"
     ],
     "year": 2024,
     "test": "ENEM",
@@ -754,8 +737,7 @@
     },
     "images": [],
     "tags": [
-      "geometria",
-      "triangulo-equilatero"
+      "geometria plana"
     ],
     "year": 2024,
     "test": "ENEM",
@@ -776,8 +758,8 @@
       "figuras/q172_2024_fig1.png"
     ],
     "tags": [
-      "geometria",
-      "razões e proporções"
+      "aritmética e números",
+      "geometria plana"
     ],
     "year": 2024,
     "test": "ENEM",
@@ -796,8 +778,8 @@
     },
     "images": [],
     "tags": [
-      "probabilidade",
-      "estatística"
+      "estatística",
+      "probabilidade"
     ],
     "year": 2024,
     "test": "ENEM",
@@ -824,8 +806,8 @@
       "figuras/q174_2024_fig7.png"
     ],
     "tags": [
-      "geometria",
-      "projeções"
+      "geometria analítica",
+      "geometria plana"
     ],
     "year": 2024,
     "test": "ENEM",
@@ -844,8 +826,8 @@
     },
     "images": [],
     "tags": [
-      "geometria",
-      "volume"
+      "geometria espacial",
+      "geometria plana"
     ],
     "year": 2024,
     "test": "ENEM",
@@ -867,8 +849,7 @@
       "figuras/q176_2024_fig2.png"
     ],
     "tags": [
-      "estatística",
-      "tendência"
+      "estatística"
     ],
     "year": 2024,
     "test": "ENEM",
@@ -887,9 +868,8 @@
     },
     "images": [],
     "tags": [
-      "custo",
-      "proporcionalidade",
-      "matemática-financeira"
+      "aritmética e números",
+      "matemática financeira"
     ],
     "year": 2024,
     "test": "ENEM",
@@ -908,8 +888,7 @@
     },
     "images": [],
     "tags": [
-      "estatística",
-      "mediana"
+      "estatística"
     ],
     "year": 2024,
     "test": "ENEM",

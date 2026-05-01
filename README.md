@@ -1,6 +1,6 @@
-# Questionário (matemática)
+# Questionário ENEM
 
-Aplicação em React + Vite que carrega questões de `public/math_enem_2025.json`, ordenadas pelo **número da questão**, com **barra vertical à esquerda** para saltar entre elas, feedback de acerto/erro, caderno de anotações e alternância de tema claro/escuro.
+Aplicação em React + Vite com questões do ENEM (2022–2025) das quatro áreas de conhecimento — Matemática, Ciências da Natureza, Linguagens e Ciências Humanas — ordenadas pelo **número da questão**, com **barra vertical à esquerda** para saltar entre elas, feedback de acerto/erro, caderno de anotações e alternância de tema claro/escuro.
 
 ## Como rodar
 
@@ -39,6 +39,14 @@ Se o link quebrar em outra máquina, recrie na raiz do projeto:
 ```bash
 ln -sfn ../figuras public/figuras
 ```
+
+## Tags das questões
+
+Cada questão possui um array `tags` com 2 a 4 temas da **taxonomia unificada** do projeto. Os temas são organizados por área de conhecimento (ex.: `mecânica newtoniana`, `genética e hereditariedade`, `história do brasil república`, `interpretação de texto`).
+
+A lista completa de tags válidas, com exemplos de conteúdos representativos para cada uma, está documentada em [`docs/tags-taxonomy.md`](docs/tags-taxonomy.md).
+
+> Nomes de autores, filósofos ou personagens históricos **não são tags** — usar sempre a categoria temática correspondente.
 
 ## Campo `test` (tipo de prova)
 

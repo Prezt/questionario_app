@@ -20,7 +20,8 @@
     "year": 2025,
     "test": "ENEM",
     "area": "nature",
-    "answer": "d"
+    "answer": "d",
+    "difficulty": 2
   },
   {
     "number": 92,
@@ -42,7 +43,8 @@
     "year": 2025,
     "test": "ENEM",
     "area": "nature",
-    "answer": "d"
+    "answer": "d",
+    "difficulty": 3
   },
   {
     "number": 93,
@@ -64,7 +66,8 @@
     "year": 2025,
     "test": "ENEM",
     "area": "nature",
-    "answer": "c"
+    "answer": "c",
+    "difficulty": 4
   },
   {
     "number": 94,
@@ -88,7 +91,8 @@
     "year": 2025,
     "test": "ENEM",
     "area": "nature",
-    "answer": "d"
+    "answer": "d",
+    "difficulty": 5
   },
   {
     "number": 95,
@@ -110,7 +114,8 @@
     "year": 2025,
     "test": "ENEM",
     "area": "nature",
-    "answer": "c"
+    "answer": "c",
+    "difficulty": 2
   },
   {
     "number": 96,
@@ -132,7 +137,8 @@
     "year": 2025,
     "test": "ENEM",
     "area": "nature",
-    "answer": "b"
+    "answer": "b",
+    "difficulty": 3
   },
   {
     "number": 97,
@@ -156,7 +162,8 @@
     "year": 2025,
     "test": "ENEM",
     "area": "nature",
-    "answer": "d"
+    "answer": "d",
+    "difficulty": 3
   },
   {
     "number": 98,
@@ -179,7 +186,8 @@
     "year": 2025,
     "test": "ENEM",
     "area": "nature",
-    "answer": "d"
+    "answer": "d",
+    "difficulty": 2
   },
   {
     "number": 99,
@@ -201,7 +209,8 @@
     "year": 2025,
     "test": "ENEM",
     "area": "nature",
-    "answer": "c"
+    "answer": "c",
+    "difficulty": 3
   },
   {
     "number": 100,
@@ -222,7 +231,8 @@
     "year": 2025,
     "test": "ENEM",
     "area": "nature",
-    "answer": "d"
+    "answer": "d",
+    "difficulty": 1
   },
   {
     "number": 101,
@@ -244,7 +254,8 @@
     "year": 2025,
     "test": "ENEM",
     "area": "nature",
-    "answer": "a"
+    "answer": "a",
+    "difficulty": 4
   },
   {
     "number": 102,
@@ -265,7 +276,8 @@
     "year": 2025,
     "test": "ENEM",
     "area": "nature",
-    "answer": "e"
+    "answer": "e",
+    "difficulty": 3
   },
   {
     "number": 103,
@@ -287,7 +299,8 @@
     "year": 2025,
     "test": "ENEM",
     "area": "nature",
-    "answer": "a"
+    "answer": "a",
+    "difficulty": 4
   },
   {
     "number": 104,
@@ -309,7 +322,8 @@
     "year": 2025,
     "test": "ENEM",
     "area": "nature",
-    "answer": "a"
+    "answer": "a",
+    "difficulty": 2
   },
   {
     "number": 105,
@@ -333,7 +347,8 @@
     "year": 2025,
     "test": "ENEM",
     "area": "nature",
-    "answer": "e"
+    "answer": "e",
+    "difficulty": 5
   },
   {
     "number": 106,
@@ -356,7 +371,8 @@
     "year": 2025,
     "test": "ENEM",
     "area": "nature",
-    "answer": "a"
+    "answer": "a",
+    "difficulty": 4
   },
   {
     "number": 107,
@@ -385,7 +401,8 @@
     "year": 2025,
     "test": "ENEM",
     "area": "nature",
-    "answer": "e"
+    "answer": "e",
+    "difficulty": 6
   },
   {
     "number": 108,
@@ -413,7 +430,8 @@
     "year": 2025,
     "test": "ENEM",
     "area": "nature",
-    "answer": "c"
+    "answer": "c",
+    "difficulty": 6
   },
   {
     "number": 109,
@@ -436,7 +454,8 @@
     "year": 2025,
     "test": "ENEM",
     "area": "nature",
-    "answer": "e"
+    "answer": "e",
+    "difficulty": 4
   },
   {
     "number": 110,
@@ -458,7 +477,8 @@
     "year": 2025,
     "test": "ENEM",
     "area": "nature",
-    "answer": "e"
+    "answer": "e",
+    "difficulty": 3
   },
   {
     "number": 111,
@@ -482,7 +502,8 @@
     "year": 2025,
     "test": "ENEM",
     "area": "nature",
-    "answer": "b"
+    "answer": "b",
+    "difficulty": 4
   },
   {
     "number": 112,
@@ -504,7 +525,8 @@
     "year": 2025,
     "test": "ENEM",
     "area": "nature",
-    "answer": "d"
+    "answer": "d",
+    "difficulty": 2
   },
   {
     "number": 113,
@@ -528,7 +550,8 @@
     "year": 2025,
     "test": "ENEM",
     "area": "nature",
-    "answer": "b"
+    "answer": "b",
+    "difficulty": 6
   },
   {
     "number": 114,
@@ -552,7 +575,8 @@
     "year": 2025,
     "test": "ENEM",
     "area": "nature",
-    "answer": "b"
+    "answer": "b",
+    "difficulty": 3
   },
   {
     "number": 115,
@@ -576,7 +600,8 @@
     "year": 2025,
     "test": "ENEM",
     "area": "nature",
-    "answer": "c"
+    "answer": "c",
+    "difficulty": 6
   },
   {
     "number": 116,
@@ -598,7 +623,8 @@
     "year": 2025,
     "test": "ENEM",
     "area": "nature",
-    "answer": "c"
+    "answer": "c",
+    "difficulty": 3
   },
   {
     "number": 117,
@@ -619,7 +645,8 @@
     "year": 2025,
     "test": "ENEM",
     "area": "nature",
-    "answer": "d"
+    "answer": "d",
+    "difficulty": 5
   },
   {
     "number": 118,
@@ -641,7 +668,8 @@
     "year": 2025,
     "test": "ENEM",
     "area": "nature",
-    "answer": "c"
+    "answer": "c",
+    "difficulty": 3
   },
   {
     "number": 119,
@@ -670,7 +698,8 @@
     "year": 2025,
     "test": "ENEM",
     "area": "nature",
-    "answer": "b"
+    "answer": "b",
+    "difficulty": 8
   },
   {
     "number": 120,
@@ -694,7 +723,8 @@
     "year": 2025,
     "test": "ENEM",
     "area": "nature",
-    "answer": "b"
+    "answer": "b",
+    "difficulty": 5
   },
   {
     "number": 121,
@@ -715,7 +745,8 @@
     "year": 2025,
     "test": "ENEM",
     "area": "nature",
-    "answer": "b"
+    "answer": "b",
+    "difficulty": 4
   },
   {
     "number": 122,
@@ -739,7 +770,8 @@
     "year": 2025,
     "test": "ENEM",
     "area": "nature",
-    "answer": "d"
+    "answer": "d",
+    "difficulty": 5
   },
   {
     "number": 123,
@@ -760,7 +792,8 @@
     "year": 2025,
     "test": "ENEM",
     "area": "nature",
-    "answer": "annulled"
+    "answer": "annulled",
+    "difficulty": 5
   },
   {
     "number": 124,
@@ -781,7 +814,8 @@
     "year": 2025,
     "test": "ENEM",
     "area": "nature",
-    "answer": "b"
+    "answer": "b",
+    "difficulty": 4
   },
   {
     "number": 125,
@@ -803,7 +837,8 @@
     "year": 2025,
     "test": "ENEM",
     "area": "nature",
-    "answer": "b"
+    "answer": "b",
+    "difficulty": 5
   },
   {
     "number": 126,
@@ -827,7 +862,8 @@
     "year": 2025,
     "test": "ENEM",
     "area": "nature",
-    "answer": "d"
+    "answer": "d",
+    "difficulty": 7
   },
   {
     "number": 127,
@@ -855,7 +891,8 @@
     "year": 2025,
     "test": "ENEM",
     "area": "nature",
-    "answer": "c"
+    "answer": "c",
+    "difficulty": 7
   },
   {
     "number": 128,
@@ -879,7 +916,8 @@
     "year": 2025,
     "test": "ENEM",
     "area": "nature",
-    "answer": "e"
+    "answer": "e",
+    "difficulty": 7
   },
   {
     "number": 129,
@@ -900,7 +938,8 @@
     "year": 2025,
     "test": "ENEM",
     "area": "nature",
-    "answer": "a"
+    "answer": "a",
+    "difficulty": 4
   },
   {
     "number": 130,
@@ -928,7 +967,8 @@
     "year": 2025,
     "test": "ENEM",
     "area": "nature",
-    "answer": "e"
+    "answer": "e",
+    "difficulty": 5
   },
   {
     "number": 131,
@@ -949,7 +989,8 @@
     "year": 2025,
     "test": "ENEM",
     "area": "nature",
-    "answer": "e"
+    "answer": "e",
+    "difficulty": 4
   },
   {
     "number": 132,
@@ -971,7 +1012,8 @@
     "year": 2025,
     "test": "ENEM",
     "area": "nature",
-    "answer": "annulled"
+    "answer": "annulled",
+    "difficulty": 5
   },
   {
     "number": 133,
@@ -994,7 +1036,8 @@
     "year": 2025,
     "test": "ENEM",
     "area": "nature",
-    "answer": "a"
+    "answer": "a",
+    "difficulty": 6
   },
   {
     "number": 134,
@@ -1018,7 +1061,8 @@
     "year": 2025,
     "test": "ENEM",
     "area": "nature",
-    "answer": "b"
+    "answer": "b",
+    "difficulty": 7
   },
   {
     "number": 135,
@@ -1047,6 +1091,7 @@
     "year": 2025,
     "test": "ENEM",
     "area": "nature",
-    "answer": "a"
+    "answer": "a",
+    "difficulty": 7
   }
 ]

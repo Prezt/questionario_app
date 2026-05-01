@@ -11,8 +11,8 @@
     },
     "images": [],
     "tags": [
-      "geometria",
-      "volume"
+      "geometria espacial",
+      "geometria plana"
     ],
     "year": 2023,
     "test": "ENEM",
@@ -31,8 +31,7 @@
     },
     "images": [],
     "tags": [
-      "estatística",
-      "média"
+      "estatística"
     ],
     "year": 2023,
     "test": "ENEM",
@@ -51,8 +50,8 @@
     },
     "images": [],
     "tags": [
-      "probabilidade",
-      "estatística"
+      "estatística",
+      "probabilidade"
     ],
     "year": 2023,
     "test": "ENEM",
@@ -71,8 +70,7 @@
     },
     "images": [],
     "tags": [
-      "estatística",
-      "tabelas"
+      "estatística"
     ],
     "year": 2023,
     "test": "ENEM",
@@ -91,8 +89,7 @@
     },
     "images": [],
     "tags": [
-      "estatística",
-      "medidas de tendência central"
+      "estatística"
     ],
     "year": 2023,
     "test": "ENEM",
@@ -111,8 +108,8 @@
     },
     "images": [],
     "tags": [
-      "probabilidade",
-      "estatística"
+      "estatística",
+      "probabilidade"
     ],
     "year": 2023,
     "test": "ENEM",
@@ -131,8 +128,7 @@
     },
     "images": [],
     "tags": [
-      "água",
-      "matemática"
+      "aritmética e números"
     ],
     "year": 2023,
     "test": "ENEM",
@@ -151,7 +147,6 @@
     },
     "images": [],
     "tags": [
-      "matemática",
       "probabilidade"
     ],
     "year": 2023,
@@ -173,8 +168,7 @@
       "figuras/q144_2023_fig1.png"
     ],
     "tags": [
-      "geometria",
-      "matemática-aplicada"
+      "geometria plana"
     ],
     "year": 2023,
     "test": "ENEM",
@@ -193,8 +187,7 @@
     },
     "images": [],
     "tags": [
-      "geometria",
-      "ângulos"
+      "geometria plana"
     ],
     "year": 2023,
     "test": "ENEM",
@@ -215,8 +208,8 @@
       "figuras/q146_2023_fig1.png"
     ],
     "tags": [
-      "progressão aritmética",
-      "combinatória"
+      "análise combinatória",
+      "sequências e progressões"
     ],
     "year": 2023,
     "test": "ENEM",
@@ -235,8 +228,7 @@
     },
     "images": [],
     "tags": [
-      "carboidratos",
-      "matemática-aplicada"
+      "aritmética e números"
     ],
     "year": 2023,
     "test": "ENEM",
@@ -255,7 +247,7 @@
     },
     "images": [],
     "tags": [
-      "geometria",
+      "geometria plana",
       "trigonometria"
     ],
     "year": 2023,
@@ -275,8 +267,8 @@
     },
     "images": [],
     "tags": [
-      "geometria",
-      "proporção"
+      "aritmética e números",
+      "geometria plana"
     ],
     "year": 2023,
     "test": "ENEM",
@@ -295,8 +287,7 @@
     },
     "images": [],
     "tags": [
-      "álgebra",
-      "matemática-aplicada"
+      "álgebra"
     ],
     "year": 2023,
     "test": "ENEM",
@@ -315,7 +306,7 @@
     },
     "images": [],
     "tags": [
-      "gráficos",
+      "estatística",
       "matemática financeira"
     ],
     "year": 2023,
@@ -335,8 +326,8 @@
     },
     "images": [],
     "tags": [
-      "física",
-      "logaritmo"
+      "funções",
+      "mecânica newtoniana"
     ],
     "year": 2023,
     "test": "ENEM",
@@ -355,9 +346,8 @@
     },
     "images": [],
     "tags": [
-      "matemática",
-      "probabilidade",
-      "estatística"
+      "estatística",
+      "probabilidade"
     ],
     "year": 2023,
     "test": "ENEM",
@@ -376,8 +366,7 @@
     },
     "images": [],
     "tags": [
-      "geometria",
-      "figuras geométricas"
+      "geometria plana"
     ],
     "year": 2023,
     "test": "ENEM",
@@ -396,8 +385,7 @@
     },
     "images": [],
     "tags": [
-      "área",
-      "geometria"
+      "geometria plana"
     ],
     "year": 2023,
     "test": "ENEM",
@@ -416,8 +404,8 @@
     },
     "images": [],
     "tags": [
-      "tempo",
-      "internet"
+      "aritmética e números",
+      "comunicação e mídia"
     ],
     "year": 2023,
     "test": "ENEM",
@@ -436,8 +424,8 @@
     },
     "images": [],
     "tags": [
-      "estatística",
-      "percentual"
+      "aritmética e números",
+      "estatística"
     ],
     "year": 2023,
     "test": "ENEM",
@@ -456,9 +444,7 @@
     },
     "images": [],
     "tags": [
-      "matemática",
-      "finanças",
-      "custos"
+      "matemática financeira"
     ],
     "year": 2023,
     "test": "ENEM",
@@ -477,9 +463,8 @@
     },
     "images": [],
     "tags": [
-      "matemática",
-      "reprodução",
-      "população"
+      "fisiologia humana",
+      "geografia humana e urbana"
     ],
     "year": 2023,
     "test": "ENEM",
@@ -498,8 +483,8 @@
     },
     "images": [],
     "tags": [
-      "probabilidade",
-      "senha"
+      "análise combinatória",
+      "probabilidade"
     ],
     "year": 2023,
     "test": "ENEM",
@@ -518,8 +503,7 @@
     },
     "images": [],
     "tags": [
-      "juros",
-      "financeiro"
+      "matemática financeira"
     ],
     "year": 2023,
     "test": "ENEM",
@@ -538,7 +522,7 @@
     },
     "images": [],
     "tags": [
-      "função linear",
+      "funções",
       "matemática financeira"
     ],
     "year": 2023,
@@ -558,8 +542,8 @@
     },
     "images": [],
     "tags": [
-      "geometria",
-      "funções"
+      "funções",
+      "geometria plana"
     ],
     "year": 2023,
     "test": "ENEM",
@@ -578,8 +562,7 @@
     },
     "images": [],
     "tags": [
-      "estatística",
-      "gráficos"
+      "estatística"
     ],
     "year": 2023,
     "test": "ENEM",
@@ -600,8 +583,7 @@
       "figuras/q165_2023_fig1.png"
     ],
     "tags": [
-      "área",
-      "geometria"
+      "geometria plana"
     ],
     "year": 2023,
     "test": "ENEM",
@@ -620,7 +602,6 @@
     },
     "images": [],
     "tags": [
-      "matemática",
       "estatística"
     ],
     "year": 2023,
@@ -640,9 +621,7 @@
     },
     "images": [],
     "tags": [
-      "matemática",
-      "proporcionalidade",
-      "porcentagem"
+      "aritmética e números"
     ],
     "year": 2023,
     "test": "ENEM",
@@ -661,8 +640,7 @@
     },
     "images": [],
     "tags": [
-      "probabilidade",
-      "sorteio"
+      "probabilidade"
     ],
     "year": 2023,
     "test": "ENEM",
@@ -681,8 +659,8 @@
     },
     "images": [],
     "tags": [
-      "geometria",
-      "proporção"
+      "aritmética e números",
+      "geometria plana"
     ],
     "year": 2023,
     "test": "ENEM",
@@ -701,8 +679,8 @@
     },
     "images": [],
     "tags": [
-      "álgebra",
-      "funções"
+      "funções",
+      "álgebra"
     ],
     "year": 2023,
     "test": "ENEM",
@@ -721,8 +699,7 @@
     },
     "images": [],
     "tags": [
-      "calendário",
-      "matemática"
+      "aritmética e números"
     ],
     "year": 2023,
     "test": "ENEM",
@@ -741,8 +718,7 @@
     },
     "images": [],
     "tags": [
-      "triângulo retângulo",
-      "área de círculos"
+      "geometria plana"
     ],
     "year": 2023,
     "test": "ENEM",
@@ -761,8 +737,7 @@
     },
     "images": [],
     "tags": [
-      "unidades-de-medida",
-      "razao-e-proporcao"
+      "aritmética e números"
     ],
     "year": 2023,
     "test": "ENEM",
@@ -781,8 +756,8 @@
     },
     "images": [],
     "tags": [
-      "geometria",
-      "coordenadas"
+      "geometria analítica",
+      "geometria plana"
     ],
     "year": 2023,
     "test": "ENEM",
@@ -801,8 +776,7 @@
     },
     "images": [],
     "tags": [
-      "álgebra",
-      "equações"
+      "álgebra"
     ],
     "year": 2023,
     "test": "ENEM",
@@ -821,8 +795,8 @@
     },
     "images": [],
     "tags": [
-      "números figurados",
-      "padrão geométrico"
+      "aritmética e números",
+      "geometria plana"
     ],
     "year": 2023,
     "test": "ENEM",
@@ -841,9 +815,9 @@
     },
     "images": [],
     "tags": [
-      "rotação",
-      "gráficos",
-      "altura"
+      "estatística",
+      "geometria espacial",
+      "geometria plana"
     ],
     "year": 2023,
     "test": "ENEM",
@@ -862,8 +836,7 @@
     },
     "images": [],
     "tags": [
-      "robótica",
-      "matemática-aplicada"
+      "álgebra"
     ],
     "year": 2023,
     "test": "ENEM",
@@ -884,8 +857,8 @@
       "figuras/q179_2023_fig1.png"
     ],
     "tags": [
-      "numeração",
-      "cultura"
+      "aritmética e números",
+      "cultura e identidade"
     ],
     "year": 2023,
     "test": "ENEM",
@@ -894,7 +867,7 @@
   },
   {
     "number": 180,
-    "text": "Um tipo de semente necessita de bastante água nos dois primeiros meses após o plantio. Um produtor pretende estabelecer o melhor momento para o plantio desse tipo de semente, nos meses de outubro a março. Após consultar previsão do índice mensal de precipitação de chuva (ImPC) da região onde ocorrerá o plantio, para o período chuvoso de 2020 - 2021, ele obteve os seguintes dados: outubro/2020: ImPC = 250 mm; novembro/2020: ImPC = 150 mm; dezembro/2020: ImPC = 200 mm; janeiro/2021: ImPC = 450 mm; fevereiro/2021: ImPC = 100 mm; março/2021: ImPC = 200 mm. Com base nessas previsões, ele precisa escolher dois meses consecutivos em que a média mensal de precipitação seja a maior possível. No início de qual desses meses o produtor deverá plantar esse tipo de semente?",
+    "text": "Um tipo de semente necessita de bastante água nos dois primeiros meses após o plantio. Um produtor pretende estabelecer o melhor momento para o plantio desse tipo de semente, nos meses de outubro a março. Após consultar previsão do índice mensal de precipitação de chuva (ImPC) da região onde ocorrerá o plantio, para o período chuvoso de 2020 - 2021, ele obteve os seguintes dados:\n  - outubro/2020: ImPC = 250 mm;\n  - novembro/2020: ImPC = 150 mm;\n  - dezembro/2020: ImPC = 200 mm;\n  - janeiro/2021: ImPC = 450 mm;\n  - fevereiro/2021: ImPC = 100 mm;\n  - março/2021: ImPC = 200 mm.\n\nCom base nessas previsões, ele precisa escolher dois meses consecutivos em que a média mensal de precipitação seja a maior possível. No início de qual desses meses o produtor deverá plantar esse tipo de semente?",
     "alternatives": {
       "a": "Outubro.",
       "b": "Novembro.",

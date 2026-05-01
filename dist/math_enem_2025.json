@@ -11,9 +11,8 @@
     },
     "images": [],
     "tags": [
-      "aritmética",
-      "proporcionalidade",
-      "raciocínio lógico"
+      "aritmética e números",
+      "álgebra"
     ],
     "year": 2025,
     "test": "ENEM",
@@ -34,9 +33,9 @@
       "figuras/q137_infografico.png"
     ],
     "tags": [
-      "probabilidade",
-      "porcentagem",
-      "leitura de infográfico"
+      "aritmética e números",
+      "estatística",
+      "probabilidade"
     ],
     "year": 2025,
     "test": "ENEM",
@@ -62,9 +61,8 @@
       "figuras/q138_alt_e.png"
     ],
     "tags": [
-      "geometria espacial",
       "geometria analítica",
-      "projeções ortogonais"
+      "geometria espacial"
     ],
     "year": 2025,
     "test": "ENEM",
@@ -86,8 +84,7 @@
     ],
     "tags": [
       "geometria plana",
-      "comprimento de circunferência",
-      "raciocínio lógico"
+      "álgebra"
     ],
     "year": 2025,
     "test": "ENEM",
@@ -106,9 +103,8 @@
     },
     "images": [],
     "tags": [
-      "porcentagem",
-      "equações",
-      "concentração de soluções"
+      "aritmética e números",
+      "álgebra"
     ],
     "year": 2025,
     "test": "ENEM",
@@ -127,9 +123,8 @@
     },
     "images": [],
     "tags": [
-      "aritmética",
-      "raciocínio lógico",
-      "resolução de problemas"
+      "aritmética e números",
+      "álgebra"
     ],
     "year": 2025,
     "test": "ENEM",
@@ -148,9 +143,7 @@
     },
     "images": [],
     "tags": [
-      "estatística",
-      "mediana",
-      "medidas de tendência central"
+      "estatística"
     ],
     "year": 2025,
     "test": "ENEM",
@@ -171,9 +164,8 @@
       "figuras/q143_rotulos.png"
     ],
     "tags": [
-      "aritmética",
-      "multiplicação",
-      "resolução de problemas"
+      "aritmética e números",
+      "álgebra"
     ],
     "year": 2025,
     "test": "ENEM",
@@ -192,10 +184,7 @@
     },
     "images": [],
     "tags": [
-      "geometria espacial",
-      "poliedros",
-      "prisma",
-      "tronco de pirâmide"
+      "geometria espacial"
     ],
     "year": 2025,
     "test": "ENEM",
@@ -216,9 +205,8 @@
       "figuras/q145_grafico.png"
     ],
     "tags": [
-      "funções",
-      "análise de gráficos",
-      "interpretação"
+      "estatística",
+      "funções"
     ],
     "year": 2025,
     "test": "ENEM",
@@ -237,9 +225,7 @@
     },
     "images": [],
     "tags": [
-      "aritmética",
-      "números decimais",
-      "subtração"
+      "aritmética e números"
     ],
     "year": 2025,
     "test": "ENEM",
@@ -260,8 +246,7 @@
       "figuras/q147_graficos.png"
     ],
     "tags": [
-      "porcentagem",
-      "leitura de gráficos",
+      "aritmética e números",
       "estatística"
     ],
     "year": 2025,
@@ -283,9 +268,7 @@
       "figuras/q148_telas.png"
     ],
     "tags": [
-      "escala",
-      "proporcionalidade",
-      "razão"
+      "aritmética e números"
     ],
     "year": 2025,
     "test": "ENEM",
@@ -306,9 +289,7 @@
       "figuras/q149_poliedro.png"
     ],
     "tags": [
-      "geometria espacial",
-      "poliedros",
-      "relação de Euler"
+      "geometria espacial"
     ],
     "year": 2025,
     "test": "ENEM",
@@ -327,8 +308,7 @@
     },
     "images": [],
     "tags": [
-      "regra de três composta",
-      "proporcionalidade"
+      "aritmética e números"
     ],
     "year": 2025,
     "test": "ENEM",
@@ -347,9 +327,8 @@
     },
     "images": [],
     "tags": [
-      "raciocínio lógico",
-      "sistema de numeração",
-      "resolução de problemas"
+      "aritmética e números",
+      "álgebra"
     ],
     "year": 2025,
     "test": "ENEM",
@@ -368,9 +347,8 @@
     },
     "images": [],
     "tags": [
-      "probabilidade",
       "análise combinatória",
-      "permutação"
+      "probabilidade"
     ],
     "year": 2025,
     "test": "ENEM",
@@ -392,8 +370,8 @@
     ],
     "tags": [
       "geometria analítica",
-      "mediatriz",
-      "equação da reta"
+      "geometria plana",
+      "álgebra"
     ],
     "year": 2025,
     "test": "ENEM",
@@ -414,9 +392,7 @@
       "figuras/q154_grafico.png"
     ],
     "tags": [
-      "leitura de gráficos",
-      "estatística",
-      "interpretação de dados"
+      "estatística"
     ],
     "year": 2025,
     "test": "ENEM",
@@ -435,9 +411,7 @@
     },
     "images": [],
     "tags": [
-      "análise combinatória",
-      "princípio multiplicativo",
-      "arranjo"
+      "análise combinatória"
     ],
     "year": 2025,
     "test": "ENEM",
@@ -458,9 +432,7 @@
       "figuras/q156_sol.png"
     ],
     "tags": [
-      "escala",
-      "proporcionalidade",
-      "conversão de unidades"
+      "aritmética e números"
     ],
     "year": 2025,
     "test": "ENEM",
@@ -479,9 +451,8 @@
     },
     "images": [],
     "tags": [
-      "razão",
-      "proporção",
-      "equações"
+      "aritmética e números",
+      "álgebra"
     ],
     "year": 2025,
     "test": "ENEM",
@@ -500,9 +471,9 @@
     },
     "images": [],
     "tags": [
+      "aritmética e números",
       "matemática financeira",
-      "porcentagem",
-      "resolução de problemas"
+      "álgebra"
     ],
     "year": 2025,
     "test": "ENEM",
@@ -521,9 +492,8 @@
     },
     "images": [],
     "tags": [
-      "conversão de unidades",
-      "volume",
-      "aritmética"
+      "aritmética e números",
+      "geometria espacial"
     ],
     "year": 2025,
     "test": "ENEM",
@@ -544,9 +514,9 @@
       "figuras/q160_grafico.png"
     ],
     "tags": [
-      "funções trigonométricas",
-      "tangente",
-      "análise de gráficos"
+      "estatística",
+      "funções",
+      "trigonometria"
     ],
     "year": 2025,
     "test": "ENEM",
@@ -567,9 +537,9 @@
       "figuras/q161_grade.png"
     ],
     "tags": [
-      "raciocínio lógico",
-      "orientação espacial",
-      "geometria"
+      "cartografia",
+      "geometria plana",
+      "álgebra"
     ],
     "year": 2025,
     "test": "ENEM",
@@ -588,10 +558,9 @@
     },
     "images": [],
     "tags": [
-      "porcentagem",
+      "aritmética e números",
       "matemática financeira",
-      "equações",
-      "inequações"
+      "álgebra"
     ],
     "year": 2025,
     "test": "ENEM",
@@ -612,9 +581,8 @@
       "figuras/q163_graficos.png"
     ],
     "tags": [
-      "leitura de gráficos",
-      "proporção",
-      "porcentagem"
+      "aritmética e números",
+      "estatística"
     ],
     "year": 2025,
     "test": "ENEM",
@@ -635,10 +603,8 @@
       "figuras/q164_rota.png"
     ],
     "tags": [
-      "trigonometria",
-      "lei dos cossenos",
       "geometria plana",
-      "resolução de triângulos"
+      "trigonometria"
     ],
     "year": 2025,
     "test": "ENEM",
@@ -657,10 +623,7 @@
     },
     "images": [],
     "tags": [
-      "estatística",
-      "medidas de dispersão",
-      "desvio padrão",
-      "média"
+      "estatística"
     ],
     "year": 2025,
     "test": "ENEM",
@@ -681,9 +644,9 @@
       "figuras/q166_corrida.png"
     ],
     "tags": [
-      "média aritmética",
-      "aritmética",
-      "resolução de problemas"
+      "aritmética e números",
+      "estatística",
+      "álgebra"
     ],
     "year": 2025,
     "test": "ENEM",
@@ -704,9 +667,9 @@
       "figuras/q167_graficos.png"
     ],
     "tags": [
-      "leitura de gráficos",
-      "matemática financeira",
-      "aritmética"
+      "aritmética e números",
+      "estatística",
+      "matemática financeira"
     ],
     "year": 2025,
     "test": "ENEM",
@@ -725,9 +688,8 @@
     },
     "images": [],
     "tags": [
-      "matemática financeira",
-      "aritmética",
-      "comparação"
+      "aritmética e números",
+      "matemática financeira"
     ],
     "year": 2025,
     "test": "ENEM",
@@ -748,10 +710,8 @@
       "figuras/q169_alternativas.png"
     ],
     "tags": [
-      "leitura de gráficos",
-      "estatística",
-      "conversão de unidades",
-      "aritmética"
+      "aritmética e números",
+      "estatística"
     ],
     "year": 2025,
     "test": "ENEM",
@@ -772,10 +732,8 @@
       "figuras/q170_caixa.png"
     ],
     "tags": [
-      "geometria espacial",
-      "volume",
-      "paralelepípedo",
-      "conversão de unidades"
+      "aritmética e números",
+      "geometria espacial"
     ],
     "year": 2025,
     "test": "ENEM",
@@ -795,9 +753,7 @@
     "images": [],
     "tags": [
       "geometria espacial",
-      "cilindro",
-      "prisma",
-      "resolução de problemas"
+      "álgebra"
     ],
     "year": 2025,
     "test": "ENEM",
@@ -816,10 +772,8 @@
     },
     "images": [],
     "tags": [
-      "função logarítmica",
-      "logaritmo",
-      "inequação",
-      "função quadrática"
+      "funções",
+      "álgebra"
     ],
     "year": 2025,
     "test": "ENEM",
@@ -840,10 +794,8 @@
       "figuras/q173_tuneis.png"
     ],
     "tags": [
-      "geometria plana",
-      "área do círculo",
-      "semicírculo",
-      "comparação"
+      "aritmética e números",
+      "geometria plana"
     ],
     "year": 2025,
     "test": "ENEM",
@@ -862,9 +814,8 @@
     },
     "images": [],
     "tags": [
-      "equação do 2º grau",
       "matemática financeira",
-      "sistemas de equações"
+      "álgebra"
     ],
     "year": 2025,
     "test": "ENEM",
@@ -883,9 +834,7 @@
     },
     "images": [],
     "tags": [
-      "análise combinatória",
-      "combinação",
-      "princípio multiplicativo"
+      "análise combinatória"
     ],
     "year": 2025,
     "test": "ENEM",
@@ -904,9 +853,8 @@
     },
     "images": [],
     "tags": [
-      "proporcionalidade",
-      "velocidade média",
-      "regra de três"
+      "aritmética e números",
+      "mecânica newtoniana"
     ],
     "year": 2025,
     "test": "ENEM",
@@ -927,11 +875,8 @@
       "figuras/q177_medalha.png"
     ],
     "tags": [
-      "geometria espacial",
-      "volume",
-      "cilindro",
-      "prisma",
-      "quadrado inscrito"
+      "geometria analítica",
+      "geometria espacial"
     ],
     "year": 2025,
     "test": "ENEM",
@@ -950,9 +895,8 @@
     },
     "images": [],
     "tags": [
-      "probabilidade",
-      "eventos independentes",
-      "análise combinatória"
+      "análise combinatória",
+      "probabilidade"
     ],
     "year": 2025,
     "test": "ENEM",
@@ -971,9 +915,7 @@
     },
     "images": [],
     "tags": [
-      "grandezas e unidades",
-      "razão",
-      "física matemática"
+      "aritmética e números"
     ],
     "year": 2025,
     "test": "ENEM",
@@ -994,9 +936,8 @@
       "figuras/q180_diagrama.png"
     ],
     "tags": [
-      "sequências",
-      "progressão aritmética",
-      "raciocínio algébrico"
+      "sequências e progressões",
+      "álgebra"
     ],
     "year": 2025,
     "test": "ENEM",

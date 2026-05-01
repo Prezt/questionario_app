@@ -11,10 +11,8 @@
     },
     "images": [],
     "tags": [
-      "geografia política",
-      "União Europeia",
-      "Balcãs",
-      "integração regional"
+      "geopolítica e relações internacionais",
+      "história antiga e medieval"
     ],
     "area": "humanas",
     "test": "ENEM",
@@ -35,10 +33,8 @@
       "figuras/q47_co2_queimadas.png"
     ],
     "tags": [
-      "geografia física",
-      "queimadas",
-      "circulação atmosférica",
-      "meio ambiente"
+      "climatologia",
+      "meio ambiente e sustentabilidade"
     ],
     "area": "humanas",
     "test": "ENEM",
@@ -57,10 +53,8 @@
     },
     "images": [],
     "tags": [
-      "filosofia",
-      "David Hume",
-      "retórica",
-      "Platão"
+      "filosofia antiga e medieval",
+      "filosofia moderna e contemporânea"
     ],
     "area": "humanas",
     "test": "ENEM",
@@ -81,10 +75,9 @@
       "figuras/q49_la_piazetta.png"
     ],
     "tags": [
+      "história antiga e medieval",
       "história moderna",
-      "Veneza",
-      "comércio mediterrâneo",
-      "cosmopolitismo"
+      "ética e política"
     ],
     "area": "humanas",
     "test": "ENEM",
@@ -103,10 +96,8 @@
     },
     "images": [],
     "tags": [
-      "filosofia",
-      "Derrida",
-      "direito e justiça",
-      "desobediência civil"
+      "filosofia moderna e contemporânea",
+      "ética e política"
     ],
     "area": "humanas",
     "test": "ENEM",
@@ -125,10 +116,9 @@
     },
     "images": [],
     "tags": [
-      "sociologia",
-      "cultura urbana",
-      "relações sociais",
-      "modernidade"
+      "cultura e identidade",
+      "filosofia moderna e contemporânea",
+      "sociologia e estrutura social"
     ],
     "area": "humanas",
     "test": "ENEM",
@@ -147,10 +137,7 @@
     },
     "images": [],
     "tags": [
-      "história contemporânea",
-      "Primeira Guerra Mundial",
-      "gripe espanhola",
-      "censura"
+      "história contemporânea"
     ],
     "area": "humanas",
     "test": "ENEM",
@@ -169,10 +156,8 @@
     },
     "images": [],
     "tags": [
-      "história",
-      "religião",
-      "dança",
-      "cultura corporal"
+      "cultura e identidade",
+      "história da cultura e arte"
     ],
     "area": "humanas",
     "test": "ENEM",
@@ -191,10 +176,7 @@
     },
     "images": [],
     "tags": [
-      "geografia urbana",
-      "migração",
-      "desigualdade socioespacial",
-      "êxodo urbano"
+      "geografia humana e urbana"
     ],
     "area": "humanas",
     "test": "ENEM",
@@ -213,10 +195,9 @@
     },
     "images": [],
     "tags": [
-      "filosofia",
-      "Foucault",
-      "disciplina",
-      "poder"
+      "filosofia moderna e contemporânea",
+      "sociologia e estrutura social",
+      "ética e política"
     ],
     "area": "humanas",
     "test": "ENEM",
@@ -235,10 +216,9 @@
     },
     "images": [],
     "tags": [
-      "geografia",
-      "crise climática",
-      "navegação fluvial",
-      "Rio Reno"
+      "geografia humana e urbana",
+      "geopolítica e relações internacionais",
+      "meio ambiente e sustentabilidade"
     ],
     "area": "humanas",
     "test": "ENEM",
@@ -257,10 +237,8 @@
     },
     "images": [],
     "tags": [
-      "geografia cultural",
-      "migração nordestina",
-      "memória",
-      "Feira de São Cristóvão"
+      "geografia humana e urbana",
+      "história da cultura e arte"
     ],
     "area": "humanas",
     "test": "ENEM",
@@ -279,10 +257,8 @@
     },
     "images": [],
     "tags": [
-      "história do Brasil",
-      "Lei Saraiva",
-      "Segundo Reinado",
-      "cidadania"
+      "direitos humanos e cidadania",
+      "história do brasil imperial"
     ],
     "area": "humanas",
     "test": "ENEM",
@@ -301,10 +277,7 @@
     },
     "images": [],
     "tags": [
-      "geografia",
-      "matriz energética",
-      "desmatamento",
-      "Amazônia"
+      "meio ambiente e sustentabilidade"
     ],
     "area": "humanas",
     "test": "ENEM",
@@ -323,10 +296,9 @@
     },
     "images": [],
     "tags": [
-      "filosofia",
-      "Adam Smith",
-      "ética",
-      "capitalismo"
+      "história moderna",
+      "sociologia e estrutura social",
+      "ética e política"
     ],
     "area": "humanas",
     "test": "ENEM",
@@ -345,10 +317,8 @@
     },
     "images": [],
     "tags": [
-      "filosofia antiga",
-      "Aristóteles",
-      "formas de governo",
-      "política"
+      "filosofia antiga e medieval",
+      "ética e política"
     ],
     "area": "humanas",
     "test": "ENEM",
@@ -367,10 +337,8 @@
     },
     "images": [],
     "tags": [
-      "sociologia",
-      "Bauman",
-      "utopia",
-      "transformação social"
+      "filosofia moderna e contemporânea",
+      "sociologia e estrutura social"
     ],
     "area": "humanas",
     "test": "ENEM",
@@ -391,10 +359,8 @@
       "figuras/q63_producao_exportacao.png"
     ],
     "tags": [
-      "geografia agrária",
-      "agronegócio",
-      "exportações",
-      "Brasil"
+      "geopolítica e território",
+      "meio ambiente e sustentabilidade"
     ],
     "area": "humanas",
     "test": "ENEM",
@@ -413,10 +379,7 @@
     },
     "images": [],
     "tags": [
-      "história do Brasil",
-      "Era Vargas",
-      "atentado Rua Tonelero",
-      "UDN"
+      "história do brasil república"
     ],
     "area": "humanas",
     "test": "ENEM",
@@ -435,10 +398,8 @@
     },
     "images": [],
     "tags": [
-      "filosofia",
-      "ética",
-      "altruísmo",
-      "Clarice Lispector"
+      "literatura brasileira",
+      "ética e política"
     ],
     "area": "humanas",
     "test": "ENEM",
@@ -457,10 +418,8 @@
     },
     "images": [],
     "tags": [
-      "filosofia",
-      "Marcuse",
-      "Escola de Frankfurt",
-      "sociedade industrial"
+      "filosofia moderna e contemporânea",
+      "sociologia e estrutura social"
     ],
     "area": "humanas",
     "test": "ENEM",
@@ -479,10 +438,8 @@
     },
     "images": [],
     "tags": [
-      "geografia agrária",
-      "função social da terra",
-      "trabalho escravo contemporâneo",
-      "reforma agrária"
+      "meio ambiente e sustentabilidade",
+      "sociologia e estrutura social"
     ],
     "area": "humanas",
     "test": "ENEM",
@@ -503,10 +460,8 @@
       "figuras/q68_salvador.png"
     ],
     "tags": [
-      "geografia urbana",
-      "verticalização",
-      "Salvador",
-      "paisagem"
+      "cultura e identidade",
+      "geografia humana e urbana"
     ],
     "area": "humanas",
     "test": "ENEM",
@@ -525,10 +480,9 @@
     },
     "images": [],
     "tags": [
-      "história medieval",
-      "Cruzadas",
-      "Igreja Católica",
-      "salvação"
+      "cultura e identidade",
+      "história antiga e medieval",
+      "história da cultura e arte"
     ],
     "area": "humanas",
     "test": "ENEM",
@@ -547,10 +501,7 @@
     },
     "images": [],
     "tags": [
-      "geografia física",
-      "geomorfologia",
-      "relevo cárstico",
-      "intemperismo"
+      "geografia física e geologia"
     ],
     "area": "humanas",
     "test": "ENEM",
@@ -570,9 +521,7 @@
     "images": [],
     "tags": [
       "história contemporânea",
-      "Muro de Berlim",
-      "memória coletiva",
-      "patrimônio histórico"
+      "história da cultura e arte"
     ],
     "area": "humanas",
     "test": "ENEM",
@@ -591,10 +540,8 @@
     },
     "images": [],
     "tags": [
-      "filosofia antiga",
-      "Heráclito",
-      "pré-socráticos",
-      "dialética"
+      "filosofia antiga e medieval",
+      "ética e política"
     ],
     "area": "humanas",
     "test": "ENEM",
@@ -613,10 +560,9 @@
     },
     "images": [],
     "tags": [
-      "história do Brasil colonial",
-      "antropofagia",
-      "povos indígenas",
-      "etnocentrismo"
+      "cultura e identidade",
+      "história do brasil colonial",
+      "meio ambiente e sustentabilidade"
     ],
     "area": "humanas",
     "test": "ENEM",
@@ -635,10 +581,9 @@
     },
     "images": [],
     "tags": [
-      "sociologia",
-      "religiões afro-brasileiras",
-      "intolerância religiosa",
-      "racismo"
+      "cultura e identidade",
+      "história da cultura e arte",
+      "sociologia e estrutura social"
     ],
     "area": "humanas",
     "test": "ENEM",
@@ -657,10 +602,7 @@
     },
     "images": [],
     "tags": [
-      "geografia agrária",
-      "agrotóxicos",
-      "biodiversidade",
-      "Revolução Verde"
+      "meio ambiente e sustentabilidade"
     ],
     "area": "humanas",
     "test": "ENEM",
@@ -679,10 +621,9 @@
     },
     "images": [],
     "tags": [
-      "filosofia política",
-      "Bobbio",
-      "direitos humanos",
-      "historicidade"
+      "direitos humanos e cidadania",
+      "filosofia moderna e contemporânea",
+      "ética e política"
     ],
     "area": "humanas",
     "test": "ENEM",
@@ -703,10 +644,7 @@
       "figuras/q77_carro_eletrico.png"
     ],
     "tags": [
-      "geografia",
-      "sustentabilidade",
-      "mineração",
-      "metais raros"
+      "meio ambiente e sustentabilidade"
     ],
     "area": "humanas",
     "test": "ENEM",
@@ -725,10 +663,10 @@
     },
     "images": [],
     "tags": [
-      "história do Brasil colonial",
-      "Roda dos Expostos",
-      "assistência",
-      "Igreja Católica"
+      "cultura e identidade",
+      "direitos humanos e cidadania",
+      "história do brasil colonial",
+      "história do brasil imperial"
     ],
     "area": "humanas",
     "test": "ENEM",
@@ -747,10 +685,7 @@
     },
     "images": [],
     "tags": [
-      "filosofia",
-      "utilitarismo",
-      "Bentham",
-      "justiça"
+      "ética e política"
     ],
     "area": "humanas",
     "test": "ENEM",
@@ -769,10 +704,8 @@
     },
     "images": [],
     "tags": [
-      "geografia urbana",
-      "sustentabilidade",
-      "cidades sustentáveis",
-      "meio ambiente"
+      "geografia humana e urbana",
+      "meio ambiente e sustentabilidade"
     ],
     "area": "humanas",
     "test": "ENEM",
@@ -791,10 +724,9 @@
     },
     "images": [],
     "tags": [
-      "sociologia",
-      "gênero",
-      "políticas públicas",
-      "discriminação positiva"
+      "cultura e identidade",
+      "direitos humanos e cidadania",
+      "sociologia e estrutura social"
     ],
     "area": "humanas",
     "test": "ENEM",
@@ -813,10 +745,9 @@
     },
     "images": [],
     "tags": [
-      "filosofia antiga",
-      "Platão",
-      "república",
-      "política"
+      "filosofia antiga e medieval",
+      "história do brasil república",
+      "ética e política"
     ],
     "area": "humanas",
     "test": "ENEM",
@@ -835,10 +766,7 @@
     },
     "images": [],
     "tags": [
-      "história do Brasil",
-      "Corte Portuguesa no Brasil",
-      "Impressão Régia",
-      "D. João VI"
+      "história do brasil imperial"
     ],
     "area": "humanas",
     "test": "ENEM",
@@ -857,10 +785,7 @@
     },
     "images": [],
     "tags": [
-      "geografia",
-      "Cerrado",
-      "queimadas",
-      "pesquisa acadêmica"
+      "meio ambiente e sustentabilidade"
     ],
     "area": "humanas",
     "test": "ENEM",
@@ -879,10 +804,9 @@
     },
     "images": [],
     "tags": [
-      "história do Brasil",
-      "cinema",
-      "cultura de massa",
-      "século XX"
+      "cultura e identidade",
+      "história contemporânea",
+      "história da cultura e arte"
     ],
     "area": "humanas",
     "test": "ENEM",
@@ -901,10 +825,7 @@
     },
     "images": [],
     "tags": [
-      "geografia",
-      "matriz energética",
-      "energia geotérmica",
-      "sustentabilidade"
+      "meio ambiente e sustentabilidade"
     ],
     "area": "humanas",
     "test": "ENEM",
@@ -923,10 +844,8 @@
     },
     "images": [],
     "tags": [
-      "história antiga",
-      "Roma",
-      "plebeus",
-      "Lei das Doze Tábuas"
+      "história antiga e medieval",
+      "história do brasil república"
     ],
     "area": "humanas",
     "test": "ENEM",
@@ -945,10 +864,9 @@
     },
     "images": [],
     "tags": [
-      "sociologia",
-      "direitos indígenas",
-      "saberes tradicionais",
-      "ONU"
+      "geopolítica e relações internacionais",
+      "meio ambiente e sustentabilidade",
+      "sociologia e estrutura social"
     ],
     "area": "humanas",
     "test": "ENEM",
@@ -967,10 +885,7 @@
     },
     "images": [],
     "tags": [
-      "história",
-      "religião",
-      "ciência e trabalho",
-      "textos sagrados"
+      "história da cultura e arte"
     ],
     "area": "humanas",
     "test": "ENEM",
@@ -989,10 +904,8 @@
     },
     "images": [],
     "tags": [
-      "história contemporânea",
-      "imperialismo",
-      "expedições científicas",
-      "Rússia"
+      "geopolítica e relações internacionais",
+      "história contemporânea"
     ],
     "area": "humanas",
     "test": "ENEM",

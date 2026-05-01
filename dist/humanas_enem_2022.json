@@ -11,8 +11,8 @@
     },
     "images": [],
     "tags": [
-      "cultura",
-      "religião"
+      "cultura e identidade",
+      "história da cultura e arte"
     ],
     "year": 2022,
     "test": "ENEM",
@@ -31,8 +31,7 @@
     },
     "images": [],
     "tags": [
-      "filosofia",
-      "sociedade"
+      "sociologia e estrutura social"
     ],
     "year": 2022,
     "test": "ENEM",
@@ -51,8 +50,7 @@
     },
     "images": [],
     "tags": [
-      "sociedade",
-      "racismo"
+      "cultura e identidade"
     ],
     "year": 2022,
     "test": "ENEM",
@@ -71,8 +69,8 @@
     },
     "images": [],
     "tags": [
-      "urbanização",
-      "hidrologia"
+      "geografia física e geologia",
+      "geografia humana e urbana"
     ],
     "year": 2022,
     "test": "ENEM",
@@ -91,8 +89,7 @@
     },
     "images": [],
     "tags": [
-      "crítica social",
-      "história"
+      "sociologia e estrutura social"
     ],
     "year": 2022,
     "test": "ENEM",
@@ -111,8 +108,7 @@
     },
     "images": [],
     "tags": [
-      "sociedade",
-      "economia"
+      "sociologia e estrutura social"
     ],
     "year": 2022,
     "test": "ENEM",
@@ -131,8 +127,7 @@
     },
     "images": [],
     "tags": [
-      "cultura",
-      "sociedade"
+      "cultura e identidade"
     ],
     "year": 2022,
     "test": "ENEM",
@@ -151,9 +146,7 @@
     },
     "answer": "a",
     "tags": [
-      "humanas",
-      "história",
-      "gênero"
+      "cultura e identidade"
     ],
     "year": 2022,
     "test": "ENEM",
@@ -177,8 +170,7 @@
       "figuras/q054_2022_fig1.png"
     ],
     "tags": [
-      "história",
-      "trabalhismo"
+      "história do brasil república"
     ],
     "year": 2022,
     "test": "ENEM",
@@ -197,8 +189,7 @@
     },
     "images": [],
     "tags": [
-      "ambiente",
-      "agricultura"
+      "meio ambiente e sustentabilidade"
     ],
     "year": 2022,
     "test": "ENEM",
@@ -219,8 +210,7 @@
       "figuras/q056_2022_fig1.png"
     ],
     "tags": [
-      "sociedade",
-      "educação"
+      "direitos humanos e cidadania"
     ],
     "year": 2022,
     "test": "ENEM",
@@ -239,8 +229,7 @@
     },
     "images": [],
     "tags": [
-      "sociedade",
-      "filosofia"
+      "sociologia e estrutura social"
     ],
     "year": 2022,
     "test": "ENEM",
@@ -259,8 +248,7 @@
     },
     "images": [],
     "tags": [
-      "religião",
-      "história"
+      "história da cultura e arte"
     ],
     "year": 2022,
     "test": "ENEM",
@@ -279,8 +267,8 @@
     },
     "images": [],
     "tags": [
-      "agricultura familiar",
-      "políticas públicas"
+      "direitos humanos e cidadania",
+      "meio ambiente e sustentabilidade"
     ],
     "year": 2022,
     "test": "ENEM",
@@ -299,8 +287,7 @@
     },
     "images": [],
     "tags": [
-      "tecnologia",
-      "sociedade"
+      "sociologia e estrutura social"
     ],
     "year": 2022,
     "test": "ENEM",
@@ -319,8 +306,7 @@
     },
     "images": [],
     "tags": [
-      "tecnologia",
-      "mercado de trabalho"
+      "sociologia e estrutura social"
     ],
     "year": 2022,
     "test": "ENEM",
@@ -339,8 +325,7 @@
     },
     "images": [],
     "tags": [
-      "Mercosul",
-      "Economia"
+      "geopolítica e relações internacionais"
     ],
     "year": 2022,
     "test": "ENEM",
@@ -359,8 +344,7 @@
     },
     "images": [],
     "tags": [
-      "história",
-      "idade média"
+      "história antiga e medieval"
     ],
     "year": 2022,
     "test": "ENEM",
@@ -379,8 +363,7 @@
     },
     "images": [],
     "tags": [
-      "geografia",
-      "ciências naturais"
+      "sociologia e estrutura social"
     ],
     "year": 2022,
     "test": "ENEM",
@@ -399,8 +382,7 @@
     },
     "images": [],
     "tags": [
-      "ética",
-      "sociedade"
+      "ética e política"
     ],
     "year": 2022,
     "test": "ENEM",
@@ -423,8 +405,7 @@
       "figuras/q066_2022_fig3.png"
     ],
     "tags": [
-      "educação",
-      "história"
+      "direitos humanos e cidadania"
     ],
     "year": 2022,
     "test": "ENEM",
@@ -443,8 +424,8 @@
     },
     "images": [],
     "tags": [
-      "direitos humanos",
-      "movimentos sociais"
+      "direitos humanos e cidadania",
+      "sociologia e estrutura social"
     ],
     "year": 2022,
     "test": "ENEM",
@@ -467,8 +448,8 @@
       "figuras/q068_2022_fig3.png"
     ],
     "tags": [
-      "geopolítica",
-      "economia internacional"
+      "geopolítica e relações internacionais",
+      "geopolítica e território"
     ],
     "year": 2022,
     "test": "ENEM",
@@ -487,8 +468,7 @@
     },
     "images": [],
     "tags": [
-      "geopolítica",
-      "história"
+      "geopolítica e relações internacionais"
     ],
     "year": 2022,
     "test": "ENEM",
@@ -507,8 +487,7 @@
     },
     "images": [],
     "tags": [
-      "discriminação",
-      "sociedade"
+      "sociologia e estrutura social"
     ],
     "year": 2022,
     "test": "ENEM",
@@ -527,8 +506,7 @@
     },
     "images": [],
     "tags": [
-      "direito",
-      "estado"
+      "ética e política"
     ],
     "year": 2022,
     "test": "ENEM",
@@ -547,9 +525,7 @@
     },
     "answer": "d",
     "tags": [
-      "humanas",
-      "geografia",
-      "dinâmica populacional"
+      "geografia humana e urbana"
     ],
     "year": 2022,
     "test": "ENEM",
@@ -571,8 +547,7 @@
     },
     "images": [],
     "tags": [
-      "história",
-      "classe operária"
+      "sociologia e estrutura social"
     ],
     "year": 2022,
     "test": "ENEM",
@@ -597,8 +572,7 @@
       "figuras/q074_2022_fig5.png"
     ],
     "tags": [
-      "energia solar",
-      "geografia"
+      "meio ambiente e sustentabilidade"
     ],
     "year": 2022,
     "test": "ENEM",
@@ -617,8 +591,7 @@
     },
     "images": [],
     "tags": [
-      "cultura",
-      "geografia"
+      "cultura e identidade"
     ],
     "year": 2022,
     "test": "ENEM",
@@ -643,8 +616,7 @@
       "figuras/q076_2022_fig5.png"
     ],
     "tags": [
-      "história",
-      "sociedade"
+      "sociologia e estrutura social"
     ],
     "year": 2022,
     "test": "ENEM",
@@ -663,8 +635,7 @@
     },
     "images": [],
     "tags": [
-      "história",
-      "sociedade"
+      "sociologia e estrutura social"
     ],
     "year": 2022,
     "test": "ENEM",
@@ -685,8 +656,7 @@
       "figuras/q078_2022_fig1.png"
     ],
     "tags": [
-      "geografia",
-      "matemática"
+      "sociologia e estrutura social"
     ],
     "year": 2022,
     "test": "ENEM",
@@ -705,8 +675,7 @@
     },
     "images": [],
     "tags": [
-      "patrimônio",
-      "museu"
+      "história da cultura e arte"
     ],
     "year": 2022,
     "test": "ENEM",
@@ -727,8 +696,7 @@
       "figuras/q080_2022_fig1.png"
     ],
     "tags": [
-      "filosofia",
-      "história da filosofia"
+      "filosofia antiga e medieval"
     ],
     "year": 2022,
     "test": "ENEM",
@@ -747,8 +715,7 @@
     },
     "images": [],
     "tags": [
-      "história",
-      "política"
+      "ética e política"
     ],
     "year": 2022,
     "test": "ENEM",
@@ -769,8 +736,7 @@
       "figuras/q082_2022_fig1.png"
     ],
     "tags": [
-      "geografia",
-      "rochas ígneas"
+      "geografia física e geologia"
     ],
     "year": 2022,
     "test": "ENEM",
@@ -789,8 +755,8 @@
     },
     "images": [],
     "tags": [
-      "direitos humanos",
-      "política"
+      "direitos humanos e cidadania",
+      "ética e política"
     ],
     "year": 2022,
     "test": "ENEM",
@@ -811,8 +777,7 @@
       "figuras/q084_2022_fig1.png"
     ],
     "tags": [
-      "filosofia",
-      "arte"
+      "história da cultura e arte"
     ],
     "year": 2022,
     "test": "ENEM",
@@ -831,9 +796,8 @@
     },
     "images": [],
     "tags": [
-      "inquisição",
-      "rito",
-      "igreja"
+      "história da cultura e arte",
+      "história do brasil colonial"
     ],
     "year": 2022,
     "test": "ENEM",
@@ -852,8 +816,7 @@
     },
     "images": [],
     "tags": [
-      "filosofia",
-      "pré-socráticos"
+      "filosofia antiga e medieval"
     ],
     "year": 2022,
     "test": "ENEM",
@@ -872,8 +835,7 @@
     },
     "images": [],
     "tags": [
-      "urbanismo",
-      "geografia"
+      "geografia humana e urbana"
     ],
     "year": 2022,
     "test": "ENEM",
@@ -892,8 +854,7 @@
     },
     "images": [],
     "tags": [
-      "filosofia",
-      "ética"
+      "ética e política"
     ],
     "year": 2022,
     "test": "ENEM",
@@ -912,8 +873,7 @@
     },
     "images": [],
     "tags": [
-      "história",
-      "cultura"
+      "cultura e identidade"
     ],
     "year": 2022,
     "test": "ENEM",
@@ -932,8 +892,8 @@
     },
     "images": [],
     "tags": [
-      "cultura",
-      "tradição"
+      "cultura e identidade",
+      "história da cultura e arte"
     ],
     "year": 2022,
     "test": "ENEM",

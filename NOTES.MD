@@ -23,10 +23,10 @@ MODOS DE USO
 [] Modo simulado (sem saber as respostas, correcao no fila)
 [x] Selecao de AREA
 [] Selecao de MULTIPLOS ASSUNTOS
-[] Selecao de PROVA COMPLETA (com timer)
+[x] Selecao de PROVA COMPLETA (com timer)
 
 ENRIQUECIMENTO DE DADOS
-[] Nivel da dificuldade da questao
+[x] Nivel da dificuldade da questao
 [] Comentario de resolucao da questao
 
 NICE TO HAVE
