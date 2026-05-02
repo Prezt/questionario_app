@@ -666,7 +666,7 @@ export default function ReviewPage() {
                                 }}
                               >
                                 <option value="">— pick a context to link —</option>
-                                {Object.entries(contexts)
+                                {Object.entries(contexts).sort(([a], [b]) => a.localeCompare(b))
                                   .filter(([cid, c]) => {
                                     if (draft.linkedContextIds.includes(cid)) return false
                                     if (!ctxSearch) return true
