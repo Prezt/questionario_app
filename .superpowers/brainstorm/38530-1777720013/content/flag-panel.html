@@ -1,0 +1,83 @@
+<h2>Flagging a question — what do you capture?</h2>
+<p class="subtitle">When you click "Flag issue" on a question, what should appear?</p>
+
+<div class="cards">
+
+  <div class="card" data-choice="a" onclick="toggleSelect(this)">
+    <div class="card-image" style="background:#f8fafc;padding:12px;border-radius:6px">
+      <div style="background:white;border:1px solid #e2e8f0;border-radius:6px;padding:10px;max-width:260px;margin:0 auto;box-shadow:0 2px 8px rgba(0,0,0,.08)">
+        <div style="font-size:11px;font-weight:bold;color:#374151;margin-bottom:8px">🚩 Flag Q56</div>
+        <div style="display:flex;flex-wrap:wrap;gap:4px;margin-bottom:8px">
+          <span style="background:#fef2f2;border:1px solid #fca5a5;color:#991b1b;padding:3px 8px;border-radius:12px;font-size:9px;cursor:pointer">wrong image</span>
+          <span style="background:#eff6ff;border:1px solid #93c5fd;color:#1d4ed8;padding:3px 8px;border-radius:12px;font-size:9px;cursor:pointer">truncated text</span>
+          <span style="background:#fef9c3;border:1px solid #fde047;color:#854d0e;padding:3px 8px;border-radius:12px;font-size:9px;cursor:pointer">missing alt</span>
+          <span style="background:#f0fdf4;border:1px solid #86efac;color:#166534;padding:3px 8px;border-radius:12px;font-size:9px;cursor:pointer">wrong answer</span>
+          <span style="background:#f5f3ff;border:1px solid #c4b5fd;color:#5b21b6;padding:3px 8px;border-radius:12px;font-size:9px;cursor:pointer">other</span>
+        </div>
+        <div style="display:flex;gap:4px">
+          <button style="background:#ef4444;color:white;border:none;padding:4px 12px;border-radius:4px;font-size:10px;flex:1">Flag</button>
+          <button style="background:#e2e8f0;color:#374151;border:none;padding:4px 12px;border-radius:4px;font-size:10px">Cancel</button>
+        </div>
+      </div>
+    </div>
+    <div class="card-body">
+      <h3>A — Category chips only</h3>
+      <p>Pick one or more issue types, then confirm. Fast — one click to tag, one click to save. No text field. Good for speed.</p>
+    </div>
+  </div>
+
+  <div class="card" data-choice="b" onclick="toggleSelect(this)">
+    <div class="card-image" style="background:#f8fafc;padding:12px;border-radius:6px">
+      <div style="background:white;border:1px solid #e2e8f0;border-radius:6px;padding:10px;max-width:260px;margin:0 auto;box-shadow:0 2px 8px rgba(0,0,0,.08)">
+        <div style="font-size:11px;font-weight:bold;color:#374151;margin-bottom:8px">🚩 Flag Q56</div>
+        <div style="display:flex;flex-wrap:wrap;gap:4px;margin-bottom:8px">
+          <span style="background:#fef2f2;border:2px solid #ef4444;color:#991b1b;padding:3px 8px;border-radius:12px;font-size:9px;cursor:pointer">✓ wrong image</span>
+          <span style="background:#eff6ff;border:1px solid #93c5fd;color:#1d4ed8;padding:3px 8px;border-radius:12px;font-size:9px;cursor:pointer">truncated text</span>
+          <span style="background:#fef9c3;border:1px solid #fde047;color:#854d0e;padding:3px 8px;border-radius:12px;font-size:9px;cursor:pointer">missing alt</span>
+          <span style="background:#f0fdf4;border:1px solid #86efac;color:#166534;padding:3px 8px;border-radius:12px;font-size:9px;cursor:pointer">wrong answer</span>
+          <span style="background:#f5f3ff;border:1px solid #c4b5fd;color:#5b21b6;padding:3px 8px;border-radius:12px;font-size:9px;cursor:pointer">other</span>
+        </div>
+        <textarea style="width:100%;font-size:9px;border:1px solid #e2e8f0;border-radius:4px;padding:5px;box-sizing:border-box;resize:none;height:40px;margin-bottom:6px;font-family:inherit" placeholder="Optional note (e.g. 'image is from Q57')"></textarea>
+        <div style="display:flex;gap:4px">
+          <button style="background:#ef4444;color:white;border:none;padding:4px 12px;border-radius:4px;font-size:10px;flex:1">Flag</button>
+          <button style="background:#e2e8f0;color:#374151;border:none;padding:4px 12px;border-radius:4px;font-size:10px">Cancel</button>
+        </div>
+      </div>
+    </div>
+    <div class="card-body">
+      <h3>B — Category + optional note</h3>
+      <p>Same chips, plus a small text field for context. "image is from Q57", "text ends mid-sentence". Useful when fixing later.</p>
+    </div>
+  </div>
+
+  <div class="card" data-choice="c" onclick="toggleSelect(this)">
+    <div class="card-image" style="background:#f8fafc;padding:12px;border-radius:6px">
+      <div style="background:white;border:1px solid #e2e8f0;border-radius:6px;padding:10px;max-width:260px;margin:0 auto;box-shadow:0 2px 8px rgba(0,0,0,.08)">
+        <div style="font-size:11px;font-weight:bold;color:#374151;margin-bottom:8px">🚩 Flag Q56</div>
+        <div style="margin-bottom:6px">
+          <div style="font-size:9px;color:#64748b;margin-bottom:3px">Issue type</div>
+          <select style="width:100%;font-size:9px;border:1px solid #e2e8f0;border-radius:4px;padding:3px;font-family:inherit">
+            <option>wrong image</option>
+            <option>truncated text</option>
+            <option>missing alternative</option>
+            <option>wrong answer</option>
+            <option>other</option>
+          </select>
+        </div>
+        <div style="margin-bottom:6px">
+          <div style="font-size:9px;color:#64748b;margin-bottom:3px">Note (required)</div>
+          <textarea style="width:100%;font-size:9px;border:1px solid #e2e8f0;border-radius:4px;padding:5px;box-sizing:border-box;resize:none;height:50px;font-family:inherit" placeholder="Describe what's wrong..."></textarea>
+        </div>
+        <div style="display:flex;gap:4px">
+          <button style="background:#ef4444;color:white;border:none;padding:4px 12px;border-radius:4px;font-size:10px;flex:1">Flag</button>
+          <button style="background:#e2e8f0;color:#374151;border:none;padding:4px 12px;border-radius:4px;font-size:10px">Cancel</button>
+        </div>
+      </div>
+    </div>
+    <div class="card-body">
+      <h3>C — Dropdown + required note</h3>
+      <p>Forces a written description for every flag. Most structured but slowest — you're reviewing hundreds of questions.</p>
+    </div>
+  </div>
+
+</div>

@@ -110,7 +110,7 @@
   },
   {
     "number": 51,
-    "text": "A dinâmica produtiva apresentada na imagem tem como",
+    "text": "[Figura: ANDRADE, M. C. A terra e o homem no Nordeste. São Paulo: Brasiliense, 1963.] A dinâmica produtiva apresentada na imagem tem como",
     "alternatives": {
       "a": "separação pelo tipo de solo.",
       "b": "exportação da colheita sazonal.",
@@ -119,7 +119,7 @@
       "e": "intensificação da atividade pecuária."
     },
     "images": [
-      "[Figura: Zona de pastoreio e cultura do agreste com cronograma de plantio, crescimento, colheita de feijão, milho verde, milho seco e algodão]"
+      "figuras/q051_2020_fig1.png"
     ],
     "tags": [
       "geografia humana e urbana",

@@ -42,6 +42,7 @@ function getAuditIssues(auditReport, file, questionNumber) {
 export default function ReviewPage() {
   // datasets: { [filename]: Question[] }
   const [datasets, setDatasets] = useState({})
+  const [contexts, setContexts] = useState({})
   const [auditReport, setAuditReport] = useState(null)
   const [pageMap, setPageMap] = useState({})
   const [flags, setFlags] = useState(loadFlags)
@@ -51,9 +52,10 @@ export default function ReviewPage() {
   useEffect(() => {
     async function load() {
       try {
-        const [auditRes, pageMapRes, ...questionResults] = await Promise.all([
+        const [auditRes, pageMapRes, contextsRes, ...questionResults] = await Promise.all([
           fetch('/audit-report.json'),
           fetch('/question-pages.json'),
+          fetch('/contexts.json'),
           ...ALL_FILES.map(f => fetch(`/${f}`)),
         ])
 
@@ -63,6 +65,9 @@ export default function ReviewPage() {
 
         const pm = pageMapRes.ok ? await pageMapRes.json() : {}
         setPageMap(pm)
+
+        const ctxs = contextsRes.ok ? await contextsRes.json() : {}
+        setContexts(ctxs)
 
         const ds = {}
         for (let i = 0; i < ALL_FILES.length; i++) {
@@ -227,52 +232,82 @@ export default function ReviewPage() {
     setCurrentIndex(i => Math.min(activeList.length - 1, i + 1))
   }, [currentQuestion, flags, activeList.length])
 
+  // Collect contextIds for the current question (normalised to array)
+  const currentContextIds = useMemo(() => {
+    if (!currentQuestion) return []
+    if (Array.isArray(currentQuestion.contextIds)) return currentQuestion.contextIds
+    if (currentQuestion.contextId) return [currentQuestion.contextId]
+    return []
+  }, [currentQuestion])
+
   const initDraft = useCallback(() => {
     if (!currentQuestion) return
+    // Build context drafts: one entry per contextId
+    const ctxDrafts = {}
+    for (const cid of (Array.isArray(currentQuestion.contextIds) ? currentQuestion.contextIds : currentQuestion.contextId ? [currentQuestion.contextId] : [])) {
+      const c = contexts[cid]
+      if (c) ctxDrafts[cid] = { title: c.title ?? '', subtitle: c.subtitle ?? '', text: c.text ?? '', reference: c.reference ?? '' }
+    }
     setDraft({
       text: currentQuestion.text ?? '',
       alternatives: { ...currentQuestion.alternatives },
       answer: currentQuestion.answer ?? 'a',
+      contextDrafts: ctxDrafts,
     })
     setSaveError(null)
-  }, [currentQuestion])
+  }, [currentQuestion, contexts])
 
   const saveFix = useCallback(async () => {
     if (!currentQuestion || !draft) return
     setSaving(true)
     setSaveError(null)
 
-    const patch = {}
-    if (draft.text !== currentQuestion.text) patch.text = draft.text
-    if (draft.answer !== currentQuestion.answer) patch.answer = draft.answer
-    const altChanged = ['a','b','c','d','e'].some(k => draft.alternatives[k] !== currentQuestion.alternatives?.[k])
-    if (altChanged) patch.alternatives = { ...draft.alternatives }
-
-    if (Object.keys(patch).length === 0) {
-      setDraft(null)
-      setSaving(false)
-      return
-    }
-
     try {
-      const res = await fetch('/api/review/save', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          file: currentQuestion._file,
-          questionNumber: currentQuestion.number,
-          patch,
-        }),
-      })
-      const json = await res.json()
-      if (!json.ok) throw new Error(json.error ?? 'Save failed')
+      // 1. Save question fields if changed
+      const qPatch = {}
+      if (draft.text !== currentQuestion.text) qPatch.text = draft.text
+      if (draft.answer !== currentQuestion.answer) qPatch.answer = draft.answer
+      const altChanged = ['a','b','c','d','e'].some(k => draft.alternatives[k] !== currentQuestion.alternatives?.[k])
+      if (altChanged) qPatch.alternatives = { ...draft.alternatives }
 
-      setDatasets(prev => {
-        const fileQuestions = prev[currentQuestion._file].map(q =>
-          q.number === currentQuestion.number ? { ...q, ...patch } : q
-        )
-        return { ...prev, [currentQuestion._file]: fileQuestions }
-      })
+      if (Object.keys(qPatch).length > 0) {
+        const res = await fetch('/api/review/save', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ file: currentQuestion._file, questionNumber: currentQuestion.number, patch: qPatch }),
+        })
+        const json = await res.json()
+        if (!json.ok) throw new Error(json.error ?? 'Question save failed')
+
+        setDatasets(prev => {
+          const fileQuestions = prev[currentQuestion._file].map(q =>
+            q.number === currentQuestion.number ? { ...q, ...qPatch } : q
+          )
+          return { ...prev, [currentQuestion._file]: fileQuestions }
+        })
+      }
+
+      // 2. Save each context if changed
+      for (const [cid, ctxDraft] of Object.entries(draft.contextDrafts ?? {})) {
+        const orig = contexts[cid]
+        if (!orig) continue
+        const cPatch = {}
+        if (ctxDraft.title !== orig.title) cPatch.title = ctxDraft.title
+        if (ctxDraft.subtitle !== orig.subtitle) cPatch.subtitle = ctxDraft.subtitle
+        if (ctxDraft.text !== orig.text) cPatch.text = ctxDraft.text
+        if (ctxDraft.reference !== orig.reference) cPatch.reference = ctxDraft.reference
+        if (Object.keys(cPatch).length === 0) continue
+
+        const res = await fetch('/api/review/save-context', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ contextId: cid, patch: cPatch }),
+        })
+        const json = await res.json()
+        if (!json.ok) throw new Error(`Context ${cid}: ${json.error ?? 'Save failed'}`)
+
+        setContexts(prev => ({ ...prev, [cid]: { ...prev[cid], ...cPatch } }))
+      }
 
       const fk = flagKey(currentQuestion._file, currentQuestion.number)
       const updatedFlags = {
@@ -423,6 +458,22 @@ export default function ReviewPage() {
               </div>
 
               <div className="rp-q-body">
+                {currentContextIds.length > 0 && (
+                  <div className="rp-ctx-list">
+                    {currentContextIds.map(cid => {
+                      const c = contexts[cid]
+                      if (!c) return <div key={cid} className="rp-ctx rp-ctx--missing">Context not found: {cid}</div>
+                      return (
+                        <div key={cid} className="rp-ctx">
+                          {c.title && <div className="rp-ctx-title">{c.title}</div>}
+                          {c.subtitle && <div className="rp-ctx-subtitle">{c.subtitle}</div>}
+                          {c.text && <div className="rp-ctx-text">{c.text}</div>}
+                          {c.reference && <div className="rp-ctx-reference">{c.reference}</div>}
+                        </div>
+                      )
+                    })}
+                  </div>
+                )}
                 <div className="rp-q-text">{currentQuestion.text}</div>
 
                 {currentQuestion.images?.length > 0 && (
@@ -508,8 +559,63 @@ export default function ReviewPage() {
                         </button>
                       ) : (
                         <div className="rp-edit-form">
+                          {/* Context editors — one per context linked to this question */}
+                          {Object.entries(draft.contextDrafts ?? {}).map(([cid, ctxDraft]) => (
+                            <div key={cid} className="rp-edit-ctx-block">
+                              <div className="rp-edit-ctx-id">{cid}</div>
+                              <label className="rp-edit-label">
+                                Title
+                                <input
+                                  className="rp-edit-alt-input"
+                                  type="text"
+                                  value={ctxDraft.title}
+                                  onChange={e => setDraft(d => ({
+                                    ...d,
+                                    contextDrafts: { ...d.contextDrafts, [cid]: { ...d.contextDrafts[cid], title: e.target.value } }
+                                  }))}
+                                />
+                              </label>
+                              <label className="rp-edit-label">
+                                Subtitle
+                                <input
+                                  className="rp-edit-alt-input"
+                                  type="text"
+                                  value={ctxDraft.subtitle}
+                                  onChange={e => setDraft(d => ({
+                                    ...d,
+                                    contextDrafts: { ...d.contextDrafts, [cid]: { ...d.contextDrafts[cid], subtitle: e.target.value } }
+                                  }))}
+                                />
+                              </label>
+                              <label className="rp-edit-label">
+                                Context text
+                                <textarea
+                                  className="rp-edit-textarea rp-edit-textarea--ctx"
+                                  value={ctxDraft.text}
+                                  rows={6}
+                                  onChange={e => setDraft(d => ({
+                                    ...d,
+                                    contextDrafts: { ...d.contextDrafts, [cid]: { ...d.contextDrafts[cid], text: e.target.value } }
+                                  }))}
+                                />
+                              </label>
+                              <label className="rp-edit-label">
+                                Reference / source
+                                <input
+                                  className="rp-edit-alt-input"
+                                  type="text"
+                                  value={ctxDraft.reference}
+                                  onChange={e => setDraft(d => ({
+                                    ...d,
+                                    contextDrafts: { ...d.contextDrafts, [cid]: { ...d.contextDrafts[cid], reference: e.target.value } }
+                                  }))}
+                                />
+                              </label>
+                            </div>
+                          ))}
+
                           <label className="rp-edit-label">
-                            Text
+                            Question text
                             <textarea
                               className="rp-edit-textarea"
                               value={draft.text}

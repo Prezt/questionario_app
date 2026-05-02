@@ -1,0 +1,110 @@
+<h2>Review UI — Full Layout</h2>
+<p class="subtitle">PDF page on the left, extracted question on the right. Does this feel right?</p>
+
+<div class="mockup" style="max-width:900px;margin:0 auto">
+  <div class="mockup-header" style="display:flex;align-items:center;gap:12px;padding:8px 14px">
+    <span style="font-weight:700;font-size:13px">📋 Review Mode</span>
+    <select style="font-size:11px;border:1px solid #cbd5e1;border-radius:4px;padding:2px 6px;background:white">
+      <option>⚠ Issue Queue (153 flagged)</option>
+      <option>humanas_enem_2021 — 45 q</option>
+      <option>linguagens_enem_2021 — 36 q</option>
+      <option>math_enem_2022 — 45 q</option>
+    </select>
+    <span style="font-size:11px;color:#64748b">Filter: <span style="background:#fef2f2;color:#991b1b;padding:1px 6px;border-radius:10px;font-size:10px">EMPTY_ALT ×</span> <span style="color:#3b82f6;cursor:pointer">+ add</span></span>
+    <span style="margin-left:auto;font-size:11px;color:#64748b">12 / 153 reviewed</span>
+    <button style="font-size:10px;background:#0f172a;color:white;border:none;padding:3px 10px;border-radius:4px;cursor:pointer">↓ Export flags</button>
+  </div>
+  <div class="mockup-body" style="padding:0;display:flex;gap:0;min-height:520px">
+
+    <!-- LEFT: PDF page -->
+    <div style="width:45%;border-right:1px solid #e2e8f0;display:flex;flex-direction:column;background:#f8fafc">
+      <div style="padding:6px 10px;background:#f1f5f9;border-bottom:1px solid #e2e8f0;display:flex;align-items:center;gap:6px;font-size:10px;color:#475569">
+        <span style="font-weight:600">PDF — page-d1-2021-14.png</span>
+        <button style="margin-left:auto;border:1px solid #cbd5e1;background:white;padding:1px 6px;border-radius:3px;font-size:10px;cursor:pointer">◀</button>
+        <span>14 / 32</span>
+        <button style="border:1px solid #cbd5e1;background:white;padding:1px 6px;border-radius:3px;font-size:10px;cursor:pointer">▶</button>
+      </div>
+      <!-- Fake PDF page -->
+      <div style="flex:1;padding:10px;overflow:auto">
+        <div style="background:white;border:1px solid #e2e8f0;border-radius:3px;padding:14px;font-size:8.5px;line-height:1.7;color:#1e293b;font-family:serif;box-shadow:0 1px 4px rgba(0,0,0,.06)">
+          <div style="text-align:center;font-size:7px;color:#94a3b8;margin-bottom:10px;letter-spacing:.05em">LINGUAGENS, CÓDIGOS E SUAS TECNOLOGIAS — 2021</div>
+
+          <div style="background:#fef9c3;border-left:3px solid #eab308;padding:6px 8px;margin-bottom:10px">
+            <div style="font-weight:bold;font-size:9px;margin-bottom:4px">QUESTÃO 56</div>
+            <div style="margin-bottom:6px">Leia o trecho a seguir e responda à questão.</div>
+            <div style="font-style:italic;color:#374151;margin-bottom:6px;padding:4px 8px;border-left:2px solid #94a3b8">"A arte contemporânea rompe com as fronteiras entre o erudito e o popular, propondo novas formas de expressão e participação cultural."</div>
+            <div style="margin-bottom:6px">Com base no texto, qual é a proposta principal em relação às artes?</div>
+            <div style="display:grid;gap:2px;font-size:8px">
+              <div>(A) Valorizar exclusivamente a arte erudita como forma legítima de expressão</div>
+              <div>(B) Romper barreiras entre diferentes manifestações culturais e artísticas</div>
+              <div>(C) Subordinar a arte popular às normas acadêmicas estabelecidas</div>
+              <div>(D) Preservar as tradições artísticas sem permitir inovações</div>
+              <div>(E) Separar definitivamente a arte da participação social</div>
+            </div>
+          </div>
+
+          <div style="font-weight:bold;font-size:9px;margin-bottom:4px">QUESTÃO 57</div>
+          <div style="margin-bottom:6px;color:#6b7280">Considere o poema abaixo...</div>
+          <div style="color:#94a3b8;font-size:8px">[continues...]</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- RIGHT: Extracted question -->
+    <div style="flex:1;display:flex;flex-direction:column">
+      <div style="padding:6px 10px;background:#f1f5f9;border-bottom:1px solid #e2e8f0;display:flex;align-items:center;gap:6px;font-size:10px;color:#475569">
+        <span style="font-weight:600">Q56 — humanas_enem_2021</span>
+        <span style="background:#fef2f2;color:#ef4444;padding:1px 6px;border-radius:10px;font-size:9px">⚠ EMPTY_ALTERNATIVE</span>
+        <span style="margin-left:auto;color:#94a3b8">11 / 45</span>
+      </div>
+
+      <div style="flex:1;padding:12px;overflow:auto">
+        <!-- Question text -->
+        <div style="font-size:10px;color:#374151;line-height:1.6;margin-bottom:10px;padding-bottom:10px;border-bottom:1px solid #f1f5f9">
+          Com base no texto, qual é a proposta principal em relação às artes?
+        </div>
+
+        <!-- Alternatives -->
+        <div style="display:flex;flex-direction:column;gap:4px;margin-bottom:12px">
+          <div style="background:#fef2f2;border:1px solid #fca5a5;border-radius:4px;padding:5px 8px;font-size:9px;color:#991b1b">A) <em>[empty]</em></div>
+          <div style="background:#fef2f2;border:1px solid #fca5a5;border-radius:4px;padding:5px 8px;font-size:9px;color:#991b1b">B) <em>[empty]</em></div>
+          <div style="background:#fef2f2;border:1px solid #fca5a5;border-radius:4px;padding:5px 8px;font-size:9px;color:#991b1b">C) <em>[empty]</em></div>
+          <div style="background:#fef2f2;border:1px solid #fca5a5;border-radius:4px;padding:5px 8px;font-size:9px;color:#991b1b">D) <em>[empty]</em></div>
+          <div style="background:#fef2f2;border:1px solid #fca5a5;border-radius:4px;padding:5px 8px;font-size:9px;color:#991b1b">E) <em>[empty]</em></div>
+        </div>
+
+        <!-- Flag panel -->
+        <div style="background:#fffbeb;border:1px solid #fde68a;border-radius:6px;padding:10px">
+          <div style="font-size:10px;font-weight:600;color:#92400e;margin-bottom:7px">🚩 What's wrong?</div>
+          <div style="display:flex;flex-wrap:wrap;gap:5px;margin-bottom:8px">
+            <label style="display:flex;align-items:center;gap:4px;font-size:9px;cursor:pointer;background:white;border:1px solid #e2e8f0;padding:3px 8px;border-radius:12px">
+              <input type="checkbox" style="margin:0"> text not matching
+            </label>
+            <label style="display:flex;align-items:center;gap:4px;font-size:9px;cursor:pointer;background:#eff6ff;border:1px solid #93c5fd;padding:3px 8px;border-radius:12px">
+              <input type="checkbox" checked style="margin:0"> alternatives not matching
+            </label>
+            <label style="display:flex;align-items:center;gap:4px;font-size:9px;cursor:pointer;background:white;border:1px solid #e2e8f0;padding:3px 8px;border-radius:12px">
+              <input type="checkbox" style="margin:0"> image not matching
+            </label>
+          </div>
+          <input style="width:100%;font-size:9px;border:1px solid #e2e8f0;border-radius:4px;padding:4px 6px;box-sizing:border-box;margin-bottom:7px;font-family:inherit" placeholder="Optional note..." />
+          <div style="display:flex;gap:5px">
+            <button style="background:#ef4444;color:white;border:none;padding:4px 14px;border-radius:4px;font-size:10px;font-weight:600;cursor:pointer">Save flag</button>
+            <button style="background:#22c55e;color:white;border:none;padding:4px 14px;border-radius:4px;font-size:10px;cursor:pointer">✓ Looks good</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom navigation -->
+      <div style="padding:8px 12px;border-top:1px solid #e2e8f0;display:flex;gap:6px;align-items:center;background:#fafafa">
+        <button style="border:1px solid #cbd5e1;background:white;padding:3px 10px;border-radius:4px;font-size:10px;cursor:pointer">← Prev</button>
+        <button style="border:1px solid #cbd5e1;background:white;padding:3px 10px;border-radius:4px;font-size:10px;cursor:pointer">Next →</button>
+        <span style="font-size:10px;color:#94a3b8;margin-left:4px">or press ← →</span>
+        <span style="margin-left:auto;font-size:10px;color:#94a3b8">11 of 45 in file • 67 of 153 in queue</span>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<p class="subtitle" style="margin-top:16px;text-align:center">The yellow highlight on the PDF marks the question being reviewed. Page auto-advances when you move to a question on a different page.</p>

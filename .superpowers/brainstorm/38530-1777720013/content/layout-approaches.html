@@ -1,0 +1,113 @@
+<h2>Review UI — Overall Layout</h2>
+<p class="subtitle">How should the review tool be structured?</p>
+
+<div class="cards">
+
+  <div class="card" data-choice="a" onclick="toggleSelect(this)">
+    <div class="card-image" style="background:#f8fafc;padding:12px;border-radius:6px;font-size:11px;font-family:monospace;line-height:1.6">
+      <div style="display:flex;gap:8px;height:180px">
+        <div style="width:200px;background:#e2e8f0;border-radius:4px;padding:8px;flex-shrink:0">
+          <div style="font-weight:bold;margin-bottom:6px;font-size:10px;text-transform:uppercase;color:#64748b">Files</div>
+          <div style="background:#3b82f6;color:white;padding:3px 6px;border-radius:3px;margin-bottom:3px;font-size:10px">▶ humanas_2021 ⚠ 20</div>
+          <div style="padding:3px 6px;margin-bottom:3px;font-size:10px;color:#374151">linguagens_2021 ⚠ 17</div>
+          <div style="padding:3px 6px;margin-bottom:3px;font-size:10px;color:#374151">math_2022 ⚠ 6</div>
+          <div style="padding:3px 6px;margin-bottom:3px;font-size:10px;color:#374151">nature_2022 ⚠ 8</div>
+          <div style="padding:3px 6px;font-size:10px;color:#94a3b8">+ 28 more files</div>
+        </div>
+        <div style="flex:1;background:#fff;border:1px solid #e2e8f0;border-radius:4px;padding:10px;overflow:hidden">
+          <div style="font-size:10px;font-weight:bold;color:#374151;margin-bottom:4px">Q56 — humanas_enem_2021</div>
+          <div style="font-size:9px;color:#ef4444;background:#fef2f2;padding:3px 6px;border-radius:3px;margin-bottom:6px;display:inline-block">⚠ EMPTY_ALTERNATIVE (a,b,c,d,e)</div>
+          <div style="font-size:9px;color:#475569;margin-bottom:6px;line-height:1.4">Qual é a proposta principal do texto em relação às artes?</div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:3px">
+            <div style="background:#fef2f2;border:1px solid #fca5a5;border-radius:3px;padding:3px 5px;font-size:9px;color:#991b1b">A) [empty]</div>
+            <div style="background:#fef2f2;border:1px solid #fca5a5;border-radius:3px;padding:3px 5px;font-size:9px;color:#991b1b">B) [empty]</div>
+            <div style="background:#fef2f2;border:1px solid #fca5a5;border-radius:3px;padding:3px 5px;font-size:9px;color:#991b1b">C) [empty]</div>
+            <div style="background:#fef2f2;border:1px solid #fca5a5;border-radius:3px;padding:3px 5px;font-size:9px;color:#991b1b">D) [empty]</div>
+          </div>
+          <div style="margin-top:8px;display:flex;gap:4px">
+            <button style="background:#ef4444;color:white;border:none;padding:3px 8px;border-radius:3px;font-size:9px;cursor:pointer">🚩 Flag</button>
+            <button style="background:#22c55e;color:white;border:none;padding:3px 8px;border-radius:3px;font-size:9px;cursor:pointer">✓ OK</button>
+            <button style="background:#e2e8f0;color:#374151;border:none;padding:3px 8px;border-radius:3px;font-size:9px;cursor:pointer">→ Next</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card-body">
+      <h3>A — File-first navigator</h3>
+      <p>Left sidebar lists all 32 files sorted by issue count. Click a file to browse its questions. Audit flags shown inline. Navigate with buttons or arrow keys.</p>
+    </div>
+  </div>
+
+  <div class="card" data-choice="b" onclick="toggleSelect(this)">
+    <div class="card-image" style="background:#f8fafc;padding:12px;border-radius:6px;font-size:11px;font-family:monospace;line-height:1.6">
+      <div style="height:180px">
+        <div style="background:#e2e8f0;padding:6px 10px;border-radius:4px 4px 0 0;display:flex;gap:8px;align-items:center">
+          <span style="font-size:10px;font-weight:bold;color:#374151">153 issues</span>
+          <span style="font-size:9px;background:#ef4444;color:white;padding:1px 5px;border-radius:10px">EMPTY_ALT 47</span>
+          <span style="font-size:9px;background:#f97316;color:white;padding:1px 5px;border-radius:10px">MISSING_IMG 42</span>
+          <span style="font-size:9px;background:#eab308;color:white;padding:1px 5px;border-radius:10px">SHORT_TXT 14</span>
+          <span style="font-size:9px;color:#94a3b8;margin-left:auto">Filter ▾</span>
+        </div>
+        <div style="display:flex;gap:0;height:calc(100% - 28px)">
+          <div style="width:140px;background:#f1f5f9;border-right:1px solid #e2e8f0;overflow:auto;padding:4px">
+            <div style="background:#3b82f6;color:white;padding:3px 6px;border-radius:3px;margin-bottom:2px;font-size:9px">Q56 humanas_2021 <span style="opacity:.7">EMPTY_ALT</span></div>
+            <div style="padding:3px 6px;margin-bottom:2px;font-size:9px;color:#374151;border-bottom:1px solid #e2e8f0">Q58 humanas_2021 <span style="color:#ef4444">EMPTY_ALT</span></div>
+            <div style="padding:3px 6px;margin-bottom:2px;font-size:9px;color:#374151;border-bottom:1px solid #e2e8f0">Q68 humanas_2021 <span style="color:#f97316">SHORT_TXT</span></div>
+            <div style="padding:3px 6px;font-size:9px;color:#374151">Q21 ling_2021 <span style="color:#ef4444">EMPTY</span></div>
+          </div>
+          <div style="flex:1;padding:8px;background:white;overflow:hidden">
+            <div style="font-size:9px;font-weight:bold;color:#374151;margin-bottom:3px">Q56 — humanas_enem_2021</div>
+            <div style="font-size:9px;color:#ef4444;background:#fef2f2;padding:2px 5px;border-radius:3px;margin-bottom:4px;display:inline-block">EMPTY_ALTERNATIVE</div>
+            <div style="font-size:9px;color:#475569;margin-bottom:5px;line-height:1.4">Qual é a proposta principal...</div>
+            <div style="display:flex;gap:3px">
+              <button style="background:#ef4444;color:white;border:none;padding:2px 6px;border-radius:3px;font-size:9px">🚩 Flag</button>
+              <button style="background:#22c55e;color:white;border:none;padding:2px 6px;border-radius:3px;font-size:9px">✓ OK</button>
+              <button style="background:#e2e8f0;color:#374151;border:none;padding:2px 6px;border-radius:3px;font-size:9px">→ Skip</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card-body">
+      <h3>B — Issue queue</h3>
+      <p>Shows only the <strong>153 flagged questions</strong> as a queue. Filter by issue type. Blitz through known problems fast. No browsing clean questions.</p>
+    </div>
+  </div>
+
+  <div class="card" data-choice="c" onclick="toggleSelect(this)">
+    <div class="card-image" style="background:#f8fafc;padding:12px;border-radius:6px;font-size:11px;font-family:monospace;line-height:1.6">
+      <div style="height:180px">
+        <div style="background:#1e293b;color:#e2e8f0;padding:6px 10px;border-radius:4px 4px 0 0;display:flex;gap:12px;align-items:center;font-size:10px">
+          <span style="font-weight:bold">📋 Review</span>
+          <span style="color:#94a3b8">humanas_enem_2021 ▾</span>
+          <span style="color:#94a3b8;margin-left:auto">Q56 / 45</span>
+          <span style="background:#ef4444;padding:1px 6px;border-radius:10px;font-size:9px">20 issues</span>
+        </div>
+        <div style="background:white;border:1px solid #e2e8f0;border-top:none;padding:10px;height:calc(100% - 28px);display:flex;flex-direction:column;gap:6px">
+          <div style="display:flex;gap:6px;align-items:center">
+            <span style="font-size:10px;font-weight:bold;color:#374151">Questão 56</span>
+            <span style="font-size:9px;background:#fef2f2;color:#ef4444;padding:1px 5px;border-radius:3px">⚠ EMPTY_ALTERNATIVE</span>
+          </div>
+          <div style="font-size:9px;color:#475569;line-height:1.5;flex:1">Qual é a proposta principal do texto em relação às artes e à educação contemporânea?</div>
+          <div style="display:flex;gap:3px;flex-wrap:wrap">
+            <div style="background:#fef2f2;border:1px solid #fca5a5;border-radius:3px;padding:2px 5px;font-size:9px;color:#991b1b">A) [empty]</div>
+            <div style="background:#fef2f2;border:1px solid #fca5a5;border-radius:3px;padding:2px 5px;font-size:9px;color:#991b1b">B) [empty]</div>
+            <div style="background:#fef2f2;border:1px solid #fca5a5;border-radius:3px;padding:2px 5px;font-size:9px;color:#991b1b">C) [empty]</div>
+          </div>
+          <div style="display:flex;gap:3px;align-items:center;border-top:1px solid #f1f5f9;padding-top:5px">
+            <button style="background:#f1f5f9;color:#374151;border:none;padding:2px 7px;border-radius:3px;font-size:9px">← Prev</button>
+            <button style="background:#f1f5f9;color:#374151;border:none;padding:2px 7px;border-radius:3px;font-size:9px">Next →</button>
+            <span style="flex:1"></span>
+            <button style="background:#ef4444;color:white;border:none;padding:2px 7px;border-radius:3px;font-size:9px">🚩 Flag issue</button>
+            <button style="background:#22c55e;color:white;border:none;padding:2px 7px;border-radius:3px;font-size:9px">✓ Looks good</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card-body">
+      <h3>C — File browser + inline flags</h3>
+      <p>Dropdown to pick any of the 32 files. Browse all questions in order. Audit flags shown inline. Can step through every question, not just flagged ones.</p>
+    </div>
+  </div>
+
+</div>
