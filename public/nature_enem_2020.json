@@ -384,7 +384,10 @@
     "year": 2020,
     "test": "ENEM",
     "area": "nature",
-    "answer": "c"
+    "answer": "c",
+    "contextIds": [
+      "enem_2020_nature_q108_ctx1"
+    ]
   },
   {
     "number": 109,
@@ -448,7 +451,7 @@
     "test": "ENEM",
     "area": "nature",
     "answer": "b",
-    "contextId": "enem_2020_nature_111_ctx1"
+    "contextId": "enem_2020_nature_q111_ctx2"
   },
   {
     "number": 112,

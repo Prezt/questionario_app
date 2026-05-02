@@ -1,5 +1,5 @@
 // src/ReviewPage.jsx
-import { useState, useEffect, useCallback, useMemo } from 'react'
+import { useState, useEffect, useCallback, useMemo, useRef } from 'react'
 import './ReviewPage.css'
 
 const AREA_TO_DAY = {
@@ -205,7 +205,16 @@ const PT_ACCENT_MAP = {
 
   // Common nouns — proparoxytones and others
   'onus': 'ônus', 'bonus': 'bônus',
+  'ocio': 'ócio',
+  'vinculo': 'vínculo', 'vinculos': 'vínculos',
+  'etnico': 'étnico', 'etnica': 'étnica', 'etnicos': 'étnicos', 'etnicas': 'étnicas',
+  'indigena': 'indígena', 'indigenas': 'indígenas',
+  'ceara': 'Ceará',
+  'contemporaneo': 'contemporâneo', 'contemporanea': 'contemporânea',
+  'contemporaneos': 'contemporâneos', 'contemporaneas': 'contemporâneas',
   'dialogo': 'diálogo', 'dialogos': 'diálogos',
+  'memoria': 'memória', 'memorias': 'memórias',
+  'comercio': 'comércio',
   'metafora': 'metáfora', 'metaforas': 'metáforas',
   'analise': 'análise', 'analises': 'análises',
   'hipotese': 'hipótese', 'hipoteses': 'hipóteses',
@@ -326,6 +335,7 @@ export default function ReviewPage() {
   const [selectedFile, setSelectedFile] = useState(ALL_FILES[0])
   const [currentIndex, setCurrentIndex] = useState(0)
   const [issueFilter, setIssueFilter] = useState(null)
+  const activeItemRef = useRef(null)
 
   // Derive active question list
   const activeList = useMemo(() => {
@@ -347,15 +357,46 @@ export default function ReviewPage() {
           flagged.push({ ...q, _file: filename })
         }
       }
-      return flagged.sort((a, b) => a._file.localeCompare(b._file) || a.number - b.number)
+      const isFixed = q => ['fixed', 'ok'].includes(flags[flagKey(q._file, q.number)]?.status)
+      return flagged.sort((a, b) => {
+        const fa = isFixed(a) ? 1 : 0, fb = isFixed(b) ? 1 : 0
+        if (fa !== fb) return fa - fb
+        return a._file.localeCompare(b._file) || a.number - b.number
+      })
     } else {
       return (datasets[selectedFile] ?? [])
         .map(q => ({ ...q, _file: selectedFile }))
         .sort((a, b) => a.number - b.number)
     }
-  }, [mode, selectedFile, datasets, auditReport, issueFilter, ready])
+  }, [mode, selectedFile, datasets, auditReport, issueFilter, flags, ready])
 
-  const currentQuestion = activeList[currentIndex] ?? null
+  // All questions across all files — used by the sidebar
+  const allQuestions = useMemo(() => {
+    if (!ready) return []
+    const all = []
+    for (const [filename, qs] of Object.entries(datasets)) {
+      for (const q of qs) all.push({ ...q, _file: filename })
+    }
+    return all.sort((a, b) => a._file.localeCompare(b._file) || a.number - b.number)
+  }, [datasets, ready])
+
+  // Set of question keys that have audit issues
+  const auditIssueKeys = useMemo(() => {
+    const keys = new Set()
+    for (const [filename, fileReport] of Object.entries(auditReport?.byFile ?? {})) {
+      fileReport.questionIssues.forEach(qi => keys.add(flagKey(filename, qi.number)))
+      if (fileReport.datasetIssues.length > 0) {
+        const qs = datasets[filename] ?? []
+        if (qs.length > 0) keys.add(flagKey(filename, qs[0].number))
+      }
+    }
+    return keys
+  }, [auditReport, datasets])
+
+  // overrideQuestion: set when user clicks the sidebar directly
+  const [overrideQuestion, setOverrideQuestion] = useState(null)
+
+  const currentQuestion = overrideQuestion ?? activeList[currentIndex] ?? null
 
   // Collect all issue types present in the audit report
   const allIssueTypes = useMemo(() => {
@@ -430,14 +471,43 @@ export default function ReviewPage() {
     return key
   }, [currentQuestion, contexts])
 
+  const suggestImageFilename = useCallback((existingImages) => {
+    if (!currentQuestion) return 'image.png'
+    const num = String(currentQuestion.number).padStart(3, '0')
+    const year = currentQuestion.year
+    const base = `q${num}_${year}_fig`
+    const usedNums = (existingImages ?? [])
+      .map(p => { const m = p.match(/_fig(\d+)/); return m ? parseInt(m[1]) : 0 })
+    let n = 1
+    while (usedNums.includes(n)) n++
+    return `${base}${n}.png`
+  }, [currentQuestion])
+
+  const uploadImage = useCallback(async (dataUrl, existingImages) => {
+    const filename = suggestImageFilename(existingImages)
+    const res = await fetch('/api/review/upload-image', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ filename, dataUrl }),
+    })
+    const json = await res.json()
+    if (!json.ok) throw new Error(json.error ?? 'Upload failed')
+    return json.path  // e.g. "figuras/q053_2021_fig1.png"
+  }, [suggestImageFilename])
+
+  // Scroll active question into view in the list panel
+  useEffect(() => {
+    activeItemRef.current?.scrollIntoView({ block: 'nearest' })
+  }, [currentIndex])
+
   // Keyboard navigation
   useEffect(() => {
     function handleKey(e) {
       if (['INPUT', 'TEXTAREA', 'SELECT'].includes(e.target.tagName)) return
       if (e.key === 'ArrowLeft') {
-        setCurrentIndex(i => Math.max(0, i - 1))
+        setOverrideQuestion(null); setCurrentIndex(i => Math.max(0, i - 1))
       } else if (e.key === 'ArrowRight') {
-        setCurrentIndex(i => Math.min(activeList.length - 1, i + 1))
+        setOverrideQuestion(null); setCurrentIndex(i => Math.min(activeList.length - 1, i + 1))
       }
     }
     window.addEventListener('keydown', handleKey)
@@ -506,6 +576,7 @@ export default function ReviewPage() {
       answer: currentQuestion.answer ?? 'a',
       linkedContextIds: linkedIds,
       contextDrafts: ctxDrafts,
+      images: [...(currentQuestion.images ?? [])],
     })
     setSaveError(null)
   }, [currentQuestion, contexts])
@@ -522,6 +593,11 @@ export default function ReviewPage() {
       if (draft.answer !== currentQuestion.answer) qPatch.answer = draft.answer
       const altChanged = ['a','b','c','d','e'].some(k => draft.alternatives[k] !== currentQuestion.alternatives?.[k])
       if (altChanged) qPatch.alternatives = { ...draft.alternatives }
+
+      // Images changed?
+      const origImages = currentQuestion.images ?? []
+      const imagesChanged = JSON.stringify(draft.images) !== JSON.stringify(origImages)
+      if (imagesChanged) qPatch.images = draft.images
 
       // Context links changed?
       const origIds = Array.isArray(currentQuestion.contextIds)
@@ -587,6 +663,7 @@ export default function ReviewPage() {
       saveFlags(updatedFlags)
       setFlags(updatedFlags)
       setDraft(null)
+      // Do NOT advance — user controls navigation; "Looks good" is what advances
     } catch (err) {
       setSaveError(err.message)
     } finally {
@@ -759,7 +836,34 @@ export default function ReviewPage() {
                       if (!c) return <div key={cid} className="rp-ctx rp-ctx--missing">Context not found: {cid}</div>
                       return (
                         <div key={cid} className="rp-ctx">
-                          {c.title && <RichText text={c.title} className="rp-ctx-title" />}
+                          <div className="rp-ctx-header">
+                            {c.title && <RichText text={c.title} className="rp-ctx-title" />}
+                            <button
+                              className="rp-ctx-edit-btn"
+                              title="Edit this context"
+                              onClick={() => {
+                                setActiveTab('edit')
+                                setDraft(prev => {
+                                  // Build base draft if not yet initialized
+                                  const base = prev ?? (() => {
+                                    const linkedIds = Array.isArray(currentQuestion.contextIds)
+                                      ? [...currentQuestion.contextIds]
+                                      : currentQuestion.contextId ? [currentQuestion.contextId] : []
+                                    const ctxDrafts = {}
+                                    for (const id of linkedIds) {
+                                      const cx = contexts[id]
+                                      if (cx) ctxDrafts[id] = { title: cx.title ?? '', subtitle: cx.subtitle ?? '', text: cx.text ?? '', reference: cx.reference ?? '' }
+                                    }
+                                    return { text: currentQuestion.text ?? '', alternatives: { ...currentQuestion.alternatives }, answer: currentQuestion.answer ?? 'a', linkedContextIds: linkedIds, contextDrafts: ctxDrafts, images: [...(currentQuestion.images ?? [])] }
+                                  })()
+                                  // Ensure this context is in contextDrafts
+                                  if (base.contextDrafts?.[cid]) return base
+                                  return { ...base, contextDrafts: { ...base.contextDrafts, [cid]: { title: c.title ?? '', subtitle: c.subtitle ?? '', text: c.text ?? '', reference: c.reference ?? '' } } }
+                                })
+                                setSaveError(null)
+                              }}
+                            >✏</button>
+                          </div>
                           {c.subtitle && <RichText text={c.subtitle} className="rp-ctx-subtitle" />}
                           {c.text && <RichText text={c.text} className="rp-ctx-text" />}
                           {c.reference && <RichText text={c.reference} className="rp-ctx-reference" />}
@@ -1046,6 +1150,48 @@ export default function ReviewPage() {
                             </select>
                           </label>
 
+                          {/* Images */}
+                          <div className="rp-edit-images">
+                            <span className="rp-edit-images-label">Images</span>
+                            {draft.images.length > 0 && (
+                              <div className="rp-edit-img-list">
+                                {draft.images.map((img, i) => (
+                                  <div key={img} className="rp-edit-img-row">
+                                    <img src={`/${img}`} className="rp-edit-img-thumb" alt="" />
+                                    <span className="rp-edit-img-name">{img.replace('figuras/', '')}</span>
+                                    <button
+                                      className="rp-edit-img-remove"
+                                      title="Remove image"
+                                      onClick={() => setDraft(d => ({ ...d, images: d.images.filter((_, j) => j !== i) }))}
+                                    >×</button>
+                                  </div>
+                                ))}
+                              </div>
+                            )}
+                            <div
+                              className="rp-paste-zone"
+                              tabIndex={0}
+                              onPaste={async e => {
+                                const item = [...e.clipboardData.items].find(it => it.type.startsWith('image/'))
+                                if (!item) return
+                                e.preventDefault()
+                                const blob = item.getAsFile()
+                                const reader = new FileReader()
+                                reader.onload = async ev => {
+                                  try {
+                                    const path = await uploadImage(ev.target.result, draft.images)
+                                    setDraft(d => ({ ...d, images: [...d.images, path] }))
+                                  } catch (err) {
+                                    setSaveError('Image upload failed: ' + err.message)
+                                  }
+                                }
+                                reader.readAsDataURL(blob)
+                              }}
+                            >
+                              Click here, then paste an image (Ctrl+V / ⌘V)
+                            </div>
+                          </div>
+
                           {saveError && <div className="rp-save-error">{saveError}</div>}
 
                           <div className="rp-edit-actions">
@@ -1092,12 +1238,44 @@ export default function ReviewPage() {
             </>
           )}
         </div>
+
+        {/* FAR RIGHT: QUESTION LIST */}
+        <div className="rp-qlist">
+          {allQuestions.map((q, i) => {
+            const fk = flagKey(q._file, q.number)
+            const flag = flags[fk]
+            const status = flag?.status
+            const hasIssue = auditIssueKeys.has(fk)
+            const isCurrent = overrideQuestion
+              ? overrideQuestion._file === q._file && overrideQuestion.number === q.number
+              : currentQuestion?._file === q._file && currentQuestion?.number === q.number
+            return (
+              <button
+                key={fk}
+                ref={isCurrent ? activeItemRef : null}
+                className={`rp-qlist-item${isCurrent ? ' rp-qlist-item--active' : ''} ${status ? `rp-qlist-item--${status}` : ''}`}
+                onClick={() => {
+                  const idx = activeList.findIndex(aq => aq._file === q._file && aq.number === q.number)
+                  if (idx !== -1) { setOverrideQuestion(null); setCurrentIndex(idx) }
+                  else setOverrideQuestion(q)
+                }}
+                title={`${q._file.replace('.json','').replace('_enem_',' ')} Q${q.number}`}
+              >
+                <span className="rp-qlist-num">Q{q.number}</span>
+                {status === 'fixed' && <span className="rp-qlist-dot rp-qlist-dot--fixed" />}
+                {status === 'ok' && <span className="rp-qlist-dot rp-qlist-dot--ok" />}
+                {status === 'flagged' && <span className="rp-qlist-dot rp-qlist-dot--flagged" />}
+                {!status && hasIssue && <span className="rp-qlist-dot rp-qlist-dot--issue" />}
+              </button>
+            )
+          })}
+        </div>
       </div>
 
       {/* BOTTOM NAV */}
       <div className="rp-bottom">
-        <button className="rp-nav-btn" onClick={() => setCurrentIndex(i => Math.max(0, i - 1))}>← Prev</button>
-        <button className="rp-nav-btn" onClick={() => setCurrentIndex(i => Math.min(activeList.length - 1, i + 1))}>Next →</button>
+        <button className="rp-nav-btn" onClick={() => { setOverrideQuestion(null); setCurrentIndex(i => Math.max(0, i - 1)) }}>← Prev</button>
+        <button className="rp-nav-btn" onClick={() => { setOverrideQuestion(null); setCurrentIndex(i => Math.min(activeList.length - 1, i + 1)) }}>Next →</button>
         <span className="rp-nav-hint">or use ← → keys</span>
         <span className="rp-nav-progress">
           {currentIndex + 1} of {activeList.length}

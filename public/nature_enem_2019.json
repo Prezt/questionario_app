@@ -124,7 +124,7 @@
     "test": "ENEM",
     "area": "nature",
     "answer": "c",
-    "contextId": "enem_2019_nature_ctx96"
+    "contextId": "enem_2019_nature_q96_ctx1"
   },
   {
     "number": 97,
@@ -230,7 +230,7 @@
     "test": "ENEM",
     "area": "nature",
     "answer": "c",
-    "contextId": "enem_2019_nature_101_ctx1"
+    "contextId": "enem_2019_nature_q101_ctx1"
   },
   {
     "number": 102,
@@ -594,7 +594,7 @@
     "area": "nature",
     "answer": "e",
     "contextIds": [
-      "enem_2019_nature_ctx118"
+      "enem_2019_nature_q118_ctx1"
     ]
   },
   {
@@ -703,7 +703,7 @@
     "test": "ENEM",
     "area": "nature",
     "answer": "e",
-    "contextId": "enem_2019_nature_ctx123"
+    "contextId": "enem_2019_nature_q123_ctx1"
   },
   {
     "number": 124,
@@ -746,7 +746,7 @@
     "test": "ENEM",
     "area": "nature",
     "answer": "c",
-    "contextId": "enem_2019_nature_125_ctx1"
+    "contextId": "enem_2019_nature_q125_ctx1"
   },
   {
     "number": 126,

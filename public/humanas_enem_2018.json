@@ -110,8 +110,8 @@
     "area": "humanas",
     "answer": "d",
     "contextIds": [
-      "enem_2018_humanas_ctx1",
-      "enem_2018_humanas_ctx2"
+      "enem_2018_humanas_q50_q83_ctx1",
+      "enem_2018_humanas_q50_q82_ctx1"
     ]
   },
   {
@@ -134,7 +134,7 @@
     "test": "ENEM",
     "area": "humanas",
     "answer": "b",
-    "contextId": "enem_2018_humanas_51_ctx1"
+    "contextId": "enem_2018_humanas_q51_ctx1"
   },
   {
     "number": 52,
@@ -157,8 +157,8 @@
     "area": "humanas",
     "answer": "d",
     "contextIds": [
-      "enem_2018_humanas_ctx1",
-      "enem_2018_humanas_ctx2"
+      "enem_2018_humanas_q50_q83_ctx1",
+      "enem_2018_humanas_q50_q82_ctx1"
     ]
   },
   {
@@ -204,8 +204,8 @@
     "area": "humanas",
     "answer": "e",
     "contextIds": [
-      "enem_2018_humanas_54_ctx1",
-      "enem_2018_humanas_54_ctx2"
+      "enem_2018_humanas_q54_ctx1",
+      "enem_2018_humanas_q54_ctx2"
     ]
   },
   {
@@ -228,7 +228,7 @@
     "test": "ENEM",
     "area": "humanas",
     "answer": "c",
-    "contextId": "enem_2018_humanas_55"
+    "contextId": "enem_2018_humanas_q55_ctx1"
   },
   {
     "number": 56,
@@ -273,7 +273,7 @@
     "test": "ENEM",
     "area": "humanas",
     "answer": "e",
-    "contextId": "enem_2018_humanas_ctx57"
+    "contextId": "enem_2018_humanas_q57_ctx1"
   },
   {
     "number": 58,
@@ -295,7 +295,7 @@
     "test": "ENEM",
     "area": "humanas",
     "answer": "d",
-    "contextId": "enem_2018_humanas_ctx1"
+    "contextId": "enem_2018_humanas_q50_q83_ctx1"
   },
   {
     "number": 59,
@@ -317,7 +317,7 @@
     "test": "ENEM",
     "area": "humanas",
     "answer": "e",
-    "contextId": "enem_2018_humanas_ctx59"
+    "contextId": "enem_2018_humanas_q59_ctx1"
   },
   {
     "number": 60,
@@ -452,7 +452,7 @@
     "test": "ENEM",
     "area": "humanas",
     "answer": "a",
-    "contextId": "enem_2018_humanas_65_ctx1"
+    "contextId": "enem_2018_humanas_q65_ctx1"
   },
   {
     "number": 66,
@@ -496,7 +496,7 @@
     "test": "ENEM",
     "area": "humanas",
     "answer": "e",
-    "contextId": "enem_2018_humanas_67_ctx1"
+    "contextId": "enem_2018_humanas_q67_ctx1"
   },
   {
     "number": 68,
@@ -585,7 +585,7 @@
     "test": "ENEM",
     "area": "humanas",
     "answer": "e",
-    "contextId": "enem_2018_humanas_71_ctx1"
+    "contextId": "enem_2018_humanas_q71_ctx1"
   },
   {
     "number": 72,
@@ -608,7 +608,7 @@
     "test": "ENEM",
     "area": "humanas",
     "answer": "b",
-    "contextId": "enem_2018_humanas_ctx72"
+    "contextId": "enem_2018_humanas_q72_ctx1"
   },
   {
     "number": 73,
@@ -631,8 +631,8 @@
     "area": "humanas",
     "answer": "e",
     "contextIds": [
-      "enem_2018_humanas_ctx1",
-      "enem_2018_humanas_ctx2"
+      "enem_2018_humanas_q50_q83_ctx1",
+      "enem_2018_humanas_q50_q82_ctx1"
     ]
   },
   {
@@ -784,7 +784,7 @@
     "test": "ENEM",
     "area": "humanas",
     "answer": "b",
-    "contextId": "enem_2018_humanas_80_ctx1"
+    "contextId": "enem_2018_humanas_q80_ctx1"
   },
   {
     "number": 81,
@@ -807,8 +807,8 @@
     "area": "humanas",
     "answer": "e",
     "contextIds": [
-      "enem_2018_humanas_ctx81_1",
-      "enem_2018_humanas_ctx81_2"
+      "enem_2018_humanas_q81_ctx1",
+      "enem_2018_humanas_q81_ctx2"
     ]
   },
   {
@@ -833,8 +833,8 @@
     "area": "humanas",
     "answer": "b",
     "contextIds": [
-      "enem_2018_humanas_ctx1",
-      "enem_2018_humanas_ctx2"
+      "enem_2018_humanas_q50_q83_ctx1",
+      "enem_2018_humanas_q50_q82_ctx1"
     ]
   },
   {
@@ -857,7 +857,7 @@
     "test": "ENEM",
     "area": "humanas",
     "answer": "d",
-    "contextId": "enem_2018_humanas_ctx1"
+    "contextId": "enem_2018_humanas_q50_q83_ctx1"
   },
   {
     "number": 84,
@@ -879,7 +879,7 @@
     "test": "ENEM",
     "area": "humanas",
     "answer": "c",
-    "contextId": "enem_2018_humanas_84_ctx1"
+    "contextId": "enem_2018_humanas_q84_ctx1"
   },
   {
     "number": 85,
@@ -901,7 +901,7 @@
     "test": "ENEM",
     "area": "humanas",
     "answer": "a",
-    "contextId": "enem_2018_humanas_85_ctx1"
+    "contextId": "enem_2018_humanas_q85_ctx1"
   },
   {
     "number": 86,
@@ -923,7 +923,7 @@
     "test": "ENEM",
     "area": "humanas",
     "answer": "a",
-    "contextId": "enem_2018_humanas_86_ctx1"
+    "contextId": "enem_2018_humanas_q86_ctx1"
   },
   {
     "number": 87,
@@ -946,7 +946,7 @@
     "test": "ENEM",
     "area": "humanas",
     "answer": "b",
-    "contextId": "enem_2018_humanas_87_ctx1"
+    "contextId": "enem_2018_humanas_q87_ctx1"
   },
   {
     "number": 88,

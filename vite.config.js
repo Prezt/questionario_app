@@ -149,7 +149,7 @@ function reviewSaveMiddleware(req, res, next) {
       }
 
       // Merge only the allowed patch fields
-      const allowed = ['text', 'alternatives', 'answer', 'contextIds', 'contextId']
+      const allowed = ['text', 'alternatives', 'answer', 'contextIds', 'contextId', 'images']
       for (const key of allowed) {
         if (key in patch) questions[idx][key] = patch[key]
       }
@@ -158,6 +158,55 @@ function reviewSaveMiddleware(req, res, next) {
       res.statusCode = 200
       res.setHeader('Content-Type', 'application/json')
       res.end(JSON.stringify({ ok: true }))
+    } catch (err) {
+      res.statusCode = 500
+      res.setHeader('Content-Type', 'application/json')
+      res.end(JSON.stringify({ ok: false, error: String(err) }))
+    }
+  })
+}
+
+function reviewUploadImageMiddleware(req, res, next) {
+  if (req.method !== 'POST' || req.url !== '/api/review/upload-image') return next()
+
+  let body = ''
+  req.on('data', chunk => { body += chunk })
+  req.on('end', () => {
+    try {
+      const { filename, dataUrl } = JSON.parse(body)
+
+      if (!filename || !dataUrl) {
+        res.statusCode = 400
+        res.setHeader('Content-Type', 'application/json')
+        res.end(JSON.stringify({ ok: false, error: 'Missing filename or dataUrl' }))
+        return
+      }
+
+      // Only allow safe filenames — no path traversal
+      if (!/^[a-zA-Z0-9_\-]+\.(png|jpg|jpeg|webp)$/i.test(filename)) {
+        res.statusCode = 400
+        res.setHeader('Content-Type', 'application/json')
+        res.end(JSON.stringify({ ok: false, error: 'Invalid filename' }))
+        return
+      }
+
+      const match = dataUrl.match(/^data:image\/[a-z+]+;base64,(.+)$/i)
+      if (!match) {
+        res.statusCode = 400
+        res.setHeader('Content-Type', 'application/json')
+        res.end(JSON.stringify({ ok: false, error: 'Invalid dataUrl format' }))
+        return
+      }
+
+      const figDir = path.join(PUBLIC_DIR, 'figuras')
+      if (!fs.existsSync(figDir)) fs.mkdirSync(figDir)
+
+      const filePath = path.join(figDir, filename)
+      fs.writeFileSync(filePath, Buffer.from(match[1], 'base64'))
+
+      res.statusCode = 200
+      res.setHeader('Content-Type', 'application/json')
+      res.end(JSON.stringify({ ok: true, path: `figuras/${filename}` }))
     } catch (err) {
       res.statusCode = 500
       res.setHeader('Content-Type', 'application/json')
@@ -175,6 +224,7 @@ export default defineConfig({
         server.middlewares.use(reviewCreateContextMiddleware)
         server.middlewares.use(reviewContextMiddleware)
         server.middlewares.use(reviewSaveMiddleware)
+        server.middlewares.use(reviewUploadImageMiddleware)
       },
     },
   ],

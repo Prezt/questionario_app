@@ -173,7 +173,7 @@
     "test": "ENEM",
     "area": "math",
     "answer": "b",
-    "contextId": "enem_2019_math_143_ctx1"
+    "contextId": "enem_2019_math_q143_ctx1"
   },
   {
     "number": 144,
@@ -720,7 +720,7 @@
     "test": "ENEM",
     "area": "math",
     "answer": "a",
-    "contextId": "enem_2019_math_169_graph"
+    "contextId": "enem_2019_math_q169_ctx1"
   },
   {
     "number": 170,

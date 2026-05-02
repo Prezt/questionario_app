@@ -19,7 +19,7 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "b",
-    "contextId": "enem_2018_linguagens_ctx1",
+    "contextId": "enem_2018_linguagens_q1_q45_ctx1",
     "language": "en"
   },
   {
@@ -42,7 +42,7 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "b",
-    "contextId": "enem_2018_linguagens_es_ctx2",
+    "contextId": "enem_2018_linguagens_q2_ctx2",
     "language": "es"
   },
   {
@@ -66,7 +66,7 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "d",
-    "contextId": "enem_2018_linguagens_ctx3",
+    "contextId": "enem_2018_linguagens_q3_ctx1",
     "language": "en"
   },
   {
@@ -91,8 +91,8 @@
     "area": "linguagens",
     "answer": "e",
     "contextIds": [
-      "enem_2018_linguagens_ctx1",
-      "enem_2018_linguagens_ctx2"
+      "enem_2018_linguagens_q1_q45_ctx1",
+      "enem_2018_linguagens_q4_q45_ctx1"
     ],
     "language": "en"
   },
@@ -116,7 +116,7 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "c",
-    "contextId": "enem_2018_linguagens_ctx1",
+    "contextId": "enem_2018_linguagens_q1_q45_ctx1",
     "language": "en"
   },
   {
@@ -139,7 +139,7 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "b",
-    "contextId": "enem_2018_linguagens_ctx1",
+    "contextId": "enem_2018_linguagens_q1_q45_ctx1",
     "language": "es"
   },
   {
@@ -162,7 +162,7 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "b",
-    "contextId": "enem_2018_linguagens_es_ctx1",
+    "contextId": "enem_2018_linguagens_q2_ctx1",
     "language": "es"
   },
   {
@@ -185,7 +185,7 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "d",
-    "contextId": "enem_2018_linguagens_es_ctx3",
+    "contextId": "enem_2018_linguagens_q3_ctx2",
     "language": "es"
   },
   {
@@ -209,7 +209,7 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "e",
-    "contextId": "enem_2018_linguagens_ctx1",
+    "contextId": "enem_2018_linguagens_q1_q45_ctx1",
     "language": "es"
   },
   {
@@ -232,7 +232,7 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "c",
-    "contextId": "enem_2018_linguagens_ctx1",
+    "contextId": "enem_2018_linguagens_q1_q45_ctx1",
     "language": "es"
   },
   {
@@ -299,7 +299,7 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "c",
-    "contextId": "enem_2018_linguagens_8_ctx1"
+    "contextId": "enem_2018_linguagens_q8_ctx1"
   },
   {
     "number": 9,
@@ -321,7 +321,7 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "b",
-    "contextId": "enem_2018_linguagens_ctx1"
+    "contextId": "enem_2018_linguagens_q1_q45_ctx1"
   },
   {
     "number": 10,
@@ -343,7 +343,7 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "a",
-    "contextId": "enem_2018_linguagens_10_ctx1"
+    "contextId": "enem_2018_linguagens_q10_ctx1"
   },
   {
     "number": 11,
@@ -366,8 +366,8 @@
     "area": "linguagens",
     "answer": "b",
     "contextIds": [
-      "enem_2018_linguagens_ctx1",
-      "enem_2018_linguagens_ctx2"
+      "enem_2018_linguagens_q1_q45_ctx1",
+      "enem_2018_linguagens_q4_q45_ctx1"
     ]
   },
   {
@@ -391,7 +391,7 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "d",
-    "contextId": "enem_2018_linguagens_12_ctx1"
+    "contextId": "enem_2018_linguagens_q12_ctx1"
   },
   {
     "number": 13,
@@ -414,8 +414,8 @@
     "area": "linguagens",
     "answer": "b",
     "contextIds": [
-      "enem_2018_linguagens_ctx1",
-      "enem_2018_linguagens_ctx2"
+      "enem_2018_linguagens_q1_q45_ctx1",
+      "enem_2018_linguagens_q4_q45_ctx1"
     ]
   },
   {
@@ -438,7 +438,7 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "e",
-    "contextId": "enem_2018_linguagens_14_ctx1"
+    "contextId": "enem_2018_linguagens_q14_ctx1"
   },
   {
     "number": 15,
@@ -460,7 +460,7 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "d",
-    "contextId": "enem_2018_linguagens_q15"
+    "contextId": "enem_2018_linguagens_q15_ctx1"
   },
   {
     "number": 16,
@@ -482,7 +482,7 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "a",
-    "contextId": "enem_2018_linguagens_ctx1"
+    "contextId": "enem_2018_linguagens_q1_q45_ctx1"
   },
   {
     "number": 17,
@@ -572,7 +572,7 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "b",
-    "contextId": "enem_2018_linguagens_ctx1"
+    "contextId": "enem_2018_linguagens_q1_q45_ctx1"
   },
   {
     "number": 21,
@@ -594,7 +594,7 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "b",
-    "contextId": "enem_2018_linguagens_ctx21"
+    "contextId": "enem_2018_linguagens_q21_ctx1"
   },
   {
     "number": 22,
@@ -639,7 +639,7 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "e",
-    "contextId": "enem_2018_linguagens_ctx1"
+    "contextId": "enem_2018_linguagens_q1_q45_ctx1"
   },
   {
     "number": 24,
@@ -662,7 +662,7 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "a",
-    "contextId": "enem_2018_linguagens_ctx1"
+    "contextId": "enem_2018_linguagens_q1_q45_ctx1"
   },
   {
     "number": 25,
@@ -752,7 +752,7 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "a",
-    "contextId": "enem_2018_linguagens_ctx1"
+    "contextId": "enem_2018_linguagens_q1_q45_ctx1"
   },
   {
     "number": 29,
@@ -775,8 +775,8 @@
     "area": "linguagens",
     "answer": "c",
     "contextIds": [
-      "enem_2018_linguagens_ctx1",
-      "enem_2018_linguagens_ctx2"
+      "enem_2018_linguagens_q1_q45_ctx1",
+      "enem_2018_linguagens_q4_q45_ctx1"
     ]
   },
   {
@@ -821,7 +821,7 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "d",
-    "contextId": "enem_2018_linguagens_ctx31"
+    "contextId": "enem_2018_linguagens_q31_ctx1"
   },
   {
     "number": 32,
@@ -865,7 +865,7 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "e",
-    "contextId": "enem_2018_linguagens_ctx33"
+    "contextId": "enem_2018_linguagens_q33_ctx1"
   },
   {
     "number": 34,
@@ -888,8 +888,8 @@
     "area": "linguagens",
     "answer": "b",
     "contextIds": [
-      "enem_2018_linguagens_ctx1",
-      "enem_2018_linguagens_ctx2"
+      "enem_2018_linguagens_q1_q45_ctx1",
+      "enem_2018_linguagens_q4_q45_ctx1"
     ]
   },
   {
@@ -912,7 +912,7 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "a",
-    "contextId": "enem_2018_linguagens_35_ctx1"
+    "contextId": "enem_2018_linguagens_q35_ctx1"
   },
   {
     "number": 36,
@@ -935,7 +935,7 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "b",
-    "contextId": "enem_2018_linguagens_ctx1"
+    "contextId": "enem_2018_linguagens_q1_q45_ctx1"
   },
   {
     "number": 37,
@@ -958,7 +958,7 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "c",
-    "contextId": "enem_2018_linguagens_ctx1"
+    "contextId": "enem_2018_linguagens_q1_q45_ctx1"
   },
   {
     "number": 38,
@@ -981,7 +981,7 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "b",
-    "contextId": "enem_2018_linguagens_38_ctx1"
+    "contextId": "enem_2018_linguagens_q38_ctx1"
   },
   {
     "number": 39,
@@ -1003,7 +1003,7 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "e",
-    "contextId": "enem_2018_linguagens_ctx39"
+    "contextId": "enem_2018_linguagens_q39_ctx1"
   },
   {
     "number": 40,
@@ -1025,7 +1025,7 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "a",
-    "contextId": "enem_2018_linguagens_ctx1"
+    "contextId": "enem_2018_linguagens_q1_q45_ctx1"
   },
   {
     "number": 41,
@@ -1071,7 +1071,7 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "c",
-    "contextId": "enem_2018_linguagens_ctx1"
+    "contextId": "enem_2018_linguagens_q1_q45_ctx1"
   },
   {
     "number": 43,
@@ -1093,7 +1093,7 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "a",
-    "contextId": "enem_2018_linguagens_ctx1"
+    "contextId": "enem_2018_linguagens_q1_q45_ctx1"
   },
   {
     "number": 44,
@@ -1115,7 +1115,7 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "d",
-    "contextId": "enem_2018_linguagens_44_ctx1"
+    "contextId": "enem_2018_linguagens_q44_ctx1"
   },
   {
     "number": 45,
@@ -1138,8 +1138,8 @@
     "area": "linguagens",
     "answer": "a",
     "contextIds": [
-      "enem_2018_linguagens_ctx1",
-      "enem_2018_linguagens_ctx2"
+      "enem_2018_linguagens_q1_q45_ctx1",
+      "enem_2018_linguagens_q4_q45_ctx1"
     ]
   }
 ]

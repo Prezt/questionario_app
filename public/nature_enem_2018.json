@@ -147,7 +147,7 @@
     "test": "ENEM",
     "area": "nature",
     "answer": "c",
-    "contextId": "enem_2018_nature_ctx97"
+    "contextId": "enem_2018_nature_q97_ctx1"
   },
   {
     "number": 98,
@@ -317,7 +317,7 @@
     "test": "ENEM",
     "area": "nature",
     "answer": "c",
-    "contextId": "enem_2018_nature_105_ctx1"
+    "contextId": "enem_2018_nature_q105_ctx1"
   },
   {
     "number": 106,
@@ -792,8 +792,8 @@
     "area": "nature",
     "answer": "e",
     "contextIds": [
-      "enem_2018_nature_ctx1",
-      "enem_2018_nature_ctx2"
+      "enem_2018_nature_q127_ctx1",
+      "enem_2018_nature_q127_ctx2"
     ]
   },
   {

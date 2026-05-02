@@ -270,7 +270,7 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "d",
-    "contextId": "enem_2021_linguagens_ctx1"
+    "contextId": "enem_2021_linguagens_q9_q40_ctx1"
   },
   {
     "number": 10,
@@ -405,8 +405,8 @@
     "area": "linguagens",
     "answer": "d",
     "contextIds": [
-      "enem_2021_linguagens_ctx1",
-      "enem_2021_linguagens_ctx2"
+      "enem_2021_linguagens_q9_q40_ctx1",
+      "enem_2021_linguagens_q15_q21_ctx1"
     ]
   },
   {
@@ -430,7 +430,7 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "b",
-    "contextId": "enem_2021_linguagens_ctx1"
+    "contextId": "enem_2021_linguagens_q9_q40_ctx1"
   },
   {
     "number": 17,
@@ -518,7 +518,7 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "d",
-    "contextId": "enem_2021_linguagens_ctx1"
+    "contextId": "enem_2021_linguagens_q9_q40_ctx1"
   },
   {
     "number": 21,
@@ -541,8 +541,8 @@
     "area": "linguagens",
     "answer": "a",
     "contextIds": [
-      "enem_2021_linguagens_ctx1",
-      "enem_2021_linguagens_ctx2"
+      "enem_2021_linguagens_q9_q40_ctx1",
+      "enem_2021_linguagens_q15_q21_ctx1"
     ]
   },
   {
@@ -587,7 +587,7 @@
     "area": "linguagens",
     "answer": "b",
     "contextIds": [
-      "enem_2021_linguagens_ctx1"
+      "enem_2021_linguagens_q9_q40_ctx1"
     ]
   },
   {
@@ -692,7 +692,7 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "b",
-    "contextId": "enem_2021_linguagens_ctx1"
+    "contextId": "enem_2021_linguagens_q9_q40_ctx1"
   },
   {
     "number": 29,
@@ -736,7 +736,7 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "e",
-    "contextId": "enem_2021_linguagens_ctx1"
+    "contextId": "enem_2021_linguagens_q9_q40_ctx1"
   },
   {
     "number": 31,
@@ -948,7 +948,7 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "c",
-    "contextId": "enem_2021_linguagens_ctx1"
+    "contextId": "enem_2021_linguagens_q9_q40_ctx1"
   },
   {
     "number": 41,
@@ -983,7 +983,7 @@
       "e": "Prioridade ao realismo tradicional e técnicas renascentistas."
     },
     "images": [
-      "[Figura: Garota com bola, obra de Roy Lichtenstein]"
+      "figuras/q042_2021_fig1.png"
     ],
     "tags": [
       "artes visuais",

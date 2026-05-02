@@ -19,7 +19,7 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "a",
-    "contextId": "enem_2020_linguagens_1_ctx1"
+    "contextId": "enem_2020_linguagens_q1_ctx1"
   },
   {
     "number": 2,
@@ -42,7 +42,7 @@
     "area": "linguagens",
     "answer": "a",
     "contextIds": [
-      "enem_2020_linguagens_ctx1"
+      "enem_2020_linguagens_q2_q44_ctx1"
     ]
   },
   {
@@ -66,7 +66,7 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "e",
-    "contextId": "enem_2020_linguagens_ctx1",
+    "contextId": "enem_2020_linguagens_q2_q44_ctx1",
     "language": "en"
   },
   {
@@ -90,7 +90,7 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "d",
-    "contextId": "enem_2020_linguagens_ctx1",
+    "contextId": "enem_2020_linguagens_q2_q44_ctx1",
     "language": "en"
   },
   {
@@ -113,7 +113,7 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "c",
-    "contextId": "enem_2020_linguagens_ctx1",
+    "contextId": "enem_2020_linguagens_q2_q44_ctx1",
     "language": "en"
   },
   {
@@ -136,7 +136,7 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "a",
-    "contextId": "enem_2020_linguagens_es_ctx1",
+    "contextId": "enem_2020_linguagens_q1_q4_ctx1",
     "language": "es"
   },
   {
@@ -159,7 +159,7 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "a",
-    "contextId": "enem_2020_linguagens_es_ctx1",
+    "contextId": "enem_2020_linguagens_q1_q4_ctx1",
     "language": "es"
   },
   {
@@ -182,7 +182,7 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "e",
-    "contextId": "enem_2020_linguagens_es_ctx3",
+    "contextId": "enem_2020_linguagens_q3_ctx1",
     "language": "es"
   },
   {
@@ -205,7 +205,7 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "d",
-    "contextId": "enem_2020_linguagens_es_ctx1",
+    "contextId": "enem_2020_linguagens_q1_q4_ctx1",
     "language": "es"
   },
   {
@@ -228,7 +228,7 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "c",
-    "contextId": "enem_2020_linguagens_es_q5_ctx1",
+    "contextId": "enem_2020_linguagens_q5_ctx1",
     "language": "es"
   },
   {
@@ -252,7 +252,7 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "c",
-    "contextId": "enem_2020_linguagens_ctx1"
+    "contextId": "enem_2020_linguagens_q2_q44_ctx1"
   },
   {
     "number": 7,
@@ -296,7 +296,7 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "a",
-    "contextId": "enem_2020_linguagens_ctx1"
+    "contextId": "enem_2020_linguagens_q2_q44_ctx1"
   },
   {
     "number": 9,
@@ -341,7 +341,7 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "c",
-    "contextId": "enem_2020_linguagens_ctx1"
+    "contextId": "enem_2020_linguagens_q2_q44_ctx1"
   },
   {
     "number": 11,
@@ -363,7 +363,7 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "b",
-    "contextId": "enem_2020_linguagens_11_ctx1"
+    "contextId": "enem_2020_linguagens_q11_ctx2"
   },
   {
     "number": 12,
@@ -387,8 +387,8 @@
     "area": "linguagens",
     "answer": "a",
     "contextIds": [
-      "enem_2020_linguagens_ctx1",
-      "enem_2020_linguagens_ctx2"
+      "enem_2020_linguagens_q2_q44_ctx1",
+      "enem_2020_linguagens_q12_q14_ctx1"
     ]
   },
   {
@@ -434,8 +434,8 @@
     "area": "linguagens",
     "answer": "b",
     "contextIds": [
-      "enem_2020_linguagens_ctx1",
-      "enem_2020_linguagens_ctx2"
+      "enem_2020_linguagens_q2_q44_ctx1",
+      "enem_2020_linguagens_q12_q14_ctx1"
     ]
   },
   {
@@ -459,7 +459,7 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "b",
-    "contextId": "enem_2020_linguagens_q15_ctx"
+    "contextId": "enem_2020_linguagens_q15_ctx1"
   },
   {
     "number": 16,
@@ -481,7 +481,7 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "e",
-    "contextId": "enem_2020_linguagens_ctx1"
+    "contextId": "enem_2020_linguagens_q2_q44_ctx1"
   },
   {
     "number": 17,
@@ -503,7 +503,7 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "d",
-    "contextId": "enem_2020_linguagens_ctx17"
+    "contextId": "enem_2020_linguagens_q17_ctx1"
   },
   {
     "number": 18,
@@ -525,7 +525,7 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "a",
-    "contextId": "enem_2020_linguagens_ctx1"
+    "contextId": "enem_2020_linguagens_q2_q44_ctx1"
   },
   {
     "number": 19,
@@ -548,7 +548,7 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "c",
-    "contextId": "enem_2020_linguagens_ctx1"
+    "contextId": "enem_2020_linguagens_q2_q44_ctx1"
   },
   {
     "number": 20,
@@ -570,7 +570,7 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "d",
-    "contextId": "enem_2020_linguagens_q20"
+    "contextId": "enem_2020_linguagens_q20_ctx2"
   },
   {
     "number": 21,
@@ -638,7 +638,7 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "a",
-    "contextId": "enem_2020_linguagens_ctx23"
+    "contextId": "enem_2020_linguagens_q23_ctx1"
   },
   {
     "number": 24,
@@ -660,7 +660,7 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "d",
-    "contextId": "enem_2020_linguagens_ctx1"
+    "contextId": "enem_2020_linguagens_q2_q44_ctx1"
   },
   {
     "number": 25,
@@ -750,7 +750,7 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "e",
-    "contextId": "enem_2020_linguagens_ctx1"
+    "contextId": "enem_2020_linguagens_q2_q44_ctx1"
   },
   {
     "number": 29,
@@ -772,7 +772,7 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "b",
-    "contextId": "enem_2020_linguagens_ctx1"
+    "contextId": "enem_2020_linguagens_q2_q44_ctx1"
   },
   {
     "number": 30,
@@ -817,7 +817,7 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "e",
-    "contextId": "enem_2020_linguagens_31_ctx1"
+    "contextId": "enem_2020_linguagens_q31_ctx1"
   },
   {
     "number": 32,
@@ -840,7 +840,7 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "b",
-    "contextId": "enem_2020_linguagens_ctx1"
+    "contextId": "enem_2020_linguagens_q2_q44_ctx1"
   },
   {
     "number": 33,
@@ -887,7 +887,7 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "a",
-    "contextId": "enem_2020_linguagens_ctx34"
+    "contextId": "enem_2020_linguagens_q34_ctx2"
   },
   {
     "number": 35,
@@ -910,7 +910,7 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "a",
-    "contextId": "enem_2020_linguagens_35_ctx1"
+    "contextId": "enem_2020_linguagens_q35_ctx1"
   },
   {
     "number": 36,
@@ -932,7 +932,7 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "d",
-    "contextId": "enem_2020_linguagens_ctx1"
+    "contextId": "enem_2020_linguagens_q2_q44_ctx1"
   },
   {
     "number": 37,
@@ -977,7 +977,7 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "a",
-    "contextId": "enem_2020_linguagens_38_ctx1"
+    "contextId": "enem_2020_linguagens_q38_ctx1"
   },
   {
     "number": 39,
@@ -999,7 +999,7 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "c",
-    "contextId": "enem_2020_linguagens_39_ctx1"
+    "contextId": "enem_2020_linguagens_q39_ctx2"
   },
   {
     "number": 40,
@@ -1021,7 +1021,7 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "a",
-    "contextId": "enem_2020_linguagens_ctx1"
+    "contextId": "enem_2020_linguagens_q2_q44_ctx1"
   },
   {
     "number": 41,
@@ -1044,7 +1044,7 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "a",
-    "contextId": "enem_2020_linguagens_ctx1"
+    "contextId": "enem_2020_linguagens_q2_q44_ctx1"
   },
   {
     "number": 42,
@@ -1066,7 +1066,7 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "a",
-    "contextId": "enem_2020_linguagens_42"
+    "contextId": "enem_2020_linguagens_q42_ctx2"
   },
   {
     "number": 43,
@@ -1088,7 +1088,7 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "d",
-    "contextId": "enem_2020_linguagens_q43_ctx"
+    "contextId": "enem_2020_linguagens_q43_ctx1"
   },
   {
     "number": 44,
@@ -1110,7 +1110,7 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "b",
-    "contextId": "enem_2020_linguagens_ctx1"
+    "contextId": "enem_2020_linguagens_q2_q44_ctx1"
   },
   {
     "number": 45,
@@ -1132,6 +1132,6 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "b",
-    "contextId": "enem_2020_linguagens_ctx_trevisan"
+    "contextId": "enem_2020_linguagens_q45_ctx2"
   }
 ]

@@ -85,8 +85,8 @@
     "area": "humanas",
     "answer": "c",
     "contextIds": [
-      "enem_2021_humanas_ctx1",
-      "enem_2021_humanas_ctx2"
+      "enem_2021_humanas_q49_q81_ctx1",
+      "enem_2021_humanas_q49_q50_ctx1"
     ]
   },
   {
@@ -107,8 +107,8 @@
     "area": "humanas",
     "answer": "b",
     "contextIds": [
-      "enem_2021_humanas_ctx1",
-      "enem_2021_humanas_ctx2"
+      "enem_2021_humanas_q49_q81_ctx1",
+      "enem_2021_humanas_q49_q50_ctx1"
     ]
   },
   {
@@ -131,7 +131,7 @@
     "test": "ENEM",
     "area": "humanas",
     "answer": "a",
-    "contextId": "enem_2021_humanas_ctx1"
+    "contextId": "enem_2021_humanas_q49_q81_ctx1"
   },
   {
     "number": 52,
@@ -659,7 +659,7 @@
     "test": "ENEM",
     "area": "humanas",
     "answer": "b",
-    "contextId": "enem_2021_humanas_ctx1"
+    "contextId": "enem_2021_humanas_q49_q81_ctx1"
   },
   {
     "number": 77,
@@ -770,7 +770,7 @@
     "test": "ENEM",
     "area": "humanas",
     "answer": "b",
-    "contextId": "enem_2021_humanas_ctx1"
+    "contextId": "enem_2021_humanas_q49_q81_ctx1"
   },
   {
     "number": 82,
@@ -816,13 +816,13 @@
   },
   {
     "number": 84,
-    "text": "[CORRUPTED TEXT - UNABLE TO EXTRACT]",
+    "text": "O ritual mencionado no texto atribui à manifestação cultural de grupos indígenas no Nordeste brasileiro a função de",
     "alternatives": {
-      "a": "[CORRUPTED]",
-      "b": "[CORRUPTED]",
-      "c": "[CORRUPTED]",
-      "d": "[CORRUPTED]",
-      "e": "[CORRUPTED]"
+      "a": "celebrar a história oficial.",
+      "b": "estimular a coesão social.",
+      "c": "superar a atividade artesanal.",
+      "d": "manipular a memória individual.",
+      "e": "modernizar o comércio tradicional."
     },
     "images": [],
     "tags": [],
@@ -830,7 +830,10 @@
     "year": 2021,
     "test": "ENEM",
     "area": "humanas",
-    "answer": "b"
+    "answer": "b",
+    "contextIds": [
+      "enem_2021_humanas_q84_ctx1"
+    ]
   },
   {
     "number": 85,
@@ -917,7 +920,7 @@
     "test": "ENEM",
     "area": "humanas",
     "answer": "e",
-    "contextId": "enem_2021_humanas_ctx88"
+    "contextId": "enem_2021_humanas_q88_ctx1"
   },
   {
     "number": 89,
