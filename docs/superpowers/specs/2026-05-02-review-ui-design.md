@@ -2,7 +2,7 @@
 
 ## Goal
 
-A `/review` route in the existing React app that lets the user browse all 1,447 questions, see automated audit flags from `audit-report.json`, compare each question against its original PDF page, and manually flag issues. Flags persist in `localStorage` and can be exported as JSON for batch fixing.
+A `/review` route in the existing React app that lets the user browse all 1,447 questions, compare each against its original PDF page, see automated audit flags, manually flag issues, and fix question text, alternatives, and the correct answer — all in one interface. Fixes save directly to `public/*.json`.
 
 ---
 
@@ -10,7 +10,7 @@ A `/review` route in the existing React app that lets the user browse all 1,447 
 
 | Source | Location | How it gets there |
 |--------|----------|-------------------|
-| Question JSON files | `public/*.json` | Already in place |
+| Question JSON files | `public/*.json` | Already in place — also the write target for fixes |
 | Audit report | `public/audit-report.json` | Copied from `scripts/audit-report.json` via `npm run audit` |
 | PDF page images | `public/Pages/` | Symlink → `../Pages/` (same pattern as `figuras/`) |
 | Question→page map | `public/question-pages.json` | Generated once by `scripts/build-page-map.py` |
@@ -56,14 +56,46 @@ Stored in `localStorage['review-flags']` as a JSON object:
     "questionNumber": 21,
     "issues": ["text"],
     "note": "",
-    "status": "flagged",
+    "status": "fixed",
     "reviewedAt": "2026-05-02T14:25:00Z"
   }
 }
 ```
 
 `issues` is an array containing any combination of `"text"`, `"image"`, `"alternatives"`.
-`status` is either `"flagged"` or `"ok"` (set by "Looks good" button).
+
+`status` values:
+- `"flagged"` — issue identified, not yet fixed
+- `"fixed"` — fix was saved to the JSON file
+- `"ok"` — no issue ("Looks good" button)
+
+---
+
+## Write-back API
+
+Saving a fix requires writing to `public/*.json` from the browser. This is handled by a custom Vite dev-server middleware added in `vite.config.js`:
+
+**Endpoint:** `POST /api/review/save`
+
+**Request body:**
+```json
+{
+  "file": "humanas_enem_2021.json",
+  "questionNumber": 56,
+  "patch": {
+    "text": "Updated question text...",
+    "alternatives": { "a": "Option A", "b": "Option B", "c": "Option C", "d": "Option D", "e": "Option E" },
+    "answer": "b"
+  }
+}
+```
+
+`patch` only includes the fields the user actually edited. Fields not present in `patch` are left unchanged.
+
+**Behaviour:**
+- Reads `public/{file}`, finds the question by `number`, merges `patch` fields, writes the file back
+- Returns `{ ok: true }` on success, `{ ok: false, error: "..." }` on failure
+- Only available in dev mode (`vite.config.js` middleware is not included in the production build)
 
 ---
 
@@ -82,67 +114,99 @@ Stored in `localStorage['review-flags']` as a JSON object:
 - Same approach as existing `public/figuras` → `../figuras`
 - `public/Pages` added to `.gitignore` (the images themselves are already gitignored via `/Pages`)
 
+### `vite.config.js` additions
+- Add a `configureServer` hook that registers the `POST /api/review/save` middleware
+- Middleware reads/writes `public/` JSON files using Node.js `fs`
+- No changes to build output — middleware is dev-only
+
 ### `npm run audit` script (package.json addition)
 - Runs `node scripts/audit-questions.js` and copies output to `public/audit-report.json`
 
 ### `src/ReviewPage.jsx`
-Single component, no sub-components. State managed locally with `useState`/`useEffect`.
+Single component. State managed locally with `useState`/`useEffect`.
 
 **State:**
 - `datasets` — all questions grouped by file, loaded on mount from `public/*.json`
 - `auditReport` — loaded from `public/audit-report.json`
 - `pageMap` — loaded from `public/question-pages.json`
-- `flags` — loaded from `localStorage['review-flags']`, kept in sync on every flag save
-- `mode` — `"queue"` (issue queue) | `"file"` (file browser)
+- `flags` — loaded from `localStorage['review-flags']`, kept in sync on every flag/fix save
+- `mode` — `"queue"` | `"file"`
 - `selectedFile` — filename string when in file mode
 - `currentIndex` — index within the active question list
-- `currentPdfPage` — current PDF page being shown (may differ from question's page when user manually navigates)
-- `pendingFlag` — `{ issues: [], note: "" }` for the flag panel
+- `currentPdfPage` — PDF page currently shown (may differ from question's page when user paginates manually)
+- `pendingFlag` — `{ issues: [], note: "" }`
+- `editMode` — `boolean`, toggles the edit panel
+- `draft` — `{ text, alternatives, answer }` working copy while editing
 
-**Active question list** (derived, not stored):
-- In `"queue"` mode: all questions that have audit flags in `auditReport`, sorted by file then question number
-- In `"file"` mode: all questions in `selectedFile`, in question number order
+**Active question list** (derived):
+- `"queue"` mode: all questions with audit flags in `auditReport`, sorted by file then question number
+- `"file"` mode: all questions in `selectedFile`, in question number order
 
-**Layout (two panels, fixed height viewport):**
+**Layout (two panels, fixed-height viewport):**
 
 ```
-┌─────────────────────────────────────────────────────┐
+┌──────────────────────────────────────────────────────────┐
 │ TOP BAR: mode dropdown | file selector | filter | progress | export │
-├──────────────────────────┬──────────────────────────┤
-│ LEFT (45%)               │ RIGHT (55%)              │
-│                          │                          │
-│ PDF page image           │ Question text            │
-│ (scrollable)             │ Audit flags (red)        │
-│                          │ Alternatives             │
-│ ◀ page N / 32 ▶         │ Images (if any)          │
-│                          │                          │
-│                          │ ┌─ Flag panel ─────────┐ │
-│                          │ │ ☐ text not matching  │ │
-│                          │ │ ☐ image not matching │ │
-│                          │ │ ☐ alternatives       │ │
-│                          │ │ [note input]         │ │
-│                          │ │ [Save flag] [OK ✓]   │ │
-│                          │ └──────────────────────┘ │
-├──────────────────────────┴──────────────────────────┤
-│ BOTTOM: ← Prev | Next → | (keyboard hint) | progress│
-└─────────────────────────────────────────────────────┘
+├───────────────────────────┬──────────────────────────────┤
+│ LEFT (45%)                │ RIGHT (55%)                  │
+│                           │                              │
+│ PDF page image            │ Question text                │
+│ (scrollable)              │ Audit flag badges (red)      │
+│                           │ Alternatives (a–e)           │
+│ ◀  page N / 32  ▶        │ Images (if any)              │
+│                           │                              │
+│                           │ ┌─ ACTION PANEL ───────────┐ │
+│                           │ │                          │ │
+│                           │ │  [Flag] tab | [Edit] tab │ │
+│                           │ │                          │ │
+│                           │ │  FLAG tab:               │ │
+│                           │ │  ☐ text not matching     │ │
+│                           │ │  ☐ image not matching    │ │
+│                           │ │  ☐ alternatives          │ │
+│                           │ │  [note input]            │ │
+│                           │ │  [Save flag]  [OK ✓]     │ │
+│                           │ │                          │ │
+│                           │ │  EDIT tab:               │ │
+│                           │ │  Text: [textarea]        │ │
+│                           │ │  A: [input]  B: [input]  │ │
+│                           │ │  C: [input]  D: [input]  │ │
+│                           │ │  E: [input]              │ │
+│                           │ │  Answer: [a▾]            │ │
+│                           │ │  [Save fix]  [Cancel]    │ │
+│                           │ └──────────────────────────┘ │
+├───────────────────────────┴──────────────────────────────┤
+│ BOTTOM: ← Prev | Next → | (← → keys) | progress         │
+└──────────────────────────────────────────────────────────┘
 ```
 
 **Behaviour details:**
-- On question change: look up `pageMap` key `{year}_{day}_{number}`, set `currentPdfPage` to that page. If key missing, default to page 1.
-- PDF page prev/next buttons let the user manually override `currentPdfPage` without changing the question.
-- Audit flags from `auditReport` are shown as coloured badges below the question number; each badge shows the issue type.
-- If a question already has a saved flag in `localStorage`, the flag panel is pre-populated with those values and shows a "flagged" indicator.
-- If a question has `status: "ok"`, it shows a green "✓ Reviewed" badge.
-- Keyboard: `←`/`→` navigate questions; `Enter` saves flag if any checkbox is checked, else marks OK.
-- "Looks good" marks `status: "ok"` and auto-advances to next.
-- "Save flag" requires at least one checkbox checked; saves and auto-advances.
+
+*Navigation:*
+- On question change: look up `pageMap` key `{year}_{day}_{number}`, update `currentPdfPage`. Fallback: page 1.
+- PDF prev/next buttons manually override `currentPdfPage` without changing the question.
+- Keyboard `←`/`→` navigate questions.
+
+*Flag tab:*
+- Pre-populated from `localStorage` if a flag exists for this question.
+- "Save flag" requires at least one checkbox; saves to `localStorage` with `status: "flagged"`, auto-advances.
+- "Looks good" saves `status: "ok"`, auto-advances.
+- Questions with `status: "fixed"` show a green "✓ Fixed" badge; `status: "ok"` shows "✓ OK".
+
+*Edit tab:*
+- Clicking "Edit" tab sets `editMode: true`, populates `draft` from the current question's live data (not from the last save — always from the in-memory dataset so partial saves are reflected immediately).
+- All five alternatives and the text field are editable; answer is a `<select>` with options a–e + annulled.
+- "Save fix": `POST /api/review/save` with only the changed fields in `patch`. On success:
+  - Updates the in-memory `datasets` entry so the right panel reflects the fix immediately without a page reload
+  - Sets flag `status: "fixed"` in `localStorage`
+  - Exits edit mode
+- "Cancel": discards `draft`, exits edit mode.
+- Save errors show an inline error message; the draft is not discarded.
 
 ### `src/ReviewPage.css`
-Scoped styles for the review page only. Reuses CSS custom properties from `App.css` (colours, fonts) but does not share class names.
+Scoped styles for the review page. Reuses CSS custom properties from `App.css` (colours, fonts) but does not share class names.
 
 ### `src/App.jsx` additions
-- Import `ReviewPage` and add a route: if `window.location.pathname === '/review'`, render `<ReviewPage />` instead of the normal app. No React Router needed — a simple pathname check keeps it isolated.
+- `if (window.location.pathname === '/review') return <ReviewPage />`  at the top of the render. No React Router needed.
 
 ---
 
@@ -157,7 +221,8 @@ Scoped styles for the review page only. Reuses CSS custom properties from `App.c
 
 ## Out of scope
 
-- Inline editing of question data (review only, fixing is a separate step)
-- Authentication (local dev tool, no auth needed)
-- Syncing flags to a database
+- Editing image paths / reassigning figures (fixing images requires re-running the parser)
+- Authentication (local dev tool only)
+- Syncing flags or fixes to a database
 - Mobile layout
+- Applying fixes to `dist/*.json` (run `npm run build` after fixing to update dist)
