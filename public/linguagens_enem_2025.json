@@ -255,7 +255,7 @@
     "area": "linguagens",
     "test": "ENEM",
     "answer": "e",
-    "contextId": "enem_2025_lang_ctx1",
+    "contextId": "enem_2025_linguagens_ctx1",
     "difficulty": 5
   },
   {
@@ -276,7 +276,7 @@
     "area": "linguagens",
     "test": "ENEM",
     "answer": "c",
-    "contextId": "enem_2025_lang_ctx1",
+    "contextId": "enem_2025_linguagens_ctx1",
     "difficulty": 5
   },
   {
@@ -299,7 +299,7 @@
     "area": "linguagens",
     "test": "ENEM",
     "answer": "d",
-    "contextId": "enem_2025_lang_ctx1",
+    "contextId": "enem_2025_linguagens_ctx1",
     "difficulty": 4
   },
   {
@@ -322,7 +322,7 @@
     "area": "linguagens",
     "test": "ENEM",
     "answer": "c",
-    "contextId": "enem_2025_lang_ctx1",
+    "contextId": "enem_2025_linguagens_ctx1",
     "difficulty": 4
   },
   {
@@ -345,7 +345,7 @@
     "area": "linguagens",
     "test": "ENEM",
     "answer": "e",
-    "contextId": "enem_2025_lang_ctx1",
+    "contextId": "enem_2025_linguagens_ctx1",
     "difficulty": 7
   },
   {
@@ -367,7 +367,7 @@
     "area": "linguagens",
     "test": "ENEM",
     "answer": "b",
-    "contextId": "enem_2025_lang_ctx2",
+    "contextId": "enem_2025_linguagens_ctx2",
     "difficulty": 6
   },
   {
@@ -596,8 +596,8 @@
     "number": 22,
     "text": "A originalidade do trabalho dos artistas da Ilha do Ferro se dá pela",
     "contextIds": [
-      "enem_2025_lang_ctx12a",
-      "enem_2025_lang_ctx12b"
+      "enem_2025_linguagens_ctx12a",
+      "enem_2025_linguagens_ctx12b"
     ],
     "alternatives": {
       "a": "reutilização de materiais para redução do impacto ambiental.",
@@ -619,8 +619,8 @@
   {
     "number": 23,
     "contextIds": [
-      "enem_2025_lang_ctx13a",
-      "enem_2025_lang_ctx13b"
+      "enem_2025_linguagens_ctx13a",
+      "enem_2025_linguagens_ctx13b"
     ],
     "text": "A utilização de recursos visuais como suturas, cortes e ruínas por Adriana Varejão, na obra Azulejaria em carne viva, remete à(s)",
     "alternatives": {
@@ -728,7 +728,7 @@
       "ética e política"
     ],
     "contextIds": [
-      "enem_2025_lang_ctx14"
+      "enem_2025_linguagens_ctx14"
     ],
     "year": 2025,
     "area": "linguagens",
