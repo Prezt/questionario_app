@@ -12,6 +12,7 @@ import {
   alternativeLabelForDisplay,
   captionFromBracketText,
 } from './parseQuestionFigures.js'
+import ReviewPage from './ReviewPage.jsx'
 
 const ATTEMPTS_SESSION_KEY = 'questionario-tentativas'
 const PAUSED_SESSION_KEY   = 'questionario-sessao'
@@ -169,7 +170,8 @@ function legacyPlainToHtml(raw) {
 }
 
 export default function App() {
-  
+  if (window.location.pathname === '/review') return <ReviewPage />
+
   const [user, setUser] = useState(null)
   // All questions loaded from manifest
   const [allQuestions, setAllQuestions] = useState([])

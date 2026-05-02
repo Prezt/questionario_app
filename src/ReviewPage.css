@@ -1,0 +1,19 @@
+/* src/ReviewPage.css */
+.rp-shell {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  overflow: hidden;
+  font-family: var(--font, system-ui, sans-serif);
+  font-size: 14px;
+  background: var(--bg, #f8fafc);
+  color: var(--text, #1e293b);
+}
+
+.rp-loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  color: #64748b;
+}
