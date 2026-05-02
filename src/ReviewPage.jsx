@@ -39,6 +39,122 @@ function getAuditIssues(auditReport, file, questionNumber) {
   return qi ? qi.issues : []
 }
 
+// ── Rich text rendering ────────────────────────────────────────────────────
+// Supports <b> and <i> tags only. All other HTML is escaped.
+function RichText({ text, className }) {
+  if (!text) return null
+  const html = text
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/&lt;b&gt;/gi, '<strong>')
+    .replace(/&lt;\/b&gt;/gi, '</strong>')
+    .replace(/&lt;i&gt;/gi, '<em>')
+    .replace(/&lt;\/i&gt;/gi, '</em>')
+  return <span className={className} dangerouslySetInnerHTML={{ __html: html }} />
+}
+
+// ── Portuguese accent correction ───────────────────────────────────────────
+const PT_ACCENT_MAP = {
+  // Particles, conjunctions, prepositions
+  'nao': 'não', 'tambem': 'também', 'entao': 'então', 'porem': 'porém',
+  'alem': 'além', 'atraves': 'através', 'apos': 'após', 'ate': 'até',
+  'so': 'só', 'la': 'lá', 'ca': 'cá', 'ja': 'já', 'ha': 'há',
+  'ora': 'ora', 'propria': 'própria', 'proprio': 'próprio', 'proprios': 'próprios', 'proprias': 'próprias',
+
+  // Common verbs / verb forms
+  'esta': 'está', 'estao': 'estão', 'estao': 'estão',
+  'sao': 'são', 'vao': 'vão', 'dao': 'dão', 'trao': 'trarão',
+  'sera': 'será', 'serao': 'serão', 'seria': 'seria',
+  'podera': 'poderá', 'poderao': 'poderão',
+  'devera': 'deverá', 'deverao': 'deverão',
+
+  // Nouns — nation/society/politics (common in humanas/linguagens)
+  'nacao': 'nação', 'nacoes': 'nações',
+  'populacao': 'população', 'populacoes': 'populações',
+  'educacao': 'educação', 'situacao': 'situação', 'situacoes': 'situações',
+  'questao': 'questão', 'questoes': 'questões',
+  'relacao': 'relação', 'relacoes': 'relações',
+  'producao': 'produção', 'producoes': 'produções',
+  'informacao': 'informação', 'informacoes': 'informações',
+  'organizacao': 'organização', 'organizacoes': 'organizações',
+  'comunicacao': 'comunicação', 'comunicacoes': 'comunicações',
+  'constituicao': 'constituição', 'instituicao': 'instituição', 'instituicoes': 'instituições',
+  'democracia': 'democracia', 'participacao': 'participação',
+  'administracao': 'administração', 'gestao': 'gestão',
+  'valorizacao': 'valorização', 'transformacao': 'transformação', 'transformacoes': 'transformações',
+  'representacao': 'representação', 'representacoes': 'representações',
+  'civilizacao': 'civilização', 'civilizacoes': 'civilizações',
+  'globalizacao': 'globalização', 'integracao': 'integração',
+  'discriminacao': 'discriminação', 'dominacao': 'dominação',
+  'exploracao': 'exploração', 'colonizacao': 'colonização',
+  'revolucao': 'revolução', 'revolucoes': 'revoluções',
+  'solucao': 'solução', 'solucoes': 'soluções',
+  'definicao': 'definição', 'definicoes': 'definições',
+  'acoes': 'ações', 'acao': 'ação',
+  'condicao': 'condição', 'condicoes': 'condições',
+  'funcao': 'função', 'funcoes': 'funções',
+
+  // Nouns — culture/arts/language
+  'lingua': 'língua', 'linguas': 'línguas',
+  'musica': 'música', 'musicas': 'músicas',
+  'historia': 'história', 'historias': 'histórias',
+  'ciencia': 'ciência', 'ciencias': 'ciências',
+  'fisica': 'física', 'quimica': 'química', 'matematica': 'matemática',
+  'pratica': 'prática', 'praticas': 'práticas',
+  'teoria': 'teoria', 'genero': 'gênero', 'generos': 'gêneros',
+  'periodo': 'período', 'periodos': 'períodos',
+  'seculo': 'século', 'seculos': 'séculos',
+  'area': 'área', 'areas': 'áreas',
+  'carater': 'caráter', 'caracteres': 'caracteres',
+  'fenomeno': 'fenômeno', 'fenomenos': 'fenômenos',
+  'orgao': 'órgão', 'orgaos': 'órgãos',
+  'nivel': 'nível', 'niveis': 'níveis',
+  'obstaculo': 'obstáculo', 'obstaculos': 'obstáculos',
+  'simbolo': 'símbolo', 'simbolos': 'símbolos',
+  'indice': 'índice', 'indices': 'índices',
+  'numero': 'número', 'numeros': 'números',
+  'codigo': 'código', 'codigos': 'códigos',
+
+  // Adjectives
+  'publico': 'público', 'publica': 'pública', 'publicos': 'públicos', 'publicas': 'públicas',
+  'unico': 'único', 'unica': 'única', 'unicos': 'únicos', 'unicas': 'únicas',
+  'historico': 'histórico', 'historica': 'histórica', 'historicos': 'históricos', 'historicas': 'históricas',
+  'politico': 'político', 'politica': 'política', 'politicos': 'políticos', 'politicas': 'políticas',
+  'economico': 'econômico', 'economica': 'econômica', 'economicos': 'econômicos', 'economicas': 'econômicas',
+  'basico': 'básico', 'basica': 'básica', 'basicos': 'básicos', 'basicas': 'básicas',
+  'etico': 'ético', 'etica': 'ética', 'eticos': 'éticos', 'eticas': 'éticas',
+  'critico': 'crítico', 'critica': 'crítica', 'criticos': 'críticos', 'criticas': 'críticas',
+  'logico': 'lógico', 'logica': 'lógica', 'logicos': 'lógicos', 'logicas': 'lógicas',
+  'tipico': 'típico', 'tipica': 'típica', 'tipicos': 'típicos', 'tipicas': 'típicas',
+  'classico': 'clássico', 'classica': 'clássica', 'classicos': 'clássicos', 'classicas': 'clássicas',
+  'especifico': 'específico', 'especifica': 'específica', 'especificos': 'específicos', 'especificas': 'específicas',
+  'cientifico': 'científico', 'cientifica': 'científica', 'cientificos': 'científicos', 'cientificas': 'científicas',
+  'dificil': 'difícil', 'dificeis': 'difíceis',
+  'facil': 'fácil', 'faceis': 'fáceis',
+  'possivel': 'possível', 'possiveis': 'possíveis',
+  'necessario': 'necessário', 'necessaria': 'necessária', 'necessarios': 'necessários', 'necessarias': 'necessárias',
+  'especial': 'especial', 'importante': 'importante',
+  'util': 'útil', 'uteis': 'úteis',
+  'fragil': 'frágil', 'frageis': 'frágeis',
+  'agil': 'ágil', 'ageis': 'ágeis',
+}
+
+function correctAccents(text) {
+  if (!text) return text
+  return text.replace(/[a-zA-ZàáâãäéêëíïóôõöúüçÀÁÂÃÄÉÊËÍÏÓÔÕÖÚÜÇ]+/g, word => {
+    const lower = word.toLowerCase()
+    const corrected = PT_ACCENT_MAP[lower]
+    if (!corrected) return word
+    // Preserve capitalisation
+    if (word === word.toUpperCase()) return corrected.toUpperCase()
+    if (word[0] === word[0].toUpperCase() && word[0] !== word[0].toLowerCase()) {
+      return corrected[0].toUpperCase() + corrected.slice(1)
+    }
+    return corrected
+  })
+}
+
 export default function ReviewPage() {
   // datasets: { [filename]: Question[] }
   const [datasets, setDatasets] = useState({})
@@ -522,16 +638,16 @@ export default function ReviewPage() {
                       if (!c) return <div key={cid} className="rp-ctx rp-ctx--missing">Context not found: {cid}</div>
                       return (
                         <div key={cid} className="rp-ctx">
-                          {c.title && <div className="rp-ctx-title">{c.title}</div>}
-                          {c.subtitle && <div className="rp-ctx-subtitle">{c.subtitle}</div>}
-                          {c.text && <div className="rp-ctx-text">{c.text}</div>}
-                          {c.reference && <div className="rp-ctx-reference">{c.reference}</div>}
+                          {c.title && <RichText text={c.title} className="rp-ctx-title" />}
+                          {c.subtitle && <RichText text={c.subtitle} className="rp-ctx-subtitle" />}
+                          {c.text && <RichText text={c.text} className="rp-ctx-text" />}
+                          {c.reference && <RichText text={c.reference} className="rp-ctx-reference" />}
                         </div>
                       )
                     })}
                   </div>
                 )}
-                <div className="rp-q-text">{currentQuestion.text}</div>
+                <RichText text={currentQuestion.text} className="rp-q-text" />
 
                 {currentQuestion.images?.length > 0 && (
                   <div className="rp-q-images">
@@ -552,7 +668,7 @@ export default function ReviewPage() {
                         className={`rp-alt ${isEmpty ? 'rp-alt--empty' : ''} ${isCorrect ? 'rp-alt--correct' : ''}`}
                       >
                         <span className="rp-alt-letter">{letter.toUpperCase()})</span>
-                        <span className="rp-alt-text">{isEmpty ? '[empty]' : val}</span>
+                        {isEmpty ? <span className="rp-alt-text">[empty]</span> : <RichText text={val} className="rp-alt-text" />}
                       </div>
                     )
                   })}
@@ -822,6 +938,29 @@ export default function ReviewPage() {
                               onClick={() => { setDraft(null); setSaveError(null) }}
                               disabled={saving}
                             >Cancel</button>
+                            <button
+                              className="rp-btn rp-btn--accent"
+                              title="Auto-correct Portuguese accents in all text fields"
+                              onClick={() => setDraft(d => {
+                                const fixedCtxDrafts = {}
+                                for (const [cid, c] of Object.entries(d.contextDrafts ?? {})) {
+                                  fixedCtxDrafts[cid] = {
+                                    title: correctAccents(c.title),
+                                    subtitle: correctAccents(c.subtitle),
+                                    text: correctAccents(c.text),
+                                    reference: correctAccents(c.reference),
+                                  }
+                                }
+                                return {
+                                  ...d,
+                                  text: correctAccents(d.text),
+                                  alternatives: Object.fromEntries(
+                                    Object.entries(d.alternatives).map(([k, v]) => [k, correctAccents(v)])
+                                  ),
+                                  contextDrafts: fixedCtxDrafts,
+                                }
+                              })}
+                            >Aa→ Fix accents</button>
                           </div>
                         </div>
                       )}
