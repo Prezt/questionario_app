@@ -92,8 +92,8 @@ function checkAlternatives(q) {
 
 function checkAnswer(q) {
   const issues = [];
-  if (!q.answer || !['a', 'b', 'c', 'd', 'e'].includes(q.answer)) {
-    issues.push({ type: 'INVALID_ANSWER', detail: `answer="${q.answer}" is not a valid option (a-e)` });
+  if (!q.answer || !['a', 'b', 'c', 'd', 'e', 'annulled'].includes(q.answer)) {
+    issues.push({ type: 'INVALID_ANSWER', detail: `answer="${q.answer}" is not a valid option (a-e or annulled)` });
   }
   return issues;
 }

@@ -586,8 +586,9 @@ export default function App() {
     if (!question) return
     setAttempts((a) => {
       if (a[question.number]) return a
-      const correct = letter === question.answer
-      const next = { ...a, [question.number]: { selected: letter, correct } }
+      const isAnnulled = question.answer === 'annulled'
+      const correct = !isAnnulled && letter === question.answer
+      const next = { ...a, [question.number]: { selected: letter, correct, annulled: isAnnulled } }
       saveAttemptsToSession(next)
       return next
     })
@@ -967,13 +968,14 @@ export default function App() {
     // Persist result to DB (fire-and-forget — never blocks UI)
     if (token) {
       const score = Object.values(attempts).filter((a) => a.correct).length
+      const scorableTotal = questions.filter((q) => q.answer !== 'annulled').length
       if (isDailyChallenge) {
         fetch('/api/daily-challenge/result', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json', Authorization: `Bearer ${token}` },
           body: JSON.stringify({
             score,
-            total: questions.length,
+            total: scorableTotal,
             elapsed_secs: finalTotal,
           }),
         }).catch(() => {})
@@ -986,7 +988,7 @@ export default function App() {
             year: selectedYear,
             day: selectedDay,
             score,
-            total: questions.length,
+            total: scorableTotal,
             elapsed_secs: finalTotal,
           }),
         }).catch(() => {})
@@ -1479,17 +1481,19 @@ export default function App() {
 
   // ── Summary ───────────────────────────────────────────────────────────────
   if (phase === 'summary') {
-    const answeredCount = Object.keys(attempts).length
+    const annulledNumbers = new Set(sortedQuestions.filter((q) => q.answer === 'annulled').map((q) => q.number))
+    const scorableQuestions = sortedQuestions.filter((q) => !annulledNumbers.has(q.number))
+    const answeredCount = Object.entries(attempts).filter(([num]) => !annulledNumbers.has(Number(num))).length
     const correctCount = Object.values(attempts).filter((a) => a.correct).length
     const wrongCount = answeredCount - correctCount
-    const unansweredCount = sortedQuestions.length - answeredCount
+    const unansweredCount = scorableQuestions.length - answeredCount
     const avgTime = answeredCount > 0
       ? Math.round(Object.values(questionTimes).reduce((s, t) => s + t, 0) / answeredCount)
       : 0
 
     // ── Subject breakdown ────────────────────────────────────────────────
     const tagStats = {}
-    sortedQuestions.forEach((q) => {
+    scorableQuestions.forEach((q) => {
       const att = attempts[q.number]
       const t = questionTimes[q.number] || 0
       ;(q.tags || []).forEach((tag) => {
@@ -1986,8 +1990,8 @@ export default function App() {
                   <ul className="alternatives">
                     {displayAlts.map(({ displayLabel, origLetter, rawContent, altImg }) => {
                       const isPending = !selected && pendingSelection === origLetter
-                      const isConfirmedCorrect = showAnswer && selected !== null && origLetter === question.answer
-                      const isConfirmedWrong = showAnswer && selected !== null && origLetter === selected && !attempt?.correct
+                      const isConfirmedCorrect = showAnswer && selected !== null && question.answer !== 'annulled' && origLetter === question.answer
+                      const isConfirmedWrong = showAnswer && selected !== null && question.answer !== 'annulled' && origLetter === selected && !attempt?.correct
                       const stacked = Boolean(altImg)
                       const altCaption = stacked ? captionFromBracketText(rawContent) : ''
                       const altLabel = alternativeLabelForDisplay(rawContent, stacked)
@@ -2024,6 +2028,13 @@ export default function App() {
                   </ul>
 
                   {showAnswer && selected && attempt && (() => {
+                    if (question.answer === 'annulled') {
+                      return (
+                        <div className="feedback feedback--annulled" role="status">
+                          Esta questão foi <strong>anulada</strong> pelo ENEM e não conta para sua pontuação.
+                        </div>
+                      )
+                    }
                     const correctLabel = (displayAlts.find(a => a.origLetter === question.answer)?.displayLabel ?? question.answer).toUpperCase()
                     const selectedLabel = (displayAlts.find(a => a.origLetter === selected)?.displayLabel ?? selected).toUpperCase()
                     return (

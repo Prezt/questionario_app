@@ -943,6 +943,17 @@
   color: var(--text);
 }
 
+.feedback--annulled {
+  background: rgba(234, 179, 8, 0.1);
+  border-left-color: #ca8a04;
+  color: var(--text);
+}
+
+.dark .feedback--annulled {
+  background: rgba(234, 179, 8, 0.08);
+  color: var(--text);
+}
+
 /* ── Tags ── */
 .tags {
   display: flex;
