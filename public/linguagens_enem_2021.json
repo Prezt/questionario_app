@@ -1,13 +1,13 @@
 [
   {
     "number": 2,
-    "text": "[Question text corrupted and unreadable from source]",
+    "text": "Ao descrever o processo de formação da Inglaterra, o autor do poema recorre a características de outro gênero textual para evidenciar",
     "alternatives": {
-      "a": "[Unreadable]",
-      "b": "[Unreadable]",
-      "c": "[Unreadable]",
-      "d": "[Unreadable]",
-      "e": "[Unreadable]"
+      "a": "a riqueza da mistura culutral.",
+      "b": "um legado de origem geográfica.",
+      "c": "um impacto de natureza histórica.",
+      "d": "um problema de estratificação social.",
+      "e": "a questão da intolerância linguistica."
     },
     "images": [],
     "tags": [
@@ -17,7 +17,10 @@
     "year": 2021,
     "test": "ENEM",
     "area": "linguagens",
-    "answer": "a"
+    "answer": "a",
+    "contextIds": [
+      "enem_2021_lang_q2_ctx1"
+    ]
   },
   {
     "number": 3,
@@ -39,13 +42,13 @@
   },
   {
     "number": 4,
-    "text": "Questão 4",
+    "text": "A presença de \"at odds with\"na fala da personagem do cartum revela o(a)",
     "alternatives": {
-      "a": "",
-      "b": "",
-      "c": "",
-      "d": "",
-      "e": ""
+      "a": "necessidade de acessar informações confiáveis.",
+      "b": "dificuldades de conciliar diferentes anseios.",
+      "c": "desejo de dominar novas tecnologias.",
+      "d": "desafio de permanecer imparcial.",
+      "e": "vontade de ler noticias positivas."
     },
     "images": [],
     "tags": [],
@@ -53,7 +56,10 @@
     "year": 2021,
     "test": "ENEM",
     "area": "linguagens",
-    "answer": "b"
+    "answer": "b",
+    "contextIds": [
+      "enem_2021_lang_q4_ctx1"
+    ]
   },
   {
     "number": 5,

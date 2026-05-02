@@ -124,7 +124,7 @@
 /* ── Question list panel ──────────────────────────────────────────────────── */
 .rp-qlist {
   width: 68px;
-  border-right: 1px solid #e2e8f0;
+  border-left: 1px solid #e2e8f0;
   overflow-y: auto;
   display: flex;
   flex-direction: column;
@@ -133,6 +133,27 @@
   background: #f8fafc;
   flex-shrink: 0;
 }
+.rp-qlist-filters {
+  display: flex;
+  gap: 2px;
+  padding-bottom: 4px;
+  border-bottom: 1px solid #e2e8f0;
+  margin-bottom: 2px;
+  flex-shrink: 0;
+}
+.rp-qlist-filter-btn {
+  flex: 1;
+  padding: 2px 0;
+  font-size: 10px;
+  border: 1px solid #cbd5e1;
+  border-radius: 3px;
+  background: white;
+  cursor: pointer;
+  color: #64748b;
+  line-height: 1.4;
+}
+.rp-qlist-filter-btn:hover { background: #f1f5f9; }
+.rp-qlist-filter-btn.active { background: #1e293b; color: white; border-color: #1e293b; }
 .rp-qlist-item {
   display: flex;
   align-items: center;
@@ -154,7 +175,18 @@
 .rp-qlist-item--ok { color: #15803d; }
 .rp-qlist-item--flagged { color: #dc2626; }
 .rp-qlist-num { flex: 1; }
+.rp-qlist-year {
+  font-size: 9px;
+  font-weight: 700;
+  color: #94a3b8;
+  text-align: center;
+  padding: 4px 0 2px;
+  border-top: 1px solid #e2e8f0;
+  margin-top: 2px;
+  flex-shrink: 0;
+}
 .rp-qlist-dot {
+  display: block;
   width: 6px;
   height: 6px;
   border-radius: 50%;
@@ -442,23 +474,26 @@
   text-transform: uppercase;
   letter-spacing: .04em;
 }
-.rp-edit-img-list { display: flex; flex-direction: column; gap: 4px; }
+.rp-edit-img-list { display: flex; flex-direction: column; gap: 8px; }
+.rp-edit-img-card {
+  border: 1px solid #e2e8f0;
+  border-radius: 4px;
+  background: white;
+  overflow: hidden;
+}
+.rp-edit-img-preview {
+  display: block;
+  max-width: 100%;
+  max-height: 220px;
+  object-fit: contain;
+  background: #f8fafc;
+}
 .rp-edit-img-row {
   display: flex;
   align-items: center;
   gap: 8px;
   padding: 4px 6px;
-  border: 1px solid #e2e8f0;
-  border-radius: 4px;
-  background: white;
-}
-.rp-edit-img-thumb {
-  width: 48px;
-  height: 36px;
-  object-fit: contain;
-  border: 1px solid #e2e8f0;
-  border-radius: 2px;
-  flex-shrink: 0;
+  border-top: 1px solid #e2e8f0;
 }
 .rp-edit-img-name { font-size: 11px; font-family: monospace; color: #475569; flex: 1; }
 .rp-edit-img-remove {

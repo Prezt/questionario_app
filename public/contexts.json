@@ -1331,13 +1331,13 @@
     "reference": "The Washington Times, June 25, 2013"
   },
   "enem_2019_linguagens_q1_q5_ctx1": {
-    "title": "Cartum",
-    "subtitle": null,
-    "text": "[Figura: Cartum com dois estudantes em uma biblioteca]\n\nKEEFER, M. Disponível em: www.nj.com. Acesso em: 3 dez. 2018",
+    "title": "",
+    "subtitle": "",
+    "text": "",
     "images": [
       "figuras/q005_2019_fig1.png"
     ],
-    "reference": "KEEFER, M. www.nj.com"
+    "reference": "KEEFER, M. Disponível em: www.nj.com. Acesso em: 3 dez. 2018."
   },
   "enem_2019_linguagens_q13_ctx1": {
     "title": "Texto",
@@ -1640,6 +1640,13 @@
     "images": [],
     "reference": null
   },
+  "enem_2018_linguagens_q1_ctx1_en": {
+    "title": "Lava Mae: Creating Showers on Wheels for the Homeless",
+    "subtitle": null,
+    "text": "San Francisco, according to recent city numbers has 4,300 people living on the streets. Among the main problems the homeless face is little or no access to showers. San Francisco only has about 16 to 20 shower stalls to accommodate them.\n\nBut Doniece Sandoval has made it her mission to change that. The 51-year-old former marketing executive started Lava Mae, a sort of showers on wheels, a new project that aims to turn decommissioned city buses into shower stations for the homeless. Each bus will have two shower stations and Sandoval expects that they'll be able to provide 2,000 showers a week.",
+    "images": [],
+    "reference": "ANDREANO, C. Disponível em: http://abcnews.go.com. Acesso em: 26 jun. 2015 (adaptado)"
+  },
   "enem_2018_linguagens_q8_ctx1": {
     "title": null,
     "subtitle": null,
@@ -1689,20 +1696,6 @@
     "images": [],
     "reference": "Disponível em: http://reporterunesp.jor.br. Acesso em: 19 mar. 2018"
   },
-  "enem_2018_linguagens_q1_q45_ctx1": {
-    "title": "Lava Mae: Creating Showers on Wheels for the Homeless",
-    "subtitle": null,
-    "text": "San Francisco, according to recent city numbers has 4,300 people living on the streets. Among the main problems the homeless face is little or no access to showers. San Francisco only has about 16 to 20 shower stalls to accommodate them.\n\nBut Doniece Sandoval has made it her mission to change that. The 51-year-old former marketing executive started Lava Mae, a sort of showers on wheels, a new project that aims to turn decommissioned city buses into shower stations for the homeless. Each bus will have two shower stations and Sandoval expects that they'll be able to provide 2,000 showers a week.",
-    "images": [],
-    "reference": "ANDREANO, C. Disponível em: http://abcnews.go.com. Acesso em: 26 jun. 2015 (adaptado)"
-  },
-  "enem_2018_linguagens_q4_q45_ctx1": {
-    "title": "TEXTO II",
-    "subtitle": null,
-    "text": "I didn't have a problem with Khan Academy site until very recently. For me, the problem is the way Khan Academy is being promoted. The way the media sees it is \"revolutionizing education\". The way people with power and money view education as simply \"sit-and-get\". If your philosophy of education is \"sit-and-get\", i.e., teaching is telling and learning is listening, then Khan Academy is way more efficient than classroom lecturing. Khan Academy does it better. But TRUE progressive educators, TRUE education visionaries and revolutionaries don't want to do these things better. We want to DO BETTER THINGS.",
-    "images": [],
-    "reference": "http://fnoschese.wordpress.com. Acesso em: 2 mar. 2012."
-  },
   "enem_2018_linguagens_q21_ctx1": {
     "title": "Hino Nacional do Brasil",
     "subtitle": null,
@@ -1711,11 +1704,11 @@
     "reference": "Letra: Joaquim Osório Duque Estrada; Música: Francisco Manuel da Silva"
   },
   "enem_2018_linguagens_q3_ctx1": {
-    "title": "Poema",
-    "subtitle": null,
+    "title": "",
+    "subtitle": "",
     "text": "Don't write in English, they said,\nEnglish is not your mother tongue...\n...The language I speak\nBecomes mine, its distortions, its queerness\nAll mine, mine alone, it is half English, half\nIndian, funny perhaps, but it is honest,\nIt is as human as I am human...\n...It voices my joys, my longings my\nHopes...\n(Kamala Das, 1965:10)",
     "images": [],
-    "reference": "GARGESH, R. South Asian Englishes. In: KACHRU, B. B.; KACHRU, Y.; NELSON, C. L. (Eds.). The Handbook of World Englishes. Singapore: Blackwell, 2006."
+    "reference": "GARGESH, R. South Asian Englishes. In: KACHRU, B. B.; KACHRU, Y.; NELSON, C. L. (Eds.). <b>The Handbook of World Englishes.</b> Singapore: Blackwell, 2006."
   },
   "enem_2018_linguagens_q31_ctx1": {
     "title": null,
@@ -1748,20 +1741,20 @@
     "reference": "Disponível em: http://tecnologia.elpais.com. Acesso em: 23 jun. 2015 (adaptado)."
   },
   "enem_2018_linguagens_q2_ctx2": {
-    "title": "Cartum",
-    "subtitle": null,
-    "text": "[Figura: Cartum de Glasbergen]",
+    "title": "",
+    "subtitle": "",
+    "text": "",
     "images": [
       "figuras/q002_2018_fig1.png"
     ],
     "reference": "GLASBERGEN, R. Disponível em: www.glasbergen.com. Acesso em: 3 jul. 2015 (adaptado)"
   },
   "enem_2018_linguagens_q3_ctx2": {
-    "title": "Texto",
-    "subtitle": null,
-    "text": "¿Qué es la X Solidaria?\n\nLa X Solidaria es una equis que ayuda a las personas más vulnerables. Podrás marcarla cuando hagas la declaración de la renta. Es la casilla que se denomina \"Fines Sociales\". Nosotros preferimos llamarla X Solidaria\n\n- porque al marcarla haces que se destine un 0,7% de tus impuestos a programas sociales que realizan las ONG.\n- porque se benefician los colectivos más desfavorecidos, sin ningún coste económico para ti.\n- porque NO marcarla es tomar una actitud pasiva y dejar que sea el Estado quien decida el destino de esa parte de tus impuestos.\n- porque marcándola te conviertes en contribuyente activo solidario.",
+    "title": "¿Qué es la X Solidaria?",
+    "subtitle": "",
+    "text": "La X Solidaria es una equis que ayuda a las personas más vulnerables. Podrás marcarla cuando hagas la declaración de la renta. Es la casilla que se denomina \"Fines Sociales\". Nosotros preferimos llamarla X Solidaria\n\n- porque al marcarla haces que se destine un 0,7% de tus impuestos a programas sociales que realizan las ONG.\n- porque se benefician los colectivos más desfavorecidos, sin ningún coste económico para ti.\n- porque NO marcarla es tomar una actitud pasiva y dejar que sea el Estado quien decida el destino de esa parte de tus impuestos.\n- porque marcándola te conviertes en contribuyente activo solidario.",
     "images": [],
-    "reference": "http://xsolidaria.org"
+    "reference": "Disponivel em: http://xsolidaria.org. Acesso em: 20 fev. 2012 (adaptado)."
   },
   "enem_2018_linguagens_q15_ctx1": {
     "title": "Dia 20/10",
@@ -1943,6 +1936,89 @@
     "subtitle": "",
     "text": "Lá embaixo está o Açude Itans, com seu formigueiro a cavar a terra. É mesmo impressionante o esforço daquele formigar de homens ao sol, lavados em suor, que não param, em longas filas pacientes acompanhando centenas de burricos que sobem e descem, numa ciranda comovente e silenciosa, cada burrico com duas caixas de terra no lombo. É o labor organizado para a salvação da terra e do homem. Depois do semideserto que tanto nos acabrunhou o espirito por falta de chuvas, o esforco destes milhares de sertanejos, todos vestidos de brim mescla e calçando alpercatas, no combate consciente à esterilidade da natureza, com as familias alojadas em pequeninas casas de taipa e telha — embrião de futura cidade — impressionava-nos profundamente.",
     "reference": "VALLE, F. M. <b>História do Açude Itans, município de Caicó (RN)</b>. Brasília, 1994 (adaptado).",
+    "images": []
+  },
+  "enem_2022_humanas_q78_ctx1": {
+    "title": "Possível trajeto do voo MH370 da Malasya Airlines antes da queda, em 2014",
+    "subtitle": "",
+    "text": "",
+    "reference": "Disponivel em: http://imguol.com. Acesso em: 30 mar. 2014 (adaptado).",
+    "images": [
+      "figuras/q078_2022_fig1.png"
+    ]
+  },
+  "enem_2022_humanas_q80_ctx1": {
+    "title": "",
+    "subtitle": "",
+    "text": "Advento da <i>Polis</i>, nascimento da filosofia: entre as duas ordens de fenômenos, os vínculos são demasiado estreitos para que o pensamento racional não apareça, em suas origens, solidário das estruturas sociais e mentais próprias da cidade grega. Assim recolocada na história, a filosofia despoja-se desse caráter de revelação absoluta que as vezes lhe foi atribuído, saudando, na jovem ciência dos jônios, a razão intemporal que veio encarnar-se no Tempo. A escola de Mileto não viu nascer a Razão; ela construiu uma Razão, uma primeira forma de Racionalidade. Essa razão grega não é a razão experimental da ciência contemporânea.",
+    "reference": "VERNANT. J. P. <b>Origens do pensamento grego</b>. Rio de Janeiro: Difel, 2002.",
+    "images": []
+  },
+  "enem_2022_humanas_q82_ctx1": {
+    "title": "ROCHAS IGNEAS DA AMAZONIA LEGAL",
+    "subtitle": "",
+    "text": "",
+    "reference": "<b>Geoestatísticas de recursos naturais da Amazonia Legal</b>. Rio de Janeiro: IBGE, 2011 (adaptado).",
+    "images": [
+      "figuras/q082_2022_fig1.png"
+    ]
+  },
+  "enem_2022_humanas_q84_ctx1": {
+    "title": "TEXTO I",
+    "subtitle": "",
+    "text": "Uma filosofia da percepção que queira reaprender a ver o mundo restituira à pintura e às artes em geral seu lugar verdadeiro.",
+    "reference": "MERLEAU-PONTY, M. <b>Conversas: 1948</b>. São Paulo: Martins Fontes, 2004",
+    "images": []
+  },
+  "enem_2022_humanas_q84_ctx2": {
+    "title": "TEXTO II",
+    "subtitle": "",
+    "text": "Os grandes autores de cinema nos pareceram confrontáveis não apenas com pintores, arquitetos, músicos, mas também com pensadores. Eles pensam com imagens, em vez de conceitos.",
+    "reference": "DELEUZE, G. <b>Cinema 1</b>: a imagem-movimento. São Paulo: Brasilience, 1983 (adaptado).",
+    "images": []
+  },
+  "enem_2021_lang_q2_ctx1": {
+    "title": "The British (serves 60 million)",
+    "subtitle": "",
+    "text": "      Take some Picts, Celts and Silures\n      And let them settle,\n      Then overrun them with Roman conquerors.\n      Remove the Romans after approximately 400 years\n      Add lots of Norman French to some\n      Angles, Saxons, Jutes and Vikings, then stir vigorously.\n      [...]\n      Sprinkle some fresh Indians, Malaysians, Bosnians,\n      Iraquis and Bangladeshis together with some\n      Afghans, Spanish, Turkish, Kurdish Japanese\n      And Palestinians\n      Then add to the melting pot.\n      Leave the ingredients to simmer.\n      As they mix and blend allow their languages to flourish\n      Binding them together with English.\n      Allow time to be cool.\n      Add some unity, understanding, and respect for the future,\n      Serve with justice\n      And enjoy.\n\n<b>Note:</b> All the ingredients are equally important. Treating one ingredient better than another will leave a bitter unpleasant taste.\n<b>Note:</b> An unequal spread of justice will damage the people and cause pain. Give justice and equally to all",
+    "reference": "Disponível em: www.benjaminzephaniah.com. Acesso em: 12 dez. 2018 (fragmento).",
+    "images": []
+  },
+  "enem_2021_lang_q4_ctx1": {
+    "title": "",
+    "subtitle": "",
+    "text": "",
+    "reference": "SIPRESS. Disponível em: www.newyorker.com. Acesso em: 12 jun. 2018.",
+    "images": [
+      "figuras/q004_2021_fig1.png"
+    ]
+  },
+  "enem_2018_linguagens_q1_ctx1_es": {
+    "title": "",
+    "subtitle": "",
+    "text": "El día en que lo iban a matar, Santiago Nasar se levantó a las 5:30 de la mañana para esperar el buque en que llegaba el obispo. Había soñado que atravesaba un bosque de higuerones donde caía una llovizna tierna, y por un instante fue feliz en el sueño, pero al despertar se sintió por completo salpicado de cagada de pájaros. “Siempre soñaba con árboles”, me dijo Plácida Linero, su madre, evocando 27 años después los pormenores de aquel lunes ingrato. “La semana anterior había soñado que iba solo en un avión de papel de estaño que volaba sin tropezar por entre los almendros”, me dijo. Tenía una reputación muy bien ganada de intérprete certera de los sueños ajenos, siempre que se los contaran en ayunas, pero no había advertido ningún augurio aciago en esos dos sueños de su hijo, ni en los otros sueños con árboles que él le había contado en las mañanas que precedieron a su muerte.",
+    "images": [],
+    "reference": "MARQUEZ, G. G. <b>Crónica de una muerte anunciada.</b> Disponivel em: http://biblio3.url.edu.gt. Acesso em 2 jan. 2015"
+  },
+  "enem_2018_linguagens_q4_ctx2_en": {
+    "title": "TEXTO II",
+    "subtitle": "",
+    "text": "I didn't have a problem with Khan Academy site until very recently. For me, the problem is the way Khan Academy is being promoted. The way the media sees it is \"revolutionizing education\". The way people with power and money view education as simply \"sit-and-get\". If your philosophy of education is \"sit-and-get\", i.e., teaching is telling and learning is listening, then Khan Academy is way more efficient than classroom lecturing. Khan Academy does it better. But TRUE progressive educators, TRUE education visionaries and revolutionaries don't want to do these things better. We want to DO BETTER THINGS.",
+    "images": [],
+    "reference": "http://fnoschese.wordpress.com. Acesso em: 2 mar. 2012."
+  },
+  "enem_2018_linguagens_q4_ctx1_en": {
+    "title": "TEXTO I",
+    "subtitle": "A Free World-class Education for Anyone Anywhere",
+    "text": "The Khan Academy is an organization on a mission. We're a not-for-profit with the goal of changing education for the better by providing a free world-class education to anyone anywhere. All of the site's resources are available to anyone. The Khan Academy's materials and resources are available to you completely free of charge",
+    "reference": "Disponivel em: www.khanacademy.org. Acesso em: 24 fev. 2012 (adaptado).",
+    "images": []
+  },
+  "enem_2018_lang_q4_ctx1_es": {
+    "title": "¿Cómo gestionar la diversidad lingüística en el aula?",
+    "subtitle": "",
+    "text": "El aprendizaje de idiomas es una de las demandas de la sociedad en la escuela: los alumnos tienen que finalizar la escolarización con un buen conocimiento, por lo menos, de las tres lenguas curriculares: catalán, castellano e inglés (o francés, portugués…).\nLa metodología que promueve el aprendizaje integrado de idiomas en la escuela tiene en cuenta las relaciones entre las diferentes lenguas: la mejor enseñanza de una lengua incide en la mejora de todas las demás. Se trata de educar en y para la diversidad lingüística y cultural.\nPor eso, la V Jornada de Buenas Prácticas de Gestión del Multilingüismo, que se celebrará en Barcelona, debatirá sobre la gestión del multilingüismo en el aula. El objetivo es difundir propuestas para el aprendizaje integrado de idiomas y presentar experiencias prácticas de gestión de la diversidad lingüística presente en las aulas.",
+    "reference": "Disponível em: www10.gencat.cat. Acesso em: 15 set. 2010 (adaptado).",
     "images": []
   }
 }

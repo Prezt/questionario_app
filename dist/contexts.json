@@ -1738,21 +1738,21 @@
     "images": [],
     "reference": "Disponível em: http://reporterunesp.jor.br. Acesso em: 19 mar. 2018"
   },
-  "enem_2018_linguagens_ctx1": {
+  "enem_2018_linguagens_q1_ctx1_en": {
     "title": "Lava Mae: Creating Showers on Wheels for the Homeless",
     "subtitle": null,
     "text": "San Francisco, according to recent city numbers has 4,300 people living on the streets. Among the main problems the homeless face is little or no access to showers. San Francisco only has about 16 to 20 shower stalls to accommodate them.\n\nBut Doniece Sandoval has made it her mission to change that. The 51-year-old former marketing executive started Lava Mae, a sort of showers on wheels, a new project that aims to turn decommissioned city buses into shower stations for the homeless. Each bus will have two shower stations and Sandoval expects that they'll be able to provide 2,000 showers a week.",
     "images": [],
     "reference": "ANDREANO, C. Disponível em: http://abcnews.go.com. Acesso em: 26 jun. 2015 (adaptado)"
   },
-  "enem_2018_linguagens_ctx2": {
+  "enem_2018_linguagens_q4_ctx2_en": {
     "title": "TEXTO II",
     "subtitle": null,
     "text": "I didn't have a problem with Khan Academy site until very recently. For me, the problem is the way Khan Academy is being promoted. The way the media sees it is \"revolutionizing education\". The way people with power and money view education as simply \"sit-and-get\". If your philosophy of education is \"sit-and-get\", i.e., teaching is telling and learning is listening, then Khan Academy is way more efficient than classroom lecturing. Khan Academy does it better. But TRUE progressive educators, TRUE education visionaries and revolutionaries don't want to do these things better. We want to DO BETTER THINGS.",
     "images": [],
     "reference": "http://fnoschese.wordpress.com. Acesso em: 2 mar. 2012."
   },
-  "enem_2018_linguagens_ctx21": {
+  "enem_2018_linguagens_q21_ctx1": {
     "title": "Hino Nacional do Brasil",
     "subtitle": null,
     "text": "Ó Pátria amada,\nIdolatrada,\nSalve! Salve!\nBrasil, de amor eterno seja símbolo\nO lábaro que ostentas estrelado,\nE diga o verde-louro dessa flâmula\n— \"Paz no futuro e glória no passado.\"\nMas, se ergues da justiça a clava forte,\nVerás que um filho teu não foge à luta,\nNem teme, quem te adora, a própria morte.\nTerra adorada,\nEntre outras mil,\nÉs tu, Brasil,\nÓ Pátria amada!\nDos filhos deste solo és mãe gentil,\nPátria amada, Brasil!",
@@ -1861,6 +1861,13 @@
     "text": "\"A Declaração Universal dos Direitos Humanos está completando 70 anos em tempos de desafios crescentes quando o ódio, a discriminação e a violência permanecem vivos\", disse a diretora-geral da Organização das Nações Unidas para a Educação, a Ciência e a Cultura (Unesco), Audrey Azoulay.\n\"Ao final da Segunda Guerra Mundial, a humanidade inteira resolveu promover a dignidade humana em todos os lugares e para sempre. Nesse espírito, as Nações Unidas adotaram a Declaração Universal dos Direitos Humanos como um padrão comum de conquistas para todos os povos e todas as nações\", disse Audrey.\n\"Centenas de milhões de mulheres e homens são destituídos e privados de condições básicas de subsistência e de oportunidades. Movimentos populacionais forçados geram violações aos direitos em uma escala sem precedentes. A Agenda 2030 para o Desenvolvimento Sustentável promete não deixar ninguém para trás – e os direitos humanos devem ser o alicerce para todo o progresso.\"\nSegundo ela, esse processo precisa começar o quanto antes nas carteiras das escolas. Diante disso, a Unesco lidera a educação em direitos humanos para assegurar que todas as meninas e meninos saibam seus direitos e os direitos dos outros.\nDisponível em: https://nacoesunidas.org. Acesso em: 3 abr. 2018 (adaptado)",
     "images": [],
     "reference": null
+  },
+  "enem_2018_linguagens_q4_ctx1_en": {
+    "title": "TEXTO I",
+    "subtitle": "A Free World-class Education for Anyone Anywhere",
+    "text": "The Khan Academy is an organization on a mission. We're a not-for-profit with the goal of changing education for the better by providing a free world-class education to anyone anywhere. All of the site's resources are available to anyone. The Khan Academy's materials and resources are available to you completely free of charge",
+    "reference": "Disponivel em: www.khanacademy.org. Acesso em: 24 fev. 2012 (adaptado).",
+    "images": []
   },
   "enem_2021_humanas_q53_ctx1": {
     "title": "",

@@ -673,7 +673,7 @@
   },
   {
     "number": 78,
-    "text": "[Figura: Possível trajeto do voo MH370 da Malaysia Airlines antes da queda, em 2014]",
+    "text": "Considerando-se que a distância entre o local onde os destroços do avião foram avistados e a cidade de Perth é de 2 cm, a escala aproximada dessa representação cartográfica é: á",
     "alternatives": {
       "a": "1 : 12 500",
       "b": "1 : 125 000",
@@ -681,9 +681,7 @@
       "d": "1 : 12 500 000",
       "e": "1 : 125 000 000"
     },
-    "images": [
-      "figuras/q078_2022_fig1.png"
-    ],
+    "images": [],
     "tags": [
       "sociologia e estrutura social"
     ],
@@ -691,7 +689,10 @@
     "test": "ENEM",
     "area": "humanas",
     "answer": "e",
-    "difficulty": 5
+    "difficulty": 5,
+    "contextIds": [
+      "enem_2022_humanas_q78_ctx1"
+    ]
   },
   {
     "number": 79,
@@ -715,7 +716,7 @@
   },
   {
     "number": 80,
-    "text": "[Figura] Os vínculos entre os fenômenos indicados no trecho oram fortalecidos pelo surgimento de uma categoria de ensadores, a saber:",
+    "text": "Os vínculos entre os fenômenos indicados no trecho oram fortalecidos pelo surgimento de uma categoria de ensadores, a saber:",
     "alternatives": {
       "a": "Os epicuristas, envolvidos com o ideal de vida feliz.",
       "b": "Os estoicos, dedicados à superação dos infortúnios.",
@@ -723,9 +724,7 @@
       "d": "Os peripatéticos, empenhados na dinâmica do ensino.",
       "e": "Os poetas rapsodos, responsáveis pela narrativa do mito."
     },
-    "images": [
-      "figuras/q080_2022_fig1.png"
-    ],
+    "images": [],
     "tags": [
       "filosofia antiga e medieval"
     ],
@@ -733,7 +732,10 @@
     "test": "ENEM",
     "area": "humanas",
     "answer": "c",
-    "difficulty": 7
+    "difficulty": 7,
+    "contextIds": [
+      "enem_2022_humanas_q80_ctx1"
+    ]
   },
   {
     "number": 81,
@@ -757,7 +759,7 @@
   },
   {
     "number": 82,
-    "text": "[Figura - Mapa espacializando a ocorrência de rochas ígneas na Amazônia Legal]",
+    "text": "O mapa espacializa um recurso natural com alto potencial para ocorrência de: ",
     "alternatives": {
       "a": "Abalos sísmicos periódicos.",
       "b": "Jazidas de minerais metálicos.",
@@ -765,9 +767,7 @@
       "d": "Aquíferos sedimentares profundos.",
       "e": "Estruturas geológicas metamórficas."
     },
-    "images": [
-      "figuras/q082_2022_fig1.png"
-    ],
+    "images": [],
     "tags": [
       "geografia física e geologia"
     ],
@@ -775,7 +775,10 @@
     "test": "ENEM",
     "area": "humanas",
     "answer": "b",
-    "difficulty": 7
+    "difficulty": 7,
+    "contextIds": [
+      "enem_2022_humanas_q82_ctx1"
+    ]
   },
   {
     "number": 83,
@@ -800,7 +803,7 @@
   },
   {
     "number": 84,
-    "text": "[Figura] De que modo os textos sustentam a existência de um saber ancorado na sensibilidade?",
+    "text": "De que modo os textos sustentam a existência de um saber ancorado na sensibilidade?",
     "alternatives": {
       "a": "Admitindo o belo como fenômeno transcendental.",
       "b": "Reafirmando a vivência estética como juízo de gosto.",
@@ -808,9 +811,7 @@
       "d": "Apontando as formas de expressão como auxiliares da razão.",
       "e": "Estabelecendo a inteligência como implicação das representações."
     },
-    "images": [
-      "figuras/q084_2022_fig1.png"
-    ],
+    "images": [],
     "tags": [
       "história da cultura e arte"
     ],
@@ -818,7 +819,11 @@
     "test": "ENEM",
     "area": "humanas",
     "answer": "c",
-    "difficulty": 7
+    "difficulty": 7,
+    "contextIds": [
+      "enem_2022_humanas_q84_ctx1",
+      "enem_2022_humanas_q84_ctx2"
+    ]
   },
   {
     "number": 85,

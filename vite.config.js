@@ -115,7 +115,7 @@ function reviewSaveMiddleware(req, res, next) {
   req.on('data', chunk => { body += chunk })
   req.on('end', () => {
     try {
-      const { file, questionNumber, patch } = JSON.parse(body)
+      const { file, questionNumber, language, patch } = JSON.parse(body)
 
       if (!file || typeof questionNumber !== 'number' || !patch) {
         res.statusCode = 400
@@ -141,7 +141,9 @@ function reviewSaveMiddleware(req, res, next) {
       }
 
       const questions = JSON.parse(fs.readFileSync(filePath, 'utf8'))
-      const idx = questions.findIndex(q => q.number === questionNumber)
+      const idx = questions.findIndex(q =>
+        q.number === questionNumber && (q.language ?? null) === (language ?? null)
+      )
       if (idx === -1) {
         res.statusCode = 404
         res.setHeader('Content-Type', 'application/json')

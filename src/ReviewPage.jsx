@@ -26,8 +26,9 @@ function loadFlags() {
 function saveFlags(flags) {
   localStorage.setItem(FLAGS_KEY, JSON.stringify(flags))
 }
-function flagKey(file, questionNumber) {
-  return `${file.replace('.json', '')}_${questionNumber}`
+function flagKey(file, questionNumber, language) {
+  const base = `${file.replace('.json', '')}_${questionNumber}`
+  return language ? `${base}_${language}` : base
 }
 function pageMapKey(year, area, number) {
   return `${year}_${AREA_TO_DAY[area] ?? 'd1'}_${number}`
@@ -139,6 +140,12 @@ const PT_ACCENT_MAP = {
   'pessimo': 'péssimo', 'pessima': 'péssima', 'pessimos': 'péssimos', 'pessimas': 'péssimas',
   'otimo': 'ótimo', 'otima': 'ótima', 'otimos': 'ótimos', 'otimas': 'ótimas',
   'identico': 'idêntico', 'identica': 'idêntica', 'identicos': 'idênticos', 'identicas': 'idênticas',
+  'destroco': 'destroço', 'destrocos': 'destroços',
+  'cartografica': 'cartográfica', 'cartograficas': 'cartográficas', 'cartografico': 'cartográfico', 'cartograficos': 'cartográficos',
+  'apareca': 'apareça', 'aparecam': 'apareçam',
+  'jonio': 'jônio', 'jonia': 'jônia', 'jonios': 'jônios', 'jonias': 'jônias',
+  'solidario': 'solidário', 'solidaria': 'solidária', 'solidarios': 'solidários', 'solidarias': 'solidárias',
+  'atribuido': 'atribuído', 'atribuida': 'atribuída', 'atribuidos': 'atribuídos', 'atribuidas': 'atribuídas',
   'facil': 'fácil', 'faceis': 'fáceis',
   'possivel': 'possível', 'possiveis': 'possíveis',
   'necessario': 'necessário', 'necessaria': 'necessária', 'necessarios': 'necessários', 'necessarias': 'necessárias',
@@ -243,6 +250,14 @@ const PT_ACCENT_MAP = {
 // Suffix rules: [regex, replacement] applied in order when dictionary lookup fails
 const PT_SUFFIX_RULES = [
   // Most specific first to avoid shorter rules stealing the match
+  [/isticas$/i,  'ísticas'],  // caracteristicas → características, linguisticas → linguísticas
+  [/istico$/i,   'ístico'],  // linguistico → linguístico
+  [/isticos$/i,  'ísticos'], // linguisticos → linguísticos
+  [/istica$/i,   'ística'],  // linguistica → linguística
+  [/aveis$/i,    'áveis'],   // confrontaveis → confrontáveis, notaveis → notáveis
+  [/avel$/i,     'ável'],    // notavel → notável, amavel → amável
+  [/iveis$/i,    'íveis'],   // possiveis → possíveis, incrivel... plural
+  [/ivel$/i,     'ível'],    // possivel → possível, incrivel → incrível
   [/ologicas$/i, 'ológicas'],  // museologicas → museológicas, biologicas → biológicas
   [/ologicos$/i, 'ológicos'],  // biologicos → biológicos
   [/ologica$/i,  'ológica'],   // biologica  → biológica
@@ -344,6 +359,7 @@ export default function ReviewPage() {
   const [issueFilter, setIssueFilter] = useState(null)
   const activeItemRef = useRef(null)
   const [collapsedCtx, setCollapsedCtx] = useState({})
+  const [sidebarFilter, setSidebarFilter] = useState('all') // 'all' | 'not-ok'
 
   // Derive active question list
   const activeList = useMemo(() => {
@@ -365,7 +381,7 @@ export default function ReviewPage() {
           flagged.push({ ...q, _file: filename })
         }
       }
-      const isFixed = q => ['fixed', 'ok'].includes(flags[flagKey(q._file, q.number)]?.status)
+      const isFixed = q => ['fixed', 'ok'].includes(flags[flagKey(q._file, q.number, q.language)]?.status)
       return flagged.sort((a, b) => {
         const fa = isFixed(a) ? 1 : 0, fb = isFixed(b) ? 1 : 0
         if (fa !== fb) return fa - fb
@@ -375,7 +391,7 @@ export default function ReviewPage() {
       const reviewed = []
       for (const [filename, qs] of Object.entries(datasets)) {
         for (const q of qs) {
-          if (flags[flagKey(filename, q.number)]) reviewed.push({ ...q, _file: filename })
+          if (flags[flagKey(filename, q.number, q.language)]) reviewed.push({ ...q, _file: filename })
         }
       }
       return reviewed.sort((a, b) => a._file.localeCompare(b._file) || a.number - b.number)
@@ -393,7 +409,7 @@ export default function ReviewPage() {
     for (const [filename, qs] of Object.entries(datasets)) {
       for (const q of qs) all.push({ ...q, _file: filename })
     }
-    return all.sort((a, b) => a._file.localeCompare(b._file) || a.number - b.number)
+    return all.sort((a, b) => (a.year ?? 0) - (b.year ?? 0) || a.number - b.number || a._file.localeCompare(b._file))
   }, [datasets, ready])
 
   // Set of question keys that have audit issues
@@ -425,7 +441,7 @@ export default function ReviewPage() {
   }, [auditReport])
 
   const reviewedCount = useMemo(() =>
-    activeList.filter(q => flags[flagKey(q._file, q.number)]).length,
+    activeList.filter(q => flags[flagKey(q._file, q.number, q.language)]).length,
     [activeList, flags]
   )
 
@@ -464,7 +480,7 @@ export default function ReviewPage() {
 
   useEffect(() => {
     if (!currentQuestion) return
-    const saved = flags[flagKey(currentQuestion._file, currentQuestion.number)]
+    const saved = flags[flagKey(currentQuestion._file, currentQuestion.number, currentQuestion.language)]
     setPendingFlag(saved ? { issues: saved.issues ?? [], note: saved.note ?? '' } : { issues: [], note: '' })
     setActiveTab('flag')
   }, [currentQuestion])
@@ -532,7 +548,7 @@ export default function ReviewPage() {
 
   const saveFlag = useCallback(() => {
     if (!currentQuestion || pendingFlag.issues.length === 0) return
-    const fk = flagKey(currentQuestion._file, currentQuestion.number)
+    const fk = flagKey(currentQuestion._file, currentQuestion.number, currentQuestion.language)
     const updated = {
       ...flags,
       [fk]: {
@@ -551,7 +567,7 @@ export default function ReviewPage() {
 
   const markOk = useCallback(() => {
     if (!currentQuestion) return
-    const fk = flagKey(currentQuestion._file, currentQuestion.number)
+    const fk = flagKey(currentQuestion._file, currentQuestion.number, currentQuestion.language)
     const updated = {
       ...flags,
       [fk]: {
@@ -630,14 +646,15 @@ export default function ReviewPage() {
         const res = await fetch('/api/review/save', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ file: currentQuestion._file, questionNumber: currentQuestion.number, patch: qPatch }),
+          body: JSON.stringify({ file: currentQuestion._file, questionNumber: currentQuestion.number, language: currentQuestion.language ?? null, patch: qPatch }),
         })
         const json = await res.json()
         if (!json.ok) throw new Error(json.error ?? 'Question save failed')
 
         setDatasets(prev => {
           const fileQuestions = prev[currentQuestion._file].map(q =>
-            q.number === currentQuestion.number ? { ...q, ...qPatch } : q
+            q.number === currentQuestion.number && (q.language ?? null) === (currentQuestion.language ?? null)
+              ? { ...q, ...qPatch } : q
           )
           return { ...prev, [currentQuestion._file]: fileQuestions }
         })
@@ -666,7 +683,7 @@ export default function ReviewPage() {
         setContexts(prev => ({ ...prev, [cid]: { ...prev[cid], ...cPatch } }))
       }
 
-      const fk = flagKey(currentQuestion._file, currentQuestion.number)
+      const fk = flagKey(currentQuestion._file, currentQuestion.number, currentQuestion.language)
       const updatedFlags = {
         ...flags,
         [fk]: {
@@ -834,15 +851,15 @@ export default function ReviewPage() {
                 <span className="rp-q-number">Q{currentQuestion.number}</span>
                 <span className="rp-q-file">{currentQuestion._file.replace('.json', '')}</span>
                 {(() => {
-                  const fk = flagKey(currentQuestion._file, currentQuestion.number)
+                  const fk = flagKey(currentQuestion._file, currentQuestion.number, currentQuestion.language)
                   const flag = flags[fk]
                   if (!flag) return null
                   const colors = { fixed: '#16a34a', ok: '#16a34a', flagged: '#dc2626' }
                   const labels = { fixed: '✓ Fixed', ok: '✓ OK', flagged: '⚠ Flagged' }
                   return <span className="rp-q-status" style={{ color: colors[flag.status] }}>{labels[flag.status]}</span>
                 })()}
-                {getAuditIssues(auditReport, currentQuestion._file, currentQuestion.number).map(issue => (
-                  <span key={issue.type} className="rp-audit-badge">{issue.type}</span>
+                {getAuditIssues(auditReport, currentQuestion._file, currentQuestion.number).map((issue, i) => (
+                  <span key={i} className="rp-audit-badge">{issue.type}</span>
                 ))}
               </div>
 
@@ -1081,11 +1098,13 @@ export default function ReviewPage() {
                                 {newCtx.images?.length > 0 && (
                                   <div className="rp-edit-img-list">
                                     {newCtx.images.map((img, i) => (
-                                      <div key={img} className="rp-edit-img-row">
-                                        <img src={`/${img}`} className="rp-edit-img-thumb" alt="" />
-                                        <span className="rp-edit-img-name">{img.replace('figuras/', '')}</span>
-                                        <button className="rp-edit-img-remove"
-                                          onClick={() => setNewCtx(c => ({ ...c, images: c.images.filter((_, j) => j !== i) }))}>×</button>
+                                      <div key={img} className="rp-edit-img-card">
+                                        <img src={`/${img}`} className="rp-edit-img-preview" alt="" />
+                                        <div className="rp-edit-img-row">
+                                          <span className="rp-edit-img-name">{img.replace('figuras/', '')}</span>
+                                          <button className="rp-edit-img-remove"
+                                            onClick={() => setNewCtx(c => ({ ...c, images: c.images.filter((_, j) => j !== i) }))}>×</button>
+                                        </div>
                                       </div>
                                     ))}
                                   </div>
@@ -1179,17 +1198,19 @@ export default function ReviewPage() {
                                 {ctxDraft.images?.length > 0 && (
                                   <div className="rp-edit-img-list">
                                     {ctxDraft.images.map((img, i) => (
-                                      <div key={img} className="rp-edit-img-row">
-                                        <img src={`/${img}`} className="rp-edit-img-thumb" alt="" />
-                                        <span className="rp-edit-img-name">{img.replace('figuras/', '')}</span>
-                                        <button
-                                          className="rp-edit-img-remove"
-                                          title="Remove image"
-                                          onClick={() => setDraft(d => ({
-                                            ...d,
-                                            contextDrafts: { ...d.contextDrafts, [cid]: { ...d.contextDrafts[cid], images: d.contextDrafts[cid].images.filter((_, j) => j !== i) } }
-                                          }))}
-                                        >×</button>
+                                      <div key={img} className="rp-edit-img-card">
+                                        <img src={`/${img}`} className="rp-edit-img-preview" alt="" />
+                                        <div className="rp-edit-img-row">
+                                          <span className="rp-edit-img-name">{img.replace('figuras/', '')}</span>
+                                          <button
+                                            className="rp-edit-img-remove"
+                                            title="Remove image"
+                                            onClick={() => setDraft(d => ({
+                                              ...d,
+                                              contextDrafts: { ...d.contextDrafts, [cid]: { ...d.contextDrafts[cid], images: d.contextDrafts[cid].images.filter((_, j) => j !== i) } }
+                                            }))}
+                                          >×</button>
+                                        </div>
                                       </div>
                                     ))}
                                   </div>
@@ -1269,14 +1290,16 @@ export default function ReviewPage() {
                             {draft.images.length > 0 && (
                               <div className="rp-edit-img-list">
                                 {draft.images.map((img, i) => (
-                                  <div key={img} className="rp-edit-img-row">
-                                    <img src={`/${img}`} className="rp-edit-img-thumb" alt="" />
-                                    <span className="rp-edit-img-name">{img.replace('figuras/', '')}</span>
-                                    <button
-                                      className="rp-edit-img-remove"
-                                      title="Remove image"
-                                      onClick={() => setDraft(d => ({ ...d, images: d.images.filter((_, j) => j !== i) }))}
-                                    >×</button>
+                                  <div key={img} className="rp-edit-img-card">
+                                    <img src={`/${img}`} className="rp-edit-img-preview" alt="" />
+                                    <div className="rp-edit-img-row">
+                                      <span className="rp-edit-img-name">{img.replace('figuras/', '')}</span>
+                                      <button
+                                        className="rp-edit-img-remove"
+                                        title="Remove image"
+                                        onClick={() => setDraft(d => ({ ...d, images: d.images.filter((_, j) => j !== i) }))}
+                                      >×</button>
+                                    </div>
                                   </div>
                                 ))}
                               </div>
@@ -1354,34 +1377,54 @@ export default function ReviewPage() {
 
         {/* FAR RIGHT: QUESTION LIST */}
         <div className="rp-qlist">
-          {allQuestions.map((q, i) => {
-            const fk = flagKey(q._file, q.number)
-            const flag = flags[fk]
-            const status = flag?.status
-            const hasIssue = auditIssueKeys.has(fk)
-            const isCurrent = overrideQuestion
-              ? overrideQuestion._file === q._file && overrideQuestion.number === q.number
-              : currentQuestion?._file === q._file && currentQuestion?.number === q.number
-            return (
-              <button
-                key={fk}
-                ref={isCurrent ? activeItemRef : null}
-                className={`rp-qlist-item${isCurrent ? ' rp-qlist-item--active' : ''} ${status ? `rp-qlist-item--${status}` : ''}`}
-                onClick={() => {
-                  const idx = activeList.findIndex(aq => aq._file === q._file && aq.number === q.number)
-                  if (idx !== -1) { setOverrideQuestion(null); setCurrentIndex(idx) }
-                  else setOverrideQuestion(q)
-                }}
-                title={`${q._file.replace('.json','').replace('_enem_',' ')} Q${q.number}`}
-              >
-                <span className="rp-qlist-num">Q{q.number}</span>
-                {status === 'fixed' && <span className="rp-qlist-dot rp-qlist-dot--fixed" />}
-                {status === 'ok' && <span className="rp-qlist-dot rp-qlist-dot--ok" />}
-                {status === 'flagged' && <span className="rp-qlist-dot rp-qlist-dot--flagged" />}
-                {!status && hasIssue && <span className="rp-qlist-dot rp-qlist-dot--issue" />}
-              </button>
-            )
-          })}
+          <div className="rp-qlist-filters">
+            <button className={`rp-qlist-filter-btn${sidebarFilter === 'all' ? ' active' : ''}`} onClick={() => setSidebarFilter('all')} title="Show all questions">All</button>
+            <button className={`rp-qlist-filter-btn${sidebarFilter === 'not-ok' ? ' active' : ''}`} onClick={() => setSidebarFilter('not-ok')} title="Show questions not marked as OK">≠OK</button>
+          </div>
+          {(() => {
+            const filtered = allQuestions.filter(q => {
+              if (sidebarFilter === 'not-ok') {
+                const status = flags[flagKey(q._file, q.number, q.language)]?.status
+                return status !== 'ok'
+              }
+              return true
+            })
+            const items = []
+            let lastYear = null
+            filtered.forEach((q, idx) => {
+              if (q.year !== lastYear) {
+                items.push(<div key={`year-${q.year}`} className="rp-qlist-year">{q.year}</div>)
+                lastYear = q.year
+              }
+              const fk = flagKey(q._file, q.number, q.language)
+              const flag = flags[fk]
+              const status = flag?.status
+              const hasIssue = auditIssueKeys.has(fk)
+              const isCurrent = overrideQuestion
+                ? overrideQuestion._file === q._file && overrideQuestion.number === q.number
+                : currentQuestion?._file === q._file && currentQuestion?.number === q.number
+              items.push(
+                <button
+                  key={`${fk}_${q.language ?? 'pt'}_${idx}`}
+                  ref={isCurrent ? activeItemRef : null}
+                  className={`rp-qlist-item${isCurrent ? ' rp-qlist-item--active' : ''} ${status ? `rp-qlist-item--${status}` : ''}`}
+                  onClick={() => {
+                    const idx2 = activeList.findIndex(aq => aq._file === q._file && aq.number === q.number)
+                    if (idx2 !== -1) { setOverrideQuestion(null); setCurrentIndex(idx2) }
+                    else setOverrideQuestion(q)
+                  }}
+                  title={`${q._file.replace('.json','').replace('_enem_',' ')} Q${q.number}`}
+                >
+                  <span className="rp-qlist-num">{q.number}</span>
+                  {status === 'fixed' && <span className="rp-qlist-dot rp-qlist-dot--fixed" />}
+                  {status === 'ok' && <span className="rp-qlist-dot rp-qlist-dot--ok" />}
+                  {status === 'flagged' && <span className="rp-qlist-dot rp-qlist-dot--flagged" />}
+                  {!status && hasIssue && <span className="rp-qlist-dot rp-qlist-dot--issue" />}
+                </button>
+              )
+            })
+            return items
+          })()}
         </div>
       </div>
 
