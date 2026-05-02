@@ -116,7 +116,7 @@ const PT_ACCENT_MAP = {
   'numero': 'número', 'numeros': 'números',
   'codigo': 'código', 'codigos': 'códigos',
 
-  // Adjectives
+  // Adjectives — common proparoxytones
   'publico': 'público', 'publica': 'pública', 'publicos': 'públicos', 'publicas': 'públicas',
   'unico': 'único', 'unica': 'única', 'unicos': 'únicos', 'unicas': 'únicas',
   'historico': 'histórico', 'historica': 'histórica', 'historicos': 'históricos', 'historicas': 'históricas',
@@ -138,20 +138,118 @@ const PT_ACCENT_MAP = {
   'util': 'útil', 'uteis': 'úteis',
   'fragil': 'frágil', 'frageis': 'frágeis',
   'agil': 'ágil', 'ageis': 'ágeis',
+  'filmico': 'fílmico', 'filmica': 'fílmica', 'filmicos': 'fílmicos', 'filmicas': 'fílmicas',
+  'lirico': 'lírico', 'lirica': 'lírica', 'liricos': 'líricos', 'liricas': 'líricas',
+  'epico': 'épico', 'epica': 'épica', 'epicos': 'épicos', 'epicas': 'épicas',
+  'ironico': 'irônico', 'ironica': 'irônica', 'ironicos': 'irônicos', 'ironicas': 'irônicas',
+  'satirico': 'satírico', 'satirica': 'satírica', 'satiricos': 'satíricos', 'satiricas': 'satíricas',
+  'tematico': 'temático', 'tematica': 'temática', 'tematicos': 'temáticos', 'tematicas': 'temáticas',
+  'dramatico': 'dramático', 'dramatica': 'dramática', 'dramaticos': 'dramáticos', 'dramaticas': 'dramáticas',
+  'academico': 'acadêmico', 'academica': 'acadêmica', 'academicos': 'acadêmicos', 'academicas': 'acadêmicas',
+  'comico': 'cômico', 'comica': 'cômica', 'comicos': 'cômicos', 'comicas': 'cômicas',
+  'geografico': 'geográfico', 'geografica': 'geográfica', 'geograficos': 'geográficos', 'geograficas': 'geográficas',
+  'biologico': 'biológico', 'biologica': 'biológica', 'biologicos': 'biológicos', 'biologicas': 'biológicas',
+  'ideologico': 'ideológico', 'ideologica': 'ideológica', 'ideologicos': 'ideológicos', 'ideologicas': 'ideológicas',
+  'sintatico': 'sintático', 'sintatica': 'sintática', 'sintaticos': 'sintáticos', 'sintaticas': 'sintáticas',
+  'semantico': 'semântico', 'semantica': 'semântica', 'semanticos': 'semânticos', 'semanticas': 'semânticas',
+  'geometrico': 'geométrico', 'geometrica': 'geométrica', 'geometricos': 'geométricos', 'geometricas': 'geométricas',
+  'simetrico': 'simétrico', 'simetrica': 'simétrica', 'simetricos': 'simétricos', 'simetricas': 'simétricas',
+  'atomico': 'atômico', 'atomica': 'atômica', 'atomicos': 'atômicos', 'atomicas': 'atômicas',
+  'eletronico': 'eletrônico', 'eletronica': 'eletrônica', 'eletronicos': 'eletrônicos', 'eletronicas': 'eletrônicas',
+  'estetico': 'estético', 'estetica': 'estética', 'esteticos': 'estéticos', 'esteticas': 'estéticas',
+  'retorico': 'retórico', 'retorica': 'retórica', 'retoricos': 'retóricos', 'retoricas': 'retóricas',
+  'tecnico': 'técnico', 'tecnica': 'técnica', 'tecnicos': 'técnicos', 'tecnicas': 'técnicas',
+  'magico': 'mágico', 'magica': 'mágica', 'magicos': 'mágicos', 'magicas': 'mágicas',
+  'organico': 'orgânico', 'organica': 'orgânica', 'organicos': 'orgânicos', 'organicas': 'orgânicas',
+  'dinamico': 'dinâmico', 'dinamica': 'dinâmica', 'dinamicos': 'dinâmicos', 'dinamicas': 'dinâmicas',
+  'mecanico': 'mecânico', 'mecanica': 'mecânica', 'mecanicos': 'mecânicos', 'mecanicas': 'mecânicas',
+  'fisico': 'físico', 'fisicos': 'físicos', 'fisicas': 'físicas',
+  'quimico': 'químico', 'quimica': 'química', 'quimicos': 'químicos', 'quimicas': 'químicas',
+  'mitico': 'mítico', 'mitica': 'mítica', 'miticos': 'míticos', 'miticas': 'míticas',
+  'mistico': 'místico', 'mistica': 'mística', 'misticos': 'místicos', 'misticas': 'místicas',
+  'plastico': 'plástico', 'plastica': 'plástica', 'plasticos': 'plásticos', 'plasticas': 'plásticas',
+
+  // Nouns ending in -ência / -ança
+  'vivencia': 'vivência', 'vivencias': 'vivências',
+  'experiencia': 'experiência', 'experiencias': 'experiências',
+  'consciencia': 'consciência', 'consciencias': 'consciências',
+  'eficiencia': 'eficiência', 'eficiencias': 'eficiências',
+  'tendencia': 'tendência', 'tendencias': 'tendências',
+  'influencia': 'influência', 'influencias': 'influências',
+  'violencia': 'violência', 'violencias': 'violências',
+  'existencia': 'existência', 'existencias': 'existências',
+  'diferenca': 'diferença', 'diferencas': 'diferenças',
+  'semelhanca': 'semelhança', 'semelhancas': 'semelhanças',
+  'alianca': 'aliança', 'aliancas': 'alianças',
+  'lideranca': 'liderança', 'liderancas': 'lideranças',
+  'confianca': 'confiança', 'confiancas': 'confianças',
+  'esperanca': 'esperança', 'esperancas': 'esperanças',
+  'mudanca': 'mudança', 'mudancas': 'mudanças',
+  'heranca': 'herança', 'herancas': 'heranças',
+  'crianca': 'criança', 'criancas': 'crianças',
+  'balanca': 'balança', 'balancas': 'balanças',
+
+  // Common nouns — proparoxytones and others
+  'metafora': 'metáfora', 'metaforas': 'metáforas',
+  'analise': 'análise', 'analises': 'análises',
+  'hipotese': 'hipótese', 'hipoteses': 'hipóteses',
+  'sintese': 'síntese', 'sinteses': 'sínteses',
+  'titulo': 'título', 'titulos': 'títulos',
+  'capitulo': 'capítulo', 'capitulos': 'capítulos',
+  'republica': 'república', 'republicas': 'repúblicas',
+  'cidadao': 'cidadão', 'cidadaos': 'cidadãos',
+  'musico': 'músico', 'musicos': 'músicos',
+  'estilo': 'estilo', 'genio': 'gênio', 'genios': 'gênios',
+  'criterio': 'critério', 'criterios': 'critérios',
+  'exercicio': 'exercício', 'exercicios': 'exercícios',
+  'beneficio': 'benefício', 'beneficios': 'benefícios',
+  'principio': 'princípio', 'principios': 'princípios',
+  'patrimonio': 'patrimônio', 'patrimonios': 'patrimônios',
+}
+
+// Suffix rules: [regex, replacement] applied in order when dictionary lookup fails
+const PT_SUFFIX_RULES = [
+  // Most specific first to avoid shorter rules stealing the match
+  [/encias$/i, 'ências'],  // vivencias → vivências, experiencias → experiências
+  [/encia$/i,  'ência'],   // vivencia  → vivência
+  [/ancas$/i,  'anças'],   // aliancas  → alianças, semelhancas → semelhanças
+  [/anca$/i,   'ança'],    // alianca   → aliança
+  [/encas$/i,  'enças'],   // pertencas → pertenças
+  [/enca$/i,   'ença'],    // pertenca  → pertença
+  [/coes$/i,   'ções'],    // manifestacoes → manifestações
+  [/cao$/i,    'ção'],     // manifestacao  → manifestação
+  [/oes$/i,    'ões'],     // broader fallback
+  [/ao$/i,     'ão'],      // last resort; short words may false-positive
+]
+
+function applyCapitalisation(original, corrected) {
+  if (original === original.toUpperCase()) return corrected.toUpperCase()
+  if (original[0] === original[0].toUpperCase() && original[0] !== original[0].toLowerCase()) {
+    return corrected[0].toUpperCase() + corrected.slice(1)
+  }
+  return corrected
 }
 
 function correctAccents(text) {
   if (!text) return text
   return text.replace(/[a-zA-ZàáâãäéêëíïóôõöúüçÀÁÂÃÄÉÊËÍÏÓÔÕÖÚÜÇ]+/g, word => {
     const lower = word.toLowerCase()
-    const corrected = PT_ACCENT_MAP[lower]
-    if (!corrected) return word
-    // Preserve capitalisation
-    if (word === word.toUpperCase()) return corrected.toUpperCase()
-    if (word[0] === word[0].toUpperCase() && word[0] !== word[0].toLowerCase()) {
-      return corrected[0].toUpperCase() + corrected.slice(1)
+
+    // 1. Dictionary lookup (exact)
+    const dictResult = PT_ACCENT_MAP[lower]
+    if (dictResult) return applyCapitalisation(word, dictResult)
+
+    // 2. Suffix-based fallback — only for words ≥ 5 chars to avoid false positives
+    if (lower.length >= 5) {
+      for (const [pattern, replacement] of PT_SUFFIX_RULES) {
+        if (pattern.test(lower)) {
+          const corrected = lower.replace(pattern, replacement)
+          if (corrected !== lower) return applyCapitalisation(word, corrected)
+        }
+      }
     }
-    return corrected
+
+    return word
   })
 }
 
