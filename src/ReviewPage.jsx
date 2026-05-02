@@ -180,6 +180,18 @@ export default function ReviewPage() {
   const [saveError, setSaveError] = useState(null)
   const [saving, setSaving] = useState(false)
   const [ctxSearch, setCtxSearch] = useState('')
+  const [newCtx, setNewCtx] = useState(null) // null = hidden; object = { id, title, subtitle, text, reference }
+
+  // Suggest a context key for the current question
+  const suggestContextId = useCallback(() => {
+    if (!currentQuestion) return ''
+    const area = { linguagens: 'lang', humanas: 'humanas', nature: 'nature', math: 'math' }[currentQuestion.area] ?? currentQuestion.area
+    const base = `enem_${currentQuestion.year}_${area}_q${currentQuestion.number}`
+    let key = `${base}_ctx1`
+    let n = 1
+    while (contexts[key]) { n++; key = `${base}_ctx${n}` }
+    return key
+  }, [currentQuestion, contexts])
 
   // Keyboard navigation
   useEffect(() => {
@@ -344,6 +356,36 @@ export default function ReviewPage() {
       setSaving(false)
     }
   }, [currentQuestion, draft, flags])
+
+  const createContext = useCallback(async () => {
+    if (!newCtx || !newCtx.id.trim()) return
+    setSaveError(null)
+    try {
+      const res = await fetch('/api/review/create-context', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ contextId: newCtx.id, context: { title: newCtx.title, subtitle: newCtx.subtitle, text: newCtx.text, reference: newCtx.reference } }),
+      })
+      const json = await res.json()
+      if (!json.ok) throw new Error(json.error ?? 'Create failed')
+
+      // Add to in-memory contexts
+      const created = { title: newCtx.title, subtitle: newCtx.subtitle, text: newCtx.text, reference: newCtx.reference }
+      setContexts(prev => ({ ...prev, [newCtx.id]: created }))
+
+      // Link to draft and open its editor
+      if (draft) {
+        setDraft(d => ({
+          ...d,
+          linkedContextIds: [...d.linkedContextIds, newCtx.id],
+          contextDrafts: { ...d.contextDrafts, [newCtx.id]: { ...created } },
+        }))
+      }
+      setNewCtx(null)
+    } catch (err) {
+      setSaveError(err.message)
+    }
+  }, [newCtx, draft])
 
   // ─── Render ───────────────────────────────────────────────────────────────
 
@@ -639,6 +681,37 @@ export default function ReviewPage() {
                                 }
                               </select>
                             </div>
+
+                            {!newCtx ? (
+                              <button
+                                className="rp-btn rp-btn--new-ctx"
+                                onClick={() => setNewCtx({ id: suggestContextId(), title: '', subtitle: '', text: '', reference: '' })}
+                              >+ Create new context</button>
+                            ) : (
+                              <div className="rp-new-ctx-form">
+                                <div className="rp-edit-label" style={{marginBottom:2}}>New context key</div>
+                                <input
+                                  className="rp-ctx-search"
+                                  type="text"
+                                  value={newCtx.id}
+                                  onChange={e => setNewCtx(c => ({ ...c, id: e.target.value }))}
+                                  placeholder="e.g. enem_2021_humanas_q53_ctx1"
+                                />
+                                <input className="rp-edit-alt-input" type="text" placeholder="Title" value={newCtx.title}
+                                  onChange={e => setNewCtx(c => ({ ...c, title: e.target.value }))} />
+                                <input className="rp-edit-alt-input" type="text" placeholder="Subtitle" value={newCtx.subtitle}
+                                  onChange={e => setNewCtx(c => ({ ...c, subtitle: e.target.value }))} />
+                                <textarea className="rp-edit-textarea rp-edit-textarea--ctx" rows={5} placeholder="Context text…"
+                                  value={newCtx.text} onChange={e => setNewCtx(c => ({ ...c, text: e.target.value }))} />
+                                <input className="rp-edit-alt-input" type="text" placeholder="Reference / source" value={newCtx.reference}
+                                  onChange={e => setNewCtx(c => ({ ...c, reference: e.target.value }))} />
+                                <div className="rp-edit-actions">
+                                  <button className="rp-btn rp-btn--save" onClick={createContext}>Create &amp; link</button>
+                                  <button className="rp-btn rp-btn--cancel" onClick={() => setNewCtx(null)}>Cancel</button>
+                                </div>
+                                {saveError && <div className="rp-save-error">{saveError}</div>}
+                              </div>
+                            )}
                           </div>
 
                           {/* Context editors — one per context linked to this question */}
