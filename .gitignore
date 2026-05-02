@@ -3,3 +3,6 @@
 .env.local
 .vercel
 .env*.local
+/ENEMs
+/Pages
+/public/Pages
