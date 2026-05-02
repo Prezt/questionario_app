@@ -207,6 +207,8 @@ export default function App() {
   const [feedbackOpen, setFeedbackOpen] = useState(false)
   const [feedbackQuestion, setFeedbackQuestion] = useState(null)
 
+  const [userResults, setUserResults] = useState([]) // [{test,year,day,score,total}]
+
   const [isDailyChallenge, setIsDailyChallenge] = useState(false)
   const [dailyChallengeLoading, setDailyChallengeLoading] = useState(false)
   const [dailyChallengeResult, setDailyChallengeResult] = useState(null) // {score, total} if already done today
@@ -529,6 +531,17 @@ export default function App() {
           setDailyChallengeResult({ score: data.completed.score, total: data.completed.total })
         }
       })
+      .catch(() => {})
+  }, [phase, token])
+
+  // Fetch past results on home load
+  useEffect(() => {
+    if (phase !== 'home' || !token) return
+    fetch('/api/results', {
+      headers: { Authorization: `Bearer ${token}` },
+    })
+      .then(r => r.json())
+      .then(rows => setUserResults(Array.isArray(rows) ? rows : []))
       .catch(() => {})
   }, [phase, token])
 
@@ -1031,14 +1044,17 @@ export default function App() {
       return (
         <div className="app-shell">
           <div className="home-screen">
-            <button
-              type="button"
-              className="theme-toggle home-theme-btn"
-              onClick={() => setDark((d) => !d)}
-              aria-label="Alternar tema"
-            >
-              {dark ? <SunIcon /> : <MoonIcon />}
-            </button>
+            <div className="home-topbar">
+              <span className="home-greeting">Olá, {user?.username}</span>
+              <button
+                type="button"
+                className="theme-toggle home-theme-btn"
+                onClick={() => setDark((d) => !d)}
+                aria-label="Alternar tema"
+              >
+                {dark ? <SunIcon /> : <MoonIcon />}
+              </button>
+            </div>
             <div className="home-card">
               <div className="home-logo-wrap">
                 <img
@@ -1083,17 +1099,55 @@ export default function App() {
 
     const canStart = selectedTest && selectedYear && (selectedTest === 'ENEM' ? !!selectedDay : true)
 
+    // Build a lookup: "TEST-YEAR-DAY" → best result
+    const resultMap = {}
+    for (const r of userResults) {
+      const key = `${r.test}-${r.year}-${r.day ?? 'null'}`
+      if (!resultMap[key] || r.score / r.total > resultMap[key].score / resultMap[key].total) {
+        resultMap[key] = r
+      }
+    }
+    const getResult = (test, year, day = null) => resultMap[`${test}-${year}-${day ?? 'null'}`] ?? null
+
+    const resultTier = (score, total) => {
+      if (!total) return null
+      if (score === total) return 'perfect'
+      if (score / total >= 0.75) return 'great'
+      return 'done'
+    }
+
+    const yearDone = (year) => {
+      if (selectedTest !== 'ENEM') return getResult(selectedTest, year)
+      return getResult(selectedTest, year, 1) || getResult(selectedTest, year, 2)
+    }
+
+    const yearTier = (year) => {
+      if (selectedTest !== 'ENEM') {
+        const r = getResult(selectedTest, year)
+        return r ? resultTier(r.score, r.total) : null
+      }
+      const r1 = getResult(selectedTest, year, 1)
+      const r2 = getResult(selectedTest, year, 2)
+      if (!r1 && !r2) return null
+      if (!r1 || !r2) return resultTier((r1 ?? r2).score, (r1 ?? r2).total)
+      // Both days done — evaluate combined
+      return resultTier(r1.score + r2.score, r1.total + r2.total)
+    }
+
     return (
       <div className="app-shell">
         <div className="home-screen">
-          <button
-            type="button"
-            className="theme-toggle home-theme-btn"
-            onClick={() => setDark((d) => !d)}
-            aria-label="Alternar tema"
-          >
-            {dark ? <SunIcon /> : <MoonIcon />}
-          </button>
+          <div className="home-topbar">
+            <span className="home-greeting">Olá, {user?.username}</span>
+            <button
+              type="button"
+              className="theme-toggle home-theme-btn"
+              onClick={() => setDark((d) => !d)}
+              aria-label="Alternar tema"
+            >
+              {dark ? <SunIcon /> : <MoonIcon />}
+            </button>
+          </div>
 
           <div className="home-card">
             <div className="home-logo-wrap">
@@ -1130,40 +1184,71 @@ export default function App() {
               {/* Step 2 — Ano */}
               <div className="home-filter-group">
                 <span className="home-filter-label">Ano</span>
-                <div className="home-filter-pills">
-                  {availableYears.map((y) => (
-                    <button
-                      key={y}
-                      type="button"
-                      className={`home-filter-pill ${selectedYear === y ? 'active' : ''}`}
-                      onClick={() => {
-                        setSelectedYear(y)
-                        setSelectedDay(null)
-                      }}
-                    >
-                      {y}
-                    </button>
-                  ))}
+                <div className="home-filter-pills home-year-grid">
+                  {availableYears.map((y) => {
+                    const tier = yearTier(y)
+                    return (
+                      <button
+                        key={y}
+                        type="button"
+                        className={`home-filter-pill home-year-pill ${selectedYear === y ? 'active' : ''} ${tier ?? ''}`}
+                        onClick={() => {
+                          setSelectedYear(y)
+                          setSelectedDay(null)
+                        }}
+                      >
+                        <span>{y}</span>
+                        {tier === 'perfect' && <span className="home-year-star">★</span>}
+                        {tier === 'great'   && <span className="home-year-star">✓</span>}
+                        {tier === 'done'    && <span className="home-year-check">●</span>}
+                      </button>
+                    )
+                  })}
                 </div>
               </div>
 
               {/* Step 3 — Dia (ENEM only) */}
-              {selectedTest === 'ENEM' && (
+              {selectedTest === 'ENEM' && selectedYear && (
                 <div className="home-filter-group">
                   <span className="home-filter-label">Dia</span>
                   <div className="home-filter-pills">
-                    <button
-                      type="button"
-                      className={`home-filter-pill home-filter-pill--wide ${selectedDay === 1 ? 'active' : ''}`}
-                      onClick={() => setSelectedDay(1)}
-                    >
+                    {[1, 2].map((day) => {
+                      const label = day === 1
+                        ? 'Dia 1 · Linguagens e Ciências Humanas'
+                        : 'Dia 2 · Matemática e Ciências da Natureza'
+                      const r = getResult(selectedTest, selectedYear, day)
+                      const tier = r ? resultTier(r.score, r.total) : null
+                      return (
+                        <button
+                          key={day}
+                          type="button"
+                          className={`home-filter-pill home-filter-pill--wide home-day-pill ${selectedDay === day ? 'active' : ''} ${tier ?? ''}`}
+                          onClick={() => setSelectedDay(day)}
+                        >
+                          <span className="home-day-label-text">
+                            {tier === 'perfect' && <span className="home-day-tier-icon">★ </span>}
+                            {tier === 'great'   && <span className="home-day-tier-icon">✓ </span>}
+                            {label}
+                          </span>
+                          {r && (
+                            <span className="home-day-result">
+                              {r.score}/{r.total} · {Math.round(r.score / r.total * 100)}%
+                            </span>
+                          )}
+                        </button>
+                      )
+                    })}
+                  </div>
+                </div>
+              )}
+              {selectedTest === 'ENEM' && !selectedYear && (
+                <div className="home-filter-group">
+                  <span className="home-filter-label">Dia</span>
+                  <div className="home-filter-pills">
+                    <button type="button" className="home-filter-pill home-filter-pill--wide" disabled>
                       Dia 1 · Linguagens e Ciências Humanas
                     </button>
-                    <button
-                      type="button"
-                      className={`home-filter-pill home-filter-pill--wide ${selectedDay === 2 ? 'active' : ''}`}
-                      onClick={() => setSelectedDay(2)}
-                    >
+                    <button type="button" className="home-filter-pill home-filter-pill--wide" disabled>
                       Dia 2 · Matemática e Ciências da Natureza
                     </button>
                   </div>
