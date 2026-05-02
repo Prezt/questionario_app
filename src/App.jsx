@@ -14,6 +14,20 @@ import {
 } from './parseQuestionFigures.js'
 import ReviewPage from './ReviewPage.jsx'
 
+// Render text with <b> (bold) and <i> (italic) support.
+// All other HTML is escaped, so this is safe even for user-edited content.
+function richHtml(text) {
+  if (!text) return ''
+  return text
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/&lt;b&gt;/gi, '<strong>')
+    .replace(/&lt;\/b&gt;/gi, '</strong>')
+    .replace(/&lt;i&gt;/gi, '<em>')
+    .replace(/&lt;\/i&gt;/gi, '</em>')
+}
+
 const ATTEMPTS_SESSION_KEY = 'questionario-tentativas'
 const PAUSED_SESSION_KEY   = 'questionario-sessao'
 
@@ -1938,12 +1952,12 @@ export default function App() {
                         aria-expanded={isExpanded}
                       >
                         <span className="question-context-chevron">{isExpanded ? '▲' : '▼'}</span>
-                        <span className="question-context-title">{ctxObj.title ?? 'Texto de referência'}</span>
+                        <span className="question-context-title" dangerouslySetInnerHTML={{ __html: richHtml(ctxObj.title ?? 'Texto de referência') }} />
                         <span className="question-context-chevron">{isExpanded ? '▲' : '▼'}</span>
                       </button>
                       {isExpanded && (
                         <div className="question-context-body">
-                          {ctxObj.subtitle && <p className="ctx-subtitle">{ctxObj.subtitle}</p>}
+                          {ctxObj.subtitle && <p className="ctx-subtitle" dangerouslySetInnerHTML={{ __html: richHtml(ctxObj.subtitle) }} />}
                           {ctxObj.images && ctxObj.images.length > 0 ? (
                             <>
                               {ctxObj.images.map((src, i) => (
@@ -1956,12 +1970,12 @@ export default function App() {
                                   />
                                 </figure>
                               ))}
-                              {ctxObj.text && <p className="ctx-text ctx-text--caption">{ctxObj.text}</p>}
+                              {ctxObj.text && <p className="ctx-text ctx-text--caption" dangerouslySetInnerHTML={{ __html: richHtml(ctxObj.text) }} />}
                             </>
                           ) : (
-                            ctxObj.text && <p className="ctx-text">{ctxObj.text}</p>
+                            ctxObj.text && <p className="ctx-text" dangerouslySetInnerHTML={{ __html: richHtml(ctxObj.text) }} />
                           )}
-                          {ctxObj.reference && <p className="ctx-reference">{ctxObj.reference}</p>}
+                          {ctxObj.reference && <p className="ctx-reference" dangerouslySetInnerHTML={{ __html: richHtml(ctxObj.reference) }} />}
                         </div>
                       )}
                     </div>
@@ -1972,7 +1986,7 @@ export default function App() {
                   <div className="question-stem" aria-label="Enunciado">
                     {stemSegments.map((seg, i) =>
                       seg.type === 'text' ? (
-                        <div key={i} className="question-text-block">{seg.text}</div>
+                        <div key={i} className="question-text-block" dangerouslySetInnerHTML={{ __html: richHtml(seg.text) }} />
                       ) : (
                         <figure key={i} className="q-figure">
                           <img
@@ -2007,7 +2021,7 @@ export default function App() {
                           >
                             <div className="alt-row">
                               <span className="alt-letter">{displayLabel.toUpperCase()}</span>
-                              {altLabel !== '' && <span className="alt-text">{altLabel}</span>}
+                              {altLabel !== '' && <span className="alt-text" dangerouslySetInnerHTML={{ __html: richHtml(altLabel) }} />}
                             </div>
                             {altImg && (
                               <figure className="alt-figure">

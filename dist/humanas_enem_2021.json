@@ -156,13 +156,13 @@
   },
   {
     "number": 53,
-    "text": "Artistas por um dia?",
+    "text": "Ao destacar as expressões e vivências populares do cotidiano, o texto mobiliza os seguintes aspectos da diversidade regional:",
     "alternatives": {
-      "a": "Diversidade regional",
-      "b": "Preservação de tradições",
-      "c": "Experimentação e criatividade",
-      "d": "Formação de novos públicos",
-      "e": "Acessibilidade cultural"
+      "a": "Alianças agetivas conectadas ao ritual matrimonial.",
+      "b": "Praticas místicas associadas ao patrimonio cultural.",
+      "c": "Manifestacoes teatrais atreladas ao imaginario politico.",
+      "d": "Narrativas filmicas relacionas as interperies climaticas",
+      "e": "Argumentacoes literarias interligadas as catastrofes ambientais."
     },
     "images": [],
     "tags": [
@@ -173,7 +173,10 @@
     "year": 2021,
     "test": "ENEM",
     "area": "humanas",
-    "answer": "b"
+    "answer": "b",
+    "contextIds": [
+      "enem_2021_humanas_q53_ctx1"
+    ]
   },
   {
     "number": 54,

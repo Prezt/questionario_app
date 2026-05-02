@@ -303,7 +303,7 @@
     "test": "ENEM",
     "area": "humanas",
     "answer": "c",
-    "contextId": "enem_2020_humanas_059_ctx1"
+    "contextId": "enem_2020_humanas_59_ctx1"
   },
   {
     "number": 60,
@@ -834,7 +834,7 @@
     "test": "ENEM",
     "area": "humanas",
     "answer": "d",
-    "contextId": "enem_2020_humanas_083_ctx"
+    "contextId": "enem_2020_humanas_83_ctx"
   },
   {
     "number": 84,
