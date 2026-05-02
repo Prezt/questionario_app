@@ -158,11 +158,11 @@
     "number": 53,
     "text": "Ao destacar as expressões e vivências populares do cotidiano, o texto mobiliza os seguintes aspectos da diversidade regional:",
     "alternatives": {
-      "a": "Alianças agetivas conectadas ao ritual matrimonial.",
-      "b": "Praticas místicas associadas ao patrimonio cultural.",
-      "c": "Manifestacoes teatrais atreladas ao imaginario politico.",
-      "d": "Narrativas filmicas relacionas as interperies climaticas",
-      "e": "Argumentacoes literarias interligadas as catastrofes ambientais."
+      "a": "Alianças afetivas conectadas ao ritual matrimonial.",
+      "b": "Práticas místicas associadas ao patrimônio cultural.",
+      "c": "Manifestações teatrais atreladas ao imaginario político.",
+      "d": "Narrativas fílmicas relacionas as intempéries climáticas",
+      "e": "Argumentações literarias interligadas as catástrofes ambientais."
     },
     "images": [],
     "tags": [
@@ -300,13 +300,13 @@
   },
   {
     "number": 60,
-    "text": "E dar muito mais do que receber\n\nPovo marcado\n\nA peleja do diabo com o dono do céu\n\nQual é a letra da canção lançada em 1979?",
+    "text": "Qual comportamento coletivo é criticado no trecho da letra da canção lancada em 1979?",
     "alternatives": {
-      "a": "",
-      "b": "",
-      "c": "",
-      "d": "",
-      "e": ""
+      "a": "Militancia política.",
+      "b": "Passividade social.",
+      "c": "Altruismo religioso.",
+      "d": "Autocontrole moral.",
+      "e": "Inconformismo eleitoral."
     },
     "images": [],
     "tags": [
@@ -317,7 +317,10 @@
     "year": 2021,
     "test": "ENEM",
     "area": "humanas",
-    "answer": "b"
+    "answer": "b",
+    "contextIds": [
+      "enem_2021_humanas_q60_ctx1"
+    ]
   },
   {
     "number": 61,
@@ -792,13 +795,13 @@
   },
   {
     "number": 83,
-    "text": "O texto apresentado não é legível devido a problemas graves de extração ou digitalização. Não é possível extrair uma questão válida desta imagem.",
+    "text": "Para o povo Woyo, os artefatos culturais mencionados no texto cumprem a função de uma",
     "alternatives": {
-      "a": "",
-      "b": "",
-      "c": "",
-      "d": "",
-      "e": ""
+      "a": "pedagogia dos costumes sociais.",
+      "b": "imposição das formas de comunicação.",
+      "c": "desvalorização dos comportamentos da juventude.",
+      "d": "destituição dos valores do matrimonio.",
+      "e": "etnografia das celebrações religiosas."
     },
     "images": [],
     "tags": [],
@@ -806,7 +809,10 @@
     "year": 2021,
     "test": "ENEM",
     "area": "humanas",
-    "answer": "a"
+    "answer": "a",
+    "contextIds": [
+      "enem_2021_humanas_q83_ctx1"
+    ]
   },
   {
     "number": 84,

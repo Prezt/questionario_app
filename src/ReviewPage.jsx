@@ -60,7 +60,10 @@ const PT_ACCENT_MAP = {
   'nao': 'não', 'tambem': 'também', 'entao': 'então', 'porem': 'porém',
   'alem': 'além', 'atraves': 'através', 'apos': 'após', 'ate': 'até',
   'so': 'só', 'la': 'lá', 'ca': 'cá', 'ja': 'já', 'ha': 'há',
+  'voce': 'você', 'voces': 'vocês',
   'ora': 'ora', 'propria': 'própria', 'proprio': 'próprio', 'proprios': 'próprios', 'proprias': 'próprias',
+  'vario': 'vário', 'varia': 'vária', 'varios': 'vários', 'varias': 'várias',
+  'conjuge': 'cônjuge', 'conjuges': 'cônjuges',
 
   // Common verbs / verb forms
   'esta': 'está', 'estao': 'estão', 'estao': 'estão',
@@ -147,6 +150,7 @@ const PT_ACCENT_MAP = {
   'dramatico': 'dramático', 'dramatica': 'dramática', 'dramaticos': 'dramáticos', 'dramaticas': 'dramáticas',
   'academico': 'acadêmico', 'academica': 'acadêmica', 'academicos': 'acadêmicos', 'academicas': 'acadêmicas',
   'comico': 'cômico', 'comica': 'cômica', 'comicos': 'cômicos', 'comicas': 'cômicas',
+  'grafico': 'gráfico', 'grafica': 'gráfica', 'graficos': 'gráficos', 'graficas': 'gráficas',
   'geografico': 'geográfico', 'geografica': 'geográfica', 'geograficos': 'geográficos', 'geograficas': 'geográficas',
   'biologico': 'biológico', 'biologica': 'biológica', 'biologicos': 'biológicos', 'biologicas': 'biológicas',
   'ideologico': 'ideológico', 'ideologica': 'ideológica', 'ideologicos': 'ideológicos', 'ideologicas': 'ideológicas',
@@ -170,6 +174,16 @@ const PT_ACCENT_MAP = {
   'plastico': 'plástico', 'plastica': 'plástica', 'plasticos': 'plásticos', 'plasticas': 'plásticas',
 
   // Nouns ending in -ência / -ança
+  'lancada': 'lançada', 'lancado': 'lançado', 'lancadas': 'lançadas', 'lancados': 'lançados',
+  'lancamento': 'lançamento', 'lancamentos': 'lançamentos',
+  'lancar': 'lançar', 'lancou': 'lançou', 'lancam': 'lançam',
+  'militancia': 'militância', 'militancias': 'militâncias',
+  'tolerancia': 'tolerância', 'tolerancias': 'tolerâncias',
+  'distancia': 'distância', 'distancias': 'distâncias',
+  'relevancia': 'relevância', 'relevancias': 'relevâncias',
+  'importancia': 'importância', 'importancias': 'importâncias',
+  'substancia': 'substância', 'substancias': 'substâncias',
+  'instancia': 'instância', 'instancias': 'instâncias',
   'vivencia': 'vivência', 'vivencias': 'vivências',
   'experiencia': 'experiência', 'experiencias': 'experiências',
   'consciencia': 'consciência', 'consciencias': 'consciências',
@@ -190,6 +204,8 @@ const PT_ACCENT_MAP = {
   'balanca': 'balança', 'balancas': 'balanças',
 
   // Common nouns — proparoxytones and others
+  'onus': 'ônus', 'bonus': 'bônus',
+  'dialogo': 'diálogo', 'dialogos': 'diálogos',
   'metafora': 'metáfora', 'metaforas': 'metáforas',
   'analise': 'análise', 'analises': 'análises',
   'hipotese': 'hipótese', 'hipoteses': 'hipóteses',
@@ -200,6 +216,7 @@ const PT_ACCENT_MAP = {
   'cidadao': 'cidadão', 'cidadaos': 'cidadãos',
   'musico': 'músico', 'musicos': 'músicos',
   'estilo': 'estilo', 'genio': 'gênio', 'genios': 'gênios',
+  'proverbio': 'provérbio', 'proverbios': 'provérbios',
   'criterio': 'critério', 'criterios': 'critérios',
   'exercicio': 'exercício', 'exercicios': 'exercícios',
   'beneficio': 'benefício', 'beneficios': 'benefícios',
@@ -210,8 +227,14 @@ const PT_ACCENT_MAP = {
 // Suffix rules: [regex, replacement] applied in order when dictionary lookup fails
 const PT_SUFFIX_RULES = [
   // Most specific first to avoid shorter rules stealing the match
+  [/ologicas$/i, 'ológicas'],  // museologicas → museológicas, biologicas → biológicas
+  [/ologicos$/i, 'ológicos'],  // biologicos → biológicos
+  [/ologica$/i,  'ológica'],   // biologica  → biológica
+  [/ologico$/i,  'ológico'],   // biologico  → biológico
   [/encias$/i, 'ências'],  // vivencias → vivências, experiencias → experiências
   [/encia$/i,  'ência'],   // vivencia  → vivência
+  [/ancias$/i, 'âncias'],  // militancias → militâncias, tolerancias → tolerâncias
+  [/ancia$/i,  'ância'],   // militancia → militância
   [/ancas$/i,  'anças'],   // aliancas  → alianças, semelhancas → semelhanças
   [/anca$/i,   'ança'],    // alianca   → aliança
   [/encas$/i,  'enças'],   // pertencas → pertenças
