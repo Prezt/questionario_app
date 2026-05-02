@@ -98,7 +98,7 @@ function reviewSaveMiddleware(req, res, next) {
       }
 
       // Merge only the allowed patch fields
-      const allowed = ['text', 'alternatives', 'answer']
+      const allowed = ['text', 'alternatives', 'answer', 'contextIds', 'contextId']
       for (const key of allowed) {
         if (key in patch) questions[idx][key] = patch[key]
       }

@@ -247,6 +247,60 @@
 .rp-edit-panel { padding: 10px 12px; }
 .rp-btn--edit-start { background: #3b82f6; color: white; }
 .rp-edit-form { display: flex; flex-direction: column; gap: 8px; }
+/* Context linker */
+.rp-ctx-linker {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 8px 10px;
+  border: 1px solid #c7d2fe;
+  border-radius: 4px;
+  background: #eef2ff;
+}
+.rp-ctx-no-links { font-size: 11px; color: #94a3b8; }
+.rp-ctx-chips { display: flex; flex-wrap: wrap; gap: 4px; }
+.rp-ctx-chip {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 2px 6px 2px 8px;
+  background: #e0e7ff;
+  border: 1px solid #a5b4fc;
+  border-radius: 12px;
+  font-size: 11px;
+  font-family: monospace;
+  color: #3730a3;
+}
+.rp-ctx-chip-label { max-width: 200px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.rp-ctx-chip-remove {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #6366f1;
+  font-size: 14px;
+  line-height: 1;
+  padding: 0;
+}
+.rp-ctx-chip-remove:hover { color: #dc2626; }
+.rp-ctx-add-row { display: flex; flex-direction: column; gap: 4px; }
+.rp-ctx-search {
+  font-size: 12px;
+  font-family: inherit;
+  padding: 4px 6px;
+  border: 1px solid #c7d2fe;
+  border-radius: 4px;
+  background: white;
+}
+.rp-ctx-select {
+  font-size: 12px;
+  font-family: inherit;
+  padding: 3px 6px;
+  border: 1px solid #c7d2fe;
+  border-radius: 4px;
+  background: white;
+  cursor: pointer;
+}
+
 /* Context edit block */
 .rp-edit-ctx-block {
   display: flex;

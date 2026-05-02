@@ -179,6 +179,7 @@ export default function ReviewPage() {
   const [draft, setDraft] = useState(null)
   const [saveError, setSaveError] = useState(null)
   const [saving, setSaving] = useState(false)
+  const [ctxSearch, setCtxSearch] = useState('')
 
   // Keyboard navigation
   useEffect(() => {
@@ -242,9 +243,11 @@ export default function ReviewPage() {
 
   const initDraft = useCallback(() => {
     if (!currentQuestion) return
-    // Build context drafts: one entry per contextId
+    const linkedIds = Array.isArray(currentQuestion.contextIds)
+      ? [...currentQuestion.contextIds]
+      : currentQuestion.contextId ? [currentQuestion.contextId] : []
     const ctxDrafts = {}
-    for (const cid of (Array.isArray(currentQuestion.contextIds) ? currentQuestion.contextIds : currentQuestion.contextId ? [currentQuestion.contextId] : [])) {
+    for (const cid of linkedIds) {
       const c = contexts[cid]
       if (c) ctxDrafts[cid] = { title: c.title ?? '', subtitle: c.subtitle ?? '', text: c.text ?? '', reference: c.reference ?? '' }
     }
@@ -252,6 +255,7 @@ export default function ReviewPage() {
       text: currentQuestion.text ?? '',
       alternatives: { ...currentQuestion.alternatives },
       answer: currentQuestion.answer ?? 'a',
+      linkedContextIds: linkedIds,
       contextDrafts: ctxDrafts,
     })
     setSaveError(null)
@@ -269,6 +273,17 @@ export default function ReviewPage() {
       if (draft.answer !== currentQuestion.answer) qPatch.answer = draft.answer
       const altChanged = ['a','b','c','d','e'].some(k => draft.alternatives[k] !== currentQuestion.alternatives?.[k])
       if (altChanged) qPatch.alternatives = { ...draft.alternatives }
+
+      // Context links changed?
+      const origIds = Array.isArray(currentQuestion.contextIds)
+        ? currentQuestion.contextIds
+        : currentQuestion.contextId ? [currentQuestion.contextId] : []
+      const idsChanged = JSON.stringify([...draft.linkedContextIds].sort()) !== JSON.stringify([...origIds].sort())
+      if (idsChanged) {
+        qPatch.contextIds = draft.linkedContextIds
+        // Clear legacy singular field if it exists
+        if (currentQuestion.contextId) qPatch.contextId = null
+      }
 
       if (Object.keys(qPatch).length > 0) {
         const res = await fetch('/api/review/save', {
@@ -559,6 +574,73 @@ export default function ReviewPage() {
                         </button>
                       ) : (
                         <div className="rp-edit-form">
+                          {/* Context linker */}
+                          <div className="rp-ctx-linker">
+                            <div className="rp-edit-label" style={{marginBottom:4}}>Linked contexts</div>
+                            {draft.linkedContextIds.length === 0 && (
+                              <div className="rp-ctx-no-links">No contexts linked</div>
+                            )}
+                            <div className="rp-ctx-chips">
+                              {draft.linkedContextIds.map(cid => (
+                                <span key={cid} className="rp-ctx-chip">
+                                  <span className="rp-ctx-chip-label" title={contexts[cid]?.title}>{cid}</span>
+                                  <button
+                                    className="rp-ctx-chip-remove"
+                                    onClick={() => setDraft(d => {
+                                      const next = d.linkedContextIds.filter(id => id !== cid)
+                                      const nextDrafts = { ...d.contextDrafts }
+                                      delete nextDrafts[cid]
+                                      return { ...d, linkedContextIds: next, contextDrafts: nextDrafts }
+                                    })}
+                                  >×</button>
+                                </span>
+                              ))}
+                            </div>
+                            <div className="rp-ctx-add-row">
+                              <input
+                                className="rp-ctx-search"
+                                type="text"
+                                placeholder="Search contexts…"
+                                value={ctxSearch}
+                                onChange={e => setCtxSearch(e.target.value)}
+                              />
+                              <select
+                                className="rp-ctx-select"
+                                size={1}
+                                onChange={e => {
+                                  const cid = e.target.value
+                                  if (!cid || draft.linkedContextIds.includes(cid)) return
+                                  const c = contexts[cid]
+                                  setDraft(d => ({
+                                    ...d,
+                                    linkedContextIds: [...d.linkedContextIds, cid],
+                                    contextDrafts: {
+                                      ...d.contextDrafts,
+                                      [cid]: { title: c?.title ?? '', subtitle: c?.subtitle ?? '', text: c?.text ?? '', reference: c?.reference ?? '' },
+                                    },
+                                  }))
+                                  setCtxSearch('')
+                                  e.target.value = ''
+                                }}
+                              >
+                                <option value="">— pick a context to link —</option>
+                                {Object.entries(contexts)
+                                  .filter(([cid, c]) => {
+                                    if (draft.linkedContextIds.includes(cid)) return false
+                                    if (!ctxSearch) return true
+                                    const q = ctxSearch.toLowerCase()
+                                    return cid.toLowerCase().includes(q) || (c.title ?? '').toLowerCase().includes(q)
+                                  })
+                                  .map(([cid, c]) => (
+                                    <option key={cid} value={cid}>
+                                      {cid}{c.title && c.title !== 'undefined' ? ` — ${c.title}` : ''}
+                                    </option>
+                                  ))
+                                }
+                              </select>
+                            </div>
+                          </div>
+
                           {/* Context editors — one per context linked to this question */}
                           {Object.entries(draft.contextDrafts ?? {}).map(([cid, ctxDraft]) => (
                             <div key={cid} className="rp-edit-ctx-block">
