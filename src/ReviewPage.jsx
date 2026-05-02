@@ -132,8 +132,13 @@ const PT_ACCENT_MAP = {
   'tipico': 'típico', 'tipica': 'típica', 'tipicos': 'típicos', 'tipicas': 'típicas',
   'classico': 'clássico', 'classica': 'clássica', 'classicos': 'clássicos', 'classicas': 'clássicas',
   'especifico': 'específico', 'especifica': 'específica', 'especificos': 'específicos', 'especificas': 'específicas',
+  'especie': 'espécie', 'especies': 'espécies',
+  'acude': 'açude', 'acudes': 'açudes',
   'cientifico': 'científico', 'cientifica': 'científica', 'cientificos': 'científicos', 'cientificas': 'científicas',
   'dificil': 'difícil', 'dificeis': 'difíceis',
+  'pessimo': 'péssimo', 'pessima': 'péssima', 'pessimos': 'péssimos', 'pessimas': 'péssimas',
+  'otimo': 'ótimo', 'otima': 'ótima', 'otimos': 'ótimos', 'otimas': 'ótimas',
+  'identico': 'idêntico', 'identica': 'idêntica', 'identicos': 'idênticos', 'identicas': 'idênticas',
   'facil': 'fácil', 'faceis': 'fáceis',
   'possivel': 'possível', 'possiveis': 'possíveis',
   'necessario': 'necessário', 'necessaria': 'necessária', 'necessarios': 'necessários', 'necessarias': 'necessárias',
@@ -213,6 +218,7 @@ const PT_ACCENT_MAP = {
   'contemporaneo': 'contemporâneo', 'contemporanea': 'contemporânea',
   'contemporaneos': 'contemporâneos', 'contemporaneas': 'contemporâneas',
   'dialogo': 'diálogo', 'dialogos': 'diálogos',
+  'imperio': 'império', 'imperios': 'impérios',
   'memoria': 'memória', 'memorias': 'memórias',
   'comercio': 'comércio',
   'metafora': 'metáfora', 'metaforas': 'metáforas',
@@ -226,6 +232,7 @@ const PT_ACCENT_MAP = {
   'musico': 'músico', 'musicos': 'músicos',
   'estilo': 'estilo', 'genio': 'gênio', 'genios': 'gênios',
   'proverbio': 'provérbio', 'proverbios': 'provérbios',
+  'curriculo': 'currículo', 'curriculos': 'currículos',
   'criterio': 'critério', 'criterios': 'critérios',
   'exercicio': 'exercício', 'exercicios': 'exercícios',
   'beneficio': 'benefício', 'beneficios': 'benefícios',
@@ -336,6 +343,7 @@ export default function ReviewPage() {
   const [currentIndex, setCurrentIndex] = useState(0)
   const [issueFilter, setIssueFilter] = useState(null)
   const activeItemRef = useRef(null)
+  const [collapsedCtx, setCollapsedCtx] = useState({})
 
   // Derive active question list
   const activeList = useMemo(() => {
@@ -363,6 +371,14 @@ export default function ReviewPage() {
         if (fa !== fb) return fa - fb
         return a._file.localeCompare(b._file) || a.number - b.number
       })
+    } else if (mode === 'reviewed') {
+      const reviewed = []
+      for (const [filename, qs] of Object.entries(datasets)) {
+        for (const q of qs) {
+          if (flags[flagKey(filename, q.number)]) reviewed.push({ ...q, _file: filename })
+        }
+      }
+      return reviewed.sort((a, b) => a._file.localeCompare(b._file) || a.number - b.number)
     } else {
       return (datasets[selectedFile] ?? [])
         .map(q => ({ ...q, _file: selectedFile }))
@@ -568,7 +584,7 @@ export default function ReviewPage() {
     const ctxDrafts = {}
     for (const cid of linkedIds) {
       const c = contexts[cid]
-      if (c) ctxDrafts[cid] = { title: c.title ?? '', subtitle: c.subtitle ?? '', text: c.text ?? '', reference: c.reference ?? '' }
+      if (c) ctxDrafts[cid] = { title: c.title ?? '', subtitle: c.subtitle ?? '', text: c.text ?? '', reference: c.reference ?? '', images: [...(c.images ?? [])] }
     }
     setDraft({
       text: currentQuestion.text ?? '',
@@ -636,6 +652,7 @@ export default function ReviewPage() {
         if (ctxDraft.subtitle !== orig.subtitle) cPatch.subtitle = ctxDraft.subtitle
         if (ctxDraft.text !== orig.text) cPatch.text = ctxDraft.text
         if (ctxDraft.reference !== orig.reference) cPatch.reference = ctxDraft.reference
+        if (JSON.stringify(ctxDraft.images) !== JSON.stringify(orig.images ?? [])) cPatch.images = ctxDraft.images
         if (Object.keys(cPatch).length === 0) continue
 
         const res = await fetch('/api/review/save-context', {
@@ -678,13 +695,13 @@ export default function ReviewPage() {
       const res = await fetch('/api/review/create-context', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ contextId: newCtx.id, context: { title: newCtx.title, subtitle: newCtx.subtitle, text: newCtx.text, reference: newCtx.reference } }),
+        body: JSON.stringify({ contextId: newCtx.id, context: { title: newCtx.title, subtitle: newCtx.subtitle, text: newCtx.text, reference: newCtx.reference, images: newCtx.images ?? [] } }),
       })
       const json = await res.json()
       if (!json.ok) throw new Error(json.error ?? 'Create failed')
 
       // Add to in-memory contexts
-      const created = { title: newCtx.title, subtitle: newCtx.subtitle, text: newCtx.text, reference: newCtx.reference }
+      const created = { title: newCtx.title, subtitle: newCtx.subtitle, text: newCtx.text, reference: newCtx.reference, images: newCtx.images ?? [] }
       setContexts(prev => ({ ...prev, [newCtx.id]: created }))
 
       // Link to draft and open its editor
@@ -716,6 +733,7 @@ export default function ReviewPage() {
           onChange={e => { setMode(e.target.value); setCurrentIndex(0) }}
         >
           <option value="queue">⚠ Issue Queue ({auditReport?.summary?.totalIssues ?? '?'} flagged)</option>
+          <option value="reviewed">✓ Reviewed ({Object.keys(flags).length})</option>
           <option value="file">Browse by file</option>
         </select>
 
@@ -834,10 +852,17 @@ export default function ReviewPage() {
                     {currentContextIds.map(cid => {
                       const c = contexts[cid]
                       if (!c) return <div key={cid} className="rp-ctx rp-ctx--missing">Context not found: {cid}</div>
+                      const isCollapsed = collapsedCtx[cid]
                       return (
                         <div key={cid} className="rp-ctx">
                           <div className="rp-ctx-header">
+                            <button
+                              className="rp-ctx-collapse-btn"
+                              title={isCollapsed ? 'Expand' : 'Collapse'}
+                              onClick={() => setCollapsedCtx(s => ({ ...s, [cid]: !s[cid] }))}
+                            >{isCollapsed ? '▶' : '▼'}</button>
                             {c.title && <RichText text={c.title} className="rp-ctx-title" />}
+                            {!c.title && <span className="rp-ctx-title" style={{color:'#94a3b8'}}>{cid}</span>}
                             <button
                               className="rp-ctx-edit-btn"
                               title="Edit this context"
@@ -852,21 +877,28 @@ export default function ReviewPage() {
                                     const ctxDrafts = {}
                                     for (const id of linkedIds) {
                                       const cx = contexts[id]
-                                      if (cx) ctxDrafts[id] = { title: cx.title ?? '', subtitle: cx.subtitle ?? '', text: cx.text ?? '', reference: cx.reference ?? '' }
+                                      if (cx) ctxDrafts[id] = { title: cx.title ?? '', subtitle: cx.subtitle ?? '', text: cx.text ?? '', reference: cx.reference ?? '', images: [...(cx.images ?? [])] }
                                     }
                                     return { text: currentQuestion.text ?? '', alternatives: { ...currentQuestion.alternatives }, answer: currentQuestion.answer ?? 'a', linkedContextIds: linkedIds, contextDrafts: ctxDrafts, images: [...(currentQuestion.images ?? [])] }
                                   })()
                                   // Ensure this context is in contextDrafts
                                   if (base.contextDrafts?.[cid]) return base
-                                  return { ...base, contextDrafts: { ...base.contextDrafts, [cid]: { title: c.title ?? '', subtitle: c.subtitle ?? '', text: c.text ?? '', reference: c.reference ?? '' } } }
+                                  return { ...base, contextDrafts: { ...base.contextDrafts, [cid]: { title: c.title ?? '', subtitle: c.subtitle ?? '', text: c.text ?? '', reference: c.reference ?? '', images: [...(c.images ?? [])] } } }
                                 })
                                 setSaveError(null)
                               }}
                             >✏</button>
                           </div>
-                          {c.subtitle && <RichText text={c.subtitle} className="rp-ctx-subtitle" />}
-                          {c.text && <RichText text={c.text} className="rp-ctx-text" />}
-                          {c.reference && <RichText text={c.reference} className="rp-ctx-reference" />}
+                          {!isCollapsed && <>
+                            {c.subtitle && <RichText text={c.subtitle} className="rp-ctx-subtitle" />}
+                            {c.text && <RichText text={c.text} className="rp-ctx-text" />}
+                            {c.images?.length > 0 && (
+                              <div className="rp-q-images">
+                                {c.images.map(img => <img key={img} src={`/${img}`} alt="" className="rp-q-img" />)}
+                              </div>
+                            )}
+                            {c.reference && <RichText text={c.reference} className="rp-ctx-reference" />}
+                          </>}
                         </div>
                       )
                     })}
@@ -1026,7 +1058,7 @@ export default function ReviewPage() {
                             {!newCtx ? (
                               <button
                                 className="rp-btn rp-btn--new-ctx"
-                                onClick={() => setNewCtx({ id: suggestContextId(), title: '', subtitle: '', text: '', reference: '' })}
+                                onClick={() => setNewCtx({ id: suggestContextId(), title: '', subtitle: '', text: '', reference: '', images: [] })}
                               >+ Create new context</button>
                             ) : (
                               <div className="rp-new-ctx-form">
@@ -1046,6 +1078,40 @@ export default function ReviewPage() {
                                   value={newCtx.text} onChange={e => setNewCtx(c => ({ ...c, text: e.target.value }))} />
                                 <input className="rp-edit-alt-input" type="text" placeholder="Reference / source" value={newCtx.reference}
                                   onChange={e => setNewCtx(c => ({ ...c, reference: e.target.value }))} />
+                                {newCtx.images?.length > 0 && (
+                                  <div className="rp-edit-img-list">
+                                    {newCtx.images.map((img, i) => (
+                                      <div key={img} className="rp-edit-img-row">
+                                        <img src={`/${img}`} className="rp-edit-img-thumb" alt="" />
+                                        <span className="rp-edit-img-name">{img.replace('figuras/', '')}</span>
+                                        <button className="rp-edit-img-remove"
+                                          onClick={() => setNewCtx(c => ({ ...c, images: c.images.filter((_, j) => j !== i) }))}>×</button>
+                                      </div>
+                                    ))}
+                                  </div>
+                                )}
+                                <div
+                                  className="rp-paste-zone"
+                                  tabIndex={0}
+                                  onPaste={async e => {
+                                    const item = [...e.clipboardData.items].find(it => it.type.startsWith('image/'))
+                                    if (!item) return
+                                    e.preventDefault()
+                                    const blob = item.getAsFile()
+                                    const reader = new FileReader()
+                                    reader.onload = async ev => {
+                                      try {
+                                        const imgPath = await uploadImage(ev.target.result, newCtx.images ?? [])
+                                        setNewCtx(c => ({ ...c, images: [...(c.images ?? []), imgPath] }))
+                                      } catch (err) {
+                                        setSaveError('Image upload failed: ' + err.message)
+                                      }
+                                    }
+                                    reader.readAsDataURL(blob)
+                                  }}
+                                >
+                                  Click here, then paste an image (Ctrl+V / ⌘V)
+                                </div>
                                 <div className="rp-edit-actions">
                                   <button className="rp-btn rp-btn--save" onClick={createContext}>Create &amp; link</button>
                                   <button className="rp-btn rp-btn--cancel" onClick={() => setNewCtx(null)}>Cancel</button>
@@ -1107,6 +1173,53 @@ export default function ReviewPage() {
                                   }))}
                                 />
                               </label>
+                              {/* Context images */}
+                              <div className="rp-edit-images">
+                                <span className="rp-edit-images-label">Images</span>
+                                {ctxDraft.images?.length > 0 && (
+                                  <div className="rp-edit-img-list">
+                                    {ctxDraft.images.map((img, i) => (
+                                      <div key={img} className="rp-edit-img-row">
+                                        <img src={`/${img}`} className="rp-edit-img-thumb" alt="" />
+                                        <span className="rp-edit-img-name">{img.replace('figuras/', '')}</span>
+                                        <button
+                                          className="rp-edit-img-remove"
+                                          title="Remove image"
+                                          onClick={() => setDraft(d => ({
+                                            ...d,
+                                            contextDrafts: { ...d.contextDrafts, [cid]: { ...d.contextDrafts[cid], images: d.contextDrafts[cid].images.filter((_, j) => j !== i) } }
+                                          }))}
+                                        >×</button>
+                                      </div>
+                                    ))}
+                                  </div>
+                                )}
+                                <div
+                                  className="rp-paste-zone"
+                                  tabIndex={0}
+                                  onPaste={async e => {
+                                    const item = [...e.clipboardData.items].find(it => it.type.startsWith('image/'))
+                                    if (!item) return
+                                    e.preventDefault()
+                                    const blob = item.getAsFile()
+                                    const reader = new FileReader()
+                                    reader.onload = async ev => {
+                                      try {
+                                        const imgPath = await uploadImage(ev.target.result, ctxDraft.images ?? [])
+                                        setDraft(d => ({
+                                          ...d,
+                                          contextDrafts: { ...d.contextDrafts, [cid]: { ...d.contextDrafts[cid], images: [...(d.contextDrafts[cid].images ?? []), imgPath] } }
+                                        }))
+                                      } catch (err) {
+                                        setSaveError('Image upload failed: ' + err.message)
+                                      }
+                                    }
+                                    reader.readAsDataURL(blob)
+                                  }}
+                                >
+                                  Click here, then paste an image (Ctrl+V / ⌘V)
+                                </div>
+                              </div>
                             </div>
                           ))}
 

@@ -42,6 +42,7 @@ function reviewCreateContextMiddleware(req, res, next) {
         subtitle: context.subtitle ?? '',
         text: context.text ?? '',
         reference: context.reference ?? '',
+        images: context.images ?? [],
       }
 
       fs.writeFileSync(filePath, JSON.stringify(contexts, null, 2), 'utf8')
@@ -90,7 +91,7 @@ function reviewContextMiddleware(req, res, next) {
         return
       }
 
-      const allowed = ['title', 'subtitle', 'text', 'reference']
+      const allowed = ['title', 'subtitle', 'text', 'reference', 'images']
       for (const key of allowed) {
         if (key in patch) contexts[contextId][key] = patch[key]
       }

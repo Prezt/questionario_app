@@ -816,7 +816,7 @@
   },
   {
     "number": 84,
-    "text": "O ritual mencionado no texto atribui à manifestação cultural de grupos indígenas no Nordeste brasileiro a função de",
+    "text": "O ritual mencionado no texto atribui à manifestação cultural de grupos indígenas do Nordeste brasileiro a função de",
     "alternatives": {
       "a": "celebrar a história oficial.",
       "b": "estimular a coesão social.",
@@ -924,15 +924,17 @@
   },
   {
     "number": 89,
-    "text": "Movimento de EQUINÓCIO 21 de março SOLSTÍCIO 21 de junho",
+    "text": "<b>Movimento de translação da terra</b>\n[Figura: Disponivel em www.cdcc.usp.br. Acesso em 27, jul. 2010 (adaptado).]\nConsiderando as informações apresentadas, o predio do Congresso Nacional em Brasilia, no dia 21 de junho às 12 horas, projetará sua sombra para a direção   ",
     "alternatives": {
-      "a": "",
-      "b": "",
-      "c": "",
-      "d": "",
-      "e": ""
+      "a": "norte.",
+      "b": "sul.",
+      "c": "leste.",
+      "d": "oeste.",
+      "e": "norteste."
     },
-    "images": [],
+    "images": [
+      "figuras/q089_2021_fig1.png"
+    ],
     "tags": [
       "Geografia: geografia física e geologia",
       "climatologia"
