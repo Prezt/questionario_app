@@ -25,6 +25,9 @@ function escapeInline(text) {
     .replace(/&lt;\/b&gt;/gi, '</strong>')
     .replace(/&lt;i&gt;/gi, '<em>')
     .replace(/&lt;\/i&gt;/gi, '</em>')
+    .replace(/&lt;sub&gt;/gi, '<sub>')
+    .replace(/&lt;\/sub&gt;/gi, '</sub>')
+    .replace(/&lt;br\s*\/?&gt;/gi, '<br>')
 }
 function parseMarkdownTable(tableLines) {
   const esc = s => s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
@@ -35,6 +38,10 @@ function parseMarkdownTable(tableLines) {
   const ths = parseRow(header).map(c => `<th>${esc(c)}</th>`).join('')
   const trs = body.map(l => `<tr>${parseRow(l).map(c => `<td>${esc(c)}</td>`).join('')}</tr>`).join('')
   return `<table class="q-table"><thead><tr>${ths}</tr></thead><tbody>${trs}</tbody></table>`
+}
+function richHtmlBr(text) {
+  if (!text) return ''
+  return richHtml(text).replace(/\n/g, '<br>')
 }
 function richHtml(text) {
   if (!text) return ''
@@ -1157,7 +1164,7 @@ export default function App() {
             <div className="home-card">
               <div className="home-logo-wrap">
                 <img
-                  src={dark ? '/figuras/logos/integrar-logo-dark.png' : '/figuras/logos/integrar-logo-light.png'}
+                  src="/figuras/logos/integrar-logo-transparent.png"
                   alt="Integrar"
                   className="home-logo"
                 />
@@ -1251,7 +1258,7 @@ export default function App() {
           <div className="home-card">
             <div className="home-logo-wrap">
               <img
-                src={dark ? '/figuras/logos/integrar-logo-dark.png' : '/figuras/logos/integrar-logo-light.png'}
+                src="/figuras/logos/integrar-logo-transparent.png"
                 alt="Integrar"
                 className="home-logo"
               />
@@ -1951,7 +1958,14 @@ export default function App() {
   return (
     <div className="app-shell">
       <header className="app-header">
-        <span className="app-header-title">Questionário ENEM</span>
+        <span className="app-header-title">
+          <img
+            src="/figuras/logos/integrar-logo-transparent.png"
+            alt="Integrar"
+            className="app-header-logo"
+          />
+          Questionário ENEM
+        </span>
 
         <div className="header-timers">
           <div className="header-timer">
@@ -2106,18 +2120,24 @@ export default function App() {
                       {isExpanded && (
                         <div className="question-context-body">
                           {ctxObj.subtitle && <p className="ctx-subtitle" dangerouslySetInnerHTML={{ __html: richHtml(ctxObj.subtitle) }} />}
-                          {ctxObj.text && <p className="ctx-text" dangerouslySetInnerHTML={{ __html: richHtml(ctxObj.text) }} />}
-                          {ctxObj.images && ctxObj.images.length > 0 && ctxObj.images.map((src, i) => (
-                            <figure key={i} className="q-figure">
-                              <img
-                                src={publicImageSrc(src)}
-                                alt=""
-                                loading="lazy"
-                                decoding="async"
-                              />
-                            </figure>
-                          ))}
-                          {ctxObj.reference && <p className="ctx-reference" dangerouslySetInnerHTML={{ __html: richHtml(ctxObj.reference) }} />}
+                          {parseStemSegments(ctxObj.text ?? '', ctxObj.images ?? []).map((seg, i) =>
+                            seg.type === 'text' ? (
+                              <div key={i} className="ctx-text" dangerouslySetInnerHTML={{ __html: richHtml(seg.text) }} />
+                            ) : (
+                              <figure key={i} className="q-figure">
+                                <img
+                                  src={publicImageSrc(seg.src)}
+                                  alt={seg.caption ? String(seg.caption).slice(0, 200) : ''}
+                                  loading="lazy"
+                                  decoding="async"
+                                />
+                                {seg.caption != null && seg.caption !== '' && (
+                                  <figcaption className="q-figure-caption" dangerouslySetInnerHTML={{ __html: richHtmlBr(seg.caption) }} />
+                                )}
+                              </figure>
+                            )
+                          )}
+                          {ctxObj.reference && <p className="ctx-reference" dangerouslySetInnerHTML={{ __html: richHtmlBr(ctxObj.reference) }} />}
                         </div>
                       )}
                     </div>
@@ -2138,7 +2158,7 @@ export default function App() {
                             decoding="async"
                           />
                           {seg.caption != null && seg.caption !== '' && (
-                            <figcaption className="q-figure-caption">{seg.caption}</figcaption>
+                            <figcaption className="q-figure-caption" dangerouslySetInnerHTML={{ __html: richHtmlBr(seg.caption) }} />
                           )}
                         </figure>
                       ),
@@ -2175,7 +2195,7 @@ export default function App() {
                                   decoding="async"
                                 />
                                 {altCaption && (
-                                  <figcaption className="alt-figure-caption">{altCaption}</figcaption>
+                                  <figcaption className="alt-figure-caption" dangerouslySetInnerHTML={{ __html: richHtmlBr(altCaption) }} />
                                 )}
                               </figure>
                             )}

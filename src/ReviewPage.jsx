@@ -46,6 +46,7 @@ function escapeInline(text) {
     .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
     .replace(/&lt;b&gt;/gi, '<strong>').replace(/&lt;\/b&gt;/gi, '</strong>')
     .replace(/&lt;i&gt;/gi, '<em>').replace(/&lt;\/i&gt;/gi, '</em>')
+    .replace(/&lt;sub&gt;/gi, '<sub>').replace(/&lt;\/sub&gt;/gi, '</sub>')
 }
 function parseMarkdownTable(tableLines) {
   const esc = s => s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
@@ -79,6 +80,7 @@ function RichText({ text, className }) {
 // ── Portuguese accent correction ───────────────────────────────────────────
 const PT_ACCENT_MAP = {
   // Particles, conjunctions, prepositions
+  'tres': 'três',
   'nao': 'não', 'tambem': 'também', 'entao': 'então', 'porem': 'porém',
   'alem': 'além', 'atraves': 'através', 'apos': 'após', 'ate': 'até',
   'so': 'só', 'la': 'lá', 'ca': 'cá', 'ja': 'já', 'ha': 'há',
@@ -184,6 +186,7 @@ const PT_ACCENT_MAP = {
   'academico': 'acadêmico', 'academica': 'acadêmica', 'academicos': 'acadêmicos', 'academicas': 'acadêmicas',
   'comico': 'cômico', 'comica': 'cômica', 'comicos': 'cômicos', 'comicas': 'cômicas',
   'grafico': 'gráfico', 'grafica': 'gráfica', 'graficos': 'gráficos', 'graficas': 'gráficas',
+  'infografico': 'infográfico', 'infografica': 'infográfica', 'infograficos': 'infográficos', 'infograficas': 'infográficas',
   'geografico': 'geográfico', 'geografica': 'geográfica', 'geograficos': 'geográficos', 'geograficas': 'geográficas',
   'biologico': 'biológico', 'biologica': 'biológica', 'biologicos': 'biológicos', 'biologicas': 'biológicas',
   'ideologico': 'ideológico', 'ideologica': 'ideológica', 'ideologicos': 'ideológicos', 'ideologicas': 'ideológicas',
@@ -191,6 +194,10 @@ const PT_ACCENT_MAP = {
   'semantico': 'semântico', 'semantica': 'semântica', 'semanticos': 'semânticos', 'semanticas': 'semânticas',
   'geometrico': 'geométrico', 'geometrica': 'geométrica', 'geometricos': 'geométricos', 'geometricas': 'geométricas',
   'simetrico': 'simétrico', 'simetrica': 'simétrica', 'simetricos': 'simétricos', 'simetricas': 'simétricas',
+  'molecula': 'molécula', 'moleculas': 'moléculas',
+  'celula': 'célula', 'celulas': 'células',
+  'silicio': 'silício',
+  'eletrica': 'elétrica', 'eletricas': 'elétricas', 'eletrico': 'elétrico', 'eletricos': 'elétricos',
   'atomico': 'atômico', 'atomica': 'atômica', 'atomicos': 'atômicos', 'atomicas': 'atômicas',
   'eletronico': 'eletrônico', 'eletronica': 'eletrônica', 'eletronicos': 'eletrônicos', 'eletronicas': 'eletrônicas',
   'estetico': 'estético', 'estetica': 'estética', 'esteticos': 'estéticos', 'esteticas': 'estéticas',
@@ -329,6 +336,12 @@ function correctAccents(text) {
 }
 
 export default function ReviewPage() {
+  useEffect(() => {
+    const prev = document.title
+    document.title = 'Revisão'
+    return () => { document.title = prev }
+  }, [])
+
   // datasets: { [filename]: Question[] }
   const [datasets, setDatasets] = useState({})
   const [contexts, setContexts] = useState({})

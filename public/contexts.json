@@ -1390,39 +1390,25 @@
     "reference": "Disponível em: http://palavrastempoder.org. Acesso em: 20 abr. 2015"
   },
   "enem_2018_nature_q105_ctx1": {
-    "title": null,
-    "subtitle": null,
-    "text": "",
+    "title": "",
+    "subtitle": "",
+    "text": "Na mitologia grega, Nióbia era a filha de Tântalo, dois personagens conhecidos pelo sofrimento. O elemento químico de número atômico (Z) igual a 41 tem propriedades químicas e físicas tão parecidas com as do elemento de número atômico 73 que chegaram a ser confundidos. Por isso, em homenagem a esses dois personagens da mitologia grega, foi conferido a esses elementos os nomes de nióbio (Z = 41) e tântalo (Z = 73). Esses dois elementos químicos adquiriram grande importância econômica na metalurgia, na produção de supercondutores e em outras aplicações na indústria de ponta, exatamente pelas propriedades químicas e físicas comuns aos dois.",
     "images": [],
-    "reference": null
-  },
-  "enem_2018_nature_q127_ctx1": {
-    "title": null,
-    "subtitle": null,
-    "text": "",
-    "images": [],
-    "reference": null
-  },
-  "enem_2018_nature_q127_ctx2": {
-    "title": null,
-    "subtitle": null,
-    "text": "",
-    "images": [],
-    "reference": null
+    "reference": "KEAN, S. <b>A colher que desaparece:</b> e outras histórias reais de loucura, amor e morte a partir dos elementos químicos. Rio de Janeiro: Zahar, 2011 (adaptado)."
   },
   "enem_2018_nature_q97_ctx1": {
-    "title": null,
-    "subtitle": null,
-    "text": "",
+    "title": "",
+    "subtitle": "",
+    "text": "A tecnologia de comunicação da etiqueta RFID (chamada de etiqueta inteligente) é usada há anos para rastrear gado, vagões de trem, bagagem aérea e carros nos pedágios. Um modelo mais barato dessas etiquetas pode funcionar sem baterias e é constituído por três componentes: um microprocessador de silício; uma bobina de metal, feita de cobre ou de alumínio, que é enrolada em um padrão circular; e um encapsulador, que é um material de vidro ou polímero envolvendo o microprocessador e a bobina. Na presença de um campo de radiofrequência gerado pelo leitor, a etiqueta transmite sinais. A distância de leitura é determinada pelo tamanho da bobina e pela potência da onda de rádio emitida pelo leitor.",
     "images": [],
-    "reference": null
+    "reference": "Disponível em: http://eletronicos.hsw.uol.com.br. Acesso em: 27 fev. 2012 (adaptado)"
   },
   "enem_2018_nature_q135_ctx1": {
-    "title": "Texto",
-    "subtitle": null,
+    "title": "",
+    "subtitle": "",
     "text": "O alemão Fritz Haber recebeu o Prêmio Nobel de Química de 1918 pelo desenvolvimento de um processo viável para a síntese da amônia (NH₃). Em seu discurso de premiação, Haber justificou a importância do feito dizendo que:\n\n\"Desde a metade do século passado, tornou-se conhecido que um suprimento de nitrogênio é uma necessidade básica para o aumento das safras de alimentos; entretanto, também se sabia que as plantas não podem absorver o nitrogênio em sua forma simples, que é o principal constituinte da atmosfera. Elas precisam que o nitrogênio seja combinado [...] para poderem assimilá-lo.\n\nEconomias agrícolas basicamente mantêm o balanço do nitrogênio ligado. No entanto, com o advento da era industrial, os produtos do solo são levados de onde cresce a colheita para lugares distantes, onde são consumidos, fazendo com que o nitrogênio ligado não retorne à terra da qual foi retirado.\n\nIsso tem gerado a necessidade econômica mundial de abastecer o solo com nitrogênio ligado. [...] A demanda por nitrogênio, tal como a do carvão, indica quão diferente nosso modo de vida se tornou com relação ao das pessoas que, com seus próprios corpos, fertilizam o solo que cultivam.\n\nDesde a metade do último século, nós vínhamos aproveitando o suprimento de nitrogênio do salitre que a natureza tinha depositado nos desertos montanhosos do Chile. Comparando o rápido crescimento da demanda com a extensão calculada desses depósitos, ficou claro que em meados do século atual uma emergência veríssima seria inevitável, a menos que a química encontrasse uma saída.\"",
     "images": [],
-    "reference": "HABER, F. The Synthesis of Ammonia from its Elements. Disponível em: www.nobelprize.org"
+    "reference": "HABER, F. <b>The Synthesis of Ammonia from its Elements</b>. Disponível em: www.nobelprize.org. Acesso em: 13 jul. 2013 (adaptado)"
   },
   "enem_2018_humanas_q55_ctx1": {
     "title": null,
@@ -2351,6 +2337,78 @@
     "subtitle": "",
     "text": "Um dos teóricos da democracia moderna, Hans Kelsen, considera elemento essencial da democracia real (não da democracia ideal, que não existe em lugar algum) o ato da seleção dos líderes, ou seja, a eleição. Exemplar, neste sentido, é a afirmação de um juiz da Corte Suprema dos Estados Unidos, por ocasião de uma eleição de 1902: \"A cabine eleitoral é o templo das instituições americanas; cada um de nós é um sacerdote, ao qual é confiada a guarda da arca da aliança e cada um oficia do seu próprio altar\".",
     "reference": "BOBBIO, N. <b>Teoria geral da política</b>. Rio de Janeiro: EIsevier, 2000 (adaptado)",
+    "images": []
+  },
+  "enem_2018_nature_q98_ctx1": {
+    "title": "",
+    "subtitle": "",
+    "text": "Corredores ecológicos visam mitigar os efeitos da fragmentação dos ecossistemas promovendo a ligação entre diferentes áreas, com o objetivo de proporcionar deslocamento de animais, a dispersão de sementes e aumento da cobertura vegetal. São instituídos com base em informações como estudos sobre o deslocamento de espécies, sua área de vida (área necessária para suprimento de suas necessidades vitais e reprodutivas) e a distribuição de suas populações.",
+    "reference": "Disponível em: www.mma.gov.br. Acesso em: 30 nov. 2017 (adaptado).",
+    "images": []
+  },
+  "enem_2018_nature_q99_ctx1": {
+    "title": "",
+    "subtitle": "",
+    "text": "A identificação de riscos de produtos perigosos para o transporte rodoviário é obrigatória e realizada por meio da sinalização composta por um painel de segurança, de cor laranjada, e um rótulo de risco. As informações inseridas no painel de segurança e no rótulo de risco, conforme determina a legislação, permitem que se identifique o produto transportado e os perigos a ele associados. \nA sinalização mostrada identifica uma substância que está sendo transportada em um caminhão.\n\n[Figura: Sinalização]\nOs três algarismos da parte superior do painel indicam \"Número de risco\". O número 268 indica tratar-se de um gás (2), tóxico (6) e corrosivo (8). Os quatro dígitos da parte inferior correspondem ao \"Número ONU\", que identifica o produto transportado.",
+    "reference": "BRASIL. <b>Resolução n. 420</b>, de 12/02/2004, da Agência Nacional de Transportes Terrestres (ANTT)/Ministério dos Transportes (adaptado).<br>ABNT. <b>NBR 7500</b>: identificação para o transporte terrestre, manuseio, movimentação e armazenamento de produtos. Rio de Janeiro, 2004 (adaptado).",
+    "images": [
+      "figuras/q099_2018_fig1.png"
+    ]
+  },
+  "enem_2018_nature_q100_ctx1": {
+    "title": "",
+    "subtitle": "",
+    "text": "No ciclo celular atuam moléculas reguladoras. Dentre elas, a proteína p53 é ativada em resposta a mutações do DNA, evitando a progressão do ciclo até que os danos sejam reparados, ou induzindo a célula à autodestruição.",
+    "reference": "ALBERTS, B. et ai. <b>Fundamentos da biologia celular</b>. Porto Alegre: Artmed, 2011 (adaptado).",
+    "images": []
+  },
+  "enem_2018_nature_q102_ctx1": {
+    "title": "",
+    "subtitle": "",
+    "text": "O sulfeto de mercúrio(II) foi usado como pigmento vermelho para pinturas de quadros e murais. Esse pigmento, conhecido como vermilion, escurece com o passar dos anos, fenômeno cuja origem é alvo de pesquisas. Aventou-se a hipótese de que o vermilion seja decomposto sob a ação da luz, produzindo uma fina camada de mercúrio metálico na superfície. Essa reação seria catalisada por íon cloreto presente na umidade do ar.",
+    "reference": "WOGAN, T. <b>Mercury’s Dark Influence on Art</b>. Disponível em: www.chemistryworld.com. Acesso em: 26 abr. 2018 (adaptado).",
+    "images": []
+  },
+  "enem_2018_nature_q103_ctx1": {
+    "title": "",
+    "subtitle": "",
+    "text": "O sonorizador é um dispositivo físico implantado sobre a superfície de uma rodovia de modo que provoque uma trepidação e ruído quando da passagem de um veículo sobre ele, alertando para uma situação atípica à frente, como obras, pedágios ou travessia de pedestres. \nAo passar sobre os sonorizadores, a suspensão do veículo sofre vibrações que produzem ondas sonoras, resultando em um barulho peculiar. Considere um veículo que passe com velocidade constante igual a 108 km/h sobre um sonorizador cujas faixas são separadas por uma distância de 8 cm.",
+    "reference": "Disponível em: www.denatran.gov.br. Acesso em: 2 set. 2015 (adaptado).",
+    "images": []
+  },
+  "enem_2018_nature_q106_ctx1": {
+    "title": "",
+    "subtitle": "",
+    "text": "O processo de formação de novas espécies é lento e repleto de nuances e estágios intermediários, havendo uma diminuição da viabilidade entre cruzamentos. Assim, plantas originalmente de uma mesma espécie que não cruzam mais entre si podem ser consideradas como uma espécie se diferenciando. Um pesquisador realizou cruzamentos entre nove populações — denominadas de acordo com a localização onde são encontradas — de uma espécie de orquídea (Epidendrum denticulatum). No diagrama estão os resultados dos cruzamentos entre as populações.\nConsidere que o doador fornece o pólen para o receptor",
+    "reference": "FIORAVANTI, C. Os primeiros passos de novas espécies: plantas e animais se diferenciam por meio de mecanismos surpreendentes. Pesquisa Fapesp, out. 2013 (adaptado).",
+    "images": []
+  },
+  "enem_2018_nature_q113_ctx1": {
+    "title": "",
+    "subtitle": "",
+    "text": "Companhias que fabricam <i>jeans</i> usam cloro para o clareamento, seguido de lavagem. Algumas estão substituindo o cloro por substâncias ambientalmente mais seguras como peróxidos, que podem ser degradados por enzimas chamadas peroxidases. Pensando nisso, pesquisadores inseriram genes codificadores de peroxidases em leveduras cultivadas nas condições de clareamento e lavagem dos <i>jeans</i> e selecionaram as sobreviventes para produção dessas enzimas.",
+    "reference": "TORTORA, G. J.; FUNKE, B. R.; CASE, C. L. <b>Microbiologia</b>. Rio de Janeiro: Artmed, 2016 (adaptado).",
+    "images": []
+  },
+  "enem_2018_nature_q114_ctx1": {
+    "title": "",
+    "subtitle": "",
+    "text": "Por meio de reações químicas que envolvem carboidratos, lipídeos e proteínas, nossas células obtêm energia e produzem gás carbônico e água. A oxidação da glicose no organismo humano libera energia, conforme mostra a equação química, sendo que aproximadamente 30% dela é disponibilizada para atividade muscular.\n\nC₆H₁₂O₆(s) + 6O₂(g) → 6CO₂(g) + 6H₂O(l)      ΔHc = −2800 kJ·mol⁻¹\n\nConsidere as massas molares (em g·mol⁻¹): H = 1; C = 12; O = 16.",
+    "reference": "LIMA, L. M.; FRAGA, C.A. M.; BARREIRO, E. J. <b>Química na saúde</b>. São Paulo: Sociedade Brasileira de Química, 2010 (adaptado).",
+    "images": []
+  },
+  "enem_2018_nature_q121_ctx1": {
+    "title": "",
+    "subtitle": "",
+    "text": "O manejo adequado do solo possibilita a manutenção de sua fertilidade à medida que as trocas de nutrientes entre matéria orgânica, água, solo e o ar são mantidas para garantir a produção. Algumas espécies iônicas de alumínio são tóxicas, não só para a planta, mas para muitos organismos como as bactérias responsáveis pelas transformações no ciclo do nitrogênio. O alumínio danifica as membranas das células das raízes e restringe a expansão de suas paredes, com isso, a planta não cresce adequadamente. Para promover benefícios para a produção agrícola, é recomendada a remediação do solo utilizando calcário (CaCO₃).",
+    "reference": "BRADY, N. C.; WEIL, R. R. <b>Elementos da natureza e propriedades dos solos</b>. Porto Alegre: Bookman, 2013 (adaptado)",
+    "images": []
+  },
+  "enem_2018_nature_q132_ctx1": {
+    "title": "",
+    "subtitle": "",
+    "text": "As abelhas utilizam a sinalização química para distinguir a abelha-rainha de uma operária, sendo capazes de reconhecer diferenças entre moléculas. A rainha produz o sinalizador químico conhecido como ácido 9-hidroxidec-2-enoico, enquanto as abelhas-operárias produzem ácido 10-hidroxidec-2-enoico. Nós podemos distinguir as abelhas-operárias e rainha por sua aparência, mas, entre si, elas usam essa sinalização química para perceber a diferença. Pode-se dizer que veem por meio da química.",
+    "reference": "LE COUTEUR, R; BURRESON, J. <b>Os botões de Napoleão</b>: as 17 moléculas que mudaram a história. Rio de Janeiro: Jorge Zahar, 2006 (adaptado).",
     "images": []
   }
 }

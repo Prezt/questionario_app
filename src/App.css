@@ -120,6 +120,15 @@
   font-weight: 700;
   color: var(--text);
   letter-spacing: 0.01em;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.app-header-logo {
+  height: 2rem;
+  width: auto;
+  display: block;
 }
 
 .app-header-actions {
