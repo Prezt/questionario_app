@@ -41,18 +41,39 @@ function getAuditIssues(auditReport, file, questionNumber) {
 }
 
 // ── Rich text rendering ────────────────────────────────────────────────────
-// Supports <b> and <i> tags only. All other HTML is escaped.
+function escapeInline(text) {
+  return text
+    .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
+    .replace(/&lt;b&gt;/gi, '<strong>').replace(/&lt;\/b&gt;/gi, '</strong>')
+    .replace(/&lt;i&gt;/gi, '<em>').replace(/&lt;\/i&gt;/gi, '</em>')
+}
+function parseMarkdownTable(tableLines) {
+  const esc = s => s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
+  const dataRows = tableLines.filter(l => !/^\|[\s\-:|]+\|$/.test(l.trim()))
+  if (!dataRows.length) return ''
+  const parseRow = l => l.split('|').slice(1, -1).map(c => c.trim())
+  const [header, ...body] = dataRows
+  const ths = parseRow(header).map(c => `<th>${esc(c)}</th>`).join('')
+  const trs = body.map(l => `<tr>${parseRow(l).map(c => `<td>${esc(c)}</td>`).join('')}</tr>`).join('')
+  return `<table class="q-table"><thead><tr>${ths}</tr></thead><tbody>${trs}</tbody></table>`
+}
+function richHtml(text) {
+  if (!text) return ''
+  const lines = text.split('\n')
+  const parts = []
+  let tableLines = [], plainLines = []
+  const flushPlain = () => { if (plainLines.length) { parts.push(escapeInline(plainLines.join('\n'))); plainLines = [] } }
+  const flushTable = () => { if (tableLines.length) { parts.push(parseMarkdownTable(tableLines)); tableLines = [] } }
+  for (const line of lines) {
+    if (line.trim().startsWith('|')) { flushPlain(); tableLines.push(line) }
+    else { flushTable(); plainLines.push(line) }
+  }
+  flushPlain(); flushTable()
+  return parts.join('')
+}
 function RichText({ text, className }) {
   if (!text) return null
-  const html = text
-    .replace(/&/g, '&amp;')
-    .replace(/</g, '&lt;')
-    .replace(/>/g, '&gt;')
-    .replace(/&lt;b&gt;/gi, '<strong>')
-    .replace(/&lt;\/b&gt;/gi, '</strong>')
-    .replace(/&lt;i&gt;/gi, '<em>')
-    .replace(/&lt;\/i&gt;/gi, '</em>')
-  return <span className={className} dangerouslySetInnerHTML={{ __html: html }} />
+  return <span className={className} dangerouslySetInnerHTML={{ __html: richHtml(text) }} />
 }
 
 // ── Portuguese accent correction ───────────────────────────────────────────
@@ -430,6 +451,31 @@ export default function ReviewPage() {
 
   const currentQuestion = overrideQuestion ?? activeList[currentIndex] ?? null
 
+  // Sidebar-filtered list — arrow keys and nav buttons navigate this
+  const sidebarList = useMemo(() => {
+    return allQuestions.filter(q => {
+      if (sidebarFilter === 'not-ok') {
+        const status = flags[flagKey(q._file, q.number, q.language)]?.status
+        return status !== 'ok'
+      }
+      return true
+    })
+  }, [allQuestions, sidebarFilter, flags])
+
+  const navigateSidebar = useCallback((delta) => {
+    const cq = overrideQuestion ?? activeList[currentIndex]
+    const idx = sidebarList.findIndex(q =>
+      q._file === cq?._file && q.number === cq?.number && (q.language ?? null) === (cq?.language ?? null)
+    )
+    const next = sidebarList[Math.max(0, Math.min(sidebarList.length - 1, idx + delta))]
+    if (!next) return
+    const idx2 = activeList.findIndex(aq =>
+      aq._file === next._file && aq.number === next.number && (aq.language ?? null) === (next.language ?? null)
+    )
+    if (idx2 !== -1) { setOverrideQuestion(null); setCurrentIndex(idx2) }
+    else setOverrideQuestion(next)
+  }, [overrideQuestion, activeList, currentIndex, sidebarList])
+
   // Collect all issue types present in the audit report
   const allIssueTypes = useMemo(() => {
     const types = new Set()
@@ -536,15 +582,17 @@ export default function ReviewPage() {
   useEffect(() => {
     function handleKey(e) {
       if (['INPUT', 'TEXTAREA', 'SELECT'].includes(e.target.tagName)) return
-      if (e.key === 'ArrowLeft') {
-        setOverrideQuestion(null); setCurrentIndex(i => Math.max(0, i - 1))
-      } else if (e.key === 'ArrowRight') {
-        setOverrideQuestion(null); setCurrentIndex(i => Math.min(activeList.length - 1, i + 1))
+      if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') {
+        e.preventDefault()
+        navigateSidebar(-1)
+      } else if (e.key === 'ArrowRight' || e.key === 'ArrowDown') {
+        e.preventDefault()
+        navigateSidebar(1)
       }
     }
     window.addEventListener('keydown', handleKey)
     return () => window.removeEventListener('keydown', handleKey)
-  }, [activeList.length])
+  }, [navigateSidebar])
 
   const saveFlag = useCallback(() => {
     if (!currentQuestion || pendingFlag.issues.length === 0) return
@@ -562,8 +610,8 @@ export default function ReviewPage() {
     }
     saveFlags(updated)
     setFlags(updated)
-    setCurrentIndex(i => Math.min(activeList.length - 1, i + 1))
-  }, [currentQuestion, pendingFlag, flags, activeList.length])
+    navigateSidebar(1)
+  }, [currentQuestion, pendingFlag, flags, navigateSidebar])
 
   const markOk = useCallback(() => {
     if (!currentQuestion) return
@@ -581,8 +629,8 @@ export default function ReviewPage() {
     }
     saveFlags(updated)
     setFlags(updated)
-    setCurrentIndex(i => Math.min(activeList.length - 1, i + 1))
-  }, [currentQuestion, flags, activeList.length])
+    navigateSidebar(1)
+  }, [currentQuestion, flags, navigateSidebar])
 
   // Collect contextIds for the current question (normalised to array)
   const currentContextIds = useMemo(() => {
@@ -1430,11 +1478,17 @@ export default function ReviewPage() {
 
       {/* BOTTOM NAV */}
       <div className="rp-bottom">
-        <button className="rp-nav-btn" onClick={() => { setOverrideQuestion(null); setCurrentIndex(i => Math.max(0, i - 1)) }}>← Prev</button>
-        <button className="rp-nav-btn" onClick={() => { setOverrideQuestion(null); setCurrentIndex(i => Math.min(activeList.length - 1, i + 1)) }}>Next →</button>
+        <button className="rp-nav-btn" onClick={() => navigateSidebar(-1)}>← Prev</button>
+        <button className="rp-nav-btn" onClick={() => navigateSidebar(1)}>Next →</button>
         <span className="rp-nav-hint">or use ← → keys</span>
         <span className="rp-nav-progress">
-          {currentIndex + 1} of {activeList.length}
+          {(() => {
+            const cq = overrideQuestion ?? activeList[currentIndex]
+            const pos = sidebarList.findIndex(q =>
+              q._file === cq?._file && q.number === cq?.number && (q.language ?? null) === (cq?.language ?? null)
+            )
+            return `${pos + 1} of ${sidebarList.length}`
+          })()}
           {currentQuestion && ` — Q${currentQuestion.number} (${currentQuestion._file.replace('.json', '')})`}
         </span>
       </div>

@@ -16,8 +16,7 @@ import ReviewPage from './ReviewPage.jsx'
 
 // Render text with <b> (bold) and <i> (italic) support.
 // All other HTML is escaped, so this is safe even for user-edited content.
-function richHtml(text) {
-  if (!text) return ''
+function escapeInline(text) {
   return text
     .replace(/&/g, '&amp;')
     .replace(/</g, '&lt;')
@@ -26,6 +25,30 @@ function richHtml(text) {
     .replace(/&lt;\/b&gt;/gi, '</strong>')
     .replace(/&lt;i&gt;/gi, '<em>')
     .replace(/&lt;\/i&gt;/gi, '</em>')
+}
+function parseMarkdownTable(tableLines) {
+  const esc = s => s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
+  const dataRows = tableLines.filter(l => !/^\|[\s\-:|]+\|$/.test(l.trim()))
+  if (!dataRows.length) return ''
+  const parseRow = l => l.split('|').slice(1, -1).map(c => c.trim())
+  const [header, ...body] = dataRows
+  const ths = parseRow(header).map(c => `<th>${esc(c)}</th>`).join('')
+  const trs = body.map(l => `<tr>${parseRow(l).map(c => `<td>${esc(c)}</td>`).join('')}</tr>`).join('')
+  return `<table class="q-table"><thead><tr>${ths}</tr></thead><tbody>${trs}</tbody></table>`
+}
+function richHtml(text) {
+  if (!text) return ''
+  const lines = text.split('\n')
+  const parts = []
+  let tableLines = [], plainLines = []
+  const flushPlain = () => { if (plainLines.length) { parts.push(escapeInline(plainLines.join('\n'))); plainLines = [] } }
+  const flushTable = () => { if (tableLines.length) { parts.push(parseMarkdownTable(tableLines)); tableLines = [] } }
+  for (const line of lines) {
+    if (line.trim().startsWith('|')) { flushPlain(); tableLines.push(line) }
+    else { flushTable(); plainLines.push(line) }
+  }
+  flushPlain(); flushTable()
+  return parts.join('')
 }
 
 const ATTEMPTS_SESSION_KEY = 'questionario-tentativas'
@@ -1018,8 +1041,9 @@ export default function App() {
     if (!question) return []
     const imgs = question.images ?? []
     const letters = Object.keys(question.alternatives)
-    const splitStemAndAlts = imgs.length > 1 && imgs.length === letters.length + 1
-    const paths = splitStemAndAlts ? [imgs[0]] : imgs.length > 0 ? imgs : []
+    const hasStemImg = imgs.length > 0 && imgs.length === letters.length + 1
+    const altImgsOnly = imgs.length > 0 && imgs.length === letters.length
+    const paths = hasStemImg ? [imgs[0]] : altImgsOnly ? [] : imgs.length > 0 ? imgs : []
     return parseStemSegments(question.text, paths)
   }, [question])
 
@@ -1028,11 +1052,12 @@ export default function App() {
     if (!question) return []
     const imgs = question.images ?? []
     const origLetters = Object.keys(question.alternatives)
-    const hasSplitImgs = imgs.length > 1 && imgs.length === origLetters.length + 1
+    const hasStemImg = imgs.length > 0 && imgs.length === origLetters.length + 1
+    const altImgsOnly = imgs.length > 0 && imgs.length === origLetters.length
     const items = origLetters.map((letter, idx) => ({
       origLetter: letter,
       rawContent: question.alternatives[letter],
-      altImg: hasSplitImgs ? imgs[idx + 1] : null,
+      altImg: hasStemImg ? imgs[idx + 1] : altImgsOnly ? imgs[idx] : null,
     }))
     if (!randomizeAlts) {
       return items.map((item, idx) => ({ ...item, displayLabel: origLetters[idx] }))
@@ -1488,10 +1513,11 @@ export default function App() {
 
   const letters = Object.keys(question.alternatives)
   const images = question.images ?? []
-  const splitStemAndAlts = images.length > 1 && images.length === letters.length + 1
+  const hasStemImg = images.length > 0 && images.length === letters.length + 1
+  const altImgsOnly = images.length > 0 && images.length === letters.length
   const isPrevDisabled = questionIndex <= 0
   const isNextDisabled = questionIndex >= sortedQuestions.length - 1
-  const altImageFor = (index) => splitStemAndAlts ? images[index + 1] : null
+  const altImageFor = (index) => hasStemImg ? images[index + 1] : altImgsOnly ? images[index] : null
   const attempt = attempts[question.number]
   const selected = attempt?.selected ?? null
 
@@ -1958,23 +1984,17 @@ export default function App() {
                       {isExpanded && (
                         <div className="question-context-body">
                           {ctxObj.subtitle && <p className="ctx-subtitle" dangerouslySetInnerHTML={{ __html: richHtml(ctxObj.subtitle) }} />}
-                          {ctxObj.images && ctxObj.images.length > 0 ? (
-                            <>
-                              {ctxObj.images.map((src, i) => (
-                                <figure key={i} className="q-figure">
-                                  <img
-                                    src={publicImageSrc(src)}
-                                    alt=""
-                                    loading="lazy"
-                                    decoding="async"
-                                  />
-                                </figure>
-                              ))}
-                              {ctxObj.text && <p className="ctx-text ctx-text--caption" dangerouslySetInnerHTML={{ __html: richHtml(ctxObj.text) }} />}
-                            </>
-                          ) : (
-                            ctxObj.text && <p className="ctx-text" dangerouslySetInnerHTML={{ __html: richHtml(ctxObj.text) }} />
-                          )}
+                          {ctxObj.text && <p className="ctx-text" dangerouslySetInnerHTML={{ __html: richHtml(ctxObj.text) }} />}
+                          {ctxObj.images && ctxObj.images.length > 0 && ctxObj.images.map((src, i) => (
+                            <figure key={i} className="q-figure">
+                              <img
+                                src={publicImageSrc(src)}
+                                alt=""
+                                loading="lazy"
+                                decoding="async"
+                              />
+                            </figure>
+                          ))}
                           {ctxObj.reference && <p className="ctx-reference" dangerouslySetInnerHTML={{ __html: richHtml(ctxObj.reference) }} />}
                         </div>
                       )}

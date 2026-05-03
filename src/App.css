@@ -2759,3 +2759,22 @@
   color: var(--accent) !important;
   border-color: var(--accent) !important;
 }
+
+.q-table {
+  border-collapse: collapse;
+  margin: 8px 0;
+  font-size: 0.9em;
+  width: 100%;
+}
+.q-table th, .q-table td {
+  border: 1px solid var(--accent);
+  padding: 6px 10px;
+  text-align: center;
+  background: transparent;
+  color: inherit;
+}
+.q-table th {
+  background: var(--accent);
+  color: #fff;
+  font-weight: 600;
+}

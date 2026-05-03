@@ -39,133 +39,47 @@ FERRAMENTAS DE LONGO PRAZO
 [x] Ferramenta para reportar bugs
 
 
-DADOS:
- [x] ENEM 2025
-    [x] matematica 
-        [x] texto
-        [x] imagens
-        [] HQ imagens
-        [] HQ texto
-    [x] linguagens
-        [x] texto
-        [x] imagens
-        [] HQ imagens
-        [] HQ texto
-    [x] ciencias da natureza
-        [x] texto
-        [x] imagens
-        [] HQ imagens
-        [] HQ texto
-    [x] ciencias sociais
-        [x] texto
-        [x] imagens
-        [] HQ imagens
-        [] HQ texto
- [x] ENEM 2024
-    [] matematica 
-        [] texto
-        [] imagens
-        [] HQ imagens
-        [] HQ texto
-    [x] linguagens
-        [x] texto
-        [x] imagens
-        [] HQ imagens
-        [] HQ texto
-    [x] ciencias da natureza
-        [x] texto
-        [x] imagens
-        [] HQ imagens
-        [] HQ texto
-    [x] ciencias sociais
-        [x] texto
-        [x] imagens
-        [] HQ imagens
-        [] HQ texto
- [x] ENEM 2023
-    [x] matematica 
-        [x] texto
-        [x] imagens
-        [] HQ imagens
-        [] HQ texto
-    [x] linguagens
-        [x] texto
-        [x] imagens
-        [] HQ imagens
-        [] HQ texto
-    [x] ciencias da natureza
-        [x] texto
-        [x] imagens
-        [] HQ imagens
-        [] HQ texto
-    [x] ciencias sociais
-        [x] texto
-        [x] imagens
-        [] HQ imagens
-        [] HQ texto
- [x] ENEM 2022
-    [x] matematica 
-        [x] texto
-        [x] imagens
-        [] HQ imagens
-        [] HQ texto
-    [x] linguagens
-        [x] texto
-        [x] imagens
-        [] HQ imagens
-        [] HQ texto
-    [x] ciencias da natureza
-        [x] texto
-        [x] imagens
-        [] HQ imagens
-        [] HQ texto
-    [x] ciencias sociais
-        [x] texto
-        [x] imagens
-        [] HQ imagens
-        [] HQ texto
+REVISAO:
+ [] ENEM 2025
+    [] linguagens
+    [] humanas
+    [] ciencias da natureza
+    [] matematica
+ [] ENEM 2024
+    [] linguagens
+    [] humanas
+    [] ciencias da natureza
+    [] matematica
+ [] ENEM 2023
+    [] linguagens
+    [] humanas
+    [] ciencias da natureza
+    [] matematica
+ [] ENEM 2022
+    [] linguagens
+    [] humanas
+    [] ciencias da natureza
+    [] matematica
  [] ENEM 2021
-    [] matematica 
-        [] texto
-        [] imagens
-        [] HQ imagens
-        [] HQ texto
     [] linguagens
-        [] texto
-        [] imagens
-        [] HQ imagens
-        [] HQ texto
+    [] humanas
     [] ciencias da natureza
-        [] texto
-        [] imagens
-        [] HQ imagens
-        [] HQ texto
-    [] ciencias sociais
-        [] texto
-        [] imagens
-        [] HQ imagens
-        [] HQ texto
+    [] matematica
  [] ENEM 2020
-    [] matematica 
-        [] texto
-        [] imagens
-        [] HQ imagens
-        [] HQ texto
     [] linguagens
-        [] texto
-        [] imagens
-        [] HQ imagens
-        [] HQ texto
+    [] humanas
     [] ciencias da natureza
-        [] texto
-        [] imagens
-        [] HQ imagens
-        [] HQ texto
-    [] ciencias sociais
-        [] texto
-        [] imagens
-        [] HQ imagens
-        [] HQ texto
+    [] matematica
+ [] ENEM 2019
+    [] linguagens
+    [] humanas
+    [] ciencias da natureza
+    [] matematica
+ [] ENEM 2018
+    [x] linguagens
+    [x] humanas
+    [] ciencias da natureza
+    [] matematica
 
 ETAPA 2:
 UFSC
