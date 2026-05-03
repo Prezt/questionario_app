@@ -359,7 +359,7 @@ export default function ReviewPage() {
   const [issueFilter, setIssueFilter] = useState(null)
   const activeItemRef = useRef(null)
   const [collapsedCtx, setCollapsedCtx] = useState({})
-  const [sidebarFilter, setSidebarFilter] = useState('all') // 'all' | 'not-ok'
+  const [sidebarFilter, setSidebarFilter] = useState('not-ok') // 'all' | 'not-ok'
 
   // Derive active question list
   const activeList = useMemo(() => {
@@ -495,7 +495,7 @@ export default function ReviewPage() {
   // Suggest a context key for the current question
   const suggestContextId = useCallback(() => {
     if (!currentQuestion) return ''
-    const area = { linguagens: 'lang', humanas: 'humanas', nature: 'nature', math: 'math' }[currentQuestion.area] ?? currentQuestion.area
+    const area = currentQuestion.area ?? 'linguagens'
     const base = `enem_${currentQuestion.year}_${area}_q${currentQuestion.number}`
     let key = `${base}_ctx1`
     let n = 1

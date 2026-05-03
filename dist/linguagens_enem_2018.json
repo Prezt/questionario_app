@@ -116,7 +116,7 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "c",
-    "contextId": "enem_2018_linguagens_ctx1",
+    "contextId": "enem_2018_linguagens_q5_ctx1_en",
     "language": "en"
   },
   {
@@ -209,7 +209,7 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "e",
-    "contextId": "enem_2018_linguagens_ctx1",
+    "contextId": "enem_2018_linguagens_q4_ctx1_es",
     "language": "es"
   },
   {

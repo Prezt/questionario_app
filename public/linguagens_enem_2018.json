@@ -122,7 +122,9 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "c",
-    "contextIds": [],
+    "contextIds": [
+      "enem_2018_linguagens_q5_ctx1_en"
+    ],
     "language": "en"
   },
   {
@@ -219,7 +221,7 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "e",
-    "contextIds": [],
+    "contextId": "enem_2018_linguagens_q4_ctx1_es",
     "language": "es"
   },
   {
@@ -242,7 +244,9 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "c",
-    "contextIds": [],
+    "contextIds": [
+      "enem_2018_linguagem_q5_ctx1_es"
+    ],
     "language": "es"
   },
   {
@@ -286,7 +290,10 @@
     "year": 2018,
     "test": "ENEM",
     "area": "linguagens",
-    "answer": "e"
+    "answer": "e",
+    "contextIds": [
+      "enem_2018_linguagens_q7_ctx1"
+    ]
   },
   {
     "number": 8,
@@ -331,7 +338,9 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "b",
-    "contextIds": []
+    "contextIds": [
+      "enem_2018_linguagens_q9_ctx1"
+    ]
   },
   {
     "number": 10,
@@ -375,7 +384,10 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "b",
-    "contextIds": []
+    "contextIds": [
+      "enem_2018_linguagens_q11_ctx1_1",
+      "enem_2018_linguagens_q11_ctx1_2"
+    ]
   },
   {
     "number": 12,
@@ -420,7 +432,10 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "b",
-    "contextIds": []
+    "contextIds": [
+      "enem_2018_linguagens_q13_ctx1_1",
+      "enem_2018_linguagens_q13_ctx1_2"
+    ]
   },
   {
     "number": 14,
@@ -486,7 +501,9 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "a",
-    "contextIds": []
+    "contextIds": [
+      "enem_2018_lang_q16_ctx1"
+    ]
   },
   {
     "number": 17,
@@ -553,7 +570,10 @@
     "year": 2018,
     "test": "ENEM",
     "area": "linguagens",
-    "answer": "d"
+    "answer": "d",
+    "contextIds": [
+      "enem_2018_lang_q19_ctx1"
+    ]
   },
   {
     "number": 20,
@@ -576,11 +596,13 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "b",
-    "contextIds": []
+    "contextIds": [
+      "enem_2018_lang_q20_ctx1"
+    ]
   },
   {
     "number": 21,
-    "text": "O uso da norma-padrão na letra do Hino Nacional do Brasil é justificado por tratar-se de um(a)",
+    "text": "O uso da norma-padrão na letra do <i>Hino Nacional do Brasil</i> é justificado por tratar-se de um(a)",
     "alternatives": {
       "a": "reverência de um povo a seu país.",
       "b": "gênero solene de característica protocolar.",
@@ -602,7 +624,7 @@
   },
   {
     "number": 22,
-    "text": "A fotografia exibe a fachada de um supermercado em Foz do Iguaçu, cuja localização transfronteiriça é marcada tanto pelo limite com Argentina e Paraguai quanto pela presença de outros povos. [Figura: fachada de supermercado] Essa fachada revela o(a)",
+    "text": "[Figura]\nA fotografia exibe a fachada de um supermercado em Foz do Iguaçu, cuja localização transfronteiriça é marcada tanto pelo limite com Argentina e Paraguai quanto pela presença de outros povos. Essa fachada revela o(a)",
     "alternatives": {
       "a": "apagamento da identidade linguística.",
       "b": "planejamento linguístico no espaço urbano.",
@@ -643,7 +665,9 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "e",
-    "contextIds": []
+    "contextIds": [
+      "enem_2018_lang_q23_ctx1"
+    ]
   },
   {
     "number": 24,
@@ -666,11 +690,13 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "a",
-    "contextIds": []
+    "contextIds": [
+      "enem_2018_lang_q24_ctx1"
+    ]
   },
   {
     "number": 25,
-    "text": "A imagem integra uma adaptação em quadrinhos da obra Grande sertão: veredas, de Guimarães Rosa. Na representação gráfica, a inter-relação de diferentes linguagens caracteriza-se por\n\n[Figura: Adaptação em quadrinhos de Grande sertão: veredas]",
+    "text": "[Figura: Adaptação em quadrinhos de Grande sertão: veredas]\n\nA imagem integra uma adaptação em quadrinhos da obra Grande sertão: veredas, de Guimarães Rosa. Na representação gráfica, a inter-relação de diferentes linguagens caracteriza-se por",
     "alternatives": {
       "a": "romper com a linearidade das ações da narrativa literária.",
       "b": "ilustrar de modo fidedigno passagens representativas da história.",
@@ -694,7 +720,7 @@
   },
   {
     "number": 26,
-    "text": "Tanto os Jogos Olímpicos quanto os Paralímpicos são mais que uma corrida por recordes, medalhas e busca da excelência. Por trás deles está a filosofia do barão Pierre de Coubertin, fundador do Movimento Olímpico. Como educador, ele viu nos Jogos a oportunidade para que os povos desenvolvessem valores, que poderiam ser aplicados não somente ao esporte, mas à educação e à sociedade. Existem atualmente sete valores associados aos Jogos. Os valores olímpicos são: a amizade, a excelência e o respeito, enquanto os valores paralímpicos são: a determinação, a coragem, a igualdade e a inspiração.\n\nNo contexto das aulas de Educação Física escolar, os valores olímpicos e paralímpicos podem ser identificados quando o colega",
+    "text": "No contexto das aulas de Educação Física escolar, os valores olímpicos e paralímpicos podem ser identificados quando o colega",
     "alternatives": {
       "a": "procura entender o próximo, assumindo atitudes positivas como simpatia, empatia, honestidade, compaixão, confiança e solidariedade, o que caracteriza o valor da igualdade.",
       "b": "faz com que todos possam ser iguais e receber o mesmo tratamento, assegurando imparcialidade, oportunidades e tratamentos iguais para todos, o que caracteriza o valor da amizade.",
@@ -711,7 +737,10 @@
     "year": 2018,
     "test": "ENEM",
     "area": "linguagens",
-    "answer": "e"
+    "answer": "e",
+    "contextIds": [
+      "enem_2018_lang_q26_ctx1"
+    ]
   },
   {
     "number": 27,
@@ -756,7 +785,9 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "a",
-    "contextIds": []
+    "contextIds": [
+      "enem_2018_lang_q28_ctx1"
+    ]
   },
   {
     "number": 29,
@@ -778,7 +809,10 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "c",
-    "contextIds": []
+    "contextIds": [
+      "enem_2018_lang_q29_ctx1",
+      "enem_2018_lang_q29_ctx2"
+    ]
   },
   {
     "number": 30,
