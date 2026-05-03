@@ -262,6 +262,8 @@ export default function App() {
   const [adminStats, setAdminStats] = useState(null)
   const [adminLoading, setAdminLoading] = useState(false)
   const [adminError, setAdminError] = useState('')
+  const [clearHistoryConfirm, setClearHistoryConfirm] = useState(false)
+  const [clearHistoryLoading, setClearHistoryLoading] = useState(false)
 
   // Homepage filters (step-by-step single select)
   const [selectedTest, setSelectedTest] = useState('ENEM')   // 'ENEM' | 'UFSC' | …
@@ -666,6 +668,23 @@ export default function App() {
   const DAY_AREAS = {
     1: ['linguagens', 'humanas'],
     2: ['math', 'nature'],
+  }
+
+  async function handleClearHistory() {
+    setClearHistoryLoading(true)
+    try {
+      await fetch('/api/results', {
+        method: 'DELETE',
+        headers: { Authorization: `Bearer ${token}` },
+      })
+      // Also clear local session state
+      sessionStorage.removeItem(ATTEMPTS_SESSION_KEY)
+      localStorage.removeItem(PAUSED_SESSION_KEY)
+      setAttempts({})
+    } finally {
+      setClearHistoryLoading(false)
+      setClearHistoryConfirm(false)
+    }
   }
 
   function handleLogout() {
@@ -1439,6 +1458,36 @@ export default function App() {
                 </button>
               )}
               {adminError && <p className="auth-error" style={{ margin: 0 }}>{adminError}</p>}
+              <div className="options-divider" />
+              {clearHistoryConfirm ? (
+                <div className="options-confirm-row">
+                  <span className="options-confirm-label">Tem certeza?</span>
+                  <button
+                    type="button"
+                    className="options-confirm-btn options-confirm-btn--danger"
+                    onClick={handleClearHistory}
+                    disabled={clearHistoryLoading}
+                  >
+                    {clearHistoryLoading ? 'Limpando…' : 'Confirmar'}
+                  </button>
+                  <button
+                    type="button"
+                    className="options-confirm-btn"
+                    onClick={() => setClearHistoryConfirm(false)}
+                    disabled={clearHistoryLoading}
+                  >
+                    Cancelar
+                  </button>
+                </div>
+              ) : (
+                <button
+                  type="button"
+                  className="options-admin-btn options-admin-btn--danger"
+                  onClick={() => setClearHistoryConfirm(true)}
+                >
+                  Limpar histórico
+                </button>
+              )}
             </div>
           )}
           <button
@@ -1455,7 +1504,7 @@ export default function App() {
   }
 
   if (phase === 'admin' && adminStats) {
-    return <AdminPanel stats={adminStats} onBack={() => setPhase('home')} dark={dark} setDark={setDark} />
+    return <AdminPanel stats={adminStats} onBack={() => setPhase('home')} dark={dark} setDark={setDark} token={token} />
   }
 
   if (phase === 'login') {
@@ -2187,9 +2236,33 @@ export default function App() {
   )
 }
 
-function AdminPanel({ stats, onBack, dark, setDark }) {
+function AdminPanel({ stats, onBack, dark, setDark, token }) {
   const { users, testResults, dailyResults, feedback } = stats
   const [tab, setTab] = useState('students')
+  const [deleteTarget, setDeleteTarget] = useState(null) // { id, username }
+  const [deleteLoading, setDeleteLoading] = useState(false)
+  const [deleteError, setDeleteError] = useState('')
+  const [deletedIds, setDeletedIds] = useState(new Set())
+
+  async function handleDeleteUser() {
+    if (!deleteTarget) return
+    setDeleteLoading(true)
+    setDeleteError('')
+    try {
+      const res = await fetch(`/api/admin/delete-user?userId=${deleteTarget.id}`, {
+        method: 'DELETE',
+        headers: { Authorization: `Bearer ${token}` },
+      })
+      const data = await res.json()
+      if (!res.ok) { setDeleteError(data.error ?? 'Erro ao deletar'); return }
+      setDeletedIds(prev => new Set([...prev, deleteTarget.id]))
+      setDeleteTarget(null)
+    } catch {
+      setDeleteError('Erro de rede')
+    } finally {
+      setDeleteLoading(false)
+    }
+  }
 
   function formatTime(seconds) {
     const m = Math.floor(seconds / 60)
@@ -2294,10 +2367,11 @@ function AdminPanel({ stats, onBack, dark, setDark }) {
                   <th>Desafios</th>
                   <th>Acertos totais</th>
                   <th>Melhor nota</th>
+                  <th></th>
                 </tr>
               </thead>
               <tbody>
-                {sortedUsers.filter(u => u.username !== 'admin').map((u) => (
+                {sortedUsers.filter(u => u.username !== 'admin' && !deletedIds.has(u.id)).map((u) => (
                   <tr key={u.id}>
                     <td><strong>{u.username}</strong></td>
                     <td>{formatDate(u.created_at)}</td>
@@ -2309,6 +2383,15 @@ function AdminPanel({ stats, onBack, dark, setDark }) {
                         : '—'}
                     </td>
                     <td>{u.bestScore !== null ? `${u.bestScore}%` : '—'}</td>
+                    <td>
+                      <button
+                        type="button"
+                        className="admin-delete-btn"
+                        onClick={() => { setDeleteTarget({ id: u.id, username: u.username }); setDeleteError('') }}
+                      >
+                        Deletar
+                      </button>
+                    </td>
                   </tr>
                 ))}
               </tbody>
@@ -2401,6 +2484,44 @@ function AdminPanel({ stats, onBack, dark, setDark }) {
           )}
         </div>
       </div>
+
+      {/* Delete user warning modal */}
+      {deleteTarget && (
+        <div className="admin-modal-overlay" onClick={() => !deleteLoading && setDeleteTarget(null)}>
+          <div className="admin-modal" onClick={e => e.stopPropagation()}>
+            <div className="admin-modal-warning">
+              <span className="admin-modal-warning-icon">⚠️</span>
+              <strong>Ação irreversível</strong>
+              <p>
+                Esta operação irá deletar permanentemente o usuário <strong>{deleteTarget.username}</strong> e todos os seus dados:
+                simulados, desafios diários e feedbacks. Não há como desfazer.
+              </p>
+            </div>
+            <p className="admin-modal-confirm-label">
+              Deseja realmente deletar <strong>{deleteTarget.username}</strong>?
+            </p>
+            {deleteError && <p className="auth-error">{deleteError}</p>}
+            <div className="admin-modal-actions">
+              <button
+                type="button"
+                className="admin-modal-btn admin-modal-btn--danger"
+                onClick={handleDeleteUser}
+                disabled={deleteLoading}
+              >
+                {deleteLoading ? 'Deletando…' : 'Deletar permanentemente'}
+              </button>
+              <button
+                type="button"
+                className="admin-modal-btn"
+                onClick={() => setDeleteTarget(null)}
+                disabled={deleteLoading}
+              >
+                Cancelar
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   )
 }

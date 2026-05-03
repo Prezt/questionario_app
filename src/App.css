@@ -1184,7 +1184,7 @@
 
 .home-screen::before {
   content: '';
-  position: absolute;
+  position: fixed;
   inset: 0;
   pointer-events: none;
   background-image:
@@ -1636,6 +1636,60 @@
 
 .options-admin-btn:hover:not(:disabled) {
   background: var(--accent);
+  color: #fff;
+}
+
+.options-admin-btn--danger {
+  border-color: #ef4444;
+  color: #ef4444;
+}
+
+.options-admin-btn--danger:hover:not(:disabled) {
+  background: #ef4444;
+  color: #fff;
+}
+
+.options-divider {
+  height: 1px;
+  background: var(--border);
+  margin: 0.25rem 0;
+}
+
+.options-confirm-row {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  flex-wrap: wrap;
+}
+
+.options-confirm-label {
+  font-size: 0.8rem;
+  color: var(--text-soft);
+  flex: 1;
+  white-space: nowrap;
+}
+
+.options-confirm-btn {
+  height: 1.75rem;
+  padding: 0 0.7rem;
+  border-radius: 999px;
+  border: 1.5px solid var(--border);
+  background: transparent;
+  color: var(--text);
+  font-size: 0.78rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.options-confirm-btn--danger {
+  border-color: #ef4444;
+  color: #ef4444;
+}
+
+.options-confirm-btn--danger:hover:not(:disabled) {
+  background: #ef4444;
   color: #fff;
 }
 
@@ -2753,6 +2807,129 @@
   max-width: 400px;
   white-space: pre-wrap;
   word-break: break-word;
+}
+
+.admin-delete-btn {
+  padding: 0.25rem 0.65rem;
+  border-radius: 6px;
+  border: 1.5px solid #ef4444;
+  background: transparent;
+  color: #ef4444;
+  font-size: 0.78rem;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background 0.15s, color 0.15s;
+}
+
+.admin-delete-btn:hover {
+  background: #ef4444;
+  color: #fff;
+}
+
+/* Delete user modal */
+.admin-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 200;
+  padding: 1rem;
+}
+
+.admin-modal {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 1.75rem;
+  max-width: 420px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.25);
+}
+
+.admin-modal-warning {
+  background: #fef2f2;
+  border: 1.5px solid #fca5a5;
+  border-radius: 10px;
+  padding: 1rem 1.1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.dark .admin-modal-warning {
+  background: #2d1010;
+  border-color: #7f1d1d;
+}
+
+.admin-modal-warning-icon {
+  font-size: 1.5rem;
+  line-height: 1;
+}
+
+.admin-modal-warning strong {
+  font-size: 0.95rem;
+  color: #b91c1c;
+}
+
+.dark .admin-modal-warning strong {
+  color: #fca5a5;
+}
+
+.admin-modal-warning p {
+  margin: 0;
+  font-size: 0.85rem;
+  color: #7f1d1d;
+  line-height: 1.5;
+}
+
+.dark .admin-modal-warning p {
+  color: #fca5a5;
+}
+
+.admin-modal-confirm-label {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--text);
+}
+
+.admin-modal-actions {
+  display: flex;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+}
+
+.admin-modal-btn {
+  flex: 1;
+  min-width: 0;
+  height: 2.25rem;
+  border-radius: 999px;
+  border: 1.5px solid var(--border);
+  background: transparent;
+  color: var(--text);
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s;
+}
+
+.admin-modal-btn--danger {
+  border-color: #ef4444;
+  color: #ef4444;
+}
+
+.admin-modal-btn--danger:hover:not(:disabled) {
+  background: #ef4444;
+  color: #fff;
+}
+
+.admin-modal-btn:not(.admin-modal-btn--danger):hover:not(:disabled) {
+  background: var(--border);
 }
 
 .admin-btn {

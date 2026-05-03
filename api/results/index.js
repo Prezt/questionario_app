@@ -49,5 +49,23 @@ export default async function handler(req, res) {
     return res.json(rows)
   }
 
+  if (req.method === 'DELETE') {
+    // Admin can pass ?userId=X to clear another user's history
+    let targetId = payload.userId
+    if (payload.username === 'admin' && req.query?.userId) {
+      targetId = Number(req.query.userId)
+      if (!Number.isInteger(targetId) || targetId <= 0) {
+        return res.status(400).json({ error: 'userId inválido' })
+      }
+    }
+
+    await Promise.all([
+      sql`DELETE FROM test_results WHERE user_id = ${targetId}`,
+      sql`DELETE FROM daily_challenge_results WHERE user_id = ${targetId}`,
+    ])
+
+    return res.status(200).json({ ok: true })
+  }
+
   res.status(405).end()
 }
