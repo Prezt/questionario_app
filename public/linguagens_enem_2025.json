@@ -2,7 +2,7 @@
   {
     "number": 1,
     "language": "en",
-    "text": "Texto de M. C. M. Liu (Washington Post, 2024) sobre Glory Ames, da reserva indígena White Earth, que denuncia lojas de Halloween em Moorhead oferecerem fantasias como \"pow wow princess\" e relata o caso de uma foto no Instagram de uma menina fantasiada de nativa americana com um furo de bala na testa, que ela reportou e foi removida. Ao abordar um aspecto da celebração do Halloween, esse texto tem por objetivo",
+    "text": "Ao abordar um aspecto da celebração do Halloween, esse texto tem por objetivo",
     "alternatives": {
       "a": "denunciar a violência contra crianças indígenas.",
       "b": "descrever costumes tradicionais em celebrações indígenas.",
@@ -20,7 +20,10 @@
     "area": "linguagens",
     "test": "ENEM",
     "answer": "d",
-    "difficulty": 3
+    "difficulty": 3,
+    "contextIds": [
+      "enem_2025_linguagens_q1_ctx1"
+    ]
   },
   {
     "number": 2,

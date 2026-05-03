@@ -1693,7 +1693,7 @@
     "images": [],
     "reference": "<b>Hino Nacional do Brasil.</b> Letra: Joaquim Osório Duque Estrada; Música: Francisco Manuel da Silva"
   },
-  "enem_2018_linguagens_q3_ctx1": {
+  "enem_2018_linguagens_q3_ctx1_en": {
     "title": "",
     "subtitle": "",
     "text": "Don't write in English, they said,\nEnglish is not your mother tongue...\n...The language I speak\nBecomes mine, its distortions, its queerness\nAll mine, mine alone, it is half English, half\nIndian, funny perhaps, but it is honest,\nIt is as human as I am human...\n...It voices my joys, my longings my\nHopes...\n(Kamala Das, 1965:10)",
@@ -1723,14 +1723,14 @@
     ],
     "reference": "Disponível em: www.facebook.com/omeusegredinho. Acesso em: 9 dez. 2017 (adaptado)."
   },
-  "enem_2018_linguagens_q2_ctx1": {
+  "enem_2018_linguagens_q2_ctx1_es": {
     "title": "Revolución en la arquitectura china",
     "subtitle": "Levantar rascacielos en 19 días",
     "text": "Un rascacielos de 57 pisos no llama la atención en la China del siglo XXI. Salvo que se haya construido en 19 días, claro. Y eso es precisamente lo que ha conseguido Broad Sustainable Building (BSB), una empresa dedicada a la fabricación de purificadores de aire y de equipos de aire acondicionado para grandes infraestructuras que ahora se ha empeñado en liderar una revolución con su propio modelo de arquitectura modular prefabricada. Como subraya su presidente, Zhang Yue, es una fórmula económica, ecológica, segura, y limpia. Ese último término, además, lo utiliza tanto para referirse al polvo que se produce en la construcción como a los gruesos sobres que suelen circular por debajo de las mesas en adjudicaciones y permisos varios. \"Quiero que nuestros edificios alumbren una nueva era en la arquitectura, y que se conviertan en símbolo de la lucha contra la contaminación y el cambio climático, que es la mayor amenaza a la que se enfrenta la humanidad\", sentencia.\n\"Es como montar un Lego. Apenas hay subcontratación, lo cual ayuda a mantener un costo bajo y un control de calidad estricto, y nos permite eliminar también la corrupción inherente al sector\", explica la vicepresidenta de BSB y responsable del mercado internacional, Jiang Yan.",
     "images": [],
     "reference": "Disponível em: http://tecnologia.elpais.com. Acesso em: 23 jun. 2015 (adaptado)."
   },
-  "enem_2018_linguagens_q2_ctx2": {
+  "enem_2018_linguagens_q2_ctx1_en": {
     "title": "",
     "subtitle": "",
     "text": "",
@@ -1739,7 +1739,7 @@
     ],
     "reference": "GLASBERGEN, R. Disponível em: www.glasbergen.com. Acesso em: 3 jul. 2015 (adaptado)"
   },
-  "enem_2018_linguagens_q3_ctx2": {
+  "enem_2018_linguagens_q3_ctx1_es": {
     "title": "¿Qué es la X Solidaria?",
     "subtitle": "",
     "text": "La X Solidaria es una equis que ayuda a las personas más vulnerables. Podrás marcarla cuando hagas la declaración de la renta. Es la casilla que se denomina \"Fines Sociales\". Nosotros preferimos llamarla X Solidaria\n\n- porque al marcarla haces que se destine un 0,7% de tus impuestos a programas sociales que realizan las ONG.\n- porque se benefician los colectivos más desfavorecidos, sin ningún coste económico para ti.\n- porque NO marcarla es tomar una actitud pasiva y dejar que sea el Estado quien decida el destino de esa parte de tus impuestos.\n- porque marcándola te conviertes en contribuyente activo solidario.",
@@ -2018,7 +2018,7 @@
     "reference": "ORWELL, G. Nineteen Eighty-Four. New York: Signet Classics, 1977.",
     "images": []
   },
-  "enem_2018_linguagem_q5_ctx1_es": {
+  "enem_2018_linguagens_q5_ctx1_es": {
     "title": "Mayo 15",
     "subtitle": "Que mañana no sea otro nombre de hoy",
     "text": "      En el año 2011, miles de jóvenes, despojados de sus casas y de sus empleos, ocuparon las plazas y las calles de varias ciudades de España.\n      Y la indignación se difundió. La buena salud resultó más contagiosa que las pestes, y las voces de los indignados atravesaron las fronteras dibujadas en los mapas. Así resonaron en el mundo:\n    <i>Nos dijeron “¡a la puta calle!”, y aquí estamos.</i>\n    <i>Apaga la tele y enciende la calle.</i>\n    <i>La llaman crisis, pero es estafa.</i>\n    <i>No falta dinero: sobran ladrones.</i>\n    <i>Los mercados gobiernan. Yo no los voté.</i>\n    <i>Ellos toman decisiones por nosotros, sin nosotros.</i>\n    <i>Se alquila esclavo económico.</i>\n    <i>Estoy buscando mis derechos. ¿Alguien los ha visto?</i>\n    <i>Si no nos dejan soñar, no los dejaremos dormir</i>",
@@ -2423,6 +2423,20 @@
     "subtitle": "",
     "text": "Com o avanço em ciência da computação, estamos próximos do momento em que o número de transistores em um processador de um computador pessoal será da mesma ordem de grandeza que o número de neurônios em um cérebro humano, que é da ordem de 100 bilhões.\nUma das grandezas determinantes para o desempenho de um processador é a densidade de transistores, que é o número de transistores por centímetro quadrado. Em 1986, uma empresa fabricava um processador contendo 100.000 transistores distribuídos em 0,25 cm² de área. Desde então, o número de transistores por centímetro quadrado que se pode colocar em um processador dobra a cada dois anos (Lei de Moore).",
     "reference": "Disponível em: www.pocket-lint.com. Acesso em: 1 dez. 2017 (adaptado).",
+    "images": []
+  },
+  "enem_2018_nature_q126_ctx1": {
+    "title": "Tensoativos",
+    "subtitle": "",
+    "text": "Tensoativos são compostos orgânicos que possuem uma região hidrofóbica e outra hidrofílica. O principal tensoativo iônico sintético surgiu na década de 1940 e teve grande aceitação no mercado de detergentes em razão do melhor desempenho comparado ao do sabão. No entanto, o uso desse produto provocou grandes problemas ambientais entre eles a resistência à degradação biológica, por causa dos diversos carbonos terciários na cadeia que compõe a porção hidrofóbica desse tensoativo aniônico. As ramificações na cadeia dificultam sua degradação, levando à persistência no meio ambiente por longos períodos. Isso levou a sua substituição na maioria dos países por tensoativos biodegradáveis, ou seja, com cadeias alquílicas lineares.",
+    "images": [],
+    "reference": ""
+  },
+  "enem_2025_linguagens_q1_ctx1": {
+    "title": "",
+    "subtitle": "",
+    "text": "Glory Ames, from the White Earth reservation, is frustrated that despite the presence of several indigenous reservations near Moorhead, local Halloween stores still feature a western section with costumes such as “pow wow princess”.\nEven worse, despite a long-running debate about racism and cultural appropriation, often prompted by backlash against celebrities and politicians for donning offensive costumes, people continue to wear such costumes.\nLast Halloween, Ames spotted a photo on Instagram of a girl dressed as a Native American with a bullet in her forehead. She immediately reported it to the social media platform and had it removed.\n“They blatantly take certain aspects of our culture, race, religion, and use it for their advantage and ignore the people living it”, said Ames.",
+    "reference": "LIU, M. C. M. Disponível em: www.washingtonpost.com. Acesso em: 12 maio 2024 (adaptado).",
     "images": []
   }
 }

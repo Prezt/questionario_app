@@ -156,7 +156,10 @@
     "test": "ENEM",
     "area": "nature",
     "answer": "c",
-    "contextId": "enem_2018_nature_q97_ctx1"
+    "contextId": "enem_2018_nature_q97_ctx1",
+    "contextIds": [
+      "enem_2018_nature_q97_ctx1"
+    ]
   },
   {
     "number": 98,
@@ -341,11 +344,14 @@
     "test": "ENEM",
     "area": "nature",
     "answer": "c",
-    "contextId": "enem_2018_nature_q105_ctx1"
+    "contextId": "enem_2018_nature_q105_ctx1",
+    "contextIds": [
+      "enem_2018_nature_q105_ctx1"
+    ]
   },
   {
     "number": 106,
-    "text": "Em populações de quais localidades se observa um processo de especiação em andamento?",
+    "text": "[Infográfico]\nEm populações de quais localidades se observa um processo de especiação em andamento?",
     "alternatives": {
       "a": "Bertioga e Marambaia; Alcobaça e Olivença.",
       "b": "Itirapina e Itapeva; Marambaia e Massambaba.",
@@ -827,7 +833,10 @@
     "year": 2018,
     "test": "ENEM",
     "area": "nature",
-    "answer": "b"
+    "answer": "b",
+    "contextIds": [
+      "enem_2018_nature_q126_ctx1"
+    ]
   },
   {
     "number": 127,
@@ -1030,6 +1039,9 @@
     "test": "ENEM",
     "area": "nature",
     "answer": "d",
-    "contextId": "enem_2018_nature_q135_ctx1"
+    "contextId": "enem_2018_nature_q135_ctx1",
+    "contextIds": [
+      "enem_2018_nature_q135_ctx1"
+    ]
   }
 ]
