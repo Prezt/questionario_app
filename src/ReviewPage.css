@@ -1,5 +1,22 @@
 /* src/ReviewPage.css */
 
+.txt-center { display: block; text-align: center; }
+
+.supsub {
+  display: inline-flex;
+  flex-direction: column;
+  font-size: 0.65em;
+  line-height: 1.2;
+  vertical-align: middle;
+  text-align: center;
+}
+.supsub sup,
+.supsub sub {
+  font-size: 1em;
+  vertical-align: baseline;
+  line-height: 1.1;
+}
+
 /* ── Shell layout ─────────────────────────────────────────────────────────── */
 .rp-shell {
   display: flex;
@@ -53,6 +70,45 @@
   cursor: pointer;
 }
 .rp-export-btn:hover { background: #334155; }
+
+/* ── Session timer ────────────────────────────────────────────────────────── */
+.rp-timer {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.rp-timer-display {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  background: #0f172a;
+  border-radius: 6px;
+  padding: 3px 10px;
+}
+.rp-timer-count { color: #94a3b8; }
+.rp-timer-sep { color: #475569; }
+.rp-timer-clock {
+  font-variant-numeric: tabular-nums;
+  font-weight: 600;
+  color: #34d399;
+  letter-spacing: 0.05em;
+}
+.rp-timer-clock--paused { color: #fbbf24; }
+.rp-timer-btn {
+  font-size: 11px;
+  padding: 3px 9px;
+  border-radius: 4px;
+  border: 1px solid #475569;
+  cursor: pointer;
+  font-family: inherit;
+}
+.rp-timer-btn--start  { background: #166534; color: #bbf7d0; border-color: #166534; }
+.rp-timer-btn--start:hover  { background: #15803d; }
+.rp-timer-btn--pause  { background: #78350f; color: #fef3c7; border-color: #78350f; }
+.rp-timer-btn--pause:hover  { background: #92400e; }
+.rp-timer-btn--finish { background: #7f1d1d; color: #fecaca; border-color: #7f1d1d; }
+.rp-timer-btn--finish:hover { background: #991b1b; }
 
 /* ── Main two-panel area ──────────────────────────────────────────────────── */
 .rp-main {

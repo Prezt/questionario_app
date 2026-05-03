@@ -778,6 +778,23 @@
   margin: 0;
 }
 
+.txt-center { display: block; text-align: center; }
+
+.supsub {
+  display: inline-flex;
+  flex-direction: column;
+  font-size: 0.65em;
+  line-height: 1.2;
+  vertical-align: middle;
+  text-align: center;
+}
+.supsub sup,
+.supsub sub {
+  font-size: 1em;
+  vertical-align: baseline;
+  line-height: 1.1;
+}
+
 .q-figure-caption {
   margin-top: 0.45rem;
   font-size: 0.88rem;

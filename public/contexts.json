@@ -2410,5 +2410,19 @@
     "text": "As abelhas utilizam a sinalização química para distinguir a abelha-rainha de uma operária, sendo capazes de reconhecer diferenças entre moléculas. A rainha produz o sinalizador químico conhecido como ácido 9-hidroxidec-2-enoico, enquanto as abelhas-operárias produzem ácido 10-hidroxidec-2-enoico. Nós podemos distinguir as abelhas-operárias e rainha por sua aparência, mas, entre si, elas usam essa sinalização química para perceber a diferença. Pode-se dizer que veem por meio da química.",
     "reference": "LE COUTEUR, R; BURRESON, J. <b>Os botões de Napoleão</b>: as 17 moléculas que mudaram a história. Rio de Janeiro: Jorge Zahar, 2006 (adaptado).",
     "images": []
+  },
+  "enem_2018_math_q165_ctx1": {
+    "title": "",
+    "subtitle": "",
+    "text": "O Salão do Automóvel de São Paulo é um evento no qual vários fabricantes expõem seus modelos mais recentes de veículos, mostrando, principalmente, suas inovações em design e tecnologia.",
+    "reference": "Disponível em: http://g1.globo.com. Acesso em: 4 fev. 2015 (adaptado).",
+    "images": []
+  },
+  "enem_2018_math_q174_ctx1": {
+    "title": "",
+    "subtitle": "",
+    "text": "Com o avanço em ciência da computação, estamos próximos do momento em que o número de transistores em um processador de um computador pessoal será da mesma ordem de grandeza que o número de neurônios em um cérebro humano, que é da ordem de 100 bilhões.\nUma das grandezas determinantes para o desempenho de um processador é a densidade de transistores, que é o número de transistores por centímetro quadrado. Em 1986, uma empresa fabricava um processador contendo 100.000 transistores distribuídos em 0,25 cm² de área. Desde então, o número de transistores por centímetro quadrado que se pode colocar em um processador dobra a cada dois anos (Lei de Moore).",
+    "reference": "Disponível em: www.pocket-lint.com. Acesso em: 1 dez. 2017 (adaptado).",
+    "images": []
   }
 }

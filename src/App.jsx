@@ -27,7 +27,12 @@ function escapeInline(text) {
     .replace(/&lt;\/i&gt;/gi, '</em>')
     .replace(/&lt;sub&gt;/gi, '<sub>')
     .replace(/&lt;\/sub&gt;/gi, '</sub>')
+    .replace(/&lt;sup&gt;/gi, '<sup>')
+    .replace(/&lt;\/sup&gt;/gi, '</sup>')
     .replace(/&lt;br\s*\/?&gt;/gi, '<br>')
+    .replace(/&lt;center&gt;/gi, '<span class="txt-center">')
+    .replace(/&lt;\/center&gt;/gi, '</span>')
+    .replace(/<sup>(.*?)<\/sup><sub>(.*?)<\/sub>/g, '<span class="supsub"><sup>$1</sup><sub>$2</sub></span>')
 }
 function parseMarkdownTable(tableLines) {
   const esc = s => s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')

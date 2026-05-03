@@ -47,6 +47,9 @@ function escapeInline(text) {
     .replace(/&lt;b&gt;/gi, '<strong>').replace(/&lt;\/b&gt;/gi, '</strong>')
     .replace(/&lt;i&gt;/gi, '<em>').replace(/&lt;\/i&gt;/gi, '</em>')
     .replace(/&lt;sub&gt;/gi, '<sub>').replace(/&lt;\/sub&gt;/gi, '</sub>')
+    .replace(/&lt;sup&gt;/gi, '<sup>').replace(/&lt;\/sup&gt;/gi, '</sup>')
+    .replace(/<sup>(.*?)<\/sup><sub>(.*?)<\/sub>/g, '<span class="supsub"><sup>$1</sup><sub>$2</sub></span>')
+    .replace(/&lt;center&gt;/gi, '<span class="txt-center">').replace(/&lt;\/center&gt;/gi, '</span>')
 }
 function parseMarkdownTable(tableLines) {
   const esc = s => s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
@@ -387,13 +390,55 @@ export default function ReviewPage() {
   }, [])
 
   // Navigation + mode state (only used after ready)
-  const [mode, setMode] = useState('queue')
+  const [mode, setMode] = useState('all')
   const [selectedFile, setSelectedFile] = useState(ALL_FILES[0])
   const [currentIndex, setCurrentIndex] = useState(0)
   const [issueFilter, setIssueFilter] = useState(null)
   const activeItemRef = useRef(null)
   const [collapsedCtx, setCollapsedCtx] = useState({})
   const [sidebarFilter, setSidebarFilter] = useState('not-ok') // 'all' | 'not-ok'
+
+  // ── Session timer ──────────────────────────────────────────────────────────
+  const [timerState, setTimerState] = useState('idle') // 'idle' | 'running' | 'paused' | 'finished'
+  const [elapsed, setElapsed] = useState(0) // seconds
+  const [sessionReviewed, setSessionReviewed] = useState(0)
+  const timerRef = useRef(null)
+  const sessionStartFlagsRef = useRef(null)
+
+  const formatTime = (s) => {
+    const h = Math.floor(s / 3600)
+    const m = Math.floor((s % 3600) / 60)
+    const sec = s % 60
+    if (h > 0) return `${h}:${String(m).padStart(2,'0')}:${String(sec).padStart(2,'0')}`
+    return `${String(m).padStart(2,'0')}:${String(sec).padStart(2,'0')}`
+  }
+
+  const startTimer = useCallback(() => {
+    if (timerState === 'idle') sessionStartFlagsRef.current = { ...flags }
+    setTimerState('running')
+    timerRef.current = setInterval(() => setElapsed(e => e + 1), 1000)
+  }, [timerState, flags])
+
+  const pauseTimer = useCallback(() => {
+    clearInterval(timerRef.current)
+    setTimerState('paused')
+  }, [])
+
+  const finishTimer = useCallback(() => {
+    clearInterval(timerRef.current)
+    setTimerState('finished')
+  }, [])
+
+  // Keep sessionReviewed count in sync while running
+  useEffect(() => {
+    if (timerState !== 'running' && timerState !== 'paused') return
+    if (!sessionStartFlagsRef.current) return
+    const startKeys = new Set(Object.keys(sessionStartFlagsRef.current))
+    const newlyReviewed = Object.keys(flags).filter(k => !startKeys.has(k)).length
+    setSessionReviewed(newlyReviewed)
+  }, [flags, timerState])
+
+  useEffect(() => () => clearInterval(timerRef.current), [])
 
   // Derive active question list
   const activeList = useMemo(() => {
@@ -421,6 +466,15 @@ export default function ReviewPage() {
         if (fa !== fb) return fa - fb
         return a._file.localeCompare(b._file) || a.number - b.number
       })
+    } else if (mode === 'all') {
+      const all = []
+      for (const filename of ALL_FILES) {
+        for (const q of (datasets[filename] ?? [])) {
+          all.push({ ...q, _file: filename })
+        }
+      }
+      const yearOf = f => parseInt(f.match(/(\d{4})/)?.[1] ?? '0')
+      return all.sort((a, b) => yearOf(b._file) - yearOf(a._file) || a.number - b.number)
     } else if (mode === 'reviewed') {
       const reviewed = []
       for (const [filename, qs] of Object.entries(datasets)) {
@@ -428,7 +482,8 @@ export default function ReviewPage() {
           if (flags[flagKey(filename, q.number, q.language)]) reviewed.push({ ...q, _file: filename })
         }
       }
-      return reviewed.sort((a, b) => a._file.localeCompare(b._file) || a.number - b.number)
+      const yearOf = f => parseInt(f.match(/(\d{4})/)?.[1] ?? '0')
+      return reviewed.sort((a, b) => yearOf(b._file) - yearOf(a._file) || a.number - b.number)
     } else {
       return (datasets[selectedFile] ?? [])
         .map(q => ({ ...q, _file: selectedFile }))
@@ -443,7 +498,7 @@ export default function ReviewPage() {
     for (const [filename, qs] of Object.entries(datasets)) {
       for (const q of qs) all.push({ ...q, _file: filename })
     }
-    return all.sort((a, b) => (a.year ?? 0) - (b.year ?? 0) || a.number - b.number || a._file.localeCompare(b._file))
+    return all.sort((a, b) => (b.year ?? 0) - (a.year ?? 0) || a.number - b.number || a._file.localeCompare(b._file))
   }, [datasets, ready])
 
   // Set of question keys that have audit issues
@@ -810,6 +865,7 @@ export default function ReviewPage() {
           value={mode}
           onChange={e => { setMode(e.target.value); setCurrentIndex(0) }}
         >
+          <option value="all">☰ Todas as questões</option>
           <option value="queue">⚠ Issue Queue ({auditReport?.summary?.totalIssues ?? '?'} flagged)</option>
           <option value="reviewed">✓ Reviewed ({Object.keys(flags).length})</option>
           <option value="file">Browse by file</option>
@@ -848,6 +904,37 @@ export default function ReviewPage() {
         <span className="rp-progress">
           {reviewedCount} / {activeList.length} reviewed
         </span>
+
+        {/* Session timer */}
+        <div className="rp-timer">
+          {(timerState === 'running' || timerState === 'paused' || timerState === 'finished') && (
+            <span className="rp-timer-display">
+              <span className="rp-timer-count">{sessionReviewed} revisadas</span>
+              <span className="rp-timer-sep">·</span>
+              <span className={`rp-timer-clock${timerState === 'paused' ? ' rp-timer-clock--paused' : ''}`}>
+                {formatTime(elapsed)}
+              </span>
+            </span>
+          )}
+          {timerState === 'idle' && (
+            <button className="rp-timer-btn rp-timer-btn--start" onClick={startTimer}>▶ Iniciar</button>
+          )}
+          {timerState === 'running' && (
+            <>
+              <button className="rp-timer-btn rp-timer-btn--pause" onClick={pauseTimer}>⏸ Pausar</button>
+              <button className="rp-timer-btn rp-timer-btn--finish" onClick={finishTimer}>■ Finalizar</button>
+            </>
+          )}
+          {timerState === 'paused' && (
+            <>
+              <button className="rp-timer-btn rp-timer-btn--start" onClick={startTimer}>▶ Continuar</button>
+              <button className="rp-timer-btn rp-timer-btn--finish" onClick={finishTimer}>■ Finalizar</button>
+            </>
+          )}
+          {timerState === 'finished' && (
+            <button className="rp-timer-btn rp-timer-btn--start" onClick={() => { setElapsed(0); setSessionReviewed(0); sessionStartFlagsRef.current = null; setTimerState('idle') }}>↺ Reiniciar</button>
+          )}
+        </div>
 
         <button
           className="rp-export-btn"
