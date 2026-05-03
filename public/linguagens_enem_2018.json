@@ -860,7 +860,7 @@
   },
   {
     "number": 32,
-    "text": "O grupo O Teatro Mágico apresenta composições autorais que têm referências estéticas do rock, do pop e da música folclórica brasileira. A originalidade dos seus shows tem relação com a ópera europeia do século XIX a partir da",
+    "text": "[Figura: Fotografia: LUCAS HALLEL. Disponivel em: www.flickr.com. Acesso em: 16 abr. 2016 (adaptado).]\nO grupo O Teatro Mágico apresenta composições autorais que têm referências estéticas do rock, do pop e da música folclórica brasileira. A originalidade dos seus shows tem relação com a ópera europeia do século XIX a partir da",
     "alternatives": {
       "a": "disposição cênica dos artistas no espaço teatral.",
       "b": "integração de diversas linguagens artísticas.",
@@ -868,7 +868,9 @@
       "d": "manutenção de um diálogo com o público.",
       "e": "adoção de um enredo como fio condutor."
     },
-    "images": [],
+    "images": [
+      "figuras/q032_2018_fig1.png"
+    ],
     "tags": [
       "música e dança",
       "gêneros textuais",
@@ -922,7 +924,10 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "b",
-    "contextIds": []
+    "contextIds": [
+      "enem_2018_linguagens_q34_ctx1",
+      "enem_2018_linguagens_q34_ctx2"
+    ]
   },
   {
     "number": 35,
@@ -967,7 +972,9 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "b",
-    "contextIds": []
+    "contextIds": [
+      "enem_2018_linguagens_q36_ctx1"
+    ]
   },
   {
     "number": 37,
@@ -990,7 +997,9 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "c",
-    "contextIds": []
+    "contextIds": [
+      "enem_2018_linguagens_q37_ctx1"
+    ]
   },
   {
     "number": 38,
@@ -1057,7 +1066,9 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "a",
-    "contextIds": []
+    "contextIds": [
+      "enem_2018_linguagens_q40_ctx1"
+    ]
   },
   {
     "number": 41,
@@ -1103,7 +1114,9 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "c",
-    "contextIds": []
+    "contextIds": [
+      "enem_2018_linguagens_q42_ctx1"
+    ]
   },
   {
     "number": 43,
@@ -1125,7 +1138,9 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "a",
-    "contextIds": []
+    "contextIds": [
+      "enem_2018_linguagens_q43_ctx1"
+    ]
   },
   {
     "number": 44,
@@ -1169,6 +1184,9 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "a",
-    "contextIds": []
+    "contextIds": [
+      "enem_2018_linguagens_q45_ctx1",
+      "enem_2018_linguagens_q45_ctx2"
+    ]
   }
 ]
