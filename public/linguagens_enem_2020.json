@@ -19,7 +19,8 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "a",
-    "contextId": "enem_2020_linguagens_q1_ctx1"
+    "contextId": "enem_2020_linguagens_q1_ctx1",
+    "language": "en"
   },
   {
     "number": 2,
@@ -43,7 +44,8 @@
     "answer": "a",
     "contextIds": [
       "enem_2020_linguagens_q2_q44_ctx1"
-    ]
+    ],
+    "language": "en"
   },
   {
     "number": 3,

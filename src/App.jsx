@@ -162,6 +162,42 @@ function GearIcon() {
   )
 }
 
+function PauseIcon() {
+  return (
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <rect x="6" y="4" width="4" height="16" />
+      <rect x="14" y="4" width="4" height="16" />
+    </svg>
+  )
+}
+
+function FlagIcon() {
+  return (
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z" />
+      <line x1="4" y1="22" x2="4" y2="15" />
+    </svg>
+  )
+}
+
+function FinishIcon() {
+  return (
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <polyline points="20 6 9 17 4 12" />
+    </svg>
+  )
+}
+
+function MenuDotsIcon() {
+  return (
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <circle cx="12" cy="5" r="1" fill="currentColor" stroke="none" />
+      <circle cx="12" cy="12" r="1" fill="currentColor" stroke="none" />
+      <circle cx="12" cy="19" r="1" fill="currentColor" stroke="none" />
+    </svg>
+  )
+}
+
 function LogoutIcon() {
   return (
     <svg
@@ -255,6 +291,7 @@ export default function App() {
   const [selectedTag, setSelectedTag] = useState(null)   // unified tag string | null
   const [expandedArea, setExpandedArea] = useState(null) // area panel open on home screen
   const [optionsOpen, setOptionsOpen] = useState(false)
+  const [headerMenuOpen, setHeaderMenuOpen] = useState(false)
 
   // Phase: 'home' | 'quiz' | 'summary' | 'login' | 'admin'
   const [phase, setPhase] = useState('login')
@@ -588,7 +625,7 @@ export default function App() {
 
   const questionIndex = useMemo(() => {
     if (!question) return -1
-    return sortedQuestions.findIndex((q) => q.number === question.number)
+    return sortedQuestions.findIndex((q) => q.number === question.number && (q.language ?? null) === (question.language ?? null))
   }, [question, sortedQuestions])
 
   const railRef = useRef(null)
@@ -601,7 +638,7 @@ export default function App() {
     if (!firstBtn) return
     const btnHeight = firstBtn.getBoundingClientRect().height
     const gap = parseFloat(getComputedStyle(railInnerRef.current).gap) || 0
-    const idx = sortedQuestions.findIndex((q) => q.number === question.number)
+    const idx = sortedQuestions.findIndex((q) => q.number === question.number && (q.language ?? null) === (question.language ?? null))
     if (idx < 0) return
     const translateY = railHeight / 2 - (idx * (btnHeight + gap) + btnHeight / 2)
     railInnerRef.current.style.transform = `translateY(${translateY}px)`
@@ -609,14 +646,14 @@ export default function App() {
 
   const next = useCallback(() => {
     if (!question || sortedQuestions.length === 0) return
-    const idx = sortedQuestions.findIndex((q) => q.number === question.number)
+    const idx = sortedQuestions.findIndex((q) => q.number === question.number && (q.language ?? null) === (question.language ?? null))
     if (idx < 0 || idx >= sortedQuestions.length - 1) return
     setQuestion(sortedQuestions[idx + 1])
   }, [question, sortedQuestions])
 
   const prev = useCallback(() => {
     if (!question || sortedQuestions.length === 0) return
-    const idx = sortedQuestions.findIndex((q) => q.number === question.number)
+    const idx = sortedQuestions.findIndex((q) => q.number === question.number && (q.language ?? null) === (question.language ?? null))
     if (idx <= 0) return
     setQuestion(sortedQuestions[idx - 1])
   }, [question, sortedQuestions])
@@ -1927,38 +1964,74 @@ export default function App() {
           </div>
         </div>
 
-        <div className="app-header-actions">
-          <button type="button" className="btn--ghost header-pause-btn" onClick={pauseQuiz}>
-            Pausar
+        {/* Desktop: icon-only buttons */}
+        <div className="app-header-actions app-header-actions--desktop">
+          <button type="button" className="header-icon-btn" onClick={pauseQuiz} aria-label="Pausar">
+            <PauseIcon />
           </button>
-          <button type="button" className="header-finish-btn" onClick={finishQuiz}>
-            Finalizar
+          <button type="button" className="header-finish-btn" onClick={finishQuiz} aria-label="Finalizar">
+            <FinishIcon />
           </button>
           <button
             type="button"
             className="notebook-toggle"
             onClick={() => { setFeedbackQuestion(question?.number ?? null); setFeedbackOpen(true) }}
-            aria-label="Enviar feedback ou reportar problema"
+            aria-label="Feedback"
           >
-            <span className="notebook-toggle-text">Feedback</span>
+            <FlagIcon />
           </button>
           <button
             type="button"
             className={`notebook-toggle ${notebookOpen ? 'active' : ''}`}
             onClick={() => setNotebookOpen((o) => !o)}
-            aria-expanded={notebookOpen}
-            aria-controls="session-notebook"
             aria-label={notebookOpen ? 'Fechar caderno' : 'Abrir caderno'}
           >
             <NotebookIcon />
-            <span className="notebook-toggle-text">Caderno</span>
           </button>
           <button type="button" className="theme-toggle" onClick={() => setDark((d) => !d)} aria-label="Alternar tema">
             {dark ? <SunIcon /> : <MoonIcon />}
           </button>
-          <button type="button" className="btn--ghost" onClick={handleLogout} aria-label="Alternar tema">
-            {<LogoutIcon />}
+          <button type="button" className="header-icon-btn" onClick={handleLogout} aria-label="Sair">
+            <LogoutIcon />
           </button>
+        </div>
+
+        {/* Mobile: ⋮ dropdown */}
+        <div className="app-header-actions app-header-actions--mobile">
+          {headerMenuOpen && (
+            <div className="header-menu-overlay" onClick={() => setHeaderMenuOpen(false)} />
+          )}
+          <button
+            type="button"
+            className={`header-menu-btn${headerMenuOpen ? ' active' : ''}`}
+            onClick={() => setHeaderMenuOpen(o => !o)}
+            aria-label="Menu"
+          >
+            <MenuDotsIcon />
+          </button>
+          {headerMenuOpen && (
+            <div className="header-menu-dropdown">
+              <button type="button" className="header-menu-item" onClick={() => { setHeaderMenuOpen(false); pauseQuiz() }}>
+                <PauseIcon /> <span>Pausar</span>
+              </button>
+              <button type="button" className="header-menu-item header-menu-item--finish" onClick={() => { setHeaderMenuOpen(false); finishQuiz() }}>
+                <FinishIcon /> <span>Finalizar</span>
+              </button>
+              <button type="button" className="header-menu-item" onClick={() => { setHeaderMenuOpen(false); setFeedbackQuestion(question?.number ?? null); setFeedbackOpen(true) }}>
+                <FlagIcon /> <span>Feedback</span>
+              </button>
+              <button type="button" className={`header-menu-item${notebookOpen ? ' active' : ''}`} onClick={() => { setHeaderMenuOpen(false); setNotebookOpen(o => !o) }}>
+                <NotebookIcon /> <span>Caderno</span>
+              </button>
+              <button type="button" className="header-menu-item" onClick={() => { setHeaderMenuOpen(false); setDark(d => !d) }}>
+                {dark ? <SunIcon /> : <MoonIcon />} <span>{dark ? 'Modo claro' : 'Modo escuro'}</span>
+              </button>
+              <div className="header-menu-divider" />
+              <button type="button" className="header-menu-item header-menu-item--danger" onClick={() => { setHeaderMenuOpen(false); handleLogout() }}>
+                <LogoutIcon /> <span>Sair</span>
+              </button>
+            </div>
+          )}
         </div>
       </header>
 

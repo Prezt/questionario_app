@@ -20,7 +20,8 @@
     "answer": "a",
     "contextIds": [
       "enem_2021_lang_q2_ctx1"
-    ]
+    ],
+    "language": "en"
   },
   {
     "number": 3,
@@ -38,7 +39,8 @@
     "year": 2021,
     "test": "ENEM",
     "area": "linguagens",
-    "answer": "a"
+    "answer": "a",
+    "language": "en"
   },
   {
     "number": 4,
@@ -59,7 +61,8 @@
     "answer": "b",
     "contextIds": [
       "enem_2021_lang_q4_ctx1"
-    ]
+    ],
+    "language": "en"
   },
   {
     "number": 5,
@@ -80,7 +83,8 @@
     "year": 2021,
     "test": "ENEM",
     "area": "linguagens",
-    "answer": "b"
+    "answer": "b",
+    "language": "en"
   },
   {
     "number": 1,
@@ -125,7 +129,7 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "a",
-    "language": "en"
+    "language": "es"
   },
   {
     "number": 3,

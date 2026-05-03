@@ -18,7 +18,8 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "b",
-    "difficulty": 4
+    "difficulty": 4,
+    "language": "es"
   },
   {
     "number": 2,
@@ -39,7 +40,8 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "b",
-    "difficulty": 6
+    "difficulty": 6,
+    "language": "es"
   },
   {
     "number": 3,
@@ -60,7 +62,8 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "d",
-    "difficulty": 5
+    "difficulty": 5,
+    "language": "es"
   },
   {
     "number": 4,
@@ -81,7 +84,8 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "a",
-    "difficulty": 5
+    "difficulty": 5,
+    "language": "es"
   },
   {
     "number": 5,
@@ -103,7 +107,8 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "b",
-    "difficulty": 5
+    "difficulty": 5,
+    "language": "es"
   },
   {
     "number": 1,
@@ -124,7 +129,8 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "b",
-    "difficulty": 4
+    "difficulty": 4,
+    "language": "en"
   },
   {
     "number": 2,
@@ -145,7 +151,8 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "b",
-    "difficulty": 6
+    "difficulty": 6,
+    "language": "en"
   },
   {
     "number": 3,
@@ -166,7 +173,8 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "d",
-    "difficulty": 5
+    "difficulty": 5,
+    "language": "en"
   },
   {
     "number": 4,
@@ -187,7 +195,8 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "a",
-    "difficulty": 5
+    "difficulty": 5,
+    "language": "en"
   },
   {
     "number": 5,
@@ -208,7 +217,8 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "b",
-    "difficulty": 4
+    "difficulty": 4,
+    "language": "en"
   },
   {
     "number": 6,
