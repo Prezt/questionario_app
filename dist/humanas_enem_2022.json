@@ -166,17 +166,15 @@
   },
   {
     "number": 54,
-    "text": "[Figura] Os caixeiros do comércio a retalho do Rio de Janeiro estiveram entre as primeiras categorias de trabalhadores a se organizar em associações e a exigir a intervenção dos poderes públicos na mediação de suas lutas por direitos. Na década de 1880, os caixeiros participaram da arena política e ganharam as ruas com vários outros como os republicanos e os abolicionistas.",
+    "text": "A atuação dos trabalhadores mencionados no texto representou, na capital do Império, um momento de",
     "alternatives": {
-      "a": "manutenção das regras patronais",
-      "b": "desprendimento das ideias liberais",
-      "c": "fortalecimento dos contratos laborais",
-      "d": "consolidação das estruturas sindicais",
-      "e": "contestação dos princípios monárquicos"
+      "a": "manutenção das regras patronais.",
+      "b": "desprendimento das ideias liberais.",
+      "c": "fortalecimento dos contratos laborais.",
+      "d": "consolidação das estruturas sindicais.",
+      "e": "contestação dos princípios monárquicos."
     },
-    "images": [
-      "figuras/q054_2022_fig1.png"
-    ],
+    "images": [],
     "tags": [
       "história do brasil república"
     ],
@@ -184,7 +182,10 @@
     "test": "ENEM",
     "area": "humanas",
     "answer": "e",
-    "difficulty": 6
+    "difficulty": 6,
+    "contextIds": [
+      "enem_2022_humanas_q54_ctx1"
+    ]
   },
   {
     "number": 55,
@@ -208,17 +209,15 @@
   },
   {
     "number": 56,
-    "text": "[Figura: TÁ ESTUDANDO, JÚNIOR? CALMA, TÔ TENTANDO ACHAR UM SINAL DE WI-FI!] A crítica contida no texto e na figura evidencia o seguinte aspecto da sociedade contemporânea:",
+    "text": "A crítica contida no texto e na figura evidência o seguinte aspecto da sociedade contemporânea:",
     "alternatives": {
       "a": "Exclusão social.",
       "b": "Expansão digital.",
       "c": "Manifestação cultural.",
       "d": "Organização espacial.",
-      "e": "Valorização intelectual."
+      "e": "Valorização intelecutal."
     },
-    "images": [
-      "figuras/q056_2022_fig1.png"
-    ],
+    "images": [],
     "tags": [
       "direitos humanos e cidadania"
     ],
@@ -226,7 +225,11 @@
     "test": "ENEM",
     "area": "humanas",
     "answer": "a",
-    "difficulty": 3
+    "difficulty": 3,
+    "contextIds": [
+      "enem_2022_humanas_q56_ctx1",
+      "enem_2022_humanas_q56_ctx2"
+    ]
   },
   {
     "number": 57,
@@ -412,19 +415,15 @@
   },
   {
     "number": 66,
-    "text": "[Figura] [Gráfico] [Infográfico] Os discursos expressam pontos de vista divergentes, respectivamente pela oposição entre ...",
+    "text": "Os discursos expressam pontos de vista divergentes, respectivamente pela oposição entre",
     "alternatives": {
-      "a": "A liberdade de gênero e controle social.",
-      "b": "B equidade de escolha e imposição cultural.",
-      "c": "C dominação de corpos e igualdade humana.",
-      "d": "D geração de oportunidade e restrição profissional.",
-      "e": "E exclusão de competências e participação política."
+      "a": "liberdade de gênero e controle social.",
+      "b": "equidade de escolha e imposição cultural.",
+      "c": "dominação de corpos e igualdade humana.",
+      "d": "geração de oportunidade e restrição profissional.",
+      "e": "exclusão de competências e participação política."
     },
-    "images": [
-      "figuras/q066_2022_fig1.png",
-      "figuras/q066_2022_fig2.png",
-      "figuras/q066_2022_fig3.png"
-    ],
+    "images": [],
     "tags": [
       "direitos humanos e cidadania"
     ],
@@ -432,7 +431,11 @@
     "test": "ENEM",
     "area": "humanas",
     "answer": "c",
-    "difficulty": 6
+    "difficulty": 6,
+    "contextIds": [
+      "enem_2022_humanas_q66_ctx1",
+      "enem_2022_humanas_q66_ctx2"
+    ]
   },
   {
     "number": 67,
@@ -457,7 +460,7 @@
   },
   {
     "number": 68,
-    "text": "[Figura] A Marinha identifica, na voz de Thomas Barnett, uma mpla região potencialmente insubmissa ou simplesmente redutível às normas gerais de funcionamento promovidas elos Estados Unidos e sancionadas pelo Fundo Monetário Internacional, pela Organização Mundial do Comércio e pelo Banco Mundial. E não necessariamente or sua consciência rebelde, mas sim, em muitos casos, ela insubstancialidade de suas instituições estatais. [Figura] As preocupações do governo estadunidense expressas o texto e no mapa evidenciam uma estratégia para",
+    "text": "As preocupações do governo estadunidense expressas o texto e no mapa evidenciam uma estratégia para",
     "alternatives": {
       "a": "compartilhamento de inovações tecnológicas.",
       "b": "promoção de independência financeira.",
@@ -465,11 +468,7 @@
       "d": "ampliação de influência econômica.",
       "e": "preservação de recursos naturais."
     },
-    "images": [
-      "figuras/q068_2022_fig1.png",
-      "figuras/q068_2022_fig2.png",
-      "figuras/q068_2022_fig3.png"
-    ],
+    "images": [],
     "tags": [
       "geopolítica e relações internacionais",
       "geopolítica e território"
@@ -478,7 +477,11 @@
     "test": "ENEM",
     "area": "humanas",
     "answer": "d",
-    "difficulty": 7
+    "difficulty": 7,
+    "contextIds": [
+      "enem_2022_humanas_q68_ctx1",
+      "enem_2022_humanas_q68_ctx2"
+    ]
   },
   {
     "number": 69,
@@ -585,7 +588,7 @@
   },
   {
     "number": 74,
-    "text": "[Figura] Uma característica regional que justifica o maior potencial anual médio para o aproveitamento de energia solar é a reduzida [Figura]",
+    "text": "[Figura: PEREIRA, E. B. et al. <b>Atlas brasileiro de energia solar</b>. Sao José dos Campos, Inpe, 2006.] \nUma característica regional que justifica o maior potencial anual médio para o aproveitamento de energia solar é a reduzida [Figura]",
     "alternatives": {
       "a": "declividade do relevo.",
       "b": "extensão longitudinal.",
@@ -594,11 +597,7 @@
       "e": "influência da continentalidade."
     },
     "images": [
-      "figuras/q074_2022_fig1.png",
-      "figuras/q074_2022_fig2.png",
-      "figuras/q074_2022_fig3.png",
-      "figuras/q074_2022_fig4.png",
-      "figuras/q074_2022_fig5.png"
+      "figuras/q074_2022_fig1.png"
     ],
     "tags": [
       "meio ambiente e sustentabilidade"
@@ -631,7 +630,7 @@
   },
   {
     "number": 76,
-    "text": "[Figura] Na construção do empreendimento descrito, destaca-se presença de",
+    "text": "Na construção do empreendimento descrito, destaca-se presença de",
     "alternatives": {
       "a": "engenheiros na execução de canais fluviais.",
       "b": "coronéis na ampliação de antigas fazendas.",
@@ -639,13 +638,7 @@
       "d": "trabalhadores na formação de novos espaços.",
       "e": "negociantes na organização de redes comerciais."
     },
-    "images": [
-      "figuras/q076_2022_fig1.png",
-      "figuras/q076_2022_fig2.png",
-      "figuras/q076_2022_fig3.png",
-      "figuras/q076_2022_fig4.png",
-      "figuras/q076_2022_fig5.png"
-    ],
+    "images": [],
     "tags": [
       "sociologia e estrutura social"
     ],
@@ -653,7 +646,10 @@
     "test": "ENEM",
     "area": "humanas",
     "answer": "d",
-    "difficulty": 4
+    "difficulty": 4,
+    "contextIds": [
+      "enem_2022_humanas_q76_ctx1"
+    ]
   },
   {
     "number": 77,
@@ -677,7 +673,7 @@
   },
   {
     "number": 78,
-    "text": "[Figura: Possível trajeto do voo MH370 da Malaysia Airlines antes da queda, em 2014]",
+    "text": "Considerando-se que a distância entre o local onde os destroços do avião foram avistados e a cidade de Perth é de 2 cm, a escala aproximada dessa representação cartográfica é: á",
     "alternatives": {
       "a": "1 : 12 500",
       "b": "1 : 125 000",
@@ -685,9 +681,7 @@
       "d": "1 : 12 500 000",
       "e": "1 : 125 000 000"
     },
-    "images": [
-      "figuras/q078_2022_fig1.png"
-    ],
+    "images": [],
     "tags": [
       "sociologia e estrutura social"
     ],
@@ -695,7 +689,10 @@
     "test": "ENEM",
     "area": "humanas",
     "answer": "e",
-    "difficulty": 5
+    "difficulty": 5,
+    "contextIds": [
+      "enem_2022_humanas_q78_ctx1"
+    ]
   },
   {
     "number": 79,
@@ -719,7 +716,7 @@
   },
   {
     "number": 80,
-    "text": "[Figura] Os vínculos entre os fenômenos indicados no trecho oram fortalecidos pelo surgimento de uma categoria de ensadores, a saber:",
+    "text": "Os vínculos entre os fenômenos indicados no trecho oram fortalecidos pelo surgimento de uma categoria de ensadores, a saber:",
     "alternatives": {
       "a": "Os epicuristas, envolvidos com o ideal de vida feliz.",
       "b": "Os estoicos, dedicados à superação dos infortúnios.",
@@ -727,9 +724,7 @@
       "d": "Os peripatéticos, empenhados na dinâmica do ensino.",
       "e": "Os poetas rapsodos, responsáveis pela narrativa do mito."
     },
-    "images": [
-      "figuras/q080_2022_fig1.png"
-    ],
+    "images": [],
     "tags": [
       "filosofia antiga e medieval"
     ],
@@ -737,7 +732,10 @@
     "test": "ENEM",
     "area": "humanas",
     "answer": "c",
-    "difficulty": 7
+    "difficulty": 7,
+    "contextIds": [
+      "enem_2022_humanas_q80_ctx1"
+    ]
   },
   {
     "number": 81,
@@ -761,7 +759,7 @@
   },
   {
     "number": 82,
-    "text": "[Figura - Mapa espacializando a ocorrência de rochas ígneas na Amazônia Legal]",
+    "text": "O mapa espacializa um recurso natural com alto potencial para ocorrência de: ",
     "alternatives": {
       "a": "Abalos sísmicos periódicos.",
       "b": "Jazidas de minerais metálicos.",
@@ -769,9 +767,7 @@
       "d": "Aquíferos sedimentares profundos.",
       "e": "Estruturas geológicas metamórficas."
     },
-    "images": [
-      "figuras/q082_2022_fig1.png"
-    ],
+    "images": [],
     "tags": [
       "geografia física e geologia"
     ],
@@ -779,7 +775,10 @@
     "test": "ENEM",
     "area": "humanas",
     "answer": "b",
-    "difficulty": 7
+    "difficulty": 7,
+    "contextIds": [
+      "enem_2022_humanas_q82_ctx1"
+    ]
   },
   {
     "number": 83,
@@ -804,7 +803,7 @@
   },
   {
     "number": 84,
-    "text": "[Figura] De que modo os textos sustentam a existência de um saber ancorado na sensibilidade?",
+    "text": "De que modo os textos sustentam a existência de um saber ancorado na sensibilidade?",
     "alternatives": {
       "a": "Admitindo o belo como fenômeno transcendental.",
       "b": "Reafirmando a vivência estética como juízo de gosto.",
@@ -812,9 +811,7 @@
       "d": "Apontando as formas de expressão como auxiliares da razão.",
       "e": "Estabelecendo a inteligência como implicação das representações."
     },
-    "images": [
-      "figuras/q084_2022_fig1.png"
-    ],
+    "images": [],
     "tags": [
       "história da cultura e arte"
     ],
@@ -822,7 +819,11 @@
     "test": "ENEM",
     "area": "humanas",
     "answer": "c",
-    "difficulty": 7
+    "difficulty": 7,
+    "contextIds": [
+      "enem_2022_humanas_q84_ctx1",
+      "enem_2022_humanas_q84_ctx2"
+    ]
   },
   {
     "number": 85,

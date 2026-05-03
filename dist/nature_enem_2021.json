@@ -232,7 +232,7 @@
     "test": "ENEM",
     "area": "nature",
     "answer": "c",
-    "contextId": "enem_2021_nature_ctx1"
+    "contextId": "enem_2021_nature_q101_q108_ctx1"
   },
   {
     "number": 102,
@@ -387,8 +387,8 @@
     "area": "nature",
     "answer": "d",
     "contextIds": [
-      "enem_2021_nature_ctx1",
-      "enem_2021_nature_ctx2"
+      "enem_2021_nature_q101_q108_ctx1",
+      "enem_2021_nature_q108_ctx1"
     ]
   },
   {
@@ -964,6 +964,6 @@
     "test": "ENEM",
     "area": "nature",
     "answer": "d",
-    "contextId": "enem_2021_nature_135_ctx"
+    "contextId": "enem_2021_nature_q135_ctx1"
   }
 ]

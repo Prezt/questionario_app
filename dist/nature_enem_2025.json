@@ -10,7 +10,7 @@
       "e": "Condutividade."
     },
     "images": [
-      "figuras/q91_carvao.png"
+      "figuras/q091_2025_fig1.png"
     ],
     "tags": [
       "química geral e inorgânica"
@@ -75,7 +75,7 @@
       "e": "0"
     },
     "images": [
-      "figuras/q94_regua.png"
+      "figuras/q094_2025_fig1.png"
     ],
     "tags": [
       "eletricidade e magnetismo"
@@ -139,7 +139,7 @@
       "e": "mantém a quantidade de anticorpos preexistentes."
     },
     "images": [
-      "figuras/q97_vacina.png"
+      "figuras/q097_2025_fig1.png"
     ],
     "tags": [
       "fisiologia humana",
@@ -308,7 +308,7 @@
       "e": "diminuição da solubilidade do gás oxigênio."
     },
     "images": [
-      "figuras/q105_usina.png"
+      "figuras/q105_2025_fig1.png"
     ],
     "tags": [
       "física nuclear e radioatividade",
@@ -332,7 +332,7 @@
       "e": "HAzO² e KCl"
     },
     "images": [
-      "figuras/q106_foto.png"
+      "figuras/q106_2025_fig1.png"
     ],
     "tags": [
       "química geral e inorgânica"
@@ -354,12 +354,12 @@
       "e": "[Opção E - machos e fêmeas com padrões mistos]"
     },
     "images": [
-      "figuras/q107_enunciado.png",
-      "figuras/q107_alt_a.png",
-      "figuras/q107_alt_b.png",
-      "figuras/q107_alt_c.png",
-      "figuras/q107_alt_d.png",
-      "figuras/q107_alt_e.png"
+      "figuras/q107_2025_fig1.png",
+      "figuras/q107_2025_fig2.png",
+      "figuras/q107_2025_fig3.png",
+      "figuras/q107_2025_fig4.png",
+      "figuras/q107_2025_fig5.png",
+      "figuras/q107_2025_fig6.png"
     ],
     "tags": [
       "genética e hereditariedade"
@@ -381,11 +381,11 @@
       "e": "[Gráfico E - força de atrito com subida e queda gradual]"
     },
     "images": [
-      "figuras/q108_alt_a.png",
-      "figuras/q108_alt_b.png",
-      "figuras/q108_alt_c.png",
-      "figuras/q108_alt_d.png",
-      "figuras/q108_alt_e.png"
+      "figuras/q108_2025_fig1.png",
+      "figuras/q108_2025_fig2.png",
+      "figuras/q108_2025_fig3.png",
+      "figuras/q108_2025_fig4.png",
+      "figuras/q108_2025_fig5.png"
     ],
     "tags": [
       "mecânica newtoniana"
@@ -407,7 +407,7 @@
       "e": "descarboxilação."
     },
     "images": [
-      "figuras/q109_estruturas.png"
+      "figuras/q109_2025_fig1.png"
     ],
     "tags": [
       "química geral e inorgânica",
@@ -451,7 +451,7 @@
       "e": "produção de chuva ácida."
     },
     "images": [
-      "figuras/q111_biodigestao.png"
+      "figuras/q111_2025_fig1.png"
     ],
     "tags": [
       "ecologia",
@@ -495,7 +495,7 @@
       "e": "5"
     },
     "images": [
-      "figuras/q113_tubo.png"
+      "figuras/q113_2025_fig1.png"
     ],
     "tags": [
       "eletricidade e magnetismo"
@@ -517,7 +517,7 @@
       "e": "reflexão e amplitude."
     },
     "images": [
-      "figuras/q114_tirinha.png"
+      "figuras/q114_2025_fig1.png"
     ],
     "tags": [
       "ondulatória e acústica"
@@ -539,7 +539,7 @@
       "e": "C₁₀H₁₈O₂"
     },
     "images": [
-      "figuras/q115_borneol.png"
+      "figuras/q115_2025_fig1.png"
     ],
     "tags": [
       "química geral e inorgânica",
@@ -624,12 +624,12 @@
       "e": "[Circuito E: 102 V, 5,3 Ω, com bomba]"
     },
     "images": [
-      "figuras/q119_enunciado.png",
-      "figuras/q119_alt_a.png",
-      "figuras/q119_alt_b.png",
-      "figuras/q119_alt_c.png",
-      "figuras/q119_alt_d.png",
-      "figuras/q119_alt_e.png"
+      "figuras/q119_2025_fig1.png",
+      "figuras/q119_2025_fig2.png",
+      "figuras/q119_2025_fig3.png",
+      "figuras/q119_2025_fig4.png",
+      "figuras/q119_2025_fig5.png",
+      "figuras/q119_2025_fig6.png"
     ],
     "tags": [
       "eletricidade e magnetismo"
@@ -651,7 +651,7 @@
       "e": "700 ms."
     },
     "images": [
-      "figuras/q120_sensor.png"
+      "figuras/q120_2025_fig1.png"
     ],
     "tags": [
       "mecânica newtoniana"
@@ -693,7 +693,7 @@
       "e": "gerar um fluxo de corrente de convecção no ar contido entre a região da bobina e o vidro cerâmico."
     },
     "images": [
-      "figuras/q122_inducao.png"
+      "figuras/q122_2025_fig1.png"
     ],
     "tags": [
       "eletricidade e magnetismo"
@@ -779,7 +779,7 @@
       "e": "170 km/h para Leste, 180 km/h para Norte e 11 km/h para cima."
     },
     "images": [
-      "figuras/q126_diagrama.png"
+      "figuras/q126_2025_fig1.png"
     ],
     "tags": [
       "mecânica newtoniana"
@@ -801,11 +801,11 @@
       "e": "[Gráfico E - com linha pontilhada em diferente posição]"
     },
     "images": [
-      "figuras/q127_alt_a.png",
-      "figuras/q127_alt_b.png",
-      "figuras/q127_alt_c.png",
-      "figuras/q127_alt_d.png",
-      "figuras/q127_alt_e.png"
+      "figuras/q127_2025_fig1.png",
+      "figuras/q127_2025_fig2.png",
+      "figuras/q127_2025_fig3.png",
+      "figuras/q127_2025_fig4.png",
+      "figuras/q127_2025_fig5.png"
     ],
     "tags": [
       "citologia",
@@ -829,7 +829,7 @@
       "e": "2 e 5."
     },
     "images": [
-      "figuras/q128_grafico.png"
+      "figuras/q128_2025_fig1.png"
     ],
     "tags": [
       "eletricidade e magnetismo",
@@ -872,11 +872,11 @@
       "e": "[Circuito E: série, Rp = 0,2 Rc]"
     },
     "images": [
-      "figuras/q130_alt_a.png",
-      "figuras/q130_alt_b.png",
-      "figuras/q130_alt_c.png",
-      "figuras/q130_alt_d.png",
-      "figuras/q130_alt_e.png"
+      "figuras/q130_2025_fig1.png",
+      "figuras/q130_2025_fig2.png",
+      "figuras/q130_2025_fig3.png",
+      "figuras/q130_2025_fig4.png",
+      "figuras/q130_2025_fig5.png"
     ],
     "tags": [
       "eletricidade e magnetismo"
@@ -939,7 +939,7 @@
       "e": "na malha de aço."
     },
     "images": [
-      "figuras/q133_filtro.png"
+      "figuras/q133_2025_fig1.png"
     ],
     "tags": [
       "química geral e inorgânica"
@@ -961,7 +961,7 @@
       "e": "Noretindrona."
     },
     "images": [
-      "figuras/q134_hormonios.png"
+      "figuras/q134_2025_fig1.png"
     ],
     "tags": [
       "química geral e inorgânica",
@@ -984,12 +984,12 @@
       "e": "[Gráfico E: final do tratamento idêntico ao início]"
     },
     "images": [
-      "figuras/q135_enunciado.png",
-      "figuras/q135_alt_a.png",
-      "figuras/q135_alt_b.png",
-      "figuras/q135_alt_c.png",
-      "figuras/q135_alt_d.png",
-      "figuras/q135_alt_e.png"
+      "figuras/q135_2025_fig1.png",
+      "figuras/q135_2025_fig2.png",
+      "figuras/q135_2025_fig3.png",
+      "figuras/q135_2025_fig4.png",
+      "figuras/q135_2025_fig5.png",
+      "figuras/q135_2025_fig6.png"
     ],
     "tags": [
       "eletricidade e magnetismo",

@@ -2,7 +2,7 @@
   {
     "number": 1,
     "language": "en",
-    "text": "Texto de M. C. M. Liu (Washington Post, 2024) sobre Glory Ames, da reserva indígena White Earth, que denuncia lojas de Halloween em Moorhead oferecerem fantasias como \"pow wow princess\" e relata o caso de uma foto no Instagram de uma menina fantasiada de nativa americana com um furo de bala na testa, que ela reportou e foi removida. Ao abordar um aspecto da celebração do Halloween, esse texto tem por objetivo",
+    "text": "Ao abordar um aspecto da celebração do Halloween, esse texto tem por objetivo",
     "alternatives": {
       "a": "denunciar a violência contra crianças indígenas.",
       "b": "descrever costumes tradicionais em celebrações indígenas.",
@@ -20,7 +20,10 @@
     "area": "linguagens",
     "test": "ENEM",
     "answer": "d",
-    "difficulty": 3
+    "difficulty": 3,
+    "contextIds": [
+      "enem_2025_linguagens_q1_ctx1"
+    ]
   },
   {
     "number": 2,
@@ -104,7 +107,7 @@
       "e": "necessidade de um produto que provoque o sono."
     },
     "images": [
-      "figuras/q5_what_is_sleep.png"
+      "figuras/q005_2025_fig1.png"
     ],
     "tags": [
       "fisiologia humana",
@@ -199,7 +202,7 @@
       "e": "enunciados interrogativos em situação comunicativa com um interlocutor."
     },
     "images": [
-      "figuras/q4_es_charge_paz.png"
+      "figuras/q004_2025_fig1.png"
     ],
     "tags": [
       "gêneros textuais",
@@ -255,7 +258,7 @@
     "area": "linguagens",
     "test": "ENEM",
     "answer": "e",
-    "contextId": "enem_2025_linguagens_ctx1",
+    "contextId": "enem_2025_linguagens_q6_q10_ctx1",
     "difficulty": 5
   },
   {
@@ -276,7 +279,7 @@
     "area": "linguagens",
     "test": "ENEM",
     "answer": "c",
-    "contextId": "enem_2025_linguagens_ctx1",
+    "contextId": "enem_2025_linguagens_q6_q10_ctx1",
     "difficulty": 5
   },
   {
@@ -299,7 +302,7 @@
     "area": "linguagens",
     "test": "ENEM",
     "answer": "d",
-    "contextId": "enem_2025_linguagens_ctx1",
+    "contextId": "enem_2025_linguagens_q6_q10_ctx1",
     "difficulty": 4
   },
   {
@@ -322,7 +325,7 @@
     "area": "linguagens",
     "test": "ENEM",
     "answer": "c",
-    "contextId": "enem_2025_linguagens_ctx1",
+    "contextId": "enem_2025_linguagens_q6_q10_ctx1",
     "difficulty": 4
   },
   {
@@ -345,7 +348,7 @@
     "area": "linguagens",
     "test": "ENEM",
     "answer": "e",
-    "contextId": "enem_2025_linguagens_ctx1",
+    "contextId": "enem_2025_linguagens_q6_q10_ctx1",
     "difficulty": 7
   },
   {
@@ -367,7 +370,7 @@
     "area": "linguagens",
     "test": "ENEM",
     "answer": "b",
-    "contextId": "enem_2025_linguagens_ctx2",
+    "contextId": "enem_2025_linguagens_q11_ctx1",
     "difficulty": 6
   },
   {
@@ -390,7 +393,10 @@
     "area": "linguagens",
     "test": "ENEM",
     "answer": "c",
-    "difficulty": 3
+    "difficulty": 3,
+    "contextIds": [
+      "enem_2025_linguagens_q12_ctx1"
+    ]
   },
   {
     "number": 13,
@@ -412,7 +418,10 @@
     "area": "linguagens",
     "test": "ENEM",
     "answer": "e",
-    "difficulty": 5
+    "difficulty": 5,
+    "contextIds": [
+      "enem_2025_linguagens_q13_ctx1"
+    ]
   },
   {
     "number": 14,
@@ -425,7 +434,7 @@
       "e": "evidenciar a influência de Pessoa na literatura brasileira."
     },
     "images": [
-      "figuras/q14_bienal_livro.png"
+      "figuras/q014_2025_fig1.png"
     ],
     "tags": [
       "gêneros textuais",
@@ -449,7 +458,7 @@
       "e": "imagens tradicionais preservam memórias afetivas."
     },
     "images": [
-      "figuras/q15_dalton_paula.png"
+      "figuras/q015_2025_fig1.png"
     ],
     "tags": [
       "artes visuais",
@@ -480,7 +489,10 @@
     "area": "linguagens",
     "test": "ENEM",
     "answer": "e",
-    "difficulty": 7
+    "difficulty": 7,
+    "contextIds": [
+      "enem_2025_linguagens_q16_ctx1"
+    ]
   },
   {
     "number": 17,
@@ -502,7 +514,10 @@
     "area": "linguagens",
     "test": "ENEM",
     "answer": "c",
-    "difficulty": 6
+    "difficulty": 6,
+    "contextIds": [
+      "enem_2025_linguagens_q17_ctx1"
+    ]
   },
   {
     "number": 18,
@@ -525,7 +540,11 @@
     "area": "linguagens",
     "test": "ENEM",
     "answer": "a",
-    "difficulty": 3
+    "difficulty": 3,
+    "contextIds": [
+      "enem_2025_linguagens_q18_ctx1",
+      "enem_2025_linguagens_q18_ctx2"
+    ]
   },
   {
     "number": 19,
@@ -547,7 +566,10 @@
     "area": "linguagens",
     "test": "ENEM",
     "answer": "e",
-    "difficulty": 3
+    "difficulty": 3,
+    "contextIds": [
+      "enem_2025_linguagens_q19_ctx1"
+    ]
   },
   {
     "number": 20,
@@ -596,8 +618,8 @@
     "number": 22,
     "text": "A originalidade do trabalho dos artistas da Ilha do Ferro se dá pela",
     "contextIds": [
-      "enem_2025_linguagens_ctx12a",
-      "enem_2025_linguagens_ctx12b"
+      "enem_2025_linguagens_q22_ctx1",
+      "enem_2025_linguagens_q22_ctx2"
     ],
     "alternatives": {
       "a": "reutilização de materiais para redução do impacto ambiental.",
@@ -619,8 +641,8 @@
   {
     "number": 23,
     "contextIds": [
-      "enem_2025_linguagens_ctx13a",
-      "enem_2025_linguagens_ctx13b"
+      "enem_2025_linguagens_q23_ctx1",
+      "enem_2025_linguagens_q23_ctx2"
     ],
     "text": "A utilização de recursos visuais como suturas, cortes e ruínas por Adriana Varejão, na obra Azulejaria em carne viva, remete à(s)",
     "alternatives": {
@@ -652,7 +674,7 @@
       "e": "valorizar o trabalho de agências internacionais na luta contra a discriminação racial."
     },
     "images": [
-      "figuras/q24_unicef.png"
+      "figuras/q024_2025_fig1.png"
     ],
     "tags": [
       "direitos humanos e cidadania",
@@ -698,7 +720,7 @@
       "e": "paladares diversificados entre diferentes estados."
     },
     "images": [
-      "figuras/q26_canjica.png"
+      "figuras/q026_2025_fig1.png"
     ],
     "tags": [
       "cultura e identidade",
@@ -728,7 +750,7 @@
       "ética e política"
     ],
     "contextIds": [
-      "enem_2025_linguagens_ctx14"
+      "enem_2025_linguagens_q27_ctx1"
     ],
     "year": 2025,
     "area": "linguagens",
@@ -811,7 +833,7 @@
       "e": "os desejos de compartilhar vivências com os amigos."
     },
     "images": [
-      "figuras/q31_dezenove.png"
+      "figuras/q031_2025_fig1.png"
     ],
     "tags": [
       "comunicação e mídia",
@@ -856,7 +878,7 @@
       "e": "dar visibilidade a estudos e pesquisas do setor de segurança."
     },
     "images": [
-      "figuras/q33_violencia.png"
+      "figuras/q033_2025_fig1.png"
     ],
     "tags": [
       "direitos humanos e cidadania",
@@ -879,7 +901,7 @@
       "e": "a linguagem utilizada volta-se para si mesma."
     },
     "images": [
-      "figuras/q34_galileu_cover.png"
+      "figuras/q034_2025_fig1.png"
     ],
     "tags": [
       "gêneros textuais",
@@ -1032,7 +1054,7 @@
       "e": "criação de figuras fantásticas baseadas em formas animais."
     },
     "images": [
-      "figuras/q41_tatu_kamayura.png"
+      "figuras/q041_2025_fig1.png"
     ],
     "tags": [
       "artes visuais",
@@ -1120,7 +1142,7 @@
       "e": "apontar para a dificuldade de compreensão do termo."
     },
     "images": [
-      "figuras/q45_gufra.png"
+      "figuras/q045_2025_fig1.png"
     ],
     "tags": [
       "artes visuais",

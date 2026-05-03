@@ -1,7 +1,7 @@
 [
   {
     "number": 1,
-    "text": "A relação dos vocábulos shower, bus e homeless, no texto, refere-se a",
+    "text": "A relacao dos vocabulos <i>shower</i>, <i>bus</i> e <i>homeless</i>, no texto, refere-se a",
     "alternatives": {
       "a": "empregar moradores de rua em lava a jatos para ônibus",
       "b": "criar acesso a banhos gratuitos para moradores de rua",
@@ -19,8 +19,10 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "b",
-    "contextIds": ["enem_2018_linguagens_q1_ctx1_en"],
-    "language": "en"
+    "language": "en",
+    "contextIds": [
+      "enem_2018_linguagens_q1_ctx1_en"
+    ]
   },
   {
     "number": 2,
@@ -42,8 +44,10 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "b",
-    "contextId": "enem_2018_linguagens_es_ctx2",
-    "language": "es"
+    "contextIds": [
+      "enem_2018_linguagens_q2_ctx1_en"
+    ],
+    "language": "en"
   },
   {
     "number": 3,
@@ -66,7 +70,9 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "d",
-    "contextId": "enem_2018_linguagens_ctx3",
+    "contextIds": [
+      "enem_2018_linguagens_q3_ctx1_en"
+    ],
     "language": "en"
   },
   {
@@ -116,7 +122,9 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "c",
-    "contextId": "enem_2018_linguagens_q5_ctx1_en",
+    "contextIds": [
+      "enem_2018_linguagens_q5_ctx1_en"
+    ],
     "language": "en"
   },
   {
@@ -139,7 +147,9 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "b",
-    "contextId": "enem_2018_linguagens_ctx1",
+    "contextIds": [
+      "enem_2018_linguagens_q1_ctx1_es"
+    ],
     "language": "es"
   },
   {
@@ -162,8 +172,10 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "b",
-    "contextId": "enem_2018_linguagens_es_ctx1",
-    "language": "es"
+    "language": "es",
+    "contextIds": [
+      "enem_2018_linguagens_q2_ctx1_es"
+    ]
   },
   {
     "number": 3,
@@ -185,8 +197,11 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "d",
-    "contextId": "enem_2018_linguagens_es_ctx3",
-    "language": "es"
+    "contextId": "enem_2018_linguagens_q3_ctx1_es",
+    "language": "es",
+    "contextIds": [
+      "enem_2018_linguagens_q3_ctx1_es"
+    ]
   },
   {
     "number": 4,
@@ -210,7 +225,10 @@
     "area": "linguagens",
     "answer": "e",
     "contextId": "enem_2018_linguagens_q4_ctx1_es",
-    "language": "es"
+    "language": "es",
+    "contextIds": [
+      "enem_2018_linguagens_q4_ctx1_es"
+    ]
   },
   {
     "number": 5,
@@ -232,7 +250,9 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "c",
-    "contextId": "enem_2018_linguagens_ctx1",
+    "contextIds": [
+      "enem_2018_linguagens_q5_ctx1_es"
+    ],
     "language": "es"
   },
   {
@@ -255,7 +275,10 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "c",
-    "contextId": "enem_2018_linguagens_q6_ctx1"
+    "contextId": "enem_2018_linguagens_q6_ctx1",
+    "contextIds": [
+      "enem_2018_linguagens_q6_ctx1"
+    ]
   },
   {
     "number": 7,
@@ -276,7 +299,10 @@
     "year": 2018,
     "test": "ENEM",
     "area": "linguagens",
-    "answer": "e"
+    "answer": "e",
+    "contextIds": [
+      "enem_2018_linguagens_q7_ctx1"
+    ]
   },
   {
     "number": 8,
@@ -299,7 +325,10 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "c",
-    "contextId": "enem_2018_linguagens_8_ctx1"
+    "contextId": "enem_2018_linguagens_q8_ctx1",
+    "contextIds": [
+      "enem_2018_linguagens_q8_ctx1"
+    ]
   },
   {
     "number": 9,
@@ -321,7 +350,9 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "b",
-    "contextId": "enem_2018_linguagens_ctx1"
+    "contextIds": [
+      "enem_2018_linguagens_q9_ctx1"
+    ]
   },
   {
     "number": 10,
@@ -343,7 +374,10 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "a",
-    "contextId": "enem_2018_linguagens_10_ctx1"
+    "contextId": "enem_2018_linguagens_q10_ctx1",
+    "contextIds": [
+      "enem_2018_linguagens_q10_ctx1"
+    ]
   },
   {
     "number": 11,
@@ -366,7 +400,8 @@
     "area": "linguagens",
     "answer": "b",
     "contextIds": [
-      "enem_2018_linguagens_ctx1"
+      "enem_2018_linguagens_q11_ctx1_1",
+      "enem_2018_linguagens_q11_ctx1_2"
     ]
   },
   {
@@ -390,7 +425,10 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "d",
-    "contextId": "enem_2018_linguagens_12_ctx1"
+    "contextId": "enem_2018_linguagens_q12_ctx1",
+    "contextIds": [
+      "enem_2018_linguagens_q12_ctx1"
+    ]
   },
   {
     "number": 13,
@@ -413,7 +451,8 @@
     "area": "linguagens",
     "answer": "b",
     "contextIds": [
-      "enem_2018_linguagens_ctx1"
+      "enem_2018_linguagens_q13_ctx1_1",
+      "enem_2018_linguagens_q13_ctx1_2"
     ]
   },
   {
@@ -436,7 +475,10 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "e",
-    "contextId": "enem_2018_linguagens_14_ctx1"
+    "contextId": "enem_2018_linguagens_q14_ctx1",
+    "contextIds": [
+      "enem_2018_linguagens_q14_ctx1"
+    ]
   },
   {
     "number": 15,
@@ -458,7 +500,10 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "d",
-    "contextId": "enem_2018_linguagens_q15"
+    "contextId": "enem_2018_linguagens_q15_ctx1",
+    "contextIds": [
+      "enem_2018_linguagens_q15_ctx1"
+    ]
   },
   {
     "number": 16,
@@ -480,7 +525,9 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "a",
-    "contextId": "enem_2018_linguagens_ctx1"
+    "contextIds": [
+      "enem_2018_lang_q16_ctx1"
+    ]
   },
   {
     "number": 17,
@@ -503,7 +550,10 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "c",
-    "contextId": "enem_2018_linguagens_q17_ctx1"
+    "contextId": "enem_2018_linguagens_q17_ctx1",
+    "contextIds": [
+      "enem_2018_linguagens_q17_ctx1"
+    ]
   },
   {
     "number": 18,
@@ -526,7 +576,10 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "d",
-    "contextId": "enem_2018_linguagens_q18_ctx1"
+    "contextId": "enem_2018_linguagens_q18_ctx1",
+    "contextIds": [
+      "enem_2018_linguagens_q18_ctx1"
+    ]
   },
   {
     "number": 19,
@@ -547,7 +600,10 @@
     "year": 2018,
     "test": "ENEM",
     "area": "linguagens",
-    "answer": "d"
+    "answer": "d",
+    "contextIds": [
+      "enem_2018_lang_q19_ctx1"
+    ]
   },
   {
     "number": 20,
@@ -570,11 +626,13 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "b",
-    "contextId": "enem_2018_linguagens_ctx1"
+    "contextIds": [
+      "enem_2018_lang_q20_ctx1"
+    ]
   },
   {
     "number": 21,
-    "text": "O uso da norma-padrão na letra do Hino Nacional do Brasil é justificado por tratar-se de um(a)",
+    "text": "O uso da norma-padrão na letra do <i>Hino Nacional do Brasil</i> é justificado por tratar-se de um(a)",
     "alternatives": {
       "a": "reverência de um povo a seu país.",
       "b": "gênero solene de característica protocolar.",
@@ -592,11 +650,14 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "b",
-    "contextId": "enem_2018_linguagens_q21_ctx1"
+    "contextId": "enem_2018_linguagens_q21_ctx1",
+    "contextIds": [
+      "enem_2018_linguagens_q21_ctx1"
+    ]
   },
   {
     "number": 22,
-    "text": "A fotografia exibe a fachada de um supermercado em Foz do Iguaçu, cuja localização transfronteiriça é marcada tanto pelo limite com Argentina e Paraguai quanto pela presença de outros povos. [Figura: fachada de supermercado] Essa fachada revela o(a)",
+    "text": "[Figura]\nA fotografia exibe a fachada de um supermercado em Foz do Iguaçu, cuja localização transfronteiriça é marcada tanto pelo limite com Argentina e Paraguai quanto pela presença de outros povos. Essa fachada revela o(a)",
     "alternatives": {
       "a": "apagamento da identidade linguística.",
       "b": "planejamento linguístico no espaço urbano.",
@@ -637,7 +698,9 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "e",
-    "contextId": "enem_2018_linguagens_ctx1"
+    "contextIds": [
+      "enem_2018_lang_q23_ctx1"
+    ]
   },
   {
     "number": 24,
@@ -660,11 +723,13 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "a",
-    "contextId": "enem_2018_linguagens_ctx1"
+    "contextIds": [
+      "enem_2018_lang_q24_ctx1"
+    ]
   },
   {
     "number": 25,
-    "text": "A imagem integra uma adaptação em quadrinhos da obra Grande sertão: veredas, de Guimarães Rosa. Na representação gráfica, a inter-relação de diferentes linguagens caracteriza-se por\n\n[Figura: Adaptação em quadrinhos de Grande sertão: veredas]",
+    "text": "[Figura: Adaptação em quadrinhos de Grande sertão: veredas]\n\nA imagem integra uma adaptação em quadrinhos da obra Grande sertão: veredas, de Guimarães Rosa. Na representação gráfica, a inter-relação de diferentes linguagens caracteriza-se por",
     "alternatives": {
       "a": "romper com a linearidade das ações da narrativa literária.",
       "b": "ilustrar de modo fidedigno passagens representativas da história.",
@@ -688,7 +753,7 @@
   },
   {
     "number": 26,
-    "text": "Tanto os Jogos Olímpicos quanto os Paralímpicos são mais que uma corrida por recordes, medalhas e busca da excelência. Por trás deles está a filosofia do barão Pierre de Coubertin, fundador do Movimento Olímpico. Como educador, ele viu nos Jogos a oportunidade para que os povos desenvolvessem valores, que poderiam ser aplicados não somente ao esporte, mas à educação e à sociedade. Existem atualmente sete valores associados aos Jogos. Os valores olímpicos são: a amizade, a excelência e o respeito, enquanto os valores paralímpicos são: a determinação, a coragem, a igualdade e a inspiração.\n\nNo contexto das aulas de Educação Física escolar, os valores olímpicos e paralímpicos podem ser identificados quando o colega",
+    "text": "No contexto das aulas de Educação Física escolar, os valores olímpicos e paralímpicos podem ser identificados quando o colega",
     "alternatives": {
       "a": "procura entender o próximo, assumindo atitudes positivas como simpatia, empatia, honestidade, compaixão, confiança e solidariedade, o que caracteriza o valor da igualdade.",
       "b": "faz com que todos possam ser iguais e receber o mesmo tratamento, assegurando imparcialidade, oportunidades e tratamentos iguais para todos, o que caracteriza o valor da amizade.",
@@ -705,7 +770,10 @@
     "year": 2018,
     "test": "ENEM",
     "area": "linguagens",
-    "answer": "e"
+    "answer": "e",
+    "contextIds": [
+      "enem_2018_lang_q26_ctx1"
+    ]
   },
   {
     "number": 27,
@@ -728,7 +796,10 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "c",
-    "contextId": "enem_2018_linguagens_q27_ctx1"
+    "contextId": "enem_2018_linguagens_q27_ctx1",
+    "contextIds": [
+      "enem_2018_linguagens_q27_ctx1"
+    ]
   },
   {
     "number": 28,
@@ -750,7 +821,9 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "a",
-    "contextId": "enem_2018_linguagens_ctx1"
+    "contextIds": [
+      "enem_2018_lang_q28_ctx1"
+    ]
   },
   {
     "number": 29,
@@ -773,7 +846,8 @@
     "area": "linguagens",
     "answer": "c",
     "contextIds": [
-      "enem_2018_linguagens_ctx1"
+      "enem_2018_lang_q29_ctx1",
+      "enem_2018_lang_q29_ctx2"
     ]
   },
   {
@@ -796,7 +870,10 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "e",
-    "contextId": "enem_2018_linguagens_q30_ctx1"
+    "contextId": "enem_2018_linguagens_q30_ctx1",
+    "contextIds": [
+      "enem_2018_linguagens_q30_ctx1"
+    ]
   },
   {
     "number": 31,
@@ -818,11 +895,14 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "d",
-    "contextId": "enem_2018_linguagens_ctx31"
+    "contextId": "enem_2018_linguagens_q31_ctx1",
+    "contextIds": [
+      "enem_2018_linguagens_q31_ctx1"
+    ]
   },
   {
     "number": 32,
-    "text": "O grupo O Teatro Mágico apresenta composições autorais que têm referências estéticas do rock, do pop e da música folclórica brasileira. A originalidade dos seus shows tem relação com a ópera europeia do século XIX a partir da",
+    "text": "[Figura: Fotografia: LUCAS HALLEL. Disponivel em: www.flickr.com. Acesso em: 16 abr. 2016 (adaptado).]\nO grupo O Teatro Mágico apresenta composições autorais que têm referências estéticas do rock, do pop e da música folclórica brasileira. A originalidade dos seus shows tem relação com a ópera europeia do século XIX a partir da",
     "alternatives": {
       "a": "disposição cênica dos artistas no espaço teatral.",
       "b": "integração de diversas linguagens artísticas.",
@@ -830,7 +910,9 @@
       "d": "manutenção de um diálogo com o público.",
       "e": "adoção de um enredo como fio condutor."
     },
-    "images": [],
+    "images": [
+      "figuras/q032_2018_fig1.png"
+    ],
     "tags": [
       "música e dança",
       "gêneros textuais",
@@ -862,7 +944,10 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "e",
-    "contextId": "enem_2018_linguagens_ctx33"
+    "contextId": "enem_2018_linguagens_q33_ctx1",
+    "contextIds": [
+      "enem_2018_linguagens_q33_ctx1"
+    ]
   },
   {
     "number": 34,
@@ -885,7 +970,8 @@
     "area": "linguagens",
     "answer": "b",
     "contextIds": [
-      "enem_2018_linguagens_ctx1"
+      "enem_2018_linguagens_q34_ctx1",
+      "enem_2018_linguagens_q34_ctx2"
     ]
   },
   {
@@ -908,7 +994,10 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "a",
-    "contextId": "enem_2018_linguagens_35_ctx1"
+    "contextId": "enem_2018_linguagens_q35_ctx1",
+    "contextIds": [
+      "enem_2018_linguagens_q35_ctx1"
+    ]
   },
   {
     "number": 36,
@@ -931,7 +1020,9 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "b",
-    "contextId": "enem_2018_linguagens_ctx1"
+    "contextIds": [
+      "enem_2018_linguagens_q36_ctx1"
+    ]
   },
   {
     "number": 37,
@@ -954,7 +1045,9 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "c",
-    "contextId": "enem_2018_linguagens_ctx1"
+    "contextIds": [
+      "enem_2018_linguagens_q37_ctx1"
+    ]
   },
   {
     "number": 38,
@@ -977,7 +1070,10 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "b",
-    "contextId": "enem_2018_linguagens_38_ctx1"
+    "contextId": "enem_2018_linguagens_q38_ctx1",
+    "contextIds": [
+      "enem_2018_linguagens_q38_ctx1"
+    ]
   },
   {
     "number": 39,
@@ -999,7 +1095,10 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "e",
-    "contextId": "enem_2018_linguagens_ctx39"
+    "contextId": "enem_2018_linguagens_q39_ctx1",
+    "contextIds": [
+      "enem_2018_linguagens_q39_ctx1"
+    ]
   },
   {
     "number": 40,
@@ -1021,7 +1120,9 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "a",
-    "contextId": "enem_2018_linguagens_ctx1"
+    "contextIds": [
+      "enem_2018_linguagens_q40_ctx1"
+    ]
   },
   {
     "number": 41,
@@ -1044,7 +1145,10 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "e",
-    "contextId": "enem_2018_linguagens_q41_ctx1"
+    "contextId": "enem_2018_linguagens_q41_ctx1",
+    "contextIds": [
+      "enem_2018_linguagens_q41_ctx1"
+    ]
   },
   {
     "number": 42,
@@ -1067,7 +1171,9 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "c",
-    "contextId": "enem_2018_linguagens_ctx1"
+    "contextIds": [
+      "enem_2018_linguagens_q42_ctx1"
+    ]
   },
   {
     "number": 43,
@@ -1089,7 +1195,9 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "a",
-    "contextId": "enem_2018_linguagens_ctx1"
+    "contextIds": [
+      "enem_2018_linguagens_q43_ctx1"
+    ]
   },
   {
     "number": 44,
@@ -1111,7 +1219,10 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "d",
-    "contextId": "enem_2018_linguagens_44_ctx1"
+    "contextId": "enem_2018_linguagens_q44_ctx1",
+    "contextIds": [
+      "enem_2018_linguagens_q44_ctx1"
+    ]
   },
   {
     "number": 45,
@@ -1134,7 +1245,8 @@
     "area": "linguagens",
     "answer": "a",
     "contextIds": [
-      "enem_2018_linguagens_ctx1"
+      "enem_2018_linguagens_q45_ctx1",
+      "enem_2018_linguagens_q45_ctx2"
     ]
   }
 ]

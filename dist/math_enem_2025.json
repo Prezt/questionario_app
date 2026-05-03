@@ -31,7 +31,7 @@
       "e": "46/90"
     },
     "images": [
-      "figuras/q137_infografico.png"
+      "figuras/q137_2025_fig1.png"
     ],
     "tags": [
       "aritmética e números",
@@ -55,12 +55,12 @@
       "e": "[Projeções ortogonais - opção E]"
     },
     "images": [
-      "figuras/q138_enunciado.png",
-      "figuras/q138_alt_a.png",
-      "figuras/q138_alt_b.png",
-      "figuras/q138_alt_c.png",
-      "figuras/q138_alt_d.png",
-      "figuras/q138_alt_e.png"
+      "figuras/q138_2025_fig1.png",
+      "figuras/q138_2025_fig2.png",
+      "figuras/q138_2025_fig3.png",
+      "figuras/q138_2025_fig4.png",
+      "figuras/q138_2025_fig5.png",
+      "figuras/q138_2025_fig6.png"
     ],
     "tags": [
       "geometria analítica",
@@ -83,7 +83,7 @@
       "e": "60."
     },
     "images": [
-      "figuras/q139_ciclovia.png"
+      "figuras/q139_2025_fig1.png"
     ],
     "tags": [
       "geometria plana",
@@ -168,7 +168,7 @@
       "e": "Biscoito de água e sal."
     },
     "images": [
-      "figuras/q143_rotulos.png"
+      "figuras/q143_2025_fig1.png"
     ],
     "tags": [
       "aritmética e números",
@@ -211,7 +211,7 @@
       "e": "diminui de forma proporcional ao tempo, tanto entre t₁ e t₂ quanto após t₂."
     },
     "images": [
-      "figuras/q145_grafico.png"
+      "figuras/q145_2025_fig1.png"
     ],
     "tags": [
       "estatística",
@@ -254,7 +254,7 @@
       "e": "40."
     },
     "images": [
-      "figuras/q147_graficos.png"
+      "figuras/q147_2025_fig1.png"
     ],
     "tags": [
       "aritmética e números",
@@ -277,7 +277,7 @@
       "e": "V."
     },
     "images": [
-      "figuras/q148_telas.png"
+      "figuras/q148_2025_fig1.png"
     ],
     "tags": [
       "aritmética e números"
@@ -299,7 +299,7 @@
       "e": "110"
     },
     "images": [
-      "figuras/q149_poliedro.png"
+      "figuras/q149_2025_fig1.png"
     ],
     "tags": [
       "geometria espacial"
@@ -383,7 +383,7 @@
       "e": "y = 3x − 16"
     },
     "images": [
-      "figuras/q153_plano.png"
+      "figuras/q153_2025_fig1.png"
     ],
     "tags": [
       "geometria analítica",
@@ -407,7 +407,7 @@
       "e": "romance, pois é o que apresenta o menor estoque de livros de autores brasileiros."
     },
     "images": [
-      "figuras/q154_grafico.png"
+      "figuras/q154_2025_fig1.png"
     ],
     "tags": [
       "estatística"
@@ -449,7 +449,7 @@
       "e": "1 : 150"
     },
     "images": [
-      "figuras/q156_sol.png"
+      "figuras/q156_2025_fig1.png"
     ],
     "tags": [
       "aritmética e números"
@@ -535,7 +535,7 @@
       "e": "D = 30 + tg[(1/2)(T − 5/2)]"
     },
     "images": [
-      "figuras/q160_grafico.png"
+      "figuras/q160_2025_fig1.png"
     ],
     "tags": [
       "estatística",
@@ -559,7 +559,7 @@
       "e": "T."
     },
     "images": [
-      "figuras/q161_grade.png"
+      "figuras/q161_2025_fig1.png"
     ],
     "tags": [
       "cartografia",
@@ -605,7 +605,7 @@
       "e": "240"
     },
     "images": [
-      "figuras/q163_graficos.png"
+      "figuras/q163_2025_fig1.png"
     ],
     "tags": [
       "aritmética e números",
@@ -628,7 +628,7 @@
       "e": "45 e 6 horas."
     },
     "images": [
-      "figuras/q164_rota.png"
+      "figuras/q164_2025_fig1.png"
     ],
     "tags": [
       "geometria plana",
@@ -671,7 +671,7 @@
       "e": "15"
     },
     "images": [
-      "figuras/q166_corrida.png"
+      "figuras/q166_2025_fig1.png"
     ],
     "tags": [
       "aritmética e números",
@@ -695,7 +695,7 @@
       "e": "30"
     },
     "images": [
-      "figuras/q167_graficos.png"
+      "figuras/q167_2025_fig1.png"
     ],
     "tags": [
       "aritmética e números",
@@ -740,7 +740,7 @@
       "e": "[Gráfico E: produção em toneladas - 8, 6,6, 11,25, 11,25, 10]"
     },
     "images": [
-      "figuras/q169_alternativas.png"
+      "figuras/q169_2025_fig1.png"
     ],
     "tags": [
       "aritmética e números",
@@ -763,7 +763,7 @@
       "e": "2."
     },
     "images": [
-      "figuras/q170_caixa.png"
+      "figuras/q170_2025_fig1.png"
     ],
     "tags": [
       "aritmética e números",
@@ -828,7 +828,7 @@
       "e": "qualquer um dos dois, pois apresentam áreas de suas seções transversais com medidas iguais."
     },
     "images": [
-      "figuras/q173_tuneis.png"
+      "figuras/q173_2025_fig1.png"
     ],
     "tags": [
       "aritmética e números",
@@ -913,7 +913,7 @@
       "e": "1 134"
     },
     "images": [
-      "figuras/q177_medalha.png"
+      "figuras/q177_2025_fig1.png"
     ],
     "tags": [
       "geometria analítica",
@@ -978,7 +978,7 @@
       "e": "99 + 4n"
     },
     "images": [
-      "figuras/q180_diagrama.png"
+      "figuras/q180_2025_fig1.png"
     ],
     "tags": [
       "sequências e progressões",

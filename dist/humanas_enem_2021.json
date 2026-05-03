@@ -85,8 +85,8 @@
     "area": "humanas",
     "answer": "c",
     "contextIds": [
-      "enem_2021_humanas_ctx1",
-      "enem_2021_humanas_ctx2"
+      "enem_2021_humanas_q49_q81_ctx1",
+      "enem_2021_humanas_q49_q50_ctx1"
     ]
   },
   {
@@ -107,8 +107,8 @@
     "area": "humanas",
     "answer": "b",
     "contextIds": [
-      "enem_2021_humanas_ctx1",
-      "enem_2021_humanas_ctx2"
+      "enem_2021_humanas_q49_q81_ctx1",
+      "enem_2021_humanas_q49_q50_ctx1"
     ]
   },
   {
@@ -131,7 +131,7 @@
     "test": "ENEM",
     "area": "humanas",
     "answer": "a",
-    "contextId": "enem_2021_humanas_ctx1"
+    "contextId": "enem_2021_humanas_q49_q81_ctx1"
   },
   {
     "number": 52,
@@ -158,11 +158,11 @@
     "number": 53,
     "text": "Ao destacar as expressões e vivências populares do cotidiano, o texto mobiliza os seguintes aspectos da diversidade regional:",
     "alternatives": {
-      "a": "Alianças agetivas conectadas ao ritual matrimonial.",
-      "b": "Praticas místicas associadas ao patrimonio cultural.",
-      "c": "Manifestacoes teatrais atreladas ao imaginario politico.",
-      "d": "Narrativas filmicas relacionas as interperies climaticas",
-      "e": "Argumentacoes literarias interligadas as catastrofes ambientais."
+      "a": "Alianças afetivas conectadas ao ritual matrimonial.",
+      "b": "Práticas místicas associadas ao patrimônio cultural.",
+      "c": "Manifestações teatrais atreladas ao imaginario político.",
+      "d": "Narrativas fílmicas relacionas as intempéries climáticas",
+      "e": "Argumentações literarias interligadas as catástrofes ambientais."
     },
     "images": [],
     "tags": [
@@ -300,13 +300,13 @@
   },
   {
     "number": 60,
-    "text": "E dar muito mais do que receber\n\nPovo marcado\n\nA peleja do diabo com o dono do céu\n\nQual é a letra da canção lançada em 1979?",
+    "text": "Qual comportamento coletivo é criticado no trecho da letra da canção lancada em 1979?",
     "alternatives": {
-      "a": "",
-      "b": "",
-      "c": "",
-      "d": "",
-      "e": ""
+      "a": "Militancia política.",
+      "b": "Passividade social.",
+      "c": "Altruismo religioso.",
+      "d": "Autocontrole moral.",
+      "e": "Inconformismo eleitoral."
     },
     "images": [],
     "tags": [
@@ -317,7 +317,10 @@
     "year": 2021,
     "test": "ENEM",
     "area": "humanas",
-    "answer": "b"
+    "answer": "b",
+    "contextIds": [
+      "enem_2021_humanas_q60_ctx1"
+    ]
   },
   {
     "number": 61,
@@ -656,7 +659,7 @@
     "test": "ENEM",
     "area": "humanas",
     "answer": "b",
-    "contextId": "enem_2021_humanas_ctx1"
+    "contextId": "enem_2021_humanas_q49_q81_ctx1"
   },
   {
     "number": 77,
@@ -767,7 +770,7 @@
     "test": "ENEM",
     "area": "humanas",
     "answer": "b",
-    "contextId": "enem_2021_humanas_ctx1"
+    "contextId": "enem_2021_humanas_q49_q81_ctx1"
   },
   {
     "number": 82,
@@ -792,13 +795,13 @@
   },
   {
     "number": 83,
-    "text": "O texto apresentado não é legível devido a problemas graves de extração ou digitalização. Não é possível extrair uma questão válida desta imagem.",
+    "text": "Para o povo Woyo, os artefatos culturais mencionados no texto cumprem a função de uma",
     "alternatives": {
-      "a": "",
-      "b": "",
-      "c": "",
-      "d": "",
-      "e": ""
+      "a": "pedagogia dos costumes sociais.",
+      "b": "imposição das formas de comunicação.",
+      "c": "desvalorização dos comportamentos da juventude.",
+      "d": "destituição dos valores do matrimonio.",
+      "e": "etnografia das celebrações religiosas."
     },
     "images": [],
     "tags": [],
@@ -806,17 +809,20 @@
     "year": 2021,
     "test": "ENEM",
     "area": "humanas",
-    "answer": "a"
+    "answer": "a",
+    "contextIds": [
+      "enem_2021_humanas_q83_ctx1"
+    ]
   },
   {
     "number": 84,
-    "text": "[CORRUPTED TEXT - UNABLE TO EXTRACT]",
+    "text": "O ritual mencionado no texto atribui à manifestação cultural de grupos indígenas do Nordeste brasileiro a função de",
     "alternatives": {
-      "a": "[CORRUPTED]",
-      "b": "[CORRUPTED]",
-      "c": "[CORRUPTED]",
-      "d": "[CORRUPTED]",
-      "e": "[CORRUPTED]"
+      "a": "celebrar a história oficial.",
+      "b": "estimular a coesão social.",
+      "c": "superar a atividade artesanal.",
+      "d": "manipular a memória individual.",
+      "e": "modernizar o comércio tradicional."
     },
     "images": [],
     "tags": [],
@@ -824,7 +830,10 @@
     "year": 2021,
     "test": "ENEM",
     "area": "humanas",
-    "answer": "b"
+    "answer": "b",
+    "contextIds": [
+      "enem_2021_humanas_q84_ctx1"
+    ]
   },
   {
     "number": 85,
@@ -911,19 +920,21 @@
     "test": "ENEM",
     "area": "humanas",
     "answer": "e",
-    "contextId": "enem_2021_humanas_ctx88"
+    "contextId": "enem_2021_humanas_q88_ctx1"
   },
   {
     "number": 89,
-    "text": "Movimento de EQUINÓCIO 21 de março SOLSTÍCIO 21 de junho",
+    "text": "<b>Movimento de translação da terra</b>\n[Figura: Disponivel em www.cdcc.usp.br. Acesso em 27, jul. 2010 (adaptado).]\nConsiderando as informações apresentadas, o predio do Congresso Nacional em Brasilia, no dia 21 de junho às 12 horas, projetará sua sombra para a direção   ",
     "alternatives": {
-      "a": "",
-      "b": "",
-      "c": "",
-      "d": "",
-      "e": ""
+      "a": "norte.",
+      "b": "sul.",
+      "c": "leste.",
+      "d": "oeste.",
+      "e": "norteste."
     },
-    "images": [],
+    "images": [
+      "figuras/q089_2021_fig1.png"
+    ],
     "tags": [
       "Geografia: geografia física e geologia",
       "climatologia"

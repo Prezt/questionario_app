@@ -1,7 +1,7 @@
 [
   {
     "number": 46,
-    "text": "No Segundo Congresso Internacional de Ciência Geográficas, em 1875, a que compareceram presidente da República, o governador de Paris e o presidente da Assembleia, o discurso inaugural do almirante La Roucière-Le Noury expôs a atitude predominante no encontro: \"Cavalheiros, a Providência nos ditou a obrigação de conhecer e conquistar a terra. Essa ordem suprema é um dos deveres imperativos inscritos em nossas inteligências e nossas atividades. A geografia, essa ciência que inspira tão bela devoção e em cujo nome foram sacrificadas tantas vítimas, tornou-se a filosofia da terra\".\nNo contexto histórico apresentado, a exaltação da ciência geográfica decorre do seu uso para o(a)",
+    "text": "No contexto histórico apresentado, a exaltação da ciência geográfica decorre do seu uso para o(a)",
     "alternatives": {
       "a": "preservação cultural dos territórios ocupados.",
       "b": "formação humanitária da sociedade europeia.",
@@ -18,11 +18,14 @@
     "year": 2018,
     "test": "ENEM",
     "area": "humanas",
-    "answer": "c"
+    "answer": "c",
+    "contextIds": [
+      "enem_2018_humanas_q46_ctx1"
+    ]
   },
   {
     "number": 47,
-    "text": "A existência em Jerusalém de um hospital voltado para o alojamento e o cuidado dos peregrinos, assim como daqueles entre eles que estavam cansados ou doentes, fortaleceu o elo entre a obra de assistência e de caridade e a Terra Santa. Ao fazer, em 1113, do Hospital de Jerusalém um estabelecimento central da ordem, Pascoal II estimulava a filiação dos hospitalários do Ocidente a ele, sobretudo daqueles que estavam ligados à peregrinação na Terra Santa ou em outro lugar. A militarização do Hospital de Jerusalém não diminuiu a vocação caritativa primitiva, mas a fortaleceu. O acontecimento descrito vincula-se ao fenômeno ocidental do(a)",
+    "text": "O acontecimento descrito vincula-se ao fenômeno ocidental do(a)",
     "alternatives": {
       "a": "surgimento do monasticismo guerreiro, ocasionado pelas cruzadas.",
       "b": "descentralização do poder eclesiástico, produzido pelo feudalismo.",
@@ -64,7 +67,10 @@
     "test": "ENEM",
     "area": "humanas",
     "answer": "c",
-    "contextId": "enem_2018_humanas_q48_ctx1"
+    "contextId": "enem_2018_humanas_q48_ctx1",
+    "contextIds": [
+      "enem_2018_humanas_q48_ctx1"
+    ]
   },
   {
     "number": 49,
@@ -86,7 +92,10 @@
     "test": "ENEM",
     "area": "humanas",
     "answer": "d",
-    "contextId": "enem_2018_humanas_q49_ctx1"
+    "contextId": "enem_2018_humanas_q49_ctx1",
+    "contextIds": [
+      "enem_2018_humanas_q49_ctx1"
+    ]
   },
   {
     "number": 50,
@@ -110,8 +119,8 @@
     "area": "humanas",
     "answer": "d",
     "contextIds": [
-      "enem_2018_humanas_ctx1",
-      "enem_2018_humanas_ctx2"
+      "enem_2018_humanas_q50_ctx1_1",
+      "enem_2018_humanas_q50_ctx1_2"
     ]
   },
   {
@@ -134,7 +143,10 @@
     "test": "ENEM",
     "area": "humanas",
     "answer": "b",
-    "contextId": "enem_2018_humanas_51_ctx1"
+    "contextId": "enem_2018_humanas_q51_ctx1",
+    "contextIds": [
+      "enem_2018_humanas_q51_ctx1"
+    ]
   },
   {
     "number": 52,
@@ -157,8 +169,8 @@
     "area": "humanas",
     "answer": "d",
     "contextIds": [
-      "enem_2018_humanas_ctx1",
-      "enem_2018_humanas_ctx2"
+      "enem_2018_humanas_q52_ctx1",
+      "enem_2018_humanas_q52_ctx2"
     ]
   },
   {
@@ -181,7 +193,10 @@
     "test": "ENEM",
     "area": "humanas",
     "answer": "d",
-    "contextId": "enem_2018_humanas_q53_ctx1"
+    "contextId": "enem_2018_humanas_q53_ctx1",
+    "contextIds": [
+      "enem_2018_humanas_q53_ctx1"
+    ]
   },
   {
     "number": 54,
@@ -204,8 +219,8 @@
     "area": "humanas",
     "answer": "e",
     "contextIds": [
-      "enem_2018_humanas_54_ctx1",
-      "enem_2018_humanas_54_ctx2"
+      "enem_2018_humanas_q54_ctx1",
+      "enem_2018_humanas_q54_ctx2"
     ]
   },
   {
@@ -228,20 +243,27 @@
     "test": "ENEM",
     "area": "humanas",
     "answer": "c",
-    "contextId": "enem_2018_humanas_55"
+    "contextId": "enem_2018_humanas_q55_ctx1",
+    "contextIds": [
+      "enem_2018_humanas_q55_ctx1"
+    ]
   },
   {
     "number": 56,
-    "text": "Anamorfose é a transformação cartográfica espacial em que a forma dos objetos é distorcida, de forma a realçar o tema. A área das unidades espaciais às quais o tema se refere é alterada de forma proporcional ao respectivo valor.\n\nA técnica descrita foi aplicada na seguinte forma de representação do espaço:\n\n[Figura: cinco mapas representando diferentes técnicas cartográficas]",
+    "text": "Anamorfose é a transformação cartográfica espacial em que a forma dos objetos é distorcida, de forma a realçar o tema. A área das unidades espaciais às quais o tema se refere é alterada de forma proporcional ao respectivo valor.\n\nA técnica descrita foi aplicada na seguinte forma de representação do espaço:",
     "alternatives": {
-      "a": "[Mapa A - gráfico de linhas com valores numéricos]",
-      "b": "[Mapa B - gráfico de barras com valores numéricos]",
-      "c": "[Mapa C - mapa com países nomeados: Canadá, Estados Unidos, Cuba, República Dominicana, México, Guatemala, Venezuela, Colômbia, Brasil, Equador, Peru, Chile, Argentina]",
-      "d": "[Mapa D - representação cartográfica distorcida por tamanho]",
-      "e": "[Mapa E - representação cartográfica adicional]"
+      "a": "",
+      "b": "",
+      "c": "",
+      "d": "",
+      "e": ""
     },
     "images": [
-      "figuras/q056_2018_fig1.png"
+      "figuras/q056_2018_fig2.png",
+      "figuras/q056_2018_fig3.png",
+      "figuras/q056_2018_fig4.png",
+      "figuras/q056_2018_fig5.png",
+      "figuras/q056_2018_fig6.png"
     ],
     "tags": [
       "cartografia",
@@ -273,7 +295,10 @@
     "test": "ENEM",
     "area": "humanas",
     "answer": "e",
-    "contextId": "enem_2018_humanas_ctx57"
+    "contextId": "enem_2018_humanas_q57_ctx1",
+    "contextIds": [
+      "enem_2018_humanas_q57_ctx1"
+    ]
   },
   {
     "number": 58,
@@ -295,7 +320,10 @@
     "test": "ENEM",
     "area": "humanas",
     "answer": "d",
-    "contextId": "enem_2018_humanas_ctx1"
+    "contextId": null,
+    "contextIds": [
+      "enem_2018_humanas_q58_ctx1"
+    ]
   },
   {
     "number": 59,
@@ -317,11 +345,14 @@
     "test": "ENEM",
     "area": "humanas",
     "answer": "e",
-    "contextId": "enem_2018_humanas_ctx59"
+    "contextId": "enem_2018_humanas_q59_ctx1",
+    "contextIds": [
+      "enem_2018_humanas_q59_ctx1"
+    ]
   },
   {
     "number": 60,
-    "text": "Em Beirute, no Líbano, quando perguntado sobre onde se encontram os refugiados sírios, a resposta do homem é imediata: \"em todos os lugares e em lugar nenhum\". Andando ao acaso, não é raro ver, sob um prédio ou num canto de calçada, ao abrigo do vento, uma família refugiada em volta de uma refeição frugal posta sobre jornais como se fossem guardanapos. Também se vê de vez em quando uma tenda com a sigla ACNUR (Alto Comissariado das Nações Unidas para Refugiados), erguida em um dos raros terrenos vagos da capital. O cenário descrito aponta para uma crise humanitária que é explicada pelo processo de",
+    "text": "O cenário descrito aponta para uma crise humanitária que é explicada pelo processo de",
     "alternatives": {
       "a": "migração massiva de pessoas atingidas por catástrofe natural.",
       "b": "hibridização cultural de grupos caracterizados por homogeneidade social.",
@@ -338,7 +369,10 @@
     "year": 2018,
     "test": "ENEM",
     "area": "humanas",
-    "answer": "e"
+    "answer": "e",
+    "contextIds": [
+      "enem_2018_humanas_q60_ctx1"
+    ]
   },
   {
     "number": 61,
@@ -367,7 +401,7 @@
   },
   {
     "number": 62,
-    "text": "A situação demográfica de Israel é muito particular. Desde 1967, a esquerda sionista afirma que Israel deveria se desfazer rapidamente da Cisjordânia e da Faixa de Gaza, argumentando a partir de uma lógica demográfica aparentemente inexorável. Devido à taxa de nascimento árabe ser muito mais elevada, a anexação dos territórios palestinos, formal ou informal, acarretaria dentro de uma ou duas gerações uma maioria árabe \"entre o rio e o mar\". A preocupação apresentada no texto revela um aspecto da condução política desse Estado identificado ao(à)",
+    "text": "A preocupação apresentada no texto revela um aspecto da condução política desse Estado identificado ao(à)",
     "alternatives": {
       "a": "abdicação da interferência militar em conflito local.",
       "b": "busca da preeminência étnica sobre o espaço nacional.",
@@ -384,11 +418,14 @@
     "year": 2018,
     "test": "ENEM",
     "area": "humanas",
-    "answer": "b"
+    "answer": "b",
+    "contextIds": [
+      "enem_2018_humanas_q62_ctx1"
+    ]
   },
   {
     "number": 63,
-    "text": "Qual característica do meio físico é condição necessária para a distribuição espacial do fenômeno representado?\n\n[Figura: Trajetória de ciclones tropicais]",
+    "text": "[Figura: Disponível em: http://globalwarmingart.com. Acesso em: 12 jul. 2015 (adaptado)]\nQual característica do meio físico é condição necessária para a distribuição espacial do fenômeno representado?",
     "alternatives": {
       "a": "Cobertura vegetal com porte arbóreo.",
       "b": "Barreiras orográficas com altitudes elevadas.",
@@ -430,7 +467,10 @@
     "test": "ENEM",
     "area": "humanas",
     "answer": "e",
-    "contextId": "enem_2018_humanas_q64_ctx1"
+    "contextId": "enem_2018_humanas_q64_ctx1",
+    "contextIds": [
+      "enem_2018_humanas_q64_ctx1"
+    ]
   },
   {
     "number": 65,
@@ -452,11 +492,14 @@
     "test": "ENEM",
     "area": "humanas",
     "answer": "a",
-    "contextId": "enem_2018_humanas_65_ctx1"
+    "contextId": "enem_2018_humanas_q65_ctx1",
+    "contextIds": [
+      "enem_2018_humanas_q65_ctx1"
+    ]
   },
   {
     "number": 66,
-    "text": "O século XVIII é, por diversas razões, um século diferenciado. Razão e experimentação se aliavam no que se acreditava ser o verdadeiro caminho para o estabelecimento do conhecimento científico, por tanto tempo almejado. O fato, a análise e a indução passavam a ser parceiros fundamentais da razão. É ainda no século XVIII que o homem começa a tomar consciência de sua situação na história. No ambiente cultural do Antigo Regime, a discussão filosófica mencionada no texto tinha como uma de suas características a",
+    "text": "No ambiente cultural do Antigo Regime, a discussão filosófica mencionada no texto tinha como uma de suas características a",
     "alternatives": {
       "a": "aproximação entre inovação e saberes antigos.",
       "b": "conciliação entre revelação e metafísica platônica.",
@@ -474,7 +517,10 @@
     "year": 2018,
     "test": "ENEM",
     "area": "humanas",
-    "answer": "e"
+    "answer": "e",
+    "contextIds": [
+      "enem_2018_humanas_q66_ctx1"
+    ]
   },
   {
     "number": 67,
@@ -496,7 +542,10 @@
     "test": "ENEM",
     "area": "humanas",
     "answer": "e",
-    "contextId": "enem_2018_humanas_67_ctx1"
+    "contextId": "enem_2018_humanas_q67_ctx1",
+    "contextIds": [
+      "enem_2018_humanas_q67_ctx1"
+    ]
   },
   {
     "number": 68,
@@ -518,7 +567,10 @@
     "test": "ENEM",
     "area": "humanas",
     "answer": "c",
-    "contextId": "enem_2018_humanas_q68_ctx1"
+    "contextId": "enem_2018_humanas_q68_ctx1",
+    "contextIds": [
+      "enem_2018_humanas_q68_ctx1"
+    ]
   },
   {
     "number": 69,
@@ -540,7 +592,10 @@
     "test": "ENEM",
     "area": "humanas",
     "answer": "b",
-    "contextId": "enem_2018_humanas_q69_ctx1"
+    "contextId": "enem_2018_humanas_q69_ctx1",
+    "contextIds": [
+      "enem_2018_humanas_q69_ctx1"
+    ]
   },
   {
     "number": 70,
@@ -563,7 +618,10 @@
     "test": "ENEM",
     "area": "humanas",
     "answer": "b",
-    "contextId": "enem_2018_humanas_q70_ctx1"
+    "contextId": "enem_2018_humanas_q70_ctx1",
+    "contextIds": [
+      "enem_2018_humanas_q70_ctx1"
+    ]
   },
   {
     "number": 71,
@@ -585,7 +643,10 @@
     "test": "ENEM",
     "area": "humanas",
     "answer": "e",
-    "contextId": "enem_2018_humanas_71_ctx1"
+    "contextId": "enem_2018_humanas_q71_ctx1",
+    "contextIds": [
+      "enem_2018_humanas_q71_ctx1"
+    ]
   },
   {
     "number": 72,
@@ -608,7 +669,10 @@
     "test": "ENEM",
     "area": "humanas",
     "answer": "b",
-    "contextId": "enem_2018_humanas_ctx72"
+    "contextId": "enem_2018_humanas_q72_ctx1",
+    "contextIds": [
+      "enem_2018_humanas_q72_ctx1"
+    ]
   },
   {
     "number": 73,
@@ -631,13 +695,13 @@
     "area": "humanas",
     "answer": "e",
     "contextIds": [
-      "enem_2018_humanas_ctx1",
-      "enem_2018_humanas_ctx2"
+      "enem_2018_humanas_q73_ctx1",
+      "enem_2018_humanas_q73_ctx2"
     ]
   },
   {
     "number": 74,
-    "text": "[Figura: imagem de cartilha escolar]\n\nEssa imagem foi impressa em cartilha escolar durante a vigência do Estado Novo com o intuito de",
+    "text": "[Figura: Disponível em: http://cpdoc.fgv.br. Acesso em: 6 dez. 2017.]\n\nEssa imagem foi impressa em cartilha escolar durante a vigência do Estado Novo com o intuito de",
     "alternatives": {
       "a": "destacar a sabedoria inata do líder governamental.",
       "b": "atender a necessidade familiar de obediência infantil.",
@@ -660,7 +724,7 @@
   },
   {
     "number": 75,
-    "text": "Os países industriais adotaram uma concepção diferente das relações familiares e do lugar da fecundidade na vida familiar e social. A preocupação de garantir uma transmissão integral das vantagens econômicas e sociais adquiridas tem como resultado uma ação voluntária de limitação do número de nascimentos.\n\nEm meados do século XX, o fenômeno social descrito contribuiu para o processo europeu de",
+    "text": "Em meados do século XX, o fenômeno social descrito contribuiu para o processo europeu de",
     "alternatives": {
       "a": "estabilização da pirâmide etária.",
       "b": "conclusão da transição demográfica.",
@@ -677,7 +741,10 @@
     "year": 2018,
     "test": "ENEM",
     "area": "humanas",
-    "answer": "b"
+    "answer": "b",
+    "contextIds": [
+      "enem_2018_humanas_q75_ctx1"
+    ]
   },
   {
     "number": 76,
@@ -699,11 +766,14 @@
     "test": "ENEM",
     "area": "humanas",
     "answer": "e",
-    "contextId": "enem_2018_humanas_q76_ctx1"
+    "contextId": "enem_2018_humanas_q76_ctx1",
+    "contextIds": [
+      "enem_2018_humanas_q76_ctx1"
+    ]
   },
   {
     "number": 77,
-    "text": "A presunção de que a superfície das chapadas e chapadões representa uma velha peneplanície é corroborada pelo fato de que ela é coberta por acumulações superficiais, tais como massas de areia, camadas de cascalhos e seixos e pela ocorrência generalizada de concreções ferruginosas que formam uma crosta laterítica denominada \"canga\". Qual tipo climático favorece o processo de alteração do solo descrito no texto?",
+    "text": "Qual tipo climático favorece o processo de alteração do solo descrito no texto?",
     "alternatives": {
       "a": "Árido, com déficit hídrico.",
       "b": "Subtropical, com baixas temperaturas.",
@@ -720,11 +790,14 @@
     "year": 2018,
     "test": "ENEM",
     "area": "humanas",
-    "answer": "d"
+    "answer": "d",
+    "contextIds": [
+      "enem_2018_humanas_q77_ctx1"
+    ]
   },
   {
     "number": 78,
-    "text": "O marco inicial das discussões parlamentares em torno do direito do voto feminino são os debates que antecederam a Constituição de 1824, que não trazia qualquer impedimento ao exercício dos direitos políticos por mulheres, mas, por outro lado, também não era explícita quanto à possibilidade desse exercício. Foi somente em 1932, dois anos antes de estabelecido o voto aos 18 anos, que as mulheres obtiveram o direito de votar, o que veio a se concretizar no ano seguinte. Isso ocorreu a partir da aprovação do Código Eleitoral de 1932. Um dos fatores que contribuíram para a efetivação da medida mencionada no texto foi a",
+    "text": "Um dos fatores que contribuíram para a efetivação da medida mencionada no texto foi a",
     "alternatives": {
       "a": "superação da cultura patriarcal.",
       "b": "influência de igrejas protestantes.",
@@ -741,11 +814,14 @@
     "year": 2018,
     "test": "ENEM",
     "area": "humanas",
-    "answer": "e"
+    "answer": "e",
+    "contextIds": [
+      "enem_2018_humanas_q78_ctx1"
+    ]
   },
   {
     "number": 79,
-    "text": "A quem não basta pouco, nada basta.\nREmanescente do período helenístico, a máxima apresentada valoriza a seguinte virtude:",
+    "text": "Remanescente do período helenístico, a máxima apresentada valoriza a seguinte virtude:",
     "alternatives": {
       "a": "Esperança, tida como confiança no porvir.",
       "b": "Justiça, interpretada como retidão de caráter.",
@@ -762,7 +838,10 @@
     "year": 2018,
     "test": "ENEM",
     "area": "humanas",
-    "answer": "c"
+    "answer": "c",
+    "contextIds": [
+      "enem_2018_humanas_q79_ctx1"
+    ]
   },
   {
     "number": 80,
@@ -784,7 +863,10 @@
     "test": "ENEM",
     "area": "humanas",
     "answer": "b",
-    "contextId": "enem_2018_humanas_80_ctx1"
+    "contextId": "enem_2018_humanas_q80_ctx1",
+    "contextIds": [
+      "enem_2018_humanas_q80_ctx1"
+    ]
   },
   {
     "number": 81,
@@ -807,8 +889,8 @@
     "area": "humanas",
     "answer": "e",
     "contextIds": [
-      "enem_2018_humanas_ctx81_1",
-      "enem_2018_humanas_ctx81_2"
+      "enem_2018_humanas_q81_ctx1",
+      "enem_2018_humanas_q81_ctx2"
     ]
   },
   {
@@ -833,8 +915,8 @@
     "area": "humanas",
     "answer": "b",
     "contextIds": [
-      "enem_2018_humanas_ctx1",
-      "enem_2018_humanas_ctx2"
+      "enem_2018_humanas_q82_ctx1",
+      "enem_2018_humanas_q82_ctx2"
     ]
   },
   {
@@ -857,7 +939,10 @@
     "test": "ENEM",
     "area": "humanas",
     "answer": "d",
-    "contextId": "enem_2018_humanas_ctx1"
+    "contextId": null,
+    "contextIds": [
+      "enem_2018_humanas_q83_ctx1"
+    ]
   },
   {
     "number": 84,
@@ -879,7 +964,10 @@
     "test": "ENEM",
     "area": "humanas",
     "answer": "c",
-    "contextId": "enem_2018_humanas_84_ctx1"
+    "contextId": "enem_2018_humanas_q84_ctx1",
+    "contextIds": [
+      "enem_2018_humanas_q84_ctx1"
+    ]
   },
   {
     "number": 85,
@@ -901,7 +989,10 @@
     "test": "ENEM",
     "area": "humanas",
     "answer": "a",
-    "contextId": "enem_2018_humanas_85_ctx1"
+    "contextId": "enem_2018_humanas_q85_ctx1",
+    "contextIds": [
+      "enem_2018_humanas_q85_ctx1"
+    ]
   },
   {
     "number": 86,
@@ -923,7 +1014,10 @@
     "test": "ENEM",
     "area": "humanas",
     "answer": "a",
-    "contextId": "enem_2018_humanas_86_ctx1"
+    "contextId": "enem_2018_humanas_q86_ctx1",
+    "contextIds": [
+      "enem_2018_humanas_q86_ctx1"
+    ]
   },
   {
     "number": 87,
@@ -946,7 +1040,10 @@
     "test": "ENEM",
     "area": "humanas",
     "answer": "b",
-    "contextId": "enem_2018_humanas_87_ctx1"
+    "contextId": "enem_2018_humanas_q87_ctx1",
+    "contextIds": [
+      "enem_2018_humanas_q87_ctx1"
+    ]
   },
   {
     "number": 88,
@@ -968,11 +1065,14 @@
     "test": "ENEM",
     "area": "humanas",
     "answer": "c",
-    "contextId": "enem_2018_humanas_q88_ctx1"
+    "contextId": "enem_2018_humanas_q88_ctx1",
+    "contextIds": [
+      "enem_2018_humanas_q88_ctx1"
+    ]
   },
   {
     "number": 89,
-    "text": "No início da década de 1990, dois biólogos importantes aceitaram o conceito de \"produção sustentável\" que previa quantos indivíduos poderiam ser explorados de forma sustentável baseado nas suas taxas de reprodução. O modelo foi contestado por pesquisadores que afirmavam que estavam caçando acima do sustentável. A limitação do modelo anterior da caça dependia da existência de áreas de refúgio e conectividade entre populações, levando a um novo modelo batizado de \"fonte-ralo\" proposto dez anos após o primeiro.\n\nNo contexto da produção científica, a necessidade de reformulação de um modelo teórico é determinada pelo confronto com um(a)",
+    "text": "No contexto da produção científica, a necessidade de reformulação de um modelo teórico é determinada pelo confronto com um(a)",
     "alternatives": {
       "a": "conclusão operacional obtida por lógica dedutiva.",
       "b": "visão de mundo marcada por preconceitos morais.",
@@ -991,11 +1091,14 @@
     "year": 2018,
     "test": "ENEM",
     "area": "humanas",
-    "answer": "d"
+    "answer": "d",
+    "contextIds": [
+      "enem_2018_humanas_q89_ctx1"
+    ]
   },
   {
     "number": 90,
-    "text": "Um dos teóricos da democracia moderna, Hans Kelsen, considera elemento essencial da democracia real (não da democracia ideal, que não existe em lugar algum) o ato da seleção dos líderes, ou seja, a eleição. Exemplar, neste sentido, é a afirmação de um juiz da Corte Suprema dos Estados Unidos, por ocasião de uma eleição de 1902: \"A cabine eleitoral é o templo das instituições americanas; cada um de nós é um sacerdote, ao qual é confiada a guarda da arca da aliança e cada um oficia do seu próprio altar\".\n\nAs metáforas utilizadas no texto referem-se a uma concepção de democracia fundamentada no(a)",
+    "text": "As metáforas utilizadas no texto referem-se a uma concepção de democracia fundamentada no(a)",
     "alternatives": {
       "a": "justificação teísta do direito.",
       "b": "rigidez da hierarquia de classe.",
@@ -1013,6 +1116,9 @@
     "year": 2018,
     "test": "ENEM",
     "area": "humanas",
-    "answer": "e"
+    "answer": "e",
+    "contextIds": [
+      "enem_2018_humanas_q90_ctx1"
+    ]
   }
 ]

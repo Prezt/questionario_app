@@ -1,7 +1,7 @@
 [
   {
     "number": 136,
-    "text": "A Transferência Eletrônica Disponível (TED) é um transação financeira de valores entre diferentes bancos. Um economista decide analisar os valores enviados por meio de TEDs entre cinco bancos (1, 2, 3, 4 e 5) durante um mês. Para isso, ele dispõe esses valores em uma matriz A = [a_ij], em que 1 ≤ i ≤ 5 e 1 ≤ j ≤ 5, e o elemento a_ij corresponde ao total proveniente das operações feitas via TED, em milhão de real, transferidos do banco i para o banco j durante o mês. Observe que os elementos a_ii = 0, uma vez que TED é uma transferência entre bancos distintos. Esta é a matriz obtida para essa análise:\n\n[Matriz A com 5 linhas e 5 colunas: linha 1: 0 2 2 ?, ?; linha 2: 0 0 2 1 0; linha 3: 1 2 0 1 1; linha 4: 0 2 2 0 0; linha 5: 3 0 1 1 0]\n\nCom base nessas informações, o banco que transferiu a maior quantia via TED é o banco",
+    "text": "A Transferência Eletrônica Disponível (TED) é um transação financeira de valores entre diferentes bancos. Um economista decide analisar os valores enviados por meio de TEDs entre cinco bancos (1, 2, 3, 4 e 5) durante um mês. Para isso, ele dispõe esses valores em uma matriz A = [a<sub>ij</sub>], em que 1 ≤ i ≤ 5 e 1 ≤ j ≤ 5, e o elemento a<sub>ij</sub> corresponde ao total proveniente das operações feitas via TED, em milhão de real, transferidos do banco i para o banco j durante o mês. Observe que os elementos a<sub>ii</sub> = 0, uma vez que TED é uma transferência entre bancos distintos. Esta é a matriz obtida para essa análise:\n\n[Figura: Matriz]\n\nCom base nessas informações, o banco que transferiu a maior quantia via TED é o banco",
     "alternatives": {
       "a": "1",
       "b": "2",
@@ -9,7 +9,9 @@
       "d": "4",
       "e": "5"
     },
-    "images": [],
+    "images": [
+      "figuras/q136_2018_fig1.png"
+    ],
     "tags": [
       "álgebra",
       "estatística"
@@ -22,7 +24,7 @@
   },
   {
     "number": 137,
-    "text": "Um contrato de empréstimo prevê que quando uma parcela é paga de forma antecipada, conceder-se-á uma redução de juros de acordo com o período de antecipação. Nesse caso, paga-se o valor presente, que é o valor naquele momento, de uma quantia que deveria ser paga em uma data futura. Um valor presente P submetido a juros compostos com taxa i, por um período de tempo n, produz um valor futuro V determinado pela fórmula V = P · (1 + i)^n. Em um contrato de empréstimo com sessenta parcelas fixas mensais, de R$ 820,00, a uma taxa de juros de 1,32% ao mês, junto com a trigésima parcela será paga antecipadamente uma outra parcela, desde que o desconto seja superior a 25% do valor da parcela. Utilize 0,2877 como aproximação para ln(4/3) e 0,0131 como aproximação para ln(1,0132). A primeira das parcelas que poderá ser antecipada junto com a 30ª é a",
+    "text": "Um contrato de empréstimo prevê que quando uma parcela é paga de forma antecipada, conceder-se-á uma redução de juros de acordo com o período de antecipação. Nesse caso, paga-se o valor presente, que é o valor naquele momento, de uma quantia que deveria ser paga em uma data futura. Um valor presente P submetido a juros compostos com taxa i, por um período de tempo n, produz um valor futuro V determinado pela fórmula \nV = P · (1 + i)<sup>n</sup>. \nEm um contrato de empréstimo com sessenta parcelas fixas mensais, de R$ 820,00, a uma taxa de juros de 1,32% ao mês, junto com a trigésima parcela será paga antecipadamente uma outra parcela, desde que o desconto seja superior a 25% do valor da parcela. \nUtilize 0,2877 como aproximação para ln(4/3) e 0,0131 como aproximação para ln(1,0132). \nA primeira das parcelas que poderá ser antecipada junto com a 30ª é a",
     "alternatives": {
       "a": "56",
       "b": "55",
@@ -43,7 +45,7 @@
   },
   {
     "number": 138,
-    "text": "Um jogo pedagógico utiliza-se de uma interface algébrico-geométrica do seguinte modo: os alunos devem eliminar os pontos do plano cartesiano dando \"tiros\", seguindo trajetórias que devem passar pelos pontos escolhidos. Para dar os tiros, o aluno deve escrever em uma janela do programa a equação cartesiana de uma reta ou de uma circunferência que passa pelos pontos e pela origem do sistema de coordenadas. Se o tiro for dado por meio da equação da circunferência, cada ponto diferente da origem que for atingido vale 2 pontos. Se o tiro for dado por meio da equação de uma reta, cada ponto diferente da origem que for atingido vale 1 ponto. Em uma situação de jogo, ainda restam os seguintes pontos para serem eliminados: A (0 ; 4), B (4 ; 4), C (4 ; 0), D (2 ; 2) e E (0 ; 2). Passando pelo ponto A, qual equação forneceria a maior pontuação?",
+    "text": "Um jogo pedagógico utiliza-se de uma interface algébrico-geométrica do seguinte modo: os alunos devem eliminar os pontos do plano cartesiano dando \"tiros\", seguindo trajetórias que devem passar pelos pontos escolhidos. Para dar os tiros, o aluno deve escrever em uma janela do programa a equação cartesiana de uma reta ou de uma circunferência que passa pelos pontos e pela origem do sistema de coordenadas. Se o tiro for dado por meio da equação da circunferência, cada ponto diferente da origem que for atingido vale 2 pontos. Se o tiro for dado por meio da equação de uma reta, cada ponto diferente da origem que for atingido vale 1 ponto. Em uma situação de jogo, ainda restam os seguintes pontos para serem eliminados: A (0 ; 4), B (4 ; 4), C (4 ; 0), D (2 ; 2) e E (0 ; 2). \n[Figura: Jogo]\nPassando pelo ponto A, qual equação forneceria a maior pontuação?",
     "alternatives": {
       "a": "x = 0",
       "b": "y = 0",
@@ -51,7 +53,9 @@
       "d": "x² + (y − 2)² = 4",
       "e": "(x − 2)² + (y − 2)² = 8"
     },
-    "images": [],
+    "images": [
+      "figuras/q138_2018_fig1.png"
+    ],
     "tags": [
       "geometria analítica",
       "análise combinatória"
@@ -64,15 +68,17 @@
   },
   {
     "number": 139,
-    "text": "Sobre um sistema cartesiano considera-se uma malha formada por circunferências de raios com medida dadas por números naturais e por 12 semirretas com extremidades na origem, separadas por ângulos de π/6 rad conforme a figura.\n[Figura: Malha cartesiana com circunferências de raios naturais e semirretas separadas por ângulos de π/6 radianos, com pontos A e B marcados]\nSuponha que os objetos se desloquem apenas pelas semirretas e pelas circunferências dessa malha, não podendo passar pela origem (0 ; 0).\nConsidere o valor de π com aproximação de, pelo menos, uma casa decimal.\nPara realizar o percurso mais curto possível ao longo da malha, do ponto B até o ponto A, um objeto deve percorrer uma distância igual a",
+    "text": "Sobre um sistema cartesiano considera-se uma malha formada por circunferências de raios com medida dadas por números naturais e por 12 semirretas com extremidades na origem, separadas por ângulos de π/6 rad conforme a figura.\n[Figura: Malha cartesiana com circunferências de raios naturais e semirretas separadas por ângulos de π/6 radianos, com pontos A e B marcados]\nSuponha que os objetos se desloquem apenas pelas semirretas e pelas circunferências dessa malha, não podendo passar pela origem (0 ; 0).\nConsidere o valor de <i>π</i> com aproximação de, pelo menos, uma casa decimal.\nPara realizar o percurso mais curto possível ao longo da malha, do ponto B até o ponto A, um objeto deve percorrer uma distância igual a",
     "alternatives": {
-      "a": "2 ⋅ π ⋅ 1/3 + 1",
-      "b": "2 ⋅ π ⋅ 2/3 + 6",
-      "c": "2 ⋅ π ⋅ 3/3 + 4",
-      "d": "2 ⋅ π ⋅ 4/3 + 2",
-      "e": "2 ⋅ π ⋅ 5/3 + 2"
+      "a": "(2 ⋅ π ⋅ 1)/3 + 1",
+      "b": "(2 ⋅ π ⋅ 2)/3 + 6",
+      "c": "(2 ⋅ π ⋅ 3)/3 + 4",
+      "d": "(2 ⋅ π ⋅ 4)/3 + 2",
+      "e": "(2 ⋅ π ⋅ 5)/3 + 2"
     },
-    "images": [],
+    "images": [
+      "figuras/q139_2018_fig1.png"
+    ],
     "tags": [
       "geometria analítica",
       "geometria plana"
@@ -106,7 +112,7 @@
   },
   {
     "number": 141,
-    "text": "A prefeitura de um pequeno município do interior decide colocar postes para iluminação ao longo de uma estrada retilínea, que inicia em uma praça central e termina numa fazenda na zona rural. Como a praça já possui iluminação, o primeiro poste será colocado a 20 metros da praça, o segundo, a 100 metros, o terceiro, a 120 metros, e assim sucessivamente, mantendo-se sempre uma distância de vinte metros entre os postes, até que o último poste seja colocado a uma distância de 1 380 metros da praça. Se a prefeitura pode pagar, no máximo, R$ 8 000,00 por poste colocado, o maior valor que poderá gastar com a colocação desses postes é",
+    "text": "A prefeitura de um pequeno município do interior decide colocar postes para iluminação ao longo de uma estrada retilínea, que inicia em uma praça central e termina numa fazenda na zona rural. Como a praça já possui iluminação, o primeiro poste será colocado a 20 metros da praça, o segundo, a 100 metros, o terceiro, a 120 metros, e assim sucessivamente, mantendo-se sempre uma distância de vinte metros entre os postes, até que o último poste seja colocado a uma distância de 1 380 metros da praça. \nSe a prefeitura pode pagar, no máximo, R$ 8 000,00 por poste colocado, o maior valor que poderá gastar com a colocação desses postes é",
     "alternatives": {
       "a": "R$ 512 000,00",
       "b": "R$ 520 000,00",
@@ -127,13 +133,13 @@
   },
   {
     "number": 142,
-    "text": "De acordo com a Lei Universal da Gravitação, proposta por Isaac Newton, a intensidade da força gravitacional que a Terra exerce sobre um satélite em órbita circular é proporcional à massa m do satélite e inversamente proporcional ao quadrado do raio r da órbita, ou seja, F = km/r². No plano cartesiano, três satélites, A, B e C, estão representados, cada um, por um ponto (m; r) cujas coordenadas são, respectivamente, a massa do satélite e o raio da sua órbita em torno da Terra. Com base nas posições relativas dos pontos no gráfico, deseja-se comparar as intensidades FA, FB e FC da força gravitacional que a Terra exerce sobre os satélites A, B e C, respectivamente. As intensidades FA, FB e FC expressas no gráfico satisfazem a relação",
+    "text": "De acordo com a Lei Universal da Gravitação, proposta por Isaac Newton, a intensidade da força gravitacional que a Terra exerce sobre um satélite em órbita circular é proporcional à massa m do satélite e inversamente proporcional ao quadrado do raio r da órbita, ou seja, \n   F = km/r². \nNo plano cartesiano, três satélites, A, B e C, estão representados, cada um, por um ponto (m; r) cujas coordenadas são, respectivamente, a massa do satélite e o raio da sua órbita em torno da Terra. \n[Grafico: massa e raio de A, B e C]\nCom base nas posições relativas dos pontos no gráfico, deseja-se comparar as intensidades FA, FB e FC da força gravitacional que a Terra exerce sobre os satélites A, B e C, respectivamente. As intensidades FA, FB e FC expressas no gráfico satisfazem a relação",
     "alternatives": {
-      "a": "FC = FA < FB",
-      "b": "FA = FB < FC",
-      "c": "FA < FB < FC",
-      "d": "FA < FC < FB",
-      "e": "FC < FA < FB"
+      "a": "F<sub>C</sub> = < F<sub>A</sub> < F<sub>B</sub>",
+      "b": "F<sub>A</sub> = < F<sub>B</sub> < F<sub>C</sub>",
+      "c": "F<sub>A</sub> < F<sub>B</sub> < F<sub>C</sub>",
+      "d": "F<sub>A</sub> < F<sub>C</sub> < F<sub>B</sub>",
+      "e": "F<sub>C</sub> < F<sub>A</sub> < F<sub>B</sub>"
     },
     "images": [],
     "tags": [
@@ -148,7 +154,7 @@
   },
   {
     "number": 143,
-    "text": "Os tipos de prata normalmente vendidos são 975, 950 e 925. Essa classificação é feita de acordo com sua pureza. Por exemplo, a prata 975 é a substância constituída de 975 partes de prata pura e 25 partes de cobre em 1 000 partes da substância. Já a prata 950 é constituída de 950 partes de prata pura e 50 de cobre em 1 000; e a prata 925 é constituída de 925 partes de prata pura e 75 partes de cobre em 1 000. Um ourives possui 10 gramas de prata 925 e deseja obter 40 gramas de prata 950 para produção de uma joia. Nessas condições, quantos gramas de prata e de cobre, respectivamente, devem ser fundidos com os 10 gramas de prata 925?",
+    "text": "Os tipos de prata normalmente vendidos são 975, 950 e 925. Essa classificação é feita de acordo com sua pureza. Por exemplo, a prata 975 é a substância constituída de 975 partes de prata pura e 25 partes de cobre em 1 000 partes da substância. Já a prata 950 é constituída de 950 partes de prata pura e 50 de cobre em 1 000; e a prata 925 é constituída de 925 partes de prata pura e 75 partes de cobre em 1 000. Um ourives possui 10 gramas de prata 925 e deseja obter 40 gramas de prata 950 para produção de uma joia. \nNessas condições, quantos gramas de prata e de cobre, respectivamente, devem ser fundidos com os 10 gramas de prata 925?",
     "alternatives": {
       "a": "29,25 e 0,75",
       "b": "28,75 e 1,25",
@@ -175,7 +181,7 @@
       "b": "2",
       "c": "3",
       "d": "4",
-      "e": "5/35"
+      "e": "5"
     },
     "images": [],
     "tags": [
@@ -190,7 +196,7 @@
   },
   {
     "number": 145,
-    "text": "A Comissão Interna de Prevenção de Acidentes (CIPA) de uma empresa, observando os altos custos com os frequentes acidentes de trabalho ocorridos, fez, a pedido da diretoria, uma pesquisa do número de acidentes sofridos por funcionários. Essa pesquisa, realizada com uma amostra de 100 funcionários, norteará as ações da empresa na política de segurança no trabalho.\n\nOs resultados obtidos estão no quadro.\n\n  - Número de acidentes sofridos: 0, Número de trabalhadores: 50;\n  - Número de acidentes sofridos: 1, Número de trabalhadores: 17;\n  - Número de acidentes sofridos: 2, Número de trabalhadores: 15;\n  - Número de acidentes sofridos: 3, Número de trabalhadores: 10;\n  - Número de acidentes sofridos: 4, Número de trabalhadores: 6;\n  - Número de acidentes sofridos: 5, Número de trabalhadores: 2.\n\nA média do número de acidentes por funcionário na amostra que a CIPA apresentará à diretoria da empresa é",
+    "text": "A Comissão Interna de Prevenção de Acidentes (CIPA) de uma empresa, observando os altos custos com os frequentes acidentes de trabalho ocorridos, fez, a pedido da diretoria, uma pesquisa do número de acidentes sofridos por funcionários. Essa pesquisa, realizada com uma amostra de 100 funcionários, norteará as ações da empresa na política de segurança no trabalho.\n\nOs resultados obtidos estão no quadro.\n\n\n|Número de acidentes sofridos|Número de trabalhadores|\n|-------------------------------|-------------------------------|\n|0|50|\n|-------------------------------|-------------------------------|\n|1|17|\n|-------------------------------|-------------------------------|\n|2|15|\n|-------------------------------|-------------------------------|\n|3|10|\n|-------------------------------|-------------------------------|\n|4|6|\n|-------------------------------|-------------------------------|\n|5|2|\n|-------------------------------|-------------------------------|\nA média do número de acidentes por funcionário na amostra que a CIPA apresentará à diretoria da empresa é",
     "alternatives": {
       "a": "0,15",
       "b": "0,30",
@@ -210,13 +216,13 @@
   },
   {
     "number": 146,
-    "text": "Numa atividade de treinamento realizada no Exército de um determinado país, três equipes – Alpha, Beta e Gama – foram designadas a percorrer diferentes caminhos, todos com os mesmos pontos de partida e de chegada.\n  - A equipe Alpha realizou seu percurso em 90 minutos com uma velocidade média de 6,0 km/h.\n  - A equipe Beta também percorreu sua trajetória em 90 minutos, mas sua velocidade média foi de 5,0 km/h.\n  - Com uma velocidade média de 6,5 km/h, a equipe Gama concluiu seu caminho em 60 minutos.\n\nCom base nesses dados, foram comparadas as distâncias d_Beta, d_Alpha e d_Gama percorridas pelas três equipes.\n\nA ordem das distâncias percorridas pelas equipes Alpha, Beta e Gama é",
+    "text": "Numa atividade de treinamento realizada no Exército de um determinado país, três equipes – Alpha, Beta e Gama – foram designadas a percorrer diferentes caminhos, todos com os mesmos pontos de partida e de chegada.\n  - A equipe Alpha realizou seu percurso em 90 minutos com uma velocidade média de 6,0 km/h.\n  - A equipe Beta também percorreu sua trajetória em 90 minutos, mas sua velocidade média foi de 5,0 km/h.\n  - Com uma velocidade média de 6,5 km/h, a equipe Gama concluiu seu caminho em 60 minutos.\n\nCom base nesses dados, foram comparadas as distâncias d<sub>Beta</sub>, d<sub>Alpha</sub> e d<sub>Gama</sub> percorridas pelas três equipes.\n\nA ordem das distâncias percorridas pelas equipes Alpha, Beta e Gama é",
     "alternatives": {
-      "a": "d_Gama < d_Beta < d_Alpha",
-      "b": "d_Alpha = d_Beta < d_Gama",
-      "c": "d_Gama < d_Beta = d_Alpha",
-      "d": "d_Beta < d_Alpha < d_Gama",
-      "e": "d_Gama < d_Alpha < d_Beta"
+      "a": "d<sub>Gama</sub> < d<sub>Beta</sub> < d<sub>Alpha</sub>",
+      "b": "d<sub>Alpha</sub> = d<sub>Beta</sub> < d<sub>Gama</sub>",
+      "c": "d<sub>Gama</sub> < d<sub>Beta</sub> = d<sub>Alpha</sub>",
+      "d": "d<sub>Beta</sub> < d<sub>Alpha</sub> < d<sub>Gama</sub>",
+      "e": "d<sub>Gama</sub> < d<sub>Alpha</sub> < d<sub>Beta</sub>"
     },
     "images": [],
     "tags": [
@@ -252,7 +258,7 @@
   },
   {
     "number": 148,
-    "text": "Uma empresa deseja iniciar uma campanha publicitária divulgando uma promoção para seus possíveis consumidores. Para esse tipo de campanha, os meios mais viáveis são a distribuição de panfletos a rua e anúncios na rádio local. Considera-se que a população alcançada pela distribuição de panfletos seja igual à quantidade de panfletos distribuídos, enquanto que a alcançada por um anúncio na rádio seja igual à quantidade de ouvintes desse anúncio. O custo de cada anúncio na rádio é de R$ 120,00, e a estimativa é de que seja ouvido por 1 500 pessoas. Já a produção e distribuição dos panfletos custam R$ 180,00 cada 1 000 unidades. Considerando que cada pessoa será alcançada por um único desses meios de divulgação, a empresa pretende investir em ambas as mídias. Considere X e Y os valores (em real) gastos em anúncios na rádio e com panfletos, respectivamente. O número de pessoas alcançadas pela campanha será dado pela expressão",
+    "text": "Uma empresa deseja iniciar uma campanha publicitária divulgando uma promoção para seus possíveis consumidores. Para esse tipo de campanha, os meios mais viáveis são a distribuição de panfletos a rua e anúncios na rádio local. Considera-se que a população alcançada pela distribuição de panfletos seja igual à quantidade de panfletos distribuídos, enquanto que a alcançada por um anúncio na rádio seja igual à quantidade de ouvintes desse anúncio. O custo de cada anúncio na rádio é de R$ 120,00, e a estimativa é de que seja ouvido por 1500 pessoas. Já a produção e distribuição dos panfletos custam R$ 180,00 cada 1000 unidades. Considerando que cada pessoa será alcançada por um único desses meios de divulgação, a empresa pretende investir em ambas as mídias. \nConsidere X e Y os valores (em real) gastos em anúncios na rádio e com panfletos, respectivamente. \nO número de pessoas alcançadas pela campanha será dado pela expressão",
     "alternatives": {
       "a": "50X/4 + 50Y/9",
       "b": "50X/9 + 50Y/4",
@@ -282,8 +288,8 @@
       "e": "rebaixado em 50 cm"
     },
     "images": [
-      "figuras/q149_2018_fig1.png",
-      "figuras/q149_2018_fig2.png"
+      "figuras/q149_2018_fig3.png",
+      "figuras/q149_2018_fig4.png"
     ],
     "tags": [
       "geometria plana",
@@ -318,7 +324,7 @@
   },
   {
     "number": 151,
-    "text": "Suponha que a palavra ECO esteja escrita nessa fonte, com tamanho 192, e que seja composta por letras formadas por quadrados de lados x com furos circulares de raio x/1 = . Para que a área a ser pintada seja reduzida a 3/16 da área inicial, pretende-se reduzir o tamanho da fonte. Sabe-se que, ao alterar o tamanho da fonte, o tamanho da letra é alterado na mesma proporção. Nessas condições, o tamanho adequado da fonte será",
+    "text": "A Ecofont possui design baseado na velha fonte Vera Sans. Porém, ela tem um diferencial: pequenos buraquinhos circulares congruentes, e em todo o seu corpo, presentes em cada símbolo. Esses furos proporcionam um gasto de tinta menor na hora da impressão.\n[Figura: Logo Ecofont]\nSuponha que a palavra ECO esteja escrita nessa fonte, com tamanho 192, e que seja composta por letras formadas por quadrados de lados x com furos circulares de raio r=x/3. Para que a área a ser pintada seja reduzida a 1/16 da área inicial, pretende-se reduzir o tamanho da fonte. Sabe-se que, ao alterar o tamanho da fonte, o tamanho da letra é alterado na mesma proporção. Nessas condições, o tamanho adequado da fonte será",
     "alternatives": {
       "a": "64",
       "b": "48",
@@ -326,7 +332,9 @@
       "d": "21",
       "e": "12"
     },
-    "images": [],
+    "images": [
+      "figuras/q151_2018_fig1.png"
+    ],
     "tags": [
       "geometria plana",
       "álgebra"
@@ -339,7 +347,7 @@
   },
   {
     "number": 152,
-    "text": "Para criar um logotipo, um profissional da área de design gráfico deseja construí-lo utilizando o conjunto de pontos do plano na forma de um triângulo, exatamente como mostra a imagem.\n\n[Figura: triângulo no plano cartesiano com vértices nos pontos (0, 0), (10, 0) e (0, 10)]\n\nPara construir tal imagem utilizando uma ferramenta gráfica, será necessário escrever algebricamente o conjunto que representa os pontos desse gráfico.\n\nEsse conjunto é dado pelos pares ordenados (x ; y) ∈ ℝ × ℝ, tais que",
+    "text": "Para criar um logotipo, um profissional da área de design gráfico deseja construí-lo utilizando o conjunto de pontos do plano na forma de um triângulo, exatamente como mostra a imagem.\n\n[Gráfico: triângulo no plano cartesiano com vértices nos pontos (0, 0), (10, 0) e (0, 10)]\n\nPara construir tal imagem utilizando uma ferramenta gráfica, será necessário escrever algebricamente o conjunto que representa os pontos desse gráfico.\n\nEsse conjunto é dado pelos pares ordenados (x ; y) ∈ ℕ × ℕ, tais que",
     "alternatives": {
       "a": "0 ≤ x ≤ y ≤ 10",
       "b": "0 ≤ y ≤ x ≤ 10",
@@ -348,7 +356,7 @@
       "e": "0 ≤ x + y ≤ 20"
     },
     "images": [
-      "figuras/q152_2018_fig1.png"
+      "figuras/q152_2018_fig2.png"
     ],
     "tags": [
       "geometria analítica",
@@ -362,7 +370,7 @@
   },
   {
     "number": 153,
-    "text": "A figura mostra uma praça circular que contém um chafariz em seu centro e, em seu entorno, um passeio. Os círculos que definem a praça e o chafariz são concêntricos. [Figura: praça circular com chafariz concêntrico no centro e passeio ao redor] O passeio terá seu piso revestido com ladrilhos. Sem condições de calcular os raios, pois o chafariz está cheio, um engenheiro fez a seguinte medição: esticou uma trena tangente ao chafariz, medindo a distância entre dois pontos A e B, conforme a figura. Com isso, obteve a medida do segmento de reta AB: 16 m. [Figura: segmento de reta AB tangente ao chafariz, com comprimento 16 m] Dispondo apenas dessa medida, o engenheiro calculou corretamente a medida da área do passeio, em metro quadrado. A medida encontrada pelo engenheiro foi",
+    "text": "A figura mostra uma praça circular que contém um chafariz em seu centro e, em seu entorno, um passeio. Os círculos que definem a praça e o chafariz são concêntricos. \n\n[Figura: praça circular com chafariz concêntrico no centro e passeio ao redor] \n\nO passeio terá seu piso revestido com ladrilhos. Sem condições de calcular os raios, pois o chafariz está cheio, um engenheiro fez a seguinte medição: esticou uma trena tangente ao chafariz, medindo a distância entre dois pontos A e B, conforme a figura. Com isso, obteve a medida do segmento de reta AB: 16 m. [\n\nFigura: praça com trena] \n\nDispondo apenas dessa medida, o engenheiro calculou corretamente a medida da área do passeio, em metro quadrado. A medida encontrada pelo engenheiro foi",
     "alternatives": {
       "a": "4π",
       "b": "8π",
@@ -370,7 +378,10 @@
       "d": "64π",
       "e": "192π"
     },
-    "images": [],
+    "images": [
+      "figuras/q153_2018_fig1.png",
+      "figuras/q153_2018_fig2.png"
+    ],
     "tags": [
       "geometria plana"
     ],
@@ -382,7 +393,7 @@
   },
   {
     "number": 154,
-    "text": "Um designer de jogos planeja um jogo que faz uso de um tabuleiro de dimensão n × n, com n ≥ 2, no qual cada jogador, na sua vez, coloca uma peça sobre uma das casas vazias do tabuleiro. Quando uma peça é posicionada, a região formada pelas casas que estão na mesma linha ou coluna dessa peça é chamada de zona de combate dessa peça. O tabuleiro deve ser dimensionado de forma que a probabilidade de se posicionar a segunda peça aleatoriamente, seguindo a regra do jogo, e esta ficar sobre a zona de combate da primeira, seja inferior a 1/5. A dimensão mínima que o designer deve adotar para esse tabuleiro é",
+    "text": "Um designer de jogos planeja um jogo que faz uso de um tabuleiro de dimensão n × n, com n ≥ 2, no qual cada jogador, na sua vez, coloca uma peça sobre uma das casas vazias do tabuleiro. Quando uma peça é posicionada, a região formada pelas casas que estão na mesma linha ou coluna dessa peça é chamada de zona de combate dessa peça. Na figura está ilustrada a zona de combate de uma peca colocada em uma das casas de um tabuleiro de dimensao 8x8.  \n[Imagen: Tabuleiro]\nO tabuleiro deve ser dimensionado de forma que a probabilidade de se posicionar a segunda peça aleatoriamente, seguindo a regra do jogo, e esta ficar sobre a zona de combate da primeira, seja inferior a 1/5. \n\nA dimensão mínima que o designer deve adotar para esse tabuleiro é",
     "alternatives": {
       "a": "4 × 4",
       "b": "6 × 6",
@@ -390,7 +401,9 @@
       "d": "10 × 10",
       "e": "11 × 11"
     },
-    "images": [],
+    "images": [
+      "figuras/q154_2018_fig1.png"
+    ],
     "tags": [
       "probabilidade",
       "aritmética e números"
@@ -403,7 +416,7 @@
   },
   {
     "number": 155,
-    "text": "O remo de assento deslizante é um esporte que faz uso de um barco e dois remos do mesmo tamanho. A figura mostra uma das posições de uma técnica chamada afastamento. [Figura: posição de afastamento no remo]\n\nNessa posição, os dois remos se encontram no ponto A e suas outras extremidades estão indicadas pelos pontos B e C. Esses três pontos formam um triângulo ABC cujo ângulo BÂC tem medida de 170°.\n\nO tipo de triângulo com vértices nos pontos A, B e C, no momento em que o remador está nessa posição, é",
+    "text": "O remo de assento deslizante é um esporte que faz uso de um barco e dois remos do mesmo tamanho. A figura mostra uma das posições de uma técnica chamada afastamento. [Figura: posição de afastamento no remo]\nNessa posição, os dois remos se encontram no ponto A e suas outras extremidades estão indicadas pelos pontos B e C. Esses três pontos formam um triângulo ABC cujo ângulo BÂC tem medida de 170°.\n\nO tipo de triângulo com vértices nos pontos A, B e C, no momento em que o remador está nessa posição, é",
     "alternatives": {
       "a": "retângulo escaleno",
       "b": "acutângulo escaleno",
@@ -447,7 +460,7 @@
   },
   {
     "number": 157,
-    "text": "Um mapa é a representação reduzida e simplificada de uma localidade. Essa redução, que é feita com o uso de uma escala, mantém a proporção do espaço representado em relação ao espaço real. Certo mapa tem escala 1 : 58 000 000. Considere que, nesse mapa, o segmento de reta que liga o navio à marca do tesouro meça 7,6 cm. A medida real, em quilômetro, desse segmento de reta é",
+    "text": "Um mapa é a representação reduzida e simplificada de uma localidade. Essa redução, que é feita com o uso de uma escala, mantém a proporção do espaço representado em relação ao espaço real. \nCerto mapa tem escala 1 : 58 000 000. \n[Figura: mapa]\nConsidere que, nesse mapa, o segmento de reta que liga o navio à marca do tesouro meça 7,6 cm. \nA medida real, em quilômetro, desse segmento de reta é",
     "alternatives": {
       "a": "4 408",
       "b": "7 632",
@@ -455,7 +468,9 @@
       "d": "76 316",
       "e": "440 800"
     },
-    "images": [],
+    "images": [
+      "figuras/q157_2018_fig1.png"
+    ],
     "tags": [
       "matemática financeira",
       "geometria analítica"
@@ -468,7 +483,7 @@
   },
   {
     "number": 158,
-    "text": "Um produtor de milho utiliza uma área de 160 hectares para as suas atividades agrícolas. Essa área é dividida em duas partes: uma de 40 hectares, com maior produtividade, outra, de 120 hectares, com menor produtividade. A produtividade é dada pela razão entre a produção, em tonelada, e a área cultivada. Sabe-se que a área de 40 hectares tem produtividade igual a 2,5 vezes à da outra. Esse fazendeiro pretende aumentar sua produção total em 15%, aumentando o tamanho da sua propriedade. Para tanto, pretende comprar uma parte de uma fazenda vizinha, que possui a mesma produtividade da parte de 120 hectares de suas terras. Qual é a área mínima, em hectare, que o produtor precisará comprar?",
+    "text": "Um produtor de milho utiliza uma área de 160 hectares para as suas atividades agrícolas. Essa área é dividida em duas partes: uma de 40 hectares, com maior produtividade, outra, de 120 hectares, com menor produtividade. A produtividade é dada pela razão entre a produção, em tonelada, e a área cultivada. Sabe-se que a área de 40 hectares tem produtividade igual a 2,5 vezes à da outra. Esse fazendeiro pretende aumentar sua produção total em 15%, aumentando o tamanho da sua propriedade. Para tanto, pretende comprar uma parte de uma fazenda vizinha, que possui a mesma produtividade da parte de 120 hectares de suas terras. \nQual é a área mínima, em hectare, que o produtor precisará comprar?",
     "alternatives": {
       "a": "36",
       "b": "33",
@@ -489,7 +504,7 @@
   },
   {
     "number": 159,
-    "text": "Minecraft é um jogo virtual que pode auxiliar no desenvolvimento de conhecimentos relacionados a espaço e forma. É possível criar casas, edifícios, monumentos e até naves espaciais, tudo em escala real, através do empilhamento de cubinhos.\n\nUm jogador deseja construir um cubo com dimensões 4 × 4 × 4. Ele já empilhou alguns dos cubinhos necessários, conforme a figura.\n\n[Figura: representação do cubo 4×4×4 parcialmente preenchido]\n\nOs cubinhos que ainda faltam empilhar para finalizar a construção do cubo, juntos, formam uma peça única, capaz de completar a tarefa.\n\nO formato da peça capaz de completar o cubo 4 × 4 × 4 é:",
+    "text": "<i>Minecraft</i> é um jogo virtual que pode auxiliar no desenvolvimento de conhecimentos relacionados a espaço e forma. É possível criar casas, edifícios, monumentos e até naves espaciais, tudo em escala real, através do empilhamento de cubinhos.\nUm jogador deseja construir um cubo com dimensões 4 × 4 × 4. Ele já empilhou alguns dos cubinhos necessários, conforme a figura.[Figura: representação do cubo 4×4×4 parcialmente preenchido]\n\nOs cubinhos que ainda faltam empilhar para finalizar a construção do cubo, juntos, formam uma peça única, capaz de completar a tarefa.\n\nO formato da peça capaz de completar o cubo 4 × 4 × 4 é:",
     "alternatives": {
       "a": "[Figura: alternativa A]",
       "b": "[Figura: alternativa B]",
@@ -498,7 +513,12 @@
       "e": "[Figura: alternativa E]"
     },
     "images": [
-      "figuras/q159_2018_fig1.png"
+      "figuras/q159_2018_fig2.png",
+      "figuras/q159_2018_fig3.png",
+      "figuras/q159_2018_fig4.png",
+      "figuras/q159_2018_fig5.png",
+      "figuras/q159_2018_fig6.png",
+      "figuras/q159_2018_fig7.png"
     ],
     "tags": [
       "geometria espacial",
@@ -556,7 +576,7 @@
   },
   {
     "number": 162,
-    "text": "Torneios de tênis, em geral, são disputados em sistema de eliminatória simples. Nesse sistema, são disputadas partidas entre dois competidores, com a eliminação do perdedor e promoção do vencedor para a fase seguinte. Dessa forma, se na 1ª fase o torneio conta com 2ⁿ competidores, então na 2ª fase restarão n competidores, e assim sucessivamente até a partida final. Em um torneio de tênis, disputado nesse sistema, participam 128 tenistas. Para se definir o campeão desse torneio, o número de partidas necessárias é dado por",
+    "text": "Torneios de tênis, em geral, são disputados em sistema de eliminatória simples. Nesse sistema, são disputadas partidas entre dois competidores, com a eliminação do perdedor e promoção do vencedor para a fase seguinte. Dessa forma, se na 1ª fase o torneio conta com 2<i>n</i> competidores, então na 2ª fase restarão <i>n</i> competidores, e assim sucessivamente até a partida final. \nEm um torneio de tênis, disputado nesse sistema, participam 128 tenistas. \nPara se definir o campeão desse torneio, o número de partidas necessárias é dado por",
     "alternatives": {
       "a": "2 × 128",
       "b": "64 + 32 + 16 + 8 + 4 + 2",
@@ -577,7 +597,7 @@
   },
   {
     "number": 163,
-    "text": "O artigo 33 da lei brasileira sobre drogas prevê a pena de reclusão de 5 a 15 anos para qualquer pessoa que seja condenada por tráfico ilícito ou produção não autorizada de drogas. Entretanto, caso o condenado seja réu primário, com bons antecedentes criminais, essa pena pode sofrer uma redução de um sexto a dois terços. Suponha que um réu primário, com bons antecedentes criminais, foi condenado pelo artigo 33 da lei brasileira sobre drogas. Após o benefício da redução de pena, sua pena poderá variar de",
+    "text": "O artigo 33 da lei brasileira sobre drogas prevê a pena de reclusão de 5 a 15 anos para qualquer pessoa que seja condenada por tráfico ilícito ou produção não autorizada de drogas. Entretanto, caso o condenado seja réu primário, com bons antecedentes criminais, essa pena pode sofrer uma redução de um sexto a dois terços. \nSuponha que um réu primário, com bons antecedentes criminais, foi condenado pelo artigo 33 da lei brasileira sobre drogas. \nApós o benefício da redução de pena, sua pena poderá variar de",
     "alternatives": {
       "a": "1 ano e 8 meses a 12 anos e 6 meses",
       "b": "1 ano e 8 meses a 5 anos",
@@ -598,7 +618,7 @@
   },
   {
     "number": 164,
-    "text": "Um edifício tem a numeração dos andares iniciando no térreo (T), e continuando com primeiro, segundo, terceiro, ..., até o último andar. Uma criança entrou no elevador e, tocando no painel, seguiu uma sequência de andares, parando, abrindo e fechando a porta em diversos andares. A partir de onde entrou a criança, o elevador subiu sete andares, em seguida desceu dez, desceu mais treze, subiu nove, desceu quatro e parou no quinto andar, finalizando a sequência. Considere que, no trajeto seguido pela criança, o elevador parou uma vez no último andar do edifício. De acordo com as informações dadas, o último andar do edifício é o",
+    "text": "Um edifício tem a numeração dos andares iniciando no térreo (T), e continuando com primeiro, segundo, terceiro, ..., até o último andar. Uma criança entrou no elevador e, tocando no painel, seguiu uma sequência de andares, parando, abrindo e fechando a porta em diversos andares. A partir de onde entrou a criança, o elevador subiu sete andares, em seguida desceu dez, desceu mais treze, subiu nove, desceu quatro e parou no quinto andar, finalizando a sequência. Considere que, no trajeto seguido pela criança, o elevador parou uma vez no último andar do edifício. \nDe acordo com as informações dadas, o último andar do edifício é o",
     "alternatives": {
       "a": "16",
       "b": "22",
@@ -619,13 +639,13 @@
   },
   {
     "number": 165,
-    "text": "Uma montadora pretende participar desse evento com dois estandes, um na entrada e outro na região central do salão, expondo, em cada um deles, um carro compacto e uma caminhonete. Para compor os estandes, foram disponibilizados pela montadora quatro carros compactos, de modelos distintos, e seis caminhonetes de diferentes cores para serem escolhidos aqueles que serão expostos. A posição dos carros dentro de cada estande é irrelevante. Uma expressão que fornece a quantidade de maneiras diferentes que os estandes podem ser compostos é",
+    "text": "Uma montadora pretende participar desse evento com dois estandes, um na entrada e outro na região central do salão, expondo, em cada um deles, um carro compacto e uma caminhonete. \nPara compor os estandes, foram disponibilizados pela montadora quatro carros compactos, de modelos distintos, e seis caminhonetes de diferentes cores para serem escolhidos aqueles que serão expostos. A posição dos carros dentro de cada estande é irrelevante.\nUma expressão que fornece a quantidade de maneiras diferentes que os estandes podem ser compostos é",
     "alternatives": {
-      "a": "A₄¹⁰",
-      "b": "C₄¹⁰",
-      "c": "2 × C₂⁴ × C₂⁶",
-      "d": "2 × A₂⁴ × A₂⁶",
-      "e": "C₄² × C₆²"
+      "a": "A<sup>4</sup><sub>10</sub>",
+      "b": "C<sup>4</sup><sub>10</sub>",
+      "c": "C<sup>2</sup><sub>4</sub> × C<sup>2</sup><sub>6</sub> × 2 × 2",
+      "d": "A<sup>2</sup><sub>4</sub> × A<sup>2</sup><sub>6</sub> × 2 × 2",
+      "e": "C<sup>2</sup><sub>4</sub> × C<sup>2</sup><sub>6</sub>"
     },
     "images": [],
     "tags": [
@@ -636,11 +656,14 @@
     "year": 2018,
     "test": "ENEM",
     "area": "math",
-    "answer": "c"
+    "answer": "c",
+    "contextIds": [
+      "enem_2018_math_q165_ctx1"
+    ]
   },
   {
     "number": 166,
-    "text": "Os alunos da disciplina de estatística, em um curso universitário, realizam quatro avaliações por semestre com os pesos de 20%, 10%, 30% e 40%, respectivamente. No final do semestre, precisam obter uma média nas quatro avaliações de, no mínimo, 60 pontos para serem aprovados. Um estudante dessa disciplina obteve os seguintes pontos nas três primeiras avaliações: 46, 60 e 80, respectivamente. O mínimo de pontos que esse estudante precisa obter na quarta avaliação para ser aprovado é",
+    "text": "Os alunos da disciplina de estatística, em um curso universitário, realizam quatro avaliações por semestre com os pesos de 20%, 10%, 30% e 40%, respectivamente. No final do semestre, precisam obter uma média nas quatro avaliações de, no mínimo, 60 pontos para serem aprovados. Um estudante dessa disciplina obteve os seguintes pontos nas três primeiras avaliações: 46, 60 e 80, respectivamente.\nO mínimo de pontos que esse estudante precisa obter na quarta avaliação para ser aprovado é",
     "alternatives": {
       "a": "29,8",
       "b": "71,0",
@@ -661,7 +684,7 @@
   },
   {
     "number": 167,
-    "text": "O gerente do setor de recursos humanos de uma empresa está organizando uma avaliação em que uma das etapas é um jogo de perguntas e respostas. Para essa etapa, ele classificou as perguntas, pelo nível de dificuldade, em fácil, médio e difícil, e escreveu cada pergunta em cartões para colocação em uma urna. Contudo, após depositar vinte perguntas de diferentes níveis na urna, ele observou que 25% delas eram de nível fácil. Querendo que as perguntas de nível fácil sejam a maioria, o gerente decidiu acrescentar mais perguntas de nível fácil à urna, de modo que a probabilidade de o primeiro participante retirar, aleatoriamente, uma pergunta de nível fácil seja de 75%. Com essas informações, a quantidade de perguntas de nível fácil que o gerente deve acrescentar à urna é igual a",
+    "text": "O gerente do setor de recursos humanos de uma empresa está organizando uma avaliação em que uma das etapas é um jogo de perguntas e respostas. Para essa etapa, ele classificou as perguntas, pelo nível de dificuldade, em fácil, médio e difícil, e escreveu cada pergunta em cartões para colocação em uma urna.\nContudo, após depositar vinte perguntas de diferentes níveis na urna, ele observou que 25% delas eram de nível fácil. Querendo que as perguntas de nível fácil sejam a maioria, o gerente decidiu acrescentar mais perguntas de nível fácil à urna, de modo que a probabilidade de o primeiro participante retirar, aleatoriamente, uma pergunta de nível fácil seja de 75%. \nCom essas informações, a quantidade de perguntas de nível fácil que o gerente deve acrescentar à urna é igual a",
     "alternatives": {
       "a": "10",
       "b": "15",
@@ -682,7 +705,7 @@
   },
   {
     "number": 168,
-    "text": "A raiva é uma doença viral e infecciosa, transmitida por mamíferos. A campanha nacional de vacinação antirrábica tem o objetivo de controlar a circulação do vírus da raiva canina e felina, prevenindo a raiva humana. O gráfico mostra a cobertura (porcentagem de vacinados) da campanha, em cães, nos anos de 2013, 2015 e 2017, no município de Belo Horizonte, em Minas Gerais. Os valores das coberturas dos anos de 2014 e 2016 não estão informados no gráfico e deseja-se estimá-los. Para tal, levou-se em consideração que a variação na cobertura de vacinação da campanha antirrábica, nos períodos de 2013 a 2015 e de 2015 a 2017, deu-se de forma linear. Qual teria sido a cobertura dessa campanha no ano de 2014?",
+    "text": "A raiva é uma doença viral e infecciosa, transmitida por mamíferos. A campanha nacional de vacinação antirrábica tem o objetivo de controlar a circulação do vírus da raiva canina e felina, prevenindo a raiva humana. O gráfico mostra a cobertura (porcentagem de vacinados) da campanha, em cães, nos anos de 2013, 2015 e 2017, no município de Belo Horizonte, em Minas Gerais. Os valores das coberturas dos anos de 2014 e 2016 não estão informados no gráfico e deseja-se estimá-los. Para tal, levou-se em consideração que a variação na cobertura de vacinação da campanha antirrábica, nos períodos de 2013 a 2015 e de 2015 a 2017, deu-se de forma linear. \n[Gráfico: cobertura da vacinação antirrábica]\nQual teria sido a cobertura dessa campanha no ano de 2014?",
     "alternatives": {
       "a": "62,3%",
       "b": "63,0%",
@@ -690,7 +713,9 @@
       "d": "64,0%",
       "e": "65,5%"
     },
-    "images": [],
+    "images": [
+      "figuras/q168_2018_fig1.png"
+    ],
     "tags": [
       "aritmética e números",
       "análise combinatória"
@@ -703,7 +728,7 @@
   },
   {
     "number": 169,
-    "text": "Uma empresa de comunicação tem a tarefa de elaborar um material publicitário de um estaleiro para divulgar um novo navio, equipado com um guindaste de 15 m de altura e uma esteira de 90 m de comprimento. No desenho desse navio, a representação do guindaste deve ter sua altura entre 0,5 cm e 1 cm, enquanto a esteira deve apresentar comprimento superior a 4 cm. Todo o desenho deverá ser feito em uma escala 1 : X. Os valores possíveis para X são, apenas,",
+    "text": "Uma empresa de comunicação tem a tarefa de elaborar um material publicitário de um estaleiro para divulgar um novo navio, equipado com um guindaste de 15 m de altura e uma esteira de 90 m de comprimento. No desenho desse navio, a representação do guindaste deve ter sua altura entre 0,5 cm e 1 cm, enquanto a esteira deve apresentar comprimento superior a 4 cm. Todo o desenho deverá ser feito em uma escala 1 : X.\nOs valores possíveis para X são, apenas,",
     "alternatives": {
       "a": "X  >  1 500",
       "b": "X  <  3 000",
@@ -724,7 +749,7 @@
   },
   {
     "number": 170,
-    "text": "Em 2014 foi inaugurada a maior roda-gigante do mundo, a High Roller, situada em Las Vegas. A figura representa um esboço dessa roda-gigante, no qual o ponto A representa uma de suas cadeiras. A partir da posição indicada, em que o segmento OA se encontra paralelo ao plano do solo, rotaciona-se a High Roller no sentido anti-horário, em torno do ponto O. Sejam t o ângulo determinado pelo segmento OA em relação à sua posição inicial, e f a função que descreve a altura do ponto A, em relação ao solo, em função de t. Após duas voltas completas, f tem o seguinte gráfico: f (metro) com valores 68 e 88 no eixo vertical, e 0, π/2, 2π, 4π no eixo horizontal (t em radiano). A expressão da função altura é dada por",
+    "text": "Em 2014 foi inaugurada a maior roda-gigante do mundo, a <i>High Roller</i>, situada em Las Vegas. A figura representa um esboço dessa roda-gigante, no qual o ponto A representa uma de suas cadeiras. \n[Figura: Disponível em: http://en.wikipedia.org. Acesso em: 22 abr. 2014 (adaptado).]\nA partir da posição indicada, em que o segmento <i>OA</i> se encontra paralelo ao plano do solo, rotaciona-se a <i>High Roller</i> no sentido anti-horário, em torno do ponto <i>O</i>. Sejam <i>t</i> o ângulo determinado pelo segmento OA em relação à sua posição inicial, e <i>f</i> a função que descreve a altura do ponto <i>A</i>, em relação ao solo, em função de <i>t</i>. Após duas voltas completas, <i>f</i> tem o seguinte gráfico: \n[Gráfico: função f]\nA expressão da função altura é dada por",
     "alternatives": {
       "a": "f(t) = 80 sen(t) + 88",
       "b": "f(t) = 80 cos(t) + 88",
@@ -732,7 +757,10 @@
       "d": "f(t) = 168 sen(t) + 88 cos(t)",
       "e": "f(t) = 88 sen(t) + 168 cos(t)"
     },
-    "images": [],
+    "images": [
+      "figuras/q170_2018_fig1.png",
+      "figuras/q170_2018_fig2.png"
+    ],
     "tags": [
       "trigonometria",
       "funções"
@@ -745,7 +773,7 @@
   },
   {
     "number": 171,
-    "text": "A rosa dos ventos é uma figura que representa oito sentidos, que dividem o círculo em partes iguais. Uma câmera de vigilância está fixada no teto de um shopping e sua lente pode ser direcionada remotamente através de um controlador, para qualquer sentido. A lente da câmera está apontada inicialmente no sentido Oeste e o seu controlador efetua três mudanças consecutivas a saber:\n  - 1ª mudança: 135º no sentido anti-horário;\n  - 2ª mudança: 60º no sentido horário;\n  - 3ª mudança: 45º no sentido anti-horário.\nApós a 3ª mudança, ele é orientado a reposicionar a câmera, com a menor amplitude possível, no sentido Noroeste (NO) devido a um movimento suspeito de um cliente. Qual mudança de sentido o controlador deve efetuar para reposicionar a câmera?",
+    "text": "A rosa dos ventos é uma figura que representa oito sentidos, que dividem o círculo em partes iguais. \n[Figura: Rosa dos ventos]\nUma câmera de vigilância está fixada no teto de um shopping e sua lente pode ser direcionada remotamente através de um controlador, para qualquer sentido. A lente da câmera está apontada inicialmente no sentido Oeste e o seu controlador efetua três mudanças consecutivas a saber:\n  - 1ª mudança: 135º no sentido anti-horário;\n  - 2ª mudança: 60º no sentido horário;\n  - 3ª mudança: 45º no sentido anti-horário.\nApós a 3ª mudança, ele é orientado a reposicionar a câmera, com a menor amplitude possível, no sentido Noroeste (NO) devido a um movimento suspeito de um cliente.\nQual mudança de sentido o controlador deve efetuar para reposicionar a câmera?",
     "alternatives": {
       "a": "75º no sentido horário",
       "b": "105º no sentido anti-horário",
@@ -753,7 +781,9 @@
       "d": "135º no sentido anti-horário",
       "e": "165º no sentido horário"
     },
-    "images": [],
+    "images": [
+      "figuras/q171_2018_fig1.png"
+    ],
     "tags": [
       "geometria plana",
       "análise combinatória"
@@ -766,7 +796,7 @@
   },
   {
     "number": 172,
-    "text": "Na teoria das eleições, o Método de Borda sugere que, em vez de escolher um candidato, cada juiz deve criar um ranking de sua preferência para os concorrentes (isto é, criar uma lista com a ordem de classificação dos concorrentes). A este ranking é associada uma pontuação: um ponto para o último colocado no ranking, dois pontos para o penúltimo, três para o antepenúltimo, e assim sucessivamente. Ao final, soma-se a pontuação atribuída a cada concorrente por cada um dos juízes.\n\nEm uma escola houve um concurso de poesia no qual cinco alunos concorreram a um prêmio, sendo julgados por 25 juízes. Para a escolha da poesia vencedora foi utilizado o Método de Borda. Nos quadros, estão apresentados os rankings dos juízes e a frequência de cada ranking.\n\n[Tabela - Ranking com colocações de Ana, Bia, Caio, Dani e Edu nos rankings I, II, III e IV]\n[Tabela - Frequência dos rankings: I=4, II=9, III=7, IV=5]\n\nA poesia vencedora foi a de",
+    "text": "Na teoria das eleições, o Método de Borda sugere que, em vez de escolher um candidato, cada juiz deve criar um ranking de sua preferência para os concorrentes (isto é, criar uma lista com a ordem de classificação dos concorrentes). A este ranking é associada uma pontuação: um ponto para o último colocado no ranking, dois pontos para o penúltimo, três para o antepenúltimo, e assim sucessivamente. Ao final, soma-se a pontuação atribuída a cada concorrente por cada um dos juízes.\nEm uma escola houve um concurso de poesia no qual cinco alunos concorreram a um prêmio, sendo julgados por 25 juízes. Para a escolha da poesia vencedora foi utilizado o Método de Borda. Nos quadros, estão apresentados os rankings dos juízes e a frequência de cada ranking.\n|----------|----------|----------|----------|----------|\n|Colocação| |Ranking| | |\n| |I|II|III|IV|\n|1º|Ana|Dani|Bia|Edu|\n|2º|Bia|Caio|Ana|Ana|\n|3º|Ana|Edu|Bia|Dani|\n|4º|Dani|Ana|Edu|Bia|\n|5º|Edu|Bia|Dani|Edu|\n|----------|----------|----------|----------|----------|\n\n|----------|----------|\n|Ranking|Frequência|\n|I|4|\n|II|9|\n|III|7|\n|IV|5|\n|----------|----------|\n\nA poesia vencedora foi a de",
     "alternatives": {
       "a": "Edu",
       "b": "Dani",
@@ -787,21 +817,21 @@
   },
   {
     "number": 173,
-    "text": "Os guindastes são fundamentais em canteiros de obras, no manejo de materiais pesados como vigas de aço. A figura ilustra uma sequência de estágios em que um daste iça uma viga de aço que se encontra inicialmente no solo.\n\n[Figura: Sequência de três estágios mostrando um guindaste içando uma viga]\n\nNa figura, o ponto O representa a projeção ortogonal do cabo de aço sobre o plano do chão e este se mantém na vertical durante todo o movimento de içamento da viga que se inicia no tempo t = 0 (estágio 1) e finaliza no tempo t_f (estágio 3). Uma das extremidades da viga é içada verticalmente a partir do ponto O, enquanto que a outra extremidade desliza sobre o solo em direção ao ponto O. Considere que o cabo de aço utilizado pelo guindaste para içar a viga fique sempre na posição vertical. Na figura, o ponto M representa o ponto médio do segmento que representa a viga.\n\nO gráfico que descreve a distância do ponto M ao ponto O em função do tempo, entre t = 0 e t_f, é\n\n[Gráfico - opção A: Distância vs Tempo]\n[Gráfico - opção B: Distância vs Tempo]\n[Gráfico - opção C: Distância vs Tempo]\n[Gráfico - opção D: Distância vs Tempo]\n[Gráfico - opção E: Distância vs Tempo]",
+    "text": "Os guindastes são fundamentais em canteiros de obras, no manejo de materiais pesados como vigas de aço. A figura ilustra uma sequência de estágios em que um daste iça uma viga de aço que se encontra inicialmente no solo.[Figura: Sequência de três estágios mostrando um guindaste içando uma viga]\nNa figura, o ponto O representa a projeção ortogonal do cabo de aço sobre o plano do chão e este se mantém na vertical durante todo o movimento de içamento da viga que se inicia no tempo t = 0 (estágio 1) e finaliza no tempo t<sub>f</sub> (estágio 3). Uma das extremidades da viga é içada verticalmente a partir do ponto O, enquanto que a outra extremidade desliza sobre o solo em direção ao ponto O. Considere que o cabo de aço utilizado pelo guindaste para içar a viga fique sempre na posição vertical. Na figura, o ponto M representa o ponto médio do segmento que representa a viga.\n\nO gráfico que descreve a distância do ponto M ao ponto O em função do tempo, entre t = 0 e t<sub>f</sub>, é",
     "alternatives": {
-      "a": "[Gráfico mostrando decrescimento linear da distância]",
-      "b": "[Gráfico mostrando decrescimento não linear seguido de estabilização]",
-      "c": "[Gráfico mostrando decrescimento não linear da distância]",
-      "d": "[Gráfico mostrando aumento linear da distância]",
-      "e": "[Gráfico mostrando aumento seguido de decrescimento da distância]"
+      "a": "[Gráfico - opção A: Distância vs Tempo]",
+      "b": "[Gráfico - opção B: Distância vs Tempo]",
+      "c": "[Gráfico - opção C: Distância vs Tempo]",
+      "d": "[Gráfico - opção D: Distância vs Tempo]",
+      "e": "[Gráfico - opção E: Distância vs Tempo]"
     },
     "images": [
-      "figuras/q173_2018_fig1.png",
-      "figuras/q173_2018_fig2.png",
-      "figuras/q173_2018_fig3.png",
-      "figuras/q173_2018_fig4.png",
-      "figuras/q173_2018_fig5.png",
-      "figuras/q173_2018_fig6.png"
+      "figuras/q173_2018_fig7.png",
+      "figuras/q173_2018_fig8.png",
+      "figuras/q173_2018_fig9.png",
+      "figuras/q173_2018_fig10.png",
+      "figuras/q173_2018_fig11.png",
+      "figuras/q173_2018_fig12.png"
     ],
     "tags": [
       "geometria analítica",
@@ -815,7 +845,7 @@
   },
   {
     "number": 174,
-    "text": "Com o avanço em ciência da computação, estamos próximos do momento em que o número de transistores em um processador de um computador pessoal será da mesma ordem de grandeza que o número de neurônios em um cérebro humano, que é da ordem de 100 bilhões. Uma das grandezas determinantes para o desempenho de um processador é a densidade de transistores, que é o número de transistores por centímetro quadrado. Em 1986, uma empresa fabricava um processador contendo 100.000 transistores distribuídos em 0,25 cm² de área. Desde então, o número de transistores por centímetro quadrado que se pode colocar em um processador dobra a cada dois anos (Lei de Moore). Considere 0,30 como aproximação para log₁₀ 2. Em que ano a empresa atingiu ou atingirá a densidade de 100 bilhões de transistores?",
+    "text": "Considere 0,30 como aproximação para log₁₀ 2. Em que ano a empresa atingiu ou atingirá a densidade de 100 bilhões de transistores?",
     "alternatives": {
       "a": "1999",
       "b": "2002",
@@ -832,11 +862,14 @@
     "year": 2018,
     "test": "ENEM",
     "area": "math",
-    "answer": "c"
+    "answer": "c",
+    "contextIds": [
+      "enem_2018_math_q174_ctx1"
+    ]
   },
   {
     "number": 175,
-    "text": "Uma loja vende automóveis em N parcelas iguais sem juros. No momento de contratar o financiamento, caso o cliente queira aumentar o prazo, acrescentando mais 5 parcelas, o valor de cada uma das parcelas diminui R$ 200,00, ou se ele quiser diminuir o prazo com 4 parcelas a menos, o valor de cada uma das parcelas sobe R$ 232,00. Considere ainda que, nas três possibilidades de pagamento, o valor do automóvel é o mesmo, todas são sem juros e não é dado desconto em nenhuma das situações.\n\nNessas condições, qual é a quantidade N de parcelas a serem pagas de acordo com a proposta inicial da loja?",
+    "text": "Uma loja vende automóveis em N parcelas iguais sem juros. No momento de contratar o financiamento, caso o cliente queira aumentar o prazo, acrescentando mais 5 parcelas, o valor de cada uma das parcelas diminui R$ 200,00, ou se ele quiser diminuir o prazo com 4 parcelas a menos, o valor de cada uma das parcelas sobe R$ 232,00. Considere ainda que, nas três possibilidades de pagamento, o valor do automóvel é o mesmo, todas são sem juros e não é dado desconto em nenhuma das situações.\nNessas condições, qual é a quantidade N de parcelas a serem pagas de acordo com a proposta inicial da loja?",
     "alternatives": {
       "a": "20",
       "b": "24",
@@ -857,7 +890,7 @@
   },
   {
     "number": 176,
-    "text": "O salto ornamental é um esporte em que cada competidor realiza seis saltos. A nota em cada salto é calculada pela soma das notas dos juízes, multiplicada pela nota de partida (o grau de dificuldade de cada salto). Fica em primeiro lugar o atleta que obtiver a maior soma das seis notas recebidas.\n\nO atleta 10 irá realizar o último salto da final. Ele observa no Quadro 1, antes de executar o salto, um recorte do quadro parcial de notas com a sua classificação e a dos três primeiros lugares até aquele momento.\n\n[Tabela - Quadro 1 com classificação, atleta, nota do salto 6 e total]\n\nEle precisa decidir com seu treinador qual salto deverá realizar. Os dados dos possíveis tipos de salto estão no Quadro 2.\n\n[Tabela - Quadro 2 com tipos de salto, nota de partida, estimativa da soma das notas dos juízes e probabilidade de obter a nota]\n\nO atleta optará pelo salto com a maior probabilidade de obter a nota estimada, de maneira que lhe permita alcançar o primeiro lugar.\n\nConsiderando essas condições, o salto que o atleta deverá escolher é o de tipo",
+    "text": "O salto ornamental é um esporte em que cada competidor realiza seis saltos. A nota em cada salto é calculada pela soma das notas dos juízes, multiplicada pela nota de partida (o grau de dificuldade de cada salto). Fica em primeiro lugar o atleta que obtiver a maior soma das seis notas recebidas.\nO atleta 10 irá realizar o último salto da final. Ele observa no Quadro 1, antes de executar o salto, um recorte do quadro parcial de notas com a sua classificação e a dos três primeiros lugares até aquele momento.\n\n<center><b>Quadro 1</b></center>\n|----------|----------|----------|----------|\n|Classificação|Atleta|6º Salto|Total|\n|1º|3|135,0|829,0|\n|2º|4|140,0|825,2|\n|3º|8|140,4|824,2|\n|6º|10| |687,5|\n|----------|----------|----------|----------|\nEle precisa decidir com seu treinador qual salto deverá realizar. Os dados dos possíveis tipos de salto estão no Quadro 2.\n\n<center><b>Quadro 2</b></center>\n|----------|----------|----------|----------|\n|Tipo de salto|Nota de partida|Estimativa da soma das notas dos juízes|Probabilidade de obter a nota|\n|T1|2,2|57|89,76%|\n|T2|2,4|58|93,74%|\n|T3|2,6|55|91,88%|\n|T4|2,8|50|95,38%|\n|T5|3,0|53|87,34%|\n|----------|----------|----------|----------|\nO atleta optará pelo salto com a maior probabilidade de obter a nota estimada, de maneira que lhe permita alcançar o primeiro lugar.\nConsiderando essas condições, o salto que o atleta deverá escolher é o de tipo",
     "alternatives": {
       "a": "T1",
       "b": "T2",
@@ -878,7 +911,7 @@
   },
   {
     "number": 177,
-    "text": "Devido ao não cumprimento das metas definida para a campanha de vacinação contra a gripe comum e o vírus H1N1 em um ano, o Ministério da Saúde anunciou a prorrogação da campanha por mais um semana. A tabela apresenta as quantidades de pessoa vacinadas dentre os cinco grupos de risco até a data de início da prorrogação da campanha.\n\nBalanço parcial nacional da vacinação contra a gripe\n\n| Grupo de risco | População (milhão) | População já vacinada (milhão) | (%) |\n| --- | --- | --- | --- |\n| Crianças | 4,5 | 0,9 | 20 |\n| Profissionais de saúde | 2,0 | 1,0 | 50 |\n| Gestantes | 2,5 | 1,5 | 60 |\n| Indígenas | 0,5 | 0,4 | 80 |\n| Idosos | 20,5 | 8,2 | 40 |\n\nQual é a porcentagem do total de pessoas desses grupos de risco já vacinadas?",
+    "text": "Devido ao não cumprimento das metas definida para a campanha de vacinação contra a gripe comum e o vírus H1N1 em um ano, o Ministério da Saúde anunciou a prorrogação da campanha por mais um semana. A tabela apresenta as quantidades de pessoa vacinadas dentre os cinco grupos de risco até a data de início da prorrogação da campanha.\n|-|\n|Balanço parcial nacional da vacinação contra a gripe|\n|-|\n\n| Grupo de risco | População (milhão) | População já vacinada (milhão) | (%) |\n| --- | --- | --- | --- |\n| Crianças | 4,5 | 0,9 | 20 |\n| Profissionais de saúde | 2,0 | 1,0 | 50 |\n| Gestantes | 2,5 | 1,5 | 60 |\n| Indígenas | 0,5 | 0,4 | 80 |\n| Idosos | 20,5 | 8,2 | 40 |\n\nQual é a porcentagem do total de pessoas desses grupos de risco já vacinadas?",
     "alternatives": {
       "a": "12",
       "b": "18",
@@ -899,7 +932,7 @@
   },
   {
     "number": 178,
-    "text": "Durante uma festa de colégio, um grupo de aluno organizou uma rifa. Oitenta alunos faltaram à festa e não participaram da rifa. Entre os que compareceram, alguns compraram três bilhetes, 45 compraram 2 bilhetes, e muitos compraram apenas um. O total de alunos que comprou um único bilhete era 20% do número total de bilhetes vendidos, e o total de bilhetes vendidos excedeu em 33 o número total de alunos do colégio. Quantos alunos compraram somente um bilhete?",
+    "text": "Durante uma festa de colégio, um grupo de aluno organizou uma rifa. Oitenta alunos faltaram à festa e não participaram da rifa. Entre os que compareceram, alguns compraram três bilhetes, 45 compraram 2 bilhetes, e muitos compraram apenas um. O total de alunos que comprou um único bilhete era 20% do número total de bilhetes vendidos, e o total de bilhetes vendidos excedeu em 33 o número total de alunos do colégio.\nQuantos alunos compraram somente um bilhete?",
     "alternatives": {
       "a": "34",
       "b": "42",
@@ -920,7 +953,7 @@
   },
   {
     "number": 179,
-    "text": "Um quebra-cabeça consiste em recobrir um quadrado com triângulos retângulos isósceles, como ilustra a figura. Uma artesã confecciona um quebra-cabeça como descrito, de tal modo que a menor das peças é um triângulo retângulo isósceles cujos catetos medem 2 cm. O quebra-cabeça, quando montado, resultará em um quadrado cuja medida do lado, em centímetro, é",
+    "text": "Um quebra-cabeça consiste em recobrir um quadrado com triângulos retângulos isósceles, como ilustra a figura. \n[Figura: quebra-cabeça]\nUma artesã confecciona um quebra-cabeça como descrito, de tal modo que a menor das peças é um triângulo retângulo isósceles cujos catetos medem 2 cm.\nO quebra-cabeça, quando montado, resultará em um quadrado cuja medida do lado, em centímetro, é",
     "alternatives": {
       "a": "14",
       "b": "12",
@@ -928,7 +961,9 @@
       "d": "6 + 4√2",
       "e": "6 + 2√2"
     },
-    "images": [],
+    "images": [
+      "figuras/q179_2018_fig1.png"
+    ],
     "tags": [
       "geometria plana",
       "análise combinatória"
@@ -941,7 +976,7 @@
   },
   {
     "number": 180,
-    "text": "Para decorar um cilindro circular reto será usada uma faixa retangular de papel transparente, na qual está desenhada em negrito uma diagonal que forma 30° com a borda inferior. O raio da base do cilindro mede 6/π cm, e ao enrolar a faixa obtém-se uma linha em formato de hélice, como na figura.\n\nO valor da medida da altura do cilindro, em centímetro, é",
+    "text": "Para decorar um cilindro circular reto será usada uma faixa retangular de papel transparente, na qual está desenhada em negrito uma diagonal que forma 30° com a borda inferior. O raio da base do cilindro mede 6/π cm, e ao enrolar a faixa obtém-se uma linha em formato de hélice, como na figura.[Figura]\nO valor da medida da altura do cilindro, em centímetro, é",
     "alternatives": {
       "a": "36√3",
       "b": "24√3",
@@ -949,7 +984,9 @@
       "d": "36",
       "e": "72"
     },
-    "images": [],
+    "images": [
+      "figuras/q180_2018_fig1.png"
+    ],
     "tags": [
       "geometria espacial",
       "trigonometria"
