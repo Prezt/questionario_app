@@ -13,7 +13,7 @@ export default async function handler(req, res) {
   try {
     const sql = neon(process.env.DATABASE_URL)
     const rows = await sql`
-      SELECT id, username, password_hash FROM users
+      SELECT id, username, password_hash, role FROM users
       WHERE username = ${username.toLowerCase().trim()}
     `
     const user = rows[0]
@@ -23,11 +23,11 @@ export default async function handler(req, res) {
     }
 
     const token = jwt.sign(
-      { userId: user.id, username: user.username },
+      { userId: user.id, username: user.username, role: user.role },
       process.env.JWT_SECRET,
       { expiresIn: '30d' }
     )
-    res.json({ token, user: { id: user.id, username: user.username } })
+    res.json({ token, user: { id: user.id, username: user.username, role: user.role } })
   } catch (err) {
     console.error('login error:', err)
     res.status(500).json({ error: 'Erro interno' })

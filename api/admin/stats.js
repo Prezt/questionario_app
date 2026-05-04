@@ -6,13 +6,13 @@ export default async function handler(req, res) {
 
   const payload = verifyToken(req)
   if (!payload) return res.status(401).json({ error: 'Não autorizado' })
-  if (payload.username !== 'admin') return res.status(403).json({ error: 'Acesso negado' })
+  if (payload.role !== 'admin') return res.status(403).json({ error: 'Acesso negado' })
 
   const sql = neon(process.env.DATABASE_URL)
 
   const [users, testResults, dailyResults, feedbackRows] = await Promise.all([
     sql`
-      SELECT id, username, created_at
+      SELECT id, username, role, created_at
       FROM users
       ORDER BY created_at DESC
     `,

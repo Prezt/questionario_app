@@ -2957,6 +2957,34 @@
   word-break: break-word;
 }
 
+.admin-role-badge {
+  display: inline-block;
+  padding: 0.15rem 0.5rem;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  margin-right: 0.4rem;
+}
+.admin-role-badge--user { background: #e2e8f0; color: #475569; }
+.admin-role-badge--prof { background: #dbeafe; color: #1d4ed8; }
+
+.admin-role-toggle-btn {
+  padding: 0.15rem 0.5rem;
+  border-radius: 6px;
+  border: 1.5px solid #94a3b8;
+  background: transparent;
+  color: inherit;
+  font-size: 0.75rem;
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s;
+}
+.admin-role-toggle-btn:hover:not(:disabled) {
+  background: #1d4ed8;
+  border-color: #1d4ed8;
+  color: #fff;
+}
+.admin-role-toggle-btn:disabled { opacity: 0.5; cursor: default; }
+
 .admin-delete-btn {
   padding: 0.25rem 0.65rem;
   border-radius: 6px;

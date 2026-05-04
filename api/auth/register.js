@@ -19,16 +19,16 @@ export default async function handler(req, res) {
     const rows = await sql`
       INSERT INTO users (username, password_hash)
       VALUES (${username.toLowerCase().trim()}, ${hash})
-      RETURNING id, username
+      RETURNING id, username, role
     `
     const user = rows[0]
 
     const token = jwt.sign(
-      { userId: user.id, username: user.username },
+      { userId: user.id, username: user.username, role: user.role },
       process.env.JWT_SECRET,
       { expiresIn: '30d' }
     )
-    res.status(201).json({ token, user: { id: user.id, username: user.username } })
+    res.status(201).json({ token, user: { id: user.id, username: user.username, role: user.role } })
   } catch (err) {
     if (err.code === '23505') {
       return res.status(409).json({ error: 'Nome de usuário já está em uso' })

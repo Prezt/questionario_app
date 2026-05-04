@@ -1527,7 +1527,7 @@ export default function App() {
                   <span className="options-toggle-thumb" />
                 </span>
               </label>
-              {user?.username === 'admin' && (
+              {user?.role === 'admin' && (
                 <button
                   type="button"
                   className="options-admin-btn"
@@ -2372,6 +2372,22 @@ function AdminPanel({ stats, onBack, dark, setDark, token }) {
   const [deleteLoading, setDeleteLoading] = useState(false)
   const [deleteError, setDeleteError] = useState('')
   const [deletedIds, setDeletedIds] = useState(new Set())
+  const [roleOverrides, setRoleOverrides] = useState({}) // { [userId]: role }
+  const [roleLoading, setRoleLoading] = useState(null) // userId being updated
+
+  async function handleSetRole(userId, newRole) {
+    setRoleLoading(userId)
+    try {
+      const res = await fetch('/api/admin/set-role', {
+        method: 'PATCH',
+        headers: { 'Content-Type': 'application/json', Authorization: `Bearer ${token}` },
+        body: JSON.stringify({ userId, role: newRole }),
+      })
+      if (res.ok) setRoleOverrides(prev => ({ ...prev, [userId]: newRole }))
+    } finally {
+      setRoleLoading(null)
+    }
+  }
 
   async function handleDeleteUser() {
     if (!deleteTarget) return
@@ -2491,6 +2507,7 @@ function AdminPanel({ stats, onBack, dark, setDark, token }) {
               <thead>
                 <tr>
                   <th>Usuário</th>
+                  <th>Papel</th>
                   <th>Cadastrado em</th>
                   <th>Simulados</th>
                   <th>Desafios</th>
@@ -2500,29 +2517,46 @@ function AdminPanel({ stats, onBack, dark, setDark, token }) {
                 </tr>
               </thead>
               <tbody>
-                {sortedUsers.filter(u => u.username !== 'admin' && !deletedIds.has(u.id)).map((u) => (
-                  <tr key={u.id}>
-                    <td><strong>{u.username}</strong></td>
-                    <td>{formatDate(u.created_at)}</td>
-                    <td>{u.testCount}</td>
-                    <td>{u.dailyCount}</td>
-                    <td>
-                      {u.totalQuestions > 0
-                        ? `${u.totalCorrect}/${u.totalQuestions} (${Math.round((u.totalCorrect / u.totalQuestions) * 100)}%)`
-                        : '—'}
-                    </td>
-                    <td>{u.bestScore !== null ? `${u.bestScore}%` : '—'}</td>
-                    <td>
-                      <button
-                        type="button"
-                        className="admin-delete-btn"
-                        onClick={() => { setDeleteTarget({ id: u.id, username: u.username }); setDeleteError('') }}
-                      >
-                        Deletar
-                      </button>
-                    </td>
-                  </tr>
-                ))}
+                {sortedUsers.filter(u => u.role !== 'admin' && !deletedIds.has(u.id)).map((u) => {
+                  const currentRole = roleOverrides[u.id] ?? u.role
+                  const isProf = currentRole === 'prof'
+                  return (
+                    <tr key={u.id}>
+                      <td><strong>{u.username}</strong></td>
+                      <td>
+                        <span className={`admin-role-badge admin-role-badge--${currentRole}`}>
+                          {isProf ? 'Professor' : 'Aluno'}
+                        </span>
+                        <button
+                          type="button"
+                          className="admin-role-toggle-btn"
+                          disabled={roleLoading === u.id}
+                          onClick={() => handleSetRole(u.id, isProf ? 'user' : 'prof')}
+                        >
+                          {roleLoading === u.id ? '…' : isProf ? '↓ Remover' : '↑ Professor'}
+                        </button>
+                      </td>
+                      <td>{formatDate(u.created_at)}</td>
+                      <td>{u.testCount}</td>
+                      <td>{u.dailyCount}</td>
+                      <td>
+                        {u.totalQuestions > 0
+                          ? `${u.totalCorrect}/${u.totalQuestions} (${Math.round((u.totalCorrect / u.totalQuestions) * 100)}%)`
+                          : '—'}
+                      </td>
+                      <td>{u.bestScore !== null ? `${u.bestScore}%` : '—'}</td>
+                      <td>
+                        <button
+                          type="button"
+                          className="admin-delete-btn"
+                          onClick={() => { setDeleteTarget({ id: u.id, username: u.username }); setDeleteError('') }}
+                        >
+                          Deletar
+                        </button>
+                      </td>
+                    </tr>
+                  )
+                })}
               </tbody>
             </table>
           )}
