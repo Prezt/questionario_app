@@ -301,6 +301,10 @@ const PT_SUFFIX_RULES = [
   [/anca$/i,   'ança'],    // alianca   → aliança
   [/encas$/i,  'enças'],   // pertencas → pertenças
   [/enca$/i,   'ença'],    // pertenca  → pertença
+  [/arios$/i,  'ários'],   // publicitarios → publicitários, voluntarios → voluntários
+  [/ario$/i,   'ário'],    // publicitario  → publicitário, voluntario  → voluntário
+  [/arias$/i,  'árias'],   // publicitarias → publicitárias
+  [/aria$/i,   'ária'],    // publicitaria  → publicitária
   [/coes$/i,   'ções'],    // manifestacoes → manifestações
   [/cao$/i,    'ção'],     // manifestacao  → manifestação
   [/oes$/i,    'ões'],     // broader fallback
@@ -1548,16 +1552,17 @@ export default function ReviewPage() {
               const flag = flags[fk]
               const status = flag?.status
               const hasIssue = auditIssueKeys.has(fk)
+              const langMatch = (a, b) => (a?.language ?? null) === (b?.language ?? null)
               const isCurrent = overrideQuestion
-                ? overrideQuestion._file === q._file && overrideQuestion.number === q.number
-                : currentQuestion?._file === q._file && currentQuestion?.number === q.number
+                ? overrideQuestion._file === q._file && overrideQuestion.number === q.number && langMatch(overrideQuestion, q)
+                : currentQuestion?._file === q._file && currentQuestion?.number === q.number && langMatch(currentQuestion, q)
               items.push(
                 <button
                   key={`${fk}_${q.language ?? 'pt'}_${idx}`}
                   ref={isCurrent ? activeItemRef : null}
                   className={`rp-qlist-item${isCurrent ? ' rp-qlist-item--active' : ''} ${status ? `rp-qlist-item--${status}` : ''}`}
                   onClick={() => {
-                    const idx2 = activeList.findIndex(aq => aq._file === q._file && aq.number === q.number)
+                    const idx2 = activeList.findIndex(aq => aq._file === q._file && aq.number === q.number && langMatch(aq, q))
                     if (idx2 !== -1) { setOverrideQuestion(null); setCurrentIndex(idx2) }
                     else setOverrideQuestion(q)
                   }}

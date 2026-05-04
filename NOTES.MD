@@ -41,7 +41,7 @@ FERRAMENTAS DE LONGO PRAZO
 
 REVISAO:
  [] ENEM 2025
-    [] linguagens
+    [x] linguagens
     [] humanas
     [] ciencias da natureza
     [] matematica
@@ -75,11 +75,11 @@ REVISAO:
     [] humanas
     [] ciencias da natureza
     [] matematica
- [] ENEM 2018
+ [x] ENEM 2018
     [x] linguagens
     [x] humanas
-    [] ciencias da natureza
-    [] matematica
+    [x] ciencias da natureza
+    [x] matematica
 
 ETAPA 2:
 UFSC

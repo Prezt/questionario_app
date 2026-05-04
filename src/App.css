@@ -778,7 +778,10 @@
   margin: 0;
 }
 
-.txt-center { display: block; text-align: center; }
+.txt-left    { display: block; text-align: left; }
+.txt-center  { display: block; text-align: center; }
+.txt-right   { display: block; text-align: right; }
+.txt-justify { display: block; text-align: justify; }
 
 .supsub {
   display: inline-flex;

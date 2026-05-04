@@ -30,18 +30,36 @@ function escapeInline(text) {
     .replace(/&lt;sup&gt;/gi, '<sup>')
     .replace(/&lt;\/sup&gt;/gi, '</sup>')
     .replace(/&lt;br\s*\/?&gt;/gi, '<br>')
+    .replace(/&lt;left&gt;/gi, '<span class="txt-left">')
+    .replace(/&lt;\/left&gt;/gi, '</span>')
     .replace(/&lt;center&gt;/gi, '<span class="txt-center">')
     .replace(/&lt;\/center&gt;/gi, '</span>')
+    .replace(/&lt;right&gt;/gi, '<span class="txt-right">')
+    .replace(/&lt;\/right&gt;/gi, '</span>')
+    .replace(/&lt;justify&gt;/gi, '<span class="txt-justify">')
+    .replace(/&lt;\/justify&gt;/gi, '</span>')
     .replace(/<sup>(.*?)<\/sup><sub>(.*?)<\/sub>/g, '<span class="supsub"><sup>$1</sup><sub>$2</sub></span>')
 }
 function parseMarkdownTable(tableLines) {
-  const esc = s => s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
   const dataRows = tableLines.filter(l => !/^\|[\s\-:|]+\|$/.test(l.trim()))
   if (!dataRows.length) return ''
   const parseRow = l => l.split('|').slice(1, -1).map(c => c.trim())
+  // Build a row of <th> or <td> elements, merging cells whose content is ">"
+  const buildCells = (cells, tag) => {
+    const out = []
+    let i = 0
+    while (i < cells.length) {
+      let span = 1
+      while (i + span < cells.length && cells[i + span] === '>') span++
+      const attr = span > 1 ? ` colspan="${span}"` : ''
+      out.push(`<${tag}${attr}>${escapeInline(cells[i])}</${tag}>`)
+      i += span
+    }
+    return out.join('')
+  }
   const [header, ...body] = dataRows
-  const ths = parseRow(header).map(c => `<th>${esc(c)}</th>`).join('')
-  const trs = body.map(l => `<tr>${parseRow(l).map(c => `<td>${esc(c)}</td>`).join('')}</tr>`).join('')
+  const ths = buildCells(parseRow(header), 'th')
+  const trs = body.map(l => `<tr>${buildCells(parseRow(l), 'td')}</tr>`).join('')
   return `<table class="q-table"><thead><tr>${ths}</tr></thead><tbody>${trs}</tbody></table>`
 }
 function richHtmlBr(text) {
@@ -1017,11 +1035,22 @@ export default function App() {
   const startAreaQuiz = useCallback((area, tag = null) => {
     const pool = allQuestions.filter((q) =>
       q.area === area &&
-      (!q.language || q.language === foreignLang) &&
       (tag === null || q.tags?.includes(tag))
     )
     if (pool.length === 0) return
-    const shuffled = [...pool]
+
+    // Build language variant lookup
+    const variants = {}
+    pool.forEach((q) => {
+      if (q.language) {
+        if (!variants[q.number]) variants[q.number] = {}
+        variants[q.number][q.language] = q
+      }
+    })
+    langVariantsRef.current = variants
+
+    const deduped = pool.filter((q) => !q.language || q.language === foreignLang)
+    const shuffled = [...deduped]
     for (let i = shuffled.length - 1; i > 0; i--) {
       const j = Math.floor(Math.random() * (i + 1))
       ;[shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]]
