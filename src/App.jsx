@@ -14,7 +14,8 @@ import {
   alternativeLabelForDisplay,
   captionFromBracketText,
 } from './parseQuestionFigures.js'
-const ReviewPage = lazy(() => import('./ReviewPage.jsx'))
+const ReviewPage  = lazy(() => import('./ReviewPage.jsx'))
+const QuestionEditor = lazy(() => import('./QuestionEditor.jsx'))
 
 // Render text with <b> (bold) and <i> (italic) support.
 // All other HTML is escaped, so this is safe even for user-edited content.
@@ -276,6 +277,7 @@ function legacyPlainToHtml(raw) {
 
 export default function App() {
   if (window.location.pathname === '/review') return <Suspense fallback={null}><ReviewPage /></Suspense>
+  if (window.location.pathname === '/editor') return <Suspense fallback={null}><QuestionEditor /></Suspense>
 
   const [user, setUser] = useState(null)
   // All questions loaded from manifest
@@ -337,7 +339,8 @@ export default function App() {
   // Homepage filters (step-by-step single select)
   const [selectedTest, setSelectedTest] = useState('ENEM')   // 'ENEM' | 'UFSC' | …
   const [selectedYear, setSelectedYear] = useState(null)   // number
-  const [selectedDay, setSelectedDay] = useState(null)     // 1 | 2
+  const [selectedDay, setSelectedDay] = useState(null)     // 1 | 2 | set name string (Integrar)
+  const [selectedIntegrarYear, setSelectedIntegrarYear] = useState(null) // optional filter for Integrar
 
   // Foreign language toggle (EN / ES) — only relevant for Dia 1 q1-5
   const [foreignLang, setForeignLang] = useState('en')
@@ -369,7 +372,8 @@ export default function App() {
         const datasets = await Promise.all(
           manifest.map((file) => fetch(`/${file}`).then((r) => r.json()).catch(() => []))
         )
-        const all = datasets.flat().sort((a, b) => a.number - b.number)
+        const staticQs = datasets.flat()
+        const all = staticQs.sort((a, b) => a.number - b.number)
         setAllQuestions(all)
         setContexts(ctxMap)
 
@@ -467,6 +471,28 @@ export default function App() {
     }
     load()
   }, [])
+
+  // ── Load teacher-created Integrar questions from DB ───────────────────────
+  useEffect(() => {
+    if (!token) return
+    fetch('/api/question-sets/all', { headers: { Authorization: `Bearer ${token}` } })
+      .then((r) => r.ok ? r.json() : [])
+      .catch(() => [])
+      .then((integrarQs) => {
+        if (!integrarQs.length) return
+        setAllQuestions((prev) => {
+          // Merge DB questions with static JSON Integrar questions.
+          // DB questions for the same teacher+day set replace their static counterparts
+          // (teacher updated the set); sets only in static JSON are kept as-is.
+          const dbKeys = new Set(integrarQs.map(q => `${q.teacher}::${q.day}`))
+          const staticIntegrar = prev.filter(
+            (q) => q.test === 'Integrar' && !dbKeys.has(`${q.teacher}::${q.day}`)
+          )
+          const nonIntegrar = prev.filter((q) => q.test !== 'Integrar')
+          return [...nonIntegrar, ...staticIntegrar, ...integrarQs].sort((a, b) => a.number - b.number)
+        })
+      })
+  }, [token])
 
   useEffect(() => {
     document.documentElement.classList.toggle('dark', dark)
@@ -907,12 +933,24 @@ export default function App() {
   }, [])
 
   const startQuiz = useCallback(() => {
-    if (!selectedTest || !selectedYear) return
-    if (selectedTest === 'ENEM' && !selectedDay) return
-    const areas = selectedDay ? DAY_AREAS[selectedDay] : null
+    const isIntegrarStart = selectedTest === 'Integrar'
+    if (isIntegrarStart) {
+      if (!selectedDay) return
+    } else {
+      if (!selectedTest || !selectedYear) return
+      if (selectedTest === 'ENEM' && !selectedDay) return
+    }
+    const areas = (!isIntegrarStart && selectedDay) ? DAY_AREAS[selectedDay] : null
+    // For Integrar, selectedDay is "teacher::setName"
+    const [integrarTeacher, integrarSetName] = isIntegrarStart && selectedDay
+      ? (() => { const i = selectedDay.indexOf('::'); return [selectedDay.slice(0, i), selectedDay.slice(i + 2)] })()
+      : [null, null]
+
     const filtered = allQuestions
       .filter((q) => q.test === selectedTest)
-      .filter((q) => q.year === selectedYear)
+      .filter((q) => isIntegrarStart
+        ? q.day === integrarSetName && q.teacher === integrarTeacher
+        : q.year === selectedYear)
       .filter((q) => !areas || areas.includes(q.area))
     if (filtered.length === 0) return
 
@@ -1117,7 +1155,9 @@ export default function App() {
             elapsed_secs: finalTotal,
           }),
         }).catch(() => {})
-      } else if (!selectedArea) {
+      } else if (!selectedArea && selectedTest !== 'Integrar') {
+        // Integrar results are not yet persisted (day column is INTEGER in DB;
+        // Integrar uses set name strings — migration needed before tracking)
         fetch('/api/results', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json', Authorization: `Bearer ${token}` },
@@ -1233,13 +1273,38 @@ export default function App() {
     }
 
     const availableTests = [...new Set(['ENEM', 'UFSC', ...allQuestions.map((q) => q.test).filter(Boolean)])]
+    const isIntegrar = selectedTest === 'Integrar'
+
     const availableYears = [...new Set(
       allQuestions
         .filter((q) => !selectedTest || q.test === selectedTest)
         .map((q) => q.year)
     )].sort((a, b) => b - a)
 
-    const canStart = selectedTest && selectedYear && (selectedTest === 'ENEM' ? !!selectedDay : true)
+    // For Integrar: build unique {day, teacher, year} entries
+    const integrarQs = isIntegrar ? allQuestions.filter(q => q.test === 'Integrar') : []
+    const integrarYears = isIntegrar
+      ? [...new Set(integrarQs.map(q => q.year).filter(Boolean))].sort((a, b) => b - a)
+      : []
+    // Unique sets filtered by optional year selection
+    const integrarSetsFiltered = isIntegrar
+      ? (() => {
+          const seen = new Set()
+          return integrarQs
+            .filter(q => !selectedIntegrarYear || q.year === selectedIntegrarYear)
+            .reduce((acc, q) => {
+              const key = `${q.teacher}::${q.day}`
+              if (!seen.has(key)) { seen.add(key); acc.push({ name: q.day, teacher: q.teacher, year: q.year }) }
+              return acc
+            }, [])
+        })()
+      : []
+
+    const canStart = selectedTest && (
+      isIntegrar
+        ? !!selectedDay
+        : selectedYear && (selectedTest === 'ENEM' ? !!selectedDay : true)
+    )
 
     // Build a lookup: "TEST-YEAR-DAY" → best result
     const resultMap = {}
@@ -1315,6 +1380,7 @@ export default function App() {
                         setSelectedTest(t)
                         setSelectedYear(null)
                         setSelectedDay(null)
+                        setSelectedIntegrarYear(null)
                       }}
                     >
                       {t}
@@ -1323,7 +1389,60 @@ export default function App() {
                 </div>
               </div>
 
-              {/* Step 2 — Ano */}
+              {/* Step 2 — Integrar: optional year filter */}
+              {isIntegrar && integrarYears.length > 0 && (
+                <div className="home-filter-group">
+                  <span className="home-filter-label">Ano <span style={{ fontWeight: 400, opacity: 0.6 }}>(opcional)</span></span>
+                  <div className="home-filter-pills home-year-grid">
+                    {integrarYears.map((y) => (
+                      <button
+                        key={y}
+                        type="button"
+                        className={`home-filter-pill home-year-pill ${selectedIntegrarYear === y ? 'active' : ''}`}
+                        onClick={() => {
+                          setSelectedIntegrarYear(prev => prev === y ? null : y)
+                          setSelectedDay(null)
+                        }}
+                      >
+                        <span>{y}</span>
+                      </button>
+                    ))}
+                  </div>
+                </div>
+              )}
+
+              {/* Step 3 — Integrar: choose list */}
+              {isIntegrar && (
+                <div className="home-filter-group">
+                  <span className="home-filter-label">Lista</span>
+                  <div className="home-filter-pills">
+                    {integrarSetsFiltered.length === 0 && (
+                      <span style={{ fontSize: '0.85rem', color: 'var(--text-soft)' }}>Nenhuma lista disponível</span>
+                    )}
+                    {integrarSetsFiltered.map(({ name, teacher, year }) => {
+                      const setKey = `${teacher}::${name}`
+                      const isActive = selectedDay === setKey
+                      return (
+                        <button
+                          key={setKey}
+                          type="button"
+                          className={`home-filter-pill home-filter-pill--wide home-day-pill ${isActive ? 'active' : ''}`}
+                          onClick={() => { setSelectedYear(year ?? null); setSelectedDay(setKey) }}
+                        >
+                          <span className="home-day-label-text">
+                            {name}
+                            {year ? <span style={{ opacity: 0.6 }}> · {year}</span> : ''}
+                          </span>
+                          <span style={{ fontSize: '0.75rem', opacity: 0.6 }}>{teacher}</span>
+                        </button>
+                      )
+                    })}
+                  </div>
+                </div>
+              )}
+
+              {/* Step 2 — Ano (non-Integrar tests) */}
+              {!isIntegrar && (
               <div className="home-filter-group">
                 <span className="home-filter-label">Ano</span>
                 <div className="home-filter-pills home-year-grid">
@@ -1348,6 +1467,7 @@ export default function App() {
                   })}
                 </div>
               </div>
+              )}
 
               {/* Step 3 — Dia (ENEM only) */}
               {selectedTest === 'ENEM' && selectedYear && (
@@ -1527,6 +1647,15 @@ export default function App() {
                   <span className="options-toggle-thumb" />
                 </span>
               </label>
+              {(user?.role === 'prof' || user?.role === 'admin') && (
+                <button
+                  type="button"
+                  className="options-admin-btn"
+                  onClick={() => { window.location.href = '/editor' }}
+                >
+                  Criar Questões
+                </button>
+              )}
               {user?.role === 'admin' && (
                 <button
                   type="button"
@@ -2368,6 +2497,18 @@ export default function App() {
 function AdminPanel({ stats, onBack, dark, setDark, token }) {
   const { users, testResults, dailyResults, feedback } = stats
   const [tab, setTab] = useState('students')
+
+  useEffect(() => {
+    const prevTitle = document.title
+    document.title = 'Painel Admin'
+    const links = Array.from(document.querySelectorAll("link[rel*='icon']"))
+    const prevHrefs = links.map(l => l.href)
+    links.forEach(l => { l.href = '/admin-favicon-32.png' })
+    return () => {
+      document.title = prevTitle
+      links.forEach((l, i) => { l.href = prevHrefs[i] })
+    }
+  }, [])
   const [deleteTarget, setDeleteTarget] = useState(null) // { id, username }
   const [deleteLoading, setDeleteLoading] = useState(false)
   const [deleteError, setDeleteError] = useState('')
