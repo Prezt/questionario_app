@@ -5,6 +5,8 @@ import {
   useCallback,
   useMemo,
   useRef,
+  lazy,
+  Suspense,
 } from 'react'
 import './App.css'
 import {
@@ -12,7 +14,7 @@ import {
   alternativeLabelForDisplay,
   captionFromBracketText,
 } from './parseQuestionFigures.js'
-import ReviewPage from './ReviewPage.jsx'
+const ReviewPage = lazy(() => import('./ReviewPage.jsx'))
 
 // Render text with <b> (bold) and <i> (italic) support.
 // All other HTML is escaped, so this is safe even for user-edited content.
@@ -273,7 +275,7 @@ function legacyPlainToHtml(raw) {
 }
 
 export default function App() {
-  if (window.location.pathname === '/review') return <ReviewPage />
+  if (window.location.pathname === '/review') return <Suspense fallback={null}><ReviewPage /></Suspense>
 
   const [user, setUser] = useState(null)
   // All questions loaded from manifest

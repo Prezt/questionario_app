@@ -40,45 +40,45 @@ FERRAMENTAS DE LONGO PRAZO
 
 
 REVISAO:
- [] ENEM 2025
+ [x] ENEM 2025
     [x] linguagens
-    [] humanas
-    [] ciencias da natureza
+    [x] humanas
+    [] ciencias
     [] matematica
  [] ENEM 2024
     [] linguagens
     [] humanas
-    [] ciencias da natureza
+    [] ciencias
     [] matematica
  [] ENEM 2023
     [] linguagens
     [] humanas
-    [] ciencias da natureza
+    [] ciencias
     [] matematica
  [] ENEM 2022
     [] linguagens
     [] humanas
-    [] ciencias da natureza
+    [] ciencias
     [] matematica
  [] ENEM 2021
     [] linguagens
     [] humanas
-    [] ciencias da natureza
+    [] ciencias
     [] matematica
  [] ENEM 2020
     [] linguagens
     [] humanas
-    [] ciencias da natureza
+    [] ciencias
     [] matematica
  [] ENEM 2019
     [] linguagens
     [] humanas
-    [] ciencias da natureza
+    [] ciencias
     [] matematica
  [x] ENEM 2018
     [x] linguagens
     [x] humanas
-    [x] ciencias da natureza
+    [x] ciencia
     [x] matematica
 
 ETAPA 2:

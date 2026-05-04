@@ -349,6 +349,13 @@ export default function ReviewPage() {
     return () => { document.title = prev }
   }, [])
 
+  useEffect(() => {
+    const links = Array.from(document.querySelectorAll("link[rel*='icon']"))
+    const prevHrefs = links.map(l => l.href)
+    links.forEach(l => { l.href = l.href.replace(/favicon[^.]*\.(ico|png)/, m => 'review-' + m) })
+    return () => { links.forEach((l, i) => { l.href = prevHrefs[i] }) }
+  }, [])
+
   // datasets: { [filename]: Question[] }
   const [datasets, setDatasets] = useState({})
   const [contexts, setContexts] = useState({})
