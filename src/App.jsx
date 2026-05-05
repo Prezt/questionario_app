@@ -152,6 +152,7 @@ function areaLabel(area) {
 
 function publicImageSrc(path) {
   if (!path) return ''
+  if (path.startsWith('http://') || path.startsWith('https://') || path.startsWith('data:')) return path
   return path.startsWith('/') ? path : `/${path}`
 }
 
@@ -877,6 +878,7 @@ export default function App() {
       setSelectedTag(saved.selectedTag ?? null)
     } else {
       const areas    = DAY_AREAS[saved.selectedDay]
+      if (!areas) { clearPausedSession(); return }
       const filtered = allQuestions.filter((q) =>
         q.test === saved.selectedTest &&
         q.year === saved.selectedYear &&
@@ -1653,7 +1655,7 @@ export default function App() {
                   className="options-admin-btn"
                   onClick={() => { window.location.href = '/editor' }}
                 >
-                  Criar Questões
+                  Criar
                 </button>
               )}
               {user?.role === 'admin' && (
@@ -2378,8 +2380,8 @@ export default function App() {
                         </div>
                       )
                     }
-                    const correctLabel = (displayAlts.find(a => a.origLetter === question.answer)?.displayLabel ?? question.answer).toUpperCase()
-                    const selectedLabel = (displayAlts.find(a => a.origLetter === selected)?.displayLabel ?? selected).toUpperCase()
+                    const correctLabel = (displayAlts.find(a => a.origLetter === question.answer)?.displayLabel ?? question.answer ?? '').toUpperCase()
+                    const selectedLabel = (displayAlts.find(a => a.origLetter === selected)?.displayLabel ?? selected ?? '').toUpperCase()
                     return (
                       <div
                         className={`feedback ${attempt.correct ? 'feedback--correct' : 'feedback--wrong'}`}
@@ -2500,7 +2502,7 @@ function AdminPanel({ stats, onBack, dark, setDark, token }) {
 
   useEffect(() => {
     const prevTitle = document.title
-    document.title = 'Painel Admin'
+    document.title = 'Admin'
     const links = Array.from(document.querySelectorAll("link[rel*='icon']"))
     const prevHrefs = links.map(l => l.href)
     links.forEach(l => { l.href = '/admin-favicon-32.png' })
@@ -2594,7 +2596,7 @@ function AdminPanel({ stats, onBack, dark, setDark, token }) {
       <div className="admin-panel">
         <div className="admin-header">
           <button type="button" className="btn--ghost" onClick={onBack}>← Voltar</button>
-          <h1 className="admin-title">Painel Administrativo</h1>
+          <h1 className="admin-title">Admin</h1>
           <button
             type="button"
             className="theme-toggle"

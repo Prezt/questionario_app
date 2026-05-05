@@ -12,7 +12,12 @@ export default async function handler(req, res) {
 
   const sql = neon(process.env.DATABASE_URL)
 
-  const [set] = await sql`SELECT id, name, year FROM question_sets WHERE created_by = ${payload.userId}`
+  const targetUserId =
+    payload.role === 'admin' && req.query?.userId
+      ? Number(req.query.userId)
+      : payload.userId
+
+  const [set] = await sql`SELECT id, name, year FROM question_sets WHERE created_by = ${targetUserId}`
   if (!set) return res.status(404).json({ error: 'Nenhuma lista encontrada' })
 
   const questions = await sql`

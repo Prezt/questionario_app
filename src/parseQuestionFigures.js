@@ -8,9 +8,17 @@ export const STEM_FIGURE_MARKER_RE =
  * Segmenta o texto do enunciado e intercala figuras na ordem dos marcadores.
  * Quando há mais marcadores do que imagens e resta uma única imagem, ela substitui
  * o bloco inteiro de marcadores consecutivos (legenda com todos os textos, em linhas).
+ *
+ * imagePaths aceita strings ou objetos { src, caption }.
+ * Quando o objeto tem caption, ele tem precedência sobre o texto do marcador.
  */
 export function parseStemSegments(text, imagePaths) {
-  const paths = [...(imagePaths ?? [])]
+  // Normalise: accept plain strings or { src, caption } objects
+  const paths = (imagePaths ?? []).map(p =>
+    p == null ? { src: '', caption: null }
+    : typeof p === 'string' ? { src: p, caption: null }
+    : { src: p.src ?? '', caption: p.caption ?? null }
+  )
   const re = new RegExp(STEM_FIGURE_MARKER_RE.source, 'g')
   const markers = []
   let m
@@ -25,8 +33,8 @@ export function parseStemSegments(text, imagePaths) {
   if (markers.length === 0) {
     const out = []
     if (text) out.push({ type: 'text', text })
-    for (const src of paths) {
-      out.push({ type: 'figure', src, caption: null })
+    for (const p of paths) {
+      out.push({ type: 'figure', src: p.src, caption: p.caption })
     }
     return out
   }
@@ -44,8 +52,8 @@ export function parseStemSegments(text, imagePaths) {
       const inners = markers.slice(mi).map((x) => x.inner.trim())
       segments.push({
         type: 'figure',
-        src: paths[ii],
-        caption: inners.join('\n'),
+        src: paths[ii].src,
+        caption: paths[ii].caption ?? inners.join('\n'),
       })
       pos = markers[markers.length - 1].end
       mi = markers.length
@@ -53,8 +61,8 @@ export function parseStemSegments(text, imagePaths) {
     } else {
       segments.push({
         type: 'figure',
-        src: paths[ii],
-        caption: markers[mi].inner.trim(),
+        src: paths[ii].src,
+        caption: paths[ii].caption ?? markers[mi].inner.trim(),
       })
       pos = markers[mi].end
       mi++
@@ -62,11 +70,28 @@ export function parseStemSegments(text, imagePaths) {
     }
   }
 
+  // Handle remaining markers that have no corresponding path but may carry an inline URL
+  while (mi < markers.length) {
+    const before = text.slice(pos, markers[mi].start)
+    if (before) segments.push({ type: 'text', text: before })
+    const inner = markers[mi].inner.trim()
+    const urlMatch = inner.match(/https?:\/\/\S+/)
+    if (urlMatch) {
+      const url = urlMatch[0]
+      const caption = inner.replace(url, '').replace(/^[:\s]+/, '').trim()
+      segments.push({ type: 'figure', src: url, caption: caption || null })
+    } else {
+      segments.push({ type: 'text', text: `[${markers[mi].inner}]` })
+    }
+    pos = markers[mi].end
+    mi++
+  }
+
   const after = text.slice(pos)
   if (after) segments.push({ type: 'text', text: after })
 
   while (ii < paths.length) {
-    segments.push({ type: 'figure', src: paths[ii], caption: null })
+    segments.push({ type: 'figure', src: paths[ii].src, caption: paths[ii].caption })
     ii++
   }
 

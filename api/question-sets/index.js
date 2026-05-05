@@ -10,11 +10,27 @@ export default async function handler(req, res) {
 
   const sql = neon(process.env.DATABASE_URL)
 
-  // GET — return this prof's current draft set (with questions)
+  try {
+
+  // Admin can target another user's set via ?userId=
+  const targetUserId =
+    payload.role === 'admin' && req.query?.userId
+      ? Number(req.query.userId)
+      : payload.userId
+
+  // GET — return the target user's current draft set (with questions)
   if (req.method === 'GET') {
-    const [set] = await sql`
-      SELECT id, name, year, created_at FROM question_sets WHERE created_by = ${payload.userId}
+    let [set] = await sql`
+      SELECT id, name, year, created_at, created_by FROM question_sets WHERE created_by = ${targetUserId}
     `
+    // Fallback for admin querying their own account (no userId param, or userId = self):
+    // return the first available set so the admin can always access it
+    const queriedSelf = !req.query?.userId || Number(req.query.userId) === payload.userId
+    if (!set && payload.role === 'admin' && queriedSelf) {
+      ;[set] = await sql`
+        SELECT id, name, year, created_at, created_by FROM question_sets ORDER BY created_at ASC LIMIT 1
+      `
+    }
     if (!set) return res.json(null)
 
     const questions = await sql`
@@ -30,7 +46,7 @@ export default async function handler(req, res) {
     if (!name?.trim()) return res.status(400).json({ error: 'Nome da lista é obrigatório' })
     const yearVal = year ? Number(year) : null
 
-    const [existing] = await sql`SELECT id FROM question_sets WHERE created_by = ${payload.userId}`
+    const [existing] = await sql`SELECT id FROM question_sets WHERE created_by = ${targetUserId}`
 
     let setId
     if (existing) {
@@ -39,7 +55,7 @@ export default async function handler(req, res) {
       setId = existing.id
     } else {
       const [row] = await sql`
-        INSERT INTO question_sets (name, year, created_by) VALUES (${name.trim()}, ${yearVal}, ${payload.userId}) RETURNING id
+        INSERT INTO question_sets (name, year, created_by) VALUES (${name.trim()}, ${yearVal}, ${targetUserId}) RETURNING id
       `
       setId = row.id
     }
@@ -53,7 +69,7 @@ export default async function handler(req, res) {
     if (!name?.trim()) return res.status(400).json({ error: 'Nome da lista é obrigatório' })
     const yearVal = year !== undefined ? (year ? Number(year) : null) : undefined
 
-    const [existing] = await sql`SELECT id FROM question_sets WHERE created_by = ${payload.userId}`
+    const [existing] = await sql`SELECT id FROM question_sets WHERE created_by = ${targetUserId}`
     if (!existing) return res.status(404).json({ error: 'Nenhuma lista encontrada' })
 
     if (yearVal !== undefined) {
@@ -65,4 +81,9 @@ export default async function handler(req, res) {
   }
 
   return res.status(405).end()
+
+  } catch (err) {
+    console.error('[question-sets/index]', err)
+    return res.status(500).json({ error: String(err) })
+  }
 }

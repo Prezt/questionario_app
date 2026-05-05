@@ -260,6 +260,8 @@ export default function QuestionEditor() {
     const saved = localStorage.getItem('dark')
     return saved !== null ? saved === 'true' : window.matchMedia('(prefers-color-scheme: dark)').matches
   })
+  const isAdmin = user?.role === 'admin'
+
   const [set, setSet] = useState(null)
   const [setName, setSetName] = useState('')
   const [setYear, setSetYear] = useState('')
@@ -269,6 +271,10 @@ export default function QuestionEditor() {
   const [error, setError] = useState('')
   const [exportMsg, setExportMsg] = useState('')
 
+  // Admin: list of prof users to pick from
+  const [profUsers, setProfUsers] = useState([])
+  const [targetUserId, setTargetUserId] = useState(null) // null = own account
+
   useEffect(() => {
     document.documentElement.classList.toggle('dark', dark)
     localStorage.setItem('dark', dark)
@@ -277,7 +283,7 @@ export default function QuestionEditor() {
   // Page title + blue favicon
   useEffect(() => {
     const prevTitle = document.title
-    document.title = 'Criar Questões'
+    document.title = 'Criar'
     const links = Array.from(document.querySelectorAll("link[rel*='icon']"))
     const prevHrefs = links.map(l => l.href)
     links.forEach(l => {
@@ -315,13 +321,40 @@ export default function QuestionEditor() {
     }
   }, [])
 
+  // Admin: fetch list of prof users to pick from
+  useEffect(() => {
+    if (!isAdmin || !token) return
+    fetch('/api/admin/stats', { headers: { Authorization: `Bearer ${token}` } })
+      .then(r => r.json())
+      .then(data => {
+        const profs = (data.users ?? []).filter(u => u.role === 'prof' || u.role === 'admin')
+        setProfUsers(profs)
+      })
+      .catch(() => {})
+  }, [isAdmin, token])
+
+  const userIdParam = targetUserId ? `?userId=${targetUserId}` : ''
+
   useEffect(() => {
     if (!token) return
-    fetch('/api/question-sets', { headers: { Authorization: `Bearer ${token}` } })
+    setLoading(true)
+    setSet(null)
+    fetch(`/api/question-sets${userIdParam}`, { headers: { Authorization: `Bearer ${token}` } })
       .then(r => r.json())
-      .then(data => { if (data) { setSet(data); setSetName(data.name); setSetYear(data.year ?? '') }; setLoading(false) })
+      .then(data => {
+        if (data) {
+          setSet(data)
+          setSetName(data.name)
+          setSetYear(data.year ?? '')
+          // If admin got a fallback set belonging to another user, sync the dropdown
+          if (isAdmin && data.created_by && data.created_by !== user?.id && !targetUserId) {
+            setTargetUserId(data.created_by)
+          }
+        }
+        setLoading(false)
+      })
       .catch(() => setLoading(false))
-  }, [])
+  }, [targetUserId])
 
   // Rename/update only — keeps questions
   const renameSet = useCallback(async (e) => {
@@ -329,7 +362,7 @@ export default function QuestionEditor() {
     if (!setName.trim() || !set) return
     setSaving(true); setError('')
     try {
-      const res = await fetch('/api/question-sets', {
+      const res = await fetch(`/api/question-sets${userIdParam}`, {
         method: 'PATCH',
         headers: { 'Content-Type': 'application/json', Authorization: `Bearer ${token}` },
         body: JSON.stringify({ name: setName.trim(), year: setYear ? Number(setYear) : null }),
@@ -339,7 +372,7 @@ export default function QuestionEditor() {
       setSet(prev => ({ ...prev, name: data.name, year: data.year }))
     } catch { setError('Erro de rede') }
     finally { setSaving(false) }
-  }, [setName, setYear, set, token])
+  }, [setName, setYear, set, token, userIdParam])
 
   // Create new — wipes questions
   const createNewSet = useCallback(async () => {
@@ -347,7 +380,7 @@ export default function QuestionEditor() {
     if (set && !window.confirm('Criar uma nova lista vai apagar todas as questões atuais. Continuar?')) return
     setSaving(true); setError('')
     try {
-      const res = await fetch('/api/question-sets', {
+      const res = await fetch(`/api/question-sets${userIdParam}`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json', Authorization: `Bearer ${token}` },
         body: JSON.stringify({ name: setName.trim(), year: setYear ? Number(setYear) : null }),
@@ -358,13 +391,14 @@ export default function QuestionEditor() {
       setEditingQ(null)
     } catch { setError('Erro de rede') }
     finally { setSaving(false) }
-  }, [setName, setYear, set, token])
+  }, [setName, setYear, set, token, userIdParam])
 
   const saveQuestion = useCallback(async (form) => {
     setSaving(true); setError('')
     try {
       const isNew = editingQ === 'new'
-      const url = isNew ? '/api/question-sets/questions' : `/api/question-sets/questions?questionId=${editingQ.id}`
+      const qParam = isNew ? userIdParam : `?questionId=${editingQ.id}${targetUserId ? `&userId=${targetUserId}` : ''}`
+      const url = `/api/question-sets/questions${qParam}`
       const res = await fetch(url, {
         method: isNew ? 'POST' : 'PUT',
         headers: { 'Content-Type': 'application/json', Authorization: `Bearer ${token}` },
@@ -381,13 +415,13 @@ export default function QuestionEditor() {
       setEditingQ(null)
     } catch { setError('Erro de rede') }
     finally { setSaving(false) }
-  }, [editingQ, token])
+  }, [editingQ, token, targetUserId, userIdParam])
 
   const deleteQuestion = useCallback(async (q) => {
     if (!window.confirm(`Remover questão ${q.number}?`)) return
     setError('')
     try {
-      const res = await fetch(`/api/question-sets/questions?questionId=${q.id}`, {
+      const res = await fetch(`/api/question-sets/questions?questionId=${q.id}${targetUserId ? `&userId=${targetUserId}` : ''}`, {
         method: 'DELETE', headers: { Authorization: `Bearer ${token}` },
       })
       if (!res.ok) { const d = await res.json(); setError(d.error ?? 'Erro'); return }
@@ -396,12 +430,12 @@ export default function QuestionEditor() {
         questions: (prev.questions ?? []).filter(x => x.id !== q.id).map((x, i) => ({ ...x, number: i + 1 })),
       }))
     } catch { setError('Erro de rede') }
-  }, [token])
+  }, [token, targetUserId])
 
   const exportJSON = useCallback(async () => {
     setExportMsg(''); setError('')
     try {
-      const res = await fetch('/api/question-sets/export', { headers: { Authorization: `Bearer ${token}` } })
+      const res = await fetch(`/api/question-sets/export${userIdParam}`, { headers: { Authorization: `Bearer ${token}` } })
       if (!res.ok) { const d = await res.json(); setError(d.error ?? 'Erro'); return }
       const blob = await res.blob()
       const url = URL.createObjectURL(blob)
@@ -412,7 +446,7 @@ export default function QuestionEditor() {
       URL.revokeObjectURL(url)
       setExportMsg('JSON exportado! Adicione o arquivo à pasta public/ e faça o commit.')
     } catch { setError('Erro ao exportar') }
-  }, [token])
+  }, [token, userIdParam])
 
   if (loading) return <div className="qe-shell"><p className="qe-loading">Carregando…</p></div>
 
@@ -422,13 +456,30 @@ export default function QuestionEditor() {
     <div className="qe-shell">
       <div className="qe-header">
         <button type="button" className="qe-back-btn" onClick={() => window.location.href = '/'}>← Voltar</button>
-        <h1 className="qe-title">Criar Questões</h1>
+        <h1 className="qe-title">Criar</h1>
         <button type="button" className="qe-theme-btn" onClick={() => setDark(d => !d)} aria-label="Alternar tema">
           {dark ? <SunIcon /> : <MoonIcon />}
         </button>
       </div>
 
       {error && <p className="qe-error">{error}</p>}
+
+      {/* Admin: user picker */}
+      {isAdmin && (
+        <section className="qe-section">
+          <label className="qe-label">Editando lista de:</label>
+          <select
+            className="qe-input"
+            value={targetUserId ?? ''}
+            onChange={e => { setTargetUserId(e.target.value ? Number(e.target.value) : null); setEditingQ(null) }}
+          >
+            <option value="">Minha conta</option>
+            {profUsers.map(u => (
+              <option key={u.id} value={u.id}>{u.username} ({u.role})</option>
+            ))}
+          </select>
+        </section>
+      )}
 
       {/* Set name + year */}
       <section className="qe-section">
