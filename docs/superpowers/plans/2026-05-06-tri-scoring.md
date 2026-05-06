@@ -210,16 +210,24 @@ describe('calcTriScores', () => {
     expect(scores.geral).toBe(Math.round((scores.math + scores.nature) / 2))
   })
 
-  it('scores are in [0, 1000] range', () => {
+  it('all correct gives 1000', () => {
     const questions = Array.from({ length: 10 }, (_, i) =>
       makeQuestion(i + 1, 'math', i + 1, 'a')
     )
     const attempts = Object.fromEntries(
       questions.map((q) => [q.number, { selected: 'a', correct: true }])
     )
-    const scores = calcTriScores(questions, attempts)
-    expect(scores.math).toBeGreaterThanOrEqual(0)
-    expect(scores.math).toBeLessThanOrEqual(1000)
+    expect(calcTriScores(questions, attempts).math).toBe(1000)
+  })
+
+  it('all wrong gives 100', () => {
+    const questions = Array.from({ length: 10 }, (_, i) =>
+      makeQuestion(i + 1, 'math', i + 1, 'a')
+    )
+    const attempts = Object.fromEntries(
+      questions.map((q) => [q.number, { selected: 'b', correct: false }])
+    )
+    expect(calcTriScores(questions, attempts).math).toBe(100)
   })
 })
 ```
@@ -277,8 +285,8 @@ export function estimateTheta(items) {
 }
 
 function thetaToScore(theta) {
-  // 125 = 500 / THETA_MAX(4): garante que θ=+4 → 1000 e θ=-4 → 0
-  return Math.round(Math.min(1000, Math.max(0, 500 + 125 * theta)))
+  // Linear map [-4, +4] → [100, 1000]: slope=112.5, intercept=550
+  return Math.round(Math.min(1000, Math.max(0, 550 + 112.5 * theta)))
 }
 
 export function calcTriScores(questions, attempts) {
