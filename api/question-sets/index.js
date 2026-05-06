@@ -80,6 +80,16 @@ export default async function handler(req, res) {
     return res.status(200).json({ id: existing.id, name: name.trim(), year: yearVal ?? existing.year })
   }
 
+  // DELETE — remove the entire set and its questions
+  if (req.method === 'DELETE') {
+    const [existing] = await sql`SELECT id FROM question_sets WHERE created_by = ${targetUserId}`
+    if (!existing) return res.status(404).json({ error: 'Nenhuma lista encontrada' })
+
+    await sql`DELETE FROM custom_questions WHERE set_id = ${existing.id}`
+    await sql`DELETE FROM question_sets WHERE id = ${existing.id}`
+    return res.status(200).json({ ok: true })
+  }
+
   return res.status(405).end()
 
   } catch (err) {

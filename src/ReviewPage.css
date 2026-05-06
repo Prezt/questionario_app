@@ -239,6 +239,7 @@
 .rp-qlist-item--ok { color: #15803d; }
 .rp-qlist-item--flagged { color: #dc2626; }
 .rp-qlist-num { flex: 1; }
+.rp-qlist-area { font-size: 9px; opacity: 0.55; font-weight: 600; letter-spacing: 0.02em; }
 .rp-qlist-year {
   font-size: 9px;
   font-weight: 700;

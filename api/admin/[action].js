@@ -6,7 +6,7 @@ const ALLOWED_ROLES = ['user', 'prof']
 async function handleStats(req, res, sql) {
   if (req.method !== 'GET') return res.status(405).end()
 
-  const [users, testResults, dailyResults, feedbackRows] = await Promise.all([
+  const [users, testResults, dailyResults, feedbackRows, questionSets] = await Promise.all([
     sql`
       SELECT id, username, role, created_at
       FROM users
@@ -33,9 +33,19 @@ async function handleStats(req, res, sql) {
       LEFT JOIN users u ON u.id = f.user_id
       ORDER BY f.created_at DESC
     `,
+    sql`
+      SELECT qs.id, qs.name, qs.year, qs.created_at, qs.created_by,
+             u.username AS teacher,
+             COUNT(cq.id)::int AS question_count
+      FROM question_sets qs
+      JOIN users u ON u.id = qs.created_by
+      LEFT JOIN custom_questions cq ON cq.set_id = qs.id
+      GROUP BY qs.id, u.username
+      ORDER BY qs.created_at DESC
+    `,
   ])
 
-  res.json({ users, testResults, dailyResults, feedback: feedbackRows })
+  res.json({ users, testResults, dailyResults, feedback: feedbackRows, questionSets })
 }
 
 async function handleDeleteUser(req, res, sql) {
@@ -54,6 +64,23 @@ async function handleDeleteUser(req, res, sql) {
   await sql`DELETE FROM daily_challenge_results WHERE user_id = ${userId}`
   await sql`DELETE FROM test_results WHERE user_id = ${userId}`
   await sql`DELETE FROM users WHERE id = ${userId}`
+
+  return res.status(200).json({ ok: true })
+}
+
+async function handleDeleteList(req, res, sql) {
+  if (req.method !== 'DELETE') return res.status(405).end()
+
+  const setId = Number(req.query?.setId)
+  if (!Number.isInteger(setId) || setId <= 0) {
+    return res.status(400).json({ error: 'setId inválido' })
+  }
+
+  const [set] = await sql`SELECT id FROM question_sets WHERE id = ${setId}`
+  if (!set) return res.status(404).json({ error: 'Lista não encontrada' })
+
+  await sql`DELETE FROM custom_questions WHERE set_id = ${setId}`
+  await sql`DELETE FROM question_sets WHERE id = ${setId}`
 
   return res.status(200).json({ ok: true })
 }
@@ -90,6 +117,7 @@ export default async function handler(req, res) {
 
   if (action === 'stats') return handleStats(req, res, sql)
   if (action === 'delete-user') return handleDeleteUser(req, res, sql)
+  if (action === 'delete-list') return handleDeleteList(req, res, sql)
   if (action === 'set-role') return handleSetRole(req, res, sql)
 
   return res.status(404).json({ error: 'Rota não encontrada' })

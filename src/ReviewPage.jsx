@@ -8,6 +8,12 @@ const AREA_TO_DAY = {
   nature: 'd2',
   math: 'd2',
 }
+const AREA_SHORT = {
+  linguagens: 'Ling',
+  humanas: 'Hum',
+  nature: 'Nat',
+  math: 'Mat',
+}
 const FLAGS_KEY = 'review-flags'
 const ALL_FILES = [
   'humanas_enem_2018','humanas_enem_2019','humanas_enem_2020','humanas_enem_2021',
@@ -1614,6 +1620,7 @@ export default function ReviewPage() {
                   title={`${q._file.replace('.json','').replace('_enem_',' ')} Q${q.number}`}
                 >
                   <span className="rp-qlist-num">{q.number}</span>
+                  {q.language && <span className="rp-qlist-area">{q.language.toUpperCase()}</span>}
                   {status === 'fixed' && <span className="rp-qlist-dot rp-qlist-dot--fixed" />}
                   {status === 'ok' && <span className="rp-qlist-dot rp-qlist-dot--ok" />}
                   {status === 'flagged' && <span className="rp-qlist-dot rp-qlist-dot--flagged" />}

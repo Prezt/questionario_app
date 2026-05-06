@@ -53,6 +53,7 @@ function escapeInline(text) {
     .replace(/&lt;sup&gt;/gi, '<sup>')
     .replace(/&lt;\/sup&gt;/gi, '</sup>')
     .replace(/&lt;br\s*\/?&gt;/gi, '<br>')
+    .replace(/&lt;hr\s*\/?&gt;/gi, '<hr>')
     .replace(/&lt;left&gt;/gi, '<span class="txt-left">')
     .replace(/&lt;\/left&gt;/gi, '</span>')
     .replace(/&lt;center&gt;/gi, '<span class="txt-center">')
@@ -1363,9 +1364,6 @@ export default function App() {
               <button type="button" className="btn--ghost" onClick={abandonQuiz}>
                 Abandonar simulado
               </button>
-              <button type="button" className="btn--ghost" onClick={handleLogout}>
-                Sair
-              </button>
             </div>
           </div>
         </div>
@@ -2390,7 +2388,7 @@ export default function App() {
                         disabled={!!attempts[question.number]}
                         title="Inglês"
                       >
-                        🇬🇧
+                        🇺🇸
                       </button>
                       <button
                         type="button"
@@ -2729,7 +2727,7 @@ export default function App() {
 }
 
 function AdminPanel({ stats, onBack, dark, setDark, token }) {
-  const { users, testResults, dailyResults, feedback } = stats
+  const { users, testResults, dailyResults, feedback, questionSets: initialQuestionSets = [] } = stats
   const [tab, setTab] = useState('students')
 
   useEffect(() => {
@@ -2749,6 +2747,10 @@ function AdminPanel({ stats, onBack, dark, setDark, token }) {
   const [deletedIds, setDeletedIds] = useState(new Set())
   const [roleOverrides, setRoleOverrides] = useState({}) // { [userId]: role }
   const [roleLoading, setRoleLoading] = useState(null) // userId being updated
+  const [questionSets, setQuestionSets] = useState(initialQuestionSets)
+  const [deleteListTarget, setDeleteListTarget] = useState(null) // { id, name, teacher }
+  const [deleteListLoading, setDeleteListLoading] = useState(false)
+  const [deleteListError, setDeleteListError] = useState('')
 
   async function handleSetRole(userId, newRole) {
     setRoleLoading(userId)
@@ -2781,6 +2783,26 @@ function AdminPanel({ stats, onBack, dark, setDark, token }) {
       setDeleteError('Erro de rede')
     } finally {
       setDeleteLoading(false)
+    }
+  }
+
+  async function handleDeleteList() {
+    if (!deleteListTarget) return
+    setDeleteListLoading(true)
+    setDeleteListError('')
+    try {
+      const res = await fetch(`/api/admin/delete-list?setId=${deleteListTarget.id}`, {
+        method: 'DELETE',
+        headers: { Authorization: `Bearer ${token}` },
+      })
+      const data = await res.json()
+      if (!res.ok) { setDeleteListError(data.error ?? 'Erro ao deletar'); return }
+      setQuestionSets(prev => prev.filter(s => s.id !== deleteListTarget.id))
+      setDeleteListTarget(null)
+    } catch {
+      setDeleteListError('Erro de rede')
+    } finally {
+      setDeleteListLoading(false)
     }
   }
 
@@ -2864,6 +2886,7 @@ function AdminPanel({ stats, onBack, dark, setDark, token }) {
             { key: 'tests', label: 'Simulados' },
             { key: 'daily', label: 'Desafios Diários' },
             { key: 'feedback', label: 'Feedbacks' },
+            { key: 'lists', label: 'Listas' },
           ].map(({ key, label }) => (
             <button
               key={key}
@@ -2994,6 +3017,41 @@ function AdminPanel({ stats, onBack, dark, setDark, token }) {
             </table>
           )}
 
+          {tab === 'lists' && (
+            <table className="admin-table">
+              <thead>
+                <tr>
+                  <th>Professor</th>
+                  <th>Nome da lista</th>
+                  <th>Ano</th>
+                  <th>Questões</th>
+                  <th>Criada em</th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody>
+                {questionSets.map((s) => (
+                  <tr key={s.id}>
+                    <td><strong>{s.teacher}</strong></td>
+                    <td>{s.name}</td>
+                    <td>{s.year ?? '—'}</td>
+                    <td>{s.question_count}</td>
+                    <td>{formatDate(s.created_at)}</td>
+                    <td>
+                      <button
+                        type="button"
+                        className="admin-delete-btn"
+                        onClick={() => { setDeleteListTarget({ id: s.id, name: s.name, teacher: s.teacher }); setDeleteListError('') }}
+                      >
+                        Deletar
+                      </button>
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          )}
+
           {tab === 'feedback' && (
             <table className="admin-table">
               <thead>
@@ -3022,6 +3080,43 @@ function AdminPanel({ stats, onBack, dark, setDark, token }) {
           )}
         </div>
       </div>
+
+      {/* Delete list warning modal */}
+      {deleteListTarget && (
+        <div className="admin-modal-overlay" onClick={() => !deleteListLoading && setDeleteListTarget(null)}>
+          <div className="admin-modal" onClick={e => e.stopPropagation()}>
+            <div className="admin-modal-warning">
+              <span className="admin-modal-warning-icon">⚠️</span>
+              <strong>Ação irreversível</strong>
+              <p>
+                Esta operação irá deletar permanentemente a lista <strong>{deleteListTarget.name}</strong> de <strong>{deleteListTarget.teacher}</strong> e todas as suas questões. Não há como desfazer.
+              </p>
+            </div>
+            <p className="admin-modal-confirm-label">
+              Deseja realmente deletar a lista <strong>{deleteListTarget.name}</strong>?
+            </p>
+            {deleteListError && <p className="auth-error">{deleteListError}</p>}
+            <div className="admin-modal-actions">
+              <button
+                type="button"
+                className="admin-modal-btn admin-modal-btn--danger"
+                onClick={handleDeleteList}
+                disabled={deleteListLoading}
+              >
+                {deleteListLoading ? 'Deletando…' : 'Deletar permanentemente'}
+              </button>
+              <button
+                type="button"
+                className="admin-modal-btn"
+                onClick={() => setDeleteListTarget(null)}
+                disabled={deleteListLoading}
+              >
+                Cancelar
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
 
       {/* Delete user warning modal */}
       {deleteTarget && (
