@@ -207,6 +207,26 @@ function NotebookIcon() {
   )
 }
 
+function SoundOnIcon() {
+  return (
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5" />
+      <path d="M15.54 8.46a5 5 0 0 1 0 7.07" />
+      <path d="M19.07 4.93a10 10 0 0 1 0 14.14" />
+    </svg>
+  )
+}
+
+function SoundOffIcon() {
+  return (
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5" />
+      <line x1="23" y1="9" x2="17" y2="15" />
+      <line x1="17" y1="9" x2="23" y2="15" />
+    </svg>
+  )
+}
+
 function GearIcon() {
   return (
     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -1705,7 +1725,7 @@ export default function App() {
               {adminError && <p className="auth-error" style={{ margin: 0 }}>{adminError}</p>}
               <div className="options-divider" />
               <label className="options-toggle-row">
-                <span className="options-toggle-label">{soundMuted ? '🔇' : '🔊'} Som</span>
+                <span className="options-toggle-label" style={{ display: 'flex', alignItems: 'center', gap: '0.4rem' }}>{soundMuted ? <SoundOffIcon /> : <SoundOnIcon />} Som</span>
                 <span className={`options-toggle-switch${!soundMuted ? ' on' : ''}`}>
                   <input type="checkbox" checked={!soundMuted} onChange={(e) => {
                     setSoundMuted(!e.target.checked)
@@ -2012,6 +2032,33 @@ export default function App() {
                 : 0}%
             </span>
           </div>
+
+          {triScores && (
+            <div className="summary-tri">
+              <h2 className="summary-section-title">Nota TRI por área</h2>
+              <div className="summary-tri-grid">
+                {[
+                  { key: 'linguagens', label: 'Linguagens' },
+                  { key: 'humanas',    label: 'Ciências Humanas' },
+                  { key: 'nature',     label: 'Ciências da Natureza' },
+                  { key: 'math',       label: 'Matemática' },
+                ].map(({ key, label }) =>
+                  triScores[key] !== null ? (
+                    <div key={key} className="summary-tri-card">
+                      <span className="summary-tri-score">{triScores[key]}</span>
+                      <span className="summary-tri-label">{label}</span>
+                    </div>
+                  ) : null
+                )}
+                {triScores.geral !== null && (
+                  <div className="summary-tri-card summary-tri-card--geral">
+                    <span className="summary-tri-score">{triScores.geral}</span>
+                    <span className="summary-tri-label">Média Geral</span>
+                  </div>
+                )}
+              </div>
+            </div>
+          )}
 
           {/* Scrollable body: insight + subjects + question table */}
           <div className="summary-body">
@@ -2576,7 +2623,7 @@ export default function App() {
           </label>
           <div className="options-divider" />
           <label className="options-toggle-row">
-            <span className="options-toggle-label">{soundMuted ? '🔇' : '🔊'} Som</span>
+            <span className="options-toggle-label" style={{ display: 'flex', alignItems: 'center', gap: '0.4rem' }}>{soundMuted ? <SoundOffIcon /> : <SoundOnIcon />} Som</span>
             <span className={`options-toggle-switch${!soundMuted ? ' on' : ''}`}>
               <input type="checkbox" checked={!soundMuted} onChange={(e) => {
                 setSoundMuted(!e.target.checked)
