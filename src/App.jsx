@@ -393,6 +393,7 @@ export default function App() {
   const [expandedArea, setExpandedArea] = useState(null) // area panel open on home screen
   const [optionsOpen, setOptionsOpen] = useState(false)
   const [headerMenuOpen, setHeaderMenuOpen] = useState(false)
+  const [finishConfirmOpen, setFinishConfirmOpen] = useState(false)
   const [timerDrawerOpen, setTimerDrawerOpen] = useState(false)
 
   // Phase: 'home' | 'quiz' | 'summary' | 'login' | 'admin'
@@ -958,6 +959,26 @@ export default function App() {
       sorted = resolved.filter((q) => !q.language || q.language === lang)
       setSelectedArea(saved.selectedArea)
       setSelectedTag(saved.selectedTag ?? null)
+    } else if (saved.selectedTest === 'Integrar') {
+      const i = saved.selectedDay?.indexOf('::') ?? -1
+      if (i === -1) { clearPausedSession(); return }
+      const integrarTeacher = saved.selectedDay.slice(0, i)
+      const integrarSetName = saved.selectedDay.slice(i + 2)
+      const filtered = allQuestions.filter((q) =>
+        q.test === 'Integrar' &&
+        q.day === integrarSetName &&
+        q.teacher === integrarTeacher
+      )
+      filtered.forEach((q) => {
+        if (q.language) {
+          if (!variants[q.number]) variants[q.number] = {}
+          variants[q.number][q.language] = q
+        }
+      })
+      const deduped = filtered.filter((q) => !q.language || q.language === lang)
+      sorted = [...deduped].sort((a, b) => a.number - b.number)
+      setSelectedTest('Integrar')
+      setSelectedDay(saved.selectedDay)
     } else {
       const areas    = DAY_AREAS[saved.selectedDay]
       if (!areas) { clearPausedSession(); return }
@@ -2283,7 +2304,7 @@ export default function App() {
             <button type="button" className="header-icon-btn" onClick={pauseQuiz} aria-label="Pausar">
               <PauseIcon />
             </button>
-            <button type="button" className="header-finish-btn" onClick={finishQuiz} aria-label="Finalizar">
+            <button type="button" className="header-finish-btn" onClick={() => setFinishConfirmOpen(true)} aria-label="Finalizar">
               <FinishIcon />
             </button>
             <button
@@ -2318,7 +2339,7 @@ export default function App() {
               <button type="button" className="header-menu-item" onClick={() => { setHeaderMenuOpen(false); pauseQuiz() }}>
                 <PauseIcon /> <span>Pausar</span>
               </button>
-              <button type="button" className="header-menu-item header-menu-item--finish" onClick={() => { setHeaderMenuOpen(false); finishQuiz() }}>
+              <button type="button" className="header-menu-item header-menu-item--finish" onClick={() => { setHeaderMenuOpen(false); setFinishConfirmOpen(true) }}>
                 <FinishIcon /> <span>Finalizar</span>
               </button>
             </div>
@@ -2369,7 +2390,7 @@ export default function App() {
                         disabled={!!attempts[question.number]}
                         title="Inglês"
                       >
-                        EN
+                        🇬🇧
                       </button>
                       <button
                         type="button"
@@ -2378,7 +2399,7 @@ export default function App() {
                         disabled={!!attempts[question.number]}
                         title="Espanhol"
                       >
-                        ES
+                        🇪🇸
                       </button>
                     </div>
                   )}
@@ -2619,6 +2640,31 @@ export default function App() {
           onClose={() => setFeedbackOpen(false)}
         />
       )}
+
+      {finishConfirmOpen && (() => {
+        const incomplete = sortedQuestions.length - Object.keys(attempts).length
+        return (
+          <div className="fb-overlay" onClick={() => setFinishConfirmOpen(false)}>
+            <div className="fb-modal" onClick={e => e.stopPropagation()}>
+              <div className="fb-head">
+                <h2 className="fb-title">Finalizar prova?</h2>
+                <button type="button" className="notebook-close" onClick={() => setFinishConfirmOpen(false)}>×</button>
+              </div>
+              {incomplete > 0 ? (
+                <p className="finish-confirm-msg">
+                  Você ainda tem <strong>{incomplete} {incomplete === 1 ? 'questão não respondida' : 'questões não respondidas'}</strong>. {incomplete === 1 ? 'Ela será' : 'Elas serão'} contabilizada{incomplete === 1 ? '' : 's'} como errada{incomplete === 1 ? '' : 's'}.
+                </p>
+              ) : (
+                <p className="finish-confirm-msg">Todas as questões foram respondidas. Deseja finalizar?</p>
+              )}
+              <div className="finish-confirm-actions">
+                <button type="button" className="btn--ghost" onClick={() => setFinishConfirmOpen(false)}>Cancelar</button>
+                <button type="button" className="home-start-btn" style={{ margin: 0 }} onClick={() => { setFinishConfirmOpen(false); finishQuiz() }}>Finalizar</button>
+              </div>
+            </div>
+          </div>
+        )
+      })()}
 
       {timerDrawerOpen && (
         <div className="timer-drawer-overlay" onClick={() => setTimerDrawerOpen(false)} />

@@ -198,7 +198,7 @@
   },
   {
     "number": 145,
-    "text": "O estádio do Maracanã passou por algumas modificações estruturais para a realização da Copa do Mundo de 2014, como, por exemplo, as dimensões do ampo retangular. Para se adaptar aos padrões da Fifa, s dimensões do campo foram reduzidas de 110 m × 75 m ara 105 m × 68 m. Disponível em: http://virgula.uol.com.br. Acesso em: 14 ago. 2013 (adaptado). Em quantos metros quadrados a área do campo do Maracanã foi reduzida?",
+    "text": "Em quantos metros quadrados a área do campo do Maracanã foi reduzida?",
     "alternatives": {
       "a": "24",
       "b": "35",
@@ -214,7 +214,10 @@
     "test": "ENEM",
     "area": "math",
     "answer": "d",
-    "difficulty": 2
+    "difficulty": 2,
+    "contextIds": [
+      "enem_2024_math_q145_ctx1"
+    ]
   },
   {
     "number": 146,
@@ -402,7 +405,7 @@
   },
   {
     "number": 154,
-    "text": "Contratos de vários serviços disponíveis na internet apresentam uma quantidade excessiva de informações. Isso faz com que o tempo necessário para a leitura desses contratos possa ser longo. O quadro apresenta uma amostra do tempo considerado necessário para a leitura completa do contrato de alguns serviços digitais. Tipo de serviço Tempo necessário para a leitura completa do contrato (em minutos) A 36 B 17 C 27 D 13 E 13 F 13 O tempo médio, em minutos, necessário para a leitura completa de um contrato de serviço dentre os listados no quadro é, com uma casa decimal, aproximadamente",
+    "text": "O tempo médio, em minutos, necessário para a leitura completa de um contrato de serviço dentre os listados no quadro é, com uma casa decimal, aproximadamente",
     "alternatives": {
       "a": "13,0.",
       "b": "15,0.",
@@ -418,7 +421,10 @@
     "test": "ENEM",
     "area": "math",
     "answer": "c",
-    "difficulty": 2
+    "difficulty": 2,
+    "contextIds": [
+      "enem_2024_math_q154_ctx1"
+    ]
   },
   {
     "number": 155,
@@ -465,7 +471,7 @@
   },
   {
     "number": 157,
-    "text": "Uma doceira vende e entrega, em seu bairro, porções de 100 g de docinhos de aniversário. Atualmente, a taxa única de entrega é R$ 10,00, e o valor cobrado por uma porção é R$ 25,00. Por uma estratégia de vendas, a partir da próxima semana, a taxa única de entrega será R$ 15,00 e um novo valor será cobrado por uma porção, de maneira que o valor total a ser pago por um cliente na compra de 5 porções permaneça o mesmo. A partir da próxima semana, qual será o novo valor cobrado, em real, por uma porção?",
+    "text": "Uma doceira vende e entrega, em seu bairro, porções de 100 g de docinhos de aniversário. Atualmente, a taxa única de entrega é R$ 10,00, e o valor cobrado por uma porção é R$ 25,00. Por uma estratégia de vendas, a partir da próxima semana, a taxa única de entrega será R$ 15,00 e um novo valor será cobrado por uma porção, de maneira que o valor total a ser pago por um cliente na compra de 5 porções permaneça o mesmo. \n\nA partir da próxima semana, qual será o novo valor cobrado, em real, por uma porção?",
     "alternatives": {
       "a": "12,50",
       "b": "20,00",
@@ -508,7 +514,7 @@
   },
   {
     "number": 159,
-    "text": "Uma tubulação despeja sempre o mesmo volume de gua por unidade de tempo em uma caixa-d’água, o que ignifica dizer que a vazão de água nessa tubulação é onstante. Na junção dessa tubulação com a caixa-d’água, stá instalada uma membrana de filtragem cujo objetivo é ltrar eventuais impurezas presentes na água, combinado um bom fluxo de água. O fluxo ( φ ) de água através a superfície da membrana é diretamente proporcional vazão de água na tubulação, medida em mililitro por egundo, e inversamente proporcional à área da superfície a membrana, medida em centímetro quadrado.[Figura: descrição da figura]",
+    "text": "Uma tubulação despeja sempre o mesmo volume de gua por unidade de tempo em uma caixa-d’água, o que ignifica dizer que a vazão de água nessa tubulação é constante. Na junção dessa tubulação com a caixa-d’água, stá instalada uma membrana de filtragem cujo objetivo é ltrar eventuais impurezas presentes na água, combinado um bom fluxo de água. O fluxo ( φ ) de água através a superfície da membrana é diretamente proporcional vazão de água na tubulação, medida em mililitro por egundo, e inversamente proporcional à área da superfície a membrana, medida em centímetro quadrado.[Figura: descrição da figura]",
     "alternatives": {
       "a": "2 A   mL  ⋅ s   ⋅ cm",
       "b": "mL 2\n⋅ cm B  \ns",

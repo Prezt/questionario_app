@@ -341,4 +341,96 @@
 
 /* ── Export ── */
 .qe-export-section { text-align: center; }
+
+/* ── Add buttons ── */
+.qe-add-btns { display: flex; gap: 0.5rem; }
+
+/* ── ENEM Picker ── */
+.qe-picker { display: flex; flex-direction: column; gap: 1rem; }
+
+.qe-picker-filters { display: flex; flex-direction: column; gap: 0.6rem; }
+
+.qe-picker-seg {
+  display: flex;
+  gap: 0;
+  border: 1.5px solid var(--border);
+  border-radius: 8px;
+  overflow: hidden;
+}
+.qe-picker-seg-btn {
+  flex: 1;
+  padding: 0.4rem 0.5rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  border: none;
+  background: var(--surface);
+  color: var(--text-soft);
+  cursor: pointer;
+  border-right: 1.5px solid var(--border);
+  transition: background 0.12s, color 0.12s;
+}
+.qe-picker-seg-btn:last-child { border-right: none; }
+.qe-picker-seg-btn.active { background: var(--accent); color: #fff; }
+
+.qe-picker-years { display: flex; flex-wrap: wrap; gap: 0.35rem; }
+.qe-picker-year-btn {
+  padding: 0.25rem 0.6rem;
+  border-radius: 999px;
+  border: 1.5px solid var(--border);
+  background: var(--surface);
+  color: var(--text-soft);
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.12s, color 0.12s, border-color 0.12s;
+}
+.qe-picker-year-btn.active { background: var(--accent); color: #fff; border-color: var(--accent); }
+
+.qe-picker-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  max-height: 420px;
+  overflow-y: auto;
+  border: 1.5px solid var(--border);
+  border-radius: 8px;
+  padding: 0.5rem;
+}
+.qe-picker-empty { text-align: center; color: var(--text-soft); font-size: 0.9rem; padding: 1rem; }
+
+.qe-picker-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  padding: 0.6rem 0.75rem;
+  border-radius: 6px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  transition: border-color 0.12s;
+}
+.qe-picker-item:hover { border-color: var(--accent); }
+
+.qe-picker-item-meta { display: flex; align-items: center; gap: 0.4rem; flex-wrap: wrap; }
+.qe-picker-item-num { font-weight: 700; font-size: 0.8rem; color: var(--accent); }
+.qe-picker-item-tag {
+  font-size: 0.72rem;
+  padding: 0.1rem 0.45rem;
+  border-radius: 999px;
+  background: var(--alt-bg);
+  color: var(--text-soft);
+  border: 1px solid var(--border);
+}
+
+.qe-picker-item-stem {
+  font-size: 0.85rem;
+  color: var(--text);
+  line-height: 1.4;
+  margin: 0;
+}
+
+.qe-picker-use-btn {
+  align-self: flex-end;
+  padding: 0.3rem 0.9rem;
+  font-size: 0.82rem;
+}
 .qe-export-msg { margin: 0.75rem 0 0; font-size: 0.85rem; color: #16a34a; font-weight: 500; }

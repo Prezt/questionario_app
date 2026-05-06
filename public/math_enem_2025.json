@@ -462,13 +462,13 @@
   },
   {
     "number": 157,
-    "text": "O cortisol é um hormônio produzido pelas glândulas adrenais e pode ser considerado um importante marcador do estresse fisiológico. Em um estudo desenvolvido com enfermeiros, foi verificado que a concentração de cortisol salivar em um dia de trabalho, denotada por T, era, em média, 1,59 vezes a concentração de cortisol salivar em um dia de folga, denotada por F.\n\nNesse estudo, a relação obtida entre T e F foi",
+    "text": "Nesse estudo, a relação obtida entre <i>T</i> e <i>F</i> foi",
     "alternatives": {
-      "a": "T = 1,59 + F",
-      "b": "F = 1,59 + T",
-      "c": "T/F = 1,59",
-      "d": "F/T = 1,59",
-      "e": "F · T = 1,59"
+      "a": "<i>T</i> = 1,59 + <i>F</i>",
+      "b": "<i>F</i> = 1,59 + <i>T</i>",
+      "c": "<i>T</i>/<i>F</i> = 1,59",
+      "d": "<i>F</i>/<i>T</i> = 1,59",
+      "e": "<i>F</i> · <i>T</i> = 1,59"
     },
     "images": [],
     "tags": [
@@ -479,7 +479,10 @@
     "test": "ENEM",
     "area": "math",
     "answer": "c",
-    "difficulty": 1
+    "difficulty": 1,
+    "contextIds": [
+      "enem_2025_math_q157_ctx1"
+    ]
   },
   {
     "number": 158,

@@ -22,7 +22,7 @@
   },
   {
     "number": 137,
-    "text": "Os 100 funcionários de uma empresa estão distribuídos em dois setores: Produção e Administração. Os funcionários de um mesmo setor recebem salários com valores iguais. O quadro apresenta a quantidade de funcionários por setor e seus respectivos salários.\nQuantidade de Salário\nSetor\nfuncionários (em real)\nProdução 75 2 000,00\nAdministração 25 7 000,00\nA média dos salários dos 100 funcionários dessa empresa, em real, é",
+    "text": "Os 100 funcionários de uma empresa estão distribuídos em dois setores: Produção e Administração. Os funcionários de um mesmo setor recebem salários com valores iguais. O quadro apresenta a quantidade de funcionários por setor e seus respectivos salários.\n\n| Setor | Quantidade de funcionários | Salário (em real) |\n|-------|--------------------------|-------------------|\n| Produção | 75 | 2 000,00 |\n| Administração | 25 | 7 000,00 |\n\nA média dos salários dos 100 funcionários dessa empresa, em real, é",
     "alternatives": {
       "a": "2 000,00",
       "b": "2 500,00",
@@ -291,7 +291,7 @@
   },
   {
     "number": 150,
-    "text": "Dirigir após ingerir bebidas alcoólicas é uma atitude extremamente perigosa, uma vez que, a partir da primeira dose, a pessoa já começa a ter perda de sensibilidade de movimentos e de reflexos. Apesar de a eliminação absorção do álcool depender de cada pessoa e como o organismo consegue metabolizar a substância, ao final da primeira hora após a ingestão, a concentração de álcool ( C ) no sangue corresponde a aproximadamente 90% da quantidade ( q ) de álcool ingerida, e a eliminação total dessa concentração pode demorar até 12 horas. Nessas condições, ao final da primeira hora após a ingestão da quantidade  q  de álcool, a concentração  C  dessa substância no sangue é expressa algebricamente por",
+    "text": "Nessas condições, ao final da primeira hora após a ingestão da quantidade  q  de álcool, a concentração  C  dessa substância no sangue é expressa algebricamente por",
     "alternatives": {
       "a": "C = 0,9 q",
       "b": "C = 0,1 q",
@@ -307,7 +307,10 @@
     "test": "ENEM",
     "area": "math",
     "answer": "a",
-    "difficulty": 1
+    "difficulty": 1,
+    "contextIds": [
+      "enem_2023_math_q150_ctx1"
+    ]
   },
   {
     "number": 151,
@@ -394,7 +397,7 @@
   },
   {
     "number": 155,
-    "text": "Na planta baixa de um clube, a piscina é representada or um quadrado cuja área real mede 400 m². Ao redor essa piscina, será construída uma calçada, de largura onstante igual a 5 m.\n\n5 m Calçada\n5 m\nPiscina\n5 m\n5 m\nQual é a medida da área, em metro quadrado, ocupada ela calçada?",
+    "text": "Na planta baixa de um clube, a piscina é representada or um quadrado cuja área real mede 400 m². Ao redor essa piscina, será construída uma calçada, de largura constante igual a 5 m.[Figura: Esquema]\nQual é a medida da área, em metro quadrado, ocupada ela calçada?",
     "alternatives": {
       "a": "1 000",
       "b": "900",
@@ -402,7 +405,9 @@
       "d": "500",
       "e": "400"
     },
-    "images": [],
+    "images": [
+      "figuras/q155_2023_fig1.png"
+    ],
     "tags": [
       "geometria plana"
     ],

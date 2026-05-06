@@ -527,19 +527,33 @@ export default function ReviewPage() {
 
   // overrideQuestion: set when user clicks the sidebar directly
   const [overrideQuestion, setOverrideQuestion] = useState(null)
+  const [filterYear, setFilterYear] = useState(null) // null = all
+  const [filterDay, setFilterDay] = useState(null)   // null | 'd1' | 'd2'
 
   const currentQuestion = overrideQuestion ?? activeList[currentIndex] ?? null
+
+  // Derive available years from loaded files
+  const availableYears = useMemo(() => {
+    const years = new Set()
+    for (const f of ALL_FILES) {
+      const m = f.match(/(\d{4})/)
+      if (m) years.add(parseInt(m[1]))
+    }
+    return [...years].sort((a, b) => b - a)
+  }, [])
 
   // Sidebar-filtered list — arrow keys and nav buttons navigate this
   const sidebarList = useMemo(() => {
     return allQuestions.filter(q => {
       if (sidebarFilter === 'not-ok') {
         const status = flags[flagKey(q._file, q.number, q.language)]?.status
-        return status !== 'ok'
+        if (status === 'ok') return false
       }
+      if (filterYear !== null && q.year !== filterYear) return false
+      if (filterDay !== null && (AREA_TO_DAY[q.area] ?? 'd1') !== filterDay) return false
       return true
     })
-  }, [allQuestions, sidebarFilter, flags])
+  }, [allQuestions, sidebarFilter, flags, filterYear, filterDay])
 
   const navigateSidebar = useCallback((delta) => {
     const cq = overrideQuestion ?? activeList[currentIndex]
@@ -1537,20 +1551,44 @@ export default function ReviewPage() {
         {/* FAR RIGHT: QUESTION LIST */}
         <div className="rp-qlist">
           <div className="rp-qlist-filters">
-            <button className={`rp-qlist-filter-btn${sidebarFilter === 'all' ? ' active' : ''}`} onClick={() => setSidebarFilter('all')} title="Show all questions">All</button>
-            <button className={`rp-qlist-filter-btn${sidebarFilter === 'not-ok' ? ' active' : ''}`} onClick={() => setSidebarFilter('not-ok')} title="Show questions not marked as OK">≠OK</button>
+            <div className="rp-qlist-filter-row">
+              <button className={`rp-qlist-filter-btn${sidebarFilter === 'all' ? ' active' : ''}`} onClick={() => setSidebarFilter('all')} title="Show all questions">All</button>
+              <button className={`rp-qlist-filter-btn${sidebarFilter === 'not-ok' ? ' active' : ''}`} onClick={() => setSidebarFilter('not-ok')} title="Show questions not marked as OK">≠OK</button>
+            </div>
+            <div className="rp-qlist-filter-row">
+              <button
+                className={`rp-qlist-filter-btn${filterDay === null ? ' active' : ''}`}
+                onClick={() => setFilterDay(null)}
+              >D·</button>
+              <button
+                className={`rp-qlist-filter-btn${filterDay === 'd1' ? ' active' : ''}`}
+                onClick={() => setFilterDay(filterDay === 'd1' ? null : 'd1')}
+                title="Dia 1 — Linguagens + Humanas"
+              >D1</button>
+              <button
+                className={`rp-qlist-filter-btn${filterDay === 'd2' ? ' active' : ''}`}
+                onClick={() => setFilterDay(filterDay === 'd2' ? null : 'd2')}
+                title="Dia 2 — Natureza + Matemática"
+              >D2</button>
+            </div>
+            <div className="rp-qlist-filter-row rp-qlist-year-row">
+              <button
+                className={`rp-qlist-filter-btn${filterYear === null ? ' active' : ''}`}
+                onClick={() => setFilterYear(null)}
+              >Todos</button>
+              {availableYears.map(y => (
+                <button
+                  key={y}
+                  className={`rp-qlist-filter-btn${filterYear === y ? ' active' : ''}`}
+                  onClick={() => setFilterYear(filterYear === y ? null : y)}
+                >{y}</button>
+              ))}
+            </div>
           </div>
           {(() => {
-            const filtered = allQuestions.filter(q => {
-              if (sidebarFilter === 'not-ok') {
-                const status = flags[flagKey(q._file, q.number, q.language)]?.status
-                return status !== 'ok'
-              }
-              return true
-            })
             const items = []
             let lastYear = null
-            filtered.forEach((q, idx) => {
+            sidebarList.forEach((q, idx) => {
               if (q.year !== lastYear) {
                 items.push(<div key={`year-${q.year}`} className="rp-qlist-year">{q.year}</div>)
                 lastYear = q.year

@@ -154,6 +154,122 @@ function ImageInput({ images, onChange, onInsertTag, onAdd }) {
   )
 }
 
+const ENEM_AREAS = [
+  { key: 'math',       label: 'Matemática' },
+  { key: 'nature',     label: 'C. Natureza' },
+  { key: 'linguagens', label: 'Linguagens' },
+  { key: 'humanas',    label: 'C. Humanas' },
+]
+const ENEM_YEARS = [2025, 2024, 2023, 2022, 2021, 2020, 2019, 2018]
+
+function diffLabel(d) {
+  if (typeof d === 'string') return d
+  return d <= 3 ? 'easy' : d <= 6 ? 'medium' : 'hard'
+}
+
+function EnemPicker({ onSelect, onCancel }) {
+  const [area, setArea] = useState('math')
+  const [year, setYear] = useState(2025)
+  const [questions, setQuestions] = useState([])
+  const [fetching, setFetching] = useState(false)
+  const [search, setSearch] = useState('')
+
+  useEffect(() => {
+    setFetching(true)
+    setQuestions([])
+    fetch(`/${area}_enem_${year}.json`)
+      .then(r => r.ok ? r.json() : [])
+      .catch(() => [])
+      .then(qs => { setQuestions(qs); setFetching(false) })
+  }, [area, year])
+
+  const filtered = search.trim()
+    ? questions.filter(q =>
+        q.text?.toLowerCase().includes(search.toLowerCase()) ||
+        q.tags?.some(t => t.toLowerCase().includes(search.toLowerCase()))
+      )
+    : questions
+
+  const handleSelect = (q) => {
+    onSelect({
+      stem: q.text ?? q.stem ?? '',
+      images: (q.images ?? []).map(img =>
+        typeof img === 'string' ? { src: img, caption: '' } : img
+      ),
+      alternatives: q.alternatives ?? { a: '', b: '', c: '', d: '', e: '' },
+      correct: q.answer ?? 'a',
+      tags: q.tags ?? [],
+      difficulty: diffLabel(q.difficulty ?? 'medium'),
+    })
+  }
+
+  return (
+    <div className="qe-picker">
+      <div className="qe-picker-filters">
+        <div className="qe-picker-seg">
+          {ENEM_AREAS.map(a => (
+            <button
+              key={a.key}
+              type="button"
+              className={`qe-picker-seg-btn${area === a.key ? ' active' : ''}`}
+              onClick={() => setArea(a.key)}
+            >
+              {a.label}
+            </button>
+          ))}
+        </div>
+        <div className="qe-picker-years">
+          {ENEM_YEARS.map(y => (
+            <button
+              key={y}
+              type="button"
+              className={`qe-picker-year-btn${year === y ? ' active' : ''}`}
+              onClick={() => setYear(y)}
+            >
+              {y}
+            </button>
+          ))}
+        </div>
+        <input
+          className="qe-input"
+          placeholder="Buscar por texto ou assunto…"
+          value={search}
+          onChange={e => setSearch(e.target.value)}
+        />
+      </div>
+
+      <div className="qe-picker-list">
+        {fetching && <p className="qe-picker-empty">Carregando…</p>}
+        {!fetching && filtered.length === 0 && <p className="qe-picker-empty">Nenhuma questão encontrada.</p>}
+        {filtered.map(q => (
+          <div key={q.number} className="qe-picker-item">
+            <div className="qe-picker-item-meta">
+              <span className="qe-picker-item-num">Q{q.number}</span>
+              {q.tags?.slice(0, 2).map(t => (
+                <span key={t} className="qe-picker-item-tag">{t}</span>
+              ))}
+            </div>
+            <p className="qe-picker-item-stem">
+              {(q.text ?? q.stem ?? '').slice(0, 120)}…
+            </p>
+            <button
+              type="button"
+              className="qe-btn qe-btn--primary qe-picker-use-btn"
+              onClick={() => handleSelect(q)}
+            >
+              Usar
+            </button>
+          </div>
+        ))}
+      </div>
+
+      <div className="qe-form-actions">
+        <button type="button" className="qe-btn qe-btn--ghost" onClick={onCancel}>Cancelar</button>
+      </div>
+    </div>
+  )
+}
+
 function QuestionForm({ question, onSave, onCancel, saving }) {
   const [form, setForm] = useState(question)
   const textareaRef = useRef(null)
@@ -266,6 +382,7 @@ export default function QuestionEditor() {
   const [setName, setSetName] = useState('')
   const [setYear, setSetYear] = useState('')
   const [editingQ, setEditingQ] = useState(null)
+  const [importing, setImporting] = useState(false)
   const [loading, setLoading] = useState(true)
   const [saving, setSaving] = useState(false)
   const [error, setError] = useState('')
@@ -396,7 +513,7 @@ export default function QuestionEditor() {
   const saveQuestion = useCallback(async (form) => {
     setSaving(true); setError('')
     try {
-      const isNew = editingQ === 'new'
+      const isNew = editingQ === 'new' || !editingQ?.id
       const qParam = isNew ? userIdParam : `?questionId=${editingQ.id}${targetUserId ? `&userId=${targetUserId}` : ''}`
       const url = `/api/question-sets/questions${qParam}`
       const res = await fetch(url, {
@@ -528,15 +645,20 @@ export default function QuestionEditor() {
           <section className="qe-section">
             <div className="qe-section-header">
               <h2 className="qe-section-title">Questões ({questions.length})</h2>
-              {!editingQ && (
-                <button type="button" className="qe-btn qe-btn--primary" onClick={() => setEditingQ('new')}>
-                  + Nova questão
-                </button>
+              {!editingQ && !importing && (
+                <div className="qe-add-btns">
+                  <button type="button" className="qe-btn qe-btn--ghost" onClick={() => setImporting(true)}>
+                    + Do ENEM
+                  </button>
+                  <button type="button" className="qe-btn qe-btn--primary" onClick={() => setEditingQ('new')}>
+                    + Nova
+                  </button>
+                </div>
               )}
             </div>
 
-            {questions.length === 0 && !editingQ && (
-              <p className="qe-empty">Nenhuma questão ainda. Clique em "+ Nova questão" para começar.</p>
+            {questions.length === 0 && !editingQ && !importing && (
+              <p className="qe-empty">Nenhuma questão ainda. Clique em "+ Nova" para criar ou "+ Do ENEM" para importar.</p>
             )}
 
             <div className="qe-question-list">
@@ -560,10 +682,21 @@ export default function QuestionEditor() {
             </div>
           </section>
 
+          {/* ENEM picker */}
+          {importing && (
+            <section className="qe-section">
+              <h2 className="qe-section-title">Importar questão do ENEM</h2>
+              <EnemPicker
+                onSelect={(prefilled) => { setImporting(false); setEditingQ({ ...prefilled, id: undefined, number: undefined }) }}
+                onCancel={() => setImporting(false)}
+              />
+            </section>
+          )}
+
           {/* Question form */}
           {editingQ && (
             <section className="qe-section">
-              <h2 className="qe-section-title">{editingQ === 'new' ? 'Nova questão' : `Editar Q${editingQ.number}`}</h2>
+              <h2 className="qe-section-title">{editingQ === 'new' ? 'Nova questão' : editingQ.number != null ? `Editar Q${editingQ.number}` : 'Importar questão'}</h2>
               <QuestionForm
                 question={editingQ === 'new' ? EMPTY_QUESTION : editingQ}
                 onSave={saveQuestion}
