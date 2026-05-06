@@ -44,8 +44,10 @@ Busca pelo zero da derivada dLL/dθ, usando bisseção com tolerância `1e-6`.
 ### Conversão θ → nota
 
 ```
-nota = clamp(500 + 100 × θ, 0, 1000)
+nota = clamp(500 + 125 × θ, 0, 1000)
 ```
+
+O coeficiente **125** = 500 / THETA_MAX (4), garantindo que θ = +4 (todas corretas) → **1000** e θ = -4 (todas erradas) → **0**.
 
 ---
 
@@ -71,8 +73,8 @@ nota_geral = média das áreas com pelo menos 1 questão
 
 | Situação | Tratamento |
 |---|---|
-| Todas as questões corretas em uma área | θ limitado a +4 → nota ≈ 900 |
-| Todas as questões erradas em uma área | θ limitado a -4 → nota ≈ 100 |
+| Todas as questões corretas em uma área | θ = +4 → nota = 1000 |
+| Todas as questões erradas em uma área | θ = -4 → nota = 0 |
 | Área sem nenhuma questão na sessão | `null` — excluída da média geral |
 
 ---
