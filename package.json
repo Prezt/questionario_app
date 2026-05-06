@@ -11,6 +11,8 @@
     "api": "node --env-file=.env scripts/local-api.js",
     "build": "vite build",
     "preview": "vite preview",
+    "test": "vitest run",
+    "test:watch": "vitest",
     "audit": "node scripts/audit-questions.js && cp scripts/audit-report.json public/audit-report.json",
     "build-page-map": "cd ../enem-parser && .venv/bin/python ../questionario_app/scripts/build-page-map.py --data-dir data --output ../questionario_app/public/question-pages.json"
   },
@@ -22,5 +24,8 @@
     "react": "^19.2.5",
     "react-dom": "^19.2.5",
     "vite": "^8.0.8"
+  },
+  "devDependencies": {
+    "vitest": "^4.1.5"
   }
 }
