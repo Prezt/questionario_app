@@ -305,9 +305,9 @@ function EnemPicker({ onSelect, onCancel }) {
       </div>
 
       {mode === 'search' && (
-        <div key={`${area}-${year}`} className="qe-picker-list" ref={listRef}>
-          {fetching && <p className="qe-picker-empty">Carregando…</p>}
-          {!fetching && filtered.length === 0 && <p className="qe-picker-empty">Nenhuma questão encontrada.</p>}
+        <div key={`${area}-${year}-${fetching ? 'loading' : filtered.length === 0 ? 'empty' : 'has'}`} className="qe-picker-list" ref={listRef}>
+          {fetching && <p key="loading" className="qe-picker-empty">Carregando…</p>}
+          {!fetching && filtered.length === 0 && <p key="empty" className="qe-picker-empty">Nenhuma questão encontrada.</p>}
           {filtered.map(q => (
             <div key={q.number} className="qe-picker-item">
               <div className="qe-picker-item-meta">
