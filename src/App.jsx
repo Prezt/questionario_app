@@ -9,11 +9,31 @@ import {
   Suspense,
 } from 'react'
 import './App.css'
+
+function playFeedbackSound(correct, muted = false) {
+  if (muted) return
+  try {
+    const ctx = new (window.AudioContext || window.webkitAudioContext)()
+    const notes = correct
+      ? [[440, 0, 0.08], [554.37, 0.09, 0.08], [659.25, 0.18, 0.10]]
+      : [[330, 0, 0.10], [220, 0.11, 0.14]]
+    notes.forEach(([f, t, d]) => {
+      const o = ctx.createOscillator(), g = ctx.createGain()
+      o.type = 'square'; o.frequency.value = f
+      g.gain.setValueAtTime(0.10, ctx.currentTime + t)
+      g.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + t + d)
+      o.connect(g); g.connect(ctx.destination)
+      o.start(ctx.currentTime + t); o.stop(ctx.currentTime + t + d)
+    })
+    setTimeout(() => ctx.close(), 800)
+  } catch { /* AudioContext unavailable */ }
+}
 import {
   parseStemSegments,
   alternativeLabelForDisplay,
   captionFromBracketText,
 } from './parseQuestionFigures.js'
+import { calcTriScores } from './triScoring.js'
 const ReviewPage  = lazy(() => import('./ReviewPage.jsx'))
 const QuestionEditor = lazy(() => import('./QuestionEditor.jsx'))
 
@@ -298,6 +318,9 @@ export default function App() {
     const saved = localStorage.getItem('randomize-alts')
     return saved === null ? true : saved === 'true'
   })
+  const [soundMuted, setSoundMuted] = useState(() =>
+    localStorage.getItem('sound-muted') === 'true'
+  )
   const [showDifficulty, setShowDifficulty] = useState(() => {
     return localStorage.getItem('show-difficulty') === 'true'
   })
@@ -318,6 +341,7 @@ export default function App() {
   const [feedbackQuestion, setFeedbackQuestion] = useState(null)
 
   const [userResults, setUserResults] = useState([]) // [{test,year,day,score,total}]
+  const [triScores, setTriScores] = useState(null) // {math,nature,linguagens,humanas,geral}
 
   const [isDailyChallenge, setIsDailyChallenge] = useState(false)
   const [dailyChallengeLoading, setDailyChallengeLoading] = useState(false)
@@ -690,17 +714,23 @@ export default function App() {
   const railRef = useRef(null)
   const railInnerRef = useRef(null)
 
-  useLayoutEffect(() => {
-    if (!question || !railRef.current || !railInnerRef.current) return
-    const railHeight = railRef.current.getBoundingClientRect().height
-    const firstBtn = railInnerRef.current.querySelector('.question-rail-btn')
+  const scrollRail = useCallback((dir) => {
+    const inner = railInnerRef.current
+    if (!inner) return
+    const firstBtn = inner.querySelector('.question-rail-btn')
     if (!firstBtn) return
-    const btnHeight = firstBtn.getBoundingClientRect().height
-    const gap = parseFloat(getComputedStyle(railInnerRef.current).gap) || 0
-    const idx = sortedQuestions.findIndex((q) => q.number === question.number && (q.language ?? null) === (question.language ?? null))
-    if (idx < 0) return
-    const translateY = railHeight / 2 - (idx * (btnHeight + gap) + btnHeight / 2)
-    railInnerRef.current.style.transform = `translateY(${translateY}px)`
+    const step = firstBtn.getBoundingClientRect().height + (parseFloat(getComputedStyle(inner).gap) || 0)
+    inner.scrollBy({ top: dir * step * 4, behavior: 'smooth' })
+  }, [])
+
+  useLayoutEffect(() => {
+    const inner = railInnerRef.current
+    if (!inner || !question) return
+    const currentBtn = inner.querySelector('.question-rail-btn--current')
+    if (!currentBtn) return
+    const btnTop    = currentBtn.offsetTop
+    const btnHeight = currentBtn.offsetHeight
+    inner.scrollTop = btnTop - inner.clientHeight / 2 + btnHeight / 2
   }, [question, sortedQuestions])
 
   const next = useCallback(() => {
@@ -729,7 +759,9 @@ export default function App() {
       saveAttemptsToSession(next)
       return next
     })
-  }, [question])
+    const isAnnulled = question.answer === 'annulled'
+    playFeedbackSound(!isAnnulled && letter === question.answer, soundMuted)
+  }, [question, soundMuted])
 
   const confirmAnswer = useCallback(() => {
     if (!pendingSelection) return
@@ -1142,6 +1174,8 @@ export default function App() {
     startTimeRef.current = null
     questionStartRef.current = null
     clearPausedSession()
+
+    setTriScores(calcTriScores(questions, attempts))
 
     // Persist result to DB (fire-and-forget — never blocks UI)
     if (token) {
@@ -1670,6 +1704,17 @@ export default function App() {
               )}
               {adminError && <p className="auth-error" style={{ margin: 0 }}>{adminError}</p>}
               <div className="options-divider" />
+              <label className="options-toggle-row">
+                <span className="options-toggle-label">{soundMuted ? '🔇' : '🔊'} Som</span>
+                <span className={`options-toggle-switch${!soundMuted ? ' on' : ''}`}>
+                  <input type="checkbox" checked={!soundMuted} onChange={(e) => {
+                    setSoundMuted(!e.target.checked)
+                    localStorage.setItem('sound-muted', !e.target.checked)
+                  }} />
+                  <span className="options-toggle-thumb" />
+                </span>
+              </label>
+              <div className="options-divider" />
               {clearHistoryConfirm ? (
                 <div className="options-confirm-row">
                   <span className="options-confirm-label">Tem certeza?</span>
@@ -1898,6 +1943,7 @@ export default function App() {
                 saveAttemptsToSession({})
                 setQuestions([])
                 setQuestion(null)
+                setTriScores(null)
                 if (isDailyChallenge) {
                   setIsDailyChallenge(false)
                   // Show the completed banner on home
@@ -2238,8 +2284,14 @@ export default function App() {
                     )}
                     {showDifficulty && question.difficulty != null && (() => {
                       const d = question.difficulty
-                      const label = d <= 3 ? 'Fácil' : d <= 6 ? 'Médio' : 'Difícil'
-                      const cls = d <= 3 ? 'easy' : d <= 6 ? 'medium' : 'hard'
+                      let label, cls
+                      if (typeof d === 'string') {
+                        label = d === 'easy' ? 'Fácil' : d === 'hard' ? 'Difícil' : 'Médio'
+                        cls   = d === 'easy' ? 'easy'  : d === 'hard' ? 'hard'    : 'medium'
+                      } else {
+                        label = d <= 3 ? 'Fácil' : d <= 6 ? 'Médio' : 'Difícil'
+                        cls   = d <= 3 ? 'easy'  : d <= 6 ? 'medium' : 'hard'
+                      }
                       return <span className={`badge badge-difficulty badge-difficulty--${cls}`}>{label}</span>
                     })()}
                   </div>
@@ -2437,6 +2489,7 @@ export default function App() {
         </div>
 
         <nav className={`question-rail ${railOpen ? 'is-open' : ''}`} ref={railRef} aria-label="Lista de questões">
+          <button type="button" className="rail-arrow-btn" onClick={() => scrollRail(-1)} aria-label="Rolar para cima">↑</button>
           <div className="question-rail-scroll" ref={railInnerRef}>
             {sortedQuestions.map((q, idx) => {
               const att = attempts[q.number]
@@ -2459,6 +2512,7 @@ export default function App() {
               )
             })}
           </div>
+          <button type="button" className="rail-arrow-btn" onClick={() => scrollRail(1)} aria-label="Rolar para baixo">↓</button>
         </nav>
       </div>
 
@@ -2471,6 +2525,14 @@ export default function App() {
           title={railOpen ? 'Ocultar lista' : 'Mostrar lista'}
         >
           ☰
+        </button>
+        <button
+          type="button"
+          className={`footer-nav-btn${optionsOpen ? ' active' : ''}`}
+          onClick={() => setOptionsOpen((o) => !o)}
+          aria-label="Opções"
+        >
+          <GearIcon />
         </button>
         <button type="button" className="footer-nav-btn" onClick={prev} disabled={isPrevDisabled} aria-label="Questão anterior">←</button>
         {selected ? (
@@ -2491,6 +2553,39 @@ export default function App() {
           token={token}
           onClose={() => setFeedbackOpen(false)}
         />
+      )}
+
+      {optionsOpen && (
+        <div className="options-overlay" onClick={() => setOptionsOpen(false)} />
+      )}
+      {optionsOpen && (
+        <div className="options-popover options-popover--footer">
+          <label className="options-toggle-row">
+            <span className="options-toggle-label">Mostrar resposta</span>
+            <span className={`options-toggle-switch${showAnswer ? ' on' : ''}`}>
+              <input type="checkbox" checked={showAnswer} onChange={(e) => { setShowAnswer(e.target.checked); localStorage.setItem('show-answer', e.target.checked) }} />
+              <span className="options-toggle-thumb" />
+            </span>
+          </label>
+          <label className="options-toggle-row">
+            <span className="options-toggle-label">Mostrar dificuldade</span>
+            <span className={`options-toggle-switch${showDifficulty ? ' on' : ''}`}>
+              <input type="checkbox" checked={showDifficulty} onChange={(e) => { setShowDifficulty(e.target.checked); localStorage.setItem('show-difficulty', e.target.checked) }} />
+              <span className="options-toggle-thumb" />
+            </span>
+          </label>
+          <div className="options-divider" />
+          <label className="options-toggle-row">
+            <span className="options-toggle-label">{soundMuted ? '🔇' : '🔊'} Som</span>
+            <span className={`options-toggle-switch${!soundMuted ? ' on' : ''}`}>
+              <input type="checkbox" checked={!soundMuted} onChange={(e) => {
+                setSoundMuted(!e.target.checked)
+                localStorage.setItem('sound-muted', !e.target.checked)
+              }} />
+              <span className="options-toggle-thumb" />
+            </span>
+          </label>
+        </div>
       )}
     </div>
   )
