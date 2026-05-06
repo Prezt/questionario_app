@@ -245,11 +245,12 @@ function PauseIcon() {
   )
 }
 
-function FlagIcon() {
+function WarnIcon() {
   return (
     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-      <path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z" />
-      <line x1="4" y1="22" x2="4" y2="15" />
+      <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z" />
+      <line x1="12" y1="9" x2="12" y2="13" />
+      <line x1="12" y1="17" x2="12.01" y2="17" />
     </svg>
   )
 }
@@ -272,6 +273,26 @@ function MenuDotsIcon() {
   )
 }
 
+function NumberedListIcon() {
+  return (
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <line x1="10" y1="6" x2="21" y2="6"/>
+      <line x1="10" y1="12" x2="21" y2="12"/>
+      <line x1="10" y1="18" x2="21" y2="18"/>
+      <path d="M4 6h1v4"/>
+      <path d="M4 10h2"/>
+      <path d="M6 18H4c0-1 2-2 2-3s-1-1.5-2-1"/>
+    </svg>
+  )
+}
+function ClockIcon() {
+  return (
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <circle cx="12" cy="12" r="10" />
+      <polyline points="12 6 12 12 16 14" />
+    </svg>
+  )
+}
 function LogoutIcon() {
   return (
     <svg
@@ -332,7 +353,8 @@ export default function App() {
   const [dark, setDark] = useState(() => {
     const saved = localStorage.getItem('dark')
     if (saved !== null) return saved === 'true'
-    return window.matchMedia('(prefers-color-scheme: dark)').matches
+    const h = new Date().getHours()
+    return h < 6 || h >= 18
   })
   const [randomizeAlts, setRandomizeAlts] = useState(() => {
     const saved = localStorage.getItem('randomize-alts')
@@ -371,6 +393,7 @@ export default function App() {
   const [expandedArea, setExpandedArea] = useState(null) // area panel open on home screen
   const [optionsOpen, setOptionsOpen] = useState(false)
   const [headerMenuOpen, setHeaderMenuOpen] = useState(false)
+  const [timerDrawerOpen, setTimerDrawerOpen] = useState(false)
 
   // Phase: 'home' | 'quiz' | 'summary' | 'login' | 'admin'
   const [phase, setPhase] = useState('login')
@@ -460,7 +483,8 @@ export default function App() {
               accQuestionTimesRef.current = { ...(saved.questionTimes ?? {}) }
               const now = Date.now()
               startTimeRef.current     = now - (saved.totalElapsed ?? 0) * 1000
-              questionStartRef.current = now
+              const savedQStart = Number(localStorage.getItem('questionario-question-start'))
+              questionStartRef.current = savedQStart && savedQStart < now ? savedQStart : now
               prevQuestionNumRef.current = null
               setIsDailyChallenge(true)
               setPhase('quiz')
@@ -501,7 +525,8 @@ export default function App() {
                 accQuestionTimesRef.current = { ...(saved.questionTimes ?? {}) }
                 const now = Date.now()
                 startTimeRef.current   = now - (saved.totalElapsed ?? 0) * 1000
-                questionStartRef.current = now
+                const savedQStart = Number(localStorage.getItem('questionario-question-start'))
+                questionStartRef.current = savedQStart && savedQStart < now ? savedQStart : now
                 prevQuestionNumRef.current = null
                 setPhase('quiz')
               }
@@ -674,6 +699,7 @@ export default function App() {
         (accQuestionTimesRef.current[prevNum] || 0) +
         Math.floor((Date.now() - questionStartRef.current) / 1000)
       questionStartRef.current = Date.now()
+      try { localStorage.setItem('questionario-question-start', String(questionStartRef.current)) } catch {}
       setQuestionElapsed(0)
     }
     prevQuestionNumRef.current = question.number
@@ -684,7 +710,10 @@ export default function App() {
     if (phase !== 'quiz') return
     const id = setInterval(() => {
       if (startTimeRef.current) setTotalElapsed(Math.floor((Date.now() - startTimeRef.current) / 1000))
-      if (questionStartRef.current) setQuestionElapsed(Math.floor((Date.now() - questionStartRef.current) / 1000))
+      if (questionStartRef.current) {
+        setQuestionElapsed(Math.floor((Date.now() - questionStartRef.current) / 1000))
+        try { localStorage.setItem('questionario-question-start', String(questionStartRef.current)) } catch {}
+      }
     }, 1000)
     return () => clearInterval(id)
   }, [phase])
@@ -780,7 +809,7 @@ export default function App() {
       return next
     })
     const isAnnulled = question.answer === 'annulled'
-    playFeedbackSound(!isAnnulled && letter === question.answer, soundMuted)
+    playFeedbackSound(!isAnnulled && letter === question.answer, soundMuted || !showAnswer)
   }, [question, soundMuted])
 
   const confirmAnswer = useCallback(() => {
@@ -889,6 +918,7 @@ export default function App() {
     })
     startTimeRef.current   = null
     questionStartRef.current = null
+    try { localStorage.removeItem('questionario-question-start') } catch {}
     setPhase('home')
   }, [question, totalElapsed, attempts, selectedTest, selectedYear, selectedDay, selectedArea, selectedTag, foreignLang])
 
@@ -1193,6 +1223,7 @@ export default function App() {
     setQuestionTimes({ ...accQuestionTimesRef.current })
     startTimeRef.current = null
     questionStartRef.current = null
+    try { localStorage.removeItem('questionario-question-start') } catch {}
     clearPausedSession()
 
     setTriScores(calcTriScores(questions, attempts))
@@ -1284,14 +1315,6 @@ export default function App() {
           <div className="home-screen">
             <div className="home-topbar">
               <span className="home-greeting">Olá, {user?.username}</span>
-              <button
-                type="button"
-                className="theme-toggle home-theme-btn"
-                onClick={() => setDark((d) => !d)}
-                aria-label="Alternar tema"
-              >
-                {dark ? <SunIcon /> : <MoonIcon />}
-              </button>
             </div>
             <div className="home-card">
               <div className="home-logo-wrap">
@@ -1684,6 +1707,7 @@ export default function App() {
                     onChange={(e) => {
                       setShowAnswer(e.target.checked)
                       localStorage.setItem('show-answer', e.target.checked)
+                      if (!e.target.checked) { setSoundMuted(true); localStorage.setItem('sound-muted', true) }
                     }}
                   />
                   <span className="options-toggle-thumb" />
@@ -1730,7 +1754,15 @@ export default function App() {
                   <input type="checkbox" checked={!soundMuted} onChange={(e) => {
                     setSoundMuted(!e.target.checked)
                     localStorage.setItem('sound-muted', !e.target.checked)
+                    if (e.target.checked && !showAnswer) { setShowAnswer(true); localStorage.setItem('show-answer', true) }
                   }} />
+                  <span className="options-toggle-thumb" />
+                </span>
+              </label>
+              <label className="options-toggle-row">
+                <span className="options-toggle-label" style={{ display: 'flex', alignItems: 'center', gap: '0.4rem' }}>{dark ? <MoonIcon /> : <SunIcon />} {dark ? 'Modo escuro' : 'Modo claro'}</span>
+                <span className={`options-toggle-switch options-toggle-switch--theme${dark ? ' on' : ''}`}>
+                  <input type="checkbox" checked={dark} onChange={(e) => setDark(e.target.checked)} />
                   <span className="options-toggle-thumb" />
                 </span>
               </label>
@@ -2218,57 +2250,51 @@ export default function App() {
   return (
     <div className="app-shell">
       <header className="app-header">
-        <span className="app-header-title">
-          <img
-            src="/figuras/logos/integrar-logo-transparent.png"
-            alt="Integrar"
-            className="app-header-logo"
-          />
-          Questionário ENEM
-        </span>
-
-        <div className="header-timers">
-          <div className="header-timer">
-            <span className="header-timer-label">Total</span>
-            <span className="header-timer-value">{formatTime(totalElapsed)}</span>
-          </div>
-          <div className="header-timer">
-            <span className="header-timer-label">Questão</span>
-            <span className="header-timer-value">{formatTime(questionElapsed)}</span>
-          </div>
+        <div className="app-header-left">
+          <span className="app-header-title">
+            <img
+              src="/figuras/logos/integrar-logo-transparent.png"
+              alt="Integrar"
+              className="app-header-logo"
+            />
+          </span>
+          <button
+            type="button"
+            className={`header-icon-btn${timerDrawerOpen ? ' active' : ''}`}
+            onClick={() => setTimerDrawerOpen(o => !o)}
+            aria-label="Temporizador"
+          >
+            <ClockIcon />
+          </button>
         </div>
 
-        {/* Desktop: icon-only buttons */}
-        <div className="app-header-actions app-header-actions--desktop">
-          <button type="button" className="header-icon-btn" onClick={pauseQuiz} aria-label="Pausar">
-            <PauseIcon />
-          </button>
-          <button type="button" className="header-finish-btn" onClick={finishQuiz} aria-label="Finalizar">
-            <FinishIcon />
-          </button>
+        <div className="app-header-right">
           <button
             type="button"
-            className="notebook-toggle"
-            onClick={() => { setFeedbackQuestion(question?.number ?? null); setFeedbackOpen(true) }}
-            aria-label="Feedback"
-          >
-            <FlagIcon />
-          </button>
-          <button
-            type="button"
-            className={`notebook-toggle ${notebookOpen ? 'active' : ''}`}
+            className={`notebook-toggle${notebookOpen ? ' active' : ''}`}
             onClick={() => setNotebookOpen((o) => !o)}
             aria-label={notebookOpen ? 'Fechar caderno' : 'Abrir caderno'}
           >
             <NotebookIcon />
           </button>
-          <button type="button" className="theme-toggle" onClick={() => setDark((d) => !d)} aria-label="Alternar tema">
-            {dark ? <SunIcon /> : <MoonIcon />}
-          </button>
-          <button type="button" className="header-icon-btn" onClick={handleLogout} aria-label="Sair">
-            <LogoutIcon />
-          </button>
-        </div>
+
+          {/* Desktop: icon-only buttons */}
+          <div className="app-header-actions app-header-actions--desktop">
+            <button type="button" className="header-icon-btn" onClick={pauseQuiz} aria-label="Pausar">
+              <PauseIcon />
+            </button>
+            <button type="button" className="header-finish-btn" onClick={finishQuiz} aria-label="Finalizar">
+              <FinishIcon />
+            </button>
+            <button
+              type="button"
+              className="notebook-toggle header-icon-btn--report"
+              onClick={() => { setFeedbackQuestion(question?.number ?? null); setFeedbackOpen(true) }}
+              aria-label="Reportar"
+            >
+              <WarnIcon />
+            </button>
+          </div>
 
         {/* Mobile: ⋮ dropdown */}
         <div className="app-header-actions app-header-actions--mobile">
@@ -2285,27 +2311,19 @@ export default function App() {
           </button>
           {headerMenuOpen && (
             <div className="header-menu-dropdown">
+              <button type="button" className="header-menu-item header-menu-item--report" onClick={() => { setHeaderMenuOpen(false); setFeedbackQuestion(question?.number ?? null); setFeedbackOpen(true) }}>
+                <WarnIcon /> <span>Reportar problema</span>
+              </button>
+              <div className="header-menu-divider" />
               <button type="button" className="header-menu-item" onClick={() => { setHeaderMenuOpen(false); pauseQuiz() }}>
                 <PauseIcon /> <span>Pausar</span>
               </button>
               <button type="button" className="header-menu-item header-menu-item--finish" onClick={() => { setHeaderMenuOpen(false); finishQuiz() }}>
                 <FinishIcon /> <span>Finalizar</span>
               </button>
-              <button type="button" className="header-menu-item" onClick={() => { setHeaderMenuOpen(false); setFeedbackQuestion(question?.number ?? null); setFeedbackOpen(true) }}>
-                <FlagIcon /> <span>Feedback</span>
-              </button>
-              <button type="button" className={`header-menu-item${notebookOpen ? ' active' : ''}`} onClick={() => { setHeaderMenuOpen(false); setNotebookOpen(o => !o) }}>
-                <NotebookIcon /> <span>Caderno</span>
-              </button>
-              <button type="button" className="header-menu-item" onClick={() => { setHeaderMenuOpen(false); setDark(d => !d) }}>
-                {dark ? <SunIcon /> : <MoonIcon />} <span>{dark ? 'Modo claro' : 'Modo escuro'}</span>
-              </button>
-              <div className="header-menu-divider" />
-              <button type="button" className="header-menu-item header-menu-item--danger" onClick={() => { setHeaderMenuOpen(false); handleLogout() }}>
-                <LogoutIcon /> <span>Sair</span>
-              </button>
             </div>
           )}
+        </div>
         </div>
       </header>
 
@@ -2566,15 +2584,6 @@ export default function App() {
       <footer className="question-footer">
         <button
           type="button"
-          className={`footer-nav-btn footer-rail-toggle ${railOpen ? 'active' : ''}`}
-          onClick={() => setRailOpen((o) => !o)}
-          aria-label={railOpen ? 'Ocultar lista de questões' : 'Mostrar lista de questões'}
-          title={railOpen ? 'Ocultar lista' : 'Mostrar lista'}
-        >
-          ☰
-        </button>
-        <button
-          type="button"
           className={`footer-nav-btn${optionsOpen ? ' active' : ''}`}
           onClick={() => setOptionsOpen((o) => !o)}
           aria-label="Opções"
@@ -2592,6 +2601,15 @@ export default function App() {
           </button>
         )}
         <button type="button" className="footer-nav-btn" onClick={next} disabled={isNextDisabled} aria-label="Próxima questão">→</button>
+        <button
+          type="button"
+          className={`footer-nav-btn footer-rail-toggle ${railOpen ? 'active' : ''}`}
+          onClick={() => setRailOpen((o) => !o)}
+          aria-label={railOpen ? 'Ocultar lista de questões' : 'Mostrar lista de questões'}
+          title={railOpen ? 'Ocultar lista' : 'Mostrar lista'}
+        >
+          <NumberedListIcon />
+        </button>
       </footer>
 
       {feedbackOpen && (
@@ -2602,6 +2620,20 @@ export default function App() {
         />
       )}
 
+      {timerDrawerOpen && (
+        <div className="timer-drawer-overlay" onClick={() => setTimerDrawerOpen(false)} />
+      )}
+      <div className={`timer-drawer${timerDrawerOpen ? ' open' : ''}`}>
+        <div className="timer-drawer-row">
+          <span className="timer-drawer-label">Questão</span>
+          <span className="timer-drawer-value">{formatTime(questionElapsed)}</span>
+        </div>
+        <div className="timer-drawer-row">
+          <span className="timer-drawer-label">Total</span>
+          <span className="timer-drawer-value">{formatTime(totalElapsed)}</span>
+        </div>
+      </div>
+
       {optionsOpen && (
         <div className="options-overlay" onClick={() => setOptionsOpen(false)} />
       )}
@@ -2610,7 +2642,7 @@ export default function App() {
           <label className="options-toggle-row">
             <span className="options-toggle-label">Mostrar resposta</span>
             <span className={`options-toggle-switch${showAnswer ? ' on' : ''}`}>
-              <input type="checkbox" checked={showAnswer} onChange={(e) => { setShowAnswer(e.target.checked); localStorage.setItem('show-answer', e.target.checked) }} />
+              <input type="checkbox" checked={showAnswer} onChange={(e) => { setShowAnswer(e.target.checked); localStorage.setItem('show-answer', e.target.checked); if (!e.target.checked) { setSoundMuted(true); localStorage.setItem('sound-muted', true) } }} />
               <span className="options-toggle-thumb" />
             </span>
           </label>
@@ -2628,10 +2660,22 @@ export default function App() {
               <input type="checkbox" checked={!soundMuted} onChange={(e) => {
                 setSoundMuted(!e.target.checked)
                 localStorage.setItem('sound-muted', !e.target.checked)
+                if (e.target.checked && !showAnswer) { setShowAnswer(true); localStorage.setItem('show-answer', true) }
               }} />
               <span className="options-toggle-thumb" />
             </span>
           </label>
+          <label className="options-toggle-row">
+            <span className="options-toggle-label" style={{ display: 'flex', alignItems: 'center', gap: '0.4rem' }}>{dark ? <MoonIcon /> : <SunIcon />} {dark ? 'Modo escuro' : 'Modo claro'}</span>
+            <span className={`options-toggle-switch options-toggle-switch--theme${dark ? ' on' : ''}`}>
+              <input type="checkbox" checked={dark} onChange={(e) => setDark(e.target.checked)} />
+              <span className="options-toggle-thumb" />
+            </span>
+          </label>
+          <div className="options-divider" />
+          <button type="button" className="options-admin-btn options-admin-btn--danger" onClick={handleLogout}>
+            Sair
+          </button>
         </div>
       )}
     </div>
@@ -2975,7 +3019,7 @@ function AdminPanel({ stats, onBack, dark, setDark, token }) {
 }
 
 function FeedbackModal({ questionNumber, token, onClose }) {
-  const [type, setType] = useState('feedback')
+  const [type, setType] = useState('bug')
   const [body, setBody] = useState('')
   const [submitting, setSubmitting] = useState(false)
   const [done, setDone] = useState(false)
@@ -3018,17 +3062,17 @@ function FeedbackModal({ questionNumber, token, onClose }) {
             <div className="fb-type-row">
               <button
                 type="button"
-                className={`fb-type-btn ${type === 'feedback' ? 'active' : ''}`}
-                onClick={() => setType('feedback')}
-              >
-                Sugestão
-              </button>
-              <button
-                type="button"
                 className={`fb-type-btn ${type === 'bug' ? 'active' : ''}`}
                 onClick={() => setType('bug')}
               >
                 Problema
+              </button>
+              <button
+                type="button"
+                className={`fb-type-btn ${type === 'feedback' ? 'active' : ''}`}
+                onClick={() => setType('feedback')}
+              >
+                Sugestão
               </button>
             </div>
             <textarea
