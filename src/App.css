@@ -265,7 +265,7 @@
   display: flex;
   justify-content: space-between;
   gap: 1.5rem;
-  font-size: 0.78rem;
+  font-size: 0.84rem;
 }
 .header-menu-timer-label {
   color: var(--muted);
@@ -311,7 +311,7 @@
   gap: 0.2rem;
 }
 .timer-drawer-label {
-  font-size: 0.68rem;
+  font-size: 0.76rem;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.08em;
@@ -429,7 +429,7 @@
   background: transparent;
   color: var(--text-soft);
   cursor: pointer;
-  font-size: 0.7rem;
+  font-size: 0.84rem;
   line-height: 1;
   transition: color 0.15s;
   -webkit-tap-highlight-color: transparent;
@@ -444,7 +444,7 @@
   height: 2.4rem;
   border-radius: 50%;
   padding: 0 0.1rem;
-  font-size: 0.58rem;
+  font-size: 0.76rem;
   font-weight: 700;
   font-variant-numeric: tabular-nums;
   line-height: 1.1;
@@ -679,7 +679,7 @@
 
 .notebook-hint {
   margin: 0 1rem 0.65rem;
-  font-size: 0.75rem;
+  font-size: 0.82rem;
   line-height: 1.45;
   color: var(--text-soft);
 }
@@ -776,7 +776,7 @@
 .badge {
   background: var(--badge-bg);
   color: #fff;
-  font-size: 0.7rem;
+  font-size: 0.84rem;
   font-weight: 600;
   padding: 0.3rem 0.75rem;
   border-radius: 999px;
@@ -961,14 +961,14 @@
 
 .question-context-title {
   text-align: center;
-  font-size: 0.78rem;
+  font-size: 0.84rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.06em;
 }
 
 .question-context-chevron {
-  font-size: 0.6rem;
+  font-size: 0.84rem;
   opacity: 0.7;
   text-align: center;
 }
@@ -1007,7 +1007,7 @@
 
 .ctx-reference {
   margin: 0;
-  font-size: 0.78rem;
+  font-size: 0.84rem;
   color: var(--text-soft);
   text-align: right;
   border-top: 1px solid var(--border);
@@ -1205,7 +1205,7 @@
 .tag {
   background: var(--tag-bg);
   color: var(--tag-color);
-  font-size: 0.72rem;
+  font-size: 0.8rem;
   padding: 0.25rem 0.65rem;
   border-radius: 999px;
   text-transform: lowercase;
@@ -1301,7 +1301,7 @@
   border-radius: 4px;
   background: transparent;
   color: var(--text-soft);
-  font-size: 0.65rem;
+  font-size: 0.74rem;
   cursor: pointer;
   transition: background 0.15s, border-color 0.15s, color 0.15s;
   -webkit-tap-highlight-color: transparent;
@@ -1378,7 +1378,7 @@
   .question-rail-btn {
     width: 2.55rem;
     height: 2.55rem;
-    font-size: 0.62rem;
+    font-size: 0.8rem;
   }
 }
 
@@ -1405,7 +1405,7 @@
   .question-rail-btn {
     width: 2.15rem;
     height: 2.15rem;
-    font-size: 0.5rem;
+    font-size: 0.8rem;
   }
 }
 
@@ -1485,7 +1485,7 @@
 }
 
 .home-greeting {
-  font-size: 0.75rem;
+  font-size: 0.82rem;
   font-weight: 600;
   color: var(--text-soft);
   background: var(--surface);
@@ -1508,7 +1508,7 @@
 }
 
 .home-prof-card-label {
-  font-size: 0.75rem;
+  font-size: 0.82rem;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.06em;
@@ -1602,7 +1602,7 @@
 }
 
 .home-filter-label {
-  font-size: 0.68rem;
+  font-size: 0.76rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.07em;
@@ -1670,7 +1670,7 @@
 }
 
 .home-year-check {
-  font-size: 0.7rem;
+  font-size: 0.84rem;
   color: var(--accent);
   line-height: 1;
 }
@@ -1727,7 +1727,7 @@
 }
 
 .home-year-star {
-  font-size: 0.7rem;
+  font-size: 0.84rem;
   line-height: 1;
 }
 
@@ -1766,7 +1766,7 @@
 }
 
 .home-day-result {
-  font-size: 0.7rem;
+  font-size: 0.84rem;
   font-weight: 500;
   color: var(--accent);
   line-height: 1;
@@ -2010,7 +2010,7 @@
   border: 1.5px solid var(--border);
   background: transparent;
   color: var(--text);
-  font-size: 0.78rem;
+  font-size: 0.84rem;
   font-weight: 600;
   cursor: pointer;
   transition: background 0.15s, color 0.15s;
@@ -2116,7 +2116,7 @@
 }
 
 .home-area-day-label {
-  font-size: 0.68rem;
+  font-size: 0.76rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.07em;
@@ -2194,7 +2194,7 @@
 }
 
 .header-timer-label {
-  font-size: 0.6rem;
+  font-size: 0.84rem;
   font-weight: 600;
   color: var(--text-soft);
   text-transform: uppercase;
@@ -2271,7 +2271,7 @@
 }
 
 .summary-stat-label {
-  font-size: 0.68rem;
+  font-size: 0.76rem;
   font-weight: 600;
   color: var(--text-soft);
   text-transform: uppercase;
@@ -2361,7 +2361,7 @@
 .summary-table th {
   padding: 0.75rem 1rem;
   text-align: left;
-  font-size: 0.7rem;
+  font-size: 0.84rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.05em;
@@ -2493,7 +2493,7 @@
 
 /* ── Section titles ── */
 .summary-section-title {
-  font-size: 0.72rem;
+  font-size: 0.8rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.07em;
@@ -2572,7 +2572,7 @@
 .summary-subject-meta {
   display: flex;
   justify-content: space-between;
-  font-size: 0.72rem;
+  font-size: 0.8rem;
   color: var(--text-soft);
   gap: 0.5rem;
 }
@@ -2623,7 +2623,7 @@
 .diag-group--weak    .diag-group-icon { color: var(--rail-bad); }
 
 .diag-group-label {
-  font-size: 0.78rem;
+  font-size: 0.84rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.06em;
@@ -2660,7 +2660,7 @@
 }
 
 .diag-chip-meta {
-  font-size: 0.68rem;
+  font-size: 0.76rem;
   color: var(--text-soft);
   line-height: 1;
 }
@@ -2689,7 +2689,7 @@
     gap: 0.5rem;
   }
   .header-timer-value {
-    font-size: 0.78rem;
+    font-size: 0.84rem;
   }
   .summary-stat {
     min-width: 80px;
@@ -2986,7 +2986,7 @@
   font-family: sans-serif;
 }
 .print-question-meta {
-  font-size: 0.75rem;
+  font-size: 0.82rem;
   color: #888;
 }
 .print-stem {
@@ -3282,7 +3282,7 @@
   display: inline-block;
   padding: 0.15rem 0.5rem;
   border-radius: 12px;
-  font-size: 0.75rem;
+  font-size: 0.82rem;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.03em;
@@ -3318,7 +3318,7 @@
   display: inline-block;
   padding: 0.15rem 0.5rem;
   border-radius: 999px;
-  font-size: 0.75rem;
+  font-size: 0.82rem;
   font-weight: 600;
   margin-right: 0.4rem;
 }
@@ -3331,7 +3331,7 @@
   border: 1.5px solid #94a3b8;
   background: transparent;
   color: inherit;
-  font-size: 0.75rem;
+  font-size: 0.82rem;
   cursor: pointer;
   transition: background 0.15s, color 0.15s;
 }
@@ -3348,7 +3348,7 @@
   border: 1.5px solid #ef4444;
   background: transparent;
   color: #ef4444;
-  font-size: 0.78rem;
+  font-size: 0.84rem;
   font-weight: 600;
   cursor: pointer;
   white-space: nowrap;
@@ -3535,7 +3535,7 @@
 }
 
 .summary-tri-label {
-  font-size: 0.72rem;
+  font-size: 0.8rem;
   text-align: center;
   color: var(--fg-muted, #6b7280);
   line-height: 1.2;
