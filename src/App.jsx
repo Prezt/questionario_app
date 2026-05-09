@@ -9,6 +9,7 @@ import {
   Suspense,
 } from 'react'
 import './App.css'
+import FormatToolbar from './FormatToolbar.jsx'
 
 function playFeedbackSound(correct, muted = false) {
   if (muted) return
@@ -339,8 +340,9 @@ function legacyPlainToHtml(raw) {
 }
 
 export default function App() {
-  if (window.location.pathname === '/review') return <Suspense fallback={null}><ReviewPage /></Suspense>
-  if (window.location.pathname === '/editor') return <Suspense fallback={null}><QuestionEditor /></Suspense>
+  if (window.location.pathname === '/review') return <><FormatToolbar /><Suspense fallback={null}><ReviewPage /></Suspense></>
+  if (window.location.pathname === '/editor') return <><FormatToolbar /><Suspense fallback={null}><QuestionEditor /></Suspense></>
+
 
   const [user, setUser] = useState(null)
   // All questions loaded from manifest
