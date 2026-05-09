@@ -21,7 +21,8 @@
 .rp-shell {
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  height: calc(100vh - 37px);
+  margin-top: 37px;
   overflow: hidden;
   font-family: system-ui, sans-serif;
   font-size: 14px;
@@ -284,6 +285,17 @@
   color: #dc2626;
   border: 1px solid #fca5a5;
 }
+.rp-preview-header {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 12px;
+  background: #f1f5f9;
+  border-top: 1px solid #e2e8f0;
+  flex-shrink: 0;
+  cursor: pointer;
+}
+.rp-preview-label { font-size: 11px; color: #475569; font-weight: 600; text-transform: uppercase; letter-spacing: .04em; }
 .rp-q-body { flex: 1; overflow-y: auto; padding: 12px; display: flex; flex-direction: column; gap: 10px; }
 /* Context passages */
 .rp-ctx-list { display: flex; flex-direction: column; gap: 8px; }
@@ -346,9 +358,11 @@
 
 /* ── Action panel ─────────────────────────────────────────────────────────── */
 .rp-action-panel {
-  border: 1px solid #e2e8f0;
-  border-radius: 6px;
+  border-bottom: 1px solid #e2e8f0;
   background: #fffbeb;
+  display: flex;
+  flex-direction: column;
+  max-height: 50vh;
   overflow: hidden;
   flex-shrink: 0;
 }
@@ -368,7 +382,7 @@
 .rp-tab:hover:not(.rp-tab--active) { background: #f1f5f9; }
 
 /* Flag panel */
-.rp-flag-panel { padding: 10px 12px; display: flex; flex-direction: column; gap: 8px; }
+.rp-flag-panel { padding: 10px 12px; display: flex; flex-direction: column; gap: 8px; overflow-y: auto; flex: 1; }
 .rp-checkboxes { display: flex; flex-wrap: wrap; gap: 6px; }
 .rp-checkbox-label {
   display: flex;
@@ -408,7 +422,7 @@
 .rp-btn--ok { background: #22c55e; color: white; }
 
 /* Edit panel */
-.rp-edit-panel { padding: 10px 12px; }
+.rp-edit-panel { padding: 10px 12px; overflow-y: auto; flex: 1; }
 .rp-btn--edit-start { background: #3b82f6; color: white; }
 .rp-edit-form { display: flex; flex-direction: column; gap: 8px; }
 /* Context linker */
