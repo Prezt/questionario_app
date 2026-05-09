@@ -21,8 +21,7 @@
 .rp-shell {
   display: flex;
   flex-direction: column;
-  height: calc(100vh - 37px);
-  margin-top: 37px;
+  height: 100vh;
   overflow: hidden;
   font-family: system-ui, sans-serif;
   font-size: 14px;

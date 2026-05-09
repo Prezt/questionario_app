@@ -2,7 +2,7 @@
 .qe-shell {
   max-width: 720px;
   margin: 0 auto;
-  padding: calc(1.5rem + 37px) 1rem 4rem;
+  padding: 1.5rem 1rem 4rem;
   font-family: inherit;
   color: var(--text);
 }

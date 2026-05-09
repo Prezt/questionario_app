@@ -1,11 +1,10 @@
 /* src/FormatToolbar.css */
 .fmt-toolbar {
-  position: fixed;
+  position: sticky;
   top: 0;
-  left: 0;
-  right: 0;
-  z-index: 1000;
+  z-index: 100;
   height: 36px;
+  margin-bottom: 8px;
   display: flex;
   align-items: center;
   gap: 2px;

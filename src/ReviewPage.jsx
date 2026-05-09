@@ -1,6 +1,7 @@
 // src/ReviewPage.jsx
 import { useState, useEffect, useCallback, useMemo, useRef } from 'react'
 import './ReviewPage.css'
+import FormatToolbar from './FormatToolbar.jsx'
 
 const AREA_TO_DAY = {
   linguagens: 'd1',
@@ -414,6 +415,8 @@ export default function ReviewPage() {
   const activeItemRef = useRef(null)
   const [collapsedCtx, setCollapsedCtx] = useState({})
   const [sidebarFilter, setSidebarFilter] = useState('not-ok') // 'all' | 'not-ok'
+  const [previewCollapsed, setPreviewCollapsed] = useState(false)
+  const [pdfCollapsed, setPdfCollapsed] = useState(false)
 
   // ── Session timer ──────────────────────────────────────────────────────────
   const [timerState, setTimerState] = useState('idle') // 'idle' | 'running' | 'paused' | 'finished'
@@ -984,14 +987,15 @@ export default function ReviewPage() {
       {/* MAIN PANELS */}
       <div className="rp-main">
         {/* LEFT: PDF PAGE */}
-        <div className="rp-left">
-          <div className="rp-pdf-header">
+        <div className="rp-left" style={pdfCollapsed ? {width: 'auto', flexShrink: 0} : {}}>
+          <div className="rp-pdf-header" style={{cursor:'pointer'}} onClick={e => { if (e.target.closest('.rp-pdf-nav-btn')) return; setPdfCollapsed(v => !v) }}>
+            <span style={{fontSize: 11, color: '#94a3b8', flexShrink: 0}}>{pdfCollapsed ? '▶' : '▼'}</span>
             <span className="rp-pdf-label">
               {pdfPageSrc
                 ? `page-${AREA_TO_DAY[currentQuestion.area] ?? 'd1'}-${currentQuestion.year}-${String(currentPdfPage).padStart(2, '0')}.png`
                 : 'No page available'}
             </span>
-            <div className="rp-pdf-nav">
+            {!pdfCollapsed && <div className="rp-pdf-nav">
               <button
                 className="rp-pdf-nav-btn"
                 onClick={() => setCurrentPdfPage(p => Math.max(1, p - 1))}
@@ -1003,9 +1007,9 @@ export default function ReviewPage() {
                 onClick={() => setCurrentPdfPage(p => Math.min(totalPdfPages, p + 1))}
                 disabled={currentPdfPage >= totalPdfPages}
               >▶</button>
-            </div>
+            </div>}
           </div>
-          <div className="rp-pdf-body">
+          {!pdfCollapsed && <div className="rp-pdf-body">
             {pdfPageSrc ? (
               <img
                 key={pdfPageSrc}
@@ -1017,7 +1021,7 @@ export default function ReviewPage() {
             ) : (
               <div className="rp-pdf-missing">No PDF page available for this question</div>
             )}
-          </div>
+          </div>}
         </div>
 
         {/* RIGHT: QUESTION */}
@@ -1042,93 +1046,8 @@ export default function ReviewPage() {
                 ))}
               </div>
 
-              <div className="rp-q-body">
-                {currentContextIds.length > 0 && (
-                  <div className="rp-ctx-list">
-                    {currentContextIds.map(cid => {
-                      const c = contexts[cid]
-                      if (!c) return <div key={cid} className="rp-ctx rp-ctx--missing">Context not found: {cid}</div>
-                      const isCollapsed = collapsedCtx[cid]
-                      return (
-                        <div key={cid} className="rp-ctx">
-                          <div className="rp-ctx-header">
-                            <button
-                              className="rp-ctx-collapse-btn"
-                              title={isCollapsed ? 'Expand' : 'Collapse'}
-                              onClick={() => setCollapsedCtx(s => ({ ...s, [cid]: !s[cid] }))}
-                            >{isCollapsed ? '▶' : '▼'}</button>
-                            {c.title && <RichText text={c.title} className="rp-ctx-title" />}
-                            {!c.title && <span className="rp-ctx-title" style={{color:'#94a3b8'}}>{cid}</span>}
-                            <button
-                              className="rp-ctx-edit-btn"
-                              title="Edit this context"
-                              onClick={() => {
-                                setActiveTab('edit')
-                                setDraft(prev => {
-                                  // Build base draft if not yet initialized
-                                  const base = prev ?? (() => {
-                                    const linkedIds = Array.isArray(currentQuestion.contextIds)
-                                      ? [...currentQuestion.contextIds]
-                                      : currentQuestion.contextId ? [currentQuestion.contextId] : []
-                                    const ctxDrafts = {}
-                                    for (const id of linkedIds) {
-                                      const cx = contexts[id]
-                                      if (cx) ctxDrafts[id] = { title: cx.title ?? '', subtitle: cx.subtitle ?? '', text: cx.text ?? '', reference: cx.reference ?? '', images: [...(cx.images ?? [])] }
-                                    }
-                                    return { text: currentQuestion.text ?? '', alternatives: { ...currentQuestion.alternatives }, answer: currentQuestion.answer ?? 'a', linkedContextIds: linkedIds, contextDrafts: ctxDrafts, images: [...(currentQuestion.images ?? [])] }
-                                  })()
-                                  // Ensure this context is in contextDrafts
-                                  if (base.contextDrafts?.[cid]) return base
-                                  return { ...base, contextDrafts: { ...base.contextDrafts, [cid]: { title: c.title ?? '', subtitle: c.subtitle ?? '', text: c.text ?? '', reference: c.reference ?? '', images: [...(c.images ?? [])] } } }
-                                })
-                                setSaveError(null)
-                              }}
-                            >✏</button>
-                          </div>
-                          {!isCollapsed && <>
-                            {c.subtitle && <RichText text={c.subtitle} className="rp-ctx-subtitle" />}
-                            {c.text && <RichText text={c.text} className="rp-ctx-text" />}
-                            {c.images?.length > 0 && (
-                              <div className="rp-q-images">
-                                {c.images.map(img => <img key={img} src={`/${img}`} alt="" className="rp-q-img" />)}
-                              </div>
-                            )}
-                            {c.reference && <RichText text={c.reference} className="rp-ctx-reference" />}
-                          </>}
-                        </div>
-                      )
-                    })}
-                  </div>
-                )}
-                <RichText text={currentQuestion.text} className="rp-q-text" />
-
-                {currentQuestion.images?.length > 0 && (
-                  <div className="rp-q-images">
-                    {currentQuestion.images.map(img => (
-                      <img key={img} src={`/${img}`} alt="" className="rp-q-img" />
-                    ))}
-                  </div>
-                )}
-
-                <div className="rp-q-alts">
-                  {['a','b','c','d','e'].map(letter => {
-                    const val = currentQuestion.alternatives?.[letter] ?? ''
-                    const isEmpty = !val.trim()
-                    const isCorrect = currentQuestion.answer === letter
-                    return (
-                      <div
-                        key={letter}
-                        className={`rp-alt ${isEmpty ? 'rp-alt--empty' : ''} ${isCorrect ? 'rp-alt--correct' : ''}`}
-                      >
-                        <span className="rp-alt-letter">{letter.toUpperCase()})</span>
-                        {isEmpty ? <span className="rp-alt-text">[empty]</span> : <RichText text={val} className="rp-alt-text" />}
-                      </div>
-                    )
-                  })}
-                </div>
-
                 {/* ACTION PANEL */}
-                <div className="rp-action-panel">
+                <div className="rp-action-panel" style={previewCollapsed ? {flex: 1, maxHeight: 'none'} : {}}>
                   <div className="rp-tabs">
                     <button
                       className={`rp-tab ${activeTab === 'flag' ? 'rp-tab--active' : ''}`}
@@ -1179,6 +1098,7 @@ export default function ReviewPage() {
 
                   {activeTab === 'edit' && (
                     <div className="rp-edit-panel">
+                      <FormatToolbar />
                       {!draft ? (
                         <button className="rp-btn rp-btn--edit-start" onClick={initDraft}>
                           ✏️ Start editing Q{currentQuestion?.number}
@@ -1549,7 +1469,97 @@ export default function ReviewPage() {
                     </div>
                   )}
                 </div>
+
+              <div className="rp-preview-header" onClick={() => setPreviewCollapsed(v => !v)}>
+                <span style={{fontSize: 11, color: '#94a3b8'}}>{previewCollapsed ? '▶' : '▼'}</span>
+                <span className="rp-preview-label">Preview</span>
               </div>
+              {!previewCollapsed && <div className="rp-q-body">
+                {currentContextIds.length > 0 && (
+                  <div className="rp-ctx-list">
+                    {currentContextIds.map(cid => {
+                      const c = contexts[cid]
+                      if (!c) return <div key={cid} className="rp-ctx rp-ctx--missing">Context not found: {cid}</div>
+                      const isCollapsed = collapsedCtx[cid]
+                      return (
+                        <div key={cid} className="rp-ctx">
+                          <div className="rp-ctx-header">
+                            <button
+                              className="rp-ctx-collapse-btn"
+                              title={isCollapsed ? 'Expand' : 'Collapse'}
+                              onClick={() => setCollapsedCtx(s => ({ ...s, [cid]: !s[cid] }))}
+                            >{isCollapsed ? '▶' : '▼'}</button>
+                            {c.title && <RichText text={c.title} className="rp-ctx-title" />}
+                            {!c.title && <span className="rp-ctx-title" style={{color:'#94a3b8'}}>{cid}</span>}
+                            <button
+                              className="rp-ctx-edit-btn"
+                              title="Edit this context"
+                              onClick={() => {
+                                setActiveTab('edit')
+                                setDraft(prev => {
+                                  // Build base draft if not yet initialized
+                                  const base = prev ?? (() => {
+                                    const linkedIds = Array.isArray(currentQuestion.contextIds)
+                                      ? [...currentQuestion.contextIds]
+                                      : currentQuestion.contextId ? [currentQuestion.contextId] : []
+                                    const ctxDrafts = {}
+                                    for (const id of linkedIds) {
+                                      const cx = contexts[id]
+                                      if (cx) ctxDrafts[id] = { title: cx.title ?? '', subtitle: cx.subtitle ?? '', text: cx.text ?? '', reference: cx.reference ?? '', images: [...(cx.images ?? [])] }
+                                    }
+                                    return { text: currentQuestion.text ?? '', alternatives: { ...currentQuestion.alternatives }, answer: currentQuestion.answer ?? 'a', linkedContextIds: linkedIds, contextDrafts: ctxDrafts, images: [...(currentQuestion.images ?? [])] }
+                                  })()
+                                  // Ensure this context is in contextDrafts
+                                  if (base.contextDrafts?.[cid]) return base
+                                  return { ...base, contextDrafts: { ...base.contextDrafts, [cid]: { title: c.title ?? '', subtitle: c.subtitle ?? '', text: c.text ?? '', reference: c.reference ?? '', images: [...(c.images ?? [])] } } }
+                                })
+                                setSaveError(null)
+                              }}
+                            >✏</button>
+                          </div>
+                          {!isCollapsed && <>
+                            {c.subtitle && <RichText text={c.subtitle} className="rp-ctx-subtitle" />}
+                            {c.text && <RichText text={c.text} className="rp-ctx-text" />}
+                            {c.images?.length > 0 && (
+                              <div className="rp-q-images">
+                                {c.images.map(img => <img key={img} src={`/${img}`} alt="" className="rp-q-img" />)}
+                              </div>
+                            )}
+                            {c.reference && <RichText text={c.reference} className="rp-ctx-reference" />}
+                          </>}
+                        </div>
+                      )
+                    })}
+                  </div>
+                )}
+                <RichText text={currentQuestion.text} className="rp-q-text" />
+
+                {currentQuestion.images?.length > 0 && (
+                  <div className="rp-q-images">
+                    {currentQuestion.images.map(img => (
+                      <img key={img} src={`/${img}`} alt="" className="rp-q-img" />
+                    ))}
+                  </div>
+                )}
+
+                <div className="rp-q-alts">
+                  {['a','b','c','d','e'].map(letter => {
+                    const val = currentQuestion.alternatives?.[letter] ?? ''
+                    const isEmpty = !val.trim()
+                    const isCorrect = currentQuestion.answer === letter
+                    return (
+                      <div
+                        key={letter}
+                        className={`rp-alt ${isEmpty ? 'rp-alt--empty' : ''} ${isCorrect ? 'rp-alt--correct' : ''}`}
+                      >
+                        <span className="rp-alt-letter">{letter.toUpperCase()})</span>
+                        {isEmpty ? <span className="rp-alt-text">[empty]</span> : <RichText text={val} className="rp-alt-text" />}
+                      </div>
+                    )
+                  })}
+                </div>
+
+              </div>}
             </>
           )}
         </div>
