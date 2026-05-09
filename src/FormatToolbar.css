@@ -1,0 +1,61 @@
+/* src/FormatToolbar.css */
+.fmt-toolbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  padding: 0 10px;
+  background: var(--surface, #f8f8fa);
+  border-bottom: 1px solid var(--border, rgba(0,0,0,0.07));
+  box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+}
+
+.fmt-divider {
+  width: 1px;
+  height: 20px;
+  background: var(--border, rgba(0,0,0,0.12));
+  margin: 0 4px;
+}
+
+.fmt-btn {
+  height: 26px;
+  min-width: 26px;
+  padding: 0 6px;
+  border: none;
+  border-radius: 5px;
+  background: transparent;
+  color: var(--text, #222);
+  font-size: 13px;
+  font-family: inherit;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.12s;
+  user-select: none;
+}
+
+.fmt-btn:hover:not(:disabled) {
+  background: var(--alt-bg, #e8e8ec);
+}
+
+.fmt-btn:disabled {
+  opacity: 0.35;
+  cursor: default;
+}
+
+.fmt-btn--bold { font-weight: 700; }
+.fmt-btn--italic { font-style: italic; }
+
+.fmt-supsub {
+  display: inline-flex;
+  flex-direction: column;
+  font-size: 0.6em;
+  line-height: 1.1;
+  vertical-align: middle;
+}
