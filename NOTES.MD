@@ -43,10 +43,10 @@ REVISAO:
  [x] ENEM 2025
     [x] linguagens
     [x] humanas
-    [] ciencias
-    [] matematica
- [] ENEM 2024
-    [] linguagens
+    [x] ciencias
+    [x] matematica
+ [-] ENEM 2024
+    [-] linguagens
     [] humanas
     [] ciencias
     [] matematica

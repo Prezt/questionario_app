@@ -1,7 +1,7 @@
 [
   {
     "number": 1,
-    "text": "[Imagem: q1_quotes.png]\n\nA relação entre as citações atribuídas ao físico Albert Einstein e ao cantor e compositor Bob Marley reside na crença de que é necessário",
+    "text": "[Imagem: Quotes]\n\nA relação entre as citações atribuídas ao físico Albert Einstein e ao cantor e compositor Bob Marley reside na crença de que é necessário",
     "alternatives": {
       "a": "dar oportunidade a pessoas que parecem necessitadas.",
       "b": "identificar contextos que podem representar perigo.",
@@ -26,7 +26,7 @@
   },
   {
     "number": 2,
-    "text": "Holy War\n\nOh, so we can hate each other and fear each other\nWe can build these walls between each other\nBaby, blow by blow and brick by brick\nKeep yourself locked in, yourself locked in\n[…]\nOh, maybe we should love somebody\nOh, maybe we could care a little more\nSo maybe we should love somebody\nInstead of polishing the bombs of holy war\n\nKEYS, A. Here. Estados Unidos: RCA Records, 2016.\n\nNessa letra de canção, que aborda um contexto de ódio e intolerância, o marcador \"instead of\" introduz a ideia de",
+    "text": "Nessa letra de canção, que aborda um contexto de ódio e intolerância, o marcador \"instead of\" introduz a ideia de",
     "alternatives": {
       "a": "mudança de comportamento.",
       "b": "panorama de conflitos.",
@@ -45,11 +45,14 @@
     "area": "linguagens",
     "language": "en",
     "answer": "a",
-    "difficulty": 3
+    "difficulty": 3,
+    "contextIds": [
+      "enem_2024_linguagens_q2_ctx1"
+    ]
   },
   {
     "number": 3,
-    "text": "[Imagem: q3_70percent_deleted.png]\n\nDisponível em: www.hongkiat.com. Acesso em: 18 ago. 2017 (adaptado).\n\nO texto estabelece uma relação entre elementos da natureza e comandos de um programa de computador para",
+    "text": "[Imagem: 70% deleted]\n\nDisponível em: www.hongkiat.com. Acesso em: 18 ago. 2017 (adaptado).\n\nO texto estabelece uma relação entre elementos da natureza e comandos de um programa de computador para",
     "alternatives": {
       "a": "alertar as pessoas sobre a rápida destruição da natureza.",
       "b": "conscientizar os indivíduos sobre a passagem acelerada do tempo.",
@@ -74,7 +77,7 @@
   },
   {
     "number": 4,
-    "text": "I remember being caught speaking Spanish at recess [...] I remember being sent to the corner of the classroom for \"talking back\" to the Anglo teacher when all I was trying to do was tell her how to pronounce my name. \"If you want to be American, speak 'American'. If you don't like it, go back to Mexico where you belong\".\n\n\"I want you to speak English […]\", my mother would say, mortified that I spoke English like a Mexican. At Pan American University, I and all Chicano students were required to take two speech classes. Their purpose: to get rid of our accents.\n\nANZALDÚA, G. Borderlands/La Frontera: The New Mestiza. San Francisco: Aunt Lute Books, 1987.\n\nO problema abordado nesse texto sobre imigrantes residentes nos Estados Unidos diz respeito aos prejuízos gerados pelo(a)",
+    "text": "O problema abordado nesse texto sobre imigrantes residentes nos Estados Unidos diz respeito aos prejuízos gerados pelo(a)",
     "alternatives": {
       "a": "repúdio ao sotaque espanhol no uso do inglês.",
       "b": "resignação diante do apagamento da língua materna.",
@@ -92,11 +95,14 @@
     "area": "linguagens",
     "language": "en",
     "answer": "a",
-    "difficulty": 4
+    "difficulty": 4,
+    "contextIds": [
+      "enem_2024_linguagens_q4_ctx1"
+    ]
   },
   {
     "number": 5,
-    "text": "[Imagem: q5_carta_viking.png]\n\nDisponível em: www.clickhole.com. Acesso em: 26 out. 2015.\n\nA carta da editora Stephanie Allen-Nichols à escritora Alice Walker tem o propósito de",
+    "text": "[Imagem: carta viking]\n\nA carta da editora Stephanie Allen-Nichols à escritora Alice Walker tem o propósito de",
     "alternatives": {
       "a": "problematizar o enredo de sua obra.",
       "b": "acusar o recebimento de seu manuscrito.",
@@ -120,7 +126,7 @@
   },
   {
     "number": 1,
-    "text": "El vírus de la cancelación\n\n¿De qué se trata este fenómeno? Se entiende por cultura de la cancelación a una práctica popular que consiste en \"quitarle apoyo\" especialmente a figuras públicas y compañías multinacionales después de que hayan hecho o dicho algo considerado objetable u ofensivo. Cuando alguien o algo está cancelado se descarta, se deja de ver, se deja de escuchar, se desclasifica, se aísla, se abandona, se niega, se deja de consumir hasta que eventualmente puede o no desaparecer. Es una estrategia muy extendida en la historia de las luchas anticoloniales, antiespecistas, sexodisidentes, feministas y, especialmente en nuestro país, también llevadas adelante por el movimiento de derechos humanos. Entonces, ¿dónde radica el problema? Se puede observar positivamente que hay un proceso cada vez más agudo de socialización de herramientas críticas para desmantelar formas de desigualdad incrustadas en los lazos sociales. Pero la popularización irrestricta y el uso amplificado de esta herramienta por fuera de sus contextos colectivos de emergencia han despertado efectos adversos en una sociedad atravesada por las pantallas como formas de encierro-consumo, la representación online como única esfera pública y un imperativo felicista cuya moral nos obliga a trabajar ansiosamente por una vida sin desacuerdos, sin errores y sin dolor, a como dé lugar.\n\nDisponível em: www.revistaanfibia.com. Acesso em: 7 out. 2021 (adaptado).\n\nNa argumentação apresentada sobre cultura do cancelamento, esse texto objetiva",
+    "text": "Na argumentação apresentada sobre cultura do cancelamento, esse texto objetiva",
     "alternatives": {
       "a": "apresentar o conceito desse tipo de prática.",
       "b": "mostrar a contrariedade das mídias com relação a essa atitude.",
@@ -139,11 +145,14 @@
     "area": "linguagens",
     "language": "es",
     "answer": "c",
-    "difficulty": 5
+    "difficulty": 5,
+    "contextIds": [
+      "enem_2024_linguagens_q1_ctx1"
+    ]
   },
   {
     "number": 2,
-    "text": "\"Y si llueve, que llueva\" es un refrán gallego. Para mí cobró sentido una noche de febrero, cuando vivía en el barrio de la Macarena de Sevilla con dos buenos amigos, gallegos también.\n\nMi compañero y yo nos decidimos a salir ese sábado de noche, pese a que había estado lloviendo algunas horas a lo largo del día. La idea era una locura, al parecer. Le propusimos salir \"de parranda\" con nosotros a una amiga andaluza, ésta respondió que no, nos dijo que no iba a salir un día de lluvia. Flipamos. Comentamos entre nosotros que si los gallegos no saliésemos de casa cuando llueve, en invierno saldríamos poco. Habríamos inventado el confinamiento hace mucho.\n\nLos gallegos no dejamos de salir por la lluvia.\n\nDisponível em: https://politicahora.es. Acesso em: 26 out. 2021.\n\nO comportamento dos personagens narrado no texto destaca o(a)",
+    "text": "O comportamento dos personagens narrado no texto destaca o(a)",
     "alternatives": {
       "a": "abandono da própria identidade.",
       "b": "medo dos perigos durante a noite.",
@@ -161,11 +170,14 @@
     "area": "linguagens",
     "language": "es",
     "answer": "d",
-    "difficulty": 4
+    "difficulty": 4,
+    "contextIds": [
+      "enem_2024_linguagens_q2_ctx2"
+    ]
   },
   {
     "number": 3,
-    "text": "Celerina Patricia Sánchez Santiago comentó que su acercamiento a la poesía fue por la escuela, con libros de texto en español. Descubrió el gusto por las letras pero notó que no había textos en la suya, así que, contra muchos comentarios negativos que recibió en ese momento, decidió emprender el camino de la escritura pero en mixteco. \"Fue un proceso de años para notar que en mi lengua podía escribir poesía, porque me decían que mi lengua era tan pobre que no podía tener conceptos abstractos, era un reto pero yo sabía que sí era posible\".\n\nEste proceso no sólo le ayudó a vivir la poesía en mixteco, sino a \"ir descubriendo mi propia historia y la de mi pueblo\". Comentó que las lenguas habladas en el territorio nacional se encuentran en gran desventaja con el español. \"El reconocimiento a la diversidad no se ha hecho y ha sido tratada de borrar. Este es un país con 68 lenguas y somos monolingües del español. Antes había nulo de reconocimiento de ser bilingüe, negabas que hablabas tu lengua, hasta le decían dialecto. Era parte del proceso fatal que nos llevó a no reconocernos en un país multilingüe. ¿Si tenemos varias lenguas por qué no aprender?\".\n\nDisponível em: www.fapcom.edu.br. Acesso em: 20 nov. 2021.\n\nEm sua escrita poética, a poetisa mexicana Celerina Patricia Sánchez Santiago assume o desafio de",
+    "text": "Em sua escrita poética, a poetisa mexicana Celerina Patricia Sánchez Santiago assume o desafio de",
     "alternatives": {
       "a": "destacar a importância da literatura na formação escolar.",
       "b": "discutir a hegemonia da literatura escrita em espanhol.",
@@ -184,11 +196,14 @@
     "area": "linguagens",
     "language": "es",
     "answer": "d",
-    "difficulty": 5
+    "difficulty": 5,
+    "contextIds": [
+      "enem_2024_linguagens_q3_ctx1"
+    ]
   },
   {
     "number": 4,
-    "text": "Morir muy vivos\n\nNo todo es perder, es cierto. Si te esfuerzas mucho y bien, porque no viene de fábrica, ganas conocimiento del mundo y de ti mismo, empatía, sosiego y, en suma, algo que podríamos denominar sabiduría. Pero creo que para ello hay que mantenerse alerta y no darse nunca por vencido. Pero también es un tiempo para saldar cuentas. No creo que haya que dejarse llevar por el peso de los días como un leño podrido al que las olas arrojan finalmente a la playa. Uno siempre puede intentar sacarse alguna de las piedras que lleva a la espalda, decir las cosas que nunca se atrevió a decir, cumplir en la medida de lo posible los deseos arrumbados, rescatar algún sueño que quedó en la cuneta. No rendirse, esa es la clave. Y sobre todo decirse: ¿y por qué no? Porque la vejez no está reñida con la audacia. Debemos aspirar a morir muy vivos.\n\nMONTERO, R. Disponível em: https://elpais.com. Acesso em: 4 dez. 2017.\n\nNesse texto, ao utilizar a expressão \"morir muy vivos\", a escritora Rosa Montero evidencia a importância de se",
+    "text": "Nesse texto, ao utilizar a expressão \"morir muy vivos\", a escritora Rosa Montero evidencia a importância de se",
     "alternatives": {
       "a": "acumular sabedoria com o passar do tempo.",
       "b": "observar o impacto dos anos sobre o corpo.",
@@ -207,11 +222,14 @@
     "area": "linguagens",
     "language": "es",
     "answer": "d",
-    "difficulty": 5
+    "difficulty": 5,
+    "contextIds": [
+      "enem_2024_linguagens_q4_ctx2"
+    ]
   },
   {
     "number": 5,
-    "text": "Los últimos días del sitio de Tenochtitlán\n\nY todo esto pasó con nosotros.\nNosotros lo vimos,\nnosotros lo admiramos.\nCon esta lamentosa y triste suerte\nnos vimos angustiados.\nEn los caminos yacen dardos rotos,\nlos cabellos están esparcidos.\nDestechadas están las casas,\nenrojecidos tienen sus muros.\n\nGusanos pululan por calles y plazas,\ny en las paredes están salpicados los sesos.\nRojas están las aguas, están como teñidas,\ny cuando la bebimos,\nes como si bebiéramos agua de salitre.\n\nManuscrito anónimo de Tlatelolco, 1528. Disponível em: www.biblioweb.tic.unam.mx. Acesso em: 13 out. 2021 (fragmento).\n\nNesse poema, o eu lírico representa a voz de um sobrevivente asteca que testemunha a",
+    "text": "Nesse poema, o eu lírico representa a voz de um sobrevivente asteca que testemunha a",
     "alternatives": {
       "a": "destruição da capital do Império Asteca pelos colonizadores espanhóis.",
       "b": "degradação do meio ambiente no entorno da capital do Império Asteca.",
@@ -230,11 +248,14 @@
     "area": "linguagens",
     "language": "es",
     "answer": "a",
-    "difficulty": 5
+    "difficulty": 5,
+    "contextIds": [
+      "enem_2024_linguagens_q5_ctx1"
+    ]
   },
   {
     "number": 6,
-    "text": "Expressões e termos utilizados no Amazonas são retratados em livro e em camisetas\n\n\"Na linguagem, podemos nos ver da forma mais verdadeira: nossas crenças, nossos valores, nosso lugar no mundo\", afirmou o doutor em linguística e professor da Ufam em seu livro Amazonês: expressões e termos usados no Amazonas. Portanto, o amazonense, com todas as suas \"cunhantãs\" e \"curumins\", acaba por encontrar um lugar no mundo e formar uma unidade linguística, informalmente denominada de português \"caboco\", que muito se diferencia do português \"mineiro\", \"gaúcho\", \"carioca\" e de tantos outros espalhados pelo Brasil. O livro, que conta com cerca de 1100 expressões e termos típicos do falar amazonense, levou dez anos para ser construído. Para o autor, o principal objetivo da obra é registrar a linguagem.\n\nUm designer amazonense também acha o amazonês \"xibata\", tanto é que criou uma série de camisetas estampadas com o nome de Caboquês Ilustrado, que mistura o bom humor com as expressões típicas da região. A coleção conta com sete modelos já lançados, entre eles: Leseira Baré, Xibata no Balde e Até o Tucupi, e 43 ainda na fila de espera. Para o criador, as camisas têm como objetivo \"resgatar o orgulho do povo manauara, do povo do Norte\".\n\nDisponível em: https://g1.globo.com. Acesso em: 15 jan. 2024 (adaptado).\n\nA reportagem apresenta duas iniciativas: o livro Amazonês e as camisetas do Caboquês Ilustrado. Com temática em comum, essas iniciativas",
+    "text": "A reportagem apresenta duas iniciativas: o livro Amazonês e as camisetas do Caboquês Ilustrado. Com temática em comum, essas iniciativas",
     "alternatives": {
       "a": "recomendam produtos feitos por empreendedores da região Norte.",
       "b": "ressaltam diferenças entre o falar manauara e outros falares.",
@@ -251,11 +272,14 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "e",
-    "difficulty": 3
+    "difficulty": 3,
+    "contextIds": [
+      "enem_2024_linguagens_q6_ctx1"
+    ]
   },
   {
     "number": 7,
-    "text": "Conheça histórias de atletas paralímpicas que trocaram de modalidade durante a carreira esportiva\n\nJane Karla: a goiana de 45 anos teve poliomielite aos três anos, o que prejudicou seus movimentos das pernas. Em 2003, iniciou no tênis de mesa e conseguiu conquistar títulos nacionais e internacionais. Mas conheceu o tiro com arco e, em 2015, optou por se dedicar somente à nova modalidade. Em seu ano de estreia no tiro, já faturou a medalha de ouro nos Jogos Parapan-Americanos de Toronto 2015.\n\nElizabeth Gomes: a santista de 55 anos era jogadora de vôlei quando foi diagnosticada com esclerose múltipla em 1993. Ingressou no Movimento Paralímpico pelo basquete em cadeira de rodas até experimentar o atletismo. Chegou a praticar as duas modalidades simultaneamente até optar pelas provas de campo em 2010. No Campeonato Mundial de Atletismo, realizado em Dubai, em 2019, Beth se sagrou campeã do lançamento de disco e estabeleceu um novo recorde mundial da classe F52.\n\nSilvana Fernandes: a paraibana de 21 anos é natural de São Bento e nasceu com malformação no braço direito. Aos 15 anos, começou a praticar atletismo no lançamento de dardo. Em 2018, enquanto competia na regional Norte-Nordeste, foi convidada para conhecer o paratae kwon do. No ano seguinte, migrou para a modalidade e já faturou o ouro na categoria até 58 kg nos Jogos Parapan-Americanos de Lima 2019.\n\nDisponível em: https://cpb.org.br. Acesso em: 15 jan. 2024 (adaptado).\n\nEsse conjunto de minibiografias tem como propósito",
+    "text": "Esse conjunto de minibiografias tem como propósito",
     "alternatives": {
       "a": "descrever as rotinas de treinamento das atletas.",
       "b": "comparar os desempenhos de atletas de alto rendimento.",
@@ -272,11 +296,14 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "c",
-    "difficulty": 3
+    "difficulty": 3,
+    "contextIds": [
+      "enem_2024_linguagens_q7_ctx1"
+    ]
   },
   {
     "number": 8,
-    "text": "É fundamentalmente no Minho, norte de Portugal, que o cavaquinho aparece como instrumento tipicamente popular, ligado às formas essenciais da música característica dessa província. O cavaquinho minhoto tem escala rasa com o tampo, o que facilita a prática do \"rasqueado\". O cavaquinho chega ao Brasil diretamente de Portugal, e o modelo brasileiro é maior do que a sua versão portuguesa, com uma caixa de ressonância mais funda. Semelhante ao cavaquinho minhoto, o machete, ou machetinho madeirense, é um pequeno cordófono de corda dedilhada, que faz parte da grande e diversificada família das violas de mão portuguesas. O ukulele tem a sua origem no século XIX, tendo como ancestrais o braguinha (ou machete) e o rajão, instrumentos levados pelos madeirenses quando eles emigraram para o Havaí.\n\nOLIVEIRA, E. V. Cavaquinhos e família. Disponível em: https://casadaguitarra.pt. Acesso em: 18 nov. 2021 (adaptado).\n\nO conjunto dessas práticas musicais demonstra que os instrumentos mencionados no texto",
+    "text": "O conjunto dessas práticas musicais demonstra que os instrumentos mencionados no texto",
     "alternatives": {
       "a": "refletem a dependência da utilização de matéria-prima europeia.",
       "b": "adaptam suas características a cada cultura, assumindo nova identidade.",
@@ -292,7 +319,10 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "b",
-    "difficulty": 5
+    "difficulty": 5,
+    "contextIds": [
+      "enem_2024_linguagens_q8_ctx1"
+    ]
   },
   {
     "number": 9,

@@ -22,7 +22,7 @@
   },
   {
     "number": 137,
-    "text": "A reportagem de uma revista abordou o uso de redes sociais pelos internautas brasileiros. Alguns dos dados apurados pela reportagem estão apresentados no infográfico.\n\n[Infográfico - Perfil dos brasileiros nas redes sociais: 90% dos internautas brasileiros acessam redes sociais; Mulheres x Homens: 60% da quantidade de internautas brasileiros que acessam redes sociais são mulheres]\n\nSegundo os dados do infográfico, ao se escolher aleatoriamente um internauta brasileiro no período ao qual se refere a reportagem, a probabilidade de ele ser um homem que acessa alguma rede social é",
+    "text": "A reportagem de uma revista abordou o uso de redes sociais pelos internautas brasileiros. Alguns dos dados apurados pela reportagem estão apresentados no infográfico.\n\n[Infográfico]\n\nSegundo os dados do infográfico, ao se escolher aleatoriamente um internauta brasileiro no período ao qual se refere a reportagem, a probabilidade de ele ser um homem que acessa alguma rede social é",
     "alternatives": {
       "a": "30/90",
       "b": "36/100",
@@ -48,19 +48,19 @@
     "number": 138,
     "text": "Em um jogo de computador, um cubo se encontra inicialmente posicionado conforme indicado na figura.\n\n[Figura: cubo posicionado no espaço tridimensional com projeções nos planos coordenados xy, xz e yz]\n\nCada deslocamento efetuado por esse cubo se dá sempre em uma das direções definidas pelos três eixos coordenados. Ao se movimentar a partir da posição inicial, esse cubo se aproximou 3 unidades do plano yz, se afastou 5 unidades do plano xz e se aproximou 4 unidades do plano xy.\n\nA figura que apresenta as projeções ortogonais desse cubo sobre os três planos coordenados, após efetuar as movimentações descritas, é",
     "alternatives": {
-      "a": "[Projeções ortogonais - opção A]",
-      "b": "[Projeções ortogonais - opção B]",
-      "c": "[Projeções ortogonais - opção C]",
-      "d": "[Projeções ortogonais - opção D]",
-      "e": "[Projeções ortogonais - opção E]"
+      "a": "",
+      "b": "",
+      "c": "",
+      "d": "",
+      "e": ""
     },
     "images": [
-      "figuras/q138_2025_fig1.png",
-      "figuras/q138_2025_fig2.png",
-      "figuras/q138_2025_fig3.png",
-      "figuras/q138_2025_fig4.png",
-      "figuras/q138_2025_fig5.png",
-      "figuras/q138_2025_fig6.png"
+      "figuras/q138_2025_fig7.png",
+      "figuras/q138_2025_fig8.png",
+      "figuras/q138_2025_fig9.png",
+      "figuras/q138_2025_fig10.png",
+      "figuras/q138_2025_fig11.png",
+      "figuras/q138_2025_fig12.png"
     ],
     "tags": [
       "geometria analítica",
@@ -83,7 +83,7 @@
       "e": "60."
     },
     "images": [
-      "figuras/q139_2025_fig1.png"
+      "figuras/q139_2025_fig2.png"
     ],
     "tags": [
       "geometria plana",
@@ -159,7 +159,7 @@
   },
   {
     "number": 143,
-    "text": "Na cantina de uma escola, há cinco alimentos vendidos em pacotes com diferentes quantidades de porções.\n\nAs informações nutricionais contidas nos rótulos desses produtos estão indicadas nas imagens.\n\n[Figura: rótulos dos produtos com informações nutricionais]\n\nBatata chips: Pacote com 3 porções de 50 g - 170 mg de sódio por porção\nPalitos salgados: Pacote com 4 porções de 20 g - 501 mg de sódio por porção\nBiscoito multigrãos: Pacote com 8 porções de 25 g - 264 mg de sódio por porção\nBiscoito de polvilho: Pacote com 6 porções de 15 g - 175 mg de sódio por porção\nBiscoito de água e sal: Pacote com 5 porções de 40 g - 166 mg de sódio por porção\n\nUma estudante opta sempre pelo alimento com a menor quantidade total de sódio por pacote.\n\nQual desses produtos deve ser o escolhido pela estudante?",
+    "text": "Na cantina de uma escola, há cinco alimentos vendidos em pacotes com diferentes quantidades de porções.\n\nAs informações nutricionais contidas nos rótulos desses produtos estão indicadas nas imagens.\n\n[Figura: rótulos dos produtos com informações nutricionais]\nUma estudante opta sempre pelo alimento com a menor quantidade total de sódio por pacote.\n\nQual desses produtos deve ser o escolhido pela estudante?",
     "alternatives": {
       "a": "Batata chips.",
       "b": "Palitos salgados.",
@@ -168,7 +168,7 @@
       "e": "Biscoito de água e sal."
     },
     "images": [
-      "figuras/q143_2025_fig1.png"
+      "figuras/q143_2025_fig2.png"
     ],
     "tags": [
       "aritmética e números",
@@ -268,7 +268,7 @@
   },
   {
     "number": 148,
-    "text": "O controle remoto de um carrinho de brinquedo vem equipado com uma tela que ajusta automaticamente a escala empregada na exibição de cada deslocamento. A tela apresenta a imagem do deslocamento, a escala utilizada na geração dessa imagem e o comprimento desse deslocamento, em centímetro, em conformidade com a escala empregada. As figuras representam a tela do controle remoto exibindo os dados de cinco deslocamentos realizados por esse carrinho.\n\n[Figura: cinco telas de controle remoto]\nI: 9 cm, escala 1:100 (pontos A e B)\nII: 5 cm, escala 1:300 (pontos B e C)\nIII: 5 cm, escala 1:600 (pontos C e D)\nIV: 3 cm, escala 1:700 (pontos D e E)\nV: 2 cm, escala 1:1000 (pontos E e F)\n\nA opção que indica o deslocamento de maior comprimento realizado pelo carrinho de brinquedo é",
+    "text": "O controle remoto de um carrinho de brinquedo vem equipado com uma tela que ajusta automaticamente a escala empregada na exibição de cada deslocamento. A tela apresenta a imagem do deslocamento, a escala utilizada na geração dessa imagem e o comprimento desse deslocamento, em centímetro, em conformidade com a escala empregada. As figuras representam a tela do controle remoto exibindo os dados de cinco deslocamentos realizados por esse carrinho.\n\n[Figura: cinco telas de controle remoto]\n\nA opção que indica o deslocamento de maior comprimento realizado pelo carrinho de brinquedo é",
     "alternatives": {
       "a": "I.",
       "b": "II.",
@@ -277,7 +277,7 @@
       "e": "V."
     },
     "images": [
-      "figuras/q148_2025_fig1.png"
+      "figuras/q148_2025_fig2.png"
     ],
     "tags": [
       "aritmética e números"
@@ -290,7 +290,7 @@
   },
   {
     "number": 149,
-    "text": "A cúpula pentagonal giralongada é um poliedro de Johnson, cujas faces são polígonos regulares, mas que não é um poliedro de Platão, de Arquimedes, prisma ou antiprisma.\n\nAs figuras apresentam esse poliedro em duas posições e uma de suas planificações.\n\n[Figuras: cúpula pentagonal giralongada em duas vistas e sua planificação, composta por um pentágono (topo), triângulos, quadrados e um decágono (base)]\n\nQuantos vértices tem esse poliedro?",
+    "text": "A cúpula pentagonal giralongada é um poliedro de Johnson, cujas faces são polígonos regulares, mas que não é um poliedro de Platão, de Arquimedes, prisma ou antiprisma.\n\nAs figuras apresentam esse poliedro em duas posições e uma de suas planificações.\n\n[Figuras]\n\nQuantos vértices tem esse poliedro?",
     "alternatives": {
       "a": "21",
       "b": "25",
@@ -299,7 +299,7 @@
       "e": "110"
     },
     "images": [
-      "figuras/q149_2025_fig1.png"
+      "figuras/q149_2025_fig2.png"
     ],
     "tags": [
       "geometria espacial"
@@ -374,7 +374,7 @@
   },
   {
     "number": 153,
-    "text": "Em um jogo digital, há três personagens: um herói e dois vilões. A programação é feita de tal forma que o herói sempre será atacado pelo vilão que estiver mais próximo dele. Uma das maneiras de \"confundir\" os vilões é movimentar o herói por trajetórias que o mantenha equidistante dos vilões, gerando indefinição entre eles e, com isso, não sendo atacado.\n\nPara a programação de uma das etapas desse jogo, o programador considerou, no plano cartesiano, o quadrado STUV como a região de movimentação dos personagens, onde V e T representam as posições fixas dos vilões, e S, a posição inicial do herói, como apresentado na figura.\n\n[Figura: plano cartesiano com o quadrado STUV, onde S(6;2), V(8;6), T está à esquerda e U está acima]\n\nQual é a equação da trajetória em que o herói poderá se movimentar sem ser atacado?",
+    "text": "Em um jogo digital, há três personagens: um herói e dois vilões. A programação é feita de tal forma que o herói sempre será atacado pelo vilão que estiver mais próximo dele. Uma das maneiras de \"confundir\" os vilões é movimentar o herói por trajetórias que o mantenha equidistante dos vilões, gerando indefinição entre eles e, com isso, não sendo atacado.\n\nPara a programação de uma das etapas desse jogo, o programador considerou, no plano cartesiano, o quadrado STUV como a região de movimentação dos personagens, onde V e T representam as posições fixas dos vilões, e S, a posição inicial do herói, como apresentado na figura.\n\n[Figura]\n\nQual é a equação da trajetória em que o herói poderá se movimentar sem ser atacado?",
     "alternatives": {
       "a": "y = −3x + 20",
       "b": "y = −3x + 16",
@@ -383,7 +383,7 @@
       "e": "y = 3x − 16"
     },
     "images": [
-      "figuras/q153_2025_fig1.png"
+      "figuras/q153_2025_fig2.png"
     ],
     "tags": [
       "geometria analítica",
@@ -398,7 +398,7 @@
   },
   {
     "number": 154,
-    "text": "Uma livraria comercializa livros dos seguintes gêneros literários: ficção científica, autoajuda, romance e biografia. O gráfico apresenta o estoque dos livros que essa livraria tem, por gênero literário e por nacionalidade do autor, bem como a demanda por gênero literário, obtida por meio de uma enquete feita com seus clientes habituais.\n\n[Gráfico: Estoque e demanda por livros - mostra barras para Autor brasileiro e Autor estrangeiro, além de uma linha para Demanda, por gênero (Ficção, Autoajuda, Romance, Biografia). Valores aproximados: Ficção - 80 brasileiro, 120 estrangeiro, demanda 160; Autoajuda - 50 brasileiro, 80 estrangeiro, demanda 135; Romance - 40 brasileiro, 105 estrangeiro, demanda 140; Biografia - 45 brasileiro, 50 estrangeiro, demanda 80]\n\nO gerente da livraria fará a encomenda de novos exemplares somente do gênero cuja quantidade em estoque seja insuficiente para atender a demanda constatada pela enquete.\n\nO gênero de livro do qual o gerente deverá encomendar mais exemplares é",
+    "text": "Uma livraria comercializa livros dos seguintes gêneros literários: ficção científica, autoajuda, romance e biografia. O gráfico apresenta o estoque dos livros que essa livraria tem, por gênero literário e por nacionalidade do autor, bem como a demanda por gênero literário, obtida por meio de uma enquete feita com seus clientes habituais.\n\n[Gráfico: Estoque e demanda por livros]\n\nO gerente da livraria fará a encomenda de novos exemplares somente do gênero cuja quantidade em estoque seja insuficiente para atender a demanda constatada pela enquete.\n\nO gênero de livro do qual o gerente deverá encomendar mais exemplares é",
     "alternatives": {
       "a": "ficção, pois é o que apresenta maior demanda.",
       "b": "biografia, pois é o gênero que tem a menor demanda.",
@@ -529,7 +529,7 @@
   },
   {
     "number": 160,
-    "text": "Um recipiente tem um formato que faz com que, ao ser enchido de água com uma vazão constante, a distância D da lâmina de água ao tampo da mesa, em centímetro, aumente em relação ao tempo T, em minuto, de acordo com uma função do tipo\n\nD = k + tg[p(T + m)],\n\nsendo os parâmetros k, p e m números reais, para T variando entre 0 e 4 minutos, conforme ilustrado na figura, na qual estão apresentadas assíntotas verticais da função tangente utilizada na definição de D.\n\n[Figura: gráfico da função D em relação ao tempo T. O gráfico passa pelo ponto (2,5; 30) e tem assíntotas verticais em T = (5-2π)/2 e T = (5+2π)/2]\n\nA expressão algébrica que representa a relação entre D e T é",
+    "text": "Um recipiente tem um formato que faz com que, ao ser enchido de água com uma vazão constante, a distância D da lâmina de água ao tampo da mesa, em centímetro, aumente em relação ao tempo T, em minuto, de acordo com uma função do tipo\n\n<center>D = k + tg[p(T + m)],</center>\n\nsendo os parâmetros k, p e m números reais, para T variando entre 0 e 4 minutos, conforme ilustrado na figura, na qual estão apresentadas assíntotas verticais da função tangente utilizada na definição de D.\n\n[Figura: gráfico da função D em relação ao tempo T]\n\nA expressão algébrica que representa a relação entre D e T é",
     "alternatives": {
       "a": "D = 2,5 + tg[30(T − (5−2π)/2)]",
       "b": "D = 4 + tg[30(T + 5/2)]",
@@ -538,7 +538,7 @@
       "e": "D = 30 + tg[(1/2)(T − 5/2)]"
     },
     "images": [
-      "figuras/q160_2025_fig1.png"
+      "figuras/q160_2025_fig2.png"
     ],
     "tags": [
       "estatística",
@@ -553,7 +553,7 @@
   },
   {
     "number": 161,
-    "text": "Os quadrados em cinza na figura representam os quarteirões de uma parte do bairro onde moram João e seu amigo. O quadrado pequeno (A), pintado em preto e localizado no canto superior esquerdo de um quadrado maior, indica a casa do amigo de João. João também mora em uma casa de esquina, mas na extremidade nordeste de um quarteirão. Para chegar à casa de seu amigo, ao sair de casa, João deve caminhar pelo quarteirão onde mora na direção oeste, dobrar à direita, caminhar por três quarteirões na direção norte e dobrar à esquerda. A casa de seu amigo fica no segundo quarteirão a oeste.\n\n[Figura: grade de quarteirões com letras P, Q, R, S, T marcando posições específicas. A casa A está no canto superior esquerdo de um quarteirão, S à direita dela, R no canto inferior esquerdo, P no inferior centro-direita, T no inferior direito, Q no superior direito. Uma rosa dos ventos indica as direções N, S, L, O]\n\nO quarteirão onde se encontra a casa de João é representado pelo quadrado com a letra",
+    "text": "Os quadrados em cinza na figura representam os quarteirões de uma parte do bairro onde moram João e seu amigo. O quadrado pequeno (A), pintado em preto e localizado no canto superior esquerdo de um quadrado maior, indica a casa do amigo de João. João também mora em uma casa de esquina, mas na extremidade nordeste de um quarteirão. Para chegar à casa de seu amigo, ao sair de casa, João deve caminhar pelo quarteirão onde mora na direção oeste, dobrar à direita, caminhar por três quarteirões na direção norte e dobrar à esquerda. A casa de seu amigo fica no segundo quarteirão a oeste.\n\n[Figura: grade de quarteirões]\n\nO quarteirão onde se encontra a casa de João é representado pelo quadrado com a letra",
     "alternatives": {
       "a": "P.",
       "b": "Q.",
@@ -562,7 +562,7 @@
       "e": "T."
     },
     "images": [
-      "figuras/q161_2025_fig1.png"
+      "figuras/q161_2025_fig2.png"
     ],
     "tags": [
       "cartografia",
@@ -599,7 +599,7 @@
   },
   {
     "number": 163,
-    "text": "Em uma escola, todos os estudantes do ensino médio praticam uma das três modalidades esportivas oferecidas como atividade física, e cada um deles pratica somente uma dessas atividades. Os gráficos trazem alguns dados relativos aos quantitativos de estudantes que praticam essas modalidades esportivas nessa escola, apesar de algumas quantidades não terem sido informadas.\n\n[Gráfico de barras - Modalidades esportivas no ensino médio, por série: para 1ª, 2ª e 3ª séries, mostrando barras para Futebol, Vôlei e Basquete]\n[Gráfico de pizza - Quantidade de estudantes, por modalidade esportiva: Basquete 80, com fatias para Futebol, Vôlei e Basquete]\n\nQual é a quantidade de estudantes no ensino médio dessa escola?",
+    "text": "Em uma escola, todos os estudantes do ensino médio praticam uma das três modalidades esportivas oferecidas como atividade física, e cada um deles pratica somente uma dessas atividades. Os gráficos trazem alguns dados relativos aos quantitativos de estudantes que praticam essas modalidades esportivas nessa escola, apesar de algumas quantidades não terem sido informadas.\n\n[Gráfico de barras - Modalidades esportivas no ensino médio, por série]\n[Gráfico de pizza - Quantidade de estudantes, por modalidade esportiva]\n\nQual é a quantidade de estudantes no ensino médio dessa escola?",
     "alternatives": {
       "a": "720",
       "b": "360",
@@ -608,7 +608,8 @@
       "e": "240"
     },
     "images": [
-      "figuras/q163_2025_fig1.png"
+      "figuras/q163_2025_fig2.png",
+      "figuras/q163_2025_fig3.png"
     ],
     "tags": [
       "aritmética e números",
@@ -622,7 +623,7 @@
   },
   {
     "number": 164,
-    "text": "O dono de uma embarcação deve partir do ponto P e chegar ao ponto R por meio de dois deslocamentos lineares e navegando a uma velocidade constante. Essa viagem será feita durante a noite, e como ele dispõe somente de uma bússola e de um relógio, planejou sua rota da seguinte forma:\n\n1º – partir do ponto P na direção 110 e navegar por 4 horas, alcançando um ponto Q;\n2º – partir do ponto Q na direção 90 e navegar por 2 horas, alcançando o ponto de destino R.\n\nNo entanto, ao direcionar o barco para o primeiro deslocamento, o fez na direção 340, em vez de 110. Com isso, realizou os seguintes deslocamentos:\n\n1º – partiu do ponto P na direção 340 e navegou por 4 horas, alcançando um ponto S;\n2º – partiu do ponto S na direção 90 e navegou por 2 horas, alcançando o ponto T.\n\n[Figura: bússola com direções em graus e diagrama mostrando a rota planejada (P → Q → R) e a rota executada (P → S → T), com linha pontilhada indicando o trajeto necessário de T a R]\n\nO dono da embarcação só percebeu o equívoco ao chegar ao ponto T. Com isso, agora ele precisa definir a direção e o tempo de navegação que lhe permita, partindo do ponto T, chegar ao ponto de destino R por meio de uma rota retilínea.\n\nConsidere 0,64 como aproximação para cos 50°.\n\nA direção e o tempo aproximado de navegação que o dono da embarcação deve utilizar são, respectivamente,",
+    "text": "O dono de uma embarcação deve partir do ponto P e chegar ao ponto R por meio de dois deslocamentos lineares e navegando a uma velocidade constante. Essa viagem será feita durante a noite, e como ele dispõe somente de uma bússola e de um relógio, planejou sua rota da seguinte forma:\n\n1º – partir do ponto P na direção 110 e navegar por 4 horas, alcançando um ponto Q;\n2º – partir do ponto Q na direção 90 e navegar por 2 horas, alcançando o ponto de destino R.\n\nNo entanto, ao direcionar o barco para o primeiro deslocamento, o fez na direção 340, em vez de 110. Com isso, realizou os seguintes deslocamentos:\n\n1º – partiu do ponto P na direção 340 e navegou por 4 horas, alcançando um ponto S;\n2º – partiu do ponto S na direção 90 e navegou por 2 horas, alcançando o ponto T.\n\n[Figura: bússola com direções em graus e diagrama mostrando a rota planejada]\n\nO dono da embarcação só percebeu o equívoco ao chegar ao ponto T. Com isso, agora ele precisa definir a direção e o tempo de navegação que lhe permita, partindo do ponto T, chegar ao ponto de destino R por meio de uma rota retilínea.\n\nConsidere 0,64 como aproximação para cos 50°.\n\nA direção e o tempo aproximado de navegação que o dono da embarcação deve utilizar são, respectivamente,",
     "alternatives": {
       "a": "135 e 7 horas e 15 minutos.",
       "b": "45 e 7 horas e 15 minutos.",
@@ -631,7 +632,7 @@
       "e": "45 e 6 horas."
     },
     "images": [
-      "figuras/q164_2025_fig1.png"
+      "figuras/q164_2025_fig2.png"
     ],
     "tags": [
       "geometria plana",
@@ -665,7 +666,7 @@
   },
   {
     "number": 166,
-    "text": "Pace é um termo usado por um corredor para denominar o seu ritmo médio em uma corrida. Representa o tempo médio, em segundo, que esse corredor leva para percorrer 1 km.\n\nO esquema apresenta o tempo, em segundo, que um corredor levou para cruzar as marcas que definem os quatro primeiros trechos de 1 km, em uma corrida de 5 km, e o tempo gasto para percorrer cada trecho de 1 km.\n\n[Esquema: Tempo de corrida - 0s, 272s, 556s, 844s, 1132s nas marcas de 0, 1, 2, 3 e 4 km. Tempo gasto em cada trecho de 1 km: 272s (1º), 284s (2º), 288s (3º), 288s (4º)]\n\nO melhor pace que esse corredor alcançou em corridas de 5 km foi 281 s/km.\n\nPara que consiga repetir nessa corrida seu melhor pace em corridas de 5 km, seu tempo, no 5º trecho, deve ser quantos segundos menor do que o que ele gastou para percorrer o 4º trecho?",
+    "text": "Pace é um termo usado por um corredor para denominar o seu ritmo médio em uma corrida. Representa o tempo médio, em segundo, que esse corredor leva para percorrer 1 km.\n\nO esquema apresenta o tempo, em segundo, que um corredor levou para cruzar as marcas que definem os quatro primeiros trechos de 1 km, em uma corrida de 5 km, e o tempo gasto para percorrer cada trecho de 1 km.\n\n[Esquema]\n\nO melhor pace que esse corredor alcançou em corridas de 5 km foi 281 s/km.\n\nPara que consiga repetir nessa corrida seu melhor pace em corridas de 5 km, seu tempo, no 5º trecho, deve ser quantos segundos menor do que o que ele gastou para percorrer o 4º trecho?",
     "alternatives": {
       "a": "1",
       "b": "2",
@@ -674,7 +675,7 @@
       "e": "15"
     },
     "images": [
-      "figuras/q166_2025_fig1.png"
+      "figuras/q166_2025_fig2.png"
     ],
     "tags": [
       "aritmética e números",
@@ -689,7 +690,7 @@
   },
   {
     "number": 167,
-    "text": "Uma pessoa tem um carro bicombustível, que funciona a gás natural veicular (GNV) e a gasolina. O rendimento do carro, medido em km/m³, no caso do gás, ou medido em km/L, no caso da gasolina, depende, entre outros fatores, da velocidade, em km/h, em que o carro trafega. Essa relação está em conformidade com estes gráficos.\n\n[Gráfico 1: Rendimento (km/m³) x Velocidade (km/h) - curva do GNV que a 60 km/h está em torno de 10 km/m³, pico próximo a 100 km/h em 12]\n[Gráfico 2: Rendimento (km/L) x Velocidade (km/h) - curva da Gasolina que a 60 km/h está em torno de 8 km/L, pico próximo a 100 km/h em 11]\n\nDurante um feriado, essa pessoa realizou uma viagem de 240 km. Para obter uma estimativa de gasto de combustível, assuma que em todo o trajeto se manteve uma velocidade constante de 60 km/h. Considere que, durante metade do caminho, foi utilizado apenas GNV e, na outra metade, apenas gasolina. O que foi pago pelo metro cúbico de GNV e pelo litro de gasolina correspondeu, respectivamente, a R$ 2,00 e a R$ 3,00.\n\nQual foi a diferença, em real, entre os gastos totais com gasolina e com GNV?",
+    "text": "Uma pessoa tem um carro bicombustível, que funciona a gás natural veicular (GNV) e a gasolina. O rendimento do carro, medido em km/m³, no caso do gás, ou medido em km/L, no caso da gasolina, depende, entre outros fatores, da velocidade, em km/h, em que o carro trafega. Essa relação está em conformidade com estes gráficos.\n\n[Gráfico 1 e Gráfico 2:  Rendimento (km/m³) x Velocidade (km/h) e Rendimento (km/L) x Velocidade (km/h)]\n\nDurante um feriado, essa pessoa realizou uma viagem de 240 km. Para obter uma estimativa de gasto de combustível, assuma que em todo o trajeto se manteve uma velocidade constante de 60 km/h. Considere que, durante metade do caminho, foi utilizado apenas GNV e, na outra metade, apenas gasolina. O que foi pago pelo metro cúbico de GNV e pelo litro de gasolina correspondeu, respectivamente, a R$ 2,00 e a R$ 3,00.\n\nQual foi a diferença, em real, entre os gastos totais com gasolina e com GNV?",
     "alternatives": {
       "a": "4",
       "b": "8",
@@ -698,7 +699,7 @@
       "e": "30"
     },
     "images": [
-      "figuras/q167_2025_fig1.png"
+      "figuras/q167_2025_fig2.png"
     ],
     "tags": [
       "aritmética e números",
@@ -734,16 +735,20 @@
   },
   {
     "number": 169,
-    "text": "A produtividade de soja em uma área cultivada é a média da quantidade de sacas de 50 quilogramas que são produzidas por hectare. O quadro apresenta a área cultivada e a produtividade de soja em certa propriedade, ao longo de cinco safras, com períodos de um ano, de 2011 a 2016.\n\n| Safra | 11-12 | 12-13 | 13-14 | 14-15 | 15-16 |\n|-------|-------|-------|-------|-------|-------|\n| Área cultivada (hectare) | 200 | 220 | 250 | 250 | 200 |\n| Produtividade (sacas de 50 kg por hectare) | 40 | 30 | 45 | 45 | 50 |\n\n[Figura: gráficos das alternativas de produção de soja em toneladas, por safra]\n\nO gráfico de linhas que representa a produção de soja dessa propriedade, em tonelada, nessas cinco safras é",
+    "text": "A produtividade de soja em uma área cultivada é a média da quantidade de sacas de 50 quilogramas que são produzidas por hectare. O quadro apresenta a área cultivada e a produtividade de soja em certa propriedade, ao longo de cinco safras, com períodos de um ano, de 2011 a 2016.\n\n| Safra | 11-12 | 12-13 | 13-14 | 14-15 | 15-16 |\n|-------|-------|-------|-------|-------|-------|\n| Área cultivada (hectare) | 200 | 220 | 250 | 250 | 200 |\n| Produtividade (sacas de 50 kg por hectare) | 40 | 30 | 45 | 45 | 50 |\n\nO gráfico de linhas que representa a produção de soja dessa propriedade, em tonelada, nessas cinco safras é",
     "alternatives": {
-      "a": "[Gráfico A: produção em toneladas - 400, 330, 562,5, 562,5, 500]",
-      "b": "[Gráfico B: produção em toneladas - 40, 30, 45, 45, 50]",
-      "c": "[Gráfico C: produção em toneladas - 200, 220, 250, 250, 200]",
-      "d": "[Gráfico D: produção em toneladas - 240, 250, 295, 295, 250]",
-      "e": "[Gráfico E: produção em toneladas - 8, 6,6, 11,25, 11,25, 10]"
+      "a": "",
+      "b": "",
+      "c": "",
+      "d": "",
+      "e": ""
     },
     "images": [
-      "figuras/q169_2025_fig1.png"
+      "figuras/q169_2025_fig2.png",
+      "figuras/q169_2025_fig3.png",
+      "figuras/q169_2025_fig4.png",
+      "figuras/q169_2025_fig5.png",
+      "figuras/q169_2025_fig6.png"
     ],
     "tags": [
       "aritmética e números",
@@ -757,7 +762,7 @@
   },
   {
     "number": 170,
-    "text": "Uma caixa de descarga, acoplada a um vaso sanitário, tem a forma de paralelepípedo reto retângulo cujas dimensões internas da base são 2,5 dm e 1,5 dm. Nessa caixa há uma boia que interrompe o abastecimento quando a altura da coluna de água atinge 2 dm, conforme a figura.\n\n[Figura: duas vistas de uma caixa de descarga - uma mostrando a boia em altura alta (1,5 dm de água) e outra mostrando o nível máximo (2 dm de água), com base de 2,5 dm × 1,5 dm]\n\nA cada acionamento da descarga, todo o volume de água contida na caixa é despejado no vaso. Para reduzir o volume de água despejado a cada acionamento, uma pessoa colocará, no interior dessa caixa, garrafas de 300 mL, cheias de areia e tampadas, de modo a ficarem submersas quando o abastecimento for interrompido.\n\nPara garantir o funcionamento eficiente, o mínimo de água despejada a cada acionamento deve ser de 5 L.\n\nA quantidade máxima de garrafas que serão colocadas nessa caixa, garantindo um funcionamento eficiente, é igual a",
+    "text": "Uma caixa de descarga, acoplada a um vaso sanitário, tem a forma de paralelepípedo reto retângulo cujas dimensões internas da base são 2,5 dm e 1,5 dm. Nessa caixa há uma boia que interrompe o abastecimento quando a altura da coluna de água atinge 2 dm, conforme a figura.\n\n[Figura: duas vistas de uma caixa de descarga]\n\nA cada acionamento da descarga, todo o volume de água contida na caixa é despejado no vaso. Para reduzir o volume de água despejado a cada acionamento, uma pessoa colocará, no interior dessa caixa, garrafas de 300 mL, cheias de areia e tampadas, de modo a ficarem submersas quando o abastecimento for interrompido.\n\nPara garantir o funcionamento eficiente, o mínimo de água despejada a cada acionamento deve ser de 5 L.\n\nA quantidade máxima de garrafas que serão colocadas nessa caixa, garantindo um funcionamento eficiente, é igual a",
     "alternatives": {
       "a": "10.",
       "b": "8.",
@@ -766,7 +771,7 @@
       "e": "2."
     },
     "images": [
-      "figuras/q170_2025_fig1.png"
+      "figuras/q170_2025_fig2.png"
     ],
     "tags": [
       "aritmética e números",
@@ -801,7 +806,7 @@
   },
   {
     "number": 172,
-    "text": "Um empresário utiliza máquinas cuja pressão interna P, em atmosfera, depende do tempo contínuo de utilização t, em hora, e de um parâmetro positivo K, que define o modelo da máquina, segundo a expressão:\n\nP = 4 · log[−K · (t + 1) · (t − 19)]\n\nO fabricante dessas máquinas recomenda ao usuário que a pressão interna desse tipo de máquina não ultrapasse 10 atmosferas durante seu funcionamento.\n\nO empresário pretende comprar novas máquinas desse tipo que deverão funcionar, diariamente, por um período contínuo de 10 horas. Para isso, precisa definir o modelo de máquina a ser adquirida escolhendo o maior valor possível do parâmetro K, atendendo à recomendação do fabricante.\n\nO maior valor a ser escolhido para K é",
+    "text": "Um empresário utiliza máquinas cuja pressão interna P, em atmosfera, depende do tempo contínuo de utilização t, em hora, e de um parâmetro positivo K, que define o modelo da máquina, segundo a expressão:\n\n<center>P = 4 · log[−K · (t + 1) · (t − 19)]</center>\n\nO fabricante dessas máquinas recomenda ao usuário que a pressão interna desse tipo de máquina não ultrapasse 10 atmosferas durante seu funcionamento.\n\nO empresário pretende comprar novas máquinas desse tipo que deverão funcionar, diariamente, por um período contínuo de 10 horas. Para isso, precisa definir o modelo de máquina a ser adquirida escolhendo o maior valor possível do parâmetro K, atendendo à recomendação do fabricante.\n\nO maior valor a ser escolhido para K é",
     "alternatives": {
       "a": "10^0,5",
       "b": "10^8",
@@ -822,7 +827,7 @@
   },
   {
     "number": 173,
-    "text": "Em uma cidade, será construído um túnel que atravessa uma montanha para facilitar o trânsito de automóveis e bicicletas. Dois projetos foram elaborados e os esquemas com as vistas frontais desses projetos são apresentados na figura.\n\n[Figura: Projeto 1 - dois túneis semicilíndricos separados: túnel para automóveis com diâmetro 12 m (volta e ida) e túnel para bicicletas com diâmetro 6 m (volta e ida). Projeto 2 - túnel único de uso misto com diâmetro total 18 m, dividido em 4 seções: volta bicicletas (3 m), volta automóveis (6 m), ida automóveis (6 m), ida bicicletas (3 m)]\n\nO Projeto 1 conta com dois túneis, um exclusivo para bicicletas e o outro, para automóveis. O Projeto 2 conta com um único túnel, com espaços reservados para o trânsito exclusivo de bicicletas e automóveis. Nos dois projetos, os túneis têm o formato de semicilindro reto de mesma extensão, com vias de ida e volta para os dois tipos de veículos, separados por muretas.\n\nO projeto a ser aprovado será aquele que apresentar a menor área da seção transversal, pois implicará menor volume de material retirado da montanha.\n\nConsidere 3 como aproximação para π e desconsidere as espessuras das muretas.\n\nO projeto a ser aprovado é",
+    "text": "Em uma cidade, será construído um túnel que atravessa uma montanha para facilitar o trânsito de automóveis e bicicletas. Dois projetos foram elaborados e os esquemas com as vistas frontais desses projetos são apresentados na figura.\n\n[Figura: Projeto 1 e Projeto 2]\n\nO Projeto 1 conta com dois túneis, um exclusivo para bicicletas e o outro, para automóveis. O Projeto 2 conta com um único túnel, com espaços reservados para o trânsito exclusivo de bicicletas e automóveis. Nos dois projetos, os túneis têm o formato de semicilindro reto de mesma extensão, com vias de ida e volta para os dois tipos de veículos, separados por muretas.\nO projeto a ser aprovado será aquele que apresentar a menor área da seção transversal, pois implicará menor volume de material retirado da montanha.\nConsidere 3 como aproximação para π e desconsidere as espessuras das muretas.\n\nO projeto a ser aprovado é",
     "alternatives": {
       "a": "o 1, pois apresenta área de seção transversal medindo 67,5 m².",
       "b": "o 2, pois apresenta área de seção transversal medindo 121,5 m².",
@@ -831,7 +836,7 @@
       "e": "qualquer um dos dois, pois apresentam áreas de suas seções transversais com medidas iguais."
     },
     "images": [
-      "figuras/q173_2025_fig1.png"
+      "figuras/q173_2025_fig2.png"
     ],
     "tags": [
       "aritmética e números",
@@ -907,7 +912,7 @@
   },
   {
     "number": 177,
-    "text": "A figura ilustra o projeto visual para confecção de uma medalha comemorativa, com a forma de um cilindro circular reto, de diâmetro 6 cm e espessura 3 mm.\n\n[Figura: medalha circular com diâmetro 6 cm, contendo um quadrado ABCD inscrito. Vista lateral mostra espessura de 3 mm]\n\nA figura ABCD tem a forma de um quadrado e é a base de um prisma que atravessa toda a medalha. A região da medalha externa a esse prisma será cunhada em ouro. Pretende-se cunhar 100 dessas medalhas.\n\nConsidere 3,1 como valor aproximado para π.\n\nQual é o volume de ouro, em centímetro cúbico, necessário para a confecção dessas medalhas?",
+    "text": "A figura ilustra o projeto visual para confecção de uma medalha comemorativa, com a forma de um cilindro circular reto, de diâmetro 6 cm e espessura 3 mm.\n\n[Figura: medalha circular com diâmetro 6 cm]\n\nA figura ABCD tem a forma de um quadrado e é a base de um prisma que atravessa toda a medalha. A região da medalha externa a esse prisma será cunhada em ouro. Pretende-se cunhar 100 dessas medalhas.\n\nConsidere 3,1 como valor aproximado para π.\n\nQual é o volume de ouro, em centímetro cúbico, necessário para a confecção dessas medalhas?",
     "alternatives": {
       "a": "288",
       "b": "297",
@@ -916,7 +921,7 @@
       "e": "1 134"
     },
     "images": [
-      "figuras/q177_2025_fig1.png"
+      "figuras/q177_2025_fig2.png"
     ],
     "tags": [
       "geometria analítica",
@@ -981,7 +986,7 @@
       "e": "99 + 4n"
     },
     "images": [
-      "figuras/q180_2025_fig1.png"
+      "figuras/q180_2025_fig2.png"
     ],
     "tags": [
       "sequências e progressões",
