@@ -1,7 +1,7 @@
 [
   {
     "number": 91,
-    "text": "Muitas pessoas ainda se espantam com o fato de um passageiro sair ileso de um acidente de carro enquanto o veículo onde estava teve perda total. Essas pessoas talvez considerem, equivocadamente, que os carros mais seguros são os que têm as estruturas mais rígidas, ou seja, estruturas que durante uma colisão apresentam menos deformação. Na verdade, o que ocorre é o contrário. Por isso a partir de 1958, passaram a ser produzidos carros com partes que se deformam facilmente. Considerando o carro, seus ocupantes e o muro da figura como um sistema isolado, o crumple zone aumenta a segurança dos passageiros porque, durante uma colisão, a deformação da estrutura do carro [Esquema]",
+    "text": "Considerando o carro, seus ocupantes e o muro da figura como um sistema isolado, o crumple zone aumenta a segurança dos passageiros porque, durante uma colisão, a deformação da estrutura do carro",
     "alternatives": {
       "a": "aciona os airbags do veículo",
       "b": "absorve a energia cinética do sistema",
@@ -9,10 +9,7 @@
       "d": "cria uma barreira de proteção para seus ocupantes",
       "e": "diminui a velocidade do centro de massa do sistema"
     },
-    "images": [
-      "figuras/q091_2024_fig1.png",
-      "figuras/q091_2024_fig2.png"
-    ],
+    "images": [],
     "tags": [
       "mecânica newtoniana"
     ],
@@ -20,11 +17,14 @@
     "test": "ENEM",
     "area": "nature",
     "answer": "b",
-    "difficulty": 4
+    "difficulty": 4,
+    "contextIds": [
+      "enem_2024_nature_q91_ctx1"
+    ]
   },
   {
     "number": 92,
-    "text": "Células a combustível microbianas (CCM) são capazes e gerar eletricidade a partir de águas residuárias urbanas e groindustriais. As CCM são compostas de duas câmaras. Num[a delas, onde ocorre o tratamento da matéria orgânica, s bactérias eletrogênicas crescem formando um biofilme se alimentam dos poluentes presentes no efluente. Ao se limentarem, essas bactérias geram uma corrente elétrica ue percorre o material sobre o qual elas formaram o biofilme. Um fio condutor externo possibilita a migração dessa corrente ara uma segunda câmara, promovendo uma reação química. [Figura] − + − CH COO  (aq)  +  2 H O (I)  →  2 CO  (g)  +  7 H  (aq)  +  8 e [Gráfico] 3 2 2 + − 4 H  (aq)  +  O  (g)  +  4 e   →  2 H O (I) QUINTO, A. C.  Biobaterias geram eletricidade a partir de esgoto sanitário e efluentes agroindustriais . Disponível em: https://jornal.usp.br. Acesso em: 1 dez. 2021 (adaptado). Qual das equações representa a reação global que ocorre urante o funcionamento dessa CCM?",
+    "text": "Células a combustível microbianas (CCM) são capazes e gerar eletricidade a partir de águas residuárias urbanas e agroindustriais. As CCM são compostas de duas câmaras. Numa delas, onde ocorre o tratamento da matéria orgânica, s bactérias eletrogênicas crescem formando um biofilme se alimentam dos poluentes presentes no efluente. Ao se limentarem, essas bactérias geram uma corrente elétrica ue percorre o material sobre o qual elas formaram o biofilme. Um fio condutor externo possibilita a migração dessa corrente ara uma segunda câmara, promovendo uma reação química. [Figura]\nQual das equações representa a reação global que ocorre durante o funcionamento dessa CCM?",
     "alternatives": {
       "a": "CH COO  (aq)  +  O  (g)  →  2 CO  (g)  +  3 H  (aq)",
       "b": "CO  (g)  +  O  (g)  +  H  (aq)  →  H O (l)  +  CH COO  (aq)",
@@ -33,8 +33,7 @@
       "e": "2 CO  (g)  +  11 H  (aq)  +  O  (g)  →  CH COO  (aq)  +  4 H O (l)"
     },
     "images": [
-      "figuras/q092_2024_fig1.png",
-      "figuras/q092_2024_fig2.png"
+      "figuras/q092_2024_fig3.png"
     ],
     "tags": [
       "química geral e inorgânica",
@@ -48,7 +47,7 @@
   },
   {
     "number": 93,
-    "text": "No senso comum, considera-se, ainda hoje, que omentos orgânicos são substâncias presentes nos seres ivos. Na Química, a expressão “compostos orgânicos” tem m uso histórico de mais de 200 anos, adquirindo diferentes onotações ao longo do desenvolvimento dessa ciência. Atualmente, atribui-se a essa expressão outro significado. A concepção científica atual define esses compostos omo substâncias",
+    "text": "No senso comum, considera-se, ainda hoje, que omentos orgânicos são substâncias presentes nos seres ivos. Na Química, a expressão “compostos orgânicos” tem m uso histórico de mais de 200 anos, adquirindo diferentes onotações ao longo do desenvolvimento dessa ciência. Atualmente, atribui-se a essa expressão outro significado. \n\nA concepção científica atual define esses compostos omo substâncias",
     "alternatives": {
       "a": "benéficas à saúde humana.",
       "b": "capazes de serem biodegradadas.",
