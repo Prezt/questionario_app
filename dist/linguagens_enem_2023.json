@@ -22,10 +22,10 @@
     "language": "es"
   },
   {
-    "number": 2,
-    "text": "Me niego rotundamente\nA negar mi voz,\nMi sangre y mi piel.\nY me niego rotundamente\nA dejar de ser yo,\nA dejar de sentirme bien\nCuando miro mi rostro en el espejo\nCon mi boca\nRotundamente grande,\nY mi nariz\nRotundamente hermosa,\nY mis dientes\nRotundamente blancos,\nY mi piel valientemente negra.\nY me niego categóricamente\nA dejar de hablar\nMi lengua, mi acento y mi historia.\nY me niego absolutamente\nA ser parte de los que callan,\nde los que temen,\nde los que lloran.\nPorque me acepto\nRotundamente libre,\nRotundamente negra,\nRotundamente hermosa.",
-    "alternatives": {
-      "a": "advérbios como “ rotundamente ” e “ categóricamente ”.",
+    “number”: 2,
+    “text”: “Para enfatizar características e atitudes que reforçam a identidade da mulher negra, o poema da escritora costarriquenha apresenta”,
+    “alternatives”: {
+      “a”: “advérbios como “ rotundamente “ e “ categóricamente “.”,
       "b": "verbos reflexivos como “ me niego ” e “ me acepto ”.",
       "c": "adjetivos como “ grande ” e “ hermosa ”.",
       "d": "substantivos como “ sangre ” e “ piel ”.",
@@ -41,7 +41,10 @@
     "area": "linguagens",
     "answer": "b",
     "difficulty": 6,
-    "language": "es"
+    "language": "es",
+    "contextIds": [
+      "enem_2023_linguagens_q2_ctx1"
+    ]
   },
   {
     "number": 3,
@@ -89,7 +92,7 @@
   },
   {
     "number": 5,
-    "text": "Que quede claro\nCómo es posible que se cierren\ntantas bocas, tantos ojos,\ntantas puertas, muchas mentes ante un\nacto xenofóbico sin precedentes.\nPresidentes, ministros, cancilleres,\nautoridades, responsables.\n¿Quién pagará el daño causado a familiares?\nPor un loco del estrada sin modales. [...]\nSe alejó de aquel lugar donde su color era\nmucho más que su color, era su raza.\nPersiguiendo un sueño que desapareció,\nque se fusionó y terminó en una pesadilla. [...]\nDéjame que te cuente esta historia\nque sucedió en el metro de Barcelona,\ncuando aquella mañana la injusticia\ney xenofobia se juntaron de la mano,\nprotagonizando una de las más feas escenas de racismo.\nEn aquel vagón viajaba un ángel de color diferente,\nen su camino se interpuso aquel inconsciente,\nque aún sabiendo lo que hacía,\nseguía hablando con su gente.\nLe dio al ángel dos patadas en su cara,\nse rió de ella sin cambiar la mirada.\nY aún anda suelto, aún anda suelto...\nORISHAS. In: Cosita buena. Delaware: Suerte Publishing LLC, 2008 (fragmento).",
+    "text": "A letra da canção Que quede claro, da banda cubana Orishas, revela o(a)",
     "alternatives": {
       "a": "indignação diante do desrespeito à diversidade.",
       "b": "violência característica das grandes metrópoles.",
@@ -108,7 +111,10 @@
     "area": "linguagens",
     "answer": "b",
     "difficulty": 5,
-    "language": "es"
+    "language": "es",
+    "contextIds": [
+      "enem_2023_linguagens_q5_ctx1"
+    ]
   },
   {
     "number": 1,
@@ -152,7 +158,10 @@
     "area": "linguagens",
     "answer": "b",
     "difficulty": 6,
-    "language": "en"
+    "language": "en",
+    "contextIds": [
+      "enem_2023_linguagens_q2_ctx1"
+    ]
   },
   {
     "number": 3,
@@ -218,11 +227,14 @@
     "area": "linguagens",
     "answer": "b",
     "difficulty": 4,
-    "language": "en"
+    "language": "en",
+    "contextIds": [
+      "enem_2023_linguagens_q5_ctx1"
+    ]
   },
   {
     "number": 6,
-    "text": "A sessão do Comitê Olímpico Internacional (COI) aprovou uma mudança histórica e inédita no lema olímpico, criado em 1894 pelo Barão Pierre de Coubertin para expressar os valores e a excelência do esporte. Mais de 120 anos depois, o lema tem sua primeira alteração para ressaltar a solidariedade e incluir a palavra “juntos”. A mudança foi aprovada por unanimidade pelos membros do COI e celebrada pelo presidente da entidade.\n\nDisponível em: https://ge.globo.com. Acesso em: 10 nov. 2021 (adaptado)\nDe acordo com o texto, a alteração do lema olímpico teve como objetivo a",
+    "text": "De acordo com o texto, a alteração do lema olímpico teve como objetivo a",
     "alternatives": {
       "a": "unificação do lema anterior ao atual.",
       "b": "aproximação entre o lema olímpico e o COI.",
@@ -238,11 +250,14 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "d",
-    "difficulty": 3
+    "difficulty": 3,
+    "contextIds": [
+      "enem_2023_linguagens_q6_ctx1"
+    ]
   },
   {
     "number": 7,
-    "text": "[Figura] Mais iluminada que outras Tenho dois seios, estas duas coxas, duas mãos que m são muito úteis, olhos escuros, estas duas sobrancelhas qu preencho com maquiagem comprada por dezenove e novent e orelhas que não aceitam bijuterias. Este corpo é um corp faminto, dentado, cruel, capaz e violento. Movo os braço e multidões correm desesperadas. Caminho no escuro com o rosto para baixo, pois cada parte isolada de mim tem su própria vida e não quero domá-las. Animal da caatinga. Fort demais. Engolidora de espadas e espinhos. Dizem e eu ouvi, mas depois também li, que o estad do Ceará aboliu a escravidão quatro anos antes do restant do país. Todos aqueles corpos que eram trazidos com seus dedos contados, seus calcanhares prontos e seu umbigos em fogo, todos eles foram interrompidos n porto. Um homem — dizem e eu ouvi e depois também li — liderou o levante. E todos esses corpos foram busca outros incômodos. Foram ser incomodados.",
+    "text": "[Figura]",
     "alternatives": {
       "a": "revelam as marcas da violência de raça e de gênero na construção da identidade",
       "b": "questionam o pioneirismo do estado do Ceará no enfrentamento à escravidão",
@@ -261,11 +276,14 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "a",
-    "difficulty": 7
+    "difficulty": 7,
+    "contextIds": [
+      "enem_2023_linguagens_q7_ctx1"
+    ]
   },
   {
     "number": 8,
-    "text": "De quem é esta língua?\nUma pequena editora brasileira, a Urutau, acaba de ançar em Lisboa uma “antologia antirracista de poetas strangeiros em Portugal”, com o título Volta para a tua terra. O livro denuncia as diversas formas de racismo a que s imigrantes estão sujeitos. Alguns dos poetas brasileiros ntologiados queixam-se do desdém com que um grande número de portugueses acolhe o português brasileiro. É uma queixa frequente.\n“Aqui em Portugal eles dizem / — eles dizem — / que osso português é errado, que nós não falamos português”, escreve a poetisa paulista Maria Giulia Pinheiro, para concluir: “Se a sua linguagem, a lusitana, ainda conserva palavra da opressão ela não é a mais bonita do mundo. Ela é uma das mais violentas”.\nAGUALUSA, J. E. Disponível em: https://oglobo.globo.com. Acesso em: 22 nov. 2021 (adaptado).\nO texto de Agualusa tematiza o preconceito em relação o português brasileiro. Com base no trecho citado pelo autor, infere-se que esse preconceito se deve",
+    "text": "O texto de Agualusa tematiza o preconceito em relação o português brasileiro. Com base no trecho citado pelo autor, infere-se que esse preconceito se deve",
     "alternatives": {
       "a": "à dificuldade de consolidação da literatura brasileira em outros países.",
       "b": "aos diferentes graus de instrução formal entre os falantes de língua portuguesa.",
@@ -282,11 +300,14 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "c",
-    "difficulty": 6
+    "difficulty": 6,
+    "contextIds": [
+      "enem_2023_linguagens_q8_ctx1"
+    ]
   },
   {
     "number": 9,
-    "text": "Na Idade Média, as notícias se propagavam com surpreendente eficácia. Segundo uma emérita professora d Sorbonne, um cavalo era capaz de percorrer 30 quilômetro por dia, mas o tempo podia se acelerar dependendo d interesse da notícia. As ordens mendicantes tinham um pape importante na disseminação de informações, assim com os jograis, os peregrinos e os vagabundos, porque todo eles percorriam grandes distâncias. As cidades também tinham correios organizados e selos para lacrar mensagen e tentar certificar a veracidade das correspondências Graças a tudo isso, a circulação de boatos era intens e politicamente relevante. Um exemplo clássico de fak news da era medieval é a história do rei que desaparec na batalha e reaparece muito depois, idoso e transformado Disponível em: www.elpais.com.br. Acesso em: 18 jun. 2018 (adaptado)",
+    "text": "A propagação sistemática de informações é um fenômeno cada vez mais frequente no cotidiano das sociedades. No texto, a eficácia dessa propagação está diretamente relacionada ao(à)",
     "alternatives": {
       "a": "velocidade de circulação das notícias",
       "b": "nível de letramento da população marginalizada",
@@ -302,11 +323,14 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "e",
-    "difficulty": 5
+    "difficulty": 5,
+    "contextIds": [
+      "enem_2023_linguagens_q9_ctx1"
+    ]
   },
   {
     "number": 10,
-    "text": "Se a interferência de contas falsas em discussões políticas nas redes sociais já representava um perigo para os sistemas democráticos, sua sofisticação e maior semelhança com pessoas reais têm agravado o problema pelo mundo. O perigo cresceu porque a tecnologia e os métodos evoluíram dos robôs, os “ bots ” — softwares com tarefas on-line automatizadas —, para os “ciborgues” ou “ trolls contas controladas diretamente por humanos com ajuda de um pouco de automação. Mas pesquisadores começam agora a observar outros padrões de comportamento: quando mensagens não são programadas, sua publicação se concentra só em horário de trabalho, já que é controlada por pessoas cuja profissão é exatamente essa, administrar um perfil falso durante o dia. Outra pista: a pobreza vocabular das mensagens publicadas por esses perfis. Um funcionário de uma empresa que supostamente produzia e vendia perfis falsos explica que às vezes “faltava criatividade” para criar mensagens distintas controlando tantos perfis falsos ao mesmo tempo.",
+    "text": "De acordo com o texto, as características da linguagem empregada por perfis automatizados contribui para a(o)",
     "alternatives": {
       "a": "controle da atuação dos profissionais de TI",
       "b": "desenvolvimento de tecnologias como os “ trolls ”",
@@ -322,11 +346,14 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "e",
-    "difficulty": 6
+    "difficulty": 6,
+    "contextIds": [
+      "enem_2023_linguagens_q10_ctx1"
+    ]
   },
   {
     "number": 11,
-    "text": "Maio foi colorido de amarelo, e o foi porque mundialmente amarelo é a cor convencionada para as dvertências. No trânsito, essas advertências têm sido atais. A estimativa, caso nada seja feito, é a de que se tinjam assustadoras 2,4 milhões de mortes no trânsito m 2030 em todo o mundo. A pressa constante, o sentimento de invencibilidade, certeza de invulnerabilidade, a necessidade de poder, falta de civilidade, a certeza de impunidade, a ausência e solidariedade, a inexistência de compaixão e o esrespeito por si próprio são circunstâncias reais que, ao raro, concorrem para o comportamento violento no trânsito. O Maio Amarelo, que preconiza a atenção pela vida, uma das iniciativas nesse sentido. E é precisamente atenção pela vida que está esquecida. Essa atenção, or certo, requer menos pressa, mais civilidade, mites assegurados, consciência de vulnerabilidade, olidariedade, compaixão e respeito por si e pelo outro. Reafirmar e praticar esses princípios e valores talvez seja m caminho mais seguro e menos violento, que garanta vida e não celebre a morte.",
+    "text": "Considerando os procedimentos argumentativos utilizados, infere-se que o objetivo desse texto é",
     "alternatives": {
       "a": "enumerar as causas determinantes da violência no trânsito",
       "b": "contextualizar a campanha de advertência no cenário mundial",
@@ -343,11 +370,14 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "d",
-    "difficulty": 5
+    "difficulty": 5,
+    "contextIds": [
+      "enem_2023_linguagens_q11_ctx1"
+    ]
   },
   {
     "number": 12,
-    "text": "Ainda daquela vez pude constatar a bizarrice do costumes que constituíam as leis mais ou menos constantes do seu mundo: ao me aproximar, verifiquei que Sr. Timóteo, gordo e suado, trajava um vestido de franja e lantejoulas que pertencera a sua mãe. O corpet descia-lhe excessivamente justo na cintura, e aquela ali rebentava através da costura um pouco da carne aprisionada, esgarçando a fazenda e tornando o prazer de vestir-se daquele modo uma autêntica espécie de suplício. Movia-se ele com lentidão, meneando todas as suas franjas e abanando-se vigorosamente com um desses leques de madeira de sândalo, o que o envolvia numa enjoativa onda de perfume. Não sei direito o que colocara sobre a cabeça; assemelhava-se mais a um turbante ou a um chapéu sem abas de onde saíam vigorosas mechas de cabelo alourados. Como era costume seu também, trazia o rosto pintado — e para isto, bem como para suas vestimentas, apoderara-se de todo o guarda-roupa deixado por sua mãe também em sua época famosa pela extravagância com que se vestia — o que sem dúvida fazia sobressair-lhe o nariz enorme, tão característico da família Meneses.",
+    "text": "Pela voz de uma empregada da casa, a descrição de um dos membros da família exemplifica a renovação da ficção urbana nos anos 1950, aqui observada na",
     "alternatives": {
       "a": "A opção por termos e expressões de sentido ambíguo",
       "b": "crítica social inspirada pelo convívio com os patrões",
@@ -364,11 +394,14 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "c",
-    "difficulty": 7
+    "difficulty": 7,
+    "contextIds": [
+      "enem_2023_linguagens_q12_ctx1"
+    ]
   },
   {
     "number": 13,
-    "text": "Girassol da madrugada\nTeu dedo curioso me segue lento no rosto\nOs sulcos, as sombras machucadas por onde a\n[vida passou.\nQue silêncio, prenda minha... Que desvio triunfal\nda verdade,\nQue círculos vagarosos na lagoa em que uma asa\ngratuita roçou...\nTive quatro amores eternos...\nO primeiro era moça donzela,\nO segundo... eclipse, boi que fala, cataclisma,\nO terceiro era a rica senhora,\nO quarto és tu... E eu afinal me repousei dos\n[meus cuidados",
+    "text": "Perante o outro, o eu lírico revela, na força das memórias evocadas, a",
     "alternatives": {
       "a": "A vergonha das marcas provocadas pela passagem do tempo.",
       "b": "A indecisão em face das possibilidades afetivas do presente.",
@@ -385,11 +418,14 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "c",
-    "difficulty": 7
+    "difficulty": 7,
+    "contextIds": [
+      "enem_2023_linguagens_q13_ctx1"
+    ]
   },
   {
     "number": 14,
-    "text": "Dão Lalalão\nDo povoado do Ão, ou dos sítios perto, alguém precisava urgente de querer vir por escutar a novela d rádio. Ouvia-a, aprendia-a, guardava na ideia, e, retornad ao Ão, no dia seguinte, a repetia a outros.\nAssim estavam jantando, vinham os do povoad receber a nova parte da novela do rádio. Ouvir j tinham ouvido tudo, de uma vez, fugia da regra: falhar ali no Ão, na véspera, o caminhão de um comprado de galinhas e ovos, seo Abrãozinho Buristém, que carregava um rádio pequeno, de pilhas, armara um fi no arame da cerca... Mas queriam escutar outra vez por confirmação. — “A estória é estável de boa, mas que acompridada: taca e não rende...” — explicava Zuz ao Dalberto.\nSoropita começou a recontar o capítulo da novela Sem trabalho, se recordava das palavras, até com clareza — disso se admirava. Contava com prazer d demorar, encher a sala com o poder de outros alto personagens. Tomar a atenção de todos, pudesse contar aquilo noite adiante. Era preciso trazer luz, nem un enxergavam mais os outros; quando alguém ria, ria d muito longe. O capítulo da novela estava terminando.\nROSA, J. G. Noites do sertão (Corpo de baile). São Paulo: Global, 202\nNesse trecho do conto, o gosto dos moradores d povoado por ouvir a novela de rádio recontada po Soropita deve-se ao(à)\n",
+    "text": "Nesse trecho do conto, o gosto dos moradores d povoado por ouvir a novela de rádio recontada po Soropita deve-se ao(à)",
     "alternatives": {
       "a": "A qualidade do som do rádio.",
       "b": "B estabilidade do enredo contado.",
@@ -405,11 +441,14 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "d",
-    "difficulty": 8
+    "difficulty": 8,
+    "contextIds": [
+      "enem_2023_linguagens_q14_ctx1"
+    ]
   },
   {
     "number": 15,
-    "text": "As cinzas do Museu Nacional, no Rio de Janeiro, onsumido pelas chamas no mês de setembro de 2018, ào mais do que restos de fósseis, cerâmicas e espécimes aros. O museu abrigava, entre mais de 20 milhões de eças, os esqueletos com as respostas para perguntas ue ainda não haviam sido respondidas — ou sequer iteadas — por pesquisadores brasileiros. E o incêndio ode ter calado para sempre palavras e cantos indígenas ncestrais, de línguas que não existem mais no mundo. O acervo do local continha gravações de conversas, antos e rituais de dezenas de sociedades indígenas, m muitas feitas durante a década de 1960 com antigos ravadores de rolo e que ainda não haviam sido igitalizadas. Alguns dos registros abordavam línguas já xtintas, sem falantes originais ainda vivos. “A esperança ue outras instituições tenham registros dessas línguas”, iz a linguista Marilia Facó Soares. A pesquisadora, que rabalha com os índios Tikuna, o maior grupo da Amazônia rasileira, crê ter perdido parte de seu material. “Terei ue fazer novas viagens de campo para recompor meus rquivos. Mas obviamente não dá para recuperar a fala de ativos já falecidos, geralmente os mais idosos”, lamenta.",
+    "text": "A perda dos registros linguísticos no incêndio do Museu Nacional teve impacto potencializado, uma vez que",
     "alternatives": {
       "a": "exige a retomada das pesquisas por especialistas de diferentes áreas",
       "b": "representa danos irreparáveis à memória e à identidade nacionais",
@@ -427,11 +466,14 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "b",
-    "difficulty": 5
+    "difficulty": 5,
+    "contextIds": [
+      "enem_2023_linguagens_q15_ctx1"
+    ]
   },
   {
     "number": 16,
-    "text": "Mandioca, macaxeira, aipim e castelinha são nome diferentes da mesma planta. Semáforo, sinaleiro e farol também significam a mesma coisa. O que muda é só hábito cultural de cada região. A mesma coisa acontece com a Língua Brasileira de Sinais (Libras). Embora ela seja a comunicação oficial da comunidade surda no Brasil, existem sinais que variam em relação à região, à idade e ao gênero de quem se comunica. A cor verde, por exemplo, possui sinais diferentes no Rio de Janeiro, Paraná e São Paulo. São os regionalismos na língua de sinais. Essas variações são um dos temas da disciplina Linguística na língua de sinais, oferecida pela Universidade Estadual Paulista (Unesp) ao longo do segundo semestre. “Muitas pessoas pensam que a língua de sinais é universal o que não é verdade”, explica a professora e chefe do Departamento de Linguística, Literatura e Letras Clássicas da Unesp. “Mesmo dentro de um mesmo país, ela sofre variação em relação à localização geográfica, à faixa etária e até ao gênero dos usuários”, completa a especialista. Os surdos podem criar sinais diferentes para identificar lugares, objetos e conceitos. Em São Paulo, o sinal da “cerveja” é feito com um giro do punho como uma meia-volta. Em Minas, a bebida é citada quando os dedos indicador e médio batem no lado do rosto. Também ocorrem mudanças históricas. Um sinal pode sofrer alterações decorrentes dos costumes da geração que o utiliza.",
+    "text": "Nesse texto, a Língua Brasileira de Sinais (Libras)",
     "alternatives": {
       "a": "passa por fenômenos de variação linguística com qualquer outra língua.",
       "b": "apresenta variações regionais, assumindo novos sentidos para algumas palavras.",
@@ -448,11 +490,14 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "a",
-    "difficulty": 5
+    "difficulty": 5,
+    "contextIds": [
+      "enem_2023_linguagens_q16_ctx1"
+    ]
   },
   {
     "number": 17,
-    "text": "Como é bom reencontrar os leitores da Revista d Cultura por meio de uma publicação com outro visual conteúdo de qualidade e interesses ampliados! ]cultura este nome simples, e eu diria mesmo familiar, nasce entre dois colchetes voltados para fora. E não é por acaso são sinais abertos, receptivos, propícios à circulação de ideias. O DNA da publicação se mantém o mesmo, afinal por longos anos montamos nossas edições com assuntos saídos das estantes de uma grande livraria — e assim continuará sendo. Literatura, sociologia, filosofia, artes. Nunca será difícil montar a pauta da revista porque os livros nos ensinam que monotonia é só para quem não lê HERZ, P. ]cultura[ , n. 1, jun. 2018 (adaptado)",
+    "text": "O uso dos códigos para nomear a revista atribui-lhes uma nova função e está correlacionado ao(à)",
     "alternatives": {
       "a": "perfil de público-alvo, constituído por leitores exigentes e especializados em leitura acadêmica",
       "b": "propósito do editor, chamando a atenção para o rigor normativo nos textos da revista",
@@ -469,7 +514,10 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "d",
-    "difficulty": 4
+    "difficulty": 4,
+    "contextIds": [
+      "enem_2023_linguagens_q17_ctx1"
+    ]
   },
   {
     "number": 18,
@@ -498,7 +546,7 @@
   },
   {
     "number": 19,
-    "text": "\"São tantas formas de matar um preto\nQue para alguns sua morte é justificada\nDevia tá fazendo coisa errada\nSe não era bandido, um dia ia ser\nPor ser PRETO sua morte é defendida\nO PRETO sempre merece morrer\".\nA estrofe acima é do poeta e educador social Baticum\nProletário, que atua na periferia de Fortaleza, no Ceará\npreparando jovens — em quase sua totalidade negro\n— para enfrentar as dificuldades impostas pelo racism\nestrutural no país.\nÉ a partir da arte que Baticum consegue envolve\na juventude em um projeto de fortalecimento dess\npopulação ao promover batalhas de rimas,  slams  e sarau\ncom temáticas que discutem os problemas sociais. Não po\nacaso, o tema mais explorado nas rimas, versos e prosa\né a violência. De acordo com o mais recente  Atlas d\nviolência,  em  2019, os negros representaram 77% da\nvítimas de homicídios, quase 30 assassinatos por 100 m\nhabitantes, a maioria deles jovens.\nO  Atlas  revela ainda que um negro tem quase 2,\nvezes mais chance de ser morto do que um branco, o qu\njustifica o movimento de resistência crescente no Brasil",
+    "text": "O uso de citação e de dados estatísticos nesse texto tem o objetivo de",
     "alternatives": {
       "a": "resaltar a importância da poesia para denunciar a morte de negros, que cresce a cada dia.",
       "b": "destacar o crescimento exponencial da temática do preconceito na produção literária no Brasil.",
@@ -515,11 +563,14 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "d",
-    "difficulty": 5
+    "difficulty": 5,
+    "contextIds": [
+      "enem_2023_linguagens_q19_ctx1"
+    ]
   },
   {
     "number": 20,
-    "text": "No princípio era o verbo. A frase que abre o primeiro capítulo do Evangelho de João e remete à criação do mundo, assim como também faz o Gênesis, é a mais famosa da Bíblia. A ideia de que o mundo é criado pela palavra, porém, é tão estruturante que está presente em outras religiões, para muito além das fundadas no cristianismo. Como humanos, a linguagem é o mundo que habitamos. Basta tentar imaginar um mundo em que não podemos usar palavras para dizer de nós e dos outros para compreender o que isso significa. Ou um mundo em que aquilo que você diz não é entendido pelo outro e o que o outro diz não é entendido por você.",
+    "text": "Nesse texto, a estratégia usada para convencer o leitor de que uma grande parcela da população não compreende a língua dos que detêm o poder foi o(a)",
     "alternatives": {
       "a": "revelar a origem religiosa da linguagem",
       "b": "questionar o temor sobre o futuro da linguagem",
@@ -535,11 +586,14 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "e",
-    "difficulty": 3
+    "difficulty": 3,
+    "contextIds": [
+      "enem_2023_linguagens_q20_ctx1"
+    ]
   },
   {
     "number": 21,
-    "text": "Um grupo de pesquisadores da Universidade Federal do Ceará desenvolveu um dicionário para traduzir sintomas e doenças da linguagem popular para os termos médicos. Defruço, chanha e piloura, por exemplo, podem ser termos conhecidos para muitos, mas, durante uma consulta médica, desconhecimento pode significar um diagnóstico errado. “Isso é um registro histórico e pode ser muito útil para estudos dessas comunidades, na abordagem médica delas. É de certa forma pioneiro no Brasil e, sem dúvida, um instrumento de trabalho importante, porque a comunicação é fundamental na relação médico-paciente”, avalia o reitor da instituição. Ao registrarem usos regionais de termos da área médica, pesquisadores",
+    "text": "Ao registrarem usos regionais de termos da área médica, pesquisadores",
     "alternatives": {
       "a": "apontaram erros motivados pelo desconhecimento da variedade linguística local.",
       "b": "explicaram problemas provocados pela incapacidade de comunicação.",
@@ -556,11 +610,14 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "d",
-    "difficulty": 4
+    "difficulty": 4,
+    "contextIds": [
+      "enem_2023_linguagens_q21_ctx1"
+    ]
   },
   {
     "number": 22,
-    "text": "[Figura] Alguém muito recentemente cortara o mato, que na época das chuvas crescia e rodeava a casa da mãe de Ponciá Vicêncio e de Luandi. Havia também vestígios de que a terra fora revolvida, como se ali fosse plantar um pequena roça. Luandi sorriu. A mãe devia estar bastant forte, pois ainda labutava a terra. Cantou alto uma cantig que aprendera com o pai, quando eles trabalhavam na terr dos brancos. Era uma canção que os negros mais velhos ensinavam aos mais novos. Eles diziam ser uma cantig de voltar, que os homens, lá na África, entoavam sempre quando estavam regressando da pesca, da caça ou d algum lugar. O pai de Luandi, no dia em que queria agrada à mulher, costumava entoar aquela cantiga ao se aproxima de casa. Luandi não entendia as palavras do canto; sabia porém, que era uma língua que alguns negros falavam ainda, principalmente os velhos. Era uma cantiga alegre Luandi, além de cantar, acompanhava o ritmo batendo com as palmas das mãos em um atabaque imaginário. Estav de regresso à terra. Voltava em casa. Chegava cantando dançando a doce e vitoriosa cantiga de regressar.",
+    "text": "[Figura]",
     "alternatives": {
       "a": "representa a memória de uma língua africana extinta",
       "b": "exalta a rotina executada por jovens afrodescendentes",
@@ -579,7 +636,10 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "c",
-    "difficulty": 7
+    "difficulty": 7,
+    "contextIds": [
+      "enem_2023_linguagens_q22_ctx1"
+    ]
   },
   {
     "number": 23,
@@ -627,7 +687,7 @@
   },
   {
     "number": 25,
-    "text": "Passado muito tempo, resolvi tentar falar, porqué estava sozinha me embrenhando na mesma vereda qué Donana costumava entrar. Ainda recordo da palavra qué escolhi: arado. Me deleitava vendo meu pai conduzindó o arado velho da fazenda carregado pelo boi, rasgandá terra para depois lançar grãos de arroz em torrõõmarrons e vermelhos revolvidos. Gostava do som redondo fácil e ruidoso que tinha ao ser enunciado. “Vou trabalhar na arado.” “Vou arar a terra.” “Seria bom ter um arado novo esse arado tá troncho e velho.” O som que deixou minhá boca era uma aberração, uma desordem, como se nã lugar do pedaço perdido da língua tivesse um ovo quente. Era um arado torto, deformado, que penetrava a terra dá tal forma a deixá-la infértil, destruída, dilacerada.",
+    "text": "Com a perda de parte da língua na infância, a narradora",
     "alternatives": {
       "a": "reflete o olhar do pai sobre as etapas do plantio",
       "b": "metaforiza a linguagem como ferramenta de lavoura",
@@ -643,11 +703,14 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "b",
-    "difficulty": 8
+    "difficulty": 8,
+    "contextIds": [
+      "enem_2023_linguagens_q25_ctx1"
+    ]
   },
   {
     "number": 26,
-    "text": "A escravidão\nEsses meninos que aí andam jogando peteca nã\nviram nunca um escravo... Quando crescerem, saberã\nque já houve no Brasil uma raça triste, votada à escravidã\ne ao desespero; e verão nos museus a coleção hediond\ndos troncos, dos vira-mundos e dos bacalhaus; e terã\nnotícias dos trágicos horrores de uma época maldita: filho\narrancados ao seio das mães, virgens violadas em pranto\nhomens assados lentamente em fornos de cal, mulhere\nnuas recebendo na sua mísera nudez desvalida o dupl\nultraje das chicotadas e dos olhares do feitor bestial. [...]\nMas a sua indignação nunca poderá ser tão grande com\na daqueles que nasceram e cresceram em pleno horro\nno meio desse horrível drama de sangue e lodo, sentind\n dentro do ouvido e da alma, numa arrastada e contínu\nmelopeia, o longo gemer da raça mártir — orquestraçã\nsatânica de todos os soluços, de todas as impressões, d\ntodos os lamentos que a tortura e a injustiça podem arranca\na gargantas humanas.",
+    "text": "Em um artigo de 1962, o relato de Harriet Blac enfatiza as mazelas da escravidão no Brasil ao",
     "alternatives": {
       "a": "descrever de modo impessoal as consequências da exploração racial sobre as gerações futuras.",
       "b": "contrapor a infância privilegiada das crianças da época à infância violentada das crianças escravizadas.",
@@ -664,11 +727,14 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "c",
-    "difficulty": 7
+    "difficulty": 7,
+    "contextIds": [
+      "enem_2023_linguagens_q26_ctx1"
+    ]
   },
   {
     "number": 27,
-    "text": "E assim as coisas continuaram acontecendo entre os dois, em quase sustos, um grande por acaso com cacoetes e gestos definitivos. Com o Nunca Mais se oferecendo tempo todo, bastaria dizer foi um prazer ter te conhecido, estaria não trocar telefones nem e-mails e enterrar casualidade com a cal da sabedoria — nada poderia ser definitivo, os encontros duravam duas horas ou duas décadas ou duas vezes isso, mas em algum momento essencialmente seria o fim. De todos os grandes amores. De todos os pequenos. De todas as juras, das promessas, e todos os na-alegria-e-na-tristeza. De todos os não mais, os desamores, os casamentos para sempre, tais rancores para sempre, de todas as paralelas que só se viabilizam na abstração da geometria, de todas as breves paixões e de todas as grandes paixões, de tudo que para na antessala da paixão, de todos os vínculos não experimentados, de todos.",
+    "text": "O recurso que promove a progressão textual, contribuindo para a construção da ideia de que as relações amorosas têm um enredo comum, é a",
     "alternatives": {
       "a": "repetição do pronome indefinido “todos”",
       "b": "utilização do travessão na marcação do aposto",
@@ -685,7 +751,10 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "a",
-    "difficulty": 7
+    "difficulty": 7,
+    "contextIds": [
+      "enem_2023_linguagens_q27_ctx1"
+    ]
   },
   {
     "number": 28,
@@ -710,7 +779,7 @@
   },
   {
     "number": 29,
-    "text": "Era um gato preto, como convinha a um cultor das boa letras, que já lera Poe traduzido por Baudelaire. Preto gordo. E lerdo. Tão gordo e lerdo que a certa altura observe que ia perdendo inteiramente as qualidades característica da raça, que são em suma o ódio de morte aos ratos. Já nem os afugentava! Os ratos de Ouro Preto são também digno e solenes — não ria — tradicionalistas... descendentes d outros ratos que naqueles mesmos casarões presenciaram acontecimentos importantes da nossa história... No sobrad do desembargador Tomás Antônio Gonzaga, imagine senhor uma reunião dos sonhadores inconfidentes, com os antepassados daqueles ratos a passearem pelo sótã ou mesmo pelo assoalho por entre as pernas dos homen absortos na esperança da independência nacional! E depois, os ancestres daqueles roedores que eu via agora deslizar sutilmente no meu quarto podiam ter subid pelo poste da ignomínia colonial, onde estava exposta a cabeça do Tiradentes! E quando as órbitas se descarnaram ignominiosamente, podiam até ter penetrado no recess daquele crânio onde verdadeiramente ardera a literatura com a simplicidade do heroísmo, a febre nacionalista...",
+    "text": "A protagonista da narrativa é apresentada como um efeito desconcertante centrado no",
     "alternatives": {
       "a": "desenho imaginativo do casario colonial de Ouro Preto",
       "b": "efeito de apagamento de limites entre ficção e realidade",
@@ -726,11 +795,14 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "e",
-    "difficulty": 8
+    "difficulty": 8,
+    "contextIds": [
+      "enem_2023_linguagens_q29_ctx1"
+    ]
   },
   {
     "number": 30,
-    "text": "Enquanto estivemos entretidos com os urubus outra coisas andaram acontecendo na cidade. A Companhi baixou novas proibições, umas inteiramente bobocas, s pelo prazer de proibir (ninguém podia cuspir pra cima, nem carregar água em jacá, nem tapar o sol com peneira, com se todo mundo estivesse abusando dessas esquisitices mas outras bem irritantes, como a de pular muro pra corta caminho, tática que quase todo mundo que não sofria d reumatismo vinha adotando ultimamente, principalmente os meninos. E não confiando na proibição só, nem na forç dos castigos, que eram rigorosos, a Companhia aind mandou fincar cacos de garrafa nos muros. Achei isso um exagero, e comentei o assunto com mamãe. Meu pai ouvi lá do quarto e veio explicar. Disse que em épocas normai bastava uma coisa ou outra; mas agora a Companhi não podia admitir nenhuma brecha em suas ordens; s alguém desobedecesse à proibição podia se cortar no cacos; se alguém conseguisse pular um muro quebrand o corte de alguns cacos, ou jogando um couro por cima era apanhado pela proibição, nhoc — e fez o gesto d quem torce o pescoço de um frango.",
+    "text": "Sob a perspectiva do menino que narra, os fatos ficcionais ofereceram um esboço do momento político vigente na década de 1970, aqui representado pelo",
     "alternatives": {
       "a": "culto ao medo, infiltrado em situações do cotidiano",
       "b": "sentimento de dúvida quanto à veracidade das informações",
@@ -746,11 +818,14 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "a",
-    "difficulty": 7
+    "difficulty": 7,
+    "contextIds": [
+      "enem_2023_linguagens_q30_ctx1"
+    ]
   },
   {
     "number": 31,
-    "text": "Entre a toalha branca e um bule de café\nseria inapropriado dizer\neu não te amo mais.\nEra necessário algo mais solene,\num jardim japonês\npara as perdas pensadas,\num noturno de tempestade\npara arrebentar de dor,\numa praia de pedras para chorar\nem silêncio, uma cama alta\npara o incenso da despedida,\numa janela\ndando para o abismo.\nNo entanto você abaixa os olhos\ne recolhe lentamente as migalhas de pão\nsobre a mesa posta para dois.",
+    "text": "Nesse poema, a recuperação de elementos do cotidiano cumpre o propósito do eu lírico de",
     "alternatives": {
       "a": "invocar o interlocutor para uma tomada de posição",
       "b": "questionar a validade do envolvimento romântico",
@@ -767,11 +842,14 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "c",
-    "difficulty": 7
+    "difficulty": 7,
+    "contextIds": [
+      "enem_2023_linguagens_q31_ctx1"
+    ]
   },
   {
     "number": 32,
-    "text": "O sol começa a descer por trás da vegetação da Ilha da Restinga, na outra margem do rio Paraíba, colorindo o céu de amarelo, laranja e lilás. Então se ouvem as primeiras notas do Bolero, do compositor francês Maurice Ravel, executadas pelo saxofonista Jurandy. É assim o pôr do sol da praia do Jacaré, em Cabedelo (Grande João Pessoa). Depois do Bolero, Jurandy toca Asa branca de Luiz Gonzaga, e Meu sublime torrão, de Genival Macedo, espécie de hino não oficial da Paraíba.",
+    "text": "A interpretação musical de Jurandy do Sax, codinome de José Jurandy Félix, apresenta um repertório caracterizado pela",
     "alternatives": {
       "a": "inter-relação de referenciais estéticos aparentemente distanciados",
       "b": "valorização de músicas que revelam mensagens de serenidade",
@@ -788,7 +866,10 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "a",
-    "difficulty": 5
+    "difficulty": 5,
+    "contextIds": [
+      "enem_2023_linguagens_q32_ctx1"
+    ]
   },
   {
     "number": 33,
@@ -812,7 +893,7 @@
   },
   {
     "number": 34,
-    "text": "[Figura: descrição da cena inicial de Gira] [Gráfico - relacionado ao espetáculo] Logo no início de Gira, um grupo de sete bailarinas cupa o centro da cena. Mãos cruzadas sobre a lateral squerda do quadril, olhos fechados, troncos que pendulam obre si mesmos em vaguíssimas órbitas, tudo nelas ugere o transe. Está estabelecido o caráter volátil do que e passará no palco dali para frente. Mas engana-se quem enensa que vai assistir a uma representação mimética dos ultos afro-brasileiros.",
+    "text": "[Figura] [Gráfico]",
     "alternatives": {
       "a": "crítica aos movimentos padronizados do balé clássico",
       "b": "representação contemporânea de rituais ancestrais extintos",
@@ -833,11 +914,14 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "c",
-    "difficulty": 7
+    "difficulty": 7,
+    "contextIds": [
+      "enem_2023_linguagens_q34_ctx1"
+    ]
   },
   {
     "number": 35,
-    "text": "A indústria do esporte eletrônico é um mercado que está crescendo em um ritmo mais rápido do que a economia mundial. Sua popularidade cresceu muito e no Brasil não é diferente. De acordo com os dados de uma pesquisa, mais de 64% dos brasileiros que jogam videogame já ouviram falar do esporte eletrônico. No entanto, o que chama a atenção é o crescimento superior a 10% do público praticante comparado ao ano anterior, que subiu de 44,7% para 55,4%. Trata-se de um percentual expressivo, já que o Brasil está no top entre os países que têm maior número de espectadores do esporte eletrônico do mundo. Comparado ao ano anterior em 2020, o Brasil teve um marco de crescimento de 20% na audiência. Mundo afora, a árdua dedicação de grandes gamers contribuiu para o reconhecimento do Comitê Olímpico Internacional, aliado a outras cinco federações esportivas e suas desenvolvedoras de jogos, que direcionaram um olhar mais atento ao assunto, permitindo dar o primeiro passo para concretizar, pela primeira vez na história dos jogos eletrônicos, um evento olímpico oficial.",
+    "text": "O contexto em que o esporte eletrônico é apresentado no texto demonstra o(a)",
     "alternatives": {
       "a": "condição favorável à expansão dessa modalidade",
       "b": "promoção dessa prática por jogadores profissionais",
@@ -855,11 +939,14 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "a",
-    "difficulty": 3
+    "difficulty": 3,
+    "contextIds": [
+      "enem_2023_linguagens_q35_ctx1"
+    ]
   },
   {
     "number": 36,
-    "text": "O Marabaixo é uma expressão artístico-cultural formada nas tradições e na identificação cultural entre a comunidades negras do Amapá. O nome remonta às morte de escravizados em navios negreiros que eram jogados n água. Em sua homenagem, hinos de lamento eram cantado mar abaixo, mar acima. Posteriormente, o Marabaixo s integrou à vivência das comunidades negras em um cicl de danças, cantorias com tambores e festas religiosas recebendo, em 2018, o título de Patrimônio Cultural do Brasil Disponível em: http://portal.iphan.gov.br. Acesso em: 15 nov. 2021 (adaptado).",
+    "text": "A manifestação do Marabaixo se constituiu em expressão de arte e cultura, exercendo função de",
     "alternatives": {
       "a": "ressignificar episódios dramáticos em novas práticas culturais.",
       "b": "adaptar coreografias como imitação dos movimentos do mar.",
@@ -875,11 +962,14 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "a",
-    "difficulty": 5
+    "difficulty": 5,
+    "contextIds": [
+      "enem_2023_linguagens_q36_ctx1"
+    ]
   },
   {
     "number": 37,
-    "text": "O uso das redes sociais como forma de ampliar universos foi uma descoberta recente para o artista Wolney Fernandes, que começou a criar quando o ambiente em Goiás era mais árido em relação às artes visuais. “Hoje, ser diferente é uma potência e quem sabe o que quer com própria arte encontra espaço”, diz. As colagens artísticas do goiano aparecem em capas de obras literárias pelo Brasil e exterior.",
+    "text": "O artista goiano Walnei Fernandes busca expor seu trabalho por meio de plataformas digitais a fim de",
     "alternatives": {
       "a": "dar suporte à técnica de colagem em Artes Visuais, contornando dificuldades práticas.",
       "b": "aproximar-se da estética visual própria da editoração de obras artísticas, como capas de livros.",
@@ -896,11 +986,14 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "c",
-    "difficulty": 3
+    "difficulty": 3,
+    "contextIds": [
+      "enem_2023_linguagens_q37_ctx1"
+    ]
   },
   {
     "number": 38,
-    "text": "O mais antigo grupo de rap indígena do país, Brô MCs, urgiu em 2009, na aldeia Jaguapiru, em Dourados, Mato Grosso do Sul. Os integrantes conheceram o rap pelo rádio, uvindo um programa que apresentava cantores e grupos rasileiros desse gênero musical. O Brô MCs conseguiu nfluenciar outros a fazerem rap e a lutarem pelas causas ndígenas. Um dos nomes do movimento, Kunumí MC, um jovem de 16 anos, da aldeia Krukutu, em São Paulo. O adolescente enxerga o rap como uma cultura da defesa começada quando percebeu que a poesia, ela qual sempre se interessou, podia virar música. Nas letras que cria, inspiradas tanto pelo rap quanto pelos tmos indígenas, tenta incluir sempre assuntos aos quais cha importante dar voz, principalmente, a questão da emarcação de terras.",
+    "text": "O movimento rap dos povos originários do Brasil revela o(a)",
     "alternatives": {
       "a": "fusão de manifestações artísticas urbanas contemporâneas com a cultura indígena",
       "b": "contraposição das temáticas socioambientais indígenas às questões urbanas",
@@ -917,11 +1010,14 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "a",
-    "difficulty": 5
+    "difficulty": 5,
+    "contextIds": [
+      "enem_2023_linguagens_q38_ctx1"
+    ]
   },
   {
     "number": 39,
-    "text": "A petição on-line criada por um cidadão paulist\nsurtiu efeito: casado há três anos com seu companheiro\nele pedia a alteração da definição de “casamento” n\ntradicional dicionário Michaelis em português. Na definiçã\nanterior, casamento aparecia como “união legítima entr\nhomem e mulher” e “união legal entre homem e mulhe\npara constituir família”. O novo verbete não traz em nenhum momento a\npalavras homem ou mulher — agora a definição d\ncasamento se refere a “pessoas”. Para o diretor de comunicação do site onde a petição fo\npublicada, a iniciativa mostra a “eficiência da mobilização\n“Em dois dias, mudou-se uma definição que permaneci\na mesma há décadas”, afirma. E conclui: “A plataform\nserve para todos os tipos de causas, para as mudança\nque importam para as pessoas.”.",
+    "text": "A notícia trata da mudança de uma decisão tomada pela língua portuguesa. Segundo o texto, essa mudança foi impulsionada pela",
     "alternatives": {
       "a": "inclusão de informações no verbete",
       "b": "relevância social da instituição casamento",
@@ -937,11 +1033,14 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "c",
-    "difficulty": 5
+    "difficulty": 5,
+    "contextIds": [
+      "enem_2023_linguagens_q39_ctx1"
+    ]
   },
   {
     "number": 40,
-    "text": "A neozelandesa Laurel Hubbard fez história nos Jogos Olímpicos. Apesar de ter ficado de fora da disputa por medalhas, a levantadora de peso deixou sua marca na edição de Tóquio por ser a primeira mulher abertamente transgênero a participar de uma competição olímpica. No início da carreira, na década de 1990, a neozelandesa participava de disputas na categoria masculina. Em 2001, aos 23 anos, ela se afastou da atividade. “A pressão de tentar me encaixar em um mundo que talvez não tenha sido feito para pessoas como eu se tornou um fardo muito grande para suportar.” Em 2012, Laurel começou sua transição de gênero por meio de terapias hormonais e em 2013, declarou abertamente ser uma mulher trans. Para o Comitê Olímpico Internacional, a participação de mulheres trans nos Jogos é permitida caso o nível de testosterona, hormônio que aumenta a massa muscular, esteja abaixo de 10 nanomols por litro por pelo menos 12 meses.",
+    "text": "No texto, os limites do potencial inclusivo do esporte são dados pela",
     "alternatives": {
       "a": "dificuldade de conseguir bons resultados esportivos",
       "b": "dependência de características biológicas padronizadas",
@@ -958,11 +1057,14 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "b",
-    "difficulty": 5
+    "difficulty": 5,
+    "contextIds": [
+      "enem_2023_linguagens_q40_ctx1"
+    ]
   },
   {
     "number": 41,
-    "text": "\"Ganhei 25 medalhas em mundiais, sete em Jogos Olímpicos, e sou uma sobrevivente de abuso sexual.\" oi assim que Simone Biles se apresentou ao comitê do Senado norte-americano que investiga as supostas falhas o FBI no caso Larry Nassar. Biles e outras três atletas, ítimas dos abusos do ex-médico da equipe de ginástica eminina dos EUA, exigiram que os agentes da investigação ejam processados por falta de ação prévia contra Nassar, agora preso. Biles esclareceu que culpa Larry Nassar todo o sistema que o permitiu e o perpetrou\", acusando Federação de Ginástica e o Comitê Olímpico dos Estados Unidos de saberem muito antes que ela havia sofrido busos. A melhor ginasta do mundo é um ícone. Nos Jogos Olímpicos de Tóquio, uma lesão psicológica a impediu de competir como previa. No entanto, ela chegou ao topo como ma líder no trabalho de acabar com o preconceito com s problemas de saúde mental. \"Não quero que nenhum outro atleta olímpico sofra o horror que eu e outras centenas uportamos e continuamos suportando até hoje\", afirmou.",
+    "text": "O fato relatado na notícia chama a atenção acerca da necessidade de integrar ao espetáculo esportivo",
     "alternatives": {
       "a": "o desempenho atlético internacional",
       "b": "a dimensão emocional dos atletas",
@@ -980,11 +1082,14 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "b",
-    "difficulty": 5
+    "difficulty": 5,
+    "contextIds": [
+      "enem_2023_linguagens_q41_ctx1"
+    ]
   },
   {
     "number": 42,
-    "text": "O acesso às Práticas Corporais/Atividades Físicas (PC/AF) é desigual no Brasil, à semelhança de outros indicadores sociais e de saúde. Em geral, PC/AF prazerosas, diversificadas, mais afeitas ao período de lazer estão concentradas nas populações mais abastadas. As atividades físicas de deslocamento, trajetos a pé ou de bicicleta para estudar ou trabalhar, por exemplo, são mais frequentes na classe social menos favorecida. Aqui, há uma relação inversa e perversa entre variáveis socioeconômicas de acesso às PC/AF. As maiores prevalências de inatividade física foram em mulheres, pessoas com 60 anos ou mais, negros, pessoas com autoavaliação de saúde ruim ou muito ruim, com renda familiar de até quatro salários mínimos por pessoa, pessoas que desconhecem programas públicos de PC/AF e residentes em áreas sem locais públicos para a prática.",
+    "text": "O foco central que impacta a realização de práticas corporais e de saúde (PCAF) é a",
     "alternatives": {
       "a": "diferença entre homens e mulheres",
       "b": "inexistência de políticas públicas",
@@ -1000,11 +1105,14 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "e",
-    "difficulty": 5
+    "difficulty": 5,
+    "contextIds": [
+      "enem_2023_linguagens_q42_ctx1"
+    ]
   },
   {
     "number": 43,
-    "text": "Mestre e companheiro, disse eu que nos íamos despedi Mas disse mal. A morte não extingue: transforma; não aniquila renova; não divorcia: aproxima. Um dia supuseste “morta separada” a consorte dos teus sonhos e das tuas agonias que te soubera “pôr um mundo inteiro no recanto” do te ninho; e, todavia, nunca ela te esteve mais presente, no íntim de ti mesmo e na expressão do teu canto, no fundo do teu se e na face de tuas ações. Esses catorze versos inimitáveis, em que o enlevo dos teus discípulos resume o valor de toda um literatura, eram a aliança de ouro do teu segundo noivado, um anel de outras núpcias, para a vida nova do teu renasciment e da tua glorificação, com a sócia sem nódoa dos teus anos de mocidade e madureza, da florescência e frutificação d tua alma. Para os eleitos do mundo das ideias a miséri está na decadência, e não na morte. A nobreza de uma no preserva das ruínas da outra. Quando eles atravessavam ess passagem do invisível, que os conduz à região da verdade sem mescla, então é que entramos a sentir o começo do seu reino, o reino dos mortos sobre os vivos.",
+    "text": "Esse é um trecho do discurso de Rui Barbosa na Academia Brasileira de Letras em homenagem a Machado de Assis por ocasião de sua morte. Uma das características desse discurso de homenagem é a presença de",
     "alternatives": {
       "a": "metáforas relacionadas à trajetória pessoal e criadora do homenageado.",
       "b": "recursos fonológicos empregados para a valorização do ritmo do texto.",
@@ -1022,7 +1130,10 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "a",
-    "difficulty": 8
+    "difficulty": 8,
+    "contextIds": [
+      "enem_2023_linguagens_q43_ctx1"
+    ]
   },
   {
     "number": 44,
@@ -1047,7 +1158,7 @@
   },
   {
     "number": 45,
-    "text": "Carta aberta à população brasileira [Figura: descrição da imagem]",
+    "text": "Carta aberta à população brasileira [Figura]",
     "alternatives": {
       "a": "sensibilizar o idoso a respeito dos cuidados com a saúde.",
       "b": "alertar os governantes sobre os cuidados requeridos pelo idoso.",

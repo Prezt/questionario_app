@@ -409,7 +409,7 @@
   },
   {
     "number": 111,
-    "text": "[Figura: tirinha de Mauricio de Sousa] Na prática, à medida que se aumenta o comprimento do barbante...",
+    "text": "[Figura] Na prática, à medida que se aumenta o comprimento do barbante...",
     "alternatives": {
       "a": "Altura.",
       "b": "Período.",
@@ -865,7 +865,7 @@
   },
   {
     "number": 133,
-    "text": "O descarte de detergentes comuns nos esgoto domésticos ocasiona a formação de uma camada [Figura: espuma que impede a entrada de oxigênio na água] que impede a entrada de oxigênio na água. Os microrganismos que vivem nessas águas não são capazes de quebrar moléculas ramificadas ocorrendo assim um desequilíbrio ambiental nos rios A fórmula a seguir representa a estrutura química de um tensoativo presente na composição de um detergente não biodegradável. O S O + –  O Na Tensoativo não biodegradável Qual modificação química na estrutura desse tensoativo tornaria um detergente biodegradável?",
+    "text": "O descarte de detergentes comuns nos esgoto domésticos ocasiona a formação de uma camada [Figura] que impede a entrada de oxigênio na água. Os microrganismos que vivem nessas águas não são capazes de quebrar moléculas ramificadas ocorrendo assim um desequilíbrio ambiental nos rios A fórmula a seguir representa a estrutura química de um tensoativo presente na composição de um detergente não biodegradável. O S O + –  O Na Tensoativo não biodegradável Qual modificação química na estrutura desse tensoativo tornaria um detergente biodegradável?",
     "alternatives": {
       "a": "Retirar a parte polar da molécula.",
       "b": "Eliminar as insaturações do anel aromático.",
@@ -909,7 +909,7 @@
   },
   {
     "number": 135,
-    "text": "O petróleo é uma matéria-prima muito valiosa [Figura: esquema de camadas geológicas] métodos geofísicos são úteis na sua prospecção. É possível identificar a composição de materiais stratificados medindo-se a velocidade de propagação o som (onda mecânica) através deles. Considere que ma camada de 450 m de um líquido se encontra presa o subsolo entre duas camadas rochosas, conforme o esquema. Um pulso acústico (que gera uma vibração mecânica) é emitido a partir da superfície do solo, onde ão posteriormente recebidas duas vibrações refletidas ecos). A primeira corresponde à reflexão do pulso na interface superior do líquido com a camada rochosa. A segunda vibração deve-se à reflexão do pulso na interface inferior. O tempo entre a emissão do pulso e chegada do primeiro eco é de 0,5 s. O segundo eco hega 1,1 s após a emissão do pulso.",
+    "text": "O petróleo é uma matéria-prima muito valiosa [Esquema] métodos geofísicos são úteis na sua prospecção. É possível identificar a composição de materiais stratificados medindo-se a velocidade de propagação o som (onda mecânica) através deles. Considere que ma camada de 450 m de um líquido se encontra presa o subsolo entre duas camadas rochosas, conforme o esquema. Um pulso acústico (que gera uma vibração mecânica) é emitido a partir da superfície do solo, onde ão posteriormente recebidas duas vibrações refletidas ecos). A primeira corresponde à reflexão do pulso na interface superior do líquido com a camada rochosa. A segunda vibração deve-se à reflexão do pulso na interface inferior. O tempo entre a emissão do pulso e chegada do primeiro eco é de 0,5 s. O segundo eco hega 1,1 s após a emissão do pulso.",
     "alternatives": {
       "a": "270",
       "b": "540",

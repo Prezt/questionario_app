@@ -45,16 +45,16 @@ REVISAO:
     [x] humanas
     [x] ciencias
     [x] matematica
- [-] ENEM 2024
-    [-] linguagens
-    [] humanas
-    [] ciencias
-    [] matematica
- [] ENEM 2023
-    [] linguagens
-    [] humanas
-    [] ciencias
-    [] matematica
+ [x] ENEM 2024
+    [x] linguagens
+    [x] humanas
+    [x] ciencias
+    [x] matematica
+ [x] ENEM 2023
+    [x] linguagens
+    [x] humanas
+    [x] ciencias
+    [x] matematica
  [] ENEM 2022
     [] linguagens
     [] humanas

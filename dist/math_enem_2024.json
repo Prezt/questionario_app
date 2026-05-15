@@ -66,7 +66,7 @@
   },
   {
     "number": 139,
-    "text": "Um artesão utiliza dois tipos de componentes, X Y, nos enfeites que produz. Ele sempre compra todos os componentes em uma mesma loja. O quadro apresent os preços dos dois tipos de componentes nas lojas I e II Preços dos componentes (R$) Lojas X Y I 3,00 [Figura: Tabela com preços] II 2,00 4,00 Ele confeccionará enfeites formados por duas unidades do componente X e uma unidade do componente Y efetuará a compra na loja que oferecer o menor valor total para a confecção de um enfeite.",
+    "text": "Um artesão utiliza dois tipos de componentes, X Y, nos enfeites que produz. Ele sempre compra todos os componentes em uma mesma loja. O quadro apresent os preços dos dois tipos de componentes nas lojas I e II Preços dos componentes (R$) Lojas X Y I 3,00 [Figura] II 2,00 4,00 Ele confeccionará enfeites formados por duas unidades do componente X e uma unidade do componente Y efetuará a compra na loja que oferecer o menor valor total para a confecção de um enfeite.",
     "alternatives": {
       "a": "I, pois o valor é R$ 7,00",
       "b": "I, pois o valor é R$ 4,00",
@@ -108,7 +108,7 @@
   },
   {
     "number": 141,
-    "text": "Três grandezas (I, II e III) se relacionam entre si. Os gráficos a seguir, formados por segmentos de reta, escrevem as relações de dependência existentes entre s grandezas I e II, e entre as grandezas II e III. [Figura: Gráfico das relações entre as grandezas] [Gráfico - Relação entre as grandezas I e II e II e III] O valor máximo assumido pela grandeza III, quando a randeza I varia de 1 a 3, é",
+    "text": "Três grandezas (I, II e III) se relacionam entre si. Os gráficos a seguir, formados por segmentos de reta, escrevem as relações de dependência existentes entre s grandezas I e II, e entre as grandezas II e III. [Figura] [Gráfico] O valor máximo assumido pela grandeza III, quando a randeza I varia de 1 a 3, é",
     "alternatives": {
       "a": "1,0.",
       "b": "2,5.",
@@ -132,7 +132,7 @@
   },
   {
     "number": 142,
-    "text": "Uma criança, utilizando um aplicativo, escreveu uma mensagem para enviar a um amigo. Essa mensagem foi escrita seguindo estas etapas: [Figura - descrição da figura]ª 1 etapa: inseriu três figuras do tipo no visor de escrita da mensagem; ª 2 etapa: copiou o que havia inserido anteriormente e colou (inseriu o que havia copiado) ao lado; ª 3 etapa: copiou o que tinha no visor na 2 etapa e colou ao lado. A criança seguiu copiando e colando, em cada etapa o que tinha no visor na etapa imediatamente anterior, até concluir a 20ª etapa. Em seguida, enviou a mensagem. Qual foi o total de figuras contidas na mensagem enviada?",
+    "text": "Uma criança, utilizando um aplicativo, escreveu uma mensagem para enviar a um amigo. Essa mensagem foi escrita seguindo estas etapas: [Figura] 1ª etapa: inseriu três figuras do tipo no visor de escrita da mensagem; ª 2 etapa: copiou o que havia inserido anteriormente e colou (inseriu o que havia copiado) ao lado; ª 3 etapa: copiou o que tinha no visor na 2 etapa e colou ao lado. A criança seguiu copiando e colando, em cada etapa o que tinha no visor na etapa imediatamente anterior, até concluir a 20ª etapa. Em seguida, enviou a mensagem. Qual foi o total de figuras contidas na mensagem enviada?",
     "alternatives": {
       "a": "3 × 2",
       "b": "3 × 2",
@@ -175,7 +175,7 @@
   },
   {
     "number": 144,
-    "text": "Para obter um sólido de revolução (rotação de 360 ° m torno de um eixo fixo), uma professora realizou as eguintes etapas: • recortou o trapézio retângulo PQRS de um material rígido; • afixou o lado PS do trapézio em uma vareta fixa retilínea (eixo de rotação); • girou o trapézio 360 ° em torno da vareta e obteve um sólido de revolução. Observe a figura que apresenta o trapézio afixado na areta e o sentido de giro. [Figura: trapézio retângulo PQRS afixado na vareta com o sentido de giro]",
+    "text": "Para obter um sólido de revolução (rotação de 360 ° m torno de um eixo fixo), uma professora realizou as eguintes etapas: • recortou o trapézio retângulo PQRS de um material rígido; • afixou o lado PS do trapézio em uma vareta fixa retilínea (eixo de rotação); • girou o trapézio 360 ° em torno da vareta e obteve um sólido de revolução. Observe a figura que apresenta o trapézio afixado na areta e o sentido de giro. [Figura]",
     "alternatives": {
       "a": "cone.",
       "b": "cilindro.",
@@ -221,7 +221,7 @@
   },
   {
     "number": 146,
-    "text": "Um fazendeiro pretende construir um galinheir ocupando uma região plana de formato retangular, com lados de comprimentos L metro e C metro. Os lados serã cercados por telas de tipos diferentes. Nos lados d comprimento L metro, será utilizada uma tela cujo metr linear custa R$ 20,00, enquanto, nos outros dois lados uma que custa R$ 15,00. O fazendeiro quer gastar, n máximo, R$ 6 000,00 na compra de toda a tela necessári para o galinheiro, e deseja que o galinheiro tenha a maiór área possível.[Figura: esboço do galinheiro com telas] Qual será a medida, em metro, do maior lado do galinheiro?",
+    "text": "Um fazendeiro pretende construir um galinheir ocupando uma região plana de formato retangular, com lados de comprimentos L metro e C metro. Os lados serã cercados por telas de tipos diferentes. Nos lados d comprimento L metro, será utilizada uma tela cujo metr linear custa R$ 20,00, enquanto, nos outros dois lados uma que custa R$ 15,00. O fazendeiro quer gastar, n máximo, R$ 6 000,00 na compra de toda a tela necessári para o galinheiro, e deseja que o galinheiro tenha a maiór área possível.[Figura] Qual será a medida, em metro, do maior lado do galinheiro?",
     "alternatives": {
       "a": "85",
       "b": "100",
@@ -266,7 +266,7 @@
   },
   {
     "number": 148,
-    "text": "Uma caneca com água fervendo é retirada de um orno de micro-ondas. A temperatura T, em grau Celsius, a caneca, em função do tempo t, em minuto, pode ser t modelada pela função T(t) = a + 80b, representada no [Gráfico - modelo da temperatura] a seguir.[Gráfico - valores de T(t)] Os valores das constantes a e b são",
+    "text": "Uma caneca com água fervendo é retirada de um orno de micro-ondas. A temperatura T, em grau Celsius, a caneca, em função do tempo t, em minuto, pode ser t modelada pela função T(t) = a + 80b, representada no [Gráfico] a seguir.[Gráfico] Os valores das constantes a e b são",
     "alternatives": {
       "a": "= 20; b = log(0,5)",
       "b": "= 100; b = 0,5",
@@ -291,7 +291,7 @@
   },
   {
     "number": 149,
-    "text": "Em uma empresa é comercializado um produto em embalagens em formato de cilindro circular reto, com raio medindo 3 cm, e altura medindo 15 cm. Essa empresa planeja comercializar o mesmo produto em embalagens em formato de cubo, com capacidade igual a 80% da capacidade da embalagem cilíndrica utilizada atualmente.[Figura: ilustração do cilindro e do cubo] Use 3 como valor aproximado para π. A medida da aresta da nova embalagem, em centímetro, deve ser",
+    "text": "Em uma empresa é comercializado um produto em embalagens em formato de cilindro circular reto, com raio medindo 3 cm, e altura medindo 15 cm. Essa empresa planeja comercializar o mesmo produto em embalagens em formato de cubo, com capacidade igual a 80% da capacidade da embalagem cilíndrica utilizada atualmente.[Figura] Use 3 como valor aproximado para π. A medida da aresta da nova embalagem, em centímetro, deve ser",
     "alternatives": {
       "a": "6",
       "b": "18",
@@ -314,7 +314,7 @@
   },
   {
     "number": 150,
-    "text": "Uma sala com piso no formato retangular, com lado de medidas 3 m e 6 m, será dividida em dois ambientes Para isso, serão utilizadas colunas em formato cilíndrico dispostas perpendicularmente ao piso e representadas n figura pelos círculos de cor azul. Os centros desses círculo estarão sobre uma reta paralela aos lados de menor medid do piso da sala. [Figura: disposição das colunas] [Gráfico - relação entre raio e preço por unidade] Os vãos entre duas colunas e entre um coluna e a parede não poderão ser superiores a 15 cm. Para efetuar a compra dessas colunas, foram feito orçamentos com base em dados fornecidos por cinco lojas Preço por Loja Raio (cm) unidade (R$) I 5 60 II 10 70 III 12 75 IV 15 90 V 20 120 A compra será realizada na loja cujo orçamento result no menor valor total possível.",
+    "text": "Uma sala com piso no formato retangular, com lado de medidas 3 m e 6 m, será dividida em dois ambientes Para isso, serão utilizadas colunas em formato cilíndrico dispostas perpendicularmente ao piso e representadas n figura pelos círculos de cor azul. Os centros desses círculo estarão sobre uma reta paralela aos lados de menor medid do piso da sala. [Figura] [Gráfico] Os vãos entre duas colunas e entre um coluna e a parede não poderão ser superiores a 15 cm. Para efetuar a compra dessas colunas, foram feito orçamentos com base em dados fornecidos por cinco lojas Preço por Loja Raio (cm) unidade (R$) I 5 60 II 10 70 III 12 75 IV 15 90 V 20 120 A compra será realizada na loja cujo orçamento result no menor valor total possível.",
     "alternatives": {
       "a": "I.",
       "b": "II.",
@@ -359,7 +359,7 @@
   },
   {
     "number": 152,
-    "text": "O gráfico apresenta o valor total de exportações e [Gráfico - saldo da balança comercial brasileira] ao longo de um período, em bilhão de dólares. O saldo da balança comercial brasileira dado pelo valor total de exportações menos o valor total de importações num mesmo período. Considere que os saldos da balança comercial brasileira, nos três meses destacados no gráfico, sejam apresentados por: S1 : saldo em junho de 2009; S2 : saldo em janeiro de 2010; S3 : saldo em junho de 2010. A ordenação dos saldos S1, S2 e S3, do maior para o menor, é",
+    "text": "O gráfico apresenta o valor total de exportações e [Gráfico] ao longo de um período, em bilhão de dólares. O saldo da balança comercial brasileira dado pelo valor total de exportações menos o valor total de importações num mesmo período. Considere que os saldos da balança comercial brasileira, nos três meses destacados no gráfico, sejam apresentados por: S1 : saldo em junho de 2009; S2 : saldo em janeiro de 2010; S3 : saldo em junho de 2010. A ordenação dos saldos S1, S2 e S3, do maior para o menor, é",
     "alternatives": {
       "a": "S1, S3 e S2.",
       "b": "S2, S1 e S3.",
@@ -448,7 +448,7 @@
   },
   {
     "number": 156,
-    "text": "O uso de aplicativos de transporte tem sido uma alternativa à população que busca preços mais competitivos para se locomover, principalmente nas grandes cidades. As formas usadas para determinar o valor cobrado por cada viagem variam de um aplicativo para outro, mas, em geral, o valor V a ser pago, em real, varia em função de: • tarifa base F : valor fixo, em real, cobrado no início da viagem; • tempo T : tempo, em minuto, de duração da viagem; • distância D : distância percorrida, em quilômetro. Um desses aplicativos cobra R$ 2,00 de valor fixo, crescido de R$ 0,26 por minuto de viagem e de R$ 1,40 por quilômetro rodado. Nessas condições, a expressão que fornece o valor V a ser pago por uma viagem desse aplicativo é [Figura: exemplo de cálculo]",
+    "text": "O uso de aplicativos de transporte tem sido uma alternativa à população que busca preços mais competitivos para se locomover, principalmente nas grandes cidades. As formas usadas para determinar o valor cobrado por cada viagem variam de um aplicativo para outro, mas, em geral, o valor V a ser pago, em real, varia em função de: • tarifa base F : valor fixo, em real, cobrado no início da viagem; • tempo T : tempo, em minuto, de duração da viagem; • distância D : distância percorrida, em quilômetro. Um desses aplicativos cobra R$ 2,00 de valor fixo, crescido de R$ 0,26 por minuto de viagem e de R$ 1,40 por quilômetro rodado. Nessas condições, a expressão que fornece o valor V a ser pago por uma viagem desse aplicativo é [Figura]",
     "alternatives": {
       "a": "2,00 F   +  0,26 T  +  1,40 D",
       "b": "2,00  +  0,26 T  +  1,40 D",
@@ -514,7 +514,7 @@
   },
   {
     "number": 159,
-    "text": "Uma tubulação despeja sempre o mesmo volume de gua por unidade de tempo em uma caixa-d’água, o que ignifica dizer que a vazão de água nessa tubulação é constante. Na junção dessa tubulação com a caixa-d’água, stá instalada uma membrana de filtragem cujo objetivo é ltrar eventuais impurezas presentes na água, combinado um bom fluxo de água. O fluxo ( φ ) de água através a superfície da membrana é diretamente proporcional vazão de água na tubulação, medida em mililitro por egundo, e inversamente proporcional à área da superfície a membrana, medida em centímetro quadrado.[Figura: descrição da figura]",
+    "text": "Uma tubulação despeja sempre o mesmo volume de gua por unidade de tempo em uma caixa-d’água, o que ignifica dizer que a vazão de água nessa tubulação é constante. Na junção dessa tubulação com a caixa-d’água, stá instalada uma membrana de filtragem cujo objetivo é ltrar eventuais impurezas presentes na água, combinado um bom fluxo de água. O fluxo ( φ ) de água através a superfície da membrana é diretamente proporcional vazão de água na tubulação, medida em mililitro por egundo, e inversamente proporcional à área da superfície a membrana, medida em centímetro quadrado.[Figura]",
     "alternatives": {
       "a": "2 A   mL  ⋅ s   ⋅ cm",
       "b": "mL 2\n⋅ cm B  \ns",
@@ -537,7 +537,7 @@
   },
   {
     "number": 160,
-    "text": "Uma piscina tem capacidade de 2 500 000 litros. Seu sistema de abastecimento foi regulado para ter ma vazão constante de 6 000 litros de água por minuto. O mesmo sistema foi instalado em uma segunda iscina, com capacidade de 2 750 000 litros, e regulado ara ter uma vazão, também constante, capaz de enchê-la m um tempo 20% maior que o gasto para encher a primeira piscina. [Figura: descrição da figura] A vazão do sistema de abastecimento da segunda piscina, m litro por minuto, é",
+    "text": "Uma piscina tem capacidade de 2 500 000 litros. Seu sistema de abastecimento foi regulado para ter ma vazão constante de 6 000 litros de água por minuto. O mesmo sistema foi instalado em uma segunda iscina, com capacidade de 2 750 000 litros, e regulado ara ter uma vazão, também constante, capaz de enchê-la m um tempo 20% maior que o gasto para encher a primeira piscina. [Figura] A vazão do sistema de abastecimento da segunda piscina, m litro por minuto, é",
     "alternatives": {
       "a": "8 250.",
       "b": "7 920.",
@@ -559,7 +559,7 @@
   },
   {
     "number": 161,
-    "text": "Um tanque, em formato de paralelepípedo reto retângulo, tem em seu interior dois anteparos verticais, fixados na base e em duas paredes opostas, sendo perpendiculares a elas, conforme [Figura: descrição da figura]. Esses anteparos, de espessuras desprezíveis, estão instalados de maneira a dividir a base do tanque em três retângulos congruentes, tendo suas alturas iguais à metade da altura do tanque. O tanque é abastecido por uma entrada situada no teto, através de um duto que permite o enchimento do tanque em 12 horas. O gráfico que descreve, em cada instante, a maior altura da coluna de água, dentre aquelas que vão sendo formadas ao longo do enchimento do tanque, é [Gráfico - descrição do gráfico] [Infográfico - descrição do infográfico] [Esquema - descrição do esquema] [Figura: descrição da figura] [Figura: descrição da figura] [Figura: descrição da figura].",
+    "text": "Um tanque, em formato de paralelepípedo reto retângulo, tem em seu interior dois anteparos verticais, fixados na base e em duas paredes opostas, sendo perpendiculares a elas, conforme [Figura]. Esses anteparos, de espessuras desprezíveis, estão instalados de maneira a dividir a base do tanque em três retângulos congruentes, tendo suas alturas iguais à metade da altura do tanque. O tanque é abastecido por uma entrada situada no teto, através de um duto que permite o enchimento do tanque em 12 horas. O gráfico que descreve, em cada instante, a maior altura da coluna de água, dentre aquelas que vão sendo formadas ao longo do enchimento do tanque, é",
     "alternatives": {
       "a": "",
       "b": "",
@@ -587,7 +587,7 @@
   },
   {
     "number": 162,
-    "text": "Uma imobiliária iniciou uma campanha de divulgação para promover a venda de apartamentos que podem ser pagos em 100 parcelas mensais. O valor da primeira delas é fixado no momento da compra, com o pagamento dessa primeira parcela. A partir da segunda parcela, o valor é determinado pela aplicação de um acréscimo percentual fixo ao valor da parcela anterior. Como atrativo, a imobiliária fará o pagamento de todas as parcelas correspondentes ao mês de aniversário do comprador. [Figura: gráfico que ilustra o financiamento] Um cliente, que faz aniversário no mês de maio, decidiu comprar um desses apartamentos por meio do financiamento oferecido pela imobiliária, e pretende escolher o mês mais adequado para realizar essa compra, de modo que o valor total dos pagamentos seja o menor possível. Qual é o mês que esse cliente deverá escolher para realizar a compra do apartamento?",
+    "text": "Uma imobiliária iniciou uma campanha de divulgação para promover a venda de apartamentos que podem ser pagos em 100 parcelas mensais. O valor da primeira delas é fixado no momento da compra, com o pagamento dessa primeira parcela. A partir da segunda parcela, o valor é determinado pela aplicação de um acréscimo percentual fixo ao valor da parcela anterior. Como atrativo, a imobiliária fará o pagamento de todas as parcelas correspondentes ao mês de aniversário do comprador. [Gráfico] Um cliente, que faz aniversário no mês de maio, decidiu comprar um desses apartamentos por meio do financiamento oferecido pela imobiliária, e pretende escolher o mês mais adequado para realizar essa compra, de modo que o valor total dos pagamentos seja o menor possível. Qual é o mês que esse cliente deverá escolher para realizar a compra do apartamento?",
     "alternatives": {
       "a": "Fevereiro.",
       "b": "Abril.",
@@ -630,7 +630,7 @@
   },
   {
     "number": 164,
-    "text": "A prefeitura de uma cidade planeja construir três postos [Esquema - pontos H, P1, P2 e P3] de saúde. Esses postos devem ser construídos em locais equidistantes entre si e de forma que as distâncias desses três postos ao hospital dessa cidade sejam iguais. Foram conseguidos três locais para a construção dos postos de saúde que apresentam as características desejadas, e que distam 10 km entre si.",
+    "text": "A prefeitura de uma cidade planeja construir três postos [Esquema] de saúde. Esses postos devem ser construídos em locais equidistantes entre si e de forma que as distâncias desses três postos ao hospital dessa cidade sejam iguais. Foram conseguidos três locais para a construção dos postos de saúde que apresentam as características desejadas, e que distam 10 km entre si.",
     "alternatives": {
       "a": "2 e 3",
       "b": "4 e 5",
@@ -654,7 +654,7 @@
   },
   {
     "number": 165,
-    "text": "Para melhorar o fluxo de ônibus em uma avenida que tem dois semáforos, a prefeitura reduzirá o tempo em que cada sinal ficará vermelho, que atualmente é de [Figura: descrição do esquema dos semáforos] segundos a cada 60 segundos. Admita que o instante da chegada de um ônibus a cada semáforo é aleatório. O engenheiro de tráfego da prefeitura calculou a probabilidade de um ônibus encontrar cada um desses sinais vermelho, obtendo 15/60. A partir daí, estabeleceu uma mesma redução na quantidade do tempo, em segundos, em que cada sinal ficará vermelho, de maneira que a probabilidade de um ônibus encontrar ambos os sinais vermelhos numa mesma viagem seja igual a 4/100, considerando os eventos independentes. Para isso, a redução do tempo em que o sinal ficará vermelho, em segundos, estabelecida pelo engenheiro foi de",
+    "text": "Para melhorar o fluxo de ônibus em uma avenida que tem dois semáforos, a prefeitura reduzirá o tempo em que cada sinal ficará vermelho, que atualmente é de [Figura] segundos a cada 60 segundos. Admita que o instante da chegada de um ônibus a cada semáforo é aleatório. O engenheiro de tráfego da prefeitura calculou a probabilidade de um ônibus encontrar cada um desses sinais vermelho, obtendo 15/60. A partir daí, estabeleceu uma mesma redução na quantidade do tempo, em segundos, em que cada sinal ficará vermelho, de maneira que a probabilidade de um ônibus encontrar ambos os sinais vermelhos numa mesma viagem seja igual a 4/100, considerando os eventos independentes. Para isso, a redução do tempo em que o sinal ficará vermelho, em segundos, estabelecida pelo engenheiro foi de",
     "alternatives": {
       "a": "1,35.",
       "b": "3,00.",
@@ -677,7 +677,7 @@
   },
   {
     "number": 167,
-    "text": "Atualmente, há telefones celulares com telas de [Figura: descrição da figura] iversos tamanhos e em formatos retangulares. Alguns eles apresentam telas medindo   polegadas, com  3 determinadas especificações técnicas. Além disso, em muitos modelos, com a inclusão de novas funções no celular, suas telas ficaram maiores, sendo muito comum encontrarmos atualmente telas medindo   polegadas, conforme a figura.",
+    "text": "Atualmente, há telefones celulares com telas de [Figura] iversos tamanhos e em formatos retangulares. Alguns eles apresentam telas medindo   polegadas, com  3 determinadas especificações técnicas. Além disso, em muitos modelos, com a inclusão de novas funções no celular, suas telas ficaram maiores, sendo muito comum encontrarmos atualmente telas medindo   polegadas, conforme a figura.",
     "alternatives": {
       "a": "0,1",
       "b": "0,5",
@@ -700,7 +700,7 @@
   },
   {
     "number": 168,
-    "text": "Projetistas de uma fábrica de amortecedores realizam uma série de experimentos que produziram oscilações semelhantes ao comportamento do gráfico de uma senoide. Cada experimento teve duração de 20 minutos, sendo os 9 primeiros minutos em superfície que simula uma rodovia asfaltada e os 11 minutos restantes em superfície que simula uma estrada de chão batido. Para os amortecedores serem aprovados no experimento, exige-se que as amplitudes das ondas oscilatórias, em cada tipo de superfície, sejam constantes e, ainda, que a amplitude da oscilação do amortecedor no asfalto seja menor do que sua amplitude da oscilação na estrada de chão. [Figura: gráfico de oscilações] [Gráfico - amplitudes das ondas] [Infográfico - comparação de superfícies] [Esquema - experimento com amortecedores] [Figura: resultados]",
+    "text": "Projetistas de uma fábrica de amortecedores realizam uma série de experimentos que produziram oscilações semelhantes ao comportamento do gráfico de uma senoide. Cada experimento teve duração de 20 minutos, sendo os 9 primeiros minutos em superfície que simula uma rodovia asfaltada e os 11 minutos restantes em superfície que simula uma estrada de chão batido. Para os amortecedores serem aprovados no experimento, exige-se que as amplitudes das ondas oscilatórias, em cada tipo de superfície, sejam constantes e, ainda, que a amplitude da oscilação do amortecedor no asfalto seja menor do que sua amplitude da oscilação na estrada de chão. [Figura] [Gráfico] [Infográfico] [Esquema] [Figura]",
     "alternatives": {
       "a": "A amplitude da oscilação no asfalto é igual à amplitude na estrada de chão.",
       "b": "O gráfico mostra uma amplitude constante em todas as superfícies.",
@@ -788,7 +788,7 @@
   },
   {
     "number": 172,
-    "text": "Um aeroporto disponibiliza o serviço de transporte gr[Esquema - esquema dos ônibus e câmeras]partem simultaneamente, de hora em hora, de terminais diferentes partes do trecho, conforme o esquema. O alcance de cada uma das cinco câmeras é: 1 • câmera I: do percurso; 5 3 • câmera II: do percurso; 10 1 • câmera III: do percurso; 10 1 • câmera IV: do percurso; 10 3 • câmera V: do percurso. Em determinado horário, o ônibus A parte do terminal 1 com velocidade constante de 250 m/min; enquanto o ônibus B, que parte do terminal 2, realiza o percurso total com velocidade constante de 150 m/min. Qual câmera registra o momento em que os ônibus A e B se encontram?",
+    "text": "Um aeroporto disponibiliza o serviço de transporte gr[Esquema] partem simultaneamente, de hora em hora, de terminais diferentes partes do trecho, conforme o esquema. O alcance de cada uma das cinco câmeras é: 1 • câmera I: do percurso; 5 3 • câmera II: do percurso; 10 1 • câmera III: do percurso; 10 1 • câmera IV: do percurso; 10 3 • câmera V: do percurso. Em determinado horário, o ônibus A parte do terminal 1 com velocidade constante de 250 m/min; enquanto o ônibus B, que parte do terminal 2, realiza o percurso total com velocidade constante de 150 m/min. Qual câmera registra o momento em que os ônibus A e B se encontram?",
     "alternatives": {
       "a": "I",
       "b": "II",
@@ -832,7 +832,7 @@
   },
   {
     "number": 174,
-    "text": "Em um jogo virtual para celular, um personagem pode ercorrer trajetórias retilíneas voando ou se deslocando ao ongo de paredes. Considere que o personagem descreve trajetória ABCDEF , em que os pontos A , D e E estão em m plano paralelo ao que contém os pontos B e C , sendo esses dois planos ortogonais ao plano da base que contém o ponto F , conforme a figura. [Figura: descrição da figura] A projeção ortogonal, sobre o plano da base, da trajetória ABCDEF descrita pelo personagem é [Figura: descrição da figura]",
+    "text": "Em um jogo virtual para celular, um personagem pode ercorrer trajetórias retilíneas voando ou se deslocando ao ongo de paredes. Considere que o personagem descreve trajetória ABCDEF , em que os pontos A , D e E estão em m plano paralelo ao que contém os pontos B e C , sendo esses dois planos ortogonais ao plano da base que contém o ponto F , conforme a figura. [Figura] A projeção ortogonal, sobre o plano da base, da trajetória ABCDEF descrita pelo personagem é",
     "alternatives": {
       "a": "",
       "b": "",
@@ -882,7 +882,7 @@
   },
   {
     "number": 176,
-    "text": "As receitas anuais obtidas por uma indústria no período e 2014 a 2021, em milhão de reais, foram registradas, por [Gráfico - evolução das receitas] pontos. Nele, também está representada a [Figura - reta de tendência]. Essa reta pode ser utilizada para estimar as receitas dos anos seguintes.",
+    "text": "As receitas anuais obtidas por uma indústria no período e 2014 a 2021, em milhão de reais, foram registradas, por [Gráfico] pontos. Nele, também está representada a [Figura]. Essa reta pode ser utilizada para estimar as receitas dos anos seguintes.",
     "alternatives": {
       "a": "7",
       "b": "8",

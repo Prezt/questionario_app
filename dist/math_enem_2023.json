@@ -164,7 +164,7 @@
   },
   {
     "number": 144,
-    "text": "A foto mostra a construção de uma cisterna destinada ao armazenamento de água. Uma cisterna como essa, na forma de cilindro circular reto com 3 m² de área da base foi abastecida por um curso-d’água com vazão constante. O seu proprietário registrou a altura do nível da água no interior da cisterna durante o abastecimento em diferentes momentos de um mesmo dia, conforme o quadro.[Figura: Quadro com horários e níveis de água] Horário (h) Nível da água (m) 6:00 0,5 8:00 1,1 12:00 2,3 15:00 3,2 Disponível em: www.paraibamix.com. Acesso em: 3 dez. 201 Qual foi a vazão, em metro cúbico por hora, do curso-d’água que abasteceu a cisterna?",
+    "text": "A foto mostra a construção de uma cisterna destinada ao armazenamento de água. Uma cisterna como essa, na forma de cilindro circular reto com 3 m² de área da base foi abastecida por um curso-d’água com vazão constante. O seu proprietário registrou a altura do nível da água no interior da cisterna durante o abastecimento em diferentes momentos de um mesmo dia, conforme o quadro.[Figura] Horário (h) Nível da água (m) 6:00 0,5 8:00 1,1 12:00 2,3 15:00 3,2 Disponível em: www.paraibamix.com. Acesso em: 3 dez. 201 Qual foi a vazão, em metro cúbico por hora, do curso-d’água que abasteceu a cisterna?",
     "alternatives": {
       "a": "0,3",
       "b": "0,5",
@@ -206,7 +206,7 @@
   },
   {
     "number": 146,
-    "text": "O triângulo da figura é denominado triângulo mágico. Nos círculos, escrevem-se os números de 1 a 6, sem repetição, com um número em cada círculo. O objetivo é distribuir os números de forma que as somas dos números em cada lado do triângulo sejam iguais. Considere que os números colocados nos vértices do triângulo estejam em progressão aritmética de razão igual a 2. Nas condições propostas, quais as possíveis soluções para as somas dos números que formam os lados do triângulo? [Figura: Triângulo mágico]",
+    "text": "O triângulo da figura é denominado triângulo mágico. Nos círculos, escrevem-se os números de 1 a 6, sem repetição, com um número em cada círculo. O objetivo é distribuir os números de forma que as somas dos números em cada lado do triângulo sejam iguais. Considere que os números colocados nos vértices do triângulo estejam em progressão aritmética de razão igual a 2. Nas condições propostas, quais as possíveis soluções para as somas dos números que formam os lados do triângulo? [Figura]",
     "alternatives": {
       "a": "Há somente uma solução possível, e as somas em cada lado do triângulo são iguais a 7.",
       "b": "Há somente uma solução possível, e as somas em cada lado do triângulo são iguais a 9.",
@@ -397,7 +397,7 @@
   },
   {
     "number": 155,
-    "text": "Na planta baixa de um clube, a piscina é representada or um quadrado cuja área real mede 400 m². Ao redor essa piscina, será construída uma calçada, de largura constante igual a 5 m.[Figura: Esquema]\nQual é a medida da área, em metro quadrado, ocupada pela calçada?",
+    "text": "Na planta baixa de um clube, a piscina é representada or um quadrado cuja área real mede 400 m². Ao redor essa piscina, será construída uma calçada, de largura constante igual a 5 m.[Figura]\nQual é a medida da área, em metro quadrado, ocupada pela calçada?",
     "alternatives": {
       "a": "1 000",
       "b": "900",
@@ -605,7 +605,7 @@
   },
   {
     "number": 165,
-    "text": "A figura representa uma escada com três degraus, con[Nova descrição da figura aqui]Nessa escada, pisos e espelhos têm formato retangular, com lados adjacentes perpendiculares. Pisos, espelhos e redes laterais serão revestidos em cerâmica. A área a ser revestida em metro quadrado é [Figura: descrição da figura].",
+    "text": "[Figura]\n\nA figura representa uma escada com três degraus. Nessa escada, pisos e espelhos têm formato retangular, com lados adjacentes perpendiculares. Pisos, espelhos e redes laterais serão revestidos em cerâmica. A área a ser revestida em metro quadrado é",
     "alternatives": {
       "a": "1,20.",
       "b": "1,35.",
@@ -893,7 +893,7 @@
   },
   {
     "number": 179,
-    "text": "As características culturais variam de povo para povo. Há notícias de um povo que possuía formas de contar diferentes das nossas, como indicado no quadrinho a seguir. Segundo o padrão de contagem indicado na figura, as representações dos numerais cinco e sete, nessa cultura, viriam ser, respectivamente, [Figura: padrão de contagem].",
+    "text": "As características culturais variam de povo para povo. Há notícias de um povo que possuía formas de contar diferentes das nossas, como indicado no quadrinho a seguir. Segundo o padrão de contagem indicado na figura, as representações dos numerais cinco e sete, nessa cultura, viriam ser, respectivamente, [Figura].",
     "alternatives": {
       "a": "okosa urapum urapum urapum e okosa okosa urapum urapum urapum.",
       "b": "okosa okosa urapum e okosa okosa okosa okosa urapum.",
