@@ -2,6 +2,7 @@
 import { useState, useEffect, useCallback, useMemo, useRef } from 'react'
 import './ReviewPage.css'
 import FormatToolbar from './FormatToolbar.jsx'
+import { parseStemSegments } from './parseQuestionFigures.js'
 
 const AREA_TO_DAY = {
   linguagens: 'd1',
@@ -131,6 +132,7 @@ const PT_ACCENT_MAP = {
   'acoes': 'ações', 'acao': 'ação',
   'condicao': 'condição', 'condicoes': 'condições',
   'funcao': 'função', 'funcoes': 'funções',
+  'admissao': 'admissão', 'admissoes': 'admissões',
 
   // Nouns — culture/arts/language
   'lingua': 'língua', 'linguas': 'línguas',
@@ -152,6 +154,7 @@ const PT_ACCENT_MAP = {
   'indice': 'índice', 'indices': 'índices',
   'numero': 'número', 'numeros': 'números',
   'codigo': 'código', 'codigos': 'códigos',
+  'combustivel': 'combustível', 'combustiveis': 'combustíveis',
 
   // Adjectives — common proparoxytones
   'publico': 'público', 'publica': 'pública', 'publicos': 'públicos', 'publicas': 'públicas',
@@ -159,6 +162,9 @@ const PT_ACCENT_MAP = {
   'historico': 'histórico', 'historica': 'histórica', 'historicos': 'históricos', 'historicas': 'históricas',
   'politico': 'político', 'politica': 'política', 'politicos': 'políticos', 'politicas': 'políticas',
   'economico': 'econômico', 'economica': 'econômica', 'economicos': 'econômicos', 'economicas': 'econômicas',
+  'energetico': 'energético', 'energetica': 'energética', 'energeticos': 'energéticos', 'energeticas': 'energéticas',
+  'isobarico': 'isobárico', 'isobarica': 'isobárica', 'isobaricos': 'isobáricos', 'isobaricas': 'isobáricas',
+  'isometrico': 'isométrico', 'isometrica': 'isométrica', 'isometricos': 'isométricos', 'isometricas': 'isométricas',
   'basico': 'básico', 'basica': 'básica', 'basicos': 'básicos', 'basicas': 'básicas',
   'etico': 'ético', 'etica': 'ética', 'eticos': 'éticos', 'eticas': 'éticas',
   'critico': 'crítico', 'critica': 'crítica', 'criticos': 'críticos', 'criticas': 'críticas',
@@ -184,7 +190,7 @@ const PT_ACCENT_MAP = {
   'necessario': 'necessário', 'necessaria': 'necessária', 'necessarios': 'necessários', 'necessarias': 'necessárias',
   'especial': 'especial', 'importante': 'importante',
   'util': 'útil', 'uteis': 'úteis',
-  'fragil': 'frágil', 'frageis': 'frágeis',
+  'fragil': 'frágil', 'frageis': 'frágeis', 'farmaco': 'fármaco',
   'agil': 'ágil', 'ageis': 'ágeis',
   'filmico': 'fílmico', 'filmica': 'fílmica', 'filmicos': 'fílmicos', 'filmicas': 'fílmicas',
   'lirico': 'lírico', 'lirica': 'lírica', 'liricos': 'líricos', 'liricas': 'líricas',
@@ -1519,11 +1525,14 @@ export default function ReviewPage() {
                           </div>
                           {!isCollapsed && <>
                             {c.subtitle && <RichText text={c.subtitle} className="rp-ctx-subtitle" />}
-                            {c.text && <RichText text={c.text} className="rp-ctx-text" />}
-                            {c.images?.length > 0 && (
-                              <div className="rp-q-images">
-                                {c.images.map(img => <img key={img} src={`/${img}`} alt="" className="rp-q-img" />)}
-                              </div>
+                            {parseStemSegments(c.text ?? '', c.images ?? []).map((seg, i) =>
+                              seg.type === 'text' ? (
+                                <RichText key={i} text={seg.text} className="rp-ctx-text" />
+                              ) : (
+                                <div key={i} className="rp-q-images">
+                                  <img src={`/${seg.src}`} alt={seg.caption ?? ''} className="rp-q-img" />
+                                </div>
+                              )
                             )}
                             {c.reference && <RichText text={c.reference} className="rp-ctx-reference" />}
                           </>}

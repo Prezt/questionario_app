@@ -1,6 +1,6 @@
 ---
 name: review-exam-year
-description: Guide for reviewing a year of ENEM questions. Covers image fixes, text cleanup, formula formatting, and context extraction for linguagens. Use when reviewing any pending year/area in NOTES.MD.
+description: Guide for reviewing a year of ENEM questions. Covers image fixes, text cleanup, formula formatting, and context extraction (all areas — not just linguagens). Use when reviewing any pending year/area in NOTES.MD.
 ---
 
 # Review an ENEM Exam Year
@@ -33,60 +33,14 @@ Examples: `public/math_enem_2024.json`, `public/linguagens_enem_2024.json`
 
 ## Step 2 — Image review (ALL areas)
 
-For each question that has an `images` array or references a figure in `text`:
+Use the `review-images` skill for a full walkthrough of image verification and fixing. Key points:
 
-### 2a. Check image filenames
-
-Image files live in `public/figuras/` and `figuras/` (mirrored). The naming convention is:
-`q{number}_{year}_fig{n}.png`
-
-When images were first added they may have gotten wrong numbers (e.g., `fig1` was already used for another question's context figure, so the real question figure became `fig2`, `fig7`, etc.).
-
-**What to do:**
-- Look at the actual filenames in `figuras/` for this question number
-- Update the `images` array to point to the files that actually exist
-- If multiple images exist for one question (e.g., `fig2` and `fig3`), include all of them in the array
-
-### 2b. Clean up `[Figura: ...]` descriptions in text
-
-When the question was first entered, figure descriptions often included verbose inline data as a fallback for when no image was available. Now that real images exist, simplify these:
-
-**Before:**
-```
-[Figura: bússola com direções em graus e diagrama mostrando a rota planejada (P → Q → R) e a rota executada (P → S → T), com linha pontilhada indicando o trajeto necessário de T a R]
-```
-
-**After:**
-```
-[Figura]
-```
-
-Or keep a short label when context helps:
-```
-[Figura: plano cartesiano com o quadrado STUV]
-→
-[Figura]
-```
-
-Same rule for `[Gráfico: ...]`, `[Infográfico: ...]`, `[Imagem: ...]`, etc. — strip verbose data, keep only a brief label or nothing.
-
-### 2c. Alternatives that ARE images
-
-When a question's alternatives are visual (e.g., geometric figures, graphs), the alternative text should be empty:
-
-**Before:**
-```json
-"a": "[Projeções ortogonais - opção A]",
-"b": "[Projeções ortogonais - opção B]",
-```
-
-**After:**
-```json
-"a": "",
-"b": "",
-```
-
-The images array already has the corresponding figures.
+- Image filenames follow `q{number}_{year}_fig{n}.png` in `figuras/`
+- Two-column PDF layout causes images to be saved under the **wrong question number** — always visually verify by reading the PNG files
+- A question's `fig1` may actually belong to the prior question; its own image may be `fig2`
+- Context images (intro diagrams) belong in the context entry's `images` array, not the question's
+- Clean verbose `[Figura: long description]` → `[Figura]` once real images are confirmed
+- Alternatives that are images → set all alternative values to `""`
 
 ---
 
@@ -108,9 +62,65 @@ Apply this when a formula appears between two text paragraphs and visually belon
 
 ---
 
-## Step 4 — Context extraction (LINGUAGENS only)
+## Step 4 — Context extraction (ALL areas — not just linguagens)
 
-For `linguagens_enem_{year}.json`, source texts are embedded inside the question `text` field. They must be extracted to `contexts.json` and linked via `contextIds`.
+Context extraction applies to **every area** (linguagens, humanas, nature, math) whenever a question quotes an external source. The indicator is a source citation line — `"Disponível em:"`, an author/journal reference (e.g., `"GONÇALVES, A. A. et al. ... Química Nova, n. 3, 2013 (adaptado)."`), or a `(adaptado)` flag.
+
+### 4-science. Science areas (nature / math) with contexts
+
+Nature and math questions often open with a brief descriptive paragraph, a figure, and then a citation. All of that belongs in a context entry — only the bare question stem stays in `text`.
+
+**Context ID format for science areas:** `enem_{year}_{area}_q{questionNumber}_ctx{n}`
+Examples: `enem_2024_nature_q94_ctx1`, `enem_2024_math_q145_ctx1`
+
+Use the **absolute question number** (the question's `number` field), not a relative position within the area.
+
+**What goes in the context entry:**
+- `text`: the intro/description paragraph(s) that precede the question stem
+- `reference`: the citation line (author, journal, year)
+- `images`: any figure that belongs to the intro (e.g., a molecule diagram that illustrates the intro text)
+
+**What stays in `text` (question stem):**
+Only the part of the text that is a direct question or instruction — starting with "Com base...", "Qual...", "Nesse contexto...", "Calcule...", etc.
+
+**Example — nature question with intro + figure + citation:**
+
+Before:
+```json
+"text": "A nimesulida é um fármaco pouco solúvel em água...\n\n[Figura: estrutura química da nimesulida]\n\nGONÇALVES, A. A. et al. Química Nova, n. 3, 2013 (adaptado).\n\nPara converter a nimesulida nessa espécie eletricamente carregada, deve-se utilizar qual dos seguintes compostos?"
+```
+
+After question field:
+```json
+"text": "Para converter a nimesulida nessa espécie eletricamente carregada, deve-se utilizar qual dos seguintes compostos?",
+"contextIds": ["enem_2024_nature_q94_ctx1"]
+```
+
+New context entry in `contexts.json`:
+```json
+"enem_2024_nature_q94_ctx1": {
+  "title": "",
+  "subtitle": "",
+  "text": "A nimesulida é um fármaco pouco solúvel em água, utilizado como anti-inflamatório, analgésico e antitérmico...",
+  "reference": "GONÇALVES, A. A. et al. Contextualizando reações ácido-base... <b>Química Nova</b>, n. 3, 2013 (adaptado).",
+  "images": ["figuras/q094_2024_fig1.png"]
+}
+```
+
+### 4-ocr-drop. OCR drops reference lines — detection and recovery
+
+**The pattern**: In two-column PDF layouts, the citation line that appears between a figure and the question stem is often **completely omitted** by OCR. The question JSON will look syntactically fine but the context is incomplete or missing entirely.
+
+**How to detect it:**
+1. The question stem begins with a pronoun or demonstrative that has no antecedent in the same `text` field: `"esse fármaco"`, `"essa substância"`, `"esses dados"`, `"o composto acima"`, `"o gráfico a seguir"` — but there is no preceding description.
+2. The `text` field is unusually short for a question that has images.
+3. The question has `images` but no `contextIds` and no intro paragraph in `text`.
+
+**What to do:**
+- Open the original PDF page for that question (in `figuras/page-*.png` or the source scan).
+- Look for the citation/reference line that OCR dropped — it typically sits between the last figure and the first line of the question stem.
+- Create a context entry that includes the intro text, the dropped citation, and any relevant images.
+- Link the question to the new context via `contextIds`.
 
 ### 4a. Identify source texts
 
@@ -142,9 +152,13 @@ The attribution stays inline; no `contextIds` field; no context entry created.
 
 ### 4b. Create context entries in `contexts.json`
 
-Context ID format: `enem_{year}_linguagens_q{questionNumber}_ctx{n}`
+**For linguagens:** Context ID format: `enem_{year}_linguagens_q{questionNumber}_ctx{n}`
+Use `q{n}` where `n` is the question number within its language group (not the absolute question number).
 
-Use `q{n}` where `n` is the question number within its language group (not the absolute question number). Use `ctx{n}` for multiple contexts per question.
+**For all other areas (humanas, nature, math):** Use the question's absolute `number` field.
+Format: `enem_{year}_{area}_q{questionNumber}_ctx{n}`
+
+Use `ctx{n}` for multiple contexts per question.
 
 Entry structure:
 ```json
