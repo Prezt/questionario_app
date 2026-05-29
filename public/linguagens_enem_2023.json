@@ -1,10 +1,10 @@
 [
   {
     "number": 1,
-    "text": "O filme <i>Como estrelas em la terra</i> aborda o tema da dislexia. Relacionando o cartaz do filme com a sinopse, constata-se que o(a)",
+    "text": "O filme <i>Como estrellas en la tierra</i> aborda o tema da dislexia. Relacionando o cartaz do filme com a sinopse, constata-se que o(a)",
     "alternatives": {
       "a": "olhar diferenciado para com o outro gera mudanças",
-      "b": "estudante com dislexia apresenta um tom questionado",
+      "b": "estudante com dislexia apresenta um tom questionador.",
       "c": "abordagem para lidar com a dislexia é pautada na disciplina.",
       "d": "contato com os pais prejudica o acompanhamento da dislexia.",
       "e": "mudança de interesses ocorre na transição da infância para a vida adulta."
@@ -17,7 +17,7 @@
     "year": 2023,
     "test": "ENEM",
     "area": "linguagens",
-    "answer": "b",
+    "answer": "a",
     "difficulty": 4,
     "language": "es",
     "contextIds": [
@@ -29,11 +29,11 @@
     "number": 2,
     "text": "Para enfatizar características e atitudes que reforçam a identidade da mulher negra, o poema da escritora costarriquenha apresenta",
     "alternatives": {
-      "a": "advérbios como \" rotundamente \" e \" categóricamente \".",
-      "b": "verbos reflexivos como \" me niego \" e \" me acepto \".",
-      "c": "adjetivos como \" grande \" e \" hermosa \".",
-      "d": "substantivos como \" sangre \" e \" piel \".",
-      "e": "adjetivos possessivos como \" mi \" e \" mis \"."
+      "a": "advérbios como \"rotundamente\" e \"categoricamente\".",
+      "b": "verbos reflexivos como \"me niego\" e \"me acepto\".",
+      "c": "adjetivos como \"grande\" e \"hermosa\".",
+      "d": "substantivos como \"sangre\" e \"piel\".",
+      "e": "adjetivos possessivos como \"mi\" e \"mis\"."
     },
     "images": [],
     "tags": [
@@ -43,7 +43,7 @@
     "year": 2023,
     "test": "ENEM",
     "area": "linguagens",
-    "answer": "b",
+    "answer": "a",
     "difficulty": 6,
     "language": "es",
     "contextIds": [
@@ -57,8 +57,8 @@
       "a": "característica amistosa do povo espanhol.",
       "b": "beleza das paisagens naturais da Espanha.",
       "c": "variedade de pratos na gastronomia espanhola.",
-      "d": "relação entre os sentidos do paladar e do olfato ngastronomia.",
-      "e": "gastronomia como representação da identidadcultural de um povo."
+      "d": "relação entre os sentidos do paladar e do olfato na gastronomia.",
+      "e": "gastronomia como representação da identidade cultural de um povo."
     },
     "images": [],
     "tags": [
@@ -68,13 +68,16 @@
     "year": 2023,
     "test": "ENEM",
     "area": "linguagens",
-    "answer": "d",
+    "answer": "e",
     "difficulty": 5,
-    "language": "es"
+    "language": "es",
+    "contextIds": [
+      "enem_2023_linguagens_q3_ctx1"
+    ]
   },
   {
     "number": 4,
-    "text": "Nesse texto, a expressão \" cortina de humo \" revela que o manipulador",
+    "text": "Nesse texto, a expressão \"cortina de humo\" revela que o manipulador",
     "alternatives": {
       "a": "amadurece tardiamente.",
       "b": "busca mascarar a verdade.",
@@ -90,9 +93,12 @@
     "year": 2023,
     "test": "ENEM",
     "area": "linguagens",
-    "answer": "a",
+    "answer": "b",
     "difficulty": 5,
-    "language": "es"
+    "language": "es",
+    "contextIds": [
+      "enem_2023_linguagens_q4_ctx1"
+    ]
   },
   {
     "number": 5,
@@ -113,7 +119,7 @@
     "year": 2023,
     "test": "ENEM",
     "area": "linguagens",
-    "answer": "b",
+    "answer": "a",
     "difficulty": 5,
     "language": "es",
     "contextIds": [
@@ -124,15 +130,13 @@
     "number": 1,
     "text": "[Imagem: Cartaz]Esse cartaz de campanha sugere que",
     "alternatives": {
-      "a": "olhar diferenciado para com o outro gera mudanças",
-      "b": "estudante com dislexia apresenta um tom questionado",
-      "c": "abordagem para lidar com a dislexia é pautada na disciplina.",
-      "d": "contato com os pais prejudica o acompanhamento da dislexia.",
-      "e": "mudança de interesses ocorre na transição da infância para a vida adulta."
+      "a": "os lixões precisam de ampliação.",
+      "b": "o desperdício degrada o ambiente.",
+      "c": "os mercados doam alimentos perecíveis.",
+      "d": "a desnutrição compromete o raciocínio.",
+      "e": "as residências carecem de refrigeradores."
     },
-    "images": [
-      "figuras/q001_2023_fig1.png"
-    ],
+    "images": [],
     "tags": [
       "gêneros textuais",
       "linguística e variação linguística"
@@ -142,17 +146,20 @@
     "area": "linguagens",
     "answer": "b",
     "difficulty": 4,
-    "language": "en"
+    "language": "en",
+    "contextIds": [
+      "enem_2023_linguagens_q1_en_ctx1"
+    ]
   },
   {
     "number": 2,
     "text": "Nesse poema, a expressão “No man is an island” ressalta o(a)",
     "alternatives": {
-      "a": "advérbios como \" rotundamente \" e \" categóricamente \".",
-      "b": "verbos reflexivos como \" me niego \" e \" me acepto \".",
-      "c": "adjetivos como \" grande \" e \" hermosa \".",
-      "d": "substantivos como \" sangre \" e \" piel \".",
-      "e": "adjetivos possessivos como \" mi \" e \" mis \"."
+      "a": "medo da morte.",
+      "b": "ideia de conexão.",
+      "c": "conceito de solidão.",
+      "d": "risco de devastação.",
+      "e": "necessidade de empatia."
     },
     "images": [],
     "tags": [
@@ -171,13 +178,13 @@
   },
   {
     "number": 3,
-    "text": "Nesse poema, o eu poético enaltece a",
+    "text": "Ao retratar a trajetória de refugiados, o poema recorre à imagem de viagem marítima para destacar o(a)",
     "alternatives": {
-      "a": "característica amistosa do povo espanhol.",
-      "b": "beleza das paisagens naturais da Espanha.",
-      "c": "variedade de pratos na gastronomia espanhola.",
-      "d": "relação entre os sentidos do paladar e do olfato ngastronomia.",
-      "e": "gastronomia como representação da identidad cultural de um povo."
+      "a": "risco de choques culturais.",
+      "b": "impacto do ensino de história.",
+      "c": "importância da luta ambiental.",
+      "d": "existência de experiências plurais.",
+      "e": "necessidade de capacitação profissional."
     },
     "images": [],
     "tags": [
@@ -189,17 +196,20 @@
     "area": "linguagens",
     "answer": "d",
     "difficulty": 5,
-    "language": "en"
+    "language": "en",
+    "contextIds": [
+      "enem_2023_linguagens_q3_en_ctx1"
+    ]
   },
   {
     "number": 4,
-    "text": "Nesse texto, a expressão \" cortina de humo \" revela que o manipulador",
+    "text": "Nesse poema de Tato Laviera, o eu lírico destaca uma",
     "alternatives": {
-      "a": "amadurece tardiamente.",
-      "b": "busca mascarar a verdade.",
-      "c": "rejeita questionamentos alheios.",
-      "d": "aproxima-se de pessoas indefesas.",
-      "e": "faz-se presente de forma controladora."
+      "a": "convergência linguístico-cultural.",
+      "b": "característica histórico-cultural.",
+      "c": "tendência estilístico-literária.",
+      "d": "discriminação cultural.",
+      "e": "censura musical."
     },
     "images": [],
     "tags": [
@@ -211,17 +221,20 @@
     "area": "linguagens",
     "answer": "a",
     "difficulty": 5,
-    "language": "en"
+    "language": "en",
+    "contextIds": [
+      "enem_2023_linguagens_q4_en_ctx1"
+    ]
   },
   {
     "number": 5,
-    "text": "A letra da canção Que quede claro, da banda cubana Orishas, revela o(a)",
+    "text": "Ao retratar o ambiente de trabalho em um escritório, esse cartum tem por objetivo",
     "alternatives": {
-      "a": "indignação diante do desrespeito à diversidade",
-      "b": "violência característica das grandes metrópoles",
-      "c": "preconceito da sociedade com relação ao misticismo",
-      "d": "descuido da população com os sonhos dos imigrantes",
-      "e": "falta de segurança existente no transporte público urbano"
+      "a": "criticar um padrão de vestimenta.",
+      "b": "destacar a falta de diversidade.",
+      "c": "indicar um modo de interação.",
+      "d": "elogiar um modelo de organização.",
+      "e": "salientar o espírito de cooperação."
     },
     "images": [],
     "tags": [
@@ -235,7 +248,7 @@
     "difficulty": 4,
     "language": "en",
     "contextIds": [
-      "enem_2023_linguagens_q5_ctx1"
+      "enem_2023_linguagens_q5_en_ctx1"
     ]
   },
   {
@@ -263,7 +276,7 @@
   },
   {
     "number": 7,
-    "text": "[Figura]",
+    "text": "Nesse texto, os recursos expressivos usados pela narradora",
     "alternatives": {
       "a": "revelam as marcas da violência de raça e de gênero na construção da identidade",
       "b": "questionam o pioneirismo do estado do Ceará no enfrentamento à escravidão",
@@ -271,9 +284,7 @@
       "d": "sugerem uma atmosfera onírica alinhada ao desejo de resgate da espiritualidade",
       "e": "mimetizam, na paisagem, os corpos transformados pela violência da escravidão"
     },
-    "images": [
-      "figuras/q007_2023_fig1.png"
-    ],
+    "images": [],
     "tags": [
       "cultura e identidade",
       "literatura brasileira"
@@ -289,7 +300,7 @@
   },
   {
     "number": 8,
-    "text": "O texto de Agualusa tematiza o preconceito em relação o português brasileiro. Com base no trecho citado pelo autor, infere-se que esse preconceito se deve",
+    "text": "O texto de Agualusa tematiza o preconceito em relação ao português brasileiro. Com base no trecho citado pelo autor, infere-se que esse preconceito se deve",
     "alternatives": {
       "a": "à dificuldade de consolidação da literatura brasileira em outros países.",
       "b": "aos diferentes graus de instrução formal entre os falantes de língua portuguesa.",
@@ -319,7 +330,7 @@
       "b": "nível de letramento da população marginalizada",
       "c": "poder de censura por parte dos serviços públicos",
       "d": "legitimidade da voz dos representantes da nobreza",
-      "e": "diversidade dos meios disponíveis em uma époc histórica"
+      "e": "diversidade dos meios disponíveis em uma época histórica."
     },
     "images": [],
     "tags": [
@@ -385,7 +396,7 @@
     "number": 12,
     "text": "Pela voz de uma empregada da casa, a descrição de um dos membros da família exemplifica a renovação da ficção urbana nos anos 1950, aqui observada na",
     "alternatives": {
-      "a": "A opção por termos e expressões de sentido ambíguo",
+      "a": "opção por termos e expressões de sentido ambíguo.",
       "b": "crítica social inspirada pelo convívio com os patrões",
       "c": "descrição impressionista do fetiche do personagem",
       "d": "presença de um foco narrativo de caráter impreciso",
@@ -409,11 +420,11 @@
     "number": 13,
     "text": "Perante o outro, o eu lírico revela, na força das memórias evocadas, a",
     "alternatives": {
-      "a": "A vergonha das marcas provocadas pela passagem do tempo.",
-      "b": "A indecisão em face das possibilidades afetivas do presente.",
-      "c": "A serenidade sedimentada pela entrega pacífica ao desejo.",
-      "d": "A frustração causada pela vontade de retorno ao passado.",
-      "e": "A disponibilidade para a exploração do prazer efêmero."
+      "a": "vergonha das marcas provocadas pela passagem do tempo.",
+      "b": "indecisão em face das possibilidades afetivas do presente.",
+      "c": "serenidade sedimentada pela entrega pacífica ao desejo.",
+      "d": "frustração causada pela vontade de retorno ao passado.",
+      "e": "disponibilidade para a exploração do prazer efêmero."
     },
     "images": [],
     "tags": [
@@ -431,13 +442,13 @@
   },
   {
     "number": 14,
-    "text": "Nesse trecho do conto, o gosto dos moradores d povoado por ouvir a novela de rádio recontada po Soropita deve-se ao(à)",
+    "text": "Nesse trecho do conto, o gosto dos moradores do povoado por ouvir a novela de rádio recontada por Soropita deve-se ao(à)",
     "alternatives": {
-      "a": "A qualidade do som do rádio.",
-      "b": "B estabilidade do enredo contado.",
-      "c": "C ineditismo do capítulo da novela.",
-      "d": "D jeito singular de falar aos ouvintes.",
-      "e": "E dificuldade de compreensão da história."
+      "a": "qualidade do som do rádio.",
+      "b": "estabilidade do enredo contado.",
+      "c": "ineditismo do capítulo da novela.",
+      "d": "jeito singular de falar aos ouvintes.",
+      "e": "dificuldade de compreensão da história."
     },
     "images": [],
     "tags": [
@@ -554,7 +565,7 @@
     "number": 19,
     "text": "O uso de citação e de dados estatísticos nesse texto tem o objetivo de",
     "alternatives": {
-      "a": "resaltar a importância da poesia para denunciar a morte de negros, que cresce a cada dia.",
+      "a": "ressaltar a importância da poesia para denunciar a morte de negros, que cresce a cada dia.",
       "b": "destacar o crescimento exponencial da temática do preconceito na produção literária no Brasil.",
       "c": "demonstrar o incremento no quantitativo de expressões artísticas na discussão de problemas sociais.",
       "d": "evidenciar argumentos que reforçam a ideia de que os negros são vítimas em potencial da violência.",
@@ -623,7 +634,7 @@
   },
   {
     "number": 22,
-    "text": "[Figura]",
+    "text": "A leitura do texto permite reconhecer a \"cantiga de voltar\" como patrimônio linguístico que",
     "alternatives": {
       "a": "representa a memória de uma língua africana extinta",
       "b": "exalta a rotina executada por jovens afrodescendentes",
@@ -631,9 +642,7 @@
       "d": "resgata a musicalidade africana por meio de palavras inteligíveis.",
       "e": "remonta à tristeza dos negros mais velhos com saudade da África."
     },
-    "images": [
-      "figuras/q022_2023_fig1.png"
-    ],
+    "images": [],
     "tags": [
       "cultura e identidade",
       "literatura brasileira"
@@ -666,11 +675,15 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "c",
-    "difficulty": 6
+    "difficulty": 6,
+    "contextIds": [
+      "enem_2023_linguagens_q23_ctx1",
+      "enem_2023_linguagens_q23_ctx2"
+    ]
   },
   {
     "number": 24,
-    "text": "[Figura] A Defensoria não para! Disque 180 Em tempos de isolamento social por conta da pandemia de covid-19, a Defensoria Pública alerta para o aumento da violência contra a mulher! Não se cale! Denuncie!",
+    "text": "[Figura] Este anuncio publicitário, veiculado durante o contexto da pandemia de covid-19, tem por finalidade",
     "alternatives": {
       "a": "divulgar o canal telefônico de atendimento a casos de violência contra a mulher.",
       "b": "informar sobre a atuação de uma entidade defensora da mulher vítima de violência.",
@@ -679,7 +692,7 @@
       "e": "incentivar o público feminino a denunciar crimes de violência contra a mulher durante o período de isolamento."
     },
     "images": [
-      "figuras/q024_2023_fig1.png"
+      "figuras/q024_2023_fig2.png"
     ],
     "tags": [
       "comunicação e mídia",
@@ -693,7 +706,7 @@
   },
   {
     "number": 25,
-    "text": "Com a perda de parte da língua na infância, a narradora",
+    "text": "Com a perda de parte da língua na infância, a narradora tenta voltar a falar. Essa tentativa revela uma experiência que",
     "alternatives": {
       "a": "reflete o olhar do pai sobre as etapas do plantio",
       "b": "metaforiza a linguagem como ferramenta de lavoura",
@@ -722,7 +735,7 @@
       "b": "contrapor a infância privilegiada das crianças da época à infância violentada das crianças escravizadas.",
       "c": "antecipar o futuro apagamento das marcas da escravidão no contexto social.",
       "d": "criticar a atenuação da violência contra os povos escravizados nas memórias retratadas pelos museus",
-      "e": "imaginar a reação de indiferença de seu contemporâneos com os escravizados libertos."
+      "e": "imaginar a reação de indiferença de seus contemporâneos com os escravizados libertos."
     },
     "images": [],
     "tags": [
@@ -764,7 +777,7 @@
   },
   {
     "number": 28,
-    "text": "A função emotiva presente no poema cumpre o propósito o eu lírico de",
+    "text": "A função emotiva presente no poema cumpre o propósito do eu lírico de",
     "alternatives": {
       "a": "revelar as desilusões amorosas.",
       "b": "refletir sobre a censura à sua voz.",
@@ -781,7 +794,10 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "c",
-    "difficulty": 6
+    "difficulty": 6,
+    "contextIds": [
+      "enem_2023_linguagens_q28_ctx1"
+    ]
   },
   {
     "number": 29,
@@ -895,11 +911,15 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "a",
-    "difficulty": 7
+    "difficulty": 7,
+    "contextIds": [
+      "enem_2023_linguagens_q33_ctx1",
+      "enem_2023_linguagens_q33_ctx2"
+    ]
   },
   {
     "number": 34,
-    "text": "[Figura] [Gráfico]",
+    "text": "No diálogo que estabelece com as religiões afro-brasileiras, sintetizado na descrição e na imagem do espetáculo, a dança exprime uma",
     "alternatives": {
       "a": "crítica aos movimentos padronizados do balé clássico",
       "b": "representação contemporânea de rituais ancestrais extintos",
@@ -907,10 +927,7 @@
       "d": "releitura irônica da atmosfera mística presente no culto a entidades",
       "e": "oposição entre o resgate de tradições e a efemeridade da vida humana"
     },
-    "images": [
-      "figuras/q034_2023_fig1.png",
-      "figuras/q034_2023_fig2.png"
-    ],
+    "images": [],
     "tags": [
       "artes visuais",
       "história da cultura e arte",
@@ -922,7 +939,8 @@
     "answer": "c",
     "difficulty": 7,
     "contextIds": [
-      "enem_2023_linguagens_q34_ctx1"
+      "enem_2023_linguagens_q34_ctx1",
+      "enem_2023_linguagens_q34_ctx2"
     ]
   },
   {
@@ -1051,7 +1069,7 @@
       "a": "dificuldade de conseguir bons resultados esportivos",
       "b": "dependência de características biológicas padronizadas",
       "c": "inexistência de uma categoria para pessoas transgênero",
-      "d": "necessidade de afastamento temporário da competições",
+      "d": "necessidade de afastamento temporário das competições.",
       "e": "impossibilidade de uso controlado de substâncias exógenas"
     },
     "images": [],
@@ -1143,7 +1161,7 @@
   },
   {
     "number": 44,
-    "text": "Essa campanha publicitária do Ministério da Saúde visa",
+    "text": "[Figura]Essa campanha publicitária do Ministério da Saúde visa",
     "alternatives": {
       "a": "divulgar um conjunto de benefícios proporcionados pela amamentação.",
       "b": "apresentar tratamentos para infecções respiratórias em bebês.",
@@ -1151,7 +1169,9 @@
       "d": "orientar sobre os exercícios para uma boa amamentação.",
       "e": "informar sobre o aumento de anticorpos nas mães."
     },
-    "images": [],
+    "images": [
+      "figuras/q044_2023_fig1.png"
+    ],
     "tags": [
       "comunicação e mídia",
       "gêneros textuais"
@@ -1172,9 +1192,7 @@
       "d": "informar o setor público sobre o retrocesso da legislação destinada à população idosa.",
       "e": "chamar a atenção da população sobre a qualidade dos serviços de saúde pública para o idoso."
     },
-    "images": [
-      "figuras/q045_2023_fig1.png"
-    ],
+    "images": [],
     "tags": [
       "gêneros textuais",
       "sociologia e estrutura social"
@@ -1183,6 +1201,9 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "e",
-    "difficulty": 3
+    "difficulty": 3,
+    "contextIds": [
+      "enem_2023_linguagens_q45_ctx1"
+    ]
   }
 ]

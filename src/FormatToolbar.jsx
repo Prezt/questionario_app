@@ -6,9 +6,8 @@ function writeToTextarea(el, newValue, selStart, selEnd) {
   // React tracks the native input value via an internal property.
   // To trigger onChange on a controlled input we must set the value
   // through the native setter, then dispatch an 'input' event.
-  const nativeSetter = Object.getOwnPropertyDescriptor(
-    HTMLTextAreaElement.prototype, 'value'
-  ).set
+  const proto = el.tagName === 'TEXTAREA' ? HTMLTextAreaElement.prototype : HTMLInputElement.prototype
+  const nativeSetter = Object.getOwnPropertyDescriptor(proto, 'value').set
   nativeSetter.call(el, newValue)
   el.dispatchEvent(new Event('input', { bubbles: true }))
   el.selectionStart = selStart
@@ -21,7 +20,7 @@ export default function FormatToolbar() {
 
   useEffect(() => {
     const onFocusIn = (e) => {
-      if (e.target.tagName === 'TEXTAREA') {
+      if (e.target.tagName === 'TEXTAREA' || (e.target.tagName === 'INPUT' && e.target.type === 'text')) {
         activeEl.current = e.target
         setHasActive(true)
       }
