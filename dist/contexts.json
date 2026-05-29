@@ -3020,7 +3020,7 @@
     "title": "",
     "subtitle": "",
     "text": "Me niego rotundamente\nA negar mi voz,\nMi sangre y mi piel.\nY me niego rotundamente\nA dejar de ser yo,\nA dejar de sentirme bien\nCuando miro mi rostro en el espejo\nCon mi boca\nRotundamente grande,\nY mi nariz\nRotundamente hermosa,\nY mis dientes\nRotundamente blancos,\nY mi piel valientemente negra.\nY me niego categóricamente\nA dejar de hablar\nMi lengua, mi acento y mi historia.\nY me niego absolutamente\nA ser parte de los que callan,\nde los que temen,\nde los que lloran.\nPorque me acepto\nRotundamente libre,\nRotundamente negra,\nRotundamente hermosa.",
-    "reference": "",
+    "reference": "CAMPELL BARR, S. Disponível em: https.negracubanateniaqueser.com Acesso em 25 out. 2021.",
     "images": []
   },
   "enem_2023_linguagens_q5_ctx1": {
@@ -3778,6 +3778,29 @@
     "subtitle": "",
     "text": "O arquiteto Renzo Piano exibiu a maquete da nova sede do Museu Whitney de Arte Americana, um prédio assimétrico que tem um vão aberto para a galeria principal cuja medida da área é 1 672 m².",
     "reference": "<b>Época</b>, n. 682, jun. 2011 (adaptado).",
+    "images": []
+  },
+  "enem_2023_linguagens_q1_ctx1": {
+    "title": "TEXTO I",
+    "subtitle": "",
+    "text": "",
+    "reference": "",
+    "images": [
+      "figuras/q001_2023_fig2.png"
+    ]
+  },
+  "enem_2023_linguagens_q1_ctx2": {
+    "title": "TEXTO II",
+    "subtitle": "",
+    "text": "Ishaan Awashi es un niño de 8 años cuyo mundo está plagado de maravillas que nadie más parece apreciar: colores, peces, perros y cometas, que simplemente no son importantes en la vida de los adultos, que parecen más interesados en cosas como los deberes, las notas o la limpieza. E Ishaan parece no poder hacer nada bien en clase. Cuando los problemas que ocasiona superan a sus padres, es internado en un colegio para que le disciplinen. Las cosas no mejoran en el nuevo colegio, donde Ishaan tiene además que aceptar estar lejos de sus padres. Hasta que un dia, el nuevo profesor de arte, Ram Shankar Nikumbh, entra en escena, se interesa por el pequeño Ishaan y todo cambia.",
+    "reference": "Disponível em: https://elfinalde.com. Acesso em: 26 out. 2021 (adaptado)",
+    "images": []
+  },
+  "enem_2023_linguagens_q2_ctx2": {
+    "title": "",
+    "subtitle": "",
+    "text": "No man is an island,\nEntire of itself;\nEvery man is a piece of the continent,\nA part of the main.\n[…]\nAny man’s death diminishes me,\nBecause I am involved in mankind.",
+    "reference": "DONNE, J. The Works of John Donne. Londres: John W. Parker, 1839 (fragmento).",
     "images": []
   }
 }

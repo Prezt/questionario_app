@@ -1,7 +1,7 @@
 [
   {
     "number": 1,
-    "text": "O filme 'Como estrelas em la terra' aborda o tema da dislexia. Relacionando o cartaz do filme com a sinopse, constata-se que o(a) ...",
+    "text": "O filme <i>Como estrelas em la terra</i> aborda o tema da dislexia. Relacionando o cartaz do filme com a sinopse, constata-se que o(a)",
     "alternatives": {
       "a": "olhar diferenciado para com o outro gera mudanças",
       "b": "estudante com dislexia apresenta um tom questionado",
@@ -19,7 +19,11 @@
     "area": "linguagens",
     "answer": "b",
     "difficulty": 4,
-    "language": "es"
+    "language": "es",
+    "contextIds": [
+      "enem_2023_linguagens_q1_ctx1",
+      "enem_2023_linguagens_q1_ctx2"
+    ]
   },
   {
     "number": 2,
@@ -118,7 +122,7 @@
   },
   {
     "number": 1,
-    "text": "Relacionando o cartaz do filme com a sinopse, constata-se que o(a)",
+    "text": "[Imagem: Cartaz]Esse cartaz de campanha sugere que",
     "alternatives": {
       "a": "olhar diferenciado para com o outro gera mudanças",
       "b": "estudante com dislexia apresenta um tom questionado",
@@ -126,7 +130,9 @@
       "d": "contato com os pais prejudica o acompanhamento da dislexia.",
       "e": "mudança de interesses ocorre na transição da infância para a vida adulta."
     },
-    "images": [],
+    "images": [
+      "figuras/q001_2023_fig1.png"
+    ],
     "tags": [
       "gêneros textuais",
       "linguística e variação linguística"
@@ -140,7 +146,7 @@
   },
   {
     "number": 2,
-    "text": "Para enfatizar características e atitudes que reforçam identidade da mulher negra, o poema da escritora ostarriquenha apresenta",
+    "text": "Nesse poema, a expressão “No man is an island” ressalta o(a)",
     "alternatives": {
       "a": "advérbios como \" rotundamente \" e \" categóricamente \".",
       "b": "verbos reflexivos como \" me niego \" e \" me acepto \".",
@@ -160,7 +166,7 @@
     "difficulty": 6,
     "language": "en",
     "contextIds": [
-      "enem_2023_linguagens_q2_ctx1"
+      "enem_2023_linguagens_q2_ctx2"
     ]
   },
   {
