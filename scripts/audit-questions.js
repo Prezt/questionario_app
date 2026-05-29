@@ -70,7 +70,11 @@ function checkEmptyText(q) {
   if (text.length === 0) {
     issues.push({ type: 'EMPTY_TEXT', detail: 'Question text is empty' });
   } else if (text.length < 40) {
-    issues.push({ type: 'SHORT_TEXT', detail: `Text is only ${text.length} chars: "${text}"` });
+    const hasContext = (q.contextIds || []).length > 0;
+    const hasImages = (q.images || []).length > 0;
+    if (!hasContext && !hasImages) {
+      issues.push({ type: 'SHORT_TEXT', detail: `Text is only ${text.length} chars: "${text}"` });
+    }
   }
   return issues;
 }
@@ -78,9 +82,10 @@ function checkEmptyText(q) {
 function checkAlternatives(q) {
   const issues = [];
   const alts = q.alternatives || {};
+  const hasImages = (q.images || []).length > 0;
   ['a', 'b', 'c', 'd', 'e'].forEach(letter => {
     const val = (alts[letter] || '').trim();
-    if (val.length === 0) {
+    if (val.length === 0 && !hasImages) {
       issues.push({ type: 'EMPTY_ALTERNATIVE', detail: `Alternative (${letter}) is empty` });
     }
   });

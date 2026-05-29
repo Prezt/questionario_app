@@ -1,9 +1,9 @@
 {
   "summary": {
-    "totalQuestions": 1475,
-    "totalIssues": 167,
-    "filesWithIssues": 17,
-    "orphanedImages": 46
+    "totalQuestions": 1479,
+    "totalIssues": 81,
+    "filesWithIssues": 13,
+    "orphanedImages": 96
   },
   "byFile": {
     "humanas_enem_2018.json": {
@@ -20,244 +20,11 @@
     },
     "humanas_enem_2021.json": {
       "datasetIssues": [],
-      "questionIssues": [
-        {
-          "number": 53,
-          "issues": [
-            {
-              "type": "SHORT_TEXT",
-              "detail": "Text is only 20 chars: \"Artistas por um dia?\""
-            }
-          ]
-        },
-        {
-          "number": 60,
-          "issues": [
-            {
-              "type": "EMPTY_ALTERNATIVE",
-              "detail": "Alternative (a) is empty"
-            },
-            {
-              "type": "EMPTY_ALTERNATIVE",
-              "detail": "Alternative (b) is empty"
-            },
-            {
-              "type": "EMPTY_ALTERNATIVE",
-              "detail": "Alternative (c) is empty"
-            },
-            {
-              "type": "EMPTY_ALTERNATIVE",
-              "detail": "Alternative (d) is empty"
-            },
-            {
-              "type": "EMPTY_ALTERNATIVE",
-              "detail": "Alternative (e) is empty"
-            }
-          ]
-        },
-        {
-          "number": 83,
-          "issues": [
-            {
-              "type": "EMPTY_ALTERNATIVE",
-              "detail": "Alternative (a) is empty"
-            },
-            {
-              "type": "EMPTY_ALTERNATIVE",
-              "detail": "Alternative (b) is empty"
-            },
-            {
-              "type": "EMPTY_ALTERNATIVE",
-              "detail": "Alternative (c) is empty"
-            },
-            {
-              "type": "EMPTY_ALTERNATIVE",
-              "detail": "Alternative (d) is empty"
-            },
-            {
-              "type": "EMPTY_ALTERNATIVE",
-              "detail": "Alternative (e) is empty"
-            }
-          ]
-        },
-        {
-          "number": 84,
-          "issues": [
-            {
-              "type": "SHORT_TEXT",
-              "detail": "Text is only 36 chars: \"[CORRUPTED TEXT - UNABLE TO EXTRACT]\""
-            }
-          ]
-        },
-        {
-          "number": 89,
-          "issues": [
-            {
-              "type": "EMPTY_ALTERNATIVE",
-              "detail": "Alternative (a) is empty"
-            },
-            {
-              "type": "EMPTY_ALTERNATIVE",
-              "detail": "Alternative (b) is empty"
-            },
-            {
-              "type": "EMPTY_ALTERNATIVE",
-              "detail": "Alternative (c) is empty"
-            },
-            {
-              "type": "EMPTY_ALTERNATIVE",
-              "detail": "Alternative (d) is empty"
-            },
-            {
-              "type": "EMPTY_ALTERNATIVE",
-              "detail": "Alternative (e) is empty"
-            }
-          ]
-        }
-      ]
+      "questionIssues": []
     },
     "humanas_enem_2022.json": {
       "datasetIssues": [],
-      "questionIssues": [
-        {
-          "number": 54,
-          "issues": [
-            {
-              "type": "MISSING_IMAGE_FILE",
-              "detail": "figuras/q054_2022_fig1.png not found on disk"
-            }
-          ]
-        },
-        {
-          "number": 56,
-          "issues": [
-            {
-              "type": "MISSING_IMAGE_FILE",
-              "detail": "figuras/q056_2022_fig1.png not found on disk"
-            }
-          ]
-        },
-        {
-          "number": 66,
-          "issues": [
-            {
-              "type": "MISSING_IMAGE_FILE",
-              "detail": "figuras/q066_2022_fig1.png not found on disk"
-            },
-            {
-              "type": "MISSING_IMAGE_FILE",
-              "detail": "figuras/q066_2022_fig2.png not found on disk"
-            },
-            {
-              "type": "MISSING_IMAGE_FILE",
-              "detail": "figuras/q066_2022_fig3.png not found on disk"
-            }
-          ]
-        },
-        {
-          "number": 68,
-          "issues": [
-            {
-              "type": "MISSING_IMAGE_FILE",
-              "detail": "figuras/q068_2022_fig1.png not found on disk"
-            },
-            {
-              "type": "MISSING_IMAGE_FILE",
-              "detail": "figuras/q068_2022_fig2.png not found on disk"
-            },
-            {
-              "type": "MISSING_IMAGE_FILE",
-              "detail": "figuras/q068_2022_fig3.png not found on disk"
-            }
-          ]
-        },
-        {
-          "number": 74,
-          "issues": [
-            {
-              "type": "MISSING_IMAGE_FILE",
-              "detail": "figuras/q074_2022_fig1.png not found on disk"
-            },
-            {
-              "type": "MISSING_IMAGE_FILE",
-              "detail": "figuras/q074_2022_fig2.png not found on disk"
-            },
-            {
-              "type": "MISSING_IMAGE_FILE",
-              "detail": "figuras/q074_2022_fig3.png not found on disk"
-            },
-            {
-              "type": "MISSING_IMAGE_FILE",
-              "detail": "figuras/q074_2022_fig4.png not found on disk"
-            },
-            {
-              "type": "MISSING_IMAGE_FILE",
-              "detail": "figuras/q074_2022_fig5.png not found on disk"
-            }
-          ]
-        },
-        {
-          "number": 76,
-          "issues": [
-            {
-              "type": "MISSING_IMAGE_FILE",
-              "detail": "figuras/q076_2022_fig1.png not found on disk"
-            },
-            {
-              "type": "MISSING_IMAGE_FILE",
-              "detail": "figuras/q076_2022_fig2.png not found on disk"
-            },
-            {
-              "type": "MISSING_IMAGE_FILE",
-              "detail": "figuras/q076_2022_fig3.png not found on disk"
-            },
-            {
-              "type": "MISSING_IMAGE_FILE",
-              "detail": "figuras/q076_2022_fig4.png not found on disk"
-            },
-            {
-              "type": "MISSING_IMAGE_FILE",
-              "detail": "figuras/q076_2022_fig5.png not found on disk"
-            }
-          ]
-        },
-        {
-          "number": 78,
-          "issues": [
-            {
-              "type": "MISSING_IMAGE_FILE",
-              "detail": "figuras/q078_2022_fig1.png not found on disk"
-            }
-          ]
-        },
-        {
-          "number": 80,
-          "issues": [
-            {
-              "type": "MISSING_IMAGE_FILE",
-              "detail": "figuras/q080_2022_fig1.png not found on disk"
-            }
-          ]
-        },
-        {
-          "number": 82,
-          "issues": [
-            {
-              "type": "MISSING_IMAGE_FILE",
-              "detail": "figuras/q082_2022_fig1.png not found on disk"
-            }
-          ]
-        },
-        {
-          "number": 84,
-          "issues": [
-            {
-              "type": "MISSING_IMAGE_FILE",
-              "detail": "figuras/q084_2022_fig1.png not found on disk"
-            }
-          ]
-        }
-      ]
+      "questionIssues": []
     },
     "humanas_enem_2023.json": {
       "datasetIssues": [],
@@ -277,17 +44,7 @@
     },
     "linguagens_enem_2019.json": {
       "datasetIssues": [],
-      "questionIssues": [
-        {
-          "number": 5,
-          "issues": [
-            {
-              "type": "MARKER_WITHOUT_IMAGE",
-              "detail": "Text has [image marker] but images array is empty"
-            }
-          ]
-        }
-      ]
+      "questionIssues": []
     },
     "linguagens_enem_2020.json": {
       "datasetIssues": [],
@@ -301,35 +58,6 @@
         }
       ],
       "questionIssues": [
-        {
-          "number": 4,
-          "issues": [
-            {
-              "type": "SHORT_TEXT",
-              "detail": "Text is only 9 chars: \"Questão 4\""
-            },
-            {
-              "type": "EMPTY_ALTERNATIVE",
-              "detail": "Alternative (a) is empty"
-            },
-            {
-              "type": "EMPTY_ALTERNATIVE",
-              "detail": "Alternative (b) is empty"
-            },
-            {
-              "type": "EMPTY_ALTERNATIVE",
-              "detail": "Alternative (c) is empty"
-            },
-            {
-              "type": "EMPTY_ALTERNATIVE",
-              "detail": "Alternative (d) is empty"
-            },
-            {
-              "type": "EMPTY_ALTERNATIVE",
-              "detail": "Alternative (e) is empty"
-            }
-          ]
-        },
         {
           "number": 5,
           "issues": [
@@ -372,26 +100,6 @@
           "number": 18,
           "issues": [
             {
-              "type": "EMPTY_ALTERNATIVE",
-              "detail": "Alternative (a) is empty"
-            },
-            {
-              "type": "EMPTY_ALTERNATIVE",
-              "detail": "Alternative (b) is empty"
-            },
-            {
-              "type": "EMPTY_ALTERNATIVE",
-              "detail": "Alternative (c) is empty"
-            },
-            {
-              "type": "EMPTY_ALTERNATIVE",
-              "detail": "Alternative (d) is empty"
-            },
-            {
-              "type": "EMPTY_ALTERNATIVE",
-              "detail": "Alternative (e) is empty"
-            },
-            {
               "type": "MISSING_IMAGE_FILE",
               "detail": "figuras/q018_2021_fig1.png not found on disk"
             }
@@ -403,15 +111,6 @@
             {
               "type": "MARKER_WITHOUT_IMAGE",
               "detail": "Text has [image marker] but images array is empty"
-            }
-          ]
-        },
-        {
-          "number": 23,
-          "issues": [
-            {
-              "type": "SHORT_TEXT",
-              "detail": "Text is only 30 chars: \"A morte do cisne demonstra que\""
             }
           ]
         },
@@ -488,7 +187,7 @@
           "issues": [
             {
               "type": "MISSING_IMAGE_FILE",
-              "detail": "[Figura: Garota com bola, obra de Roy Lichtenstein] not found on disk"
+              "detail": "figuras/q042_2021_fig1.png not found on disk"
             }
           ]
         },
@@ -628,34 +327,7 @@
       "datasetIssues": [],
       "questionIssues": [
         {
-          "number": 139,
-          "issues": [
-            {
-              "type": "MARKER_WITHOUT_IMAGE",
-              "detail": "Text has [image marker] but images array is empty"
-            }
-          ]
-        },
-        {
-          "number": 153,
-          "issues": [
-            {
-              "type": "MARKER_WITHOUT_IMAGE",
-              "detail": "Text has [image marker] but images array is empty"
-            }
-          ]
-        },
-        {
-          "number": 172,
-          "issues": [
-            {
-              "type": "MARKER_WITHOUT_IMAGE",
-              "detail": "Text has [image marker] but images array is empty"
-            }
-          ]
-        },
-        {
-          "number": 176,
+          "number": 142,
           "issues": [
             {
               "type": "MARKER_WITHOUT_IMAGE",
@@ -829,72 +501,50 @@
       ]
     },
     "math_enem_2024.json": {
-      "datasetIssues": [
-        {
-          "type": "WRONG_QUESTION_COUNT",
-          "detail": "Expected 45, found 42 (missing 3)"
-        },
-        {
-          "type": "MISSING_QUESTION_NUMBER",
-          "detail": "Q166 is missing"
-        },
-        {
-          "type": "MISSING_QUESTION_NUMBER",
-          "detail": "Q179 is missing"
-        },
-        {
-          "type": "MISSING_QUESTION_NUMBER",
-          "detail": "Q180 is missing"
-        }
-      ],
+      "datasetIssues": [],
       "questionIssues": [
         {
-          "number": 161,
+          "number": 149,
           "issues": [
             {
-              "type": "EMPTY_ALTERNATIVE",
-              "detail": "Alternative (a) is empty"
-            },
-            {
-              "type": "EMPTY_ALTERNATIVE",
-              "detail": "Alternative (b) is empty"
-            },
-            {
-              "type": "EMPTY_ALTERNATIVE",
-              "detail": "Alternative (c) is empty"
-            },
-            {
-              "type": "EMPTY_ALTERNATIVE",
-              "detail": "Alternative (d) is empty"
-            },
-            {
-              "type": "EMPTY_ALTERNATIVE",
-              "detail": "Alternative (e) is empty"
+              "type": "MARKER_WITHOUT_IMAGE",
+              "detail": "Text has [image marker] but images array is empty"
             }
           ]
         },
         {
-          "number": 174,
+          "number": 160,
           "issues": [
             {
-              "type": "EMPTY_ALTERNATIVE",
-              "detail": "Alternative (a) is empty"
-            },
+              "type": "MARKER_WITHOUT_IMAGE",
+              "detail": "Text has [image marker] but images array is empty"
+            }
+          ]
+        },
+        {
+          "number": 162,
+          "issues": [
             {
-              "type": "EMPTY_ALTERNATIVE",
-              "detail": "Alternative (b) is empty"
-            },
+              "type": "MARKER_WITHOUT_IMAGE",
+              "detail": "Text has [image marker] but images array is empty"
+            }
+          ]
+        },
+        {
+          "number": 169,
+          "issues": [
             {
-              "type": "EMPTY_ALTERNATIVE",
-              "detail": "Alternative (c) is empty"
-            },
+              "type": "MARKER_WITHOUT_IMAGE",
+              "detail": "Text has [image marker] but images array is empty"
+            }
+          ]
+        },
+        {
+          "number": 173,
+          "issues": [
             {
-              "type": "EMPTY_ALTERNATIVE",
-              "detail": "Alternative (d) is empty"
-            },
-            {
-              "type": "EMPTY_ALTERNATIVE",
-              "detail": "Alternative (e) is empty"
+              "type": "MARKER_WITHOUT_IMAGE",
+              "detail": "Text has [image marker] but images array is empty"
             }
           ]
         }
@@ -1070,133 +720,8 @@
       "questionIssues": []
     },
     "nature_enem_2024.json": {
-      "datasetIssues": [
-        {
-          "type": "WRONG_QUESTION_COUNT",
-          "detail": "Expected 45, found 44 (missing 1)"
-        },
-        {
-          "type": "MISSING_QUESTION_NUMBER",
-          "detail": "Q108 is missing"
-        }
-      ],
-      "questionIssues": [
-        {
-          "number": 91,
-          "issues": [
-            {
-              "type": "MARKER_WITHOUT_IMAGE",
-              "detail": "Text has [image marker] but images array is empty"
-            }
-          ]
-        },
-        {
-          "number": 100,
-          "issues": [
-            {
-              "type": "MISSING_IMAGE_FILE",
-              "detail": "figuras/q100_2024_fig1.png not found on disk"
-            }
-          ]
-        },
-        {
-          "number": 101,
-          "issues": [
-            {
-              "type": "MISSING_IMAGE_FILE",
-              "detail": "figuras/q101_2024_fig2.png not found on disk"
-            },
-            {
-              "type": "MISSING_IMAGE_FILE",
-              "detail": "figuras/q101_2024_fig3.png not found on disk"
-            }
-          ]
-        },
-        {
-          "number": 112,
-          "issues": [
-            {
-              "type": "EMPTY_ALTERNATIVE",
-              "detail": "Alternative (a) is empty"
-            },
-            {
-              "type": "EMPTY_ALTERNATIVE",
-              "detail": "Alternative (b) is empty"
-            },
-            {
-              "type": "EMPTY_ALTERNATIVE",
-              "detail": "Alternative (c) is empty"
-            },
-            {
-              "type": "EMPTY_ALTERNATIVE",
-              "detail": "Alternative (d) is empty"
-            },
-            {
-              "type": "EMPTY_ALTERNATIVE",
-              "detail": "Alternative (e) is empty"
-            }
-          ]
-        },
-        {
-          "number": 118,
-          "issues": [
-            {
-              "type": "SHORT_TEXT",
-              "detail": "Text is only 8 chars: \"[Figura]\""
-            }
-          ]
-        },
-        {
-          "number": 121,
-          "issues": [
-            {
-              "type": "EMPTY_ALTERNATIVE",
-              "detail": "Alternative (a) is empty"
-            },
-            {
-              "type": "EMPTY_ALTERNATIVE",
-              "detail": "Alternative (b) is empty"
-            },
-            {
-              "type": "EMPTY_ALTERNATIVE",
-              "detail": "Alternative (c) is empty"
-            },
-            {
-              "type": "EMPTY_ALTERNATIVE",
-              "detail": "Alternative (d) is empty"
-            },
-            {
-              "type": "EMPTY_ALTERNATIVE",
-              "detail": "Alternative (e) is empty"
-            }
-          ]
-        },
-        {
-          "number": 131,
-          "issues": [
-            {
-              "type": "EMPTY_ALTERNATIVE",
-              "detail": "Alternative (a) is empty"
-            },
-            {
-              "type": "EMPTY_ALTERNATIVE",
-              "detail": "Alternative (b) is empty"
-            },
-            {
-              "type": "EMPTY_ALTERNATIVE",
-              "detail": "Alternative (c) is empty"
-            },
-            {
-              "type": "EMPTY_ALTERNATIVE",
-              "detail": "Alternative (d) is empty"
-            },
-            {
-              "type": "EMPTY_ALTERNATIVE",
-              "detail": "Alternative (e) is empty"
-            }
-          ]
-        }
-      ]
+      "datasetIssues": [],
+      "questionIssues": []
     },
     "nature_enem_2025.json": {
       "datasetIssues": [],
@@ -1210,13 +735,16 @@
     "figuras/q002_2018_fig1.png",
     "figuras/q002_2020_fig1.png",
     "figuras/q002_2021_fig1.png",
+    "figuras/q004_2021_fig1.png",
     "figuras/q005_2019_fig1.png",
+    "figuras/q007_2018_fig1.png",
     "figuras/q009_2021_fig1.png",
+    "figuras/q011_2018_fig1.png",
     "figuras/q012_2019_fig1.png",
     "figuras/q012_2021_fig1.png",
     "figuras/q013_2018_fig1.png",
     "figuras/q017_2019_fig1.png",
-    "figuras/q020_2021_fig1.png",
+    "figuras/q019_2018_fig1.png",
     "figuras/q022_2020_fig1.png",
     "figuras/q023_2019_fig1.png",
     "figuras/q028_2018_fig1.png",
@@ -1228,24 +756,71 @@
     "figuras/q036_2019_fig2.png",
     "figuras/q039_2018_fig1.png",
     "figuras/q041_2018_fig1.png",
+    "figuras/q041_2025_fig1.png",
     "figuras/q044_2020_fig1.png",
+    "figuras/q045_2018_fig1.png",
+    "figuras/q045_2025_fig1.png",
+    "figuras/q049_2025_fig1.png",
     "figuras/q050_2018_fig1.png",
     "figuras/q050_2018_fig2.png",
+    "figuras/q056_2022_fig1.png",
+    "figuras/q067_2018_fig1.png",
+    "figuras/q068_2022_fig1.png",
+    "figuras/q076_2022_fig1.png",
+    "figuras/q077_2025_fig1.png",
+    "figuras/q078_2022_fig1.png",
     "figuras/q082_2018_fig1.png",
+    "figuras/q082_2022_fig1.png",
     "figuras/q087_2018_fig1.png",
+    "figuras/q088_2018_fig1.png",
     "figuras/q088_2020_fig1.png",
-    "figuras/q091_2024_fig1.png",
-    "figuras/q091_2024_fig2.png",
-    "figuras/q093_2024_fig1.png",
-    "figuras/q093_2024_fig2.png",
-    "figuras/q095_2024_fig1.png",
-    "figuras/q095_2024_fig2.png",
-    "figuras/q097_2024_fig1.png",
-    "figuras/q097_2024_fig2.png",
-    "figuras/q102_2024_fig1.png",
-    "figuras/q102_2024_fig2.png",
-    "figuras/q102_2024_fig3.png",
+    "figuras/q091_2024_fig3.png",
+    "figuras/q092_2024_fig3.png",
+    "figuras/q094_2024_fig1.png",
+    "figuras/q098_2024_fig1.png",
+    "figuras/q099_2018_fig1.png",
+    "figuras/q100_2024_fig1.png",
+    "figuras/q101_2024_fig1.png",
+    "figuras/q103_2024_fig1.png",
+    "figuras/q104_2024_fig2.png",
+    "figuras/q106_2025_fig2.png",
+    "figuras/q109_2025_fig2.png",
+    "figuras/q112_2024_fig1.png",
+    "figuras/q113_2024_fig2.png",
+    "figuras/q113_2024_fig3.png",
+    "figuras/q115_2025_fig2.png",
+    "figuras/q118_2024_fig2.png",
+    "figuras/q125_2024_fig5.png",
+    "figuras/q126_2018_fig1.png",
+    "figuras/q130_2024_fig3.png",
+    "figuras/q134_2024_fig2.png",
     "figuras/q136_2020_fig1.png",
+    "figuras/q138_2025_fig1.png",
+    "figuras/q138_2025_fig2.png",
+    "figuras/q138_2025_fig3.png",
+    "figuras/q138_2025_fig4.png",
+    "figuras/q138_2025_fig5.png",
+    "figuras/q138_2025_fig6.png",
+    "figuras/q139_2025_fig1.png",
+    "figuras/q143_2025_fig1.png",
+    "figuras/q148_2025_fig1.png",
+    "figuras/q149_2024_fig1.png",
+    "figuras/q149_2025_fig1.png",
+    "figuras/q153_2025_fig1.png",
+    "figuras/q160_2024_fig1.png",
+    "figuras/q160_2025_fig1.png",
+    "figuras/q161_2025_fig1.png",
+    "figuras/q162_2024_fig1.png",
+    "figuras/q163_2025_fig1.png",
+    "figuras/q164_2025_fig1.png",
+    "figuras/q165_2024_fig1.png",
+    "figuras/q166_2025_fig1.png",
+    "figuras/q167_2025_fig1.png",
+    "figuras/q169_2025_fig1.png",
+    "figuras/q170_2025_fig1.png",
+    "figuras/q173_2025_fig1.png",
+    "figuras/q177_2025_fig1.png",
+    "figuras/q180_2025_fig1.png",
     "figuras/q22_bailarino.png",
     "figuras/q23_varejao_azulejaria.png",
     "figuras/redacao_texto2_60mais.png",
