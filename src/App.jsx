@@ -234,7 +234,7 @@ const REVIEW_STATUS = [
   { year: 2021, linguagens: false, humanas: false, natureza: false, matematica: false },
   { year: 2020, linguagens: false, humanas: false, natureza: false, matematica: false },
   { year: 2019, linguagens: false, humanas: false, natureza: false, matematica: false },
-  { year: 2018, linguagens: true, humanas: true, natureza: false, matematica: false },
+  { year: 2018, linguagens: true, humanas: true, natureza: true, matematica: true },
 ]
 
 const AREA_LABELS = {
