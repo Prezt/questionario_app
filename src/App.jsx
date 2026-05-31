@@ -160,6 +160,83 @@ function formatTime(seconds) {
   return `${m}:${String(s).padStart(2, '0')}`
 }
 
+const APP_VERSION = '1.11'
+const APP_VERSION_DATE = '31/05/2026'
+
+const CHANGELOG = [
+  {
+    version: '1.11',
+    date: '31/05/2026',
+    items: ['ENEM 2023 Humanas revisado', 'ENEM 2023 Linguagens revisado', 'ENEM 2024 Matemática revisado', 'Log de mudanças adicionado'],
+  },
+  {
+    version: '1.10',
+    date: '17/05/2026',
+    items: ['ENEM 2024 revisado (todas as áreas)'],
+  },
+  {
+    version: '1.9',
+    date: '09/05/2026',
+    items: ['ENEM 2025 Ciências da Natureza adicionado', 'Barra de formatação no editor'],
+  },
+  {
+    version: '1.8',
+    date: '06/05/2026',
+    items: ['Pontuação TRI por área no resumo final', 'Motor de cálculo TRI 3PL'],
+  },
+  {
+    version: '1.7',
+    date: '04/05/2026',
+    items: ['Editor de questões', 'Papéis de usuário (prof/admin)', 'Separação EN/ES por questão', 'ENEM 2018 revisado'],
+  },
+  {
+    version: '1.6',
+    date: '02/05/2026',
+    items: ['Ferramenta de revisão interna', 'Edição de contextos e textos', 'Negrito e itálico nos textos', 'Correção de acentos em português'],
+  },
+  {
+    version: '1.5',
+    date: '01/05/2026',
+    items: ['ENEM 2018–2021 adicionados', 'Acompanhamento visual de desempenho', 'Nível de dificuldade por questão', 'Opção de ocultar gabarito', 'Questões anuladas tratadas'],
+  },
+  {
+    version: '1.4',
+    date: '30/04/2026',
+    items: ['Desafio Diário', 'Modo Estudar por Área', 'Embaralhar alternativas', 'Menu de configurações', 'Seletor de prova e ano'],
+  },
+  {
+    version: '1.3',
+    date: '28/04/2026',
+    items: ['Pausar e retomar simulado', 'Feedback personalizado por assunto', 'Banco de dados e histórico do aluno', 'Painel administrativo'],
+  },
+  {
+    version: '1.2',
+    date: '23/04/2026',
+    items: ['Login de alunos', 'ENEM 2024 adicionado (Dia 1 e Dia 2)'],
+  },
+  {
+    version: '1.1',
+    date: '20/04/2026',
+    items: ['Filtros por dia e área', 'Textos de referência e contextos', 'ENEM 2025 Ciências da Natureza', 'Caderno lateral de questões', 'Melhorias de estilo'],
+  },
+  {
+    version: '1.0',
+    date: '19/04/2026',
+    items: ['Lançamento inicial', 'Quiz com imagens e alternativas', 'Caderno de anotações', 'Timer por questão e total'],
+  },
+]
+
+const REVIEW_STATUS = [
+  { year: 2025, linguagens: true, humanas: true, natureza: true, matematica: true },
+  { year: 2024, linguagens: true, humanas: true, natureza: true, matematica: true },
+  { year: 2023, linguagens: true, humanas: true, natureza: false, matematica: false },
+  { year: 2022, linguagens: false, humanas: false, natureza: false, matematica: false },
+  { year: 2021, linguagens: false, humanas: false, natureza: false, matematica: false },
+  { year: 2020, linguagens: false, humanas: false, natureza: false, matematica: false },
+  { year: 2019, linguagens: false, humanas: false, natureza: false, matematica: false },
+  { year: 2018, linguagens: true, humanas: true, natureza: false, matematica: false },
+]
+
 const AREA_LABELS = {
   math:       'Matemática',
   nature:     'Ciências da Natureza',
@@ -336,6 +413,88 @@ function legacyPlainToHtml(raw) {
   if (t.startsWith('<')) return raw
   const esc = String(raw).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
   return `<p>${esc.replace(/\n/g, '<br>')}</p>`
+}
+
+function ChangelogSection() {
+  const [open, setOpen] = useState(false)
+  const [tab, setTab] = useState('changelog') // 'changelog' | 'status'
+
+  const areaAbbr = ['Ling', 'Hum', 'Nat', 'Mat']
+  const areaKeys = ['linguagens', 'humanas', 'natureza', 'matematica']
+
+  return (
+    <div className="changelog-wrap">
+      <button
+        type="button"
+        className="changelog-trigger"
+        onClick={() => setOpen((v) => !v)}
+      >
+        <span className="changelog-version">v{APP_VERSION}</span>
+        <span className="changelog-date">{APP_VERSION_DATE}</span>
+        <span className="changelog-chevron">{open ? '▲' : '▼'}</span>
+      </button>
+
+      {open && (
+        <div className="changelog-panel">
+          <div className="changelog-tabs">
+            <button
+              type="button"
+              className={`changelog-tab${tab === 'changelog' ? ' active' : ''}`}
+              onClick={() => setTab('changelog')}
+            >
+              Histórico
+            </button>
+            <button
+              type="button"
+              className={`changelog-tab${tab === 'status' ? ' active' : ''}`}
+              onClick={() => setTab('status')}
+            >
+              Revisão de provas
+            </button>
+          </div>
+
+          {tab === 'changelog' && (
+            <div className="changelog-list">
+              {CHANGELOG.map((entry) => (
+                <div key={entry.version} className="changelog-entry">
+                  <div className="changelog-entry-header">
+                    <span className="changelog-entry-version">v{entry.version}</span>
+                    <span className="changelog-entry-date">{entry.date}</span>
+                  </div>
+                  <ul className="changelog-entry-items">
+                    {entry.items.map((item) => (
+                      <li key={item}>{item}</li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
+          )}
+
+          {tab === 'status' && (
+            <div className="changelog-status">
+              <div className="changelog-status-header">
+                <span className="changelog-status-year">Ano</span>
+                {areaAbbr.map((a) => (
+                  <span key={a} className="changelog-status-area">{a}</span>
+                ))}
+              </div>
+              {REVIEW_STATUS.map((row) => (
+                <div key={row.year} className="changelog-status-row">
+                  <span className="changelog-status-year">{row.year}</span>
+                  {areaKeys.map((k) => (
+                    <span key={k} className={`changelog-status-cell${row[k] ? ' done' : ''}`}>
+                      {row[k] ? '✓' : '·'}
+                    </span>
+                  ))}
+                </div>
+              ))}
+            </div>
+          )}
+        </div>
+      )}
+    </div>
+  )
 }
 
 export default function App() {
@@ -1694,6 +1853,8 @@ export default function App() {
             >
               Sair
             </button>
+
+            <ChangelogSection />
           </div>
         </div>
 

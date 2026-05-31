@@ -52,7 +52,7 @@ REVISAO:
     [x] matematica
  [x] ENEM 2023
     [x] linguagens
-    [] humanas
+    [x] humanas
     [] ciencias
     [] matematica
  [] ENEM 2022
