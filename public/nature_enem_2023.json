@@ -172,7 +172,7 @@
   },
   {
     "number": 99,
-    "text": "A leishmaniose visceral é uma zoonose causada por m protozoário do gênero Leishmania que é encontrado em versos tecidos. Ela é transmitida ao homem de forma indireta, por vetores do ambiente doméstico. O cão é considerado um importante hospedeiro desse protozoário, odendo ou não apresentar os sintomas da doença, como erda de peso, anemia, ferimentos na pele, diarreia, onjuntivite e insuficiência renal. Em uma região que ofre com alta incidência dessa doença, uma campanha o centro de zoonoses buscou verificar a presença desse rotozoário nos cães para tentar controlar a doença. Em qual material biológico dos cães a presença desse rotozoário representa risco de transmissão dessa zoonose?",
+    "text": "A leishmaniose visceral é uma zoonose causada por m protozoário do gênero Leishmania que é encontrado em versos tecidos. Ela é transmitida ao homem de forma indireta, por vetores do ambiente doméstico. O cão é considerado um importante hospedeiro desse protozoário, podendo ou não apresentar os sintomas da doença, como perda de peso, anemia, ferimentos na pele, diarreia, conjuntivite e insuficiência renal. Em uma região que sofre com alta incidência dessa doença, uma campanha o centro de zoonoses buscou verificar a presença desse protozoário nos cães para tentar controlar a doença. \nEm qual material biológico dos cães a presença desse protozoário representa risco de transmissão dessa zoonose?",
     "alternatives": {
       "a": "Urina.",
       "b": "Saliva.",
@@ -192,7 +192,7 @@
   },
   {
     "number": 100,
-    "text": "Um professor lança uma esfera verticalmente para\nima, a qual retorna, depois de alguns segundos, ao ponto\nde lançamento. Em seguida, lista em um quadro todas as\nossibilidades para as grandezas cinemáticas.\nGrandeza cinemática Módulo Sentido\nPara cima\nv   ≠  0\nVelocidade Para baixo\nv   =  0 Indefi nido*\nPara cima\na   ≠  0\nAceleração Para baixo\na   =  0 Indefi nido*\nGrandezas com módulo nulo não têm sentido definido.\nEle solicita aos alunos que analisem as grandezas\ncinemáticas no instante em que a esfera atinge a altura\nmáxima, escolhendo uma combinação para os módulos\nsentidos da velocidade e da aceleração.",
+    "text": "Um professor lança uma esfera verticalmente para\nima, a qual retorna, depois de alguns segundos, ao ponto\nde lançamento. Em seguida, lista em um quadro todas as\nossibilidades para as grandezas cinemáticas.\n|Grandeza cinemática|Módulo|Sentido|\n|Velocidade|v   ≠  0|Para cima|\n|Velocidade|v   ≠  0|Para baixo|\n|Velocidade|v   =  0|Indefinido*|\n|Aceleração|a   ≠  0|Para cima|\n|Aceleração|a   ≠  0|Para baixo|\n|Aceleração|a   =  0|Indefinido*|\n*Grandezas com módulo nulo não têm sentido definido.\n\nEle solicita aos alunos que analisem as grandezas\ncinemáticas no instante em que a esfera atinge a altura\nmáxima, escolhendo uma combinação para os módulos\nsentidos da velocidade e da aceleração.\n\nA escolha que corresponde à combinação correta é",
     "alternatives": {
       "a": "v   =  0 e  a   ≠  0 para cima",
       "b": "v   ≠  0 para cima e  a   =  0",
@@ -212,7 +212,7 @@
   },
   {
     "number": 101,
-    "text": "Muitas mulheres sofrem com desconfortos nos dias que antecedem a menstruação, a chamada tensão pré-menstrual. Entre outros sintomas, podem ocorrer alterações de humor. Atualmente, acredita-se que os sintomas são resultado da queda na concentração do neurotransmissor serotonina, que, por sua vez, está relacionado com a diminuição na produção dos hormônios ovarianos estrógeno e progesterona, observada nesta fase do ciclo feminino.",
+    "text": "A redução da produção desses hormônios nessa fase está relacionada com o(a)",
     "alternatives": {
       "a": "regressão do corpo lúteo ovariano.",
       "b": "diminuição na produção de ocitocina.",
@@ -228,7 +228,10 @@
     "test": "ENEM",
     "area": "nature",
     "answer": "a",
-    "difficulty": 6
+    "difficulty": 6,
+    "contextIds": [
+      "enem_2023_nature_q101_ctx1"
+    ]
   },
   {
     "number": 102,
@@ -252,7 +255,7 @@
   },
   {
     "number": 103,
-    "text": "Durante a evolução das plantas, ocorreu uma transição do ambiente aquático para o ambiente terrestre graças ao surgimento de algumas estruturas que as tornaram independentes da água. Esse fato permitiu maior dispersão desse grupo de seres vivos, sendo possível observá-lo em diferentes ambientes na atualidade. Qual estrutura possibilitou a independência da água para a fecundação dos seres vivos citados acima?",
+    "text": "Durante a evolução das plantas, ocorreu uma transição do ambiente aquático para o ambiente terrestre graças ao surgimento de algumas estruturas que as tornaram independentes da água. Esse fato permitiu maior dispersão desse grupo de seres vivos, sendo possível observá-lo em diferentes ambientes na atualidade. \n\nQual estrutura possibilitou a independência da água para a fecundação dos seres vivos citados acima?",
     "alternatives": {
       "a": "Fruto",
       "b": "Esporo",

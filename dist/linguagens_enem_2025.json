@@ -150,7 +150,10 @@
     "area": "linguagens",
     "test": "ENEM",
     "answer": "b",
-    "difficulty": 4
+    "difficulty": 4,
+    "contextIds": [
+      "enem_2025_linguagens_q1_ctx2"
+    ]
   },
   {
     "number": 2,

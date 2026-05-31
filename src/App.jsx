@@ -160,72 +160,72 @@ function formatTime(seconds) {
   return `${m}:${String(s).padStart(2, '0')}`
 }
 
-const APP_VERSION = '1.12'
+const APP_VERSION = '1.11.1'
 const APP_VERSION_DATE = '31/05/2026'
 
 const CHANGELOG = [
   {
-    version: '1.12',
+    version: '1.11.1',
     date: '31/05/2026',
     items: ['Painel de bugs mostra ano, prova e área da questão', 'Seção de versão e histórico na tela inicial'],
   },
   {
-    version: '1.11',
+    version: '1.11.0',
     date: '31/05/2026',
     items: ['ENEM 2023 Humanas revisado', 'ENEM 2023 Linguagens revisado', 'ENEM 2024 Matemática revisado', 'Log de mudanças adicionado'],
   },
   {
-    version: '1.10',
+    version: '1.10.0',
     date: '17/05/2026',
     items: ['ENEM 2024 revisado (todas as áreas)'],
   },
   {
-    version: '1.9',
+    version: '1.9.0',
     date: '09/05/2026',
     items: ['ENEM 2025 Ciências da Natureza adicionado', 'Barra de formatação no editor'],
   },
   {
-    version: '1.8',
+    version: '1.8.0',
     date: '06/05/2026',
     items: ['Pontuação TRI por área no resumo final', 'Motor de cálculo TRI 3PL'],
   },
   {
-    version: '1.7',
+    version: '1.7.0',
     date: '04/05/2026',
     items: ['Editor de questões', 'Papéis de usuário (prof/admin)', 'Separação EN/ES por questão', 'ENEM 2018 revisado'],
   },
   {
-    version: '1.6',
+    version: '1.6.0',
     date: '02/05/2026',
     items: ['Ferramenta de revisão interna', 'Edição de contextos e textos', 'Negrito e itálico nos textos', 'Correção de acentos em português'],
   },
   {
-    version: '1.5',
+    version: '1.5.0',
     date: '01/05/2026',
     items: ['ENEM 2018–2021 adicionados', 'Acompanhamento visual de desempenho', 'Nível de dificuldade por questão', 'Opção de ocultar gabarito', 'Questões anuladas tratadas'],
   },
   {
-    version: '1.4',
+    version: '1.4.0',
     date: '30/04/2026',
     items: ['Desafio Diário', 'Modo Estudar por Área', 'Embaralhar alternativas', 'Menu de configurações', 'Seletor de prova e ano'],
   },
   {
-    version: '1.3',
+    version: '1.3.0',
     date: '28/04/2026',
     items: ['Pausar e retomar simulado', 'Feedback personalizado por assunto', 'Banco de dados e histórico do aluno', 'Painel administrativo'],
   },
   {
-    version: '1.2',
+    version: '1.2.0',
     date: '23/04/2026',
     items: ['Login de alunos', 'ENEM 2024 adicionado (Dia 1 e Dia 2)'],
   },
   {
-    version: '1.1',
+    version: '1.1.0',
     date: '20/04/2026',
     items: ['Filtros por dia e área', 'Textos de referência e contextos', 'ENEM 2025 Ciências da Natureza', 'Caderno lateral de questões', 'Melhorias de estilo'],
   },
   {
-    version: '1.0',
+    version: '1.0.0',
     date: '19/04/2026',
     items: ['Lançamento inicial', 'Quiz com imagens e alternativas', 'Caderno de anotações', 'Timer por questão e total'],
   },
