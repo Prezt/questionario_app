@@ -28,6 +28,7 @@ async function handleStats(req, res, sql) {
     `,
     sql`
       SELECT f.id, f.user_id, u.username, f.question_number,
+             f.question_year, f.question_test, f.question_area,
              f.type, f.body, f.created_at
       FROM feedback f
       LEFT JOIN users u ON u.id = f.user_id

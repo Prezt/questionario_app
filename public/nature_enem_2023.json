@@ -1,7 +1,7 @@
 [
   {
     "number": 91,
-    "text": "O número de abelhas encontra-se em declínio em várias regiões do mundo, inclusive no Brasil, sendo que vários fatores contribuem para o colapso de suas colmeias. Nos Estados Unidos, bombas de semente de espécies vegetais nativas têm sido utilizadas para combater o desaparecimento desses insetos. Elas são pequenas bolinhas recheadas com sementes, adubo e argila. Quando são arremessadas e ficam expostas ao sol e à chuva, germinam até mesmo em solo pouco fértil.",
+    "text": "Esse método contribui para a preservação das abelhas porque",
     "alternatives": {
       "a": "reduz sua predação",
       "b": "reduz o uso de pesticidas",
@@ -18,11 +18,14 @@
     "test": "ENEM",
     "area": "nature",
     "answer": "d",
-    "difficulty": 2
+    "difficulty": 2,
+    "contextIds": [
+      "enem_2023_nature_q91_ctx1"
+    ]
   },
   {
     "number": 92,
-    "text": "Os mais antigos cozinhavam o feijão na panela de ferro fim de acabar com a palidez de seus filhos. Alguns chegavam até a colocar um prego enferrujado nesse cozimento par liberar o ferro contido nele. Sabe-se que esse elemento pode ser encontrado na sua forma metálica ou iônica sendo essencial para a manutenção da vida humana. As estratégias citadas eram utilizadas com o objetivo de",
+    "text": "Os mais antigos cozinhavam o feijão na panela de ferro fim de acabar com a palidez de seus filhos. Alguns chegavam até a colocar um prego enferrujado nesse cozimento par liberar o ferro contido nele. Sabe-se que esse elemento pode ser encontrado na sua forma metálica ou iônica sendo essencial para a manutenção da vida humana. \nAs estratégias citadas eram utilizadas com o objetivo de",
     "alternatives": {
       "a": "tratar a diarreia.",
       "b": "prevenir a anemia.",
@@ -43,7 +46,7 @@
   },
   {
     "number": 93,
-    "text": "A utilização de tecnologia nuclear é um tema bastante controverso, por causa do risco de acidentes graves, como aqueles ocorridos em Chernobyl (1986), Goiânia (1987) e Fukushima (2011). Apesar das muitas desvantagens, como a geração de resíduos tóxicos, a descontaminação ambiental dispendiosa em caso de acidentes e a utilização em armas nucleares, a geração de energia nuclear apresenta vantagens em comparação a outras fontes de energia. A geração dessa energia tem como característica:",
+    "text": "A utilização de tecnologia nuclear é um tema bastante controverso, por causa do risco de acidentes graves, como aqueles ocorridos em Chernobyl (1986), Goiânia (1987) e Fukushima (2011). Apesar das muitas desvantagens, como a geração de resíduos tóxicos, a descontaminação ambiental dispendiosa em caso de acidentes e a utilização em armas nucleares, a geração de energia nuclear apresenta vantagens em comparação a outras fontes de energia. \nA geração dessa energia tem como característica:",
     "alternatives": {
       "a": "Formar resíduos facilmente recicláveis.",
       "b": "Promover o aumento do desmatamento.",
@@ -63,7 +66,7 @@
   },
   {
     "number": 94,
-    "text": "Em uma indústria, o controle da dureza da água é importante quando ela é utilizada em caldeiras, uma vez que sais pouco solúveis, formados a partir de sulfatos e arbonatos, podem acumular-se no interior das tubulações, ausando obstruções. Para avaliar a água utilizada nessa indústria, foram realizados testes de qualidade que consideraram os seguintes parâmetros: Teste Parâmetro medido 1 Cálcio 2 Cloreto 3 Turbidez 4 Coliformes totais 5 Sólidos sedimentáveis Qual teste deve ser considerado para controlar a formação desse tipo de obstrução de tubulações?",
+    "text": "Em uma indústria, o controle da dureza da água é importante quando ela é utilizada em caldeiras, uma vez que sais pouco solúveis, formados a partir de sulfatos e arbonatos, podem acumular-se no interior das tubulações, ausando obstruções. Para avaliar a água utilizada nessa indústria, foram realizados testes de qualidade que consideraram os seguintes parâmetros: \n|Teste|Parâmetro medido|\n|-|-|\n|1|Cálcio| \n|2|Cloreto| \n|3|Turbidez|\n|4|Coliformes totais|\n|5|Sólidos sedimentáveis|\n|-|-|\n\nQual teste deve ser considerado para controlar a formação desse tipo de obstrução de tubulações?",
     "alternatives": {
       "a": "1",
       "b": "2",
@@ -83,7 +86,7 @@
   },
   {
     "number": 95,
-    "text": "As aves apresentam dois tipos de músculos em seus orpos: vermelhos e brancos. Aves migratórias como garças, ansos e patos selvagens têm os músculos vermelhos bem esenvolvidos, com ampla rede de vasos sanguíneos. Nas viagens por grandes distâncias, tais músculos são undamentais, pois favorecem o(a)",
+    "text": "As aves apresentam dois tipos de músculos em seus corpos: vermelhos e brancos. Aves migratórias como garças, ansos e patos selvagens têm os músculos vermelhos bem desenvolvidos, com ampla rede de vasos sanguíneos. \nNas viagens por grandes distâncias, tais músculos são fundamentais, pois favorecem o(a)",
     "alternatives": {
       "a": "execução de manobras",
       "b": "metabolismo corpóreo elevado",
@@ -104,7 +107,7 @@
   },
   {
     "number": 96,
-    "text": "Existe no comércio um produto antimofo constituído por ma embalagem com tampa perfurada contendo cloreto e cálcio anidro, CaCl₂. Uma vez aberto o lacre, essa substância absorve a umidade ambiente, transformando-se m cloreto de cálcio di-hidratado, CaCl₂⋅2H₂O. Considere a massa molar da água igual a 18 g mol⁻¹, e a massa molar do cloreto de cálcio anidro igual a 111 g mol⁻¹. Na hidratação da substância presente no antimofo, o anho percentual, em massa, é mais próximo de",
+    "text": "Existe no comércio um produto antimofo constituído por ma embalagem com tampa perfurada contendo cloreto e cálcio anidro, CaCl₂. Uma vez aberto o lacre, essa substância absorve a umidade ambiente, transformando-se m cloreto de cálcio di-hidratado, CaCl₂⋅2H₂O. \nConsidere a massa molar da água igual a 18 g mol⁻¹, e a massa molar do cloreto de cálcio anidro igual a 111 g mol⁻¹. \n\nNa hidratação da substância presente no antimofo, o anho percentual, em massa, é mais próximo de",
     "alternatives": {
       "a": "14%",
       "b": "16%",
@@ -125,7 +128,7 @@
   },
   {
     "number": 97,
-    "text": "Um garoto comprou vários abacates na feira, mas descobriu que eles não estavam maduros o suficiente para serem consumidos. Sua mãe recomendou que ele colocasse os abacates em um recipiente fechado pois isso aceleraria seu amadurecimento. Com certeza, o garoto realizou esta experiência: colocou alguns abacates no recipiente e deixou os demais em uma fruteira aberta. Surpreendendo-se, ele percebeu que os frutos que estavam no recipiente fechado amadureceram mais rapidamente.",
+    "text": "Um garoto comprou vários abacates na feira, mas descobriu que eles não estavam maduros o suficiente para serem consumidos. Sua mãe recomendou que ele colocasse os abacates em um recipiente fechado pois isso acelerária seu amadurecimento. Com certeza, o garoto realizou está experiência: colocou alguns abacates no recipiente e deixou os demais em uma fruteira aberta. Surpreendendo-se, ele percebeu que os frutos que estavam no recipiente fechado amadureceram mais rapidamente.\n\nA aceleração desse processo é causada por",
     "alternatives": {
       "a": "acúmulo de gás etileno",
       "b": "redução da umidade do ar",
@@ -146,7 +149,7 @@
   },
   {
     "number": 98,
-    "text": "Há muito tempo são conhecidas espécies desses lesmas-do-mar com uma capacidade ímpar: guardam parte da maquinaria das células das algas que consomem — os cloroplastos — e mantê-los funcionais dentro das suas próprias células, obtendo assim parte do seu alimento. Investigadores portugueses descobriram que essas lesmas-do-mar podem ser mais eficientes nesse processo do que as próprias algas que consomem.",
+    "text": "Essa adaptação confere a esse organismo a capacidade de obter primariamente",
     "alternatives": {
       "a": "ácidos nucleicos",
       "b": "carboidratos",
@@ -162,7 +165,10 @@
     "test": "ENEM",
     "area": "nature",
     "answer": "b",
-    "difficulty": 5
+    "difficulty": 5,
+    "contextIds": [
+      "enem_2023_nature_q98_ctx1"
+    ]
   },
   {
     "number": 99,

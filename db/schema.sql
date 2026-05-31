@@ -23,6 +23,9 @@ CREATE TABLE IF NOT EXISTS feedback (
   id              SERIAL PRIMARY KEY,
   user_id         INTEGER REFERENCES users(id) ON DELETE SET NULL,
   question_number INTEGER,
+  question_year   INTEGER,
+  question_test   TEXT,
+  question_area   TEXT,
   type            TEXT NOT NULL DEFAULT 'feedback',  -- 'feedback' | 'bug'
   body            TEXT NOT NULL,
   created_at      TIMESTAMPTZ DEFAULT NOW()

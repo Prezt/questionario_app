@@ -3247,6 +3247,12 @@
   color: var(--text);
 }
 
+.fb-subtitle {
+  font-size: 0.74rem;
+  color: var(--text-soft);
+  margin: 0.1rem 0 0;
+}
+
 .fb-form {
   display: flex;
   flex-direction: column;

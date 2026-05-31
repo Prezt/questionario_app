@@ -160,10 +160,15 @@ function formatTime(seconds) {
   return `${m}:${String(s).padStart(2, '0')}`
 }
 
-const APP_VERSION = '1.11'
+const APP_VERSION = '1.12'
 const APP_VERSION_DATE = '31/05/2026'
 
 const CHANGELOG = [
+  {
+    version: '1.12',
+    date: '31/05/2026',
+    items: ['Painel de bugs mostra ano, prova e área da questão', 'Seção de versão e histórico na tela inicial'],
+  },
   {
     version: '1.11',
     date: '31/05/2026',
@@ -2470,7 +2475,7 @@ export default function App() {
             <button
               type="button"
               className="notebook-toggle header-icon-btn--report"
-              onClick={() => { setFeedbackQuestion(question?.number ?? null); setFeedbackOpen(true) }}
+              onClick={() => { setFeedbackQuestion(question ? { number: question.number, year: question.year, test: question.test, area: question.area } : null); setFeedbackOpen(true) }}
               aria-label="Reportar"
             >
               <WarnIcon />
@@ -2492,7 +2497,7 @@ export default function App() {
           </button>
           {headerMenuOpen && (
             <div className="header-menu-dropdown">
-              <button type="button" className="header-menu-item header-menu-item--report" onClick={() => { setHeaderMenuOpen(false); setFeedbackQuestion(question?.number ?? null); setFeedbackOpen(true) }}>
+              <button type="button" className="header-menu-item header-menu-item--report" onClick={() => { setHeaderMenuOpen(false); setFeedbackQuestion(question ? { number: question.number, year: question.year, test: question.test, area: question.area } : null); setFeedbackOpen(true) }}>
                 <WarnIcon /> <span>Reportar problema</span>
               </button>
               <div className="header-menu-divider" />
@@ -2795,7 +2800,7 @@ export default function App() {
 
       {feedbackOpen && (
         <FeedbackModal
-          questionNumber={feedbackQuestion}
+          questionInfo={feedbackQuestion}
           token={token}
           onClose={() => setFeedbackOpen(false)}
         />
@@ -3221,6 +3226,7 @@ function AdminPanel({ stats, onBack, dark, setDark, token }) {
                   <th>Aluno</th>
                   <th>Tipo</th>
                   <th>Questão</th>
+                  <th>Prova</th>
                   <th>Mensagem</th>
                   <th>Data</th>
                 </tr>
@@ -3233,6 +3239,10 @@ function AdminPanel({ stats, onBack, dark, setDark, token }) {
                       <span className={`admin-badge admin-badge--${f.type}`}>{f.type}</span>
                     </td>
                     <td>{f.question_number ?? '—'}</td>
+                    <td>
+                      {[f.question_test, f.question_year, f.question_area ? (AREA_LABELS[f.question_area] ?? f.question_area) : null]
+                        .filter(Boolean).join(' · ') || '—'}
+                    </td>
                     <td className="admin-feedback-body">{f.body}</td>
                     <td>{formatDate(f.created_at)}</td>
                   </tr>
@@ -3321,7 +3331,7 @@ function AdminPanel({ stats, onBack, dark, setDark, token }) {
   )
 }
 
-function FeedbackModal({ questionNumber, token, onClose }) {
+function FeedbackModal({ questionInfo, token, onClose }) {
   const [type, setType] = useState('bug')
   const [body, setBody] = useState('')
   const [submitting, setSubmitting] = useState(false)
@@ -3338,7 +3348,14 @@ function FeedbackModal({ questionNumber, token, onClose }) {
           'Content-Type': 'application/json',
           ...(token ? { Authorization: `Bearer ${token}` } : {}),
         },
-        body: JSON.stringify({ question_number: questionNumber, type, body }),
+        body: JSON.stringify({
+          question_number: questionInfo?.number ?? null,
+          question_year: questionInfo?.year ?? null,
+          question_test: questionInfo?.test ?? null,
+          question_area: questionInfo?.area ?? null,
+          type,
+          body,
+        }),
       })
       setDone(true)
       setTimeout(onClose, 1500)
@@ -3349,13 +3366,22 @@ function FeedbackModal({ questionNumber, token, onClose }) {
     }
   }
 
+  const titleLine = questionInfo
+    ? `Questão ${questionInfo.number}`
+    : 'Feedback geral'
+  const subtitleLine = questionInfo
+    ? [questionInfo.test, questionInfo.year, questionInfo.area ? AREA_LABELS[questionInfo.area] ?? questionInfo.area : null]
+        .filter(Boolean).join(' · ')
+    : null
+
   return (
     <div className="fb-overlay" onClick={onClose}>
       <div className="fb-modal" onClick={(e) => e.stopPropagation()}>
         <div className="fb-head">
-          <h2 className="fb-title">
-            {questionNumber ? `Questão ${questionNumber}` : 'Feedback geral'}
-          </h2>
+          <div>
+            <h2 className="fb-title">{titleLine}</h2>
+            {subtitleLine && <p className="fb-subtitle">{subtitleLine}</p>}
+          </div>
           <button type="button" className="notebook-close" onClick={onClose}>×</button>
         </div>
         {done ? (
