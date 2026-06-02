@@ -94,10 +94,19 @@ function formatTime(seconds) {
   return `${m}:${String(s).padStart(2, '0')}`
 }
 
-const APP_VERSION = '1.12.0'
+const APP_VERSION = '1.13.0'
 const APP_VERSION_DATE = '02/06/2026'
 
 const CHANGELOG = [
+  {
+    version: '1.13.0',
+    date: '02/06/2026',
+    items: [
+      'Botão "Sair" no resultado do simulado (antes "Reiniciar")',
+      'Percentual de acerto na seleção de ano da prova',
+      'Botão de cabeçalho alterna entre "Sair" e "Finalizar" conforme você responde as questões',
+    ],
+  },
   {
     version: '1.12.0',
     date: '02/06/2026',
@@ -289,6 +298,16 @@ function FinishIcon() {
   return (
     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
       <polyline points="20 6 9 17 4 12" />
+    </svg>
+  )
+}
+
+function ExitIcon() {
+  return (
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4" />
+      <polyline points="16 17 21 12 16 7" />
+      <line x1="21" y1="12" x2="9" y2="12" />
     </svg>
   )
 }
@@ -1558,6 +1577,23 @@ export default function App() {
       return resultTier(r1.score + r2.score, r1.total + r2.total)
     }
 
+    const yearPercent = (year) => {
+      if (selectedTest !== 'ENEM') {
+        const r = getResult(selectedTest, year)
+        return r && r.total ? Math.round((r.score / r.total) * 100) : null
+      }
+      const r1 = getResult(selectedTest, year, 1)
+      const r2 = getResult(selectedTest, year, 2)
+      if (!r1 && !r2) return null
+      if (!r1 || !r2) {
+        const r = r1 ?? r2
+        return r.total ? Math.round((r.score / r.total) * 100) : null
+      }
+      const totalScore = r1.score + r2.score
+      const totalTotal = r1.total + r2.total
+      return totalTotal ? Math.round((totalScore / totalTotal) * 100) : null
+    }
+
     return (
       <div className="app-shell">
         <div className="home-screen">
@@ -1665,6 +1701,7 @@ export default function App() {
                 <div className="home-filter-pills home-year-grid">
                   {availableYears.map((y) => {
                     const tier = yearTier(y)
+                    const pct = yearPercent(y)
                     return (
                       <button
                         key={y}
@@ -1675,10 +1712,13 @@ export default function App() {
                           setSelectedDay(null)
                         }}
                       >
-                        <span>{y}</span>
-                        {tier === 'perfect' && <span className="home-year-star">★</span>}
-                        {tier === 'great'   && <span className="home-year-star">✓</span>}
-                        {tier === 'done'    && <span className="home-year-check">●</span>}
+                        <span className="home-year-label">
+                          <span>{y}</span>
+                          {tier === 'perfect' && <span className="home-year-star">★</span>}
+                          {tier === 'great'   && <span className="home-year-star">✓</span>}
+                          {tier === 'done'    && <span className="home-year-check">●</span>}
+                        </span>
+                        {pct != null && <span className="home-year-pct">{pct}%</span>}
                       </button>
                     )
                   })}
@@ -2145,7 +2185,7 @@ export default function App() {
                 setPhase('home')
               }}
             >
-              {isDailyChallenge ? 'Voltar ao início' : 'Reiniciar'}
+              {isDailyChallenge ? 'Voltar ao início' : 'Sair'}
             </button>
             <button
               type="button"
@@ -2387,6 +2427,7 @@ export default function App() {
   }
 
   // ── Quiz ──────────────────────────────────────────────────────────────────
+  const allAnswered = Object.keys(attempts).length >= sortedQuestions.length
   return (
     <div className="app-shell">
       <header className="app-header">
@@ -2423,8 +2464,8 @@ export default function App() {
             <button type="button" className="header-icon-btn" onClick={pauseQuiz} aria-label="Pausar">
               <PauseIcon />
             </button>
-            <button type="button" className="header-finish-btn" onClick={() => setFinishConfirmOpen(true)} aria-label="Finalizar">
-              <FinishIcon />
+            <button type="button" className="header-finish-btn" onClick={() => setFinishConfirmOpen(true)} aria-label={allAnswered ? 'Finalizar' : 'Sair'}>
+              {allAnswered ? <FinishIcon /> : <ExitIcon />}
             </button>
             <button
               type="button"
@@ -2459,7 +2500,7 @@ export default function App() {
                 <PauseIcon /> <span>Pausar</span>
               </button>
               <button type="button" className="header-menu-item header-menu-item--finish" onClick={() => { setHeaderMenuOpen(false); setFinishConfirmOpen(true) }}>
-                <FinishIcon /> <span>Finalizar</span>
+                {allAnswered ? <FinishIcon /> : <ExitIcon />} <span>{allAnswered ? 'Finalizar' : 'Sair'}</span>
               </button>
             </div>
           )}
@@ -2762,11 +2803,12 @@ export default function App() {
 
       {finishConfirmOpen && (() => {
         const incomplete = sortedQuestions.length - Object.keys(attempts).length
+        const isFinish = incomplete === 0
         return (
           <div className="fb-overlay" onClick={() => setFinishConfirmOpen(false)}>
             <div className="fb-modal" onClick={e => e.stopPropagation()}>
               <div className="fb-head">
-                <h2 className="fb-title">Finalizar prova?</h2>
+                <h2 className="fb-title">{isFinish ? 'Finalizar prova?' : 'Sair da prova?'}</h2>
                 <button type="button" className="notebook-close" onClick={() => setFinishConfirmOpen(false)}>×</button>
               </div>
               {incomplete > 0 ? (
@@ -2778,7 +2820,7 @@ export default function App() {
               )}
               <div className="finish-confirm-actions">
                 <button type="button" className="btn--ghost" onClick={() => setFinishConfirmOpen(false)}>Cancelar</button>
-                <button type="button" className="home-start-btn" style={{ margin: 0 }} onClick={() => { setFinishConfirmOpen(false); finishQuiz() }}>Finalizar</button>
+                <button type="button" className="home-start-btn" style={{ margin: 0 }} onClick={() => { setFinishConfirmOpen(false); finishQuiz() }}>{isFinish ? 'Finalizar' : 'Sair'}</button>
               </div>
             </div>
           </div>
