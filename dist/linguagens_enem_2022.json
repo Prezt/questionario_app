@@ -18,7 +18,8 @@
     "area": "linguagens",
     "answer": "d",
     "difficulty": 5,
-    "language": "en"
+    "language": "en",
+    "contextId": "enem_2022_linguagens_q1en_ctx1"
   },
   {
     "number": 1,
@@ -38,15 +39,16 @@
     "year": 2022,
     "test": "ENEM",
     "area": "linguagens",
-    "answer": "d",
+    "answer": "e",
     "difficulty": 3,
-    "language": "es"
+    "language": "es",
+    "contextId": "enem_2022_linguagens_q1es_ctx1"
   },
   {
     "number": 2,
     "text": "O texto aborda relações interpessoais com o objetivo de",
     "alternatives": {
-      "a": "problematizar o papel de gênero em casamento modernos.",
+      "a": "problematizar o papel de gênero em casamentos modernos.",
       "b": "apontar a relevância da educação formal na escolha de parceiros.",
       "c": "comparar a expectativa de parceiros amorosos em épocas distintas.",
       "d": "discutir o uso de aplicativos para proporcionar encontros românticos.",
@@ -62,7 +64,8 @@
     "area": "linguagens",
     "answer": "c",
     "difficulty": 5,
-    "language": "en"
+    "language": "en",
+    "contextId": "enem_2022_linguagens_q2en_ctx1"
   },
   {
     "number": 2,
@@ -71,8 +74,8 @@
       "a": "conhecimento das pessoas sobre as tecnologias.",
       "b": "uso do celular alheio por pessoas desautorizadas.",
       "c": "funcionamento de recursos tecnológicos obsoletos",
-      "d": "ingerência do celular sobre as escolhas do\nusuários.",
-      "e": "falta de informação sobre a configuração de alerta\nno celular."
+      "d": "ingerência do celular sobre as escolhas do usuários.",
+      "e": "falta de informação sobre a configuração de alerta no celular."
     },
     "images": [],
     "tags": [
@@ -82,19 +85,20 @@
     "year": 2022,
     "test": "ENEM",
     "area": "linguagens",
-    "answer": "c",
+    "answer": "d",
     "difficulty": 4,
-    "language": "es"
+    "language": "es",
+    "contextId": "enem_2022_linguagens_q2es_ctx1"
   },
   {
     "number": 3,
     "text": "Nessa tirinha, o comportamento da mulher expressa",
     "alternatives": {
-      "a": "A revolta com a falta de sorte.",
-      "b": "B gosto pela prática da leitura.",
-      "c": "C receio pelo futuro do casamento.",
-      "d": "D entusiasmo com os livros de terror.",
-      "e": "E rejeição ao novo tipo de residência."
+      "a": "revolta com a falta de sorte.",
+      "b": "gosto pela prática da leitura.",
+      "c": "receio pelo futuro do casamento.",
+      "d": "entusiasmo com os livros de terror.",
+      "e": "rejeição ao novo tipo de residência."
     },
     "images": [],
     "tags": [
@@ -106,17 +110,18 @@
     "area": "linguagens",
     "answer": "b",
     "difficulty": 3,
-    "language": "en"
+    "language": "en",
+    "contextId": "enem_2022_linguagens_q3en_ctx1"
   },
   {
     "number": 3,
-    "text": "En los suburbios de La Habana, llaman al amigo m tierra o m sangre. En Caracas, el amigo es m pana o m llave: pana, por panadería, la fuente del buen pan para las hambres del alma; y llave por... — Llave, por llave — dice Mario Benedetti. Y me cuenta que cuando vivía e Buenos Aires, en los tiempos del terror, él llevaba cinc llaves ajenas en su llavero: cinco llaves, de cinco casas de cinco amigos: las llaves que lo salvaron.",
+    "text": "Nesse texto, o autor demonstra como as diferentes expressões existentes em espanhol para se referir a \"amigo\" variam em função",
     "alternatives": {
-      "a": "A das peculiaridades dos subúrbios hispano-americanos",
-      "b": "B da força da conexão espiritual entre os amigos.",
-      "c": "C do papel da amizade em diferentes contextos.",
-      "d": "D do hábito de reunir amigos em torno da mesa.",
-      "e": "E dos graus de intimidade entre os amigos."
+      "a": "das peculiaridades dos subúrbios hispano-americanos",
+      "b": "da força da conexão espiritual entre os amigos.",
+      "c": "do papel da amizade em diferentes contextos.",
+      "d": "do hábito de reunir amigos em torno da mesa.",
+      "e": "dos graus de intimidade entre os amigos."
     },
     "images": [],
     "tags": [
@@ -125,9 +130,10 @@
     "year": 2022,
     "test": "ENEM",
     "area": "linguagens",
-    "answer": "b",
+    "answer": "c",
     "difficulty": 5,
-    "language": "es"
+    "language": "es",
+    "contextId": "enem_2022_linguagens_q3es_ctx1"
   },
   {
     "number": 4,
@@ -149,7 +155,8 @@
     "area": "linguagens",
     "answer": "d",
     "difficulty": 5,
-    "language": "en"
+    "language": "en",
+    "contextId": "enem_2022_linguagens_q4en_ctx1"
   },
   {
     "number": 4,
@@ -169,9 +176,10 @@
     "year": 2022,
     "test": "ENEM",
     "area": "linguagens",
-    "answer": "d",
+    "answer": "a",
     "difficulty": 6,
-    "language": "es"
+    "language": "es",
+    "contextId": "enem_2022_linguagens_q4es_ctx1"
   },
   {
     "number": 5,
@@ -193,17 +201,18 @@
     "area": "linguagens",
     "answer": "e",
     "difficulty": 5,
-    "language": "en"
+    "language": "en",
+    "contextId": "enem_2022_linguagens_q5en_ctx1"
   },
   {
     "number": 5,
     "text": "No texto, as palavras “crianza” e “tribu” são usadas para",
     "alternatives": {
-      "a": "evidenciar a importância de uma rede de apoio par as mães na criação de seus filhos.",
-      "b": "denunciar a disparidade entre o trabalho das mães d diferentes classes sociais.",
+      "a": "evidenciar a importância de uma rede de apoio para as mães na criação de seus filhos.",
+      "b": "denunciar a disparidade entre o trabalho das mães de diferentes classes sociais.",
       "c": "resaltar o fechamento de escolas e creches durante o período pandêmico.",
-      "d": "ratificar a romantização da dedicação das mães n educação das crianças.",
-      "e": "enfatizar a proteção aos filhos em razão do isolament social das famílias."
+      "d": "ratificar a romantização da dedicação das mães na educação das crianças.",
+      "e": "enfatizar a proteção aos filhos em razão do isolamento social das famílias."
     },
     "images": [],
     "tags": [
@@ -212,13 +221,14 @@
     "year": 2022,
     "test": "ENEM",
     "area": "linguagens",
-    "answer": "e",
+    "answer": "a",
     "difficulty": 5,
-    "language": "es"
+    "language": "es",
+    "contextId": "enem_2022_linguagens_q5es_ctx1"
   },
   {
     "number": 6,
-    "text": "Nesse texto de opinião, as marcas linguísticas revelam uma situação distensa e de pouca formalidade, o que se videncia pelo(a)",
+    "text": "Nesse texto de opinião, as marcas linguísticas revelam uma situação distensa e de pouca formalidade, o que se evidencia pelo(a)",
     "alternatives": {
       "a": "impessoalização ao longo do texto, como em: “se não há mais tempo”.",
       "b": "construção de uma atmosfera de urgência, em palavras como: “pressa”.",
@@ -305,7 +315,7 @@
   },
   {
     "number": 10,
-    "text": "Segundo os autores citados no texto, a expansão d\npossibilidades no campo das manifestações artística\npromovida pela internet pode pôr em risco o(a)",
+    "text": "Segundo os autores citados no texto, a expansão de possibilidades no campo das manifestações artísticas promovida pela internet pode pôr em risco o(a)",
     "alternatives": {
       "a": "sucesso dos artistas.",
       "b": "valorização dos suportes.",
@@ -346,13 +356,13 @@
   },
   {
     "number": 12,
-    "text": "Nesse texto, o uso da norma-padrão defendido por um os personagens torna-se inadequado em razão do(a)",
+    "text": "Nesse texto, o uso da norma-padrão defendido por um dos personagens torna-se inadequado em razão do(a)",
     "alternatives": {
-      "a": "A falta de compreensão causada pelo choque entre gerações.",
-      "b": "B contexto de comunicação em que a conversa se dá.",
-      "c": "C grau de polidez distinto entre os interlocutores.",
-      "d": "D diferença de escolaridade entre os falantes.",
-      "e": "E nível social dos participantes da situação."
+      "a": "falta de compreensão causada pelo choque entre gerações.",
+      "b": "contexto de comunicação em que a conversa se dá.",
+      "c": "grau de polidez distinto entre os interlocutores.",
+      "d": "diferença de escolaridade entre os falantes.",
+      "e": "nível social dos participantes da situação."
     },
     "images": [],
     "tags": [
@@ -409,7 +419,7 @@
   },
   {
     "number": 15,
-    "text": "[Figura: imagem relacionada à proposta de divulgação de gasto em anúncios] Considerando-se a função social dos posts, essa imagem videncia a apropriação de outro gênero com o objetivo de",
+    "text": "[Figura: imagem relacionada à proposta de divulgação de gasto em anúncios] Considerando-se a função social dos posts, essa imagem evidencia a apropriação de outro gênero com o objetivo de",
     "alternatives": {
       "a": "promover o uso adequado de campanhas publicitárias do governo.",
       "b": "divulgar o projeto sobre transparência da administração pública.",
@@ -432,7 +442,7 @@
   },
   {
     "number": 16,
-    "text": "O texto é exemplar de um gênero discursivo que cumpr a função social de",
+    "text": "O texto é exemplar de um gênero discursivo que cumpre a função social de",
     "alternatives": {
       "a": "narrar, por meio de imagem e poesia, cenas da vida das irmãs Petra e Elena.",
       "b": "descrever, por meio das memórias de Petra, a separação de duas irmãs.",
@@ -469,7 +479,7 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "b",
-    "contextId": "enem_2022_linguagens_q17_ctx1",
+    "contextId": null,
     "difficulty": 7
   },
   {
@@ -536,7 +546,7 @@
   },
   {
     "number": 21,
-    "text": "— Admira-me —, disse uma senhora de sentimento sinceramente abolicionistas; faz-me até pasmar com se possa sentir, e expressar sentimentos escravocratas no presente século, no século dezenove! A mora religiosa e a moral cívica aí se erguem, e falam bem alto esmagando a hidra que envenena a família no mais sagrado santuário seu, e desmoraliza, e avilta a nação inteira! Levantai os olhos ao Gólgota, ou percorrei-os em torno da sociedade, e dizei-me: — Para que se deu em sacrifício o Homem Deus que ali exalou seu derradeiro alento? Ah! Então não é verdade que seu sangue era o resgate do homem! É então uma mentira abominável ter esse sangue comprado a liberdade!? E depois, olhai a sociedade... Não vedes o abutre que a corrói constantemente!… Não sentis a desmoralização que a enerva, o cancro que a destrói? Por qualquer modo que encaremos a escravidão, ela é, e será sempre um grande mal. Dela a decadência do comércio; porque o comércio e a lavoura caminham das mãos dadas, e o escravo não pode fazer florescer a lavoura porque o seu trabalho é forçado.",
+    "text": "— Admira-me —, disse uma senhora de sentimento sinceramente abolicionistas; faz-me até pasmar com se possa sentir, e expressar sentimentos escravocratas no presente século, no século dezenove! A moral religiosa e a moral cívica aí se erguem, e falam bem alto esmagando a hidra que envenena a família no mais sagrado santuário seu, e desmoraliza, e avilta a nação inteira! Levantai os olhos ao Gólgota, ou percorrei-os em torno da sociedade, e dizei-me: — Para que se deu em sacrifício o Homem Deus que ali exalou seu derradeiro alento? Ah! Então não é verdade que seu sangue era o resgate do homem! É então uma mentira abominável ter esse sangue comprado a liberdade!? E depois, olhai a sociedade... Não vedes o abutre que a corrói constantemente!… Não sentis a desmoralização que a enerva, o cancro que a destrói? Por qualquer modo que encaremos a escravidão, ela é, e será sempre um grande mal. Dela a decadência do comércio; porque o comércio e a lavoura caminham das mãos dadas, e o escravo não pode fazer florescer a lavoura porque o seu trabalho é forçado.",
     "alternatives": {
       "a": "revelar a imposição de crenças religiosas a pessoa escravizadas",
       "b": "apontar a hipocrisia do discurso conservador na defesa da escravidão",
@@ -622,7 +632,7 @@
     "number": 25,
     "text": "O discurso da jornalista traz questionamentos sobre a relação da conquista da skatista com a",
     "alternatives": {
-      "a": "conciação do jornalismo com a prática do skate.",
+      "a": "conciliação do jornalismo com a prática do skate.",
       "b": "inserção das mulheres na modalidade skate street.",
       "c": "desconstrução da noção do skate como modalidade masculina.",
       "d": "vanguarda de ser a atleta mais jovem a subir no pódio olímpico.",
@@ -641,7 +651,7 @@
   },
   {
     "number": 26,
-    "text": "Nesse texto, predomina a função poética da linguagem Entretanto, a função emotiva pode ser identificada no verso",
+    "text": "Nesse texto, predomina a função poética da linguagem. Entretanto, a função emotiva pode ser identificada no verso",
     "alternatives": {
       "a": "\"Zanza pra acolá\".",
       "b": "\"Fim de feira, periferia afora\".",
@@ -662,7 +672,7 @@
   },
   {
     "number": 27,
-    "text": "A articulação entre os elementos verbais e os não verbais o texto tem como propósito desencadear a",
+    "text": "A articulação entre os elementos verbais e os não verbais no texto tem como propósito desencadear a",
     "alternatives": {
       "a": "identificação de distinções entre mulheres e homens.",
       "b": "revisão de representações estereotipadas de gênero.",
@@ -682,7 +692,7 @@
   },
   {
     "number": 28,
-    "text": "[Figura] O movimento de recuperação da língua patxôhã assume m caráter identitário peculiar na medida em que",
+    "text": "[Figura] O movimento de recuperação da língua patxôhã assume um caráter identitário peculiar na medida em que",
     "alternatives": {
       "a": "denuncia o processo de perseguição histórica sofrida pelos povos indígenas.",
       "b": "conjuga o ato de resistência étnica à preservação da memória cultural.",
@@ -834,11 +844,11 @@
     "number": 35,
     "text": "No texto, ao refletir sobre a atividade de cronista, a autora questiona características do gênero crônica, como",
     "alternatives": {
-      "a": "A relação distanciada entre os interlocutores.",
-      "b": "B articulação de vários núcleos narrativos.",
-      "c": "C brevidade no tratamento da temática.",
-      "d": "D descrição minuciosa dos personagens.",
-      "e": "E público leitor exclusivo."
+      "a": "relação distanciada entre os interlocutores.",
+      "b": "articulação de vários núcleos narrativos.",
+      "c": "brevidade no tratamento da temática.",
+      "d": "descrição minuciosa dos personagens.",
+      "e": "público leitor exclusivo."
     },
     "images": [],
     "tags": [
@@ -985,7 +995,7 @@
   },
   {
     "number": 42,
-    "text": "A partir da intimação recebida pelo filho de 9 anos, autora faz uma reflexão em que transparece a",
+    "text": "A partir da intimação recebida pelo filho de 9 anos, a autora faz uma reflexão em que transparece a",
     "alternatives": {
       "a": "lição de vida comunicada pelo tenente.",
       "b": "predisposição materna para se emocionar.",

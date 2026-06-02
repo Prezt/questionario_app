@@ -53,10 +53,11 @@
     "text": "   A diferença entre briga e luta é a existência de juízes e medalhas?\nA briga desumaniza o outro e pode até matá-lo. Já na luta, as\nintenções do outro são consideradas sua proposta combativa e suas\nhabilidades, enfim, sua meta de vencer. Na luta, o desenvolvimento\npassa pelo contato com a agressividade, a raiva, a frustração, o\norgulho, a determinação e a fraqueza. Daí também a luta não ser\napenas com o outro, mas consigo mesmo, num combate contra as\npróprias limitações, sobretudo, contra o próprio orgulho.",
     "reference": "BARREIRA, C. A briga desumaniza. A luta, não. O Estado de S. Paulo, 22 ago. 2010 (adaptado)."
   },
-  "enem_2022_linguagens_q17_ctx1": {
+  "enem_2022_linguagens_q1en_ctx1": {
     "title": null,
     "subtitle": null,
-    "text": "As my official bio reads, I was made in Cuba, assemble\nin Spain, and imported to the United States — meaning m\nmother, seven months pregnant, and the rest of my famil\narrived as exiles from Cuba to Madrid, where I was born\nLess than two months later, we emigrated once more an\nsettled in New York City, then eventually in Miami, wher\nI was raised and educated. Although technically we live\nin the United States, the Cuban community was culturall\ninsular in Miami during the 1970s, bonded together by th\ntrauma of exile. What's more, it seemed that practicall\neveryone was Cuban: my teachers, my classmates, th\nechanic, the bus driver. I didn't grow up feeling differen\nt or treated as a minority. The few kids who got picked o\nin my grade school were the ones with freckles and funn\nlast names like Dawson and O'Neil.\nBLANCO, R. Disponível em: http://edition.cnn.com.  Acesso em: 9 dez. 2017 (adaptado)",
+    "text": "As my official bio reads, I was made in Cuba, assembled in Spain, and imported to the United States – meaning my mother, seven months pregnant, and the rest of my family arrived as exiles from Cuba to Madrid, where I was born. Less than two months later, we emigrated once more and settled in New York City, then eventually in Miami, where I was raised and educated. Although technically we lived in the United States, the Cuban community was culturally insular in Miami during the 1970s, bonded together by the trauma of exile. What’s more, it seemed that practically everyone was Cuban: my teachers, my classmates, the mechanic, the bus driver. I didn’t grow up feeling different or treated as a minority. The few kids who got picked on in my grade school were the ones with freckles and funny last names like Dawson and O’Neil.",
+    "reference": "BLANCO, R. Disponível em: http://edition.cnn.com. Acesso em: 9 dez. 2017 (adaptado).",
     "images": []
   },
   "enem_2023_linguagens_q18_ctx1": {
@@ -4350,5 +4351,74 @@
     "subtitle": "",
     "text": "Entre maratonistas, um parâmetro utilizado é o de economia de corrida (EC). O valor desse parâmetro é calculado pela razão entre o consumo de oxigênio, em mililitro (mL) por minuto (min), e a massa, em quilograma (kg), do atleta correndo a uma velocidade constante.",
     "reference": "Disponível em: www.treinamentoonline.com.br. Acesso em: 23 out. 2019 (adaptado)."
+  },
+  "enem_2022_linguagens_q1es_ctx1": {
+    "title": null,
+    "subtitle": null,
+    "text": "[Imagem]",
+    "reference": "Disponível em: www.inali.gob.mx. Acesso em: 3 dez. 2019.",
+    "images": [
+      "figuras/q1_2022_fig1.png"
+    ]
+  },
+  "enem_2022_linguagens_q2en_ctx1": {
+    "title": null,
+    "subtitle": null,
+    "text": "Two hundred years ago, Jane Austen lived in a world where single men boasted vast estates; single ladies were expected to speak several languages, sing and play the piano. In both cases, it was, of course, advantageous if you looked good too. So, how much has – or hasn’t – changed? Dating apps opaquely outline the demands of today’s relationship market; users ruminate long and hard over their choice of pictures and what they write in their biographies to hook in potential lovers, and that’s just your own profile. What do you look for in a future partner’s profile – potential signifiers of a popular personality, a good job, a nice car? These apps are a poignant reminder of the often classist attitudes we still adopt, as well as the financial and aesthetic expectations we demand from potential partners.",
+    "reference": "GALER, S. Disponível em: www.bbc.com. Acesso em: 8 abr. 2017 (adaptado).",
+    "images": []
+  },
+  "enem_2022_linguagens_q2es_ctx1": {
+    "title": "Pequeño hermano",
+    "subtitle": null,
+    "text": "Es, no cabe duda, el instrumento más presente y más poderoso de todos los que entraron en nuestras vidas. Ni la televisión ni el ordenador, no hablemos ya del obsoleto fax o de las agendas o los libros electrónicos, ha tenido tal influencia, tal predicamento sobre nosotros. El móvil somos nosotros mismos. Todo desactivado e inerte, incluso, ya les digo. Y de repente, tras un viaje y tres o cuatro imprudentes fotos, salta un aviso en la pantalla. Con sonido; además, pese a que tengo también todas las alertas desactivadas. Y mi monstruo doméstico me dice: tienes un recuerdo nuevo. Lo repito: tienes un recuerdo nuevo. ¿Y tú qué sabes? ¿Y a ti, máquina demoníaca, qué te importa? ¿Cómo te atreves a decirme que son o no son mis recuerdos? ¿Qué es esta intromisión, esta descara? El pequeño hermano lo sabe casi todo. Solo hay una esperanza: que la obsolescencia programada muera antes al pequeño hermano que a nosotros mismos vivir, con los recuerdos que nos dé la gana.",
+    "reference": "FERNÁNDEZ, D. Disponível em: www.lavanguardia.com. Acesso em: 5 dez. 2018 (adaptado).",
+    "images": []
+  },
+  "enem_2022_linguagens_q3en_ctx1": {
+    "title": null,
+    "subtitle": null,
+    "text": "[Imagem]",
+    "reference": "GAULD, T. Disponível em: www.tomgauld.com. Acesso em: 25 jul. 2021.",
+    "images": [
+      "figuras/q3_2022_fig1.png"
+    ]
+  },
+  "enem_2022_linguagens_q3es_ctx1": {
+    "title": null,
+    "subtitle": null,
+    "text": "En los suburbios de La Habana, llaman al amigo mi tierra o mi sangre. En Caracas, el amigo es mi pana o mi llave: pana, por panadería, la fuente del buen pan para las hambres del alma; y llave por... — Llave, por llave — dice Mario Benedetti. Y me cuenta que cuando vivía en Buenos Aires, en los tiempos del terror, él llevaba cinco llaves ajenas en su llavero: cinco llaves, de cinco casas de cinco amigos: las llaves que lo salvaron.",
+    "reference": "GALEANO, E. El libro de los abrazos. Madrid: Siglo Veintiuno, 2015.",
+    "images": []
+  },
+  "enem_2022_linguagens_q4en_ctx1": {
+    "title": "A Teen’s View of Social Media",
+    "subtitle": null,
+    "text": "Instagram is made up of all photos and videos. There is the home page that showcases the posts from people you follow, an explore tab which offers posts from accounts all over the world, and your own page, with a notification tab to show who likes and comments on your posts.\nIt has some downsides though. It is known to make many people feel insecure or down about themselves because the platform showcases the highlights of everyone’s lives, while rarely showing the negatives. This can make one feel like their life is not going as well as others, contributing to the growing rates of anxiety or depression in many teens today. There is an underlying desire for acceptance through the number of likes or followers one has.",
+    "reference": "Disponível em: https://cyberbullying.org. Acesso em: 28 out. 2017.",
+    "images": []
+  },
+  "enem_2022_linguagens_q4es_ctx1": {
+    "title": "Los niños de nuestro olvido",
+    "subtitle": null,
+    "text": "Escribo sobre un destino\nque apenas puedo tocar\nde tanto un niño se inventa\ncon pegamento un hogar\n\nMientras busco las palabras\npara hacer esta canción\nun niño esquiva las balas\nque buscan su corazón\n\nAcurrucado en mi calle\nduermen un niño y la piedad\narma lejos un pesebre\ny juega a la navidad\n\nArma lejos un pesebre\ny juega a la navidad\ny juega a la navidad\ny juega, y juega, y juega.\n\nLa niña de nuestro olvido\npide limosna en un bar\ny lava tu parabrisas\npor un peso, por un pan\n\nSi las flores del olvido\ncrecen con tanto dolor\nserá un mañana sin sol",
+    "reference": "SOSA, M. In: Corazón libre. Argentina: S.D.S.A., 2004 (fragmento).",
+    "images": []
+  },
+  "enem_2022_linguagens_q5en_ctx1": {
+    "title": null,
+    "subtitle": null,
+    "text": "I tend the mobile now\nlike an injured bird\n\nWe text, text, text\nour significant words.\n\nI re-read your first,\nyour second, your third,\n\nLook for your small xx,\nfeeling absurd.\n\nThe codes we send\narrive with a broken chord.\n\nI try to picture your hands,\ntheir image is blurred.\n\nNothing my thumbs press\nwill ever be heard.",
+    "reference": "DUFFY, C. Disponível em: www.independent.co.uk. Acesso em: 27 set. 2021.",
+    "images": []
+  },
+  "enem_2022_linguagens_q5es_ctx1": {
+    "title": "MATERNIDADES EN TIEMPOS DE PANDEMIA",
+    "subtitle": null,
+    "text": "[Imagem]",
+    "reference": "MURIG. Disponível em: https://murigestudiohermanxs.wordpress.com. Acesso em: 26 set. 2021 (adaptado).",
+    "images": [
+      "figuras/q5_2022_fig1.png"
+    ]
   }
 }
