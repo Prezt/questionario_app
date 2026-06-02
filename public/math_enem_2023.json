@@ -63,7 +63,7 @@
   },
   {
     "number": 139,
-    "text": "O gerente de uma fábrica pretende comparar a evolução das vendas dos produtos I e II. Após a verificação, para os meses de abril a junho, são apresentadas as seguintes informações: Vendas Produto em abril (unidade) l 80 ll 190 O gerente estava decidido a cessar a produção do produto II se o número de unidades vendidas do produto I superassem as do produto II. Suponha que a variação na quantidade de unidades vendidas seja constante no período representado na tabela. Em qual mês o produto II parou de ser produzido?",
+    "text": "O gerente de uma fábrica pretende comparar a evolução das vendas dos produtos I e II. Após a verificação, para os meses de abril a junho, são apresentadas as seguintes informações: Vendas Produto em abril (unidade) l 80 ll 190 O gerente estava decidido a cessar a produção do produto II se o número de unidades vendidas do produto I superassem as do produto II. Suponha que a variação na quantidade de unidades vendidas seja constante no período representado na tabela. Em qual mês o produto II parou de ser produzido?\n[Tabela incompleta — faltam dados de maio e junho]",
     "alternatives": {
       "a": "Junho.",
       "b": "Julho.",
@@ -79,7 +79,8 @@
     "test": "ENEM",
     "area": "math",
     "answer": "d",
-    "difficulty": 5
+    "difficulty": 5,
+    "review": true
   },
   {
     "number": 140,
@@ -99,7 +100,8 @@
     "test": "ENEM",
     "area": "math",
     "answer": "e",
-    "difficulty": 6
+    "difficulty": 6,
+    "review": true
   },
   {
     "number": 141,
@@ -120,11 +122,12 @@
     "test": "ENEM",
     "area": "math",
     "answer": "e",
-    "difficulty": 4
+    "difficulty": 4,
+    "review": true
   },
   {
     "number": 142,
-    "text": "A água utilizada pelos 75 moradores de um vilarejo cujo raio da base mede 5 metros, sempre abastecido no desse vilarejo consome, em média, 200 litros de água por pessoa por dia. No mês de junho de um determinado ano, o vilarejo fez uma coleta nos primeiros 20 dias. Passado esse período, as pessoas reduziram a quantidade de água consumida e constataram que o nível da coluna de água estava em queda durante os 10 dias seguintes. Considere π como aproximadamente igual a 3. Qual é a quantidade mínima de água, em litros, que cada morador deve economizar por dia para garantir que o reservatório não fique sem água nos próximos 10 dias?",
+    "text": "A água utilizada pelos 75 moradores de um vilarejo é armazenada em um reservatório cilíndrico cujo raio da base mede 5 metros. Cada morador desse vilarejo consome, em média, 200 litros de água por pessoa por dia. No mês de junho de um determinado ano, o vilarejo fez uma coleta nos primeiros 20 dias. Passado esse período, as pessoas reduziram a quantidade de água consumida e constataram que o nível da coluna de água estava em queda durante os 10 dias seguintes. Considere π como aproximadamente igual a 3. Qual é a quantidade mínima de água, em litros, que cada morador deve economizar por dia para garantir que o reservatório não fique sem água nos próximos 10 dias?",
     "alternatives": {
       "a": "50",
       "b": "60",
@@ -140,7 +143,8 @@
     "test": "ENEM",
     "area": "math",
     "answer": "a",
-    "difficulty": 6
+    "difficulty": 6,
+    "review": true
   },
   {
     "number": 143,
@@ -202,7 +206,8 @@
     "test": "ENEM",
     "area": "math",
     "answer": "b",
-    "difficulty": 7
+    "difficulty": 7,
+    "review": true
   },
   {
     "number": 146,
@@ -252,9 +257,9 @@
     "text": "O mastro de uma bandeira foi instalado perpendicularmente ao solo em uma região plana. Devido aos fortes ventos, três cabos de aço, de mesmo comprimento, serão instalados para dar sustentação ao mastro. Cada cabo de aço ficará perfeitamente esticado com uma extremidade num ponto P do mastro, a uma altura h do solo, e a outra extremidade, num ponto no chão, como mostra a figura. Os cabos de aço formam um ângulo α com o plano do chão. Por medida de segurança, há apenas três opções de instalação: • opção I: h = 11 m e α = 30° • opção II: h = 12 m e α = 45° • opção III: h = 18 m e α = 60° A opção a ser escolhida é aquela em que a medida dos cabos seja a menor possível. Qual será a medida, em metro, de cada um dos cabos a serem instalados?",
     "alternatives": {
       "a": "2",
-      "b": "11 2",
-      "c": "12 2",
-      "d": "12 3",
+      "b": "11√2",
+      "c": "12√2",
+      "d": "12√3",
       "e": "22"
     },
     "images": [],
@@ -266,7 +271,8 @@
     "test": "ENEM",
     "area": "math",
     "answer": "c",
-    "difficulty": 5
+    "difficulty": 5,
+    "review": true
   },
   {
     "number": 149,
@@ -287,7 +293,8 @@
     "test": "ENEM",
     "area": "math",
     "answer": "e",
-    "difficulty": 5
+    "difficulty": 5,
+    "review": true
   },
   {
     "number": 150,
@@ -331,11 +338,12 @@
     "test": "ENEM",
     "area": "math",
     "answer": "b",
-    "difficulty": 3
+    "difficulty": 3,
+    "review": true
   },
   {
     "number": 152,
-    "text": "A exposição a alguns níveis sonoros pode causar esões auditivas. Por isso, em uma indústria, são adotadas medidas preventivas de acordo com a máquina que o uncionário opera e o nível N de intensidade do som, medido em decibel (dB), a que o operário é exposto, sendo N = log I − log 10^(-12) W/m². Quando o som é considerado baixo, ou seja, N = 48 dB ou menos, deve ser utilizada a medida preventiva I. No caso de o som ser moderado, quando N está no intervalo (48 dB, 55 dB), deve ser utilizada a medida preventiva II. Quando o som é moderado alto, que equivale a N no intervalo (55 dB, 80 dB), a medida preventiva a ser usada é a III. Se N estiver no intervalo (80 dB, 115 dB), quando o som é considerado alto, deve-se utilizar a medida preventiva IV. E se o som é considerado muito alto, com N maior que 115 dB, deve-se utilizar a medida preventiva V. Uma nova máquina, com I = 8 × 10^(-8) W/m², foi adquirida e será classificada de acordo com o nível de ruído que produz. Considere 0,3 como aproximação para log 2. O funcionário que operará a nova máquina deverá adotar medida preventiva",
+    "text": "A exposição a alguns níveis sonoros pode causar esões auditivas. Por isso, em uma indústria, são adotadas medidas preventivas de acordo com a máquina que o uncionário opera e o nível N de intensidade do som, medido em decibel (dB), a que o operário é exposto, sendo N = 10 × (log I − log 10⁻¹²) W/m². Quando o som é considerado baixo, ou seja, N = 48 dB ou menos, deve ser utilizada a medida preventiva I. No caso de o som ser moderado, quando N está no intervalo (48 dB, 55 dB), deve ser utilizada a medida preventiva II. Quando o som é moderado alto, que equivale a N no intervalo (55 dB, 80 dB), a medida preventiva a ser usada é a III. Se N estiver no intervalo (80 dB, 115 dB), quando o som é considerado alto, deve-se utilizar a medida preventiva IV. E se o som é considerado muito alto, com N maior que 115 dB, deve-se utilizar a medida preventiva V. Uma nova máquina, com I = 8 × 10⁻⁸ W/m², foi adquirida e será classificada de acordo com o nível de ruído que produz. Considere 0,3 como aproximação para log 2. O funcionário que operará a nova máquina deverá adotar medida preventiva",
     "alternatives": {
       "a": "I.",
       "b": "II.",
@@ -356,7 +364,7 @@
   },
   {
     "number": 153,
-    "text": "Um supermercado conta com cinco caixas disponíveis para pagamento. Foram instaladas telas que apresentam o tempo médio gasto por cada caixa para iniciar e finalizar atendimento de cada cliente, e o número de pessoa presentes na fila de cada caixa em tempo real. Um cliente na hora de passar sua compra, sabendo que cada um dos cinco caixas iniciará um novo atendimento naquel momento, pretende gastar o menor tempo possível de espera na fila. Ele observa que as telas apresentavam a informações a seguir.\n• Caixa I: atendimento 12 minutos, 5 pessoas na fila\n• Caixa II: atendimento 6 minutos, 9 pessoas na fila\n• Caixa III: atendimento 5 minutos, 6 pessoas na fila\n• Caixa IV: atendimento 15 minutos, 2 pessoas na fila\n• Caixa V: atendimento 9 minutos, 3 pessoas na fila\nPara alcançar seu objetivo, o cliente deverá escolher o caix",
+    "text": "Um supermercado conta com cinco caixas disponíveis para pagamento. Foram instaladas telas que apresentam o tempo médio gasto por cada caixa para iniciar e finalizar atendimento de cada cliente, e o número de pessoas presentes na fila de cada caixa em tempo real. Um cliente, na hora de passar sua compra, sabendo que cada um dos cinco caixas iniciará um novo atendimento naquele momento, pretende gastar o menor tempo possível de espera na fila. Ele observa que as telas apresentavam as informações a seguir.\n• Caixa I: atendimento 12 minutos, 5 pessoas na fila\n• Caixa II: atendimento 6 minutos, 9 pessoas na fila\n• Caixa III: atendimento 5 minutos, 6 pessoas na fila\n• Caixa IV: atendimento 15 minutos, 2 pessoas na fila\n• Caixa V: atendimento 9 minutos, 3 pessoas na fila\nPara alcançar seu objetivo, o cliente deverá escolher o caixa",
     "alternatives": {
       "a": "I.",
       "b": "II.",
@@ -377,7 +385,7 @@
   },
   {
     "number": 154,
-    "text": "As figuras pintadas no quadro da sala de estar d\numa residência representam as silhuetas de parte da\ntorres de um castelo e, ao fundo, a de uma lua cheia.\nA lua foi pintada na forma de um círculo, e o telhado d\ntorre mais alta, na forma de triângulo equilátero, foi pintad\nsobrepondo parte da lua. O centro da lua coincide com um\ndos vértices do telhado da torre mais alta.\nNesse quadro, a parte da lua escondida atrás da torr\nmais alta do castelo pode ser representada por um",
+    "text": "As figuras pintadas no quadro da sala de estar de uma residência representam as silhuetas de parte das torres de um castelo e, ao fundo, a de uma lua cheia. A lua foi pintada na forma de um círculo, e o telhado da torre mais alta, na forma de triângulo equilátero, foi pintado sobrepondo parte da lua. O centro da lua coincide com um dos vértices do telhado da torre mais alta.\nNesse quadro, a parte da lua escondida atrás da torre mais alta do castelo pode ser representada por um",
     "alternatives": {
       "a": "cone.",
       "b": "setor circular.",
@@ -436,7 +444,8 @@
     "test": "ENEM",
     "area": "math",
     "answer": "a",
-    "difficulty": 3
+    "difficulty": 3,
+    "review": true
   },
   {
     "number": 157,
@@ -457,7 +466,8 @@
     "test": "ENEM",
     "area": "math",
     "answer": "b",
-    "difficulty": 4
+    "difficulty": 4,
+    "review": true
   },
   {
     "number": 158,
@@ -504,10 +514,10 @@
     "number": 160,
     "text": "Ao realizar o cadastro em um aplicativo de investimentos, oi solicitado ao usuário que criasse uma senha, sendo ermitido o uso somente dos seguintes caracteres: • algarismos de 0 a 9; • 26 letras minúsculas do alfabeto; • 26 letras maiúsculas do alfabeto; • 6 caracteres especiais !, @, #, $, , &. Três tipos de estruturas para senha foram apresentadas o usuário: • tipo I: formada por quaisquer quatro caracteres distintos, escolhidos dentre os permitidos; • tipo II: formada por cinco caracteres distintos, iniciando por três letras, seguidas por um algarismo e, ao final, um caractere especial; • tipo III: formada por seis caracteres distintos, iniciando por duas letras, seguidas por dois algarismos e, ao final, dois caracteres especiais. Considere p ,  p  e  p as probabilidades de se escobrirem ao acaso, na primeira tentativa, as senhas os tipos I, II e III, respectivamente. Nessas condições, o tipo de senha que apresenta a menor probabilidade de ser descoberta ao acaso, na rimeira tentativa, é o",
     "alternatives": {
-      "a": "tipo I, pois p < p < p . 1 2 3",
+      "a": "tipo I, pois p₁ < p₂ < p₃",
       "b": "tipo I, pois tem menor quantidade de caracteres.",
       "c": "tipo II, pois tem maior quantidade de letras.",
-      "d": "tipo III, pois p < p < p . 3 2 1",
+      "d": "tipo III, pois p₃ < p₂ < p₁",
       "e": "tipo III, pois tem maior quantidade de caracteres."
     },
     "images": [],
@@ -523,7 +533,7 @@
   },
   {
     "number": 161,
-    "text": "Uma loja vende seus produtos de duas formas à vista ou financiado em três parcelas mensais iguais. Para definir o valor dessas parcelas nas vendas financiadas, a loja aumenta em 20% o valor do produto à vista e divide esse novo valor por 3. A primeira parcela deve ser paga no ato da compra, e as duas últimas em 30 e 60 dias após a compra. Um cliente da loja decidiu comprar, de forma financiada um produto cujo valor à vista é R$ 1 500,00. Utilize 5,29 como aproximação para . A taxa mensal de juros compostos praticada neste financiamento é de",
+    "text": "Uma loja vende seus produtos de duas formas à vista ou financiado em três parcelas mensais iguais. Para definir o valor dessas parcelas nas vendas financiadas, a loja aumenta em 20% o valor do produto à vista e divide esse novo valor por 3. A primeira parcela deve ser paga no ato da compra, e as duas últimas em 30 e 60 dias após a compra. Um cliente da loja decidiu comprar, de forma financiada um produto cujo valor à vista é R$ 1 500,00. Utilize 5,29 como aproximação para √28. A taxa mensal de juros compostos praticada neste financiamento é de",
     "alternatives": {
       "a": "6,7%",
       "b": "10%",
@@ -581,7 +591,8 @@
     "test": "ENEM",
     "area": "math",
     "answer": "a",
-    "difficulty": 4
+    "difficulty": 4,
+    "review": true
   },
   {
     "number": 164,
@@ -601,7 +612,8 @@
     "test": "ENEM",
     "area": "math",
     "answer": "annulled",
-    "difficulty": 2
+    "difficulty": 2,
+    "review": true
   },
   {
     "number": 165,
@@ -627,7 +639,7 @@
   },
   {
     "number": 166,
-    "text": "Uma pessoa pratica quatro atividades físicas — caminhar e correr. Essas atividades apresentam o número de horas diárias por atividade. Dias da semana Caminhar Corr Segunda-feira 1,0 0,5 Terça-feira 0,5 1,0 Quarta-feira 0,0 1,5 Quinta-feira 0,0 2,0 Sexta-feira 0,0 0,5 Ela deseja comemorar seu aniversário e escolhe o dia da semana em que a soma das horas de atividades físicas praticadas for o maior. Para tanto, considera que os gastos calóricos são os seguintes: Atividade física Caminhar Correr Gasto calórico (cal/h) 248 360 O dia da semana em que será comemorado o aniversário é",
+    "text": "Uma pessoa pratica duas atividades físicas — caminhar e correr. Essas atividades apresentam o número de horas diárias por atividade. Dias da semana Caminhar Corr Segunda-feira 1,0 0,5 Terça-feira 0,5 1,0 Quarta-feira 0,0 1,5 Quinta-feira 0,0 2,0 Sexta-feira 0,0 0,5 Ela deseja comemorar seu aniversário e escolhe o dia da semana em que a soma das horas de atividades físicas praticadas for o maior. Para tanto, considera que os gastos calóricos são os seguintes: Atividade física Caminhar Correr Gasto calórico (cal/h) 248 360 O dia da semana em que será comemorado o aniversário é",
     "alternatives": {
       "a": "segunda-feira.",
       "b": "terça-feira.",
@@ -683,7 +695,8 @@
     "test": "ENEM",
     "area": "math",
     "answer": "a",
-    "difficulty": 7
+    "difficulty": 7,
+    "review": true
   },
   {
     "number": 169,
@@ -704,7 +717,8 @@
     "test": "ENEM",
     "area": "math",
     "answer": "d",
-    "difficulty": 4
+    "difficulty": 4,
+    "review": true
   },
   {
     "number": 170,
@@ -725,7 +739,8 @@
     "test": "ENEM",
     "area": "math",
     "answer": "d",
-    "difficulty": 5
+    "difficulty": 5,
+    "review": true
   },
   {
     "number": 171,
@@ -765,14 +780,15 @@
     "test": "ENEM",
     "area": "math",
     "answer": "c",
-    "difficulty": 6
+    "difficulty": 6,
+    "review": true
   },
   {
     "number": 173,
     "text": "Entre maratonistas, um parâmetro utilizado é o de economia de corrida (EC). O valor desse parâmetro é calculado pela razão entre o consumo de oxigênio, em mililitro (mL) por minuto (min), e a massa, em quilograma (kg), do atleta correndo a uma velocidade constante. Disponível em: www.treinamentoonline.com.br. Acesso em: 23 out. 2019 (adaptado). Um maratonista, visando melhorar sua performance, auxiliado por um médico, mensura o seu consumo de oxigênio por minuto a velocidade constante. Com base nesse consumo e na massa do atleta, o médico calcula o EC do atleta. A unidade de medida da grandeza descrita pelo parâmetro EC é",
     "alternatives": {
-      "a": "mL ⋅ kg",
-      "b": "min ⋅ kg",
+      "a": "mL ⋅ kg / min",
+      "b": "mL / (min ⋅ kg)",
       "c": "kg",
       "d": "mL",
       "e": "min"
@@ -785,11 +801,12 @@
     "test": "ENEM",
     "area": "math",
     "answer": "b",
-    "difficulty": 2
+    "difficulty": 2,
+    "review": true
   },
   {
     "number": 174,
-    "text": "Uma pessoa comprou um ingresso para o cinema e, com base em uma representação bidimensional do posicionamento das poltronas, conforme indicado na figura, subiu uma das escadas e parou na posição indicada pela letra E. A pessoa observou que, para encontrar sua poltrona, deveria passar por mais quatro fileiras na direção norte e olhar à sua direita. Nesse cinema, as poltronas são identificadas por um sistema de coordenadas em que a primeira posição representa o número da fileira e a segunda posição representa a letra correspondente à",
+    "text": "Uma pessoa comprou um ingresso para o cinema e, com base em uma representação bidimensional do posicionamento das poltronas, conforme indicado na figura, subiu uma das escadas e parou na posição indicada pela letra E. A pessoa observou que, para encontrar sua poltrona, deveria passar por mais quatro fileiras na direção norte e olhar à sua direita. Nesse cinema, as poltronas são identificadas por um sistema de coordenadas em que a primeira posição representa o número da fileira e a segunda posição representa a letra correspondente à coluna. A poltrona dessa pessoa está na posição",
     "alternatives": {
       "a": "A6.",
       "b": "B1.",
@@ -869,7 +886,8 @@
     "test": "ENEM",
     "area": "math",
     "answer": "a",
-    "difficulty": 5
+    "difficulty": 5,
+    "review": true
   },
   {
     "number": 178,
@@ -889,7 +907,8 @@
     "test": "ENEM",
     "area": "math",
     "answer": "b",
-    "difficulty": 3
+    "difficulty": 3,
+    "review": true
   },
   {
     "number": 179,
