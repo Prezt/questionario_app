@@ -34,76 +34,10 @@ import {
   captionFromBracketText,
 } from './parseQuestionFigures.js'
 import { calcTriScores } from './triScoring.js'
+import { richHtml, richHtmlBr } from './richHtml.js'
+import { subscribeToKatexReady } from './renderMath.js'
 const ReviewPage  = lazy(() => import('./ReviewPage.jsx'))
 const QuestionEditor = lazy(() => import('./QuestionEditor.jsx'))
-
-// Render text with <b> (bold) and <i> (italic) support.
-// All other HTML is escaped, so this is safe even for user-edited content.
-function escapeInline(text) {
-  return text
-    .replace(/&/g, '&amp;')
-    .replace(/</g, '&lt;')
-    .replace(/>/g, '&gt;')
-    .replace(/&lt;b&gt;/gi, '<strong>')
-    .replace(/&lt;\/b&gt;/gi, '</strong>')
-    .replace(/&lt;i&gt;/gi, '<em>')
-    .replace(/&lt;\/i&gt;/gi, '</em>')
-    .replace(/&lt;sub&gt;/gi, '<sub>')
-    .replace(/&lt;\/sub&gt;/gi, '</sub>')
-    .replace(/&lt;sup&gt;/gi, '<sup>')
-    .replace(/&lt;\/sup&gt;/gi, '</sup>')
-    .replace(/&lt;br\s*\/?&gt;/gi, '<br>')
-    .replace(/&lt;hr\s*\/?&gt;/gi, '<hr>')
-    .replace(/&lt;left&gt;/gi, '<span class="txt-left">')
-    .replace(/&lt;\/left&gt;/gi, '</span>')
-    .replace(/&lt;center&gt;/gi, '<span class="txt-center">')
-    .replace(/&lt;\/center&gt;/gi, '</span>')
-    .replace(/&lt;right&gt;/gi, '<span class="txt-right">')
-    .replace(/&lt;\/right&gt;/gi, '</span>')
-    .replace(/&lt;justify&gt;/gi, '<span class="txt-justify">')
-    .replace(/&lt;\/justify&gt;/gi, '</span>')
-    .replace(/<sup>(.*?)<\/sup><sub>(.*?)<\/sub>/g, '<span class="supsub"><sup>$1</sup><sub>$2</sub></span>')
-}
-function parseMarkdownTable(tableLines) {
-  const dataRows = tableLines.filter(l => !/^\|[\s\-:|]+\|$/.test(l.trim()))
-  if (!dataRows.length) return ''
-  const parseRow = l => l.split('|').slice(1, -1).map(c => c.trim())
-  // Build a row of <th> or <td> elements, merging cells whose content is ">"
-  const buildCells = (cells, tag) => {
-    const out = []
-    let i = 0
-    while (i < cells.length) {
-      let span = 1
-      while (i + span < cells.length && cells[i + span] === '>') span++
-      const attr = span > 1 ? ` colspan="${span}"` : ''
-      out.push(`<${tag}${attr}>${escapeInline(cells[i])}</${tag}>`)
-      i += span
-    }
-    return out.join('')
-  }
-  const [header, ...body] = dataRows
-  const ths = buildCells(parseRow(header), 'th')
-  const trs = body.map(l => `<tr>${buildCells(parseRow(l), 'td')}</tr>`).join('')
-  return `<table class="q-table"><thead><tr>${ths}</tr></thead><tbody>${trs}</tbody></table>`
-}
-function richHtmlBr(text) {
-  if (!text) return ''
-  return richHtml(text).replace(/\n/g, '<br>')
-}
-function richHtml(text) {
-  if (!text) return ''
-  const lines = text.split('\n')
-  const parts = []
-  let tableLines = [], plainLines = []
-  const flushPlain = () => { if (plainLines.length) { parts.push(escapeInline(plainLines.join('\n'))); plainLines = [] } }
-  const flushTable = () => { if (tableLines.length) { parts.push(parseMarkdownTable(tableLines)); tableLines = [] } }
-  for (const line of lines) {
-    if (line.trim().startsWith('|')) { flushPlain(); tableLines.push(line) }
-    else { flushTable(); plainLines.push(line) }
-  }
-  flushPlain(); flushTable()
-  return parts.join('')
-}
 
 const ATTEMPTS_SESSION_KEY = 'questionario-tentativas'
 const PAUSED_SESSION_KEY   = 'questionario-sessao'
@@ -160,10 +94,18 @@ function formatTime(seconds) {
   return `${m}:${String(s).padStart(2, '0')}`
 }
 
-const APP_VERSION = '1.11.2'
+const APP_VERSION = '1.12.0'
 const APP_VERSION_DATE = '02/06/2026'
 
 const CHANGELOG = [
+  {
+    version: '1.12.0',
+    date: '02/06/2026',
+    items: [
+      'Renderização de expressões matemáticas com \\(...\\) (KaTeX)',
+      'Botão de fração na barra de formatação',
+    ],
+  },
   {
     version: '1.11.2',
     date: '02/06/2026',
@@ -566,6 +508,13 @@ export default function App() {
   const [headerMenuOpen, setHeaderMenuOpen] = useState(false)
   const [finishConfirmOpen, setFinishConfirmOpen] = useState(false)
   const [timerDrawerOpen, setTimerDrawerOpen] = useState(false)
+
+  // Force re-render once KaTeX finishes loading (math switches from raw \(latex\) to rendered HTML)
+  const [, forceMathRerender] = useState(0)
+  useEffect(() => {
+    const unsub = subscribeToKatexReady(() => forceMathRerender((n) => n + 1))
+    return unsub
+  }, [])
 
   // Phase: 'home' | 'quiz' | 'summary' | 'login' | 'admin'
   const [phase, setPhase] = useState('login')

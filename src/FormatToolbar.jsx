@@ -76,6 +76,7 @@ export default function FormatToolbar() {
         null,
         'Stacked sup+sub'
       )}
+      {btn('frac', 'a/b', null, 'Fração — envolve em \\(\\frac{}{}\\)')}
       <div className="fmt-divider" />
       {btn('center', '⬛ center', null, 'Center <center>')}
       {btn('br', '↵ br', null, 'Line break <br>')}

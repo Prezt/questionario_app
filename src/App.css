@@ -3706,3 +3706,11 @@
   color: var(--fg-muted, #6b7280);
   line-height: 1.2;
 }
+
+.math-error {
+  color: #c00;
+  font-family: monospace;
+  background: rgba(204, 0, 0, 0.08);
+  padding: 0 0.2em;
+  border-radius: 3px;
+}

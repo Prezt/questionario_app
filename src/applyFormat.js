@@ -22,6 +22,28 @@ export function applyFormat(value, selStart, selEnd, action) {
     return { value: next, selStart: pos, selEnd: pos }
   }
 
+  if (action === 'frac') {
+    const selected = value.slice(selStart, selEnd)
+    let inserted, caretOffset
+    if (selected === '') {
+      inserted = '\\(\\frac{}{}\\)'
+      caretOffset = '\\(\\frac{'.length // inside the numerator
+    } else if (selected.includes('/')) {
+      const slash = selected.indexOf('/')
+      const num = selected.slice(0, slash)
+      const den = selected.slice(slash + 1)
+      inserted = `\\(\\frac{${num}}{${den}}\\)`
+      caretOffset = inserted.length // after the closing delim
+    } else {
+      inserted = `\\(\\frac{${selected}}{}\\)`
+      // caret inside the empty denominator: position of `}{}` + 2
+      caretOffset = inserted.indexOf('}{}') + 2
+    }
+    const next = value.slice(0, selStart) + inserted + value.slice(selEnd)
+    const pos = selStart + caretOffset
+    return { value: next, selStart: pos, selEnd: pos }
+  }
+
   const [open, close] = WRAP[action]
   const selected = value.slice(selStart, selEnd)
   const next = value.slice(0, selStart) + open + selected + close + value.slice(selEnd)

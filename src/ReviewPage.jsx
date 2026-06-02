@@ -3,6 +3,8 @@ import { useState, useEffect, useCallback, useMemo, useRef } from 'react'
 import './ReviewPage.css'
 import FormatToolbar from './FormatToolbar.jsx'
 import { parseStemSegments } from './parseQuestionFigures.js'
+import { richHtml } from './richHtml.js'
+import { subscribeToKatexReady } from './renderMath.js'
 
 const AREA_TO_DAY = {
   linguagens: 'd1',
@@ -49,40 +51,6 @@ function getAuditIssues(auditReport, file, questionNumber) {
 }
 
 // ── Rich text rendering ────────────────────────────────────────────────────
-function escapeInline(text) {
-  return text
-    .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
-    .replace(/&lt;b&gt;/gi, '<strong>').replace(/&lt;\/b&gt;/gi, '</strong>')
-    .replace(/&lt;i&gt;/gi, '<em>').replace(/&lt;\/i&gt;/gi, '</em>')
-    .replace(/&lt;sub&gt;/gi, '<sub>').replace(/&lt;\/sub&gt;/gi, '</sub>')
-    .replace(/&lt;sup&gt;/gi, '<sup>').replace(/&lt;\/sup&gt;/gi, '</sup>')
-    .replace(/<sup>(.*?)<\/sup><sub>(.*?)<\/sub>/g, '<span class="supsub"><sup>$1</sup><sub>$2</sub></span>')
-    .replace(/&lt;center&gt;/gi, '<span class="txt-center">').replace(/&lt;\/center&gt;/gi, '</span>')
-}
-function parseMarkdownTable(tableLines) {
-  const esc = s => s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
-  const dataRows = tableLines.filter(l => !/^\|[\s\-:|]+\|$/.test(l.trim()))
-  if (!dataRows.length) return ''
-  const parseRow = l => l.split('|').slice(1, -1).map(c => c.trim())
-  const [header, ...body] = dataRows
-  const ths = parseRow(header).map(c => `<th>${esc(c)}</th>`).join('')
-  const trs = body.map(l => `<tr>${parseRow(l).map(c => `<td>${esc(c)}</td>`).join('')}</tr>`).join('')
-  return `<table class="q-table"><thead><tr>${ths}</tr></thead><tbody>${trs}</tbody></table>`
-}
-function richHtml(text) {
-  if (!text) return ''
-  const lines = text.split('\n')
-  const parts = []
-  let tableLines = [], plainLines = []
-  const flushPlain = () => { if (plainLines.length) { parts.push(escapeInline(plainLines.join('\n'))); plainLines = [] } }
-  const flushTable = () => { if (tableLines.length) { parts.push(parseMarkdownTable(tableLines)); tableLines = [] } }
-  for (const line of lines) {
-    if (line.trim().startsWith('|')) { flushPlain(); tableLines.push(line) }
-    else { flushTable(); plainLines.push(line) }
-  }
-  flushPlain(); flushTable()
-  return parts.join('')
-}
 function RichText({ text, className }) {
   if (!text) return null
   return <span className={className} dangerouslySetInnerHTML={{ __html: richHtml(text) }} />
@@ -367,6 +335,13 @@ export default function ReviewPage() {
     const prevHrefs = links.map(l => l.href)
     links.forEach(l => { l.href = l.href.replace(/favicon[^.]*\.(ico|png)/, m => 'review-' + m) })
     return () => { links.forEach((l, i) => { l.href = prevHrefs[i] }) }
+  }, [])
+
+  // Force re-render once KaTeX finishes loading (math switches from raw \(latex\) to rendered HTML)
+  const [, forceMathRerender] = useState(0)
+  useEffect(() => {
+    const unsub = subscribeToKatexReady(() => forceMathRerender((n) => n + 1))
+    return unsub
   }, [])
 
   // datasets: { [filename]: Question[] }

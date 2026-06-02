@@ -66,3 +66,30 @@ describe('applyFormat', () => {
     expect(result.selEnd).toBe(17)
   })
 })
+
+describe('applyFormat — frac', () => {
+  it('selection "1/2" -> \\(\\frac{1}{2}\\), caret after closing delim', () => {
+    const result = applyFormat('value 1/2 here', 6, 9, 'frac')
+    expect(result.value).toBe('value \\(\\frac{1}{2}\\) here')
+    // caret lands after the inserted span
+    expect(result.selStart).toBe(6 + '\\(\\frac{1}{2}\\)'.length)
+    expect(result.selEnd).toBe(result.selStart)
+  })
+
+  it('selection without "/" wraps as numerator, caret in empty denominator', () => {
+    const result = applyFormat('n+1', 0, 3, 'frac')
+    expect(result.value).toBe('\\(\\frac{n+1}{}\\)')
+    // caret should land inside the empty {} of the denominator
+    const idx = result.value.indexOf('}{}')
+    expect(result.selStart).toBe(idx + 2) // between the two braces of {}
+    expect(result.selEnd).toBe(result.selStart)
+  })
+
+  it('empty selection inserts \\(\\frac{}{}\\) with caret in numerator', () => {
+    const result = applyFormat('abc', 3, 3, 'frac')
+    expect(result.value).toBe('abc\\(\\frac{}{}\\)')
+    const idx = result.value.indexOf('\\frac{')
+    expect(result.selStart).toBe(idx + '\\frac{'.length)
+    expect(result.selEnd).toBe(result.selStart)
+  })
+})
