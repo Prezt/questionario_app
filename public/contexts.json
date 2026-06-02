@@ -4325,5 +4325,30 @@
     "text": "O ensaio de micronúcleos é um teste de avaliação de genotoxicidade que associa a presença de micronúcleos (pequenos núcleos que aparecem próximo aos núcleos das células) com lesões genéticas. Os micronúcleos são fragmentos de DNA encapsulados, provenientes do fuso mitótico durante a divisão celular.",
     "reference": "DIAS, V. M. Micronúcleos em células tumorais: biologia e implicações para a tumorigênese. Dissertação de Mestrado. USP, 2006 (adaptado).",
     "images": []
+  },
+  "enem_2023_math_q147_ctx1": {
+    "title": "",
+    "subtitle": "",
+    "text": "Alguns estudos comprovam que os carboidratos fornecem energia ao corpo, preservam as proteínas estruturais dos músculos durante a prática de atividade física e ainda dão força para o cérebro coordenar os movimentos, o que de fato tem impacto positivo no desenvolvimento do praticante. O ideal é consumir 1 grama de carboidrato para cada minuto de caminhada.",
+    "reference": "CIRINO, C. Boa pergunta: consumir carboidratos antes dos exercícios melhora o desempenho do atleta? Revista Saúde! É Vital, n. 330, nov. 2010 (adaptado).",
+    "images": []
+  },
+  "enem_2023_math_q152_ctx1": {
+    "title": "",
+    "subtitle": "",
+    "text": "A exposição a alguns níveis sonoros pode causar lesões auditivas. Por isso, em uma indústria, são adotadas medidas preventivas de acordo com a máquina que o funcionário opera e o nível N de intensidade do som, medido em decibel (dB), a que o operário é exposto, sendo N = log₁₀ I¹⁰ − log₁₀ I₀¹⁰, I a intensidade do som e I₀ = 10⁻¹² W/m².",
+    "reference": "Disponível em: www.sofisica.com.br. Acesso em: 8 jul. 2015 (adaptado)."
+  },
+  "enem_2023_math_q171_ctx1": {
+    "title": "",
+    "subtitle": "",
+    "text": "O calendário maia apresenta duas contagens simultâneas de anos, o chamado ano Tzolkim, composto por 260 dias e que determinava o calendário religioso e o ano Haab, composto por 365 dias e que determinava o calendário agrícola. Um historiador encontrou evidências de que gerações de uma mesma família governaram certa comunidade maia pelo período de 20 ciclos, sendo cada ciclo formado por 52 anos Haab.",
+    "reference": "Disponível em: www.suapesquisa.com. Acesso em: 20 ago. 2019."
+  },
+  "enem_2023_math_q173_ctx1": {
+    "title": "",
+    "subtitle": "",
+    "text": "Entre maratonistas, um parâmetro utilizado é o de economia de corrida (EC). O valor desse parâmetro é calculado pela razão entre o consumo de oxigênio, em mililitro (mL) por minuto (min), e a massa, em quilograma (kg), do atleta correndo a uma velocidade constante.",
+    "reference": "Disponível em: www.treinamentoonline.com.br. Acesso em: 23 out. 2019 (adaptado)."
   }
 }

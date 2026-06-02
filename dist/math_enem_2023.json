@@ -1,7 +1,7 @@
 [
   {
     "number": 136,
-    "text": "Um artista plástico esculpe uma escultura a partir de um bloco de madeira de lei, em etapas. Inicialmente esculpe um cone reto com 36 cm de altura e diâmetro da base medindo 18 cm. Em seguida, remove desse cone um cone menor, cujo diâmetro da base mede 6 cm, obtendo assim, um tronco de cone, conforme ilustrado na figura. 6 cm 36 cm 18 cm Em seguida, perfura esse tronco de cone, removendo um cilindro reto, de diâmetro 6 cm, cujo eixo de simetria é o mesmo do cone original. Dessa forma, ao final, a escultura tem a forma de um tronco de cone com uma perfuração cilíndrica de base a base. O tipo de madeira utilizada para produzir essa escultura tem massa igual a 0,6 g por centímetro cúbico de volume Utilize 3 como aproximação para π . Qual é a massa, em gramas, dessa escultura?",
+    "text": "Um artista plástico esculpe uma escultura a partir de um bloco de madeira de lei, em etapas. Inicialmente esculpe um cone reto com 36 cm de altura e diâmetro da base medindo 18 cm. Em seguida, remove desse cone um cone menor, cujo diâmetro da base mede 6 cm, obtendo assim, um tronco de cone, conforme ilustrado na figura.[Figura]Em seguida, perfura esse tronco de cone, removendo um cilindro reto, de diâmetro 6 cm, cujo eixo de simetria é o mesmo do cone original. Dessa forma, ao final, a escultura tem a forma de um tronco de cone com uma perfuração cilíndrica de base a base. \nO tipo de madeira utilizada para produzir essa escultura tem massa igual a 0,6 g por centímetro cúbico de volume Utilize 3 como aproximação para π. \n\nQual é a massa, em gramas, dessa escultura?",
     "alternatives": {
       "a": "1 198,8",
       "b": "1 296,0",
@@ -9,7 +9,9 @@
       "d": "4 665,6",
       "e": "4 860,0"
     },
-    "images": [],
+    "images": [
+      "figuras/q136_2023_fig1.png"
+    ],
     "tags": [
       "geometria espacial",
       "geometria plana"
@@ -42,7 +44,7 @@
   },
   {
     "number": 138,
-    "text": "Visando atrair mais clientes, o gerente de uma loja nunciou uma promoção em que cada cliente que realizar ma compra pode ganhar um voucher para ser usado m sua próxima compra. Para ganhar seu voucher, cliente precisa retirar, ao acaso, uma bolinha de dentro e cada uma das duas urnas A e B disponibilizadas pelo erente, nas quais há apenas bolinhas pretas e brancas. Atualmente, a probabilidade de se escolher, ao acaso, ma bolinha preta na urna A é igual a 20% e a probabilidade e se escolher uma bolinha preta na urna B é 25%. Ganha o voucher o cliente que retirar duas bolinhas pretas, ma de cada urna. Com o passar dos dias, o gerente percebeu que, para a promoção ser viável aos negócios, era preciso alterar probabilidade de acerto do cliente sem alterar a regra a promoção. Para isso, resolveu alterar a quantidade de bolinhas brancas na urna B de forma que a probabilidade e um cliente ganhar o voucher passasse a ser menor ou gual a 1%. Sabe-se que a urna B tem 4 bolinhas pretas e ue, em ambas as urnas, todas as bolinhas têm a mesma robabilidade de serem retiradas. Qual é o número mínimo de bolinhas brancas que o erente deve adicionar à urna B?",
+    "text": "Visando atrair mais clientes, o gerente de uma loja anunciou uma promoção em que cada cliente que realizar ma compra pode ganhar um voucher para ser usado m sua próxima compra. Para ganhar seu voucher, cliente precisa retirar, ao acaso, uma bolinha de dentro e cada uma das duas urnas A e B disponibilizadas pelo gerente, nas quais há apenas bolinhas pretas e brancas. Atualmente, a probabilidade de se escolher, ao acaso, ma bolinha preta na urna A é igual a 20% e a probabilidade e se escolher uma bolinha preta na urna B é 25%. Ganha o voucher o cliente que retirar duas bolinhas pretas, ma de cada urna. \nCom o passar dos dias, o gerente percebeu que, para a promoção ser viável aos negócios, era preciso alterar probabilidade de acerto do cliente sem alterar a regra a promoção. Para isso, resolveu alterar a quantidade de bolinhas brancas na urna B de forma que a probabilidade e um cliente ganhar o voucher passasse a ser menor ou igual a 1%. Sabe-se que a urna B tem 4 bolinhas pretas e que, em ambas as urnas, todas as bolinhas têm a mesma probabilidade de serem retiradas. \n\nQual é o número mínimo de bolinhas brancas que o gerente deve adicionar à urna B?",
     "alternatives": {
       "a": "20",
       "b": "60",
@@ -63,7 +65,7 @@
   },
   {
     "number": 139,
-    "text": "O gerente de uma fábrica pretende comparar a evolução das vendas dos produtos I e II. Após a verificação, para os meses de abril a junho, são apresentadas as seguintes informações: Vendas Produto em abril (unidade) l 80 ll 190 O gerente estava decidido a cessar a produção do produto II se o número de unidades vendidas do produto I superassem as do produto II. Suponha que a variação na quantidade de unidades vendidas seja constante no período representado na tabela. Em qual mês o produto II parou de ser produzido?",
+    "text": "O gerente de uma fábrica pretende comparar a evolução das vendas dos produtos I e II. Após a verificação, para os meses de abril a junho, são apresentadas as seguintes informações: \n|Produto|Vendas em abril (unidade)|Vendas em maio (unidade)|Vendas em junho (unidade)|\n|l|80|90|100| \n|ll|190|170|150|\nO gerente estava decidido a cessar a produção do produto II se o número de unidades vendidas do produto I superassem as do produto II. \nSuponha que a variação na quantidade de unidades vendidas seja constante no período representado na tabela. \n\nEm qual mês o produto II parou de ser produzido?",
     "alternatives": {
       "a": "Junho.",
       "b": "Julho.",
@@ -79,11 +81,12 @@
     "test": "ENEM",
     "area": "math",
     "answer": "d",
-    "difficulty": 5
+    "difficulty": 5,
+    "review": true
   },
   {
     "number": 140,
-    "text": "Uma empresa de transporte faz regularmente um levantamento da quantidade de viagens realizadas por todos os 160 motoristas cadastrados em seu aplicativo. Em um certo dia, foi gerado um relatório, por meio de um gráfico de barras, no qual se relacionaram a quantidade de viagens realizadas com o número de motoristas até aquele instante do dia. Comparando os valores da média, da mediana e da moda das quantidades de viagens realizadas pelos motoristas cadastrados nessa empresa, obtém-se:",
+    "text": "Uma empresa de transporte faz regularmente um levantamento da quantidade de viagens realizadas por todos os 160 motoristas cadastrados em seu aplicativo. Em um certo dia, foi gerado um relatório, por meio de um gráfico de barras, no qual se relacionaram a quantidade de viagens realizadas com o número de motoristas até aquele instante do dia. [Gráfico]\n\n\nComparando os valores da média, da mediana e da moda das quantidades de viagens realizadas pelos motoristas cadastrados nessa empresa, obtém-se:",
     "alternatives": {
       "a": "mediana  =  média  <  moda.",
       "b": "mediana  =  moda  <  média.",
@@ -91,7 +94,9 @@
       "d": "moda  <  média  <  mediana.",
       "e": "moda  <  mediana  <  média."
     },
-    "images": [],
+    "images": [
+      "figuras/q140_2023_fig1.png"
+    ],
     "tags": [
       "estatística"
     ],
@@ -99,17 +104,18 @@
     "test": "ENEM",
     "area": "math",
     "answer": "e",
-    "difficulty": 6
+    "difficulty": 6,
+    "review": true
   },
   {
     "number": 141,
-    "text": "No alojamento de uma universidade, há alguns quartos vagos. Um desses quartos ficou disponível, e muitos estudantes se candidataram para um sorteio será realizado. Para esse sorteio, cartões individuais são depositados em uma urna, sendo que, para cada estudante de primeiro ano, um cartão com seu nome; para cada estudante de segundo ano, dois cartões com seu nome; e para cada estudante de terceiro ano, três cartões com seu nome. Foram inscritos 200 estudantes no sorteio: 100 do primeiro ano, 60 do segundo ano e 40 do terceiro ano. Todos os cartões têm a mesma probabilidade de serem sorteados. Qual a probabilidade de o vencedor do sorteio ser um estudante do segundo ano?",
+    "text": "No alojamento de uma universidade, há alguns quartos com o padrão superior ao dos demais. Um desses quartos ficou disponível, e muitos estudantes se candidataram para morar no local. Para escolher quem ficará com o quarto, um sorteio será realizado. Para esse sorteio, cartões individuais com os nomes de todos os estudantes inscritos serão depositados em uma urna, sendo que, para cada estudante de primeiro ano, será depositado um único cartão com seu nome; para cada estudante de segundo ano, dois cartões com seu nome; e, para cada estudante de terceiro ano, três cartões com seu nome. Foram inscritos 200 estudantes de primeiro ano, 150 de segundo ano e 100 de terceiro ano. Todos os cartões têm a mesma probabilidade de serem sorteados.\n\nQual a probabilidade de o vencedor do sorteio ser um estudante de terceiro ano?",
     "alternatives": {
-      "a": "1",
-      "b": "1",
-      "c": "8",
-      "d": "9",
-      "e": "8"
+      "a": "1/2",
+      "b": "1/3",
+      "c": "1/8",
+      "d": "2/9",
+      "e": "3/8"
     },
     "images": [],
     "tags": [
@@ -120,11 +126,12 @@
     "test": "ENEM",
     "area": "math",
     "answer": "e",
-    "difficulty": 4
+    "difficulty": 4,
+    "review": true
   },
   {
     "number": 142,
-    "text": "A água utilizada pelos 75 moradores de um vilarejo cujo raio da base mede 5 metros, sempre abastecido no desse vilarejo consome, em média, 200 litros de água por pessoa por dia. No mês de junho de um determinado ano, o vilarejo fez uma coleta nos primeiros 20 dias. Passado esse período, as pessoas reduziram a quantidade de água consumida e constataram que o nível da coluna de água estava em queda durante os 10 dias seguintes. Considere π como aproximadamente igual a 3. Qual é a quantidade mínima de água, em litros, que cada morador deve economizar por dia para garantir que o reservatório não fique sem água nos próximos 10 dias?",
+    "text": "A água utilizada pelos 75 moradores de um vilarejo provém de um reservatório de formato cilíndrico circular reto cujo raio da base mede 5 metros, sempre abastecido no primeiro dia de cada mês por caminhões-pipa. Cada morador desse vilarejo consome, em média, 200 litros de água por dia.\nNo mês de junho de um determinado ano, o vilarejo festejou o dia do seu padroeiro e houve um gasto extra de água nos primeiros 20 dias. Passado esse período, as pessoas verificaram a quantidade de água presente no reservatório e constataram que o nível da coluna de água estava em 1,5 metro. Decidiram, então, fazer um racionamento de água durante os 10 dias seguintes. Considere 3 como aproximação para π.\n\nQual é a quantidade mínima de água, em litro, que cada morador, em média, deverá economizar por dia, de modo que o reservatório não fique sem água nos próximos 10 dias?",
     "alternatives": {
       "a": "50",
       "b": "60",
@@ -140,11 +147,12 @@
     "test": "ENEM",
     "area": "math",
     "answer": "a",
-    "difficulty": 6
+    "difficulty": 6,
+    "review": true
   },
   {
     "number": 143,
-    "text": "Em janeiro do ano passado, a direção de uma fábrica com 10 salas, cada uma com capacidade para atender 10 crianças, realizou um sorteio entre os filhos dos funcionários inscritos. Dos contemplados, 25% foram colocados na lista de espera. A lista de espera teve 400 nomes e, neste ano, esse número cresceu 10%. A direção da fábrica realizou uma pesquisa e constatou que a quantidade de nomes da lista de espera deste ano é maior em relação ao ano passado. Decidiram então construir, ao longo desse ano, novas salas para a creche, também com capacidade de atendimento para 10 crianças cada, de modo que o número de nomes na lista de espera no próximo ano seja 25% menor que o deste ano. O número mínimo de salas que deverão ser construídas é:",
+    "text": "Em janeiro do ano passado, a direção de uma fábrica abriu uma creche para os filhos de seus funcionários, com 10 salas, cada uma com capacidade para atender 10 crianças a cada ano. As vagas são sorteadas entre os filhos dos funcionários inscritos, enquanto os não contemplados pelo sorteio formam uma lista de espera. No ano passado, a lista de espera teve 400 nomes e, neste ano, esse número cresceu 10%. \nA direção da fábrica realizou uma pesquisa e constatou que a lista de espera para o próximo ano terá a mesma quantidade de nomes da lista de espera deste ano. Decidiu, então, construir, ao longo desse ano, novas salas para a creche, também com capacidade de atendimento para 10 crianças cada, de modo que o número de nomes na lista de espera no próximo ano seja 25% menor que o deste ano.\n\nO número mínimo de salas que deverão ser construídas é:",
     "alternatives": {
       "a": "10",
       "b": "11.",
@@ -164,7 +172,7 @@
   },
   {
     "number": 144,
-    "text": "A foto mostra a construção de uma cisterna destinada ao armazenamento de água. Uma cisterna como essa, na forma de cilindro circular reto com 3 m² de área da base foi abastecida por um curso-d’água com vazão constante. O seu proprietário registrou a altura do nível da água no interior da cisterna durante o abastecimento em diferentes momentos de um mesmo dia, conforme o quadro.[Figura] Horário (h) Nível da água (m) 6:00 0,5 8:00 1,1 12:00 2,3 15:00 3,2 Disponível em: www.paraibamix.com. Acesso em: 3 dez. 201 Qual foi a vazão, em metro cúbico por hora, do curso-d’água que abasteceu a cisterna?",
+    "text": "A foto mostra a construção de uma cisterna destinada ao armazenamento de água. Uma cisterna como essa, na forma de cilindro circular reto com 3 m² de área da base foi abastecida por um curso-d’água com vazão constante. O seu proprietário registrou a altura do nível da água no interior da cisterna durante o abastecimento em diferentes momentos de um mesmo dia, conforme o quadro. \n|Horário (h)|Nível da água (m)|\n|-|-|\n|6:00|0,5|\n|8:00|1,1|\n|12:00|2,3|\n|15:00|3,2|\n[Figura: Disponível em: www.paraibamix.com. Acesso em: 3 dez. 2012]\n\nQual foi a vazão, em metro cúbico por hora, do curso-d’água que abasteceu a cisterna?",
     "alternatives": {
       "a": "0,3",
       "b": "0,5",
@@ -186,15 +194,17 @@
   },
   {
     "number": 145,
-    "text": "Num certo momento de um jogo digital, a tela apresenta a imagem representada na figura. O ponto Q representa a posição de um jogador que está com a bola; os pontos Q2, Q3, Q4, Q5 e Q6 também indicam posições de jogadores da mesma equipe, e os pontos A e B indicam os dois pés da trave mais próxima deles. No momento da partida retratado, o jogador Q1 tem a posse da bola, que será passada para um dos outros jogadores das posições Qn, n ∈ {2, 3, 4, 5, 6}, cujo ângulo AQnB tenha a mesma medida do ângulo AQ1B.",
+    "text": "Num certo momento de um jogo digital, a tela apresenta a imagem representada na figura. O ponto Q representa a posição de um jogador que está com a bola; os pontos Q<sub>2</sub>, Q<sub>3</sub>, Q<sub>4</sub>, Q<sub>5</sub> e Q<sub>6</sub> também indicam posições de jogadores da mesma equipe, e os pontos A e B indicam os dois pés da trave mais próxima deles. No momento da partida retratado, o jogador Q<sub>1</sub> tem a posse da bola, que será passada para um dos outros jogadores das posições Q<sub>n</sub>, n ∈ {2, 3, 4, 5, 6}, cujo ângulo AQ<sub>n</sub>B tenha a mesma medida do ângulo AQ<sub>1</sub>B.[Imagem]\n\nQual é o jogador que receberá a bola?",
     "alternatives": {
-      "a": "Q2",
-      "b": "Q3",
-      "c": "Q4",
-      "d": "Q5",
-      "e": "Q6"
+      "a": "Q<sub>2</sub>",
+      "b": "Q<sub>3</sub>",
+      "c": "Q<sub>4</sub>",
+      "d": "Q<sub>5</sub>",
+      "e": "Q<sub>6</sub>"
     },
-    "images": [],
+    "images": [
+      "figuras/q145_2023_fig1.png"
+    ],
     "tags": [
       "geometria plana"
     ],
@@ -202,11 +212,12 @@
     "test": "ENEM",
     "area": "math",
     "answer": "b",
-    "difficulty": 7
+    "difficulty": 7,
+    "review": true
   },
   {
     "number": 146,
-    "text": "O triângulo da figura é denominado triângulo mágico. Nos círculos, escrevem-se os números de 1 a 6, sem repetição, com um número em cada círculo. O objetivo é distribuir os números de forma que as somas dos números em cada lado do triângulo sejam iguais. Considere que os números colocados nos vértices do triângulo estejam em progressão aritmética de razão igual a 2. Nas condições propostas, quais as possíveis soluções para as somas dos números que formam os lados do triângulo? [Figura]",
+    "text": "O triângulo da figura é denominado triângulo mágico. Nos círculos, escrevem-se os números de 1 a 6, sem repetição, com um número em cada círculo. O objetivo é distribuir os números de forma que as somas dos números em cada lado do triângulo sejam iguais.[Figura]Considere que os números colocados nos vértices do triângulo estejam em progressão aritmética de razão igual a 2.\n\nNas condições propostas, quais as possíveis soluções para as somas dos números que formam os lados do triângulo?",
     "alternatives": {
       "a": "Há somente uma solução possível, e as somas em cada lado do triângulo são iguais a 7.",
       "b": "Há somente uma solução possível, e as somas em cada lado do triângulo são iguais a 9.",
@@ -215,7 +226,7 @@
       "e": "Há somente duas soluções possíveis, uma em que as somas em cada lado do triângulo são iguais a 10 e outra em que as somas são iguais a 11."
     },
     "images": [
-      "figuras/q146_2023_fig1.png"
+      "figuras/q146_2023_fig2.png"
     ],
     "tags": [
       "análise combinatória",
@@ -229,7 +240,7 @@
   },
   {
     "number": 147,
-    "text": "Um casal realizará diariamente 30 minutos de caminhada, ingerindo, antes dessa atividade, a quantidade ideal de carboidratos recomendada. Para ter o consumo ideal apenas por meio do consumo de pão de fôrma integral, o casal planeja garantir o suprimento de pães para um período de 30 dias ininterruptos. Sabe-se que cada pacote desse pão vem com 18 fatias, e que cada uma delas tem 15 gramas de carboidratos. A quantidade mínima de pacotes de pão de fôrma necessários para prover o suprimento a esse casal é",
+    "text": "Um casal realizará diariamente 30 minutos de caminhada, ingerindo, antes dessa atividade, a quantidade ideal de carboidratos recomendada. Para ter o consumo ideal apenas por meio do consumo de pão de fôrma integral, o casal planeja garantir o suprimento de pães para um período de 30 dias ininterruptos. Sabe-se que cada pacote desse pão vem com 18 fatias, e que cada uma delas tem 15 gramas de carboidratos. \n\nA quantidade mínima de pacotes de pão de fôrma necessários para prover o suprimento a esse casal é",
     "alternatives": {
       "a": "1",
       "b": "4",
@@ -245,19 +256,24 @@
     "test": "ENEM",
     "area": "math",
     "answer": "d",
-    "difficulty": 2
+    "difficulty": 2,
+    "contextIds": [
+      "enem_2023_math_q147_ctx1"
+    ]
   },
   {
     "number": 148,
-    "text": "O mastro de uma bandeira foi instalado perpendicularmente ao solo em uma região plana. Devido aos fortes ventos, três cabos de aço, de mesmo comprimento, serão instalados para dar sustentação ao mastro. Cada cabo de aço ficará perfeitamente esticado com uma extremidade num ponto P do mastro, a uma altura h do solo, e a outra extremidade, num ponto no chão, como mostra a figura. Os cabos de aço formam um ângulo α com o plano do chão. Por medida de segurança, há apenas três opções de instalação: • opção I: h = 11 m e α = 30° • opção II: h = 12 m e α = 45° • opção III: h = 18 m e α = 60° A opção a ser escolhida é aquela em que a medida dos cabos seja a menor possível. Qual será a medida, em metro, de cada um dos cabos a serem instalados?",
+    "text": "O mastro de uma bandeira foi instalado perpendicularmente ao solo em uma região plana. Devido aos fortes ventos, três cabos de aço, de mesmo comprimento, serão instalados para dar sustentação ao mastro. Cada cabo de aço ficará perfeitamente esticado com uma extremidade num ponto P do mastro, a uma altura h do solo, e a outra extremidade, num ponto no chão, como mostra a figura. [Figura]Os cabos de aço formam um ângulo α com o plano do chão. \nPor medida de segurança, há apenas três opções de instalação: \n• opção I: h = 11 m e α = 30° \n• opção II: h = 12 m e α = 45° \n• opção III: h = 18 m e α = 60° \nA opção a ser escolhida é aquela em que a medida dos cabos seja a menor possível. \n\nQual será a medida, em metro, de cada um dos cabos a serem instalados?",
     "alternatives": {
       "a": "2",
-      "b": "11 2",
-      "c": "12 2",
-      "d": "12 3",
+      "b": "11√2",
+      "c": "12√2",
+      "d": "12√3",
       "e": "22"
     },
-    "images": [],
+    "images": [
+      "figuras/q148_2023_fig1.png"
+    ],
     "tags": [
       "geometria plana",
       "trigonometria"
@@ -266,11 +282,12 @@
     "test": "ENEM",
     "area": "math",
     "answer": "c",
-    "difficulty": 5
+    "difficulty": 5,
+    "review": true
   },
   {
     "number": 149,
-    "text": "Um controlador de voo dispõe de um instrumento que escreve a altitude de uma aeronave em voo, em função a distância em solo. Essa distância em solo é a medida na orizontal entre o ponto de origem do voo até o ponto que representa a projeção ortogonal da posição da aeronave, m voo, no solo. Essas duas grandezas são dadas numa mesma unidade de medida. A tela do instrumento representa proporcionalmente s dimensões reais das distâncias associadas ao voo. A figura apresenta a tela do instrumento depois de concluída a viagem de um avião, sendo a medida do lado e cada quadradinho da malha igual a 1 cm. Altitude Origem Destino Distância do voo Essa tela apresenta os dados de um voo cuja maior altitude alcançada foi de 5 km.",
+    "text": "Um controlador de voo dispõe de um instrumento que descreve a altitude de uma aeronave em voo, em função da distância em solo. Essa distância em solo é a medida na horizontal entre o ponto de origem do voo até o ponto que representa a projeção ortogonal da posição da aeronave, em voo, no solo. Essas duas grandezas são dadas numa mesma unidade de medida. A tela do instrumento representa proporcionalmente as dimensões reais das distâncias associadas ao voo. A figura apresenta a tela do instrumento depois de concluída a viagem de um avião, sendo a medida do lado de cada quadradinho da malha igual a 1 cm.[Grafico]Essa tela apresenta os dados de um voo cuja maior altitude alcançada foi de 5 km.\n\nA escala em que essa tela representa as medidas reais é",
     "alternatives": {
       "a": "1 : 5",
       "b": "1 : 11",
@@ -278,7 +295,9 @@
       "d": "1 : 5 000",
       "e": "1 : 500 000"
     },
-    "images": [],
+    "images": [
+      "figuras/q149_2023_fig1.png"
+    ],
     "tags": [
       "aritmética e números",
       "geometria plana"
@@ -287,11 +306,12 @@
     "test": "ENEM",
     "area": "math",
     "answer": "e",
-    "difficulty": 5
+    "difficulty": 5,
+    "review": true
   },
   {
     "number": 150,
-    "text": "Nessas condições, ao final da primeira hora após a ingestão da quantidade  q  de álcool, a concentração  C  dessa substância no sangue é expressa algebricamente por",
+    "text": "\n\nNessas condições, ao final da primeira hora após a ingestão da quantidade  q  de álcool, a concentração  C  dessa substância no sangue é expressa algebricamente por",
     "alternatives": {
       "a": "C = 0,9 q",
       "b": "C = 0,1 q",
@@ -314,7 +334,7 @@
   },
   {
     "number": 151,
-    "text": "Um investidor iniciante observou o gráfico que apresenta a evolução dos valores de duas criptomoedas A e B em relação ao tempo. Durante horas consecutivas, esses valores foram observados em nove instantes, representados por hora exatas. Em quantos desses instantes a criptomoeda A estava mais valorizada do que a criptomoeda B?",
+    "text": "Um investidor iniciante observou o gráfico que apresenta a evolução dos valores de duas criptomoedas A e B em relação ao tempo.[Gráfico]Durante horas consecutivas, esses valores foram observados em nove instantes, representados por hora exatas. \n\nEm quantos desses instantes a criptomoeda A estava mais valorizada do que a criptomoeda B?",
     "alternatives": {
       "a": "3",
       "b": "4",
@@ -322,7 +342,9 @@
       "d": "7",
       "e": "9"
     },
-    "images": [],
+    "images": [
+      "figuras/q151_2023_fig1.png"
+    ],
     "tags": [
       "estatística",
       "matemática financeira"
@@ -335,7 +357,7 @@
   },
   {
     "number": 152,
-    "text": "A exposição a alguns níveis sonoros pode causar esões auditivas. Por isso, em uma indústria, são adotadas medidas preventivas de acordo com a máquina que o uncionário opera e o nível N de intensidade do som, medido em decibel (dB), a que o operário é exposto, sendo N = log I − log 10^(-12) W/m². Quando o som é considerado baixo, ou seja, N = 48 dB ou menos, deve ser utilizada a medida preventiva I. No caso de o som ser moderado, quando N está no intervalo (48 dB, 55 dB), deve ser utilizada a medida preventiva II. Quando o som é moderado alto, que equivale a N no intervalo (55 dB, 80 dB), a medida preventiva a ser usada é a III. Se N estiver no intervalo (80 dB, 115 dB), quando o som é considerado alto, deve-se utilizar a medida preventiva IV. E se o som é considerado muito alto, com N maior que 115 dB, deve-se utilizar a medida preventiva V. Uma nova máquina, com I = 8 × 10^(-8) W/m², foi adquirida e será classificada de acordo com o nível de ruído que produz. Considere 0,3 como aproximação para log 2. O funcionário que operará a nova máquina deverá adotar medida preventiva",
+    "text": "Quando o som é considerado baixo, ou seja, N = 48 dB ou menos, deve ser utilizada a medida preventiva I. No caso de o som ser moderado, quando N está no intervalo (48 dB, 55 dB), deve ser utilizada a medida preventiva II. Quando o som é moderado alto, que equivale a N no intervalo (55 dB, 80 dB), a medida preventiva a ser usada é a III. Se N estiver no intervalo (80 dB, 115 dB), quando o som é considerado alto, deve-se utilizar a medida preventiva IV. E se o som é considerado muito alto, com N maior que 115 dB, deve-se utilizar a medida preventiva V.\n\nUma nova máquina, com I = 8 × 10<sup>−8</sup> W/m², foi adquirida e será classificada de acordo com o nível de ruído que produz.\n\nConsidere 0,3 como aproximação para log<sub>10</sub>2.\n\nO funcionário que operará a nova máquina deverá adotar medida preventiva",
     "alternatives": {
       "a": "I.",
       "b": "II.",
@@ -352,11 +374,14 @@
     "test": "ENEM",
     "area": "math",
     "answer": "b",
-    "difficulty": 5
+    "difficulty": 5,
+    "contextIds": [
+      "enem_2023_math_q152_ctx1"
+    ]
   },
   {
     "number": 153,
-    "text": "Um supermercado conta com cinco caixas disponíveis para pagamento. Foram instaladas telas que apresentam o tempo médio gasto por cada caixa para iniciar e finalizar atendimento de cada cliente, e o número de pessoa presentes na fila de cada caixa em tempo real. Um cliente na hora de passar sua compra, sabendo que cada um dos cinco caixas iniciará um novo atendimento naquel momento, pretende gastar o menor tempo possível de espera na fila. Ele observa que as telas apresentavam a informações a seguir.\n• Caixa I: atendimento 12 minutos, 5 pessoas na fila\n• Caixa II: atendimento 6 minutos, 9 pessoas na fila\n• Caixa III: atendimento 5 minutos, 6 pessoas na fila\n• Caixa IV: atendimento 15 minutos, 2 pessoas na fila\n• Caixa V: atendimento 9 minutos, 3 pessoas na fila\nPara alcançar seu objetivo, o cliente deverá escolher o caix",
+    "text": "Um supermercado conta com cinco caixas disponíveis para pagamento. Foram instaladas telas que apresentam o tempo médio gasto por cada caixa para iniciar e finalizar atendimento de cada cliente, e o número de pessoas presentes na fila de cada caixa em tempo real. Um cliente, na hora de passar sua compra, sabendo que cada um dos cinco caixas iniciará um novo atendimento naquele momento, pretende gastar o menor tempo possível de espera na fila. Ele observa que as telas apresentavam as informações a seguir.\n• Caixa I: atendimento 12 minutos, 5 pessoas na fila\n• Caixa II: atendimento 6 minutos, 9 pessoas na fila\n• Caixa III: atendimento 5 minutos, 6 pessoas na fila\n• Caixa IV: atendimento 15 minutos, 2 pessoas na fila\n• Caixa V: atendimento 9 minutos, 3 pessoas na fila\n\nPara alcançar seu objetivo, o cliente deverá escolher o caixa",
     "alternatives": {
       "a": "I.",
       "b": "II.",
@@ -377,7 +402,7 @@
   },
   {
     "number": 154,
-    "text": "As figuras pintadas no quadro da sala de estar d\numa residência representam as silhuetas de parte da\ntorres de um castelo e, ao fundo, a de uma lua cheia.\nA lua foi pintada na forma de um círculo, e o telhado d\ntorre mais alta, na forma de triângulo equilátero, foi pintad\nsobrepondo parte da lua. O centro da lua coincide com um\ndos vértices do telhado da torre mais alta.\nNesse quadro, a parte da lua escondida atrás da torr\nmais alta do castelo pode ser representada por um",
+    "text": "As figuras pintadas no quadro da sala de estar de uma residência representam as silhuetas de parte das torres de um castelo e, ao fundo, a de uma lua cheia. A lua foi pintada na forma de um círculo, e o telhado da torre mais alta, na forma de triângulo equilátero, foi pintado sobrepondo parte da lua. O centro da lua coincide com um dos vértices do telhado da torre mais alta.[Figura]\n\nNesse quadro, a parte da lua escondida atrás da torre mais alta do castelo pode ser representada por um",
     "alternatives": {
       "a": "cone.",
       "b": "setor circular.",
@@ -385,7 +410,9 @@
       "d": "triângulo isósceles.",
       "e": "arco de circunferência."
     },
-    "images": [],
+    "images": [
+      "figuras/q154_2023_fig1.png"
+    ],
     "tags": [
       "geometria plana"
     ],
@@ -397,7 +424,7 @@
   },
   {
     "number": 155,
-    "text": "Na planta baixa de um clube, a piscina é representada or um quadrado cuja área real mede 400 m². Ao redor essa piscina, será construída uma calçada, de largura constante igual a 5 m.[Figura]\nQual é a medida da área, em metro quadrado, ocupada pela calçada?",
+    "text": "Na planta baixa de um clube, a piscina é representada por um quadrado cuja área real mede 400 m². Ao redor dessa piscina, será construída uma calçada, de largura constante igual a 5 m.[Figura]\n\nQual é a medida da área, em metro quadrado, ocupada pela calçada?",
     "alternatives": {
       "a": "1 000",
       "b": "900",
@@ -419,7 +446,7 @@
   },
   {
     "number": 156,
-    "text": "Uma pessoa caminha por 30 minutos e utiliza um aplicativo instalado em seu celular para monitorar a variação da intensidade do sinal de internet recebido pelo aparelho durante o deslocamento. Chegando ao seu destino, o aplicativo forneceu este gráfico: Intensidade do sinal de internet 0 2 4 6 8 10   12   14 16 18   20 22   24 26   28   30 Tempo (min) Por quantos minutos, durante essa caminhada, o celular dessa pessoa ficou sem receber sinal de internet?",
+    "text": "Uma pessoa caminha por 30 minutos e utiliza um aplicativo instalado em seu celular para monitorar a variação da intensidade do sinal de internet recebido pelo aparelho durante o deslocamento. Chegando ao seu destino, o aplicativo forneceu este gráfico:[Gráfico]\n\nPor quantos minutos, durante essa caminhada, o celular dessa pessoa ficou sem receber sinal de internet?",
     "alternatives": {
       "a": "6",
       "b": "8",
@@ -427,7 +454,9 @@
       "d": "14",
       "e": "24"
     },
-    "images": [],
+    "images": [
+      "figuras/q156_2023_fig1.png"
+    ],
     "tags": [
       "aritmética e números",
       "comunicação e mídia"
@@ -440,7 +469,7 @@
   },
   {
     "number": 157,
-    "text": "Um professor, para promover a aprendizagem dos estudantes em estatística, propôs uma atividade. O objetivo era verificar o percentual de estudantes com massa corporal abaixo da média e altura acima da média de um grupo de estudantes. Para isso, usando uma balança e uma fita métrica, avaliou uma amostra de dez estudantes, anotando as medidas observadas. O gráfico apresenta a massa corporal em quilogramas e a altura, em metros, obtidas na atividade. Após a coleta dos dados, os estudantes calcularam a média dos valores obtidos, referentes à massa corporal e à altura, obtendo, respectivamente, 80 kg e 1,65 m. Qual é o percentual de estudantes dessa amostra com massa corporal abaixo da média e altura acima da média?",
+    "text": "Um professor, para promover a aprendizagem dos estudantes em estatística, propôs uma atividade. O objetivo era verificar o percentual de estudantes com massa corporal abaixo da média e altura acima da média de um grupo de estudantes. Para isso, usando uma balança e uma fita métrica, avaliou uma amostra de dez estudantes, anotando as medidas observadas. O gráfico apresenta a massa corporal em quilogramas e a altura, em metros, obtidas na atividade.[Gráfico]Após a coleta dos dados, os estudantes calcularam a média dos valores obtidos, referentes à massa corporal e à altura, obtendo, respectivamente, 80 kg e 1,65 m. \n\nQual é o percentual de estudantes dessa amostra com massa corporal abaixo da média e altura acima da média?",
     "alternatives": {
       "a": "10",
       "b": "20",
@@ -448,7 +477,9 @@
       "d": "50",
       "e": "70"
     },
-    "images": [],
+    "images": [
+      "figuras/q157_2023_fig1.png"
+    ],
     "tags": [
       "aritmética e números",
       "estatística"
@@ -461,7 +492,7 @@
   },
   {
     "number": 158,
-    "text": "Um pescador tem um custo fixo diário de R$ 900,0 com combustível, iscas, manutenção de seu barco e outras pequenas despesas. Ele vende cada quilograma de peixe por R$ 5,00. Sua meta é obter um lucro mínimo de R$ 800,0 por dia. Sozinho, ele consegue, ao final de um dia de trabalho pescar 180 kg de peixe, o que é suficiente apenas para cobrir custo fixo diário. Portanto, precisa contratar ajudantes, pagando para cada um R$ 250,00 por dia de trabalho. Além desse valor, 4% da receita obtida pela venda de peixe é repartida igualmente entre os ajudantes. Considerando o tamanho de seu barco, ele pode contratar até 5 ajudantes. Ele sabe que com um ajudante a pesca diária é de 300 kg e que, a partir do segundo ajudante contratado, aumenta-se em 100 kg a quantidade de peixe pescada por ajudante em um dia de trabalho. A quantidade mínima de ajudantes que esse pescador precisa contratar para conseguir o lucro diário pretendido é",
+    "text": "Um pescador tem um custo fixo diário de R$ 900,00 com combustível, iscas, manutenção de seu barco e outras pequenas despesas. Ele vende cada quilograma de peixe por R$ 5,00. Sua meta é obter um lucro mínimo de R$ 800,00 por dia. Sozinho, ele consegue, ao final de um dia de trabalho pescar 180 kg de peixe, o que é suficiente apenas para cobrir custo fixo diário. Portanto, precisa contratar ajudantes, pagando para cada um R$ 250,00 por dia de trabalho. Além desse valor, 4% da receita obtida pela venda de peixe é repartida igualmente entre os ajudantes. Considerando o tamanho de seu barco, ele pode contratar até 5 ajudantes. Ele sabe que com um ajudante a pesca diária é de 300 kg e que, a partir do segundo ajudante contratado, aumenta-se em 100 kg a quantidade de peixe pescada por ajudante em um dia de trabalho. \n\nA quantidade mínima de ajudantes que esse pescador precisa contratar para conseguir o lucro diário pretendido é",
     "alternatives": {
       "a": "1",
       "b": "2",
@@ -481,7 +512,7 @@
   },
   {
     "number": 159,
-    "text": "Um agricultor é informado sobre um método de proteção ara sua lavoura que consiste em inserir larvas específicas, e rápida reprodução. A reprodução dessas larvas faz com ue sua população multiplique-se por 10 a cada 3 dias e, arara evitar eventuais desequilíbrios, é possível cessar essa eprodução aplicando-se um produto X. O agricultor decide niciar esse método com 100 larvas e dispõe de 5 litros do roduto X, cuja aplicação recomendada é de exatamente litro para cada população de 200 000 larvas. A quantidade otal do produto X de que ele dispõe deverá ser aplicada e uma única vez. Quantos dias após iniciado esse método o agricultor everá aplicar o produto X?",
+    "text": "Um agricultor é informado sobre um método de proteção para sua lavoura que consiste em inserir larvas específicas, de rápida reprodução. A reprodução dessas larvas faz com que sua população multiplique-se por 10 a cada 3 dias e, para evitar eventuais desequilíbrios, é possível cessar essa reprodução aplicando-se um produto X. O agricultor decide iniciar esse método com 100 larvas e dispõe de 5 litros do produto X, cuja aplicação recomendada é de exatamente 1 litro para cada população de 200 000 larvas. A quantidade total do produto X de que ele dispõe deverá ser aplicada de uma única vez. \n\nQuantos dias após iniciado esse método o agricultor deverá aplicar o produto X?",
     "alternatives": {
       "a": "2",
       "b": "4",
@@ -491,8 +522,8 @@
     },
     "images": [],
     "tags": [
-      "fisiologia humana",
-      "geografia humana e urbana"
+      "funções exponenciais",
+      "logaritmos"
     ],
     "year": 2023,
     "test": "ENEM",
@@ -502,12 +533,12 @@
   },
   {
     "number": 160,
-    "text": "Ao realizar o cadastro em um aplicativo de investimentos, oi solicitado ao usuário que criasse uma senha, sendo ermitido o uso somente dos seguintes caracteres: • algarismos de 0 a 9; • 26 letras minúsculas do alfabeto; • 26 letras maiúsculas do alfabeto; • 6 caracteres especiais !, @, #, $, , &. Três tipos de estruturas para senha foram apresentadas o usuário: • tipo I: formada por quaisquer quatro caracteres distintos, escolhidos dentre os permitidos; • tipo II: formada por cinco caracteres distintos, iniciando por três letras, seguidas por um algarismo e, ao final, um caractere especial; • tipo III: formada por seis caracteres distintos, iniciando por duas letras, seguidas por dois algarismos e, ao final, dois caracteres especiais. Considere p ,  p  e  p as probabilidades de se escobrirem ao acaso, na primeira tentativa, as senhas os tipos I, II e III, respectivamente. Nessas condições, o tipo de senha que apresenta a menor probabilidade de ser descoberta ao acaso, na rimeira tentativa, é o",
+    "text": "Ao realizar o cadastro em um aplicativo de investimentos, foi solicitado ao usuário que criasse uma senha, sendo permitido o uso somente dos seguintes caracteres:\n• algarismos de 0 a 9;\n• 26 letras minúsculas do alfabeto;\n• 26 letras maiúsculas do alfabeto;\n• 6 caracteres especiais !, @, #, $, *, &.\nTrês tipos de estruturas para senha foram apresentadas ao usuário:\n• tipo I: formada por quaisquer quatro caracteres distintos, escolhidos dentre os permitidos;\n• tipo II: formada por cinco caracteres distintos, iniciando por três letras, seguidas por um algarismo e, ao final, um caractere especial;\n• tipo III: formada por seis caracteres distintos, iniciando por duas letras, seguidas por dois algarismos e, ao final, dois caracteres especiais. Considere p₁, p₂ e p₃ as probabilidades de se descobrirem ao acaso, na primeira tentativa, as senhas dos tipos I, II e III, respectivamente. \n\nNessas condições, o tipo de senha que apresenta a menor probabilidade de ser descoberta ao acaso, na primeira tentativa, é o",
     "alternatives": {
-      "a": "tipo I, pois p < p < p . 1 2 3",
+      "a": "tipo I, pois p₁ < p₂ < p₃",
       "b": "tipo I, pois tem menor quantidade de caracteres.",
       "c": "tipo II, pois tem maior quantidade de letras.",
-      "d": "tipo III, pois p < p < p . 3 2 1",
+      "d": "tipo III, pois p₃ < p₂ < p₁",
       "e": "tipo III, pois tem maior quantidade de caracteres."
     },
     "images": [],
@@ -523,7 +554,7 @@
   },
   {
     "number": 161,
-    "text": "Uma loja vende seus produtos de duas formas à vista ou financiado em três parcelas mensais iguais. Para definir o valor dessas parcelas nas vendas financiadas, a loja aumenta em 20% o valor do produto à vista e divide esse novo valor por 3. A primeira parcela deve ser paga no ato da compra, e as duas últimas em 30 e 60 dias após a compra. Um cliente da loja decidiu comprar, de forma financiada um produto cujo valor à vista é R$ 1 500,00. Utilize 5,29 como aproximação para . A taxa mensal de juros compostos praticada neste financiamento é de",
+    "text": "Uma loja vende seus produtos de duas formas à vista ou financiado em três parcelas mensais iguais. Para definir o valor dessas parcelas nas vendas financiadas, a loja aumenta em 20% o valor do produto à vista e divide esse novo valor por 3. A primeira parcela deve ser paga no ato da compra, e as duas últimas em 30 e 60 dias após a compra. Um cliente da loja decidiu comprar, de forma financiada um produto cujo valor à vista é R$ 1 500,00. Utilize 5,29 como aproximação para √28.\n\nA taxa mensal de juros compostos praticada neste financiamento é de",
     "alternatives": {
       "a": "6,7%",
       "b": "10%",
@@ -543,7 +574,7 @@
   },
   {
     "number": 162,
-    "text": "Para concretar a laje de sua residência, uma pessoa contratou uma construtora. Tal empresa informa que o preço y do concreto bombeado é composto de duas partes: uma fixa, chamada de taxa de bombeamento e uma variável, que depende do volume x de concreto utilizado. Sabe-se que a taxa de bombeamento custa R$ 500,00 e que o metro cúbico do concreto bombeado é de R$ 250,00. A expressão que representa o preço y em função do volume x, em metro cúbico, é",
+    "text": "Para concretar a laje de sua residência, uma pessoa contratou uma construtora. Tal empresa informa que o preço y do concreto bombeado é composto de duas partes: uma fixa, chamada de taxa de bombeamento e uma variável, que depende do volume x de concreto utilizado. Sabe-se que a taxa de bombeamento custa R$ 500,00 e que o metro cúbico do concreto bombeado é de R$ 250,00.\n\nA expressão que representa o preço y em função do volume x, em metro cúbico, é",
     "alternatives": {
       "a": "y = 250x",
       "b": "y = 500x",
@@ -564,7 +595,7 @@
   },
   {
     "number": 163,
-    "text": "Uma empresa de segurança domiciliar oferece o serviço de patrulha noturna, no qual vigilantes em motocicleta fazem o monitoramento periódico de residências. A empresa conta com uma base, de onde acompanha o trajeto realizado pelos vigilantes durante as patrulhas e orienta o deslocamento de equipes de reforço quando necessário. Numa patrulha rotineira, sem ocorrências, um vigilante conduziu sua motocicleta a uma velocidade constante durante todo o itinerário estabelecido, levando 30 minutos para conclusão. De acordo com os registros do GPS alocado na motocicleta, a distância da posição do vigilante à base, ao longo do tempo de realização do trajeto, é descrita pelo gráfico.",
+    "text": "Uma empresa de segurança domiciliar oferece o serviço de patrulha noturna, no qual vigilantes em motocicleta fazem o monitoramento periódico de residências. A empresa conta com uma base, de onde acompanha o trajeto realizado pelos vigilantes durante as patrulhas e orienta o deslocamento de equipes de reforço quando necessário. Numa patrulha rotineira, sem ocorrências, um vigilante conduziu sua motocicleta a uma velocidade constante durante todo o itinerário estabelecido, levando 30 minutos para conclusão. De acordo com os registros do GPS alocado na motocicleta, a distância da posição do vigilante à base, ao longo do tempo de realização do trajeto, é descrita pelo gráfico.[Gráfico]\n\nA vista superior da trajetória realizada pelo vigilante durante a patrulha registrada no gráfico é descrita pela representação[Figura]",
     "alternatives": {
       "a": "A",
       "b": "B",
@@ -572,7 +603,14 @@
       "d": "D",
       "e": "E"
     },
-    "images": [],
+    "images": [
+      "figuras/q163_2023_fig1.png",
+      "figuras/q163_2023_fig2.png",
+      "figuras/q163_2023_fig3.png",
+      "figuras/q163_2023_fig4.png",
+      "figuras/q163_2023_fig5.png",
+      "figuras/q163_2023_fig6.png"
+    ],
     "tags": [
       "funções",
       "geometria plana"
@@ -585,7 +623,7 @@
   },
   {
     "number": 164,
-    "text": "O gráfico expõe alguns números da gripe A-H1N1. De acordo com o gráfico, entre as demais categorias, qual é a categoria que tem menor percentual de imunização?",
+    "text": "O gráfico expõe alguns números da gripe A-H1N1. Entre as categorias que estão em processo de imunização, uma já está completamente imunizada, a dos trabalhadores da saúde.[Gráfico]\n\nDe acordo com o gráfico, entre as demais categorias, a que está mais exposta ao vírus da gripe A-H1N1 é a categoria de",
     "alternatives": {
       "a": "indígenas.",
       "b": "gestantes.",
@@ -593,7 +631,9 @@
       "d": "adultos entre 20 e 29 anos.",
       "e": "crianças de 6 meses a 2 anos."
     },
-    "images": [],
+    "images": [
+      "figuras/q164_2023_fig1.png"
+    ],
     "tags": [
       "estatística"
     ],
@@ -605,7 +645,7 @@
   },
   {
     "number": 165,
-    "text": "[Figura]\n\nA figura representa uma escada com três degraus. Nessa escada, pisos e espelhos têm formato retangular, com lados adjacentes perpendiculares. Pisos, espelhos e redes laterais serão revestidos em cerâmica. A área a ser revestida em metro quadrado é",
+    "text": "A figura representa uma escada com três degraus, construída em concreto maciço, com suas medidas especificadas.[Figura]Nessa escada, pisos e espelhos têm formato retangular, e as paredes laterais têm formato de um polígono cujos lados adjacentes são perpendiculares. Pisos, espelhos e paredes laterais serão revestidos em cerâmica.\n\nA área a ser revestida em cerâmica, em metro quadrado, mede",
     "alternatives": {
       "a": "1,20.",
       "b": "1,35.",
@@ -627,7 +667,7 @@
   },
   {
     "number": 166,
-    "text": "Uma pessoa pratica quatro atividades físicas — caminhar e correr. Essas atividades apresentam o número de horas diárias por atividade. Dias da semana Caminhar Corr Segunda-feira 1,0 0,5 Terça-feira 0,5 1,0 Quarta-feira 0,0 1,5 Quinta-feira 0,0 2,0 Sexta-feira 0,0 0,5 Ela deseja comemorar seu aniversário e escolhe o dia da semana em que a soma das horas de atividades físicas praticadas for o maior. Para tanto, considera que os gastos calóricos são os seguintes: Atividade física Caminhar Correr Gasto calórico (cal/h) 248 360 O dia da semana em que será comemorado o aniversário é",
+    "text": "Uma pessoa pratica quatro atividades físicas — caminhar, correr, andar de bicicleta e jogar futebol — como parte de seu programa de emagrecimento. Essas atividades são praticadas semanalmente de acordo com o quadro, que apresenta o número de horas diárias por atividade.\n\n| Dias da semana | Caminhar | Correr | Andar de bicicleta | Jogar futebol |\n|---|---|---|---|---|\n| Segunda-feira | 1,0 | 0,5 | 0,0 | 2,0 |\n| Terça-feira | 0,5 | 1,0 | 0,5 | 1,0 |\n| Quarta-feira | 0,0 | 1,5 | 1,0 | 0,5 |\n| Quinta-feira | 0,0 | 2,0 | 0,0 | 0,0 |\n| Sexta-feira | 0,0 | 0,5 | 0,0 | 2,5 |\n\nEla deseja comemorar seu aniversário e escolhe o dia da semana em que o gasto calórico com as atividades físicas praticadas for o maior. Para tanto, considera que os valores dos gastos calóricos das atividades por hora (cal/h) são os seguintes:\n\n| Atividade física | Caminhar | Correr | Andar de bicicleta | Jogar futebol |\n|---|---|---|---|---|\n| Gasto calórico (cal/h) | 248 | 764 | 356 | 492 |\n\nO dia da semana em que será comemorado o aniversário é",
     "alternatives": {
       "a": "segunda-feira.",
       "b": "terça-feira.",
@@ -643,11 +683,12 @@
     "test": "ENEM",
     "area": "math",
     "answer": "c",
-    "difficulty": 3
+    "difficulty": 3,
+    "review": true
   },
   {
     "number": 167,
-    "text": "A cada bimestre, a diretora de uma escola compra um número de folhas de papel ofício proporcional ao número de alunos matriculados. No bimestre passado, ela comprou 6 000 folhas para serem utilizadas pelos 1 200 alunos matriculados. Neste bimestre, alguns alunos cancelaram suas matrículas e a escola tem, agora, 1 150 alunos. O fornecedor da escola vende as folhas de papel ofício em embalagens de 100 unidades a R$ 4,00 a embalagem com um desconto à escola, de modo que seja possível comprar a quantidade total de papel ofício necessária para o bimestre. O desconto necessário no preço final da compra, em porcentagem, pertence ao intervalo",
+    "text": "A cada bimestre, a diretora de uma escola compra um número de folhas de papel ofício proporcional ao número de alunos matriculados. No bimestre passado, ela comprou 6 000 folhas para serem utilizadas pelos 1 200 alunos matriculados. Neste bimestre, alguns alunos cancelaram suas matrículas e a escola tem, agora, 1 150 alunos. A diretora só pode gastar R$ 220,00 nessa compra, e sabe que o fornecedor da escola vende as folhas de papel ofício em embalagens de 100 unidades a R$ 4,00 a embalagem. Assim, será preciso convencer o fornecedor a dar um desconto à escola, de modo que seja possível comprar a quantidade total de papel ofício necessária para o bimestre.\n\nO desconto necessário no preço final da compra, em porcentagem, pertence ao intervalo",
     "alternatives": {
       "a": "(5,0 ; 5,5)",
       "b": "(8,0 ; 8,5)",
@@ -663,17 +704,18 @@
     "test": "ENEM",
     "area": "math",
     "answer": "a",
-    "difficulty": 5
+    "difficulty": 5,
+    "review": true
   },
   {
     "number": 168,
-    "text": "Em um colégio público, a admissão no primeiro ano s dá por sorteio. Neste ano há 55 candidatos, cujas inscrições são numeradas de 01 a 55. O sorteio de cada número de inscrição será realizado em etapas, utilizando-se duas urnas. Da primeira urna será sorteada uma bola, dentre bolas numeradas de 0 a 9, que representará o algarismo das unidades do número de inscrição a ser sorteado e, em seguida, da segunda urna, será sorteada uma bola para representar o algarismo das dezenas desse número. Depois do primeiro sorteio, e antes de se sortear o algarismo da dezenas, as bolas que estarão presentes na segunda urna serão apenas aquelas cujos números formam, com o algarismo já sorteado, um número de 01 a 55.",
+    "text": "Em um colégio público, a admissão no primeiro ano se dá por sorteio. Neste ano há 55 candidatos, cujas inscrições são numeradas de 01 a 55. O sorteio de cada número de inscrição será realizado em etapas, utilizando-se duas urnas. Da primeira urna será sorteada uma bola, dentre bolas numeradas de 0 a 9, que representará o algarismo das unidades do número de inscrição a ser sorteado e, em seguida, da segunda urna, será sorteada uma bola para representar o algarismo das dezenas desse número. Depois do primeiro sorteio, e antes de se sortear o algarismo das dezenas, as bolas que estarão presentes na segunda urna serão apenas aquelas cujos números formam, com o algarismo já sorteado, um número de 01 a 55.\n\nAs probabilidades de os candidatos de inscrição número 50 e 02 serem sorteados são, respectivamente,",
     "alternatives": {
-      "a": "A e",
-      "b": "B e",
-      "c": "C e",
-      "d": "D e",
-      "e": "E e"
+      "a": "1/50 e 1/60",
+      "b": "1/50 e 1/50",
+      "c": "1/50 e 1/10",
+      "d": "1/55 e 1/54",
+      "e": "1/100 e 1/100"
     },
     "images": [],
     "tags": [
@@ -683,22 +725,25 @@
     "test": "ENEM",
     "area": "math",
     "answer": "a",
-    "difficulty": 7
+    "difficulty": 7,
+    "review": true
   },
   {
     "number": 169,
-    "text": "O esquema mostra como a intensidade luminosa decresce com o aumento da profundade em um rio sendo  L  a intensidade na sua superfície. Considere que a intensidade luminosa diminui, a cada metro acrescido na profundade, segundo o mesmo padrão do esquema. A intensidade luminosa correspondente à profundidade de 6 m é igual a",
+    "text": "O esquema mostra como a intensidade luminosa decresce com o aumento da profundidade em um rio sendo L₀ a intensidade na sua superfície.[Esquema] Considere que a intensidade luminosa diminui, a cada metro acrescido na profundidade, segundo o mesmo padrão do esquema.\n\nA intensidade luminosa correspondente à profundidade de 6 m é igual a",
     "alternatives": {
-      "a": "L / 9",
-      "b": "L / 27",
-      "c": "L / 81",
-      "d": "L / 243",
-      "e": "L / 729"
+      "a": "(1/9)L₀",
+      "b": "(1/27)L₀",
+      "c": "(1/81)L₀",
+      "d": "(1/243)L₀",
+      "e": "(1/729)L₀"
     },
-    "images": [],
+    "images": [
+      "figuras/q169_2023_fig1.png"
+    ],
     "tags": [
-      "aritmética e números",
-      "geometria plana"
+      "progressão geométrica",
+      "funções exponenciais"
     ],
     "year": 2023,
     "test": "ENEM",
@@ -708,7 +753,7 @@
   },
   {
     "number": 170,
-    "text": "Analisando as vendas de uma empresa, o gerente concluiu que o montante diário arrecadado, em milhar de real, poderia ser calculado pela expressão V = x^2/4 - 10x + 105, onde os valores de x representam os dias do mês, variando de 1 a 30. Um dos fatores para avaliar o desempenho mensal da empresa é verificar qual é o menor montante diário V arrecadado ao longo do mês e classificar o desempenho conforme as categorias apresentadas a seguir, em que as quantidades estão expressas em milhar de real. No caso analisado, qual seria a classificação do desempenho da empresa?",
+    "text": "Analisando as vendas de uma empresa, o gerente concluiu que o montante diário arrecadado, em milhar de real, poderia ser calculado pela expressão V = x²/4 - 10x + 105, onde os valores de x representam os dias do mês, variando de 1 a 30. \nUm dos fatores para avaliar o desempenho mensal da empresa é verificar qual é o menor montante diário V arrecadado ao longo do mês e classificar o desempenho conforme as categorias apresentadas a seguir:\n• Ótimo: V₀ ≥ 24\n• Bom: 20 ≤ V₀ < 24\n• Normal: 10 ≤ V₀ < 20\n• Ruim: 4 ≤ V₀ < 10\n• Péssimo: V₀ < 4\n\n em que as quantidades estão expressas em milhar de real. No caso analisado, qual seria a classificação do desempenho da empresa?",
     "alternatives": {
       "a": "Ótimo.",
       "b": "Bom.",
@@ -725,11 +770,12 @@
     "test": "ENEM",
     "area": "math",
     "answer": "d",
-    "difficulty": 5
+    "difficulty": 5,
+    "review": true
   },
   {
     "number": 171,
-    "text": "O calendário maia apresenta duas contagens simultâneas de anos, o chamado ano Tzolkim, composto por 260 dias e que determinava o calendário religioso e o ano Haab, composto por 365 dias e que determinava o calendário agrícola. Um historiador encontrou evidência de que gerações de uma mesma família governaram certa comunidade maia pelo período de 20 ciclos, sendo cada ciclo formado por 52 anos Haab. Disponível em: www.suapesquisa.com. Acesso em: 20 ago. 201. De acordo com as informações fornecidas, durante quantos anos Tzolkim aquela comunidade maia foi governada por tal família?",
+    "text": "De acordo com as informações fornecidas, durante quantos anos Tzolkim aquela comunidade maia foi governada por tal família?",
     "alternatives": {
       "a": "741",
       "b": "1 040",
@@ -745,11 +791,14 @@
     "test": "ENEM",
     "area": "math",
     "answer": "c",
-    "difficulty": 3
+    "difficulty": 3,
+    "contextIds": [
+      "enem_2023_math_q171_ctx1"
+    ]
   },
   {
     "number": 172,
-    "text": "Sejam a, b e c as medidas dos lados de um triângulo retângulo, tendo a como medida da hipotenusa. Esses valores a, b e c são, respectivamente, os diâmetros dos círculos C1, C2 e C3, como apresentados na figura. [Figura] Um professor de matemática era conhecedor dessa construção e, confraternizando com dois amigos em uma pizzaria onde são vendidas pizzas somente em formato de círculo, lançou um desafio: mesmo sem usar um instrumento de medição, poderia afirmar com certeza se a área do círculo correspondente à pizza que ele pedisse era maior, igual ou menor do que a soma das áreas das pizzas dos dois amigos. Assim, foram pedidas três pizzas. O professor as dividiu ao meio e formou um triângulo com os diâmetros das pizzas, conforme indicado na figura.",
+    "text": "Sejam a, b e c as medidas dos lados de um triângulo retângulo, tendo a como medida da hipotenusa. Esses valores a, b e c são, respectivamente, os diâmetros dos círculos C₁, C₂ e C₃, como apresentados na figura. [Figura] Um professor de matemática era conhecedor dessa construção e, confraternizando com dois amigos em uma pizzaria onde são vendidas pizzas somente em formato de círculo, lançou um desafio: mesmo sem usar um instrumento de medição, poderia afirmar com certeza se a área do círculo correspondente à pizza que ele pedisse era maior, igual ou menor do que a soma das áreas das pizzas dos dois amigos. Assim, foram pedidas três pizzas. O professor as dividiu ao meio e formou um triângulo com os diâmetros das pizzas, conforme indicado na figura.[Figura]\nObserve que essa construção assegura, pelo teorema de Pitágoras, que área(C₁) = área(C₂) + área(C₃).\nA partir da medida do ângulo α, o professor afirmou que a área de sua pizza é maior do que a soma das áreas das outras duas pizzas.\n\nA área da pizza do professor de matemática é maior do que a soma das áreas das outras duas pizzas, pois",
     "alternatives": {
       "a": "0° < a < 90°",
       "b": "a = 90°",
@@ -757,7 +806,10 @@
       "d": "a = 180°",
       "e": "180° < a < 360°"
     },
-    "images": [],
+    "images": [
+      "figuras/q172_2023_fig1.png",
+      "figuras/q172_2023_fig2.png"
+    ],
     "tags": [
       "geometria plana"
     ],
@@ -765,14 +817,15 @@
     "test": "ENEM",
     "area": "math",
     "answer": "c",
-    "difficulty": 6
+    "difficulty": 6,
+    "review": true
   },
   {
     "number": 173,
-    "text": "Entre maratonistas, um parâmetro utilizado é o de economia de corrida (EC). O valor desse parâmetro é calculado pela razão entre o consumo de oxigênio, em mililitro (mL) por minuto (min), e a massa, em quilograma (kg), do atleta correndo a uma velocidade constante. Disponível em: www.treinamentoonline.com.br. Acesso em: 23 out. 2019 (adaptado). Um maratonista, visando melhorar sua performance, auxiliado por um médico, mensura o seu consumo de oxigênio por minuto a velocidade constante. Com base nesse consumo e na massa do atleta, o médico calcula o EC do atleta. A unidade de medida da grandeza descrita pelo parâmetro EC é",
+    "text": "Um maratonista, visando melhorar sua performance, auxiliado por um médico, mensura o seu consumo de oxigênio por minuto a velocidade constante. Com base nesse consumo e na massa do atleta, o médico calcula o EC do atleta.\n\nA unidade de medida da grandeza descrita pelo parâmetro EC é",
     "alternatives": {
-      "a": "mL ⋅ kg",
-      "b": "min ⋅ kg",
+      "a": "mL ⋅ kg / min",
+      "b": "mL / (min ⋅ kg)",
       "c": "kg",
       "d": "mL",
       "e": "min"
@@ -785,11 +838,15 @@
     "test": "ENEM",
     "area": "math",
     "answer": "b",
-    "difficulty": 2
+    "difficulty": 2,
+    "review": true,
+    "contextIds": [
+      "enem_2023_math_q173_ctx1"
+    ]
   },
   {
     "number": 174,
-    "text": "Uma pessoa comprou um ingresso para o cinema e, com base em uma representação bidimensional do posicionamento das poltronas, conforme indicado na figura, subiu uma das escadas e parou na posição indicada pela letra E. A pessoa observou que, para encontrar sua poltrona, deveria passar por mais quatro fileiras na direção norte e olhar à sua direita. Nesse cinema, as poltronas são identificadas por um sistema de coordenadas em que a primeira posição representa o número da fileira e a segunda posição representa a letra correspondente à",
+    "text": "Uma pessoa comprou um ingresso para o cinema e, com base em uma representação bidimensional do posicionamento das poltronas, conforme indicado na figura.[Figura]subiu uma das escadas e parou na posição indicada pela letra E. A pessoa observou que, para encontrar sua poltrona, deveria passar por mais quatro fileiras na direção norte e olhar à sua direita. Nesse cinema, as poltronas são identificadas por um sistema de coordenadas em que a primeira posição representa o número da fileira e a segunda posição representa a letra correspondente à coluna.\n\nA poltrona dessa pessoa está na posição",
     "alternatives": {
       "a": "A6.",
       "b": "B1.",
@@ -797,7 +854,9 @@
       "d": "H6.",
       "e": "I6."
     },
-    "images": [],
+    "images": [
+      "figuras/q174_2023_fig1.png"
+    ],
     "tags": [
       "geometria analítica",
       "geometria plana"
@@ -810,7 +869,7 @@
   },
   {
     "number": 175,
-    "text": "O metrô de um município oferece dois tipos de tíquete em cartelas, cada qual com nove tíquetes da mesma cor. Uma cartela de tíquetes vermelhos são vendidas por R$ 3,468. Duas cartelas de tíquetes azuis e uma cartela de tíquetes vermelhos custam juntas R$ 9,30. Sabe-se que o preço de um tíquete azul menos o preço de um tíquete vermelho é igual ao preço de um tíquete vermelho mais cinco centavos. Qual o preço, em real, de uma cartela de tíquetes vermelhos?",
+    "text": "O metrô de um município oferece dois tipos de tíquetes com colorações diferentes, azul e vermelha, sendo vendidos em cartelas, cada qual com nove tíquetes da mesma cor e mesmo valor unitário. Duas cartelas de tíquetes azuis e uma cartela de tíquetes vermelhos são vendidas por R$ 32,40. Sabe-se que o preço de um tíquete azul menos o preço de um tíquete vermelho é igual ao preço de um tíquete vermelho mais cinco centavos.\n\nQual o preço, em real, de uma cartela de tíquetes vermelhos?",
     "alternatives": {
       "a": "4,68",
       "b": "6,30",
@@ -826,11 +885,12 @@
     "test": "ENEM",
     "area": "math",
     "answer": "b",
-    "difficulty": 4
+    "difficulty": 4,
+    "review": true
   },
   {
     "number": 176,
-    "text": "Os números figurados pentagonais provavelmente foram introduzidos pelos pitagóricos por volta do século V a.C. As figuras ilustram como obter os seis primeiros deles, sendo os demais obtidos seguindo o mesmo padrão geométrico.\n1 5 12 22\n35 51\nO oitavo número pentagonal é",
+    "text": "Os números figurados pentagonais provavelmente foram introduzidos pelos pitagóricos por volta do século V a.C. As figuras ilustram como obter os seis primeiros deles, sendo os demais obtidos seguindo o mesmo padrão geométrico.[Figura]\n\nO oitavo número pentagonal é",
     "alternatives": {
       "a": "59",
       "b": "83",
@@ -838,7 +898,9 @@
       "d": "89",
       "e": "92"
     },
-    "images": [],
+    "images": [
+      "figuras/q176_2023_fig1.png"
+    ],
     "tags": [
       "aritmética e números",
       "geometria plana"
@@ -851,15 +913,22 @@
   },
   {
     "number": 177,
-    "text": "A figura ilustra uma roda-gigante no exato instante em que a cadeira onde se encontra a pessoa P está no ponto mais alto dessa roda-gigante. Com o passar do tempo, à medida que a roda-gigante gira, com velocidade angular constante e no sentido horário, a altura da cadeira onde se encontra a pessoa P em relação ao solo, vai se alterando. O gráfico que melhor representa a variação dessa altura, função do tempo, contado a partir do instante em que a cadeira da pessoa P se encontra na posição mais alta da roda-gigante, é",
+    "text": "A figura ilustra uma roda-gigante no exato instante em que a cadeira onde se encontra a pessoa P está no ponto mais alto dessa roda-gigante.[Figura]\n\nCom o passar do tempo, à medida que a roda-gigante gira, com velocidade angular constante e no sentido horário, a altura da cadeira onde se encontra a pessoa P em relação ao solo, vai se alterando. \n\nO gráfico que melhor representa a variação dessa altura, em função do tempo, contado a partir do instante em que a cadeira da pessoa P se encontra na posição mais alta da roda-gigante, é",
     "alternatives": {
-      "a": "Altura em relação ao solo\n0 Tempo",
-      "b": "Altura em relação ao solo\n0 Tempo",
-      "c": "Altura em relação ao solo\n0 Tempo",
-      "d": "Altura em relação ao solo\n0 Tempo",
-      "e": "Altura em relação ao solo\n0 Tempo"
+      "a": "[Gráfico]",
+      "b": "[Gráfico]",
+      "c": "[Gráfico]",
+      "d": "[Gráfico]",
+      "e": "[Gráfico]"
     },
-    "images": [],
+    "images": [
+      "figuras/q177_2023_fig1.png",
+      "figuras/q177_2023_fig2.png",
+      "figuras/q177_2023_fig3.png",
+      "figuras/q177_2023_fig4.png",
+      "figuras/q177_2023_fig5.png",
+      "figuras/q177_2023_fig6.png"
+    ],
     "tags": [
       "estatística",
       "geometria espacial",
@@ -869,19 +938,26 @@
     "test": "ENEM",
     "area": "math",
     "answer": "a",
-    "difficulty": 5
+    "difficulty": 5,
+    "review": true
   },
   {
     "number": 178,
-    "text": "Estudantes trabalhando com robótica criaram um “torneira inteligente” que automatiza sua abertura e se fechamento durante a limpeza das mãos. A tecnologia funciona da seguinte forma: ao se colocarem as mãos sob a torneira, ela libera água durante 3 segundos para que a pessoa possa molhá-las. Em seguida, interrompe o fornecimento de água por 5 segundos, enquanto a pessoa ensaboa suas mãos, e finaliza o ciclo liberando água para o enxágue por mais 3 segundos. Considere o tempo (t) em segundo, contado a partir do instante em que se inicia o ciclo. A vazão de água nessa torneira é constante.\nUm esboço de gráfico que descreve o volume de água acumulado, em litro, liberado por essa torneira durante um ciclo de lavagem das mãos, em função do tempo (t), em segundo, é",
+    "text": "Estudantes trabalhando com robótica criaram um “torneira inteligente” que automatiza sua abertura e seu fechamento durante a limpeza das mãos. A tecnologia funciona da seguinte forma: ao se colocarem as mãos sob a torneira, ela libera água durante 3 segundos para que a pessoa possa molhá-las. Em seguida, interrompe o fornecimento de água por 5 segundos, enquanto a pessoa ensaboa suas mãos, e finaliza o ciclo liberando água para o enxágue por mais 3 segundos. Considere o tempo (t) em segundo, contado a partir do instante em que se inicia o ciclo. A vazão de água nessa torneira é constante.\n\n\nUm esboço de gráfico que descreve o volume de água acumulado, em litro, liberado por essa torneira durante um ciclo de lavagem das mãos, em função do tempo (t), em segundo, é",
     "alternatives": {
-      "a": "Volume de água (L)\n0 1 2 3 4 5 6 7 8 9   10   11   12\nt  (s)",
-      "b": "Volume de água (L)\n0 1 2 3 4 5 6 7 8 9   10   11   12\nt  (s)",
-      "c": "Volume de água (L)\n0 1 2 3 4 5 6 7 8 9   10   11   12\nt  (s)",
-      "d": "Volume de água (L)\n0 1 2 3 4 5 6 7 8 9   10   11   12\nt  (s)",
-      "e": "Volume de água (L)\n0 1 2 3 4 5 6 7 8 9   10   11   12\nt  (s)"
+      "a": "[Gráfico]",
+      "b": "[Gráfico]",
+      "c": "[Gráfico]",
+      "d": "[Gráfico]",
+      "e": "[Gráfico]"
     },
-    "images": [],
+    "images": [
+      "figuras/q178_2023_fig1.png",
+      "figuras/q178_2023_fig2.png",
+      "figuras/q178_2023_fig3.png",
+      "figuras/q178_2023_fig4.png",
+      "figuras/q178_2023_fig5.png"
+    ],
     "tags": [
       "álgebra"
     ],
@@ -889,11 +965,12 @@
     "test": "ENEM",
     "area": "math",
     "answer": "b",
-    "difficulty": 3
+    "difficulty": 3,
+    "review": true
   },
   {
     "number": 179,
-    "text": "As características culturais variam de povo para povo. Há notícias de um povo que possuía formas de contar diferentes das nossas, como indicado no quadrinho a seguir. Segundo o padrão de contagem indicado na figura, as representações dos numerais cinco e sete, nessa cultura, viriam ser, respectivamente, [Figura].",
+    "text": "As características culturais variam de povo para povo. Há notícias de um povo que possuía formas de contar diferentes das nossas, como indicado no quadrinho a seguir.[Figura] \n\nSegundo o padrão de contagem indicado na figura, as representações dos numerais cinco e sete, nessa cultura, viriam ser, respectivamente.",
     "alternatives": {
       "a": "okosa urapum urapum urapum e okosa okosa urapum urapum urapum.",
       "b": "okosa okosa urapum e okosa okosa okosa okosa urapum.",
