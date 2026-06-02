@@ -978,7 +978,7 @@
   background: color-mix(in srgb, var(--accent) 4%, var(--card-bg));
   font-size: 0.95rem;
   line-height: 1.75;
-  color: var(--text);
+  color: var(--text-soft);
   border-top: 1px solid color-mix(in srgb, var(--accent) 18%, transparent);
   white-space: pre-wrap;
   display: flex;

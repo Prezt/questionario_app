@@ -160,10 +160,15 @@ function formatTime(seconds) {
   return `${m}:${String(s).padStart(2, '0')}`
 }
 
-const APP_VERSION = '1.11.1'
-const APP_VERSION_DATE = '31/05/2026'
+const APP_VERSION = '1.11.2'
+const APP_VERSION_DATE = '02/06/2026'
 
 const CHANGELOG = [
+  {
+    version: '1.11.2',
+    date: '02/06/2026',
+    items: ['ENEM 2023 Ciências da Natureza revisado'],
+  },
   {
     version: '1.11.1',
     date: '31/05/2026',
