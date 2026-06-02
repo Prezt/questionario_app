@@ -1,7 +1,7 @@
 [
   {
     "number": 136,
-    "text": "Um artista plástico esculpe uma escultura a partir de um bloco de madeira de lei, em etapas. Inicialmente esculpe um cone reto com 36 cm de altura e diâmetro da base medindo 18 cm. Em seguida, remove desse cone um cone menor, cujo diâmetro da base mede 6 cm, obtendo assim, um tronco de cone, conforme ilustrado na figura. 6 cm 36 cm 18 cm Em seguida, perfura esse tronco de cone, removendo um cilindro reto, de diâmetro 6 cm, cujo eixo de simetria é o mesmo do cone original. Dessa forma, ao final, a escultura tem a forma de um tronco de cone com uma perfuração cilíndrica de base a base. O tipo de madeira utilizada para produzir essa escultura tem massa igual a 0,6 g por centímetro cúbico de volume Utilize 3 como aproximação para π . Qual é a massa, em gramas, dessa escultura?",
+    "text": "Um artista plástico esculpe uma escultura a partir de um bloco de madeira de lei, em etapas. Inicialmente esculpe um cone reto com 36 cm de altura e diâmetro da base medindo 18 cm. Em seguida, remove desse cone um cone menor, cujo diâmetro da base mede 6 cm, obtendo assim, um tronco de cone, conforme ilustrado na figura.[Figura]Em seguida, perfura esse tronco de cone, removendo um cilindro reto, de diâmetro 6 cm, cujo eixo de simetria é o mesmo do cone original. Dessa forma, ao final, a escultura tem a forma de um tronco de cone com uma perfuração cilíndrica de base a base. \nO tipo de madeira utilizada para produzir essa escultura tem massa igual a 0,6 g por centímetro cúbico de volume Utilize 3 como aproximação para π. \n\nQual é a massa, em gramas, dessa escultura?",
     "alternatives": {
       "a": "1 198,8",
       "b": "1 296,0",
@@ -9,7 +9,9 @@
       "d": "4 665,6",
       "e": "4 860,0"
     },
-    "images": [],
+    "images": [
+      "figuras/q136_2023_fig1.png"
+    ],
     "tags": [
       "geometria espacial",
       "geometria plana"
@@ -42,7 +44,7 @@
   },
   {
     "number": 138,
-    "text": "Visando atrair mais clientes, o gerente de uma loja nunciou uma promoção em que cada cliente que realizar ma compra pode ganhar um voucher para ser usado m sua próxima compra. Para ganhar seu voucher, cliente precisa retirar, ao acaso, uma bolinha de dentro e cada uma das duas urnas A e B disponibilizadas pelo erente, nas quais há apenas bolinhas pretas e brancas. Atualmente, a probabilidade de se escolher, ao acaso, ma bolinha preta na urna A é igual a 20% e a probabilidade e se escolher uma bolinha preta na urna B é 25%. Ganha o voucher o cliente que retirar duas bolinhas pretas, ma de cada urna. Com o passar dos dias, o gerente percebeu que, para a promoção ser viável aos negócios, era preciso alterar probabilidade de acerto do cliente sem alterar a regra a promoção. Para isso, resolveu alterar a quantidade de bolinhas brancas na urna B de forma que a probabilidade e um cliente ganhar o voucher passasse a ser menor ou gual a 1%. Sabe-se que a urna B tem 4 bolinhas pretas e ue, em ambas as urnas, todas as bolinhas têm a mesma robabilidade de serem retiradas. Qual é o número mínimo de bolinhas brancas que o erente deve adicionar à urna B?",
+    "text": "Visando atrair mais clientes, o gerente de uma loja anunciou uma promoção em que cada cliente que realizar ma compra pode ganhar um voucher para ser usado m sua próxima compra. Para ganhar seu voucher, cliente precisa retirar, ao acaso, uma bolinha de dentro e cada uma das duas urnas A e B disponibilizadas pelo gerente, nas quais há apenas bolinhas pretas e brancas. Atualmente, a probabilidade de se escolher, ao acaso, ma bolinha preta na urna A é igual a 20% e a probabilidade e se escolher uma bolinha preta na urna B é 25%. Ganha o voucher o cliente que retirar duas bolinhas pretas, ma de cada urna. \nCom o passar dos dias, o gerente percebeu que, para a promoção ser viável aos negócios, era preciso alterar probabilidade de acerto do cliente sem alterar a regra a promoção. Para isso, resolveu alterar a quantidade de bolinhas brancas na urna B de forma que a probabilidade e um cliente ganhar o voucher passasse a ser menor ou igual a 1%. Sabe-se que a urna B tem 4 bolinhas pretas e que, em ambas as urnas, todas as bolinhas têm a mesma probabilidade de serem retiradas. \n\nQual é o número mínimo de bolinhas brancas que o gerente deve adicionar à urna B?",
     "alternatives": {
       "a": "20",
       "b": "60",
@@ -63,7 +65,7 @@
   },
   {
     "number": 139,
-    "text": "O gerente de uma fábrica pretende comparar a evolução das vendas dos produtos I e II. Após a verificação, para os meses de abril a junho, são apresentadas as seguintes informações: Vendas Produto em abril (unidade) l 80 ll 190 O gerente estava decidido a cessar a produção do produto II se o número de unidades vendidas do produto I superassem as do produto II. Suponha que a variação na quantidade de unidades vendidas seja constante no período representado na tabela. Em qual mês o produto II parou de ser produzido?\n[Tabela incompleta — faltam dados de maio e junho]",
+    "text": "O gerente de uma fábrica pretende comparar a evolução das vendas dos produtos I e II. Após a verificação, para os meses de abril a junho, são apresentadas as seguintes informações: \n|Produto|Vendas em abril (unidade)|Vendas em maio (unidade)|Vendas em junho (unidade)|\n|l|80|90|100| \n|ll|190|170|150|\nO gerente estava decidido a cessar a produção do produto II se o número de unidades vendidas do produto I superassem as do produto II. \nSuponha que a variação na quantidade de unidades vendidas seja constante no período representado na tabela. \n\nEm qual mês o produto II parou de ser produzido?",
     "alternatives": {
       "a": "Junho.",
       "b": "Julho.",
@@ -84,7 +86,7 @@
   },
   {
     "number": 140,
-    "text": "Uma empresa de transporte faz regularmente um levantamento da quantidade de viagens realizadas por todos os 160 motoristas cadastrados em seu aplicativo. Em um certo dia, foi gerado um relatório, por meio de um gráfico de barras, no qual se relacionaram a quantidade de viagens realizadas com o número de motoristas até aquele instante do dia. Comparando os valores da média, da mediana e da moda das quantidades de viagens realizadas pelos motoristas cadastrados nessa empresa, obtém-se:",
+    "text": "Uma empresa de transporte faz regularmente um levantamento da quantidade de viagens realizadas por todos os 160 motoristas cadastrados em seu aplicativo. Em um certo dia, foi gerado um relatório, por meio de um gráfico de barras, no qual se relacionaram a quantidade de viagens realizadas com o número de motoristas até aquele instante do dia. [Gráfico]\nComparando os valores da média, da mediana e da moda das quantidades de viagens realizadas pelos motoristas cadastrados nessa empresa, obtém-se:",
     "alternatives": {
       "a": "mediana  =  média  <  moda.",
       "b": "mediana  =  moda  <  média.",
@@ -92,7 +94,9 @@
       "d": "moda  <  média  <  mediana.",
       "e": "moda  <  mediana  <  média."
     },
-    "images": [],
+    "images": [
+      "figuras/q140_2023_fig1.png"
+    ],
     "tags": [
       "estatística"
     ],
@@ -105,13 +109,13 @@
   },
   {
     "number": 141,
-    "text": "No alojamento de uma universidade, há alguns quartos vagos. Um desses quartos ficou disponível, e muitos estudantes se candidataram para um sorteio será realizado. Para esse sorteio, cartões individuais são depositados em uma urna, sendo que, para cada estudante de primeiro ano, um cartão com seu nome; para cada estudante de segundo ano, dois cartões com seu nome; e para cada estudante de terceiro ano, três cartões com seu nome. Foram inscritos 200 estudantes no sorteio: 100 do primeiro ano, 60 do segundo ano e 40 do terceiro ano. Todos os cartões têm a mesma probabilidade de serem sorteados. Qual a probabilidade de o vencedor do sorteio ser um estudante do segundo ano?",
+    "text": "No alojamento de uma universidade, há alguns quartos com o padrão superior ao dos demais. Um desses quartos ficou disponível, e muitos estudantes se candidataram para morar no local. Para escolher quem ficará com o quarto, um sorteio será realizado. Para esse sorteio, cartões individuais com os nomes de todos os estudantes inscritos serão depositados em uma urna, sendo que, para cada estudante de primeiro ano, será depositado um único cartão com seu nome; para cada estudante de segundo ano, dois cartões com seu nome; e, para cada estudante de terceiro ano, três cartões com seu nome. Foram inscritos 200 estudantes de primeiro ano, 150 de segundo ano e 100 de terceiro ano. Todos os cartões têm a mesma probabilidade de serem sorteados.\n\nQual a probabilidade de o vencedor do sorteio ser um estudante de terceiro ano?",
     "alternatives": {
-      "a": "1",
-      "b": "1",
-      "c": "8",
-      "d": "9",
-      "e": "8"
+      "a": "1/2",
+      "b": "1/3",
+      "c": "1/8",
+      "d": "2/9",
+      "e": "3/8"
     },
     "images": [],
     "tags": [
@@ -127,7 +131,7 @@
   },
   {
     "number": 142,
-    "text": "A água utilizada pelos 75 moradores de um vilarejo é armazenada em um reservatório cilíndrico cujo raio da base mede 5 metros. Cada morador desse vilarejo consome, em média, 200 litros de água por pessoa por dia. No mês de junho de um determinado ano, o vilarejo fez uma coleta nos primeiros 20 dias. Passado esse período, as pessoas reduziram a quantidade de água consumida e constataram que o nível da coluna de água estava em queda durante os 10 dias seguintes. Considere π como aproximadamente igual a 3. Qual é a quantidade mínima de água, em litros, que cada morador deve economizar por dia para garantir que o reservatório não fique sem água nos próximos 10 dias?",
+    "text": "A água utilizada pelos 75 moradores de um vilarejo provém de um reservatório de formato cilíndrico circular reto cujo raio da base mede 5 metros, sempre abastecido no primeiro dia de cada mês por caminhões-pipa. Cada morador desse vilarejo consome, em média, 200 litros de água por dia.\nNo mês de junho de um determinado ano, o vilarejo festejou o dia do seu padroeiro e houve um gasto extra de água nos primeiros 20 dias. Passado esse período, as pessoas verificaram a quantidade de água presente no reservatório e constataram que o nível da coluna de água estava em 1,5 metro. Decidiram, então, fazer um racionamento de água durante os 10 dias seguintes. Considere 3 como aproximação para π.\n\nQual é a quantidade mínima de água, em litro, que cada morador, em média, deverá economizar por dia, de modo que o reservatório não fique sem água nos próximos 10 dias?",
     "alternatives": {
       "a": "50",
       "b": "60",
@@ -148,7 +152,7 @@
   },
   {
     "number": 143,
-    "text": "Em janeiro do ano passado, a direção de uma fábrica com 10 salas, cada uma com capacidade para atender 10 crianças, realizou um sorteio entre os filhos dos funcionários inscritos. Dos contemplados, 25% foram colocados na lista de espera. A lista de espera teve 400 nomes e, neste ano, esse número cresceu 10%. A direção da fábrica realizou uma pesquisa e constatou que a quantidade de nomes da lista de espera deste ano é maior em relação ao ano passado. Decidiram então construir, ao longo desse ano, novas salas para a creche, também com capacidade de atendimento para 10 crianças cada, de modo que o número de nomes na lista de espera no próximo ano seja 25% menor que o deste ano. O número mínimo de salas que deverão ser construídas é:",
+    "text": "Em janeiro do ano passado, a direção de uma fábrica abriu uma creche para os filhos de seus funcionários, com 10 salas, cada uma com capacidade para atender 10 crianças a cada ano. As vagas são sorteadas entre os filhos dos funcionários inscritos, enquanto os não contemplados pelo sorteio formam uma lista de espera. No ano passado, a lista de espera teve 400 nomes e, neste ano, esse número cresceu 10%. \nA direção da fábrica realizou uma pesquisa e constatou que a lista de espera para o próximo ano terá a mesma quantidade de nomes da lista de espera deste ano. Decidiu, então, construir, ao longo desse ano, novas salas para a creche, também com capacidade de atendimento para 10 crianças cada, de modo que o número de nomes na lista de espera no próximo ano seja 25% menor que o deste ano.\n\nO número mínimo de salas que deverão ser construídas é:",
     "alternatives": {
       "a": "10",
       "b": "11.",
@@ -168,7 +172,7 @@
   },
   {
     "number": 144,
-    "text": "A foto mostra a construção de uma cisterna destinada ao armazenamento de água. Uma cisterna como essa, na forma de cilindro circular reto com 3 m² de área da base foi abastecida por um curso-d’água com vazão constante. O seu proprietário registrou a altura do nível da água no interior da cisterna durante o abastecimento em diferentes momentos de um mesmo dia, conforme o quadro.[Figura] Horário (h) Nível da água (m) 6:00 0,5 8:00 1,1 12:00 2,3 15:00 3,2 Disponível em: www.paraibamix.com. Acesso em: 3 dez. 201 Qual foi a vazão, em metro cúbico por hora, do curso-d’água que abasteceu a cisterna?",
+    "text": "A foto mostra a construção de uma cisterna destinada ao armazenamento de água. Uma cisterna como essa, na forma de cilindro circular reto com 3 m² de área da base foi abastecida por um curso-d’água com vazão constante. O seu proprietário registrou a altura do nível da água no interior da cisterna durante o abastecimento em diferentes momentos de um mesmo dia, conforme o quadro. \n|Horário (h)|Nível da água (m)|\n|-|-|\n|6:00|0,5|\n|8:00|1,1|\n|12:00|2,3|\n|15:00|3,2|\n[Figura: Disponível em: www.paraibamix.com. Acesso em: 3 dez. 2012] Qual foi a vazão, em metro cúbico por hora, do curso-d’água que abasteceu a cisterna?",
     "alternatives": {
       "a": "0,3",
       "b": "0,5",
@@ -190,15 +194,17 @@
   },
   {
     "number": 145,
-    "text": "Num certo momento de um jogo digital, a tela apresenta a imagem representada na figura. O ponto Q representa a posição de um jogador que está com a bola; os pontos Q2, Q3, Q4, Q5 e Q6 também indicam posições de jogadores da mesma equipe, e os pontos A e B indicam os dois pés da trave mais próxima deles. No momento da partida retratado, o jogador Q1 tem a posse da bola, que será passada para um dos outros jogadores das posições Qn, n ∈ {2, 3, 4, 5, 6}, cujo ângulo AQnB tenha a mesma medida do ângulo AQ1B.",
+    "text": "Num certo momento de um jogo digital, a tela apresenta a imagem representada na figura. O ponto Q representa a posição de um jogador que está com a bola; os pontos Q<sub>2</sub>, Q<sub>3</sub>, Q<sub>4</sub>, Q<sub>5</sub> e Q<sub>6</sub> também indicam posições de jogadores da mesma equipe, e os pontos A e B indicam os dois pés da trave mais próxima deles. No momento da partida retratado, o jogador Q<sub>1</sub> tem a posse da bola, que será passada para um dos outros jogadores das posições Q<sub>n</sub>, n ∈ {2, 3, 4, 5, 6}, cujo ângulo AQ<sub>n</sub>B tenha a mesma medida do ângulo AQ<sub>1</sub>B.[Imagem] Qual é o jogador que receberá a bola?",
     "alternatives": {
-      "a": "Q2",
-      "b": "Q3",
-      "c": "Q4",
-      "d": "Q5",
-      "e": "Q6"
+      "a": "Q<sub>2</sub>",
+      "b": "Q<sub>3</sub>",
+      "c": "Q<sub>4</sub>",
+      "d": "Q<sub>5</sub>",
+      "e": "Q<sub>6</sub>"
     },
-    "images": [],
+    "images": [
+      "figuras/q145_2023_fig1.png"
+    ],
     "tags": [
       "geometria plana"
     ],
@@ -211,7 +217,7 @@
   },
   {
     "number": 146,
-    "text": "O triângulo da figura é denominado triângulo mágico. Nos círculos, escrevem-se os números de 1 a 6, sem repetição, com um número em cada círculo. O objetivo é distribuir os números de forma que as somas dos números em cada lado do triângulo sejam iguais. Considere que os números colocados nos vértices do triângulo estejam em progressão aritmética de razão igual a 2. Nas condições propostas, quais as possíveis soluções para as somas dos números que formam os lados do triângulo? [Figura]",
+    "text": "O triângulo da figura é denominado triângulo mágico. Nos círculos, escrevem-se os números de 1 a 6, sem repetição, com um número em cada círculo. O objetivo é distribuir os números de forma que as somas dos números em cada lado do triângulo sejam iguais.[Figura]Considere que os números colocados nos vértices do triângulo estejam em progressão aritmética de razão igual a 2.\n\nNas condições propostas, quais as possíveis soluções para as somas dos números que formam os lados do triângulo?",
     "alternatives": {
       "a": "Há somente uma solução possível, e as somas em cada lado do triângulo são iguais a 7.",
       "b": "Há somente uma solução possível, e as somas em cada lado do triângulo são iguais a 9.",
@@ -220,7 +226,7 @@
       "e": "Há somente duas soluções possíveis, uma em que as somas em cada lado do triângulo são iguais a 10 e outra em que as somas são iguais a 11."
     },
     "images": [
-      "figuras/q146_2023_fig1.png"
+      "figuras/q146_2023_fig2.png"
     ],
     "tags": [
       "análise combinatória",
