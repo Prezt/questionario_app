@@ -598,7 +598,10 @@
     "area": "linguagens",
     "answer": "e",
     "difficulty": 4,
-    "contextIds": ["enem_2022_linguagens_q22_ctx1", "enem_2022_linguagens_q22_ctx2"]
+    "contextIds": [
+      "enem_2022_linguagens_q22_ctx1",
+      "enem_2022_linguagens_q22_ctx2"
+    ]
   },
   {
     "number": 23,
@@ -778,11 +781,11 @@
     "number": 31,
     "text": "Os recursos composicionais que inserem a obra no chamado “Romance de 30” da literatura brasileira manifestam-se aqui no(a)",
     "alternatives": {
-      "a": "desenho cru da realidade dramática dos retirantes",
-      "b": "indefinição dos espaços para efeito de generalização",
-      "c": "análise psicológica da reação dos personagens à seca",
-      "d": "engajamento político do narrador ante as desigualdades",
-      "e": "contemplação lírica da paisagem transformada em alegoria"
+      "a": "desenho cru da realidade dramática dos retirantes.",
+      "b": "indefinição dos espaços para efeito de generalização.",
+      "c": "análise psicológica da reação dos personagens à seca.",
+      "d": "engajamento político do narrador ante as desigualdades.",
+      "e": "contemplação lírica da paisagem transformada em alegoria."
     },
     "images": [],
     "tags": [
@@ -793,17 +796,18 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "a",
-    "difficulty": 8
+    "difficulty": 8,
+    "contextId": "enem_2022_linguagens_q31_ctx1"
   },
   {
     "number": 32,
-    "text": "O texto sobre os chamados nativos digitais traz informações para propor ações específicas para cada etapa da infância?",
+    "text": "O texto sobre os chamados nativos digitais traz informações com a função de",
     "alternatives": {
-      "a": "propor ações específicas para cada etapa da infância",
+      "a": "propor ações específicas para cada etapa da infância.",
       "b": "estabelecer regras que devem ser seguidas à risca.",
       "c": "explicar os efeitos do acesso precoce à internet.",
       "d": "determinar a incorporação de rituais à educação dos filhos.",
-      "e": "educar com base em um conjunto de estratégias fortes."
+      "e": "educar com base em um conjunto de estratégias formativas."
     },
     "images": [],
     "tags": [
@@ -814,17 +818,18 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "a",
-    "difficulty": 3
+    "difficulty": 3,
+    "contextId": "enem_2022_linguagens_q32_ctx1"
   },
   {
     "number": 33,
-    "text": "O recurso linguístico que permite a Machado de Assis construir o capítulo de Memórias póstumas de Brás Cubas como inventário é a",
+    "text": "O recurso linguístico que permite a Machado de Assis considerar um capítulo de Memórias póstumas de Brás Cubas como inventário é a",
     "alternatives": {
       "a": "enumeração de objetos e fatos.",
       "b": "predominância de linguagem objetiva.",
       "c": "ocorrência de período longo no trecho.",
       "d": "combinação de verbos no presente e no pretérito.",
-      "e": "presença de léxico do campo semântico de funerais"
+      "e": "presença de léxico do campo semântico de funerais."
     },
     "images": [],
     "tags": [
@@ -835,7 +840,8 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "a",
-    "difficulty": 7
+    "difficulty": 7,
+    "contextId": "enem_2022_linguagens_q33_ctx1"
   },
   {
     "number": 34,
@@ -855,10 +861,8 @@
     "test": "ENEM",
     "area": "linguagens",
     "images": [],
-    "contextId": null,
-    "contextIds": null,
-    "language": null,
-    "difficulty": 3
+    "difficulty": 3,
+    "contextId": "enem_2022_linguagens_q34_ctx1"
   },
   {
     "number": 35,
@@ -879,7 +883,8 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "c",
-    "difficulty": 6
+    "difficulty": 6,
+    "contextId": "enem_2022_linguagens_q35_ctx1"
   },
   {
     "number": 36,
@@ -900,11 +905,12 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "c",
-    "difficulty": 3
+    "difficulty": 3,
+    "contextId": "enem_2022_linguagens_q36_ctx1"
   },
   {
     "number": 37,
-    "text": "[Figura] Associada ao ideário de uma “vida perfeita”, a positividade tóxica mencionada no texto é um fenômeno social recente, que se constitui com base em",
+    "text": "Associada ao ideário de uma “vida perfeita”, a positividade tóxica mencionada no texto é um fenômeno social recente, que se constitui com base em",
     "alternatives": {
       "a": "representações estereotipadas e superficiais da felicidade.",
       "b": "ressignificações contemporâneas do conceito de alegria.",
@@ -912,9 +918,7 @@
       "d": "atitudes contraditórias de influenciadores digitais.",
       "e": "padrões idealizados e nocivos de beleza física."
     },
-    "images": [
-      "figuras/q037_2022_fig1.png"
-    ],
+    "images": [],
     "tags": [
       "comunicação e mídia",
       "sociologia e estrutura social"
@@ -923,7 +927,8 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "a",
-    "difficulty": 5
+    "difficulty": 5,
+    "contextId": "enem_2022_linguagens_q37_ctx1"
   },
   {
     "number": 38,
@@ -937,45 +942,48 @@
     },
     "images": [],
     "tags": [
-      "artes visuais",
-      "literatura brasileira"
+      "artes visuais"
     ],
     "year": 2022,
     "test": "ENEM",
     "area": "linguagens",
     "answer": "b",
-    "difficulty": 7
+    "difficulty": 7,
+    "contextIds": [
+      "enem_2022_linguagens_q38_ctx1",
+      "enem_2022_linguagens_q38_ctx2"
+    ]
   },
   {
     "number": 39,
-    "text": "[Figura: obra minimalista] De acordo com os textos I e II, compreende-se que a obra minimalista é uma [Gráfico - características]",
+    "text": "De acordo com os textos I e II, compreende-se que a obra minimalista é uma",
     "alternatives": {
-      "a": "representação da simplicidade pelo artista",
-      "b": "exploração da técnica da escultura cubista",
-      "c": "valorização do cotidiano por meio da geometria",
-      "d": "utilização da complexidade dos elementos formais",
-      "e": "combinação de formas sintéticas no espaço utilizado"
+      "a": "representação da simplicidade pelo artista.",
+      "b": "exploração da técnica da escultura cubista.",
+      "c": "valorização do cotidiano por meio da geometria.",
+      "d": "utilização da complexidade dos elementos formais.",
+      "e": "combinação de formas sintéticas no espaço utilizado."
     },
-    "images": [
-      "figuras/q039_2022_fig1.png",
-      "figuras/q039_2022_fig2.png"
-    ],
+    "images": [],
     "tags": [
-      "artes visuais",
-      "literatura brasileira"
+      "artes visuais"
     ],
     "year": 2022,
     "test": "ENEM",
     "area": "linguagens",
     "answer": "e",
-    "difficulty": 6
+    "difficulty": 6,
+    "contextIds": [
+      "enem_2022_linguagens_q39_ctx1",
+      "enem_2022_linguagens_q39_ctx2"
+    ]
   },
   {
     "number": 40,
-    "text": "A passagem registra um momento em que expressividade lírica é reforçada pela",
+    "text": "A passagem registra um momento em que a expressividade lírica é reforçada pela",
     "alternatives": {
       "a": "plasticidade da imagem do rebanho reunido.",
-      "b": "sugestão da firmeza do sertanejo ao arrear o cavalo",
+      "b": "sugestão da firmeza do sertanejo ao arrear o cavalo.",
       "c": "situação de pobreza encontrada nos sertões brasileiros.",
       "d": "afetividade demonstrada ao noticiar a morte do cantador.",
       "e": "preocupação do vaqueiro em demonstrar sua virilidade."
@@ -988,7 +996,8 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "d",
-    "difficulty": 7
+    "difficulty": 7,
+    "contextId": "enem_2022_linguagens_q40_ctx1"
   },
   {
     "number": 41,
@@ -1008,10 +1017,8 @@
     "test": "ENEM",
     "area": "linguagens",
     "images": [],
-    "contextId": null,
-    "contextIds": null,
-    "language": null,
-    "difficulty": 6
+    "difficulty": 6,
+    "contextId": "enem_2022_linguagens_q41_ctx1"
   },
   {
     "number": 42,
@@ -1031,7 +1038,8 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "d",
-    "difficulty": 5
+    "difficulty": 5,
+    "contextId": "enem_2022_linguagens_q42_ctx1"
   },
   {
     "number": 43,
@@ -1052,7 +1060,8 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "e",
-    "difficulty": 7
+    "difficulty": 7,
+    "contextId": "enem_2022_linguagens_q43_ctx1"
   },
   {
     "number": 44,
@@ -1066,18 +1075,21 @@
     },
     "images": [],
     "tags": [
-      "artes visuais",
-      "sociologia e estrutura social"
+      "artes visuais"
     ],
     "year": 2022,
     "test": "ENEM",
     "area": "linguagens",
     "answer": "c",
-    "difficulty": 8
+    "difficulty": 8,
+    "contextIds": [
+      "enem_2022_linguagens_q44_ctx1",
+      "enem_2022_linguagens_q44_ctx2"
+    ]
   },
   {
     "number": 45,
-    "text": "[Figura] Chico Science foi fundamental para a renovação da música pernambucana, fato que se deu pela",
+    "text": "Chico Science foi fundamental para a renovação da música pernambucana, fato que se deu pela",
     "alternatives": {
       "a": "utilização de aparelhos musicais eletrônicos em lugar dos instrumentos tradicionais.",
       "b": "ocupação de espaços da natureza local para a produção de eventos musicais memoráveis.",
@@ -1085,9 +1097,7 @@
       "d": "recuperação de composições tradicionais folclóricas e sua apresentação em grandes festivais.",
       "e": "integração de referenciais culturais de diferentes origens, criando uma nova combinação estética."
     },
-    "images": [
-      "figuras/q045_2022_fig1.png"
-    ],
+    "images": [],
     "tags": [
       "cultura e identidade",
       "música e dança"
@@ -1096,6 +1106,7 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "e",
-    "difficulty": 5
+    "difficulty": 5,
+    "contextId": "enem_2022_linguagens_q45_ctx1"
   }
 ]
