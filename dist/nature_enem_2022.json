@@ -1,7 +1,7 @@
 [
   {
     "number": 91,
-    "text": "A figura ilustra esquematicamente um processo de remediação de solos contaminados com tricloroeteno (TCE), um agente desengraxante. Em razão de vazamentos de tanques de estocagem ou de manejos inadequados de resíduos industriais, ele se encontra presente em águas subterrâneas, nas quais forma uma fase líquida densa não aquosa (DNAPL) que se deposita no fundo do aquífero. Essa tecnologia de descontaminação emprega o íon persulfato (SO₄²⁻), que é convertido no radical •SO₄ por minerais que contêm Fe(III). O esquema representa de forma simplificada mecanismo de ação química sobre o TCE e a formação dos produtos de degradação.",
+    "text": "Esse procedimento de remediação de águas subterrâneas baseia-se em reações de",
     "alternatives": {
       "a": "oxirredução",
       "b": "substituição",
@@ -18,11 +18,12 @@
     "test": "ENEM",
     "area": "nature",
     "answer": "a",
-    "difficulty": 7
+    "difficulty": 7,
+    "contextId": "enem_2022_nature_q91_ctx1"
   },
   {
     "number": 92,
-    "text": "De acordo com a Organização Mundial da Saúde, a filariose e a leishmaniose são consideradas doença tropicais infecciosas e constituem uma preocupação para a saúde pública por ser alto o índice de mortalidade elas associado. Uma medida profilática comum a essas duas doenças é o(a)",
+    "text": "De acordo com a Organização Mundial da Saúde, a filariose e a leishmaniose são consideradas doenças tropicais infecciosas e constituem uma preocupação para a saúde pública por ser alto o índice de mortalidade a elas associado.\n\nUma medida profilática comum a essas duas doenças é o(a)",
     "alternatives": {
       "a": "incineração do lixo orgânico",
       "b": "construção de rede de esgoto",
@@ -42,7 +43,7 @@
   },
   {
     "number": 93,
-    "text": "Considere que cada usina apresente potência igual a 75 MW, com o parque totalizando uma potência instalada de 150 MW. Considere ainda que a radiância solar média é de 1 500 W/m² e que a eficiência dos painéis é de 20%. Nessas condições, a área total dos painéis solares que compõem o Parque Solar Lapa é mais próxima de:",
+    "text": "Nessas condições, a área total dos painéis solares que compõem o Parque Solar Lapa é mais próxima de:",
     "alternatives": {
       "a": "1 000 000 m²",
       "b": "500 000 m²",
@@ -58,11 +59,12 @@
     "test": "ENEM",
     "area": "nature",
     "answer": "b",
-    "difficulty": 5
+    "difficulty": 5,
+    "contextId": "enem_2022_nature_q93_ctx1"
   },
   {
     "number": 94,
-    "text": "O descarte dos conjuntos (1) e (2) resultará, espectivamente, em",
+    "text": "O descarte dos conjuntos (1) e (2) resultará, respectivamente, em",
     "alternatives": {
       "a": "liberação de gás tóxico e reação oxidativa forte.",
       "b": "reação oxidativa forte e liberação de gás tóxico.",
@@ -78,19 +80,26 @@
     "test": "ENEM",
     "area": "nature",
     "answer": "a",
-    "difficulty": 5
+    "difficulty": 5,
+    "contextId": "enem_2022_nature_q94_ctx1"
   },
   {
     "number": 95,
-    "text": "O físico Hans C. Oersted observou que um fio transportando corrente elétrica produz um campo magnético. A presença de uma bússola de um fio conduzindo corrente elétrica foi verificada ao aproximar uma bússola em pontos equidistantes do fio. Em cada ponto, a configuração da bússola será:",
+    "text": "Considerando apenas o campo magnético por causa da corrente <b>i</b>, as respectivas configurações das bússolas nos pontos <b>A</b>, <b>B</b> e <b>C</b> serão",
     "alternatives": {
-      "a": "A",
-      "b": "B",
-      "c": "C",
-      "d": "",
-      "e": ""
+      "a": "[Figura]",
+      "b": "[Figura]",
+      "c": "[Figura]",
+      "d": "[Figura]",
+      "e": "[Figura]"
     },
-    "images": [],
+    "images": [
+      "figuras/q095_2022_fig2.png",
+      "figuras/q095_2022_fig3.png",
+      "figuras/q095_2022_fig4.png",
+      "figuras/q095_2022_fig5.png",
+      "figuras/q095_2022_fig6.png"
+    ],
     "tags": [
       "eletricidade e magnetismo"
     ],
@@ -98,19 +107,26 @@
     "test": "ENEM",
     "area": "nature",
     "answer": "d",
-    "difficulty": 5
+    "difficulty": 5,
+    "contextId": "enem_2022_nature_q95_ctx1"
   },
   {
     "number": 96,
     "text": "Qual associação de baterias foi responsável pelo acidente?",
     "alternatives": {
-      "a": "- - + + A",
-      "b": "- - + + B",
-      "c": "- + - + C",
-      "d": "- - + + D",
-      "e": "+ A E\nB"
+      "a": "[Figura]",
+      "b": "[Figura]",
+      "c": "[Figura]",
+      "d": "[Figura]",
+      "e": "[Figura]"
     },
-    "images": [],
+    "images": [
+      "figuras/q096_2022_fig1.png",
+      "figuras/q096_2022_fig2.png",
+      "figuras/q096_2022_fig3.png",
+      "figuras/q096_2022_fig4.png",
+      "figuras/q096_2022_fig5.png"
+    ],
     "tags": [
       "eletricidade e magnetismo"
     ],
@@ -118,11 +134,12 @@
     "test": "ENEM",
     "area": "nature",
     "answer": "a",
-    "difficulty": 5
+    "difficulty": 5,
+    "contextId": "enem_2022_nature_q96_ctx1"
   },
   {
     "number": 97,
-    "text": "Considerando a diferença de massa mencionada entre os dois isótopos, que tipo de procedimento alternativo ao da fusão pode ser empregado para tal finalidade?",
+    "text": "Considerando a diferença de massa mencionada entre os dois isótopos, que tipo de procedimento alternativo ao da efusão pode ser empregado para tal finalidade?",
     "alternatives": {
       "a": "Peneiração",
       "b": "Centrifugação",
@@ -139,11 +156,12 @@
     "test": "ENEM",
     "area": "nature",
     "answer": "b",
-    "difficulty": 4
+    "difficulty": 4,
+    "contextId": "enem_2022_nature_q97_ctx1"
   },
   {
     "number": 98,
-    "text": "O sucesso dessa terapia advém do fato de que o produto avorecerá a",
+    "text": "O sucesso dessa terapia advém do fato de que o produto favorecerá a",
     "alternatives": {
       "a": "correção do código genético para a tradução da proteína.",
       "b": "alteração do RNA ribossômico ligado à síntese da proteína.",
@@ -160,11 +178,12 @@
     "test": "ENEM",
     "area": "nature",
     "answer": "e",
-    "difficulty": 6
+    "difficulty": 6,
+    "contextId": "enem_2022_nature_q98_ctx1"
   },
   {
     "number": 99,
-    "text": "A extinção de espécies é uma ameaça real que afeta diversas regiões do país. A introdução de espécie exóticas pode ser considerada um fator maximizado desse processo. Casos como o dessa árvore podem provocar a redução da biodiversidade, pois elas",
+    "text": "Casos como o dessa árvore podem provocar a redução da biodiversidade, pois elas",
     "alternatives": {
       "a": "ocupam áreas de vegetação nativa e substituem parcialmente a flora original.",
       "b": "estimulam a competição por seus frutos entre animais típicos da região e eliminam as espécies perdedoras",
@@ -180,11 +199,12 @@
     "test": "ENEM",
     "area": "nature",
     "answer": "a",
-    "difficulty": 3
+    "difficulty": 3,
+    "contextId": "enem_2022_nature_q99_ctx1"
   },
   {
     "number": 100,
-    "text": "Em um dia de calor intenso, dois colegas estão brincando com a água da mangueira. Um deles quer saber até que altura o jato de água alcança, a partir da saída de água, quando a mangueira está posicionada totalmente na direção vertical. O outro colega propõe então o seguinte experimento: eles posicionarem a saída de água da mangueira na direção horizontal, a 1 m de altura em relação ao chão, e então medirem a distância horizontal entre a mangueira e o local onde a água atinge o chão. A medida dessa distância foi de 3 m e a partir disso eles calcularam o alcance vertical do jato de água.",
+    "text": "Em um dia de calor intenso, dois colegas estão brincando com a água da mangueira. Um deles quer saber até que altura o jato de água alcança, a partir da saída de água, quando a mangueira está posicionada totalmente na direção vertical. O outro colega propõe então o seguinte experimento: eles posicionarem a saída de água da mangueira na direção horizontal, a 1 m de altura em relação ao chão, e então medirem a distância horizontal entre a mangueira e o local onde a água atinge o chão. A medida dessa distância foi de 3 m e a partir disso eles calcularam o alcance vertical do jato de água. Considere a aceleração da gravidade de 10 m/s².\n\nO resultado que eles obtiveram foi de",
     "alternatives": {
       "a": "1,50 m",
       "b": "2,25 m",
