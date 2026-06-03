@@ -111,11 +111,11 @@
     "number": 141,
     "text": "No alojamento de uma universidade, há alguns quartos com o padrão superior ao dos demais. Um desses quartos ficou disponível, e muitos estudantes se candidataram para morar no local. Para escolher quem ficará com o quarto, um sorteio será realizado. Para esse sorteio, cartões individuais com os nomes de todos os estudantes inscritos serão depositados em uma urna, sendo que, para cada estudante de primeiro ano, será depositado um único cartão com seu nome; para cada estudante de segundo ano, dois cartões com seu nome; e, para cada estudante de terceiro ano, três cartões com seu nome. Foram inscritos 200 estudantes de primeiro ano, 150 de segundo ano e 100 de terceiro ano. Todos os cartões têm a mesma probabilidade de serem sorteados.\n\nQual a probabilidade de o vencedor do sorteio ser um estudante de terceiro ano?",
     "alternatives": {
-      "a": "1/2",
-      "b": "1/3",
-      "c": "1/8",
-      "d": "2/9",
-      "e": "3/8"
+      "a": "\\(\\frac{1}{2}\\)",
+      "b": "\\(\\frac{1}{3}\\)",
+      "c": "\\(\\frac{1}{8}\\)",
+      "d": "\\(\\frac{2}{9}\\)",
+      "e": "\\(\\frac{3}{8}\\)"
     },
     "images": [],
     "tags": [
@@ -711,11 +711,11 @@
     "number": 168,
     "text": "Em um colégio público, a admissão no primeiro ano se dá por sorteio. Neste ano há 55 candidatos, cujas inscrições são numeradas de 01 a 55. O sorteio de cada número de inscrição será realizado em etapas, utilizando-se duas urnas. Da primeira urna será sorteada uma bola, dentre bolas numeradas de 0 a 9, que representará o algarismo das unidades do número de inscrição a ser sorteado e, em seguida, da segunda urna, será sorteada uma bola para representar o algarismo das dezenas desse número. Depois do primeiro sorteio, e antes de se sortear o algarismo das dezenas, as bolas que estarão presentes na segunda urna serão apenas aquelas cujos números formam, com o algarismo já sorteado, um número de 01 a 55.\n\nAs probabilidades de os candidatos de inscrição número 50 e 02 serem sorteados são, respectivamente,",
     "alternatives": {
-      "a": "1/50 e 1/60",
-      "b": "1/50 e 1/50",
-      "c": "1/50 e 1/10",
-      "d": "1/55 e 1/54",
-      "e": "1/100 e 1/100"
+      "a": "\\(\\frac{1}{50}\\) e \\(\\frac{1}{60}\\)",
+      "b": "\\(\\frac{1}{50}\\) e \\(\\frac{1}{50}\\)",
+      "c": "\\(\\frac{1}{50}\\) e \\(\\frac{1}{10}\\)",
+      "d": "\\(\\frac{1}{55}\\) e \\(\\frac{1}{54}\\)",
+      "e": "\\(\\frac{1}{100}\\) e \\(\\frac{1}{100}\\)"
     },
     "images": [],
     "tags": [
@@ -732,11 +732,11 @@
     "number": 169,
     "text": "O esquema mostra como a intensidade luminosa decresce com o aumento da profundidade em um rio sendo L₀ a intensidade na sua superfície.[Esquema] Considere que a intensidade luminosa diminui, a cada metro acrescido na profundidade, segundo o mesmo padrão do esquema.\n\nA intensidade luminosa correspondente à profundidade de 6 m é igual a",
     "alternatives": {
-      "a": "(1/9)L₀",
-      "b": "(1/27)L₀",
-      "c": "(1/81)L₀",
-      "d": "(1/243)L₀",
-      "e": "(1/729)L₀"
+      "a": "\\(\\frac{1}{9}\\)L₀",
+      "b": "\\(\\frac{1}{27}\\)L₀",
+      "c": "\\(\\frac{1}{81}\\)L₀",
+      "d": "\\(\\frac{1}{243}\\)L₀",
+      "e": "\\(\\frac{1}{729}\\)L₀"
     },
     "images": [
       "figuras/q169_2023_fig1.png"

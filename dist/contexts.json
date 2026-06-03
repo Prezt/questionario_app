@@ -28,7 +28,7 @@
     "subtitle": "",
     "text": "",
     "images": [
-      "figuras/q22_bailarino.png"
+      "figuras/q022_2025_fig1.png"
     ],
     "reference": "FARIAS, Y. <b>Bailarino entalhado em gravetos de madeira</b>. Artesanato em madeira, 20 × 13 × 51 cm. Ilha do Ferro (AL). Disponível em: www.imaterial.art.br. Acesso em: 5 fev. 2025 (adaptado)."
   },
@@ -43,7 +43,7 @@
     "subtitle": "",
     "text": "",
     "images": [
-      "figuras/q23_varejao_azulejaria.png"
+      "figuras/q023_2025_fig1.png"
     ],
     "reference": "VAREJÃO, A. <b>Azulejaria em carne viva</b>. Óleo sobre tela, poliuretano, madeira e alumínio, 160 × 200 × 25 cm. 1999. Disponível em: www.adrianavarejao.net. Acesso em: 10 jan. 2025."
   },
@@ -4358,7 +4358,7 @@
     "text": "[Imagem]",
     "reference": "Disponível em: www.inali.gob.mx. Acesso em: 3 dez. 2019.",
     "images": [
-      "figuras/q1_2022_fig1.png"
+      "figuras/q001_2022_fig1_es.png"
     ]
   },
   "enem_2022_linguagens_q2en_ctx1": {
@@ -4381,7 +4381,7 @@
     "text": "[Imagem]",
     "reference": "GAULD, T. Disponível em: www.tomgauld.com. Acesso em: 25 jul. 2021.",
     "images": [
-      "figuras/q3_2022_fig1.png"
+      "figuras/q003_2022_fig1_en.png"
     ]
   },
   "enem_2022_linguagens_q3es_ctx1": {
@@ -4418,7 +4418,111 @@
     "text": "[Imagem]",
     "reference": "MURIG. Disponível em: https://murigestudiohermanxs.wordpress.com. Acesso em: 26 set. 2021 (adaptado).",
     "images": [
-      "figuras/q5_2022_fig1.png"
+      "figuras/q005_2022_fig1_es.png"
     ]
+  },
+  "enem_2022_linguagens_q6_ctx1": {
+    "title": "Urgência emocional",
+    "subtitle": null,
+    "text": "Se tudo é para ontem, se a vida engata uma primeira e sai em disparada, se não há mais tempo para paradas estratégicas, caímos fatalmente no vício de querer que os amores sejam igualmente resolvidos num átimo de segundo. Temos pressa para ouvir \"eu te amo\". Não vemos a hora de que fiquem estabelecidas as regras de convívio: somos namorados, ficantes, casados, amantes? Urgência emocional. Uma cilada. Associamos diversas palavras ao AMOR: paixão, romance, sexo, adrenalina, palpitação. Esquecemos, no entanto, da palavra que viabiliza esse sentimento: \"paciência\". Amor sem paciência não vinga. Amor não pode ser mastigado e engolido com emergência, com fome desesperada. É uma refeição que pode durar uma vida.",
+    "reference": "MEDEIROS, M. Disponível em: http://porumavidasimples.blogspot.com.br. Acesso em: 20 ago. 2017 (adaptado).",
+    "images": []
+  },
+  "enem_2022_linguagens_q7_ctx1": {
+    "title": "Texto I",
+    "subtitle": "",
+    "text": "[Imagem]",
+    "reference": "Disponível em: https://amigodobicho.wordpress.com. Acesso em: 10 dez. 2017.",
+    "images": [
+      "figuras/q007_2022_fig1.png"
+    ]
+  },
+  "enem_2022_linguagens_q7_ctx2": {
+    "title": "Texto II",
+    "subtitle": "Nas ruas, na cidade e no parque",
+    "text": "Ninguém nunca prendeu o Delegado. O vaivém de rua em rua e sua longa vida são relembrados e recontados. Exemplo de sobrevivência, liderança, inteligência canina, desde pequenininho seu focinho negro e seus olhos delineados desenharam um mapa mental olfativo-visual de Lavras. Corria de quem precisava correr e se aproximava de quem não lhe faria mal, distinguia este daquele. Assim, tornou-se um cão comunitário. Nunca se soube por que escolheu a rua, talvez lhe tenham feito mal dentro de quatro paredes. Idoso, teve câncer e desapareceu. O querido foi procurado pela cidade inteira por duas protetoras, mas nunca encontrado.",
+    "reference": "COSTA, A. R. N. Viver o amor aos cães: Parque Francisco de Assis. Carmo do Cachoeira: Irdin, 2014 (adaptado).",
+    "images": []
+  },
+  "enem_2022_linguagens_q8_ctx1": {
+    "title": "",
+    "subtitle": "",
+    "text": "É ruivo? Tem olhos azuis? É homem ou mulher? Usa chapéu? Quem jogou Cara a Cara na infância sabe de cor o roteiro de perguntas para adivinhar quem é o personagem misterioso do seu oponente.\nAgora, o jogo está prestes a ganhar uma nova versão. A designer polonesa Zuzia Kozerska-Girard está desenvolvendo uma variação do Guess Who? (nome do Cara a Cara em inglês), em que as personalidades do tabuleiro são, na verdade, mulheres notáveis da história e da atualidade, como a artista Frida Kahlo, a ativista Malala Yousafzai, a astronauta Valentina Tereshkova e a aviadora Amelia Earhart. O Who's She? (\"Quem é ela?\", em português) traz, no total, 28 mulheres que representam diversas profissões, nacionalidades e idades.\nA ideia é que, em vez de perguntar sobre a aparência das personagens, as questões sejam direcionadas aos feitos delas: ganhou algum Nobel, fez alguma descoberta? Para cada personagem há um cartão com fatos divertidos e interessantes sobre sua vida. Uma campanha entrou no ar com o objetivo de arrecadar dinheiro para desenvolver o Who's She?. A meta inicial era reunir 17 mil dólares. Oito dias antes de a campanha acabar, o projeto já angariou quase 350 mil dólares.\nA chegada do jogo à casa do comprador varia de acordo com a quantia doada — quanto mais você doou, mais rápido vai poder jogar.",
+    "reference": "Disponível em: www.super.abril.com.br. Acesso em: 4 dez. 2018 (adaptado).",
+    "images": []
+  },
+  "enem_2022_linguagens_q9_ctx1": {
+    "title": null,
+    "subtitle": null,
+    "text": "[Imagem]",
+    "reference": "Disponível em: www.portaldapropaganda.com.br. Acesso em: 29 out. 2013 (adaptado).",
+    "images": [
+      "figuras/q009_2022_fig1.png"
+    ]
+  },
+  "enem_2022_linguagens_q10_ctx1": {
+    "title": null,
+    "subtitle": null,
+    "text": "Ciente de que, no campo da criação, as inovações tecnológicas abrem amplo leque de possibilidades — ao permitir, e mesmo estimular, que o artista explore a fundo, em seu processo criativo, questões como a aleatoriedade, o acaso, a não linearidade e a hipermídia —, Leo Cunha comenta que, no que tange ao campo da divulgação, as alternativas são ainda mais evidentes: \"Afinal, é imensa a capacidade de reprodução, multiplicação e compartilhamento das obras artísticas/culturais. Ao mesmo tempo, ganham dimensão os dilemas envolvidos com a questão da autoria, dos direitos autorais, da reprodução e intervenção não autorizadas, entre outras questões\".\nJá segundo a professora Yacy-Ara Froner, o uso de ferramentas tecnológicas não pode ser visto como um fim em si mesmo. Isso porque computadores, samplers, programas de imersão, internet e intranet, vídeo, televisão, rádio, GPD etc. são apenas suportes com os quais os artistas exercem sua imaginação.",
+    "reference": "SILVA JR., M. G. Movidas pela dúvida. Minas faz Ciências, n. 52, dez.-fev. 2013 (adaptado).",
+    "images": []
+  },
+  "enem_2022_linguagens_q11_ctx1": {
+    "title": "",
+    "subtitle": "",
+    "text": "Ora, sempre que surge uma nova técnica, ela quer demonstrar que revogará as regras e coerções que presidiram o nascimento de todas as outras invenções do passado. Ela se pretende orgulhosa e única. Como se a nova técnica carreasse com ela, automaticamente, para seus novos usuários, uma propensão natural a fazer economia de qualquer aprendizado. Como se ela se preparasse para varrer tudo que a precedeu, ao mesmo tempo transformando em analfabetos todos os que ousassem repeli-la.\nFui testemunha dessa mudança ao longo de toda a minha vida. Ao passo que, na realidade, é o contrário que acontece. Cada nova técnica exige uma longa iniciação numa nova linguagem, ainda mais longa na medida em que nosso espírito é formatado pela utilização das linguagens que precederam o nascimento da recém-chegada.",
+    "reference": "ECO, U.; CARRIÈRE, J. C. Não contem com o fim do livro. Rio de Janeiro: Record, 2010 (adaptado).",
+    "images": []
+  },
+  "enem_2022_linguagens_q12_ctx1": {
+    "title": "Papos",
+    "subtitle": null,
+    "text": "— Me disseram...\n— Disseram-me.\n— Hein?\n— O correto é \"disseram-me\". Não \"me disseram\".\n— Eu falo como quero. E te digo mais... Ou é \"digo-te\"?\n— O quê?\n— Digo-te que você...\n— O \"te\" e o \"você\" não combinam.\n— Lhe digo?\n— Também não. O que você ia me dizer?\n— Que você está sendo grosseiro, pedante e chato. [...]\n— Dispenso as suas correções. Vê se esquece-me. Falo como bem entender. Mais uma correção e eu...\n— O quê?\n— O mato.\n— Que mato?\n— Mato-o. Mato-lhe. Mato você. Matar-lhe-ei-te. Ouviu bem? Pois esqueça-o e para-te. Pronome no lugar certo é elitismo!\n— Se você prefere falar errado...\n— Falo como todo mundo fala. O importante é me entenderem. Ou entenderem-me?",
+    "reference": "VERISSIMO, L. F. Comédias para se ler na escola. Rio de Janeiro: Objetiva, 2001 (adaptado).",
+    "images": []
+  },
+  "enem_2022_linguagens_q13_ctx1": {
+    "title": "",
+    "subtitle": "",
+    "text": "São vários os fatores, internos e externos, que influenciam os hábitos das pessoas no acesso à internet, assim como nas práticas culturais realizadas na rede. A utilização das tecnologias de informação e comunicação está diretamente relacionada aos aspectos como conhecimento de seu uso, acesso à linguagem letrada, nível de instrução, escolaridade, letramento digital etc. Os que detêm tais recursos (os mais escolarizados) são os que mais acessam a rede e também os que possuem maior índice de acumulatividade das práticas. A análise dos dados nos possibilita dizer que a falta de acesso à rede repete as mesmas adversidades e exclusões já verificadas na sociedade brasileira no que se refere a analfabetos, menos escolarizados, negros, população indígena e desempregados. Isso significa dizer que a internet, se não produz diretamente a exclusão, certamente a reproduz, tendo em vista que os que mais a acessam são justamente os mais jovens, escolarizados, remunerados, trabalhadores qualificados, homens e brancos.",
+    "reference": "SILVA, F. A. B.; ZIVIANE, P.; GHEZZI, D. R. As tecnologias digitais e seus usos. Brasília; Rio de Janeiro: Ipea, 2019 (adaptado).",
+    "images": []
+  },
+  "enem_2022_linguagens_q14_ctx1": {
+    "title": "Texto I",
+    "subtitle": null,
+    "text": "A língua não é uma nomenclatura, que se apõe a uma realidade pré-categorizada, ela é que classifica a realidade. No léxico, percebe-se, de maneira mais imediata, o fato de que a língua condensa as experiências de um dado povo.",
+    "reference": "FIORIN, J. L. Língua, modernidade e tradição. Diversitas, n. 2, mar.-set. 2014.",
+    "images": []
+  },
+  "enem_2022_linguagens_q14_ctx2": {
+    "title": "Texto II",
+    "subtitle": null,
+    "text": "As expressões coloquiais ainda estão impregnadas de discriminação contra os negros. Basta recordar algumas delas, como passar um \"dia negro\", ter um \"lado negro\", ser a \"ovelha negra\" da família ou praticar \"magia negra\".",
+    "reference": "Disponível em: https://brasil.elpais.com. Acesso em: 22 maio 2018.",
+    "images": []
+  },
+  "enem_2022_linguagens_q15_ctx1": {
+    "title": null,
+    "subtitle": null,
+    "text": "[Imagem]",
+    "reference": "Disponível em: www.facebook.com/senadofederal. Acesso em: 9 dez. 2017.",
+    "images": [
+      "figuras/q015_2022_fig1.png"
+    ]
+  },
+  "enem_2022_linguagens_q16_ctx1": {
+    "title": null,
+    "subtitle": null,
+    "text": "Ela era linda. Gostava de dançar, fazia teatro em São Paulo e sonhava ser atriz em Hollywood. Tinha 13 anos quando ganhou uma câmera de vídeo — e uma irmã. As duas se tornaram suas companheiras de experimentações. Adolescente, Elena vivia a criar filminhos e se empenhava em dirigir a pequena Petra nas cenas que inventava. Era exigente com a irmã. E acreditava no potencial da menina para satisfazer seus arroubos de diretora precoce. Por cinco anos, integrou algumas das melhores companhias paulistanas de teatro e participou de preleções para filmes e trabalhos na TV. Nunca foi chamada. No início de 1990, Elena tinha 20 anos quando se mudou para Nova York para cursar artes cênicas e batalhar uma chance no mercado americano. Deslocada, ansiosa, frustrada após alguns testes de elenco malsucedidos, decepcionada com a ausência de reconhecimento e vitimada por uma depressão que se agravava com a falta de perspectivas, Elena pôs fim à vida no segundo semestre. Petra tinha 7 anos. Vinte anos depois, é ela, a irmã caçula, que volta a Nova York para percorrer os últimos passos da irmã, vasculhar seus arquivos e transformar suas memórias em imagem e poesia.\n\nElena é um filme sobre a irmã que parte e sobre a irmã que fica. É um filme sobre a busca, a perda, a saudade, mas também sobre o encontro, o legado, a memória. Um filme sobre a Elena de Petra e sobre a Petra de Elena, sobre o que ficou de uma na outra e, essencialmente, um filme sobre a delicadeza.",
+    "reference": "VANUCHI, C. Época, 19 out. 2012 (adaptado).",
+    "images": []
+  },
+  "enem_2022_linguagens_q17_ctx1": {
+    "title": null,
+    "subtitle": null,
+    "text": "PALAVRA — As gramáticas classificam as palavras em substantivo, adjetivo, verbo, advérbio, conjunção, pronome, numeral, artigo e preposição. Os poetas classificam as palavras pela alma porque gostam de brincar com elas, e para brincar com elas é preciso ter intimidade primeiro. É a alma da palavra que define, explica, ofende ou elogia, se coloca entre o significante e o significado para dizer o que quer, dar sentimento às coisas, fazer sentido. A palavra nuvem chove. A palavra triste chora. A palavra sono dorme. A palavra tempo passa. A palavra fogo queima. A palavra faca corta. A palavra carro corre. A palavra \"palavra\" diz. O que quer. E nunca desdiz depois. As palavras têm corpo e alma, mas são diferentes das pessoas em vários pontos. As palavras dizem o que querem, está dito, e pronto.",
+    "reference": "FALCÃO, A. Pequeno dicionário de palavras ao vento. São Paulo: Salamandra, 2013 (adaptado).",
+    "images": []
   }
 }

@@ -24,11 +24,11 @@
     "number": 137,
     "text": "A reportagem de uma revista abordou o uso de redes sociais pelos internautas brasileiros. Alguns dos dados apurados pela reportagem estão apresentados no infográfico.\n\n[Infográfico]\n\nSegundo os dados do infográfico, ao se escolher aleatoriamente um internauta brasileiro no período ao qual se refere a reportagem, a probabilidade de ele ser um homem que acessa alguma rede social é",
     "alternatives": {
-      "a": "30/90",
-      "b": "36/100",
-      "c": "40/100",
-      "d": "40/90",
-      "e": "46/90"
+      "a": "\\(\\frac{30}{90}\\)",
+      "b": "\\(\\frac{36}{100}\\)",
+      "c": "\\(\\frac{40}{100}\\)",
+      "d": "\\(\\frac{40}{90}\\)",
+      "e": "\\(\\frac{46}{90}\\)"
     },
     "images": [
       "figuras/q137_2025_fig1.png"
@@ -355,11 +355,11 @@
     "number": 152,
     "text": "Quatro candidatos se apresentaram para realizar a prova de um concurso. Antes de iniciar a prova, os celulares dos quatro candidatos foram recolhidos pelo aplicador, que os guardou, cada um, dentro de um envelope preto. Ao término da prova, o aplicador devolveu os quatro envelopes com os celulares aos quatro candidatos, de maneira aleatória, já que não havia feito a identificação dos envelopes.\n\nA probabilidade de que todos os candidatos tenham recebido de volta os envelopes com os seus respectivos celulares é",
     "alternatives": {
-      "a": "1/2",
-      "b": "1/10",
-      "c": "1/16",
-      "d": "1/24",
-      "e": "1/256"
+      "a": "\\(\\frac{1}{2}\\)",
+      "b": "\\(\\frac{1}{10}\\)",
+      "c": "\\(\\frac{1}{16}\\)",
+      "d": "\\(\\frac{1}{24}\\)",
+      "e": "\\(\\frac{1}{256}\\)"
     },
     "images": [],
     "tags": [
@@ -531,11 +531,11 @@
     "number": 160,
     "text": "Um recipiente tem um formato que faz com que, ao ser enchido de água com uma vazão constante, a distância D da lâmina de água ao tampo da mesa, em centímetro, aumente em relação ao tempo T, em minuto, de acordo com uma função do tipo\n\n<center>D = k + tg[p(T + m)],</center>\n\nsendo os parâmetros k, p e m números reais, para T variando entre 0 e 4 minutos, conforme ilustrado na figura, na qual estão apresentadas assíntotas verticais da função tangente utilizada na definição de D.\n\n[Figura: gráfico da função D em relação ao tempo T]\n\nA expressão algébrica que representa a relação entre D e T é",
     "alternatives": {
-      "a": "D = 2,5 + tg[30(T − (5−2π)/2)]",
-      "b": "D = 4 + tg[30(T + 5/2)]",
-      "c": "D = 4 + tg[2,5(T + (5+2π)/2)]",
-      "d": "D = 30 + tg[(1/2)(T − 5)]",
-      "e": "D = 30 + tg[(1/2)(T − 5/2)]"
+      "a": "\\(D = 2{,}5 + \\operatorname{tg}\\left[30\\left(T - \\frac{5-2\\pi}{2}\\right)\\right]\\)",
+      "b": "\\(D = 4 + \\operatorname{tg}\\left[30\\left(T + \\frac{5}{2}\\right)\\right]\\)",
+      "c": "\\(D = 4 + \\operatorname{tg}\\left[2{,}5\\left(T + \\frac{5+2\\pi}{2}\\right)\\right]\\)",
+      "d": "\\(D = 30 + \\operatorname{tg}\\left[\\frac{1}{2}(T - 5)\\right]\\)",
+      "e": "\\(D = 30 + \\operatorname{tg}\\left[\\frac{1}{2}\\left(T - \\frac{5}{2}\\right)\\right]\\)"
     },
     "images": [
       "figuras/q160_2025_fig2.png"
@@ -937,11 +937,11 @@
     "number": 178,
     "text": "Três dados cúbicos, com faces numeradas de 1 a 6, foram utilizados em um jogo. Artur escolheu dois dados, e João ficou com o terceiro. O jogo consiste em ambos lançarem seus dados, observarem os números nas faces voltadas para cima e compararem o maior número obtido por Artur com o número obtido por João. Vence o jogador que obtiver o maior número. Em caso de empate, a vitória é de João.\n\nO jogador que tem a maior probabilidade de vitória é",
     "alternatives": {
-      "a": "Artur, com probabilidade de 2/3",
-      "b": "João, com probabilidade de 4/9",
-      "c": "Artur, com probabilidade de 91/216",
-      "d": "João, com probabilidade de 91/216",
-      "e": "Artur, com probabilidade de 125/216"
+      "a": "Artur, com probabilidade de \\(\\frac{2}{3}\\)",
+      "b": "João, com probabilidade de \\(\\frac{4}{9}\\)",
+      "c": "Artur, com probabilidade de \\(\\frac{91}{216}\\)",
+      "d": "João, com probabilidade de \\(\\frac{91}{216}\\)",
+      "e": "Artur, com probabilidade de \\(\\frac{125}{216}\\)"
     },
     "images": [],
     "tags": [

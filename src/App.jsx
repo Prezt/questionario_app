@@ -94,10 +94,18 @@ function formatTime(seconds) {
   return `${m}:${String(s).padStart(2, '0')}`
 }
 
-const APP_VERSION = '1.13.0'
+const APP_VERSION = '1.14.0'
 const APP_VERSION_DATE = '02/06/2026'
 
 const CHANGELOG = [
+  {
+    version: '1.14.0',
+    date: '02/06/2026',
+    items: [
+      'Frações no novo formato KaTeX em todas as questões de Matemática 2022–2025',
+      'Fração em log(I/I₀) em Ciências da Natureza 2025 q132',
+    ],
+  },
   {
     version: '1.13.0',
     date: '02/06/2026',

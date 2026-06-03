@@ -21,7 +21,7 @@
   },
   {
     "number": 137,
-    "text": "A World Series é a decisão do campeonato norte-americano de beisebol. Os dois times que chegam a essa fase jogam, entre si, até sete partidas. O primeiro desses times que completar quatro vitórias é declarado campeão.\nConsidere que, em todas as partidas, a probabilidade de qualquer um dos dois times vencer é sempre 1/2.\n\nQual é a probabilidade de o time campeão ser aquele que venceu a primeira partida da World Series?",
+    "text": "A World Series é a decisão do campeonato norte-americano de beisebol. Os dois times que chegam a essa fase jogam, entre si, até sete partidas. O primeiro desses times que completar quatro vitórias é declarado campeão.\nConsidere que, em todas as partidas, a probabilidade de qualquer um dos dois times vencer é sempre \\(\\frac{1}{2}\\).\n\nQual é a probabilidade de o time campeão ser aquele que venceu a primeira partida da World Series?",
     "alternatives": {
       "a": "35",
       "b": "40",
@@ -106,11 +106,11 @@
     "number": 141,
     "text": "O jogo inicia e, nas quatro primeiras rodadas, foram sorteados os seguintes números: 03, 27, 07 e 48. Ao final da quarta rodada, somente Pedro possuía uma cartela que continha esses quatro números sorteados, sendo que todos os demais jogadores conseguiram assinalar, no máximo, um desses números em suas cartelas. Observe na Figura 2 o cartão de Pedro após as quatro primeiras rodadas. [Figura 2] A probabilidade de Pedro ganhar o jogo em uma das duas próximas rodadas é",
     "alternatives": {
-      "a": "1/46 + 1/45",
-      "b": "2/46",
-      "c": "8/46",
-      "d": "43/46",
-      "e": "49/46"
+      "a": "\\(\\frac{1}{46} + \\frac{1}{45}\\)",
+      "b": "\\(\\frac{2}{46}\\)",
+      "c": "\\(\\frac{8}{46}\\)",
+      "d": "\\(\\frac{43}{46}\\)",
+      "e": "\\(\\frac{49}{46}\\)"
     },
     "images": [],
     "tags": [
@@ -289,7 +289,7 @@
   },
   {
     "number": 150,
-    "text": "Em jogos de voleibol, um saque é invalidado se a bola tingir o teto do ginásio onde ocorre o jogo. Um jogador da equipe tem um saque que atinge uma grande altura. Seu recorde foi quando a batida do saque se iniciou a maior altura de 1,5 m do piso da quadra, e a trajetória da bola foi descrita pela parábola y = -2/3x^2 + 7x, em que y representa a altura da bola em relação ao eixo (das abscissas) que está localizado a 1,5 m do piso da quadra. Suponha que em todas as partidas algum saque desse jogador atinja a mesma altura do seu recorde.",
+    "text": "Em jogos de voleibol, um saque é invalidado se a bola tingir o teto do ginásio onde ocorre o jogo. Um jogador da equipe tem um saque que atinge uma grande altura. Seu recorde foi quando a batida do saque se iniciou a maior altura de 1,5 m do piso da quadra, e a trajetória da bola foi descrita pela parábola \\(y = -\\frac{2}{3}x^2 + 7x\\), em que y representa a altura da bola em relação ao eixo (das abscissas) que está localizado a 1,5 m do piso da quadra. Suponha que em todas as partidas algum saque desse jogador atinja a mesma altura do seu recorde.",
     "alternatives": {
       "a": "apenas no ginásio I.",
       "b": "apenas nos ginásios I e II.",
@@ -413,7 +413,7 @@
   },
   {
     "number": 156,
-    "text": "O professor de artes orientou seus estudantes a dobrar uma folha de papel em formato quadrado conforme ilustrado nas figuras 1 e 2, para obter o [Figura: Figura 3]. Em seguida, no papel dobrado da Figura 3, construir um arco de circunferência com centro no ponto R, sobre o segmento OM, sendo M o ponto médio do lado do quadrado original, de modo que OR = \\frac{1}{4}OM. Traçar um arco de circunferência e excluir a parte que contém RM O, obtendo [Figura: Figura 4]. Por último, recortar o papel ao longo do arco circular, obtendo o papel dobrado conforme [Figura: Figura 5]. Após desdobrado, a figura que os estudantes obterão será:",
+    "text": "O professor de artes orientou seus estudantes a dobrar uma folha de papel em formato quadrado conforme ilustrado nas figuras 1 e 2, para obter o [Figura: Figura 3]. Em seguida, no papel dobrado da Figura 3, construir um arco de circunferência com centro no ponto R, sobre o segmento OM, sendo M o ponto médio do lado do quadrado original, de modo que \\(OR = \\frac{1}{4}OM\\). Traçar um arco de circunferência e excluir a parte que contém RM O, obtendo [Figura: Figura 4]. Por último, recortar o papel ao longo do arco circular, obtendo o papel dobrado conforme [Figura: Figura 5]. Após desdobrado, a figura que os estudantes obterão será:",
     "alternatives": {
       "a": "A",
       "b": "B",

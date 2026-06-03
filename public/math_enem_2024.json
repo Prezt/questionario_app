@@ -268,8 +268,8 @@
     "alternatives": {
       "a": "a = 20; b = log(0,5)",
       "b": "a = 100; b = 0,5",
-      "c": "a = 20; b = (0,5)^(1/10)",
-      "d": "a = 20; b = 40^(1/10)",
+      "c": "\\(a = 20;\\; b = (0{,}5)^{\\frac{1}{10}}\\)",
+      "d": "\\(a = 20;\\; b = 40^{\\frac{1}{10}}\\)",
       "e": "a = 20; b = 40"
     },
     "images": [
@@ -642,7 +642,7 @@
   },
   {
     "number": 165,
-    "text": "Para melhorar o fluxo de ônibus em uma avenida que tem dois semáforos, a prefeitura reduzirá o tempo em que cada sinal ficará vermelho, que atualmente é de 15 segundos a cada 60 segundos. Admita que o instante da chegada de um ônibus a cada semáforo é aleatório. \nO engenheiro de tráfego da prefeitura calculou a probabilidade de um ônibus encontrar cada um desses sinais vermelho, obtendo 15/60. A partir daí, estabeleceu uma mesma redução na quantidade do tempo, em segundos, em que cada sinal ficará vermelho, de maneira que a probabilidade de um ônibus encontrar ambos os sinais vermelhos numa mesma viagem seja igual a 4/100, considerando os eventos independentes. \n\nPara isso, a redução do tempo em que o sinal ficará vermelho, em segundos, estabelecida pelo engenheiro foi de",
+    "text": "Para melhorar o fluxo de ônibus em uma avenida que tem dois semáforos, a prefeitura reduzirá o tempo em que cada sinal ficará vermelho, que atualmente é de 15 segundos a cada 60 segundos. Admita que o instante da chegada de um ônibus a cada semáforo é aleatório. \nO engenheiro de tráfego da prefeitura calculou a probabilidade de um ônibus encontrar cada um desses sinais vermelho, obtendo \\(\\frac{15}{60}\\). A partir daí, estabeleceu uma mesma redução na quantidade do tempo, em segundos, em que cada sinal ficará vermelho, de maneira que a probabilidade de um ônibus encontrar ambos os sinais vermelhos numa mesma viagem seja igual a \\(\\frac{4}{100}\\), considerando os eventos independentes. \n\nPara isso, a redução do tempo em que o sinal ficará vermelho, em segundos, estabelecida pelo engenheiro foi de",
     "alternatives": {
       "a": "1,35.",
       "b": "3,00.",
@@ -665,11 +665,11 @@
     "number": 166,
     "text": "A densidade demográfica de uma região é definida como sendo a razão entre o número de habitantes dessa região e sua área, expressa na unidade habitantes por quilômetro quadrado. \nUma região R é subdividida em várias outras, sendo uma delas a região Q. A área de Q é igual a três quartos da área de R, e o número de habitantes de Q é igual à metade do número de habitantes de R. As densidades demográficas correspondentes a essas regiões são denotadas por d(Q) e d(R). \n\nA expressão que relaciona d(Q) e d(R) é",
     "alternatives": {
-      "a": "d(Q) = (1/4) · d(R)",
-      "b": "d(Q) = (1/2) · d(R)",
-      "c": "d(Q) = (2/3) · d(R)",
-      "d": "d(Q) = (3/4) · d(R)",
-      "e": "d(Q) = (3/2) · d(R)"
+      "a": "\\(d(Q) = \\frac{1}{4} \\cdot d(R)\\)",
+      "b": "\\(d(Q) = \\frac{1}{2} \\cdot d(R)\\)",
+      "c": "\\(d(Q) = \\frac{2}{3} \\cdot d(R)\\)",
+      "d": "\\(d(Q) = \\frac{3}{4} \\cdot d(R)\\)",
+      "e": "\\(d(Q) = \\frac{3}{2} \\cdot d(R)\\)"
     },
     "images": [],
     "tags": [
@@ -735,11 +735,11 @@
     "number": 169,
     "text": "A criptografia refere-se à construção e análise de protocolos que impedem terceiros de lerem mensagens privadas. Júlio César, imperador romano, utilizava um código para garantir que, se a mensagem caísse em mãos inimigas, a informação fosse protegida. Em seu sistema, cada letra do alfabeto era substituída pela letra três posições à frente nesse alfabeto, de modo que a “A” era substituída pela “D”, a “B” pela “E”, e assim sucessivamente. [Figura]Qualquer código que tenha um padrão de substituição como esse é chamado de Código de César. Note que, para decifrar uma Cifra de César, basta descobrir qual letra do alfabeto foi usada como referência inicial, pois isso define todas as demais substituições a serem feitas.\nUma mensagem, em um alfabeto de 26 letras, foi codificada usando o Código de César e enviada. Sabe-se que uma tentativa frustrada deve ser eliminada nas tentativas seguintes. \n\nA probabilidade de se descobrir, aleatoriamente, o padrão utilizado nessa cifra apenas na terceira tentativa é dada por",
     "alternatives": {
-      "a": "1/25 × 1/25 × 1/25",
-      "b": "24/25 × 1/25 × 1/25",
-      "c": "1/25 × 1/24 × 1/23",
-      "d": "24/25 × 1/24 × 1/25",
-      "e": "24/25 × 23/24 × 1/23"
+      "a": "\\(\\frac{1}{25} \\times \\frac{1}{25} \\times \\frac{1}{25}\\)",
+      "b": "\\(\\frac{24}{25} \\times \\frac{1}{25} \\times \\frac{1}{25}\\)",
+      "c": "\\(\\frac{1}{25} \\times \\frac{1}{24} \\times \\frac{1}{23}\\)",
+      "d": "\\(\\frac{24}{25} \\times \\frac{1}{24} \\times \\frac{1}{25}\\)",
+      "e": "\\(\\frac{24}{25} \\times \\frac{23}{24} \\times \\frac{1}{23}\\)"
     },
     "images": [
       "figuras/q169_2024_fig1.png"
@@ -779,11 +779,11 @@
     "number": 171,
     "text": "Um jardineiro dispõe de k metros lineares de cerca para delimitar uma área de jardim de forma poligonal regular. Ele compara as áreas de jardins com as formas de hexágono regular, quadrado e triângulo equilátero. \n\nO jardineiro escolherá a forma de",
     "alternatives": {
-      "a": "hexágono regular, pois a área do jardim, em metro quadrado, é k²√3/24, que é a maior entre as três formas.",
-      "b": "hexágono regular, pois a área do jardim, em metro quadrado, é 3k²√3/2, que é a maior entre as três formas.",
-      "c": "quadrado, pois a área do jardim, em metro quadrado, é k²/16, que é a maior entre as três formas.",
-      "d": "triângulo equilátero, pois a área do jardim, em metro quadrado, é k²√3/36, que é a maior entre as três formas.",
-      "e": "triângulo equilátero, pois a área do jardim, em metro quadrado, é k²√3/4, que é a maior entre as três formas."
+      "a": "hexágono regular, pois a área do jardim, em metro quadrado, é \\(\\frac{k^2\\sqrt{3}}{24}\\), que é a maior entre as três formas.",
+      "b": "hexágono regular, pois a área do jardim, em metro quadrado, é \\(\\frac{3k^2\\sqrt{3}}{2}\\), que é a maior entre as três formas.",
+      "c": "quadrado, pois a área do jardim, em metro quadrado, é \\(\\frac{k^2}{16}\\), que é a maior entre as três formas.",
+      "d": "triângulo equilátero, pois a área do jardim, em metro quadrado, é \\(\\frac{k^2\\sqrt{3}}{36}\\), que é a maior entre as três formas.",
+      "e": "triângulo equilátero, pois a área do jardim, em metro quadrado, é \\(\\frac{k^2\\sqrt{3}}{4}\\), que é a maior entre as três formas."
     },
     "images": [],
     "tags": [
@@ -797,7 +797,7 @@
   },
   {
     "number": 172,
-    "text": "Um aeroporto disponibiliza o serviço de transporte gratuito entre dois terminais. Dois ônibus partem simultaneamente, de hora em hora, de terminais diferentes, percorrendo todo o trecho, conforme o esquema.\n[Esquema]\nO alcance de cada uma das cinco câmeras é:\n• câmera I: 1/5 do percurso;\n• câmera II: 3/10 do percurso;\n• câmera III: 1/10 do percurso;\n• câmera IV: 1/10 do percurso;\n• câmera V: 3/10 do percurso.\nEm determinado horário, o ônibus A parte do terminal 1 com velocidade constante de 250 m/min; enquanto o ônibus B, que parte do terminal 2, realiza o percurso total com velocidade constante de 150 m/min. Qual câmera registra o momento em que os ônibus A e B se encontram?",
+    "text": "Um aeroporto disponibiliza o serviço de transporte gratuito entre dois terminais. Dois ônibus partem simultaneamente, de hora em hora, de terminais diferentes, percorrendo todo o trecho, conforme o esquema.\n[Esquema]\nO alcance de cada uma das cinco câmeras é:\n• câmera I: \\(\\frac{1}{5}\\) do percurso;\n• câmera II: \\(\\frac{3}{10}\\) do percurso;\n• câmera III: \\(\\frac{1}{10}\\) do percurso;\n• câmera IV: \\(\\frac{1}{10}\\) do percurso;\n• câmera V: \\(\\frac{3}{10}\\) do percurso.\nEm determinado horário, o ônibus A parte do terminal 1 com velocidade constante de 250 m/min; enquanto o ônibus B, que parte do terminal 2, realiza o percurso total com velocidade constante de 150 m/min. Qual câmera registra o momento em que os ônibus A e B se encontram?",
     "alternatives": {
       "a": "I",
       "b": "II",

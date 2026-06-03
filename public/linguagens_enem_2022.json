@@ -244,7 +244,8 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "e",
-    "difficulty": 7
+    "difficulty": 7,
+    "contextId": "enem_2022_linguagens_q6_ctx1"
   },
   {
     "number": 7,
@@ -264,14 +265,16 @@
     "test": "ENEM",
     "area": "linguagens",
     "images": [],
-    "contextId": null,
-    "contextIds": null,
+    "contextIds": [
+      "enem_2022_linguagens_q7_ctx1",
+      "enem_2022_linguagens_q7_ctx2"
+    ],
     "language": null,
     "difficulty": 5
   },
   {
     "number": 8,
-    "text": "[Figura] A ideia é que, em vez de perguntar sobre a aparência das personagens, as questões sejam direcionadas aos feitos delas: ganhou algum Nobel, fez alguma descoberta?",
+    "text": "Ao divulgar a adaptação do jogo para questões relativas a ações e habilidades de mulheres notáveis, o texto busca",
     "alternatives": {
       "a": "contribuir para a formação cidadã dos jogadores.",
       "b": "refutar modelos estereotipados de beleza e elegância.",
@@ -279,9 +282,7 @@
       "d": "exemplificar estratégias de arrecadação financeira pela internet.",
       "e": "desenvolver conhecimentos lúdicos específicos dos tempos atuais."
     },
-    "images": [
-      "figuras/q008_2022_fig1.png"
-    ],
+    "images": [],
     "tags": [
       "análise combinatória",
       "gêneros textuais"
@@ -290,7 +291,8 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "a",
-    "difficulty": 4
+    "difficulty": 4,
+    "contextId": "enem_2022_linguagens_q8_ctx1"
   },
   {
     "number": 9,
@@ -311,7 +313,8 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "a",
-    "difficulty": 5
+    "difficulty": 5,
+    "contextId": "enem_2022_linguagens_q9_ctx1"
   },
   {
     "number": 10,
@@ -332,7 +335,8 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "c",
-    "difficulty": 5
+    "difficulty": 5,
+    "contextId": "enem_2022_linguagens_q10_ctx1"
   },
   {
     "number": 11,
@@ -352,7 +356,8 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "a",
-    "difficulty": 5
+    "difficulty": 5,
+    "contextId": "enem_2022_linguagens_q11_ctx1"
   },
   {
     "number": 12,
@@ -373,11 +378,12 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "b",
-    "difficulty": 6
+    "difficulty": 6,
+    "contextId": "enem_2022_linguagens_q12_ctx1"
   },
   {
     "number": 13,
-    "text": "[Figura] São vários os fatores, internos e externos, que influenciam os hábitos das pessoas no acesso à internet assim como nas práticas culturais realizadas na rede. A utilização das tecnologias de informação e comunicação está diretamente relacionada aos aspectos como conhecimento de seu uso, acesso à linguagem letrada nível de instrução, escolaridade, letramento digital etc Os que detêm tais recursos (os mais escolarizados são os que mais acessam a rede e também os que possuem maior índice de acumulatividade das práticas A análise dos dados nos possibilita dizer que a falta de acesso à rede repete as mesmas adversidades exclusões já verificadas na sociedade brasileira no que se refere a analfabetos, menos escolarizados, negros população indígena e desempregados. Isso significa dizer que a internet, se não produz diretamente a exclusão, certamente a reproduz, tendo em vista que os que mais a acessam são justamente os mais jovens, escolarizados, remunerados, trabalhadores qualificados, homens e brancos.",
+    "text": "Ao analisarem a correlação entre os hábitos e o perfil socioeconômico dos usuários da internet no Brasil, os pesquisadores:",
     "alternatives": {
       "a": "apontam o desenvolvimento econômico como solução para ampliar o uso da rede",
       "b": "questionam a crença de que o acesso à informação é igualitário e democrático",
@@ -385,9 +391,7 @@
       "d": "refutam o vínculo entre níveis de escolaridade e dificuldade de acesso",
       "e": "condicionam a expansão da rede à elaboração de políticas inclusivas"
     },
-    "images": [
-      "figuras/q013_2022_fig1.png"
-    ],
+    "images": [],
     "tags": [
       "comunicação e mídia"
     ],
@@ -395,7 +399,8 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "b",
-    "difficulty": 5
+    "difficulty": 5,
+    "contextId": "enem_2022_linguagens_q13_ctx1"
   },
   {
     "number": 14,
@@ -415,11 +420,15 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "d",
-    "difficulty": 7
+    "difficulty": 7,
+    "contextIds": [
+      "enem_2022_linguagens_q14_ctx1",
+      "enem_2022_linguagens_q14_ctx2"
+    ]
   },
   {
     "number": 15,
-    "text": "[Figura: imagem relacionada à proposta de divulgação de gasto em anúncios] Considerando-se a função social dos posts, essa imagem evidencia a apropriação de outro gênero com o objetivo de",
+    "text": "Considerando-se a função social dos posts, essa imagem evidencia a apropriação de outro gênero com o objetivo de",
     "alternatives": {
       "a": "promover o uso adequado de campanhas publicitárias do governo.",
       "b": "divulgar o projeto sobre transparência da administração pública.",
@@ -427,9 +436,7 @@
       "d": "delegar a gestão de projetos de lei ao contribuinte.",
       "e": "assegurar a fiscalização dos gastos públicos."
     },
-    "images": [
-      "figuras/q015_2022_fig1.png"
-    ],
+    "images": [],
     "tags": [
       "comunicação e mídia",
       "direitos humanos e cidadania"
@@ -438,7 +445,8 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "b",
-    "difficulty": 5
+    "difficulty": 5,
+    "contextId": "enem_2022_linguagens_q15_ctx1"
   },
   {
     "number": 16,
@@ -458,7 +466,8 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "e",
-    "difficulty": 4
+    "difficulty": 4,
+    "contextId": "enem_2022_linguagens_q16_ctx1"
   },
   {
     "number": 17,
@@ -479,7 +488,7 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "b",
-    "contextId": null,
+    "contextId": "enem_2022_linguagens_q17_ctx1",
     "difficulty": 7
   },
   {
