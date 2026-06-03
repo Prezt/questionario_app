@@ -5042,14 +5042,13 @@
   },
   "enem_2022_nature_q91_ctx1": {
     "text": "A figura ilustra esquematicamente um processo de remediação de solos contaminados com tricloroeteno (TCE), um agente desengraxante. Em razão de vazamentos de tanques de estocagem ou de manejos inadequados de resíduos industriais, ele se encontra presente em águas subterrâneas, nas quais forma uma fase líquida densa não aquosa (DNAPL) que se deposita no fundo do aquífero. Essa tecnologia de descontaminação emprega o íon persulfato (S₂O₈²⁻), que é convertido no radical •SO₄⁻ por minerais que contêm Fe(III). O esquema representa de forma simplificada o mecanismo de ação química sobre o TCE e a formação dos produtos de degradação.\n\n[Esquema]",
-    "source": "BERTELLI, T. S.; BASÍLIO, A. O.; PEIXOTO-CABRAL, D. P. Ativação de persulfato: alternativa para remediação de águas subterrâneas e solos contaminados. Química Nova, n. 37, 2014 (adaptado).",
     "images": [
       "figuras/q091_2022_fig1.png"
-    ]
+    ],
+    "reference": "BERTELLI, T. S.; BASÍLIO, A. O.; PEIXOTO-CABRAL, D. P. Ativação de persulfato: alternativa para remediação de águas subterrâneas e solos contaminados. Química Nova, n. 37, 2014 (adaptado)."
   },
   "enem_2022_nature_q93_ctx1": {
     "text": "Em 2017, foi inaugurado, no estado da Bahia, o Parque Solar Lapa, composto por duas usinas (Bom Jesus da Lapa e Lapa) e capaz de gerar cerca de 300 GWh de energia por ano. Considere que cada usina apresente potência igual a 75 MW, com o parque totalizando uma potência instalada de 150 MW. Considere ainda que a irradiância solar média é de 1 500 W/m² e que a eficiência dos painéis é de 20%.",
-    "source": "Parque Solar Lapa entra em operação. Disponível em: www.canalbioenergia.com.br. Acesso em: 9 jun. 2022 (adaptado).",
     "images": [],
     "title": "",
     "subtitle": "",
@@ -5057,36 +5056,36 @@
   },
   "enem_2022_nature_q94_ctx1": {
     "text": "Os riscos apresentados pelos produtos dependem de suas propriedades e da reatividade quando em contato com outras substâncias. Para prevenir os riscos devido à natureza química dos produtos, devemos conhecer a lista de substâncias incompatíveis e de uso cotidiano em fábricas, hospitais e laboratórios, a fim de observar cuidados na estocagem, manipulação e descarte. O quadro elenca algumas dessas incompatibilidades, que podem levar à ocorrência de acidentes.\n\n|Substância|Incompatibilidade|Riscos associados|\n|-|-|-|\n|Ácidos minerais fortes concentrados|Bases fortes; Cianetos; Hipoclorito de sódio|Reação enérgica, explosão, produção de oxidante forte e produto tóxico|\n|Ácido nítrico concentrado|Matéria orgânica|Reação enérgica, explosão e produto tóxico|\n\nConsidere que houve o descarte indevido de dois conjuntos de substâncias:\n\n(1) ácido clorídrico concentrado com cianeto de potássio;\n(2) ácido nítrico concentrado com sacarose.",
-    "source": "Disponível em: www.fiocruz.br. Acesso em: 6 dez. 2017 (adaptado).",
-    "images": [
-      "figuras/q094_2022_fig1.png"
-    ]
+    "images": [],
+    "title": "",
+    "subtitle": "",
+    "reference": "Disponível em: www.fiocruz.br. Acesso em: 6 dez. 2017 (adaptado)."
   },
   "enem_2022_nature_q95_ctx1": {
     "text": "O físico Hans C. Oersted observou que um fio transportando corrente elétrica produz um campo magnético. A presença do campo magnético foi verificada ao aproximar uma bússola de um fio conduzindo corrente elétrica. A figura ilustra um fio percorrido por uma corrente elétrica <b>i</b>, constante e com sentido para cima. Os pontos <b>A</b>, <b>B</b> e <b>C</b> estão num plano transversal e equidistantes do fio. Em cada ponto foi colocada uma bússola.\n\n[Figura]",
-    "source": "",
     "images": [
       "figuras/q095_2022_fig1.png"
-    ]
+    ],
+    "reference": ""
   },
   "enem_2022_nature_q96_ctx1": {
     "text": "O quadro mostra valores de corrente elétrica e seus efeitos sobre o corpo humano.\n\n|Corrente elétrica|Dano físico|\n|-|-|\n|Até 10 mA|Dor e contração muscular|\n|De 10 mA até 20 mA|Aumento das contrações musculares|\n|De 20 mA até 100 mA|Parada respiratória|\n|De 100 mA até 3 A|Fibrilação ventricular|\n|Acima de 3 A|Parada cardíaca e queimaduras|\n\nA corrente elétrica que percorrerá o corpo de um indivíduo depende da tensão aplicada e da resistência elétrica média do corpo humano. Esse último fator está intimamente relacionado com a umidade da pele, que seca apresenta resistência elétrica da ordem de 500 kΩ, mas, se molhada, pode chegar a apenas 1 kΩ.\n\nApesar de incomum, é possível sofrer um acidente utilizando baterias de 12 V. Considere que um indivíduo com a pele molhada sofreu uma parada respiratória ao tocar simultaneamente nos pontos A e B de uma associação de duas dessas baterias.",
-    "source": "DURAN, J. E. R. Biofísica: fundamentos e aplicações. São Paulo: Pearson Prentice Hall, 2003 (adaptado).",
-    "images": []
+    "images": [],
+    "reference": "DURAN, J. E. R. Biofísica: fundamentos e aplicações. São Paulo: Pearson Prentice Hall, 2003 (adaptado)."
   },
   "enem_2022_nature_q97_ctx1": {
     "text": "O urânio é empregado como fonte de energia em reatores nucleares. Para tanto, o seu mineral deve ser refinado, convertido a hexafluoreto de urânio e posteriormente enriquecido, para aumentar de 0,7% a 3,5% a abundância de um isótopo específico — o urânio-235. Uma das formas de enriquecimento utiliza a pequena diferença de massa entre os hexafluoretos de urânio-235 e de urânio-238 para separá-los por efusão, precedida pela vaporização. Esses valores deveriam efundir repetidamente milhares de vezes através de barreiras porosas formadas por telas com grande número de pequenos orifícios. No entanto, devido à complexidade e à grande quantidade de energia envolvida, cientistas e engenheiros continuam a pesquisar procedimentos alternativos de enriquecimento.",
-    "source": "ATKINS, P.; JONES, L. Princípios de química: questionando a vida moderna e o meio ambiente. Porto Alegre: Bookman, 2006 (adaptado).",
-    "images": []
+    "images": [],
+    "reference": "ATKINS, P.; JONES, L. Princípios de química: questionando a vida moderna e o meio ambiente. Porto Alegre: Bookman, 2006 (adaptado)."
   },
   "enem_2022_nature_q98_ctx1": {
     "text": "A Agência Nacional de Vigilância Sanitária (Anvisa) aprovou um produto de terapia gênica no país, indicado para o tratamento da distrofia hereditária da retina. O procedimento é recomendado para crianças acima de 12 meses e adultos com perda de visão causada pela mutação do gene humano RPE65. O produto, elaborado por engenharia genética, é composto por um vírus, no qual foi inserida uma cópia do gene normal humano RPE65 para corrigir o funcionamento das células da retina.",
-    "source": "ANVISA. Disponível em: www.gov.br/anvisa. Acesso em: 8 dez. 2021 (adaptado).",
-    "images": []
+    "images": [],
+    "reference": "ANVISA. Disponível em: www.gov.br/anvisa. Acesso em: 8 dez. 2021 (adaptado)."
   },
   "enem_2022_nature_q99_ctx1": {
     "text": "A extinção de espécies é uma ameaça real que afeta diversas regiões do país. A introdução de espécies exóticas pode ser considerada um fator maximizador desse processo. A jaqueira (<i>Artocarpus heterophyllus</i>), por exemplo, é uma árvore originária da Índia e de regiões do Sudeste Asiático que foi introduzida ainda na era colonial e se adaptou muito bem em praticamente todo o território nacional.",
-    "source": "",
-    "images": []
+    "images": [],
+    "reference": ""
   }
 }
