@@ -56,7 +56,7 @@ REVISAO:
     [x] ciencias
     [x] matematica
  [] ENEM 2022
-    [] linguagens
+    [x] linguagens
     [] humanas
     [] ciencias
     [] matematica
