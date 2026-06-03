@@ -6,8 +6,8 @@
       "a": "afeito à devoção ao aceitar destinos sacralizados.",
       "b": "acostumado à pobreza ao admitir acasos naturais.",
       "c": "habituado ao solo ao conhecer terrenos cultiváveis.",
-      "d": "íntimo à Caatinga ao interpretar condições ambientais",
-      "e": "próximo à vegetação ao identificar espécies arbustivas"
+      "d": "íntimo à Caatinga ao interpretar condições ambientais.",
+      "e": "próximo à vegetação ao identificar espécies arbustivas."
     },
     "images": [],
     "tags": [
@@ -18,7 +18,8 @@
     "test": "ENEM",
     "area": "humanas",
     "answer": "d",
-    "difficulty": 5
+    "difficulty": 5,
+    "contextId": "enem_2022_humanas_q46_ctx1"
   },
   {
     "number": 47,
@@ -38,11 +39,12 @@
     "test": "ENEM",
     "area": "humanas",
     "answer": "e",
-    "difficulty": 5
+    "difficulty": 5,
+    "contextId": "enem_2022_humanas_q47_ctx1"
   },
   {
     "number": 48,
-    "text": "O texto expõe uma característica da sociedade brasileira, que é o(a):",
+    "text": "O texto, que guarda a grafia original da autora, expõe uma característica da sociedade brasileira, que é o(a)",
     "alternatives": {
       "a": "Racismo estrutural.",
       "b": "Desemprego latente.",
@@ -58,11 +60,12 @@
     "test": "ENEM",
     "area": "humanas",
     "answer": "a",
-    "difficulty": 4
+    "difficulty": 4,
+    "contextId": "enem_2022_humanas_q48_ctx1"
   },
   {
     "number": 49,
-    "text": "A intensificação da ocupação urbana demonstrada afeta e forma imediata o(a)",
+    "text": "A intensificação da ocupação urbana demonstrada afeta de forma imediata o(a)",
     "alternatives": {
       "a": "nível altimétrico.",
       "b": "ciclo hidrológico.",
@@ -70,7 +73,12 @@
       "d": "tectônica de placas.",
       "e": "estrutura das rochas."
     },
-    "images": [],
+    "images": [
+      {
+        "file": "figuras/q049_2022_fig1.png",
+        "description": "Esquema mostrando a intensificação da ocupação urbana e seus efeitos na impermeabilização do solo"
+      }
+    ],
     "tags": [
       "geografia física e geologia",
       "geografia humana e urbana"
@@ -79,7 +87,8 @@
     "test": "ENEM",
     "area": "humanas",
     "answer": "b",
-    "difficulty": 5
+    "difficulty": 5,
+    "contextId": "enem_2022_humanas_q49_ctx1"
   },
   {
     "number": 50,
@@ -99,7 +108,8 @@
     "test": "ENEM",
     "area": "humanas",
     "answer": "e",
-    "difficulty": 6
+    "difficulty": 6,
+    "contextId": "enem_2022_humanas_q50_ctx1"
   },
   {
     "number": 51,
@@ -119,11 +129,12 @@
     "test": "ENEM",
     "area": "humanas",
     "answer": "e",
-    "difficulty": 5
+    "difficulty": 5,
+    "contextId": "enem_2022_humanas_q51_ctx1"
   },
   {
     "number": 52,
-    "text": "A letra da canção valoriza uma dimensão do espaço rural brasileiro em sua relação com a cidade ao ressaltar sua unção de",
+    "text": "A letra da canção valoriza uma dimensão do espaço rural brasileiro em sua relação com a cidade ao ressaltar sua função de",
     "alternatives": {
       "a": "fornecer a mão de obra qualificada.",
       "b": "incorporar a inovação tecnológica.",
@@ -139,7 +150,8 @@
     "test": "ENEM",
     "area": "humanas",
     "answer": "d",
-    "difficulty": 5
+    "difficulty": 5,
+    "contextId": "enem_2022_humanas_q52_ctx1"
   },
   {
     "number": 53,
@@ -159,9 +171,7 @@
     "test": "ENEM",
     "area": "humanas",
     "images": [],
-    "contextId": null,
-    "contextIds": null,
-    "language": null,
+    "contextId": "enem_2022_humanas_q53_ctx1",
     "difficulty": 6
   },
   {
@@ -189,7 +199,7 @@
   },
   {
     "number": 55,
-    "text": "As atividades agrícolas, desenvolvidas na região mencionada, intensificam o problema ambiental exposto a",
+    "text": "As atividades agrícolas, desenvolvidas na região mencionada, intensificam o problema ambiental exposto ao",
     "alternatives": {
       "a": "realizar florestamentos de pinus, desrespeitando a prática do pousio.",
       "b": "utilizar sistemas de irrigação, desprezando uma drenagem adequada.",
@@ -205,7 +215,8 @@
     "test": "ENEM",
     "area": "humanas",
     "answer": "b",
-    "difficulty": 5
+    "difficulty": 5,
+    "contextId": "enem_2022_humanas_q55_ctx1"
   },
   {
     "number": 56,
@@ -233,7 +244,7 @@
   },
   {
     "number": 57,
-    "text": "O leproso é visto dentro de uma prática da rejeição do exílio-cerca; deixa-se que se perca lá dentro numa massa que não tem muita importância. Os pestilentos são considerados num policiamento tático meticuloso onde as diferenciações individuais são os efeitos limitantes de um poder que se multiplica, se articula e se subdivide. O grande fechamento por um lado; o bom treinamento por outro. A lepra e sua divisão; peste e seus recortes. Uma é marcada; a outra, analisada e repartida. O exílio do leproso e a prisão da peste não trazem consigo o mesmo sonho político.",
+    "text": "Os modelos autoritários descritos no texto apontam para um sistema de controle que se baseia no(a):",
     "alternatives": {
       "a": "Formação de sociedade disciplinar",
       "b": "Flexibilização do regramento social",
@@ -249,17 +260,18 @@
     "test": "ENEM",
     "area": "humanas",
     "answer": "a",
-    "difficulty": 8
+    "difficulty": 8,
+    "contextId": "enem_2022_humanas_q57_ctx1"
   },
   {
     "number": 58,
-    "text": "As práticas religiosas mencionadas nos textos estã associadas, respectivamente, à:",
+    "text": "As práticas religiosas mencionadas nos textos estão associadas, respectivamente, à:",
     "alternatives": {
-      "a": "Delimitação de paisagens urbanas e abandono d componentes espiritualistas.",
-      "b": "Demarcação de patrimônios afetivos e apropriaçã de elementos judaizantes.",
-      "c": "Expansão de fronteiras regionais e subjetivação d cristianismo medieval.",
-      "d": "Circunscrição de bens simbólicos e admissão d cerimônias ecumênicas.",
-      "e": "Criação de lugares místicos e experiências d catolicismo popular."
+      "a": "Delimitação de paisagens urbanas e abandono de componentes espiritualistas.",
+      "b": "Demarcação de patrimônios afetivos e apropriação de elementos judaizantes.",
+      "c": "Expansão de fronteiras regionais e subjetivação do cristianismo medieval.",
+      "d": "Circunscrição de bens simbólicos e admissão de cerimônias ecumênicas.",
+      "e": "Criação de lugares místicos e experiências do catolicismo popular."
     },
     "images": [],
     "tags": [
@@ -269,11 +281,15 @@
     "test": "ENEM",
     "area": "humanas",
     "answer": "e",
-    "difficulty": 7
+    "difficulty": 7,
+    "contextIds": [
+      "enem_2022_humanas_q58_ctx1",
+      "enem_2022_humanas_q58_ctx2"
+    ]
   },
   {
     "number": 59,
-    "text": "Em 2003, teve início o Programa de Aquisição de Alimentos e, com ele, várias mudanças na perspectiva dos mercados institucionais. Trata-se do primeiro programa e compras públicas com uma orientação exclusiva para a agricultura familiar, articulando-a explicitamente com a segurança alimentar e nutricional.",
+    "text": "A ação governamental descrita constitui-se uma importante conquista para os pequenos produtores em virtude da:",
     "alternatives": {
       "a": "Inovação tecnológica",
       "b": "Reestruturação fundiária",
@@ -290,7 +306,8 @@
     "test": "ENEM",
     "area": "humanas",
     "answer": "c",
-    "difficulty": 4
+    "difficulty": 4,
+    "contextId": "enem_2022_humanas_q59_ctx1"
   },
   {
     "number": 60,
@@ -310,11 +327,12 @@
     "test": "ENEM",
     "area": "humanas",
     "answer": "b",
-    "difficulty": 5
+    "difficulty": 5,
+    "contextId": "enem_2022_humanas_q60_ctx1"
   },
   {
     "number": 61,
-    "text": "A consequência da mudança tecnológica apresentada neste texto é a",
+    "text": "A consequência da mudança tecnológica apresentada no texto é a",
     "alternatives": {
       "a": "proteção da economia nacional.",
       "b": "valorização da cultura tradicional.",
@@ -330,7 +348,8 @@
     "test": "ENEM",
     "area": "humanas",
     "answer": "e",
-    "difficulty": 5
+    "difficulty": 5,
+    "contextId": "enem_2022_humanas_q61_ctx1"
   },
   {
     "number": 62,
@@ -351,11 +370,12 @@
     "test": "ENEM",
     "area": "humanas",
     "answer": "c",
-    "difficulty": 6
+    "difficulty": 6,
+    "contextId": "enem_2022_humanas_q62_ctx1"
   },
   {
     "number": 63,
-    "text": "Na conjuntura histórica destacada no texto, o dever de gir em face da situação de crise apresentada pertencia à urisdição",
+    "text": "Na conjuntura histórica destacada no texto, o dever de agir em face da situação de crise apresentada pertencia à jurisdição",
     "alternatives": {
       "a": "da nobreza, proveniente da obrigação de proteção ao campesinato livre.",
       "b": "da realeza, decorrente do conceito de governo subjacente à monarquia cristã.",
@@ -371,11 +391,12 @@
     "test": "ENEM",
     "area": "humanas",
     "answer": "b",
-    "difficulty": 7
+    "difficulty": 7,
+    "contextId": "enem_2022_humanas_q63_ctx1"
   },
   {
     "number": 64,
-    "text": "A interação dinâmica entre as forças naturais citadas avorece a ocupação do espaço geográfico, na medida que provoca a formação de",
+    "text": "A interação dinâmica entre as forças naturais citadas favorece a ocupação do espaço geográfico, na medida em que provoca a formação de",
     "alternatives": {
       "a": "solos vulcânicos.",
       "b": "dorsais oceânicas.",
@@ -391,11 +412,12 @@
     "test": "ENEM",
     "area": "humanas",
     "answer": "a",
-    "difficulty": 6
+    "difficulty": 6,
+    "contextId": "enem_2022_humanas_q64_ctx1"
   },
   {
     "number": 65,
-    "text": "O ápice da ilustração se traduz por uma conduta social aracterizada pela",
+    "text": "O ápice da ilustração se traduz por uma conduta social caracterizada pela",
     "alternatives": {
       "a": "cultura do cancelamento.",
       "b": "prática do feminicídio.",
@@ -403,7 +425,12 @@
       "d": "ação involuntária.",
       "e": "defesa da honra."
     },
-    "images": [],
+    "images": [
+      {
+        "file": "figuras/q065_2022_fig1.png",
+        "description": "Esquema espiral mostrando o ciclo da violência doméstica: tensão, agressão e lua de mel, escalando até a morte"
+      }
+    ],
     "tags": [
       "ética e política"
     ],
@@ -411,7 +438,8 @@
     "test": "ENEM",
     "area": "humanas",
     "answer": "b",
-    "difficulty": 5
+    "difficulty": 5,
+    "contextId": "enem_2022_humanas_q65_ctx1"
   },
   {
     "number": 66,
@@ -456,11 +484,12 @@
     "test": "ENEM",
     "area": "humanas",
     "answer": "d",
-    "difficulty": 5
+    "difficulty": 5,
+    "contextId": "enem_2022_humanas_q67_ctx1"
   },
   {
     "number": 68,
-    "text": "As preocupações do governo estadunidense expressas o texto e no mapa evidenciam uma estratégia para",
+    "text": "As preocupações do governo estadunidense expressas no texto e no mapa evidenciam uma estratégia para",
     "alternatives": {
       "a": "compartilhamento de inovações tecnológicas.",
       "b": "promoção de independência financeira.",
@@ -485,7 +514,7 @@
   },
   {
     "number": 69,
-    "text": "Considerando a dinâmica geopolítica subjacente ao texto, justificativa utilizada por Vladimir Putin, em 2014, para nexação dessa península apela para o argumento de que",
+    "text": "Considerando a dinâmica geopolítica subjacente ao texto, a justificativa utilizada por Vladimir Putin, em 2014, para a anexação dessa península apela para o argumento de que",
     "alternatives": {
       "a": "as populações com idioma comum devem estar submetidas à mesma autoridade estatal.",
       "b": "o imperialismo soviético havia se acomodado às pretensões das potências vizinhas.",
@@ -501,7 +530,8 @@
     "test": "ENEM",
     "area": "humanas",
     "answer": "a",
-    "difficulty": 7
+    "difficulty": 7,
+    "contextId": "enem_2022_humanas_q69_ctx1"
   },
   {
     "number": 70,
@@ -513,7 +543,12 @@
       "d": "Profissão e sexualidade.",
       "e": "Escolaridade e fecundidade."
     },
-    "images": [],
+    "images": [
+      {
+        "file": "figuras/q070_2022_fig1.png",
+        "description": "Gráfico de barras mostrando proporção de pessoas abaixo da linha de pobreza por arranjo domiciliar no Brasil em 2017"
+      }
+    ],
     "tags": [
       "sociologia e estrutura social"
     ],
@@ -521,7 +556,11 @@
     "test": "ENEM",
     "area": "humanas",
     "answer": "a",
-    "difficulty": 6
+    "difficulty": 6,
+    "contextIds": [
+      "enem_2022_humanas_q70_ctx1",
+      "enem_2022_humanas_q70_ctx2"
+    ]
   },
   {
     "number": 71,
@@ -541,7 +580,8 @@
     "test": "ENEM",
     "area": "humanas",
     "answer": "a",
-    "difficulty": 5
+    "difficulty": 5,
+    "contextId": "enem_2022_humanas_q71_ctx1"
   },
   {
     "number": 72,
@@ -561,14 +601,12 @@
     "test": "ENEM",
     "area": "humanas",
     "images": [],
-    "contextId": null,
-    "contextIds": null,
-    "language": null,
+    "contextId": "enem_2022_humanas_q72_ctx1",
     "difficulty": 5
   },
   {
     "number": 73,
-    "text": "Com base no texto, a fixação dessa data comemorativa nha por objetivo",
+    "text": "Com base no texto, a fixação dessa data comemorativa tinha por objetivo",
     "alternatives": {
       "a": "valorizar um sentimento burguês.",
       "b": "afirmar uma identidade coletiva.",
@@ -584,11 +622,12 @@
     "test": "ENEM",
     "area": "humanas",
     "answer": "b",
-    "difficulty": 6
+    "difficulty": 6,
+    "contextId": "enem_2022_humanas_q73_ctx1"
   },
   {
     "number": 74,
-    "text": "[Figura: PEREIRA, E. B. et al. <b>Atlas brasileiro de energia solar</b>. Sao José dos Campos, Inpe, 2006.] \nUma característica regional que justifica o maior potencial anual médio para o aproveitamento de energia solar é a reduzida [Figura]",
+    "text": "Uma característica regional que justifica o maior potencial anual médio para o aproveitamento de energia solar é a reduzida",
     "alternatives": {
       "a": "declividade do relevo.",
       "b": "extensão longitudinal.",
@@ -597,7 +636,10 @@
       "e": "influência da continentalidade."
     },
     "images": [
-      "figuras/q074_2022_fig1.png"
+      {
+        "file": "figuras/q074_2022_fig1.png",
+        "description": "Mapa do Brasil mostrando radiação solar global horizontal média anual"
+      }
     ],
     "tags": [
       "meio ambiente e sustentabilidade"
@@ -606,17 +648,18 @@
     "test": "ENEM",
     "area": "humanas",
     "answer": "c",
-    "difficulty": 5
+    "difficulty": 5,
+    "contextId": "enem_2022_humanas_q74_ctx1"
   },
   {
     "number": 75,
-    "text": "O povo Kambeba é o povo das águas. Nessa gota estavam duas gotículas: o homem e a mulher. Por essa narrativa e cosmologia indígena de que nós somos o povo das águas é que o rio nos tem fundamental importância. Rios amazônicos influenciam no agro e em reservatórios do Sudeste.",
+    "text": "Pelo descrito no texto, o povo Kambeba tem o rio como um(a)",
     "alternatives": {
-      "a": "objeto tombado e museográfico",
-      "b": "herança religiosa e sacralizada",
-      "c": "cenário bucólico e paisagístico",
-      "d": "riqueza individual e efêmera",
-      "e": "patrimônio cultural e afetivo"
+      "a": "objeto tombado e museográfico.",
+      "b": "herança religiosa e sacralizada.",
+      "c": "cenário bucólico e paisagístico.",
+      "d": "riqueza individual e efêmera.",
+      "e": "patrimônio cultural e afetivo."
     },
     "images": [],
     "tags": [
@@ -626,11 +669,12 @@
     "test": "ENEM",
     "area": "humanas",
     "answer": "e",
-    "difficulty": 3
+    "difficulty": 3,
+    "contextId": "enem_2022_humanas_q75_ctx1"
   },
   {
     "number": 76,
-    "text": "Na construção do empreendimento descrito, destaca-se presença de",
+    "text": "Na construção do empreendimento descrito, destaca-se a presença de",
     "alternatives": {
       "a": "engenheiros na execução de canais fluviais.",
       "b": "coronéis na ampliação de antigas fazendas.",
@@ -669,11 +713,12 @@
     "test": "ENEM",
     "area": "humanas",
     "answer": "a",
-    "difficulty": 7
+    "difficulty": 7,
+    "contextId": "enem_2022_humanas_q77_ctx1"
   },
   {
     "number": 78,
-    "text": "Considerando-se que a distância entre o local onde os destroços do avião foram avistados e a cidade de Perth é de 2 cm, a escala aproximada dessa representação cartográfica é: á",
+    "text": "Considerando-se que a distância entre o local onde os destroços do avião foram avistados e a cidade de Perth é de 2 cm, a escala aproximada dessa representação cartográfica é:",
     "alternatives": {
       "a": "1 : 12 500",
       "b": "1 : 125 000",
@@ -696,7 +741,7 @@
   },
   {
     "number": 79,
-    "text": "Ao descrever-se como patrimônio museológico, o objeto abordado no texto associa a sua história às...",
+    "text": "Ao descrever-se como patrimônio museológico, o objeto abordado no texto associa a sua história às",
     "alternatives": {
       "a": "habilidades artísticas e culturais dos sujeitos.",
       "b": "vocações religiosas e pedagógicas dos mestres.",
@@ -712,11 +757,12 @@
     "test": "ENEM",
     "area": "humanas",
     "answer": "a",
-    "difficulty": 5
+    "difficulty": 5,
+    "contextId": "enem_2022_humanas_q79_ctx1"
   },
   {
     "number": 80,
-    "text": "Os vínculos entre os fenômenos indicados no trecho oram fortalecidos pelo surgimento de uma categoria de ensadores, a saber:",
+    "text": "Os vínculos entre os fenômenos indicados no trecho foram fortalecidos pelo surgimento de uma categoria de pensadores, a saber:",
     "alternatives": {
       "a": "Os epicuristas, envolvidos com o ideal de vida feliz.",
       "b": "Os estoicos, dedicados à superação dos infortúnios.",
@@ -755,7 +801,8 @@
     "test": "ENEM",
     "area": "humanas",
     "answer": "d",
-    "difficulty": 6
+    "difficulty": 6,
+    "contextId": "enem_2022_humanas_q81_ctx1"
   },
   {
     "number": 82,
@@ -782,7 +829,7 @@
   },
   {
     "number": 83,
-    "text": "Em situações como a apresentada no texto, as pessoas nascem já se encontram na condição sociopolítica de",
+    "text": "Em situações como a apresentada no texto, as pessoas que nascem já se encontram na condição sociopolítica de",
     "alternatives": {
       "a": "exiladas.",
       "b": "apátridas.",
@@ -799,7 +846,8 @@
     "test": "ENEM",
     "area": "humanas",
     "answer": "b",
-    "difficulty": 4
+    "difficulty": 4,
+    "contextId": "enem_2022_humanas_q83_ctx1"
   },
   {
     "number": 84,
@@ -844,7 +892,11 @@
     "test": "ENEM",
     "area": "humanas",
     "answer": "d",
-    "difficulty": 6
+    "difficulty": 6,
+    "contextIds": [
+      "enem_2022_humanas_q85_ctx1",
+      "enem_2022_humanas_q85_ctx2"
+    ]
   },
   {
     "number": 86,
@@ -864,11 +916,12 @@
     "test": "ENEM",
     "area": "humanas",
     "answer": "c",
-    "difficulty": 7
+    "difficulty": 7,
+    "contextId": "enem_2022_humanas_q86_ctx1"
   },
   {
     "number": 87,
-    "text": "Macrocefalia urbana pode ser entendida como massiva concentração das atividades econômicas em algumas metrópoles que propicia o desencadeament de processos descompassados: redirecionamento convergência de fluxos migratórios, déficit no númer de empregos, ocupação desordenada de determinada regiões da cidade e estigmatização de estratos sociais que comprometem substancialmente a segurança públic urbana. O processo de concentração espacial apresentado foi estimulado por qual fator geográfico?",
+    "text": "O processo de concentração espacial apresentado foi estimulado por qual fator geográfico?",
     "alternatives": {
       "a": "Limitação da área ocupada",
       "b": "Êxodo da população do campo",
@@ -884,7 +937,8 @@
     "test": "ENEM",
     "area": "humanas",
     "answer": "b",
-    "difficulty": 3
+    "difficulty": 3,
+    "contextId": "enem_2022_humanas_q87_ctx1"
   },
   {
     "number": 88,
@@ -904,7 +958,8 @@
     "test": "ENEM",
     "area": "humanas",
     "answer": "e",
-    "difficulty": 5
+    "difficulty": 5,
+    "contextId": "enem_2022_humanas_q88_ctx1"
   },
   {
     "number": 89,
@@ -924,7 +979,8 @@
     "test": "ENEM",
     "area": "humanas",
     "answer": "c",
-    "difficulty": 3
+    "difficulty": 3,
+    "contextId": "enem_2022_humanas_q89_ctx1"
   },
   {
     "number": 90,
@@ -945,6 +1001,7 @@
     "test": "ENEM",
     "area": "humanas",
     "answer": "a",
-    "difficulty": 3
+    "difficulty": 3,
+    "contextId": "enem_2022_humanas_q90_ctx1"
   }
 ]
