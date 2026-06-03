@@ -510,7 +510,8 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "a",
-    "difficulty": 7
+    "difficulty": 7,
+    "contextId": "enem_2022_linguagens_q18_ctx1"
   },
   {
     "number": 19,
@@ -530,7 +531,8 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "c",
-    "difficulty": 3
+    "difficulty": 3,
+    "contextId": "enem_2022_linguagens_q19_ctx1"
   },
   {
     "number": 20,
@@ -551,17 +553,18 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "c",
-    "difficulty": 5
+    "difficulty": 5,
+    "contextId": "enem_2022_linguagens_q20_ctx1"
   },
   {
     "number": 21,
-    "text": "— Admira-me —, disse uma senhora de sentimento sinceramente abolicionistas; faz-me até pasmar com se possa sentir, e expressar sentimentos escravocratas no presente século, no século dezenove! A moral religiosa e a moral cívica aí se erguem, e falam bem alto esmagando a hidra que envenena a família no mais sagrado santuário seu, e desmoraliza, e avilta a nação inteira! Levantai os olhos ao Gólgota, ou percorrei-os em torno da sociedade, e dizei-me: — Para que se deu em sacrifício o Homem Deus que ali exalou seu derradeiro alento? Ah! Então não é verdade que seu sangue era o resgate do homem! É então uma mentira abominável ter esse sangue comprado a liberdade!? E depois, olhai a sociedade... Não vedes o abutre que a corrói constantemente!… Não sentis a desmoralização que a enerva, o cancro que a destrói? Por qualquer modo que encaremos a escravidão, ela é, e será sempre um grande mal. Dela a decadência do comércio; porque o comércio e a lavoura caminham das mãos dadas, e o escravo não pode fazer florescer a lavoura porque o seu trabalho é forçado.",
+    "text": "Inscrito na estética romântica da literatura brasileira, o conto descortina aspectos da realidade nacional no século XIX ao",
     "alternatives": {
-      "a": "revelar a imposição de crenças religiosas a pessoa escravizadas",
-      "b": "apontar a hipocrisia do discurso conservador na defesa da escravidão",
-      "c": "sugerir práticas de violência física e moral em nome do progresso material",
-      "d": "relacionar o declínio da produção agrícola comercial a questões raciais",
-      "e": "ironizar o comportamento dos proprietários da terra na exploração do trabalho"
+      "a": "revelar a imposição de crenças religiosas a pessoas escravizadas.",
+      "b": "apontar a hipocrisia do discurso conservador na defesa da escravidão.",
+      "c": "sugerir práticas de violência física e moral em nome do progresso material.",
+      "d": "relacionar o declínio da produção agrícola comercial a questões raciais.",
+      "e": "ironizar o comportamento dos proprietários da terra na exploração do trabalho."
     },
     "images": [],
     "tags": [
@@ -572,7 +575,8 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "b",
-    "difficulty": 7
+    "difficulty": 7,
+    "contextId": "enem_2022_linguagens_q21_ctx1"
   },
   {
     "number": 22,
@@ -593,7 +597,8 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "e",
-    "difficulty": 4
+    "difficulty": 4,
+    "contextIds": ["enem_2022_linguagens_q22_ctx1", "enem_2022_linguagens_q22_ctx2"]
   },
   {
     "number": 23,
@@ -614,7 +619,8 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "e",
-    "difficulty": 7
+    "difficulty": 7,
+    "contextId": "enem_2022_linguagens_q23_ctx1"
   },
   {
     "number": 24,
@@ -624,7 +630,7 @@
       "b": "valorização da inteligência do falante.",
       "c": "falar difícil para demonstrar inteligência.",
       "d": "coesão e da coerência em documentos jurídicos.",
-      "e": "adequação da linguagem à situação de comunicação"
+      "e": "adequação da linguagem à situação de comunicação."
     },
     "images": [],
     "tags": [
@@ -635,7 +641,8 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "e",
-    "difficulty": 4
+    "difficulty": 4,
+    "contextId": "enem_2022_linguagens_q24_ctx1"
   },
   {
     "number": 25,
@@ -656,7 +663,8 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "c",
-    "difficulty": 3
+    "difficulty": 3,
+    "contextId": "enem_2022_linguagens_q25_ctx1"
   },
   {
     "number": 26,
@@ -677,11 +685,12 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "c",
-    "difficulty": 7
+    "difficulty": 7,
+    "contextId": "enem_2022_linguagens_q26_ctx1"
   },
   {
     "number": 27,
-    "text": "A articulação entre os elementos verbais e os não verbais no texto tem como propósito desencadear a",
+    "text": "A articulação entre os elementos verbais e os não verbais do texto tem como propósito desencadear a",
     "alternatives": {
       "a": "identificação de distinções entre mulheres e homens.",
       "b": "revisão de representações estereotipadas de gênero.",
@@ -697,11 +706,12 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "b",
-    "difficulty": 5
+    "difficulty": 5,
+    "contextId": "enem_2022_linguagens_q27_ctx1"
   },
   {
     "number": 28,
-    "text": "[Figura] O movimento de recuperação da língua patxôhã assume um caráter identitário peculiar na medida em que",
+    "text": "O movimento de recuperação da língua patxôhã assume um caráter identitário peculiar na medida em que",
     "alternatives": {
       "a": "denuncia o processo de perseguição histórica sofrida pelos povos indígenas.",
       "b": "conjuga o ato de resistência étnica à preservação da memória cultural.",
@@ -709,9 +719,7 @@
       "d": "estimula o retorno de povos indígenas a suas terras de origem.",
       "e": "aumenta o número de línguas indígenas faladas no Brasil."
     },
-    "images": [
-      "figuras/q028_2022_fig1.png"
-    ],
+    "images": [],
     "tags": [
       "cultura e identidade",
       "linguística e variação linguística"
@@ -720,14 +728,15 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "b",
-    "difficulty": 5
+    "difficulty": 5,
+    "contextId": "enem_2022_linguagens_q28_ctx1"
   },
   {
     "number": 29,
     "text": "No relato da visita de duas mulheres ricas a uma vidente no Morro do Castelo, a ironia — um dos traços mais representativos da narrativa machadiana — consiste no",
     "alternatives": {
       "a": "modo de vestir dos moradores do morro carioca.",
-      "b": "senso prático em relação às oportunidades de renda",
+      "b": "senso prático em relação às oportunidades de renda.",
       "c": "mistério que cerca as clientes de práticas divinatórias.",
       "d": "misto de singeleza e astúcia dos gestos da personagem.",
       "e": "interesse do narrador pelas figuras femininas ambíguas."
@@ -740,7 +749,8 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "d",
-    "difficulty": 7
+    "difficulty": 7,
+    "contextId": "enem_2022_linguagens_q29_ctx1"
   },
   {
     "number": 30,
@@ -761,7 +771,8 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "c",
-    "difficulty": 7
+    "difficulty": 7,
+    "contextId": "enem_2022_linguagens_q30_ctx1"
   },
   {
     "number": 31,
