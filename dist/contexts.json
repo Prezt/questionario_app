@@ -5048,7 +5048,7 @@
     "reference": "BERTELLI, T. S.; BASÍLIO, A. O.; PEIXOTO-CABRAL, D. P. Ativação de persulfato: alternativa para remediação de águas subterrâneas e solos contaminados. Química Nova, n. 37, 2014 (adaptado)."
   },
   "enem_2022_nature_q93_ctx1": {
-    "text": "Em 2017, foi inaugurado, no estado da Bahia, o Parque Solar Lapa, composto por duas usinas (Bom Jesus da Lapa e Lapa) e capaz de gerar cerca de 300 GWh de energia por ano. Considere que cada usina apresente potência igual a 75 MW, com o parque totalizando uma potência instalada de 150 MW. Considere ainda que a irradiância solar média é de 1 500 W/m² e que a eficiência dos painéis é de 20%.",
+    "text": "Em 2017, foi inaugurado, no estado da Bahia, o Parque Solar Lapa, composto por duas usinas (Bom Jesus da Lapa e Lapa) e capaz de gerar cerca de 300 GWh de energia por ano. Considere que cada usina apresente potência igual a 75 MW, com o parque totalizando uma potência instalada de 150 MW. Considere ainda que a irradiância solar média é de 1 500 \\(\\frac{W}{m^2}\\) e que a eficiência dos painéis é de 20%.",
     "images": [],
     "title": "",
     "subtitle": "",
@@ -5087,5 +5087,167 @@
     "text": "A extinção de espécies é uma ameaça real que afeta diversas regiões do país. A introdução de espécies exóticas pode ser considerada um fator maximizador desse processo. A jaqueira (<i>Artocarpus heterophyllus</i>), por exemplo, é uma árvore originária da Índia e de regiões do Sudeste Asiático que foi introduzida ainda na era colonial e se adaptou muito bem em praticamente todo o território nacional.",
     "images": [],
     "reference": ""
+  },
+  "enem_2022_nature_q101_ctx1": {
+    "title": "",
+    "text": "O etanol é um combustível produzido a partir da fermentação da sacarose presente no caldo de cana-de-açúcar. Um dos fatores que afeta a produção desse álcool é o grau de deterioração da sacarose, que se inicia após o corte, por causa da ação de microrganismos. Foram analisadas cinco amostras de diferentes tipos de cana-de-açúcar e cada uma recebeu um código de identificação. No quadro são apresentados os dados de concentração de sacarose e de microrganismos presentes nessas amostras.\n\n|Amostra de cana-de-açúcar| RB72 | RB84 | RB92 | SP79 | SP80 |\n|-|-|-|-|-|-|\n|Concentração inicial de sacarose (mg L⁻¹)|13,0|16,0|16,0|14,0|17,0|\n|Concentração de microrganismos (mg L⁻¹)|0,7|0,8|0,6|0,5|0,9|",
+    "reference": "Disponível em: www.tioesad.univ.br. Acesso em: 11 ago. 2013 (adaptado).",
+    "images": [],
+    "subtitle": ""
+  },
+  "enem_2022_nature_q107_ctx1": {
+    "title": "",
+    "text": "A biomassa celulósica pode ser utilizada para a produção de etanol de segunda geração. Entretanto, é necessário que os polissacarídeos sejam convertidos em mono e dissacarídeos, processo que pode ser conduzido em meio ácido, conforme mostra o esquema:\n[Esquema]",
+    "reference": "OGEDA, T. L.; PETRI, D. F. S. Química Nova, n. 7, 2010 (adaptado).",
+    "images": [],
+    "subtitle": ""
+  },
+  "enem_2022_nature_q108_ctx1": {
+    "title": "",
+    "text": "O ácido tartárico é o principal ácido do vinho e está diretamente relacionado com sua qualidade. Na avaliação de um vinho branco em produção, uma analista neutralizou uma alíquota de 25,0 mL do vinho com NaOH a 0,10 mol L⁻¹, consumindo um volume igual a 8,0 mL dessa base. A reação para esse processo de titulação é representada pela equação química:\n[Figura]",
+    "reference": "",
+    "images": [],
+    "subtitle": ""
+  },
+  "enem_2022_nature_q110_ctx1": {
+    "title": "",
+    "text": "Desde a proposição da teoria de seleção natural por Darwin, os seres vivos nunca mais foram olhados da mesma forma. No que diz respeito à reprodução de anfíbios anuros, os cientistas já descreveram diferentes padrões reprodutivos, como os exemplificados a seguir.\nEspécie 1 – As fêmeas produzem cerca de 5 000 gametas, que são fecundados na água, em lagoas temporárias de estação chuvosa. Todo o desenvolvimento embrionário, do ovo à metamorfose, ocorre nesse ambiente, independente dos pais.\nEspécie 2 – As fêmeas produzem aproximadamente 200 gametas, que são depositados em poças próximas a corpos-d'água. Os embriões são vigiados pelos machos durante boa parte do seu desenvolvimento.\nEspécie 3 – As fêmeas produzem por volta de 20 gametas, que são fecundados sobre a superfície das folhas de plantas cujos galhos estão dispostos acima da superfície de corpos-d'água e aí se desenvolvem até a eclosão.\nEspécie 4 – As fêmeas produzem poucos gametas que, quando fecundados, são \"abocanhados\" pelos machos. Os embriões se desenvolvem no interior do saco vocal do macho até a metamorfose, quando saem através da boca do pai.",
+    "reference": "",
+    "images": [],
+    "subtitle": ""
+  },
+  "enem_2022_nature_q111_ctx1": {
+    "title": "",
+    "text": "O eixo de rotação da Terra apresenta uma inclinação em relação ao plano de sua órbita em torno do Sol, interferindo na duração do dia e da noite ao longo do ano.\n[Figura]\nUma pessoa instala em sua residência uma placa fotovoltaica, que transforma energia solar em elétrica. Ela monitora a energia total produzida por essa placa em 4 dias do ano, ensolarados e sem nuvens, e lança os resultados no gráfico.\n[Gráfico]",
+    "reference": "Disponível em: www.fisica.ufpr.br. Acesso em: 27 maio 2022 (adaptado).",
+    "images": [],
+    "subtitle": ""
+  },
+  "enem_2022_nature_q113_ctx1": {
+    "title": "",
+    "text": "A nanotecnologia é responsável pelo aprimoramento de diversos materiais, incluindo os que são impactados com a presença de poluentes e da umidade na atmosfera, causadores de corrosão. O processo de corrosão é espontâneo e provoca a deterioração de metais, como o ferro, que, em presença de oxigênio e água, sofre oxidação, conforme ilustra a equação química:\n\n4 Fe (s) + 2 H₂O (l) + 3 O₂ (g) → 2 Fe₂O₃·H₂O (s)\n\nUma forma de garantir a durabilidade da estrutura metálica e a sua resistência à umidade consiste na deposição de filmes finos nanocerâmicos à base de zircônia (ZrO₂) e alumina (Al₂O₃) sobre a superfície do objeto que se deseja proteger.",
+    "reference": "CLEMENTS, D. L. B. et al. Uso de materiais híbridos de nanocompósitos como revestimentos anticorrosivos. Química Nova, n. 5, 2021 (adaptado).",
+    "images": [],
+    "subtitle": ""
+  },
+  "enem_2022_nature_q115_ctx1": {
+    "title": "",
+    "text": "A variação da incidência de radiação solar sobre a superfície da Terra resulta em uma variação de temperatura ao longo de um dia denominada amplitude térmica. Edificações e pavimentações realizadas nas áreas urbanas contribuem para alterar as amplitudes térmicas dessas regiões, em comparação com regiões que mantêm suas características naturais, com presença de vegetação e água, já que o calor específico do concreto é inferior ao da água. Assim, parte da avaliação do impacto ambiental que a presença de concreto proporciona às áreas urbanas consiste em considerar a substituição da área concretada por um mesmo volume de água e comparar as variações de temperatura devido à absorção da radiação solar nas duas situações (concretada e alagada). Desprezando os efeitos da evaporação e considerando que toda a radiação é absorvida, essa avaliação pode ser realizada com os seguintes dados:\n\n|Substância|Densidade \\(\\frac{kg}{m³}\\)|Calor específico \\(\\frac{kJ}{kg·°C}\\)|\n|-|-|-|\n|Água|1 000|4,2|\n|Concreto|2 500|0,8|",
+    "reference": "FONSECA, M. A. B. et al. Mudanças climáticas e ilhas de calor urbanas. São Paulo: Blucher, 2014 (adaptado).",
+    "images": [],
+    "subtitle": ""
+  },
+  "enem_2022_nature_q118_ctx1": {
+    "title": null,
+    "text": "Em 2002, foi publicado um artigo científico que relacionava alterações na produção de hormônios sexuais de sapos machos expostos à atrazina, um herbicida, com o desenvolvimento anômalo de seus caracteres sexuais primários e secundários. Entre os animais sujeitos à contaminação, observaram-se casos de hermafroditismo e desmasculinização da laringe. O estudo em questão comparou a concentração de um hormônio específico no sangue de machos expostos ao agrotóxico com a de outros machos e fêmeas que não o foram (controles). Os resultados podem ser vistos na figura.\n[Gráfico]",
+    "reference": "HAYES, T. B. et al. Hermaphroditic, Demasculinized Frogs After Exposure to the Herbicide Atrazine at Low Ecologically Relevant Doses. Proceedings of the National Academy of Sciences, n. 8, 2002 (adaptado).",
+    "images": []
+  },
+  "enem_2022_nature_q121_ctx1": {
+    "title": "",
+    "text": "Antimicrobianos são substâncias naturais ou sintéticas que têm capacidade de matar ou inibir o crescimento de microrganismos. A tabela apresenta uma lista de antimicrobianos hipotéticos, bem como suas ações e efeitos sobre o metabolismo microbiano.\n\n|Antimicrobiano|Ação|Efeito|\n|-|-|-|\n|1|Une-se aos ribossomos|Impede a síntese proteica|\n|2|Une-se aos microtúbulos|Impede a segregação das cromátides|\n|3|Une-se aos fosfolipídeos da membrana plasmática|Reduz a permeabilidade da membrana plasmática|\n|4|Interfere na síntese de timina|Inibe a síntese de DNA|\n|5|Interfere na síntese de uracila|Impede a síntese de RNA|",
+    "reference": "",
+    "images": [],
+    "subtitle": ""
+  },
+  "enem_2022_nature_q122_ctx1": {
+    "title": "",
+    "text": "O veneno da cascavel pode causar hemorragia com risco de morte a quem é picado pela serpente. No entanto, pesquisadores do Brasil e da Bélgica desenvolveram uma molécula de interesse farmacológico, a PEG-collinein-1, a partir de uma proteína encontrada no veneno dessa cobra, capaz de mediar a coagulação sanguínea. Embora a técnica não seja nova, foi a primeira vez que o método foi usado a partir de uma toxina animal na sua forma recombinante, ou seja, produzida em laboratório por um fungo geneticamente modificado.",
+    "reference": "JULIÃO, G. Técnica semelhante ao veneno de cascavel é premiada por criar fármaco que media a coagulação sanguínea. Disponível em: www.usp.br. Acesso em: 27 out. 2021 (adaptado).",
+    "images": [],
+    "subtitle": ""
+  },
+  "enem_2022_nature_q123_ctx1": {
+    "title": "",
+    "text": "Um Buraco Negro é um corpo celeste que possui uma grande quantidade de matéria concentrada em uma pequena região do espaço, de modo que sua força gravitacional é tão grande que qualquer partícula fica aprisionada em sua superfície, inclusive a luz. O raio dessa região é denominado uma superfície-limite, chamada de horizonte de eventos, da qual nada consegue escapar. Considere que o Sol foi instantaneamente substituído por um Buraco Negro com a mesma massa solar, de modo que o seu horizonte de eventos seja de aproximadamente 3,0 km.",
+    "reference": "SCHUTZ, B. F. On the Gravitational Field of a Mass Point According to Einstein's Theory. Disponível em: arxiv.org. Acesso em: 28 maio 2022 (adaptado).",
+    "images": [],
+    "subtitle": ""
+  },
+  "enem_2022_nature_q124_ctx1": {
+    "title": "",
+    "text": "Durante o ano de 2020, impulsionada pela necessidade de respostas rápidas e eficientes para desinfetar ambientes de possíveis contaminações com o SARS-CoV-2, causador da covid-19, diversas alternativas foram buscadas para os procedimentos de descontaminação de materiais e ambientes. Entre elas, o uso de ozônio em meio aquoso como agente sanitizante para pulverização em humanos e equipamentos de proteção em câmaras ou túneis, higienização de automóveis e de ambientes fechados e descontaminação de trajes. No entanto, pouca atenção foi dada à toxicidade do ozônio, à forma de disponibilização, ao nível de concentração seguro e às precauções necessárias.",
+    "reference": "UMA, M. A. J.; FELIX, E. P.; CARDOSO, A. A. Aplicações e implicações do ozônio na agricultura e no ambiente. Química Nova, n. 2, 2021 (adaptado).",
+    "images": []
+  },
+  "enem_2022_nature_q125_ctx1": {
+    "title": "",
+    "text": "Na figura está representado o mosaicismo em função da inativação aleatória de um dos cromossomos X, que ocorre em todas as mulheres sem alterações patológicas.\n\n[Figura]",
+    "reference": "",
+    "images": [
+      "figuras/q125_2022_fig1.png"
+    ]
+  },
+  "enem_2022_nature_q126_ctx1": {
+    "title": "",
+    "text": "A água bruta coletada de mananciais apresenta alto índice de sólidos suspensos, o que a deixa com um aspecto turvo. Para se obter uma água límpida e potável, ela deve passar por um processo de purificação numa estação de tratamento de água. Nesse processo, as principais etapas são, nesta ordem: coagulação, decantação, filtração, desinfecção e fluoretação.",
+    "reference": "",
+    "images": []
+  },
+  "enem_2022_nature_q127_ctx1": {
+    "title": "",
+    "text": "Os ursos, por não apresentarem uma hibernação verdadeira, acordam por causa da presença de termogenina, uma proteína mitocondrial que impede a chegada dos prótons até a ATP sintetase, gerando calor. Esse calor é importante para aquecer o organismo, permitindo seu despertar.",
+    "reference": "SADAVA, D. et al. Vida: a ciência da biologia. Porto Alegre: Artmed, 2009 (adaptado).",
+    "images": []
+  },
+  "enem_2022_nature_q128_ctx1": {
+    "title": "",
+    "text": "A fim de classificar as melhores rotas em um aplicativo de trânsito, um pesquisador propõe um modelo com base em circuitos elétricos. Nesse modelo, a corrente representa o número de carros que passam por um ponto da pista no intervalo de 1 s. A diferença de potencial (d.d.p.) corresponde à quantidade de energia por carro necessária para o deslocamento de 1 m. De forma análoga à lei de Ohm, cada via é classificada pela sua resistência, sendo a de maior resistência a mais congestionada. O aplicativo mostra as rotas em ordem crescente, ou seja, da rota de menor resistência para a de maior resistência.\n\nComo teste para o sistema, são utilizadas três possíveis vias para uma viagem de A até B, com os valores de d.d.p. e corrente conforme a tabela.\n\n|Rota|d.d.p. \\(\\frac{J}{carro·m}\\)|Corrente \\(\\frac{carro}{s}\\)|\n|-|-|-|\n|1|510|4|\n|2|608|4|\n|3|575|3|",
+    "reference": "",
+    "images": [],
+    "subtitle": ""
+  },
+  "enem_2022_nature_q129_ctx1": {
+    "title": "",
+    "text": "O esquema representa o ciclo do nitrogênio:[Esquema]A chuva ácida interfere no ciclo do nitrogênio, principalmente, por proporcionar uma diminuição do pH do solo e da atmosfera, alterando a concentração dos compostos presentes nesse ciclo.",
+    "reference": "Disponível em: http://www.transtornoglobal.com. Acesso em: 1 ago. 2013 (adaptado).",
+    "images": [
+      "figuras/q129_2022_fig1.png"
+    ],
+    "subtitle": ""
+  },
+  "enem_2022_nature_q130_ctx1": {
+    "title": "",
+    "text": "No processo de captação da luz pelo olho para a formação de imagens estão envolvidas duas estruturas celulares: os cones e os bastonetes. Os cones são sensíveis à energia dos fótons, e os bastonetes, à quantidade de fótons incidentes. A energia dos fótons que compõem os raios luminosos está associada à sua frequência, e a intensidade, ao número de fótons incidentes.",
+    "reference": "",
+    "images": []
+  },
+  "enem_2022_nature_q131_ctx1": {
+    "title": "",
+    "text": "De modo geral, a palavra \"aromático\" invoca associações agradáveis, como cheiro de café fresco ou de um pão doce de canela. Associações similares ocorriam no passado da história da química orgânica, quando os compostos ditos \"aromáticos\" apresentaram um odor agradável e foram isolados de óleos naturais. À medida que as estruturas desses compostos eram elucidadas, foi se descobrindo que vários deles continham uma unidade estrutural específica. Os compostos aromáticos que continham essa unidade estrutural tornaram-se parte de uma grande família, muito mais com base em suas estruturas eletrônicas do que nos seus cheiros, como as substâncias a seguir, encontradas em óleos vegetais.\n\n[Figura]",
+    "reference": "SOLOMONS, T. W. G.; FRYHLE, C. B. Química orgânica. Rio de Janeiro: LTC, 2009 (adaptado).",
+    "images": [
+      "figuras/q131_2022_fig1.png"
+    ]
+  },
+  "enem_2022_nature_q132_ctx1": {
+    "title": "",
+    "text": "Os resultados de um ensaio clínico randomizado na Indonésia apontaram uma redução de 77% dos casos de dengue nas áreas que receberam o mosquito Aedes aegypti infectado com a bactéria Wolbachia. Trata-se da mesma técnica utilizada no Brasil pelo Método Wolbachia, iniciativa conduzida pela Fundação Oswaldo Cruz — Fiocruz. Essa bactéria induz a redução da carga viral no mosquito e, consequentemente, o número de casos de dengue na área, sendo repassada por meio do cruzamento entre os insetos. Como essa bactéria é um organismo intracelular e o vírus também precisa entrar nas células para se reproduzir, ambos necessitam de recursos comuns.",
+    "reference": "COSTA, G. Agência Fiocruz de Notícias. Estudo confirma eficácia do Método Wolbachia para dengue. Disponível em: https://portal.fiocruz.br. Acesso em: 3 jun. 2022 (adaptado).",
+    "images": []
+  },
+  "enem_2022_nature_q133_ctx1": {
+    "title": "",
+    "text": "O protozoário <i>Trypanosoma cruzi</i>, causador da doença de Chagas, pode ser a nova arma da medicina contra o câncer. Pesquisadores brasileiros conseguiram criar uma vacina contra a doença usando uma variação do protozoário incapaz de desencadear a patologia (não patogênico). Para isso, realizaram uma modificação genética criando um T. cruzi capaz de produzir também moléculas fabricadas pelas células tumorais. Quando o organismo inicia o combate ao protozoário, entra em contato também com a molécula tumoral, que passa a ser vista também pelo sistema imune como um indicador de células do protozoário. Depois de induzidas as defesas, estas passam a destruir todas as células com a molécula tumoral, como se lutassem apenas contra o protozoário.",
+    "reference": "Disponível em: www.usp.br. Acesso em: 29 jun. 2012 (adaptado).",
+    "images": [],
+    "subtitle": ""
+  },
+  "enem_2022_nature_q134_ctx1": {
+    "title": "",
+    "text": "O sinal sonoro oriundo da queda de um grande bloco de gelo de uma geleira é detectado por dois dispositivos situados em um barco, sendo que o detector A está imerso em água e o B, na proa da embarcação. Sabe-se que a velocidade do som na água é de 1 540 \\(\\frac{m}{s}\\) e no ar é de 340 \\(\\frac{m}{s}\\).\n\n[Figura]\n\nOs gráficos indicam, em tempo real, o sinal sonoro detectado pelos dois dispositivos, os quais foram ligados simultaneamente em um instante anterior à queda do bloco de gelo. Ao comparar porções correspondentes desse sinal em cada dispositivo, é possível obter informações sobre a onda sonora.\n\n[Gráfico]",
+    "reference": "",
+    "images": [
+      "figuras/q134_2022_fig1.png",
+      "figuras/q134_2022_fig2.png"
+    ]
+  },
+  "enem_2022_nature_q135_ctx1": {
+    "title": "",
+    "text": "Em 2002, um mecânico da cidade mineira de Uberaba (MG) teve uma ideia para economizar o consumo de energia elétrica e iluminar a própria casa num dia de sol. Para isso, ele utilizou garrafas plásticas PET com água e cloro, conforme ilustram as figuras. Cada garrafa foi fixada ao telhado de sua casa em um buraco com diâmetro igual ao da garrafa, muito maior que o comprimento de onda da luz. Nos últimos dois anos, sua ideia já alcançou diversas partes do mundo e deve atingir a marca de 1 milhão de casas utilizando a \"luz engarrafada\".\n\n[Imagem]",
+    "reference": "ZOREL, G. Brasileiro inventor da \"luz engarrafada\" tem ideia espalhada pelo mundo. Disponível em: g1.com. Acesso em: 23 dez. 2013 (adaptado).",
+    "images": [
+      "figuras/q135_2022_fig1.png"
+    ]
   }
 }
