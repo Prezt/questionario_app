@@ -5249,5 +5249,34 @@
     "images": [
       "figuras/q135_2022_fig1.png"
     ]
+  },
+  "enem_2022_math_q148_ctx1": {
+    "title": "",
+    "text": "A luminosidade L de uma estrela está relacionada com o raio R e com a temperatura T dessa estrela segundo a Lei de Stefan-Boltzmann: L = c · R² · T⁴, em que c é uma constante igual para todas as estrelas.",
+    "reference": "Disponível em: http://science.nasa.gov.br. Acesso em: 22 nov. 2019 (adaptado).",
+    "images": [],
+    "subtitle": ""
+  },
+  "enem_2022_math_q152_ctx1": {
+    "title": "",
+    "text": "Em uma sala de cinema, para garantir que os espectadores vejam toda a imagem projetada na tela, a disposição das poltronas deve obedecer à norma técnica da Associação Brasileira de Normas Técnicas (ABNT), que faz as seguintes indicações:\n• Distância mínima (D<sub>mín</sub>) entre a tela de projeção e o encosto da poltrona da primeira fileira deve ser de, pelo menos, 60% da largura (L) da tela.\n• Distância máxima (D<sub>máx</sub>) entre a tela de projeção e o encosto da poltrona da última fileira deve ser o dobro da largura (L) da tela, sendo aceitável uma distância de até 2,9 vezes a largura (L) da tela.\nPara o espaçamento entre as fileiras de poltronas, é considerada a distância de 1 metro entre os encostos de poltronas em duas fileiras consecutivas.",
+    "reference": "Disponível em: www.abnt.gov.br. Acesso em: 14 nov. 2013.",
+    "images": [],
+    "subtitle": ""
+  },
+  "enem_2022_math_q154_ctx1": {
+    "title": "",
+    "text": "Em janeiro de 2013, foram declaradas 1 794 272 admissões e 1 765 372 desligamentos no Brasil, ou seja, foram criadas 28 900 vagas de emprego, segundo dados do Cadastro Geral de Empregados e Desempregados (Caged), divulgados pelo Ministério do Trabalho e Emprego (MTE). Segundo o Caged, o número de vagas criadas em janeiro de 2013 sofreu uma queda de 75%, quando comparado com o mesmo período de 2012.",
+    "reference": "Disponível em: http://portal.mte.gov.br. Acesso em: 23 fev. 2013 (adaptado).",
+    "images": []
+  },
+  "enem_2022_math_q179_ctx1": {
+    "title": "",
+    "text": "A esperança de vida ao nascer é o número médio de anos que um indivíduo tende a viver a partir de seu nascimento, considerando dados da população. No Brasil, esse número vem aumentando consideravelmente, como mostra o gráfico.[Gráfico]",
+    "reference": "Disponível em: http://cod.ibge.gov.br. Acesso em: 1 mar. 2016 (adaptado).",
+    "images": [
+      "figuras/q179_2022_fig1.png"
+    ],
+    "subtitle": ""
   }
 }

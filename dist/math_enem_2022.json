@@ -1,7 +1,7 @@
 [
   {
     "number": 136,
-    "text": "Uma máquina em operação tem sua temperatura T monitorada por meio de um registro gráfico, ao longo do tempo t. Essa máquina possui um pistão cuja velocidade V varia com a temperatura T da máquina, de acordo com a expressão V = T - 4. Após a máquina funcionar durante o intervalo de tempo de 10 horas, o seu operador analisa o registro gráfico para avaliar a necessidade de eventuais ajustes, sabendo que a máquina apresenta falhas de funcionamento quando a velocidade do pistão se anula. Quantas vezes a velocidade do pistão se anulou durante as 10 horas de funcionamento?",
+    "text": "Uma máquina em operação tem sua temperatura T monitorada por meio de um registro gráfico, ao longo do tempo t. Essa máquina possui um pistão cuja velocidade V varia com a temperatura T da máquina, de acordo com a expressão V = T − 4. Após a máquina funcionar durante o intervalo de tempo de 10 horas, o seu operador analisa o registro gráfico, apresentado na figura, para avaliar a necessidade de eventuais ajustes, sabendo que a máquina apresenta falhas de funcionamento quando a velocidade do pistão se anula.\n\n[Gráfico]\n\nQuantas vezes a velocidade do pistão se anulou durante as 10 horas de funcionamento?",
     "alternatives": {
       "a": "1",
       "b": "2",
@@ -9,7 +9,9 @@
       "d": "4",
       "e": "5"
     },
-    "images": [],
+    "images": [
+      "figuras/q136_2022_fig1.png"
+    ],
     "tags": [
       "funções"
     ],
@@ -21,13 +23,13 @@
   },
   {
     "number": 137,
-    "text": "A World Series é a decisão do campeonato norte-americano de beisebol. Os dois times que chegam a essa fase jogam, entre si, até sete partidas. O primeiro desses times que completar quatro vitórias é declarado campeão.\nConsidere que, em todas as partidas, a probabilidade de qualquer um dos dois times vencer é sempre \\(\\frac{1}{2}\\).\n\nQual é a probabilidade de o time campeão ser aquele que venceu a primeira partida da World Series?",
+    "text": "A World Series é a decisão do campeonato norte-americano de beisebol. Os dois times que chegam a essa fase jogam, entre si, até sete partidas. O primeiro desses times que completar quatro vitórias é declarado campeão.\nConsidere que, em todas as partidas, a probabilidade de qualquer um dos dois times vencer é sempre \\(\\frac{1}{2}\\).\n\n\n\nQual é a probabilidade de o time campeão ser aquele que venceu a primeira partida da World Series?",
     "alternatives": {
-      "a": "35",
-      "b": "40",
-      "c": "42",
-      "d": "44",
-      "e": "52"
+      "a": "\\(\\frac{35}{64}\\)",
+      "b": "\\(\\frac{40}{64}\\)",
+      "c": "\\(\\frac{42}{64}\\)",
+      "d": "\\(\\frac{44}{64}\\)",
+      "e": "\\(\\frac{52}{64}\\)"
     },
     "images": [],
     "tags": [
@@ -42,7 +44,7 @@
   },
   {
     "number": 138,
-    "text": "O gráfico apresenta os totais de receitas e despesas de uma empresa, expressos em milhão de reais, no decorrer dos meses de um determinado ano. A empresa obtém lucro quando a diferença entre receita e despesa é positiva e tem prejuízo quando essa diferença é negativa. Qual é a mediana, em milhões de reais, dos valores dos lucros apurados pela empresa nesse ano?",
+    "text": "O gráfico apresenta os totais de receitas e despesas de uma empresa, expressos em milhão de reais, no decorrer dos meses de um determinado ano. A empresa obtém lucro quando a diferença entre receita e despesa é positiva e tem prejuízo quando essa diferença é negativa.\n\n[Gráfico]\n\nQual é a mediana, em milhão de reais, dos valores dos lucros apurados pela empresa nesse ano?",
     "alternatives": {
       "a": "1,5",
       "b": "2,0",
@@ -50,7 +52,9 @@
       "d": "3,0",
       "e": "5,5"
     },
-    "images": [],
+    "images": [
+      "figuras/q138_2022_fig1.png"
+    ],
     "tags": [
       "estatística"
     ],
@@ -62,7 +66,7 @@
   },
   {
     "number": 139,
-    "text": "Um casal está reformando a cozinha de casa e decidiu comprar um refrigerador novo. Observando a planta da nova cozinha, desenhada na escala de 1 : 50, notaram que o espaço destinado ao refrigerador tinha 3,8 cm de altura e 1,6 cm de largura. Eles sabem que os fabricantes de refrigeradores indicam que, para um bom funcionamento e fácil manejo na limpeza, esse eletrodomésticos devem ser colocados em espaços que permitam uma distância de, pelo menos, 10 cm de outro móveis ou paredes, tanto na parte superior quanto nas laterais. O casal comprou um refrigerador que caberia no local a ele destinado na nova cozinha, seguindo as instruções do fabricante. Esse refrigerador tem altura e largura máximas, em metros, respectivamente, iguais a",
+    "text": "Um casal está reformando a cozinha de casa e decidiu comprar um refrigerador novo. Observando a planta da nova cozinha, desenhada na escala de 1 : 50, notaram que o espaço destinado ao refrigerador tinha 3,8 cm de altura e 1,6 cm de largura. Eles sabem que os fabricantes de refrigeradores indicam que, para um bom funcionamento e fácil manejo na limpeza, esse eletrodomésticos devem ser colocados em espaços que permitam uma distância de, pelo menos, 10 cm de outro móveis ou paredes, tanto na parte superior quanto nas laterais. O casal comprou um refrigerador que caberia no local a ele destinado na nova cozinha, seguindo as instruções do fabricante. \n\n\n\nEsse refrigerador tem altura e largura máximas, em metros, respectivamente, iguais a",
     "alternatives": {
       "a": "1,80 e 0,60.",
       "b": "1,80 e 0,70.",
@@ -83,7 +87,7 @@
   },
   {
     "number": 140,
-    "text": "Foram convidadas 32 equipes para um torneio de futebol, que foram divididas em 8 grupos com 4 equipes sendo que, dentro de um grupo, cada equipe disputa uma única partida contra cada uma das demais equipes do seu grupo. A primeira e a segunda colocadas de cada grupo seguem para realizar as 8 partidas da próxima fase do torneio, chamada oitavas de final. Os vencedores das partidas das oitavas de final seguem para jogar as 4 partidas das quartas de final. Os vencedores das quartas de final disputam as 2 partidas das semifinais, os vencedores avançam para a grande final, que define campeã do torneio. Pelas regras do torneio, cada equipe deve ter um período de descanso de, no mínimo, 3 dias entre dois jogos por ela disputados, ou seja, se um time disputa uma partida, por exemplo, num domingo, só pode disputar a partida seguinte a partir da quinta-feira da mesma semana. O número mínimo de dias necessários para a realização desse torneio é",
+    "text": "Foram convidadas 32 equipes para um torneio de futebol, que foram divididas em 8 grupos com 4 equipes sendo que, dentro de um grupo, cada equipe disputa uma única partida contra cada uma das demais equipes do seu grupo. A primeira e a segunda colocadas de cada grupo seguem para realizar as 8 partidas da próxima fase do torneio, chamada oitavas de final. Os vencedores das partidas das oitavas de final seguem para jogar as 4 partidas das quartas de final. Os vencedores das quartas de final disputam as 2 partidas das semifinais, os vencedores avançam para a grande final, que define campeã do torneio. \nPelas regras do torneio, cada equipe deve ter um período de descanso de, no mínimo, 3 dias entre dois jogos por ela disputados, ou seja, se um time disputa uma partida, por exemplo, num domingo, só pode disputar a partida seguinte a partir da quinta-feira da mesma semana. \n\n\n\nO número mínimo de dias necessários para a realização desse torneio é",
     "alternatives": {
       "a": "22.",
       "b": "25.",
@@ -104,15 +108,18 @@
   },
   {
     "number": 141,
-    "text": "O jogo inicia e, nas quatro primeiras rodadas, foram sorteados os seguintes números: 03, 27, 07 e 48. Ao final da quarta rodada, somente Pedro possuía uma cartela que continha esses quatro números sorteados, sendo que todos os demais jogadores conseguiram assinalar, no máximo, um desses números em suas cartelas. Observe na Figura 2 o cartão de Pedro após as quatro primeiras rodadas. [Figura 2] A probabilidade de Pedro ganhar o jogo em uma das duas próximas rodadas é",
+    "text": "Em um jogo de bingo, as cartelas contêm 16 quadrículas dispostas em linhas e colunas. Cada quadrícula tem impresso um número, dentre os inteiros de 1 a 50, sem repetição de número. Na primeira rodada, um número é sorteado, aleatoriamente, dentre os 50 possíveis. Em todas as rodadas, o número sorteado é descartado e não participa dos sorteios das rodadas seguintes. Caso o jogador tenha em sua cartela o número sorteado, ele o assinala na cartela. Ganha o jogador que primeiro conseguir preencher quatro quadrículas que formem uma linha, uma coluna ou uma diagonal, conforme os tipos de situações ilustradas na Figura 1.\n[Figura]\nO jogo inicia e, nas quatro primeiras rodadas, foram sorteados os seguintes números: 03, 27, 07 e 48. Ao final da quarta rodada, somente Pedro possuía uma cartela que continha esses quatro números sorteados, sendo que todos os demais jogadores conseguiram assinalar, no máximo, um desses números em suas cartelas. Observe na Figura 2 o cartão de Pedro após as quatro primeiras rodadas.\n\n[Figura]\n\nA probabilidade de Pedro ganhar o jogo em uma das duas próximas rodadas é",
     "alternatives": {
       "a": "\\(\\frac{1}{46} + \\frac{1}{45}\\)",
-      "b": "\\(\\frac{2}{46}\\)",
-      "c": "\\(\\frac{8}{46}\\)",
-      "d": "\\(\\frac{43}{46}\\)",
-      "e": "\\(\\frac{49}{46}\\)"
+      "b": "\\(\\frac{1}{46} + \\frac{2}{46 \\times 45}\\)",
+      "c": "\\(\\frac{1}{46} + \\frac{8}{46 \\times 45}\\)",
+      "d": "\\(\\frac{1}{46} + \\frac{43}{46 \\times 45}\\)",
+      "e": "\\(\\frac{1}{46} + \\frac{49}{46 \\times 45}\\)"
     },
-    "images": [],
+    "images": [
+      "figuras/q141_2022_fig2.png",
+      "figuras/q141_2022_fig1.png"
+    ],
     "tags": [
       "probabilidade"
     ],
@@ -120,11 +127,12 @@
     "test": "ENEM",
     "area": "math",
     "answer": "e",
-    "difficulty": 6
+    "difficulty": 6,
+    "contextId": null
   },
   {
     "number": 142,
-    "text": "Uma montadora de automóveis divulgou que oferta seus clientes mais de 1 000 configurações diferentes de carro, variando o modelo, a motorização, os opcionais e a cor do veículo. Atualmente, ela oferece 7 modelos de carros com 2 tipos de motores: 1.0 e 1.6. Já em relação aos opcionais, existem 3 escolhas possíveis: central multimídia, rodas de liga leve e bancos de couro, podendo o cliente optar por incluir um, dois, três ou nenhum dos opcionais disponíveis. Para ser fiel à divulgação feita, a quantidade mínima de cores que a montadora deverá disponibilizar aos seus clientes é",
+    "text": "Uma montadora de automóveis divulgou que oferta seus clientes mais de 1 000 configurações diferentes de carro, variando o modelo, a motorização, os opcionais e a cor do veículo. Atualmente, ela oferece 7 modelos de carros com 2 tipos de motores: 1.0 e 1.6. Já em relação aos opcionais, existem 3 escolhas possíveis: central multimídia, rodas de liga leve e bancos de couro, podendo o cliente optar por incluir um, dois, três ou nenhum dos opcionais disponíveis. \n\nPara ser fiel à divulgação feita, a quantidade mínima de cores que a montadora deverá disponibilizar aos seus clientes é",
     "alternatives": {
       "a": "8",
       "b": "9",
@@ -145,15 +153,23 @@
   },
   {
     "number": 143,
-    "text": "[Figura: planificação de um cubo] Em um cubo, foram pintados, em três de suas faces quadrados de cor cinza escura, que ocupam um quarto dessas faces, tendo esses três quadrados um vértice em comum, conforme ilustrado na [Figura 2]. A planificação do cubo da Figura 2, conforme o tipo de lanificação apresentada na Figura 1, é",
+    "text": "Dentre as diversas planificações possíveis para o cubo, uma delas é a que se encontra apresentada na Figura 1.\n\n[Figura]\n\nEm um cubo, foram pintados, em três de suas faces, quadrados de cor cinza escura, que ocupam um quarto dessas faces, tendo esses três quadrados um vértice em comum, conforme ilustrado na Figura 2.\n\n[Figura]\n\nA planificação do cubo da Figura 2, conforme o tipo de planificação apresentada na Figura 1, é",
     "alternatives": {
-      "a": "A",
-      "b": "B",
-      "c": "C",
-      "d": "D",
-      "e": "E"
+      "a": "[Figura]",
+      "b": "[Figura]",
+      "c": "[Figura]",
+      "d": "[Figura]",
+      "e": "[Figura]"
     },
-    "images": [],
+    "images": [
+      "figuras/q143_2022_fig2.png",
+      "figuras/q143_2022_fig1.png",
+      "figuras/q143_2022_fig3.png",
+      "figuras/q143_2022_fig4.png",
+      "figuras/q143_2022_fig5.png",
+      "figuras/q143_2022_fig6.png",
+      "figuras/q143_2022_fig7.png"
+    ],
     "tags": [
       "geometria espacial",
       "geometria plana"
@@ -162,11 +178,12 @@
     "test": "ENEM",
     "area": "math",
     "answer": "d",
-    "difficulty": 7
+    "difficulty": 7,
+    "contextId": null
   },
   {
     "number": 144,
-    "text": "Cada número que identifica uma agência bancária tem quatro dígitos: N , N , N , N mais um dígito verificador N . Para a determinação de N , primeiramente multiplica-se ordenadamente os quatro primeiros dígitos do número da agência por 5, 4, 3 e 2, respectivamente, somam-se os resultados e obtém-se S = 5N + 4N + 3N + 2N . Posteriormente, encontra-se o resto da divisão de S por 11, denotando por R esse resto. Dessa forma, N é a diferença 11 − R. Considere o número de uma agência bancária cujos quatro primeiros dígitos são 0100. Qual é o dígito verificador N dessa agência bancária?",
+    "text": "Cada número que identifica uma agência bancária tem quatro dígitos: N<sub>1</sub>, N<sub>2</sub>, N<sub>3</sub>, N<sub>4</sub>, mais um dígito verificador N<sub>5</sub>.[Figura]Todos esses dígitos são números naturais pertencentes ao conjunto {0, 1, 2, 3, 4, 5, 6, 7, 8, 9}. Para a determinação de N<sub>5</sub>, primeiramente multiplica-se ordenadamente os quatro primeiros dígitos do número da agência por 5, 4, 3 e 2, respectivamente, somam-se os resultados e obtém-se S = 5N<sub>1</sub> + 4N<sub>2</sub> + 3N<sub>3</sub> + 2N<sub>4</sub>.\nPosteriormente, encontra-se o resto da divisão de S por 11, denotando por R esse resto. Dessa forma, N<sub>5</sub> é a diferença 11 − R.\nConsidere o número de uma agência bancária cujos quatro primeiros dígitos são 0100.\n\nQual é o dígito verificador N<sub>5</sub> dessa agência bancária?",
     "alternatives": {
       "a": "0",
       "b": "6",
@@ -174,7 +191,9 @@
       "d": "8",
       "e": "9"
     },
-    "images": [],
+    "images": [
+      "figuras/q144_2022_fig1.png"
+    ],
     "tags": [
       "aritmética e números",
       "álgebra"
@@ -187,7 +206,7 @@
   },
   {
     "number": 145,
-    "text": "O pacote básico de um jogo para smartphone, que é vendido a R$ 50,00, contém 2 000 gemas e 100 00 moedas de ouro. A empresa decidiu criar um pacote especial que será vendido a R$ 100,00 e se diferenciará do pacote básico por apresentar maiores quantidades de gemas e moedas de ouro. Para estimular as vendas desse novo pacote, a empresa inseriu nele 6 000 gemas a mais, em relação ao que o cliente teria caso optasse por comprar, com a mesma quantidade, dois pacotes básicos. A quantidade de moedas de ouro que a empresa deverá inserir ao pacote especial, para que seja mantida a mesma proporção existente entre as quantidades de gemas e das moedas de ouro contidas no pacote básico, é",
+    "text": "O pacote básico de um jogo para smartphone, que é vendido a R$ 50,00, contém 2 000 gemas e 100 000 moedas de ouro. \nA empresa decidiu criar um pacote especial que será vendido a R$ 100,00 e se diferenciará do pacote básico por apresentar maiores quantidades de gemas e moedas de ouro.\nPara estimular as vendas desse novo pacote, a empresa inseriu nele 6 000 gemas a mais, em relação ao que o cliente teria caso optasse por comprar, com a mesma quantidade, dois pacotes básicos. \n\nA quantidade de moedas de ouro que a empresa deverá inserir ao pacote especial, para que seja mantida a mesma proporção existente entre as quantidades de gemas e das moedas de ouro contidas no pacote básico, é",
     "alternatives": {
       "a": "50 000.",
       "b": "100 000.",
@@ -208,7 +227,7 @@
   },
   {
     "number": 146,
-    "text": "Um parque tem dois circuitos de tamanho diferentes para corridas. Um corredor treina ness parque e, no primeiro dia, inicia seu treino percorrend 3 voltas em torno do circuito maior e 2 voltas em torn do menor, perfazendo um total de 1 800 m. Em seguida dando continuidade a seu treino, corre mais 2 volta em torno do circuito maior e 1 volta em torno do meno percorrendo mais 1 100 m. No segundo dia, ele pretende percorrer 5 000 m nos circuitos do parque, fazendo um número inteiro de volta em torno deles e de modo que o número de voltas seja maior possível. A soma do número de voltas em torno dos dois circuitos no segundo dia, será",
+    "text": "Um parque tem dois circuitos de tamanhos diferentes para corridas. Um corredor treina nesse parque e, no primeiro dia, inicia seu treino percorrendo 3 voltas em torno do circuito maior e 2 voltas em torno do menor, perfazendo um total de 1 800 m. Em seguida, dando continuidade a seu treino, corre mais 2 voltas em torno do circuito maior e 1 volta em torno do menor, percorrendo mais 1 100 m.\nNo segundo dia, ele pretende percorrer 5 000 m nos circuitos do parque, fazendo um número inteiro de voltas em torno deles e de modo que o número de voltas seja o maior possível.\n\nA soma do número de voltas em torno dos dois circuitos, no segundo dia, será",
     "alternatives": {
       "a": "10",
       "b": "13",
@@ -228,7 +247,7 @@
   },
   {
     "number": 147,
-    "text": "Uma equipe de marketing digital foi contratada para aumentar as vendas de um produto ofertado em um site e comércio eletrônico. Para isso, elaborou um anúncio que, quando o cliente clica sobre ele, é direcionado para a página de vendas do produto. Esse anúncio foi divulgado em duas redes sociais, A e B, e foram obtidos os seguintes resultados: rede social A: o anúncio foi visualizado por 3 000 pessoas; 10% delas clicaram sobre o anúncio e foram redirecionadas para o site; 3% das que clicaram sobre o anúncio compraram o produto. O investimento feito para a publicação do anúncio nessa rede foi de R$ 100,00; rede social B: o anúncio foi visualizado por 1 000 pessoas; 30% delas clicaram sobre o anúncio e foram redirecionadas para o site; 2% das que clicaram sobre o anúncio compraram o produto. O investimento feito para a publicação do anúncio nessa rede foi de R$ 200,00. Por experiência, o pessoal da equipe de marketing considera que a quantidade de novas pessoas que verão anúncio é diretamente proporcional ao investimento realizado, e que a quantidade de pessoas que comprarão produto também se manterá proporcional à quantidade de pessoas que clicarão sobre o anúncio. O responsável pelo produto decidiu, então, investir mais R$ 300,00 em cada uma das duas redes sociais para a divulgação desse anúncio e obteve, de fato, o aumento proporcional esperado na quantidade de clientes que compraram esse produto. Para classificar o aumento obtido na quantidade (Q) de compradores desse produto, em consequência dessa segunda divulgação, em relação aos resultados observados na primeira divulgação, o responsável pelo produto adotou o seguinte critério: Q ≤ 60%: não satisfatório; 60% < Q ≤ 100%: regular; 100% < Q ≤ 150%: bom; 150% < Q ≤ 190%: muito bom; 190% < Q ≤ 200%: excelente. O aumento na quantidade de compradores, em consequência dessa segunda divulgação, em relação ao que foi registrado com a primeira divulgação, foi classificado como",
+    "text": "Uma equipe de marketing digital foi contratada para aumentar as vendas de um produto ofertado em um site de comércio eletrônico. Para isso, elaborou um anúncio que, quando o cliente clica sobre ele, é direcionado para a página de vendas do produto. Esse anúncio foi divulgado em duas redes sociais, A e B, e foram obtidos os seguintes resultados:\n• rede social A: o anúncio foi visualizado por 3 000 pessoas; 10% delas clicaram sobre o anúncio e foram redirecionadas para o site; 3% das que clicaram sobre o anúncio compraram o produto. O investimento feito para a publicação do anúncio nessa rede foi de R$ 100,00;\n• rede social B: o anúncio foi visualizado por 1 000 pessoas; 30% delas clicaram sobre o anúncio e foram redirecionadas para o site; 2% das que clicaram sobre o anúncio compraram o produto. O investimento feito para a publicação do anúncio nessa rede foi de R$ 200,00.\nPor experiência, o pessoal da equipe de marketing considera que a quantidade de novas pessoas que verão o anúncio é diretamente proporcional ao investimento realizado, e que a quantidade de pessoas que comprarão o produto também se manterá proporcional à quantidade de pessoas que clicarão sobre o anúncio.\nO responsável pelo produto decidiu, então, investir mais R$ 300,00 em cada uma das duas redes sociais para a divulgação desse anúncio e obteve, de fato, o aumento proporcional esperado na quantidade de clientes que compraram esse produto. Para classificar o aumento obtido na quantidade (Q) de compradores desse produto, em consequência dessa segunda divulgação, em relação aos resultados observados na primeira divulgação, o responsável pelo produto adotou o seguinte critério:\n• Q ≤ 60%: não satisfatório;\n• 60% < Q ≤ 100%: regular;\n• 100% < Q ≤ 150%: bom;\n• 150% < Q ≤ 190%: muito bom;\n• 190% < Q ≤ 200%: excelente.\n\nO aumento na quantidade de compradores, em consequência dessa segunda divulgação, em relação ao que foi registrado com a primeira divulgação, foi classificado como",
     "alternatives": {
       "a": "não satisfatório.",
       "b": "regular.",
@@ -248,13 +267,13 @@
   },
   {
     "number": 148,
-    "text": "Considere duas estrelas E e F, sendo que a estrela E tem metade do raio da estrela F e o dobro da temperatura de F. Indique por L e L suas respectivas luminosidades. A relação entre as luminosidades dessas duas estrelas dada por",
+    "text": "Considere duas estrelas E e F, sendo que a estrela E tem metade do raio da estrela F e o dobro da temperatura de F.\nIndique por L<sub>E</sub> e L<sub>F</sub> suas respectivas luminosidades.\n\nA relação entre as luminosidades dessas duas estrelas é dada por",
     "alternatives": {
-      "a": "L_F = \\frac{A}{A}",
-      "b": "L_F = \\frac{B}{B}",
-      "c": "L_E = L_F",
-      "d": "L_E = 4L_F",
-      "e": "L_E = 8L_F"
+      "a": "L<sub>E</sub> = \\(\\frac{L_F}{2}\\)",
+      "b": "L<sub>E</sub> = \\(\\frac{L_F}{4}\\)",
+      "c": "L<sub>E</sub> = L<sub>F</sub>",
+      "d": "L<sub>E</sub> = 4L<sub>F</sub>",
+      "e": "L<sub>E</sub> = 8L<sub>F</sub>"
     },
     "images": [],
     "tags": [
@@ -265,11 +284,12 @@
     "test": "ENEM",
     "area": "math",
     "answer": "d",
-    "difficulty": 7
+    "difficulty": 7,
+    "contextId": "enem_2022_math_q148_ctx1"
   },
   {
     "number": 149,
-    "text": "Uma das informações que pode auxiliar no dimensionamento do número de pediatras que devem atender em uma Unidade Básica de Saúde (UBS) é o número que representa a mediana da quantidade de crianças por família existente na região sob sua responsabilidade. O quadro mostra a distribuição da frequência do número de crianças por família na região de responsabilidade de uma UBS.",
+    "text": "Uma das informações que pode auxiliar no dimensionamento do número de pediatras que devem atender em uma Unidade Básica de Saúde (UBS) é o número que representa a mediana da quantidade de crianças por família existente na região sob sua responsabilidade. O quadro mostra a distribuição das frequências do número de crianças por família na região de responsabilidade de uma UBS.\n\n|Número de crianças por família|Frequência|\n|-|-|\n|0|100|\n|1|400|\n|2|200|\n|3|150|\n|4|100|\n|5|50|\n\nO número que representa a mediana da quantidade de crianças por família nessa região é",
     "alternatives": {
       "a": "1,0",
       "b": "1,5",
@@ -289,7 +309,7 @@
   },
   {
     "number": 150,
-    "text": "Em jogos de voleibol, um saque é invalidado se a bola tingir o teto do ginásio onde ocorre o jogo. Um jogador da equipe tem um saque que atinge uma grande altura. Seu recorde foi quando a batida do saque se iniciou a maior altura de 1,5 m do piso da quadra, e a trajetória da bola foi descrita pela parábola \\(y = -\\frac{2}{3}x^2 + 7x\\), em que y representa a altura da bola em relação ao eixo (das abscissas) que está localizado a 1,5 m do piso da quadra. Suponha que em todas as partidas algum saque desse jogador atinja a mesma altura do seu recorde.",
+    "text": "Em jogos de voleibol, um saque é invalidado se a bola atingir o teto do ginásio onde ocorre o jogo. Um jogador de uma equipe tem um saque que atinge uma grande altura. Seu recorde foi quando a batida do saque se iniciou a uma altura de 1,5 m do piso da quadra, e a trajetória da bola foi descrita pela parábola \\(y = -\\frac{2}{3}x^2 + 7x + 12\\), em que y representa a altura da bola em relação ao eixo x (das abscissas) que está localizado a 1,5 m do piso da quadra, como representado na figura. Suponha que em todas as partidas algum saque desse jogador atinja a mesma altura do seu recorde.\n\n[Figura]\n\nA equipe desse jogador participou de um torneio de voleibol no qual jogou cinco partidas, cada uma delas em um ginásio diferente. As alturas dos tetos desses ginásios, em relação aos pisos das quadras, são:\n• ginásio I: 17 m;\n• ginásio II: 18 m;\n• ginásio III: 19 m;\n• ginásio IV: 21 m;\n• ginásio V: 40 m.\n\nO saque desse atleta foi invalidado",
     "alternatives": {
       "a": "apenas no ginásio I.",
       "b": "apenas nos ginásios I e II.",
@@ -297,7 +317,9 @@
       "d": "apenas nos ginásios I, II, III e IV.",
       "e": "em todos os ginásios."
     },
-    "images": [],
+    "images": [
+      "figuras/q150_2022_fig1.png"
+    ],
     "tags": [
       "geometria analítica",
       "álgebra"
@@ -306,11 +328,12 @@
     "test": "ENEM",
     "area": "math",
     "answer": "d",
-    "difficulty": 7
+    "difficulty": 7,
+    "contextId": null
   },
   {
     "number": 151,
-    "text": "Um médico faz o acompanhamento clínico de um grupo de pessoas. Ele observou que a perda média de massa dessas pessoas durante uma atividade física é de 0,8 kg por hora e, considerando que a massa de 1 L de água é de 1 kg, ele recomendou que essas pessoas consumissem uma quantidade total de água correspondente à sua perda de massa para evitar desidratação. Seguindo a recomendação médica, uma dessas pessoas terminar seus exercícios físicos.",
+    "text": "Um médico faz o acompanhamento clínico de um grupo de pessoas que realizam atividades físicas diariamente. Ele observou que a perda média de massa dessas pessoas durante uma atividade física era de 1,5 kg. Sabendo que a massa de 1 L de água é de 1 kg, ele recomendou que ingerissem, ao longo das 3 horas seguintes ao final da atividade, uma quantidade total de água correspondente a 40% a mais do que a massa perdida na atividade física, para evitar desidratação.\n\nSeguindo a recomendação médica, uma dessas pessoas ingeriu, certo dia, um total de 1,7 L de água após terminar seus exercícios físicos.\n\nUm médico faz o acompanhamento clínico de um grupo de pessoas que realizam atividades físicas diariamente. Ele observou que a perda média de massa dessas pessoas durante uma atividade física era de 1,5 kg. Sabendo que a massa de 1 L de água é de 1 kg, ele recomendou que ingerissem, ao longo das 3 horas seguintes ao final da atividade, uma quantidade total de água correspondente a 40% a mais do que a massa perdida na atividade física, para evitar desidratação.\nSeguindo a recomendação médica, uma dessas pessoas ingeriu, certo dia, um total de 1,7 L de água após terminar seus exercícios físicos.\n\nPara que a recomendação médica tenha efetivamente sido respeitada, a atividade física dessa pessoa, nesse dia, durou",
     "alternatives": {
       "a": "30 minutos ou menos.",
       "b": "mais de 35 e menos de 45 minutos.",
@@ -326,11 +349,13 @@
     "test": "ENEM",
     "area": "math",
     "answer": "c",
-    "difficulty": 5
+    "difficulty": 5,
+    "contextId": null,
+    "contextIds": []
   },
   {
     "number": 152,
-    "text": "Em uma sala de cinema, para garantir que os espectadores vejam toda a imagem projetada na tela, a disposição das poltronas deve obedecer à norma técnica da Associação Brasileira de Normas Técnicas (ABNT), que faz as seguintes indicações: • Distância mínima ( D ) entre a tela de projeção e mínima, 60% da largura ( L ) da tela. • Distância máxima ( D ) entre a tela de projeção e máxima, duas vezes a largura ( L ) da tela, sendo aceitável uma distância menor. Para o espaçamento entre as fileiras de poltronas, deve-se considerar a distância de 1 metro entre os encostos das poltronas em duas fileiras consecutivas. Uma sala de cinema, cuja largura da tela mede 12 metros e que está montada em conformidade com as normas da ABNT e na posição a tela e todas as poltronas já instaladas, pretende-se ampliar essa sala, mantendo-se na mesma posição a tela e ampliando-se ao máximo a sala para os fundos (área de instalação de novas poltronas), respeitando-se o limite mínimo da distância máxima da norma da ABNT. A intenção é aumentar, a partir do momento em que as dimensões da sala permitirem, a quantidade de poltronas da sala, instalando-se novas unidades, iguais às já instaladas. Quantas fileiras de poltronas a sala comportará após essa ampliação?",
+    "text": "Uma sala de cinema, cuja largura da tela mede 12 m, está montada em conformidade com as normas da ABNT e tem suas dimensões especificadas na figura.[Figura]Pretende-se ampliar essa sala, mantendo-se na mesma posição a tela e todas as poltronas já instaladas, ampliando-se ao máximo a sala para os fundos (área de instalação de novas poltronas), respeitando-se o limite aceitável da distância máxima da norma da ABNT. A intenção é aumentar, ao máximo, a quantidade de poltronas da sala, instalando-se novas unidades, iguais às já instaladas.\n\nQuantas fileiras de poltronas a sala comportará após essa ampliação?",
     "alternatives": {
       "a": "26",
       "b": "27",
@@ -338,7 +363,9 @@
       "d": "29",
       "e": "35"
     },
-    "images": [],
+    "images": [
+      "figuras/q152_2022_fig1.png"
+    ],
     "tags": [
       "aritmética e números",
       "geometria plana"
@@ -347,11 +374,12 @@
     "test": "ENEM",
     "area": "math",
     "answer": "c",
-    "difficulty": 7
+    "difficulty": 7,
+    "contextId": "enem_2022_math_q152_ctx1"
   },
   {
     "number": 153,
-    "text": "Uma empresa produz e vende um tipo de chocolate maciço, em formato de cone circular reto com as medidas do diâmetro da base e da altura iguais a 8 cm e 10 cm respectivamente. Devido a um aumento de preço dos ingredientes utilizados na produção desse chocolate, a empresa decide produzir esse mesmo tipo de chocolate com um volume 19% menor, no mesmo formato de cone circular reto com altura de 10 cm. Para isso, a empresa produzirá esses novos chocolates com medida do raio da base, em centímetro, igual a",
+    "text": "Uma empresa produz e vende um tipo de chocolate maciço, em formato de cone circular reto com as medidas do diâmetro da base e da altura iguais a 8 cm e 10 cm, respectivamente, conforme apresenta a figura.[Figura]Devido a um aumento de preço dos ingredientes utilizados na produção desse chocolate, a empresa decide produzir esse mesmo tipo de chocolate com um volume 19% menor, no mesmo formato de cone circular reto com altura de 10 cm.\n\nPara isso, a empresa produzirá esses novos chocolates com medida do raio da base, em centímetro, igual a",
     "alternatives": {
       "a": "1,52.",
       "b": "3,24.",
@@ -359,7 +387,9 @@
       "d": "6,48.",
       "e": "7,20."
     },
-    "images": [],
+    "images": [
+      "figuras/q153_2022_fig1.png"
+    ],
     "tags": [
       "geometria espacial",
       "geometria plana"
@@ -388,17 +418,18 @@
     "test": "ENEM",
     "area": "math",
     "answer": "c",
-    "difficulty": 5
+    "difficulty": 5,
+    "contextId": "enem_2022_math_q154_ctx1"
   },
   {
     "number": 155,
-    "text": "Um prédio, com 9 andares e 8 apartamentos de quartos por andar, está com todos os seus apartamentos venda. Os apartamentos são identificados por números formados por dois algarismos, sendo que a dezena indica o andar onde se encontra o apartamento, e a unidade, o m algarismo de 1 a 8, que diferencia os apartamentos em um mesmo andar. Quanto à incidência de sol nos quartos desses apartamentos, constatam-se as seguintes características, em função de seus números de dentificação: naqueles que finalizam em 1 ou 2, ambos os quartos recebem sol apenas na parte da manhã; naqueles que finalizam em 3, 4, 5 ou 6, apenas um dos quartos recebe sol na parte da manhã; naqueles que finalizam em 7 ou 8, ambos os quartos recebem sol apenas na parte da tarde. Uma pessoa pretende comprar 2 desses apartamentos em um mesmo andar, mas quer que, em ambos, pelo menos um dos quartos receba sol na parte da manhã. De quantas maneiras diferentes essa pessoa poderá escolher 2 desses apartamentos para compra nas condições desejadas?",
+    "text": "Um prédio, com 9 andares e 8 apartamentos de 2 quartos por andar, está com todos os seus apartamentos à venda. Os apartamentos são identificados por números formados por dois algarismos, sendo que a dezena indica o andar onde se encontra o apartamento, e a unidade, um algarismo de 1 a 8, que diferencia os apartamentos de um mesmo andar. Quanto à incidência de sol nos quartos desses apartamentos, constatam-se as seguintes características, em função de seus números de identificação:\n• naqueles que finalizam em 1 ou 2, ambos os quartos recebem sol apenas na parte da manhã;\n• naqueles que finalizam em 3, 4, 5 ou 6, apenas um dos quartos recebe sol na parte da manhã;\n• naqueles que finalizam em 7 ou 8, ambos os quartos recebem sol apenas na parte da tarde.\nUma pessoa pretende comprar 2 desses apartamentos em um mesmo andar, mas quer que, em ambos, pelo menos um dos quartos receba sol na parte da manhã.\n\nDe quantas maneiras diferentes essa pessoa poderá escolher 2 desses apartamentos para compra nas condições desejadas?",
     "alternatives": {
-      "a": "6 !",
-      "b": "6 ! / 2 ! * 2 !",
-      "c": "4 ! / 2 ! * 2 !",
-      "d": "2 ! / 2 ! * 2 !",
-      "e": "8 ! / 2 ! - 1"
+      "a": "\\(9 \\times \\frac{6!}{(6-2)!}\\)",
+      "b": "\\(9 \\times \\frac{6!}{(6-2)! \\times 2!}\\)",
+      "c": "\\(9 \\times \\frac{4!}{(4-2)! \\times 2!}\\)",
+      "d": "\\(9 \\times \\frac{2!}{(2-2)! \\times 2!}\\)",
+      "e": "\\(9 \\times \\left(\\frac{8!}{(8-2)!} - 1\\right)\\)"
     },
     "images": [],
     "tags": [
@@ -413,15 +444,23 @@
   },
   {
     "number": 156,
-    "text": "O professor de artes orientou seus estudantes a dobrar uma folha de papel em formato quadrado conforme ilustrado nas figuras 1 e 2, para obter o [Figura: Figura 3]. Em seguida, no papel dobrado da Figura 3, construir um arco de circunferência com centro no ponto R, sobre o segmento OM, sendo M o ponto médio do lado do quadrado original, de modo que \\(OR = \\frac{1}{4}OM\\). Traçar um arco de circunferência e excluir a parte que contém RM O, obtendo [Figura: Figura 4]. Por último, recortar o papel ao longo do arco circular, obtendo o papel dobrado conforme [Figura: Figura 5]. Após desdobrado, a figura que os estudantes obterão será:",
+    "text": "O professor de artes orientou seus estudantes a realizarem a seguinte sequência de atividades:\n• Dobrar uma folha de papel em formato quadrado duas vezes, em sequência, ao longo das linhas tracejadas, conforme ilustrado nas figuras 1 e 2, para obter o papel dobrado, conforme Figura 3.\n\n[Figura]\n• Em seguida, no papel dobrado da Figura 3, considerar o ponto R, sobre o segmento OM, sendo M o ponto médio do lado do quadrado original, de modo que \\(OR = \\frac{1}{4}OM\\), traçar um arco de circunferência de raio medindo \\(\\frac{1}{4}OM\\) com centro no ponto R, obtendo a Figura 4. Por último, recortar o papel ao longo do arco de circunferência e excluir a parte que contém o setor circular, obtendo o papel dobrado, conforme Figura 5.\n\n[Figura]\n\nApós desdobrado o papel que restou na Figura 5, a figura plana que os estudantes obterão será",
     "alternatives": {
-      "a": "A",
-      "b": "B",
-      "c": "C",
-      "d": "D",
-      "e": "E"
+      "a": "[Figura]",
+      "b": "[Figura]",
+      "c": "[Figura]",
+      "d": "[Figura]",
+      "e": "[Figura]"
     },
-    "images": [],
+    "images": [
+      "figuras/q156_2022_fig2.png",
+      "figuras/q156_2022_fig1.png",
+      "figuras/q156_2022_fig3.png",
+      "figuras/q156_2022_fig4.png",
+      "figuras/q156_2022_fig5.png",
+      "figuras/q156_2022_fig6.png",
+      "figuras/q156_2022_fig7.png"
+    ],
     "tags": [
       "geometria plana"
     ],
@@ -429,11 +468,12 @@
     "test": "ENEM",
     "area": "math",
     "answer": "c",
-    "difficulty": 8
+    "difficulty": 8,
+    "contextId": null
   },
   {
     "number": 157,
-    "text": "A expressão algébrica que descreve S(q) em função de q é",
+    "text": "O funcionário de uma loja tem seu salário mensal formado por uma parcela fixa de 675 reais mais uma comissão que depende da quantidade de peças vendidas por ele no mês. O cálculo do valor dessa comissão é feito de acordo com estes critérios:\n• até a quinquagésima peça vendida, paga-se 5 reais por peça;\n• a partir da quinquagésima primeira peça vendida, o valor pago é de 7 reais por peça.\nRepresente por q a quantidade de peças vendidas no mês por esse funcionário, e por S(q) o seu salário mensal, em real, nesse mês.\n\nA expressão algébrica que descreve S(q) em função de q é",
     "alternatives": {
       "a": "S(q) = 675 + 12q",
       "b": "S(q) = 325 + 12q",
@@ -450,13 +490,11 @@
     "area": "math",
     "images": [],
     "contextId": null,
-    "contextIds": null,
-    "language": null,
     "difficulty": 7
   },
   {
     "number": 158,
-    "text": "Ao analisar os dados de uma epidemia em uma cidade, um modelo matemático foi usado para prever o número de pessoas infectadas a cada mês, ao longo de um ano. O tempo t é variável natural, variando de 1 a 12, que representa os meses do ano. Para tentar diminuir o número de infectados no próximo período, a propaganda oficial sobre os cuidados com a epidemia foi intensificada em diferentes períodos de intensificação das propagandas. A sugestão dos peritos é que seja escolhida a proposta que corresponde ao mês em que, segundo o modelo, há a maior quantidade de infectados.",
+    "text": "Ao analisar os dados de uma epidemia em uma cidade, peritos obtiveram um modelo que avalia a quantidade de pessoas infectadas a cada mês, ao longo de um ano. O modelo é dado por p(t) = −t² + 10t + 24, sendo t um número natural, variando de 1 a 12, que representa os meses do ano, e p(t) a quantidade de pessoas infectadas no mês t do ano. Para tentar diminuir o número de infectados no próximo ano, a Secretaria Municipal de Saúde decidiu intensificar a propaganda oficial sobre os cuidados com a epidemia. Foram apresentadas cinco propostas (I, II, III, IV e V), com diferentes períodos de intensificação das propagandas:\n• I: 1 ≤ t ≤ 2;\n• II: 3 ≤ t ≤ 4;\n• III: 5 ≤ t ≤ 6;\n• IV: 7 ≤ t ≤ 9;\n• V: 10 ≤ t ≤ 12.\nA sugestão dos peritos é que seja escolhida a proposta cujo período de intensificação da propaganda englobe o mês em que, segundo o modelo, há a maior quantidade de infectados. A sugestão foi aceita.\n\nA proposta escolhida foi a",
     "alternatives": {
       "a": "I.",
       "b": "II.",
@@ -473,17 +511,18 @@
     "test": "ENEM",
     "area": "math",
     "answer": "c",
-    "difficulty": 6
+    "difficulty": 6,
+    "contextId": null
   },
   {
     "number": 159,
-    "text": "Um atleta iniciou seu treinamento visando as competições. Ele realiza cinco diferentes de treinos: treino T, treino T, treino T, treino T e t. A letra R significa repouso. Após completar a sequência de 24 semanas, ele começa novamente a sequência a partir do treino T e segue a ordem descrita. Após 24 semanas de treinos é",
+    "text": "Um atleta iniciou seu treinamento visando as competições de fim de ano. Seu treinamento consiste em cinco tipos diferentes de treinos: treino T<sub>1</sub>, treino T<sub>2</sub>, treino T<sub>3</sub>, treino T<sub>4</sub> e treino T<sub>5</sub>. A sequência dos treinamentos deve seguir esta ordem:\n\n|Dia|1°|2°|3°|4°|5°|6°|7°|8°|9°|10°|11°|12°|13°|\n|-|-|-|-|-|-|-|-|-|-|-|-|-|-|\n|Treino|T<sub>1</sub>|R|R|T<sub>2</sub>|R|R|T<sub>3</sub>|R|T<sub>4</sub>|R|R|T<sub>5</sub>|R|\n\nA letra R significa repouso. Após completar a sequência de treinamentos, o atleta começa novamente a sequência a partir do treino T<sub>1</sub> e segue a ordem descrita. Após 24 semanas completas de treinamento, se dará o início das competições.\n\nA sequência de treinamentos que o atleta realizará na 24ª semana de treinos é",
     "alternatives": {
-      "a": "T R T R R T R.",
-      "b": "R T R T R R T .",
-      "c": "R T R R T   R T .",
-      "d": "R R T R T R R.",
-      "e": "R T R T R R T ."
+      "a": "T<sub>3</sub> R T<sub>4</sub> R R T<sub>5</sub> R",
+      "b": "R T<sub>3</sub> R T<sub>4</sub> R R T<sub>5</sub>",
+      "c": "R T<sub>4</sub> R R T<sub>5</sub> R T<sub>1</sub>",
+      "d": "R R T<sub>5</sub> R T<sub>1</sub> R R",
+      "e": "R T<sub>5</sub> R T<sub>1</sub> R R T<sub>2</sub>"
     },
     "images": [],
     "tags": [
@@ -494,19 +533,27 @@
     "test": "ENEM",
     "area": "math",
     "answer": "b",
-    "difficulty": 5
+    "difficulty": 5,
+    "contextId": null
   },
   {
     "number": 160,
-    "text": "Um robô, que tem um ímã em sua base, se desloca sobre a superfície externa de um cubo metálico, ao longo dos segmentos de reta cujas extremidades são pontos médios das arestas e centros de faces. Ele inicia seu deslocamento no ponto P, centro da face superior do cubo, segue para o centro da próxima face, converte à esquerda e segue para o centro da face seguinte, converte à direita e continua sua movimentação sempre alternando entre conversões à esquerda e à direita quando alcança o centro de uma face. O robô só termina sua movimentação quando retorna ao ponto P. A figura apresenta os deslocamentos iniciais desse robô. A projeção ortogonal do trajeto descrito por esse robo sobre o plano da base, após terminada sua movimentação visualizada da posição em que se está enxergando este cubo, é",
+    "text": "Um robô, que tem um ímã em sua base, se desloca sobre a superfície externa de um cubo metálico, ao longo dos segmentos de reta cujas extremidades são pontos médios das arestas e centros de faces. Ele inicia seu deslocamento no ponto P, centro da face superior do cubo, segue para o centro da próxima face, converte à esquerda e segue para o centro da face seguinte, converte à direita e continua sua movimentação sempre alternando entre conversões à esquerda e à direita quando alcança o centro de uma face. O robô só termina sua movimentação quando retorna ao ponto P. A figura apresenta os deslocamentos iniciais desse robô.\n\n[Figura]\n\nA projeção ortogonal do trajeto descrito por esse robô sobre o plano da base, após terminada sua movimentação, visualizada da posição em que se está enxergando este cubo, é",
     "alternatives": {
-      "a": "",
-      "b": "",
-      "c": "",
-      "d": "",
-      "e": ""
+      "a": "[Figura]",
+      "b": "[Figura]",
+      "c": "[Figura]",
+      "d": "[Figura]",
+      "e": "[Figura]"
     },
-    "images": [],
+    "images": [
+      "figuras/q160_2022_fig1.png",
+      "figuras/q160_2022_fig2.png",
+      "figuras/q160_2022_fig3.png",
+      "figuras/q160_2022_fig4.png",
+      "figuras/q160_2022_fig5.png",
+      "figuras/q160_2022_fig6.png"
+    ],
     "tags": [
       "geometria analítica",
       "geometria plana"
@@ -515,11 +562,12 @@
     "test": "ENEM",
     "area": "math",
     "answer": "a",
-    "difficulty": 9
+    "difficulty": 9,
+    "contextId": null
   },
   {
     "number": 161,
-    "text": "Uma empresa de engenharia projetou uma casa com forma de um retângulo para um de seus clientes. Esse cliente solicitou a inclusão de uma varanda em forma de L. A medida real da área da varanda, em metro quadrado, é",
+    "text": "Uma empresa de engenharia projetou uma casa com a forma de um retângulo para um de seus clientes. Esse cliente solicitou a inclusão de uma varanda em forma de L. A figura apresenta a planta baixa desenhada pela empresa, já com a varanda incluída, cujas medidas, indicadas em centímetro, representam os valores das dimensões da varanda na escala de 1 : 50.\n\n[Figura]\n\nA medida real da área da varanda, em metro quadrado, é",
     "alternatives": {
       "a": "33,40.",
       "b": "66,80.",
@@ -527,7 +575,9 @@
       "d": "133,60.",
       "e": "534,40."
     },
-    "images": [],
+    "images": [
+      "figuras/q161_2022_fig1.png"
+    ],
     "tags": [
       "aritmética e números",
       "geometria plana"
@@ -536,11 +586,12 @@
     "test": "ENEM",
     "area": "math",
     "answer": "a",
-    "difficulty": 5
+    "difficulty": 5,
+    "contextId": null
   },
   {
     "number": 162,
-    "text": "Uma loja de roupas fixou uma meta de vendas de 7 000 reais para um determinado mês de 30 dias. O gráfico mostra o volume de vendas dessa loja, em real, os dez primeiros dias do mês e entre o dia dez e o dia inte desse mês, nos seus dois únicos setores (infantil e dulto). Suponha que a variação no volume de vendas, ara o período registrado, tenha se dado de forma linear, omomo mostrado no gráfico, e que essa tendência se mantenha a mesma para os próximos dez dias. Ao final do trigésimo dia, quanto faltará no volume de vendas, m real, para que a meta fixada para o mês seja alcançada?",
+    "text": "Uma loja de roupas fixou uma meta de vendas de 7 000 reais para um determinado mês de 30 dias. O gráfico mostra o volume de vendas dessa loja, em real, nos dez primeiros dias do mês e entre o dia dez e o dia vinte desse mês, nos seus dois únicos setores (infantil e adulto). Suponha que a variação no volume de vendas, para o período registrado, tenha se dado de forma linear, como mostrado no gráfico, e que essa tendência se mantenha a mesma para os próximos dez dias.\n\n[Gráfico]\n\nAo final do trigésimo dia, quanto faltará no volume de vendas, em real, para que a meta fixada para o mês seja alcançada?",
     "alternatives": {
       "a": "5 000",
       "b": "7 000",
@@ -548,7 +599,9 @@
       "d": "18 000",
       "e": "29 000"
     },
-    "images": [],
+    "images": [
+      "figuras/q162_2022_fig1.png"
+    ],
     "tags": [
       "estatística",
       "matemática financeira"
@@ -557,11 +610,12 @@
     "test": "ENEM",
     "area": "math",
     "answer": "c",
-    "difficulty": 6
+    "difficulty": 6,
+    "contextId": null
   },
   {
     "number": 163,
-    "text": "Em uma universidade, atuam professores que estão enquadrados funcionalmente pela sua maior titulação: mestre ou doutor. Nela há, atualmente, 60 mestres e 40 doutores. Os salários mensais dos professores mestre e dos doutores são, respectivamente, R$ 8 000,00 e R$ 12 000,00. A diretoria da instituição pretende proporcionar um aumento salarial diferenciado para o ano seguinte, de tal forma que o salário médio mensal dos professores dessa instituição não ultrapasse R$ 12 240,00. A universidade já estabeleceu que o aumento salarial será de 25% para os mestres e precisa ainda definir o percentual de reajuste para os doutores.",
+    "text": "Em uma universidade, atuam professores que estão enquadrados funcionalmente pela sua maior titulação: mestre ou doutor. Nela há, atualmente, 60 mestres e 40 doutores. Os salários mensais dos professores mestres e dos doutores são, respectivamente, R$ 8 000,00 e R$ 12 000,00.\nA diretoria da instituição pretende proporcionar um aumento salarial diferenciado para o ano seguinte, de tal forma que o salário médio mensal dos professores dessa instituição não ultrapasse R$ 12 240,00. A universidade já estabeleceu que o aumento salarial será de 25% para os mestres e precisa ainda definir o percentual de reajuste para os doutores.\n\nMantido o número atual de professores com suas atuais titulações, o aumento salarial, em porcentagem, a ser concedido aos doutores deverá ser de, no máximo,",
     "alternatives": {
       "a": "14,4",
       "b": "20,7",
@@ -577,11 +631,12 @@
     "test": "ENEM",
     "area": "math",
     "answer": "d",
-    "difficulty": 7
+    "difficulty": 7,
+    "contextId": null
   },
   {
     "number": 164,
-    "text": "Um borrifador de atuação automática libera, a cada acionamento, uma mesma quantidade de inseticida. O recipiente desse produto, quando cheio, contém 360 ml de inseticida, que duram 60 dias se o borrifador permanecer ligado ininterruptamente e for acionado a cada 48 minutos. A quantidade de inseticida que é liberada a cada acionamento do borrifador, em mililitro, é",
+    "text": "Um borrifador de atuação automática libera, a cada acionamento, uma mesma quantidade de inseticida. O recipiente desse produto, quando cheio, contém 360 mL de inseticida, que duram 60 dias se o borrifador permanecer ligado ininterruptamente e for acionado a cada 48 minutos.\n\nA quantidade de inseticida que é liberada a cada acionamento do borrifador, em mililitro, é",
     "alternatives": {
       "a": "0,125",
       "b": "0,200",
@@ -601,7 +656,7 @@
   },
   {
     "number": 165,
-    "text": "Definem-se o dia e o ano de um planeta de um sistema solar como sendo, respectivamente, o tempo que o planeta leva para dar 1 volta completa em torno de seu próprio eixo de rotação e tempo para dar 1 volta completa em torno de seu Sol. Suponha que exista um planeta Z, em algum sistema solar, onde um dia corresponda a 73 dias terrestres e 2 de seus anos correspondam a 1 ano terrestre. Considere que 1 ano terrestre tem 365 de seus dias. No planeta Z, seu ano corresponderia a quantos de seus dias?",
+    "text": "Definem-se o dia e o ano de um planeta de um sistema solar como sendo, respectivamente, o tempo que o planeta leva para dar 1 volta completa em torno de seu próprio eixo de rotação e o tempo para dar 1 volta completa em torno de seu Sol.\nSuponha que exista um planeta Z, em algum sistema solar, onde um dia corresponda a 73 dias terrestres e 2 de seus anos correspondam a 1 ano terrestre. Considere que 1 ano terrestre tem 365 de seus dias.\n\nNo planeta Z, seu ano corresponderia a quantos de seus dias?",
     "alternatives": {
       "a": "2,5",
       "b": "10,0",
@@ -621,7 +676,7 @@
   },
   {
     "number": 166,
-    "text": "Qual o número de ultrapassagens, após o início da competição, efetuadas pelo veículo que chegou em último lugar?",
+    "text": "Em uma competição de velocidade, diz-se que há uma ultrapassagem quando um veículo que está atrás de outro passa à sua frente, com ambos se deslocando no mesmo sentido. Considere uma competição automobilística entre cinco carros em uma pista com 100 m de comprimento, onde todos largam no mesmo instante e da mesma linha. O gráfico mostra a variação da distância percorrida por cada veículo, em função do tempo, durante toda a competição.\n\n[Gráfico]\n\nQual o número de ultrapassagens, após o início da competição, efetuadas pelo veículo que chegou em último lugar?",
     "alternatives": {
       "a": "0",
       "b": "1",
@@ -629,7 +684,9 @@
       "d": "3",
       "e": "4"
     },
-    "images": [],
+    "images": [
+      "figuras/q166_2022_fig1.png"
+    ],
     "tags": [
       "aritmética e números",
       "estatística"
@@ -642,7 +699,7 @@
   },
   {
     "number": 167,
-    "text": "Em uma loja, o preço promocional de uma geladeira de R$ 1 000,00 para pagamento somente em dinheiro. Seu preço normal, fora da promoção, é 10% maior. Para agamento feito com o cartão de crédito da loja, é dado m desconto de 2% sobre o preço normal. Uma cliente decidiu comprar essa geladeira, optando pelo pagamento com o cartão de crédito da loja. Ela calculou que o valor a ser pago seria o preço promocional crescido de 8%. Ao ser informada pela loja do valor a pagar, segundo sua opção, percebeu uma diferença entre eu cálculo e o valor que lhe foi apresentado.",
+    "text": "Em uma loja, o preço promocional de uma geladeira é de R$ 1 000,00 para pagamento somente em dinheiro. Seu preço normal, fora da promoção, é 10% maior. Para pagamento feito com o cartão de crédito da loja, é dado um desconto de 2% sobre o preço normal.\nUma cliente decidiu comprar essa geladeira, optando pelo pagamento com o cartão de crédito da loja. Ela calculou que o valor a ser pago seria o preço promocional acrescido de 8%. Ao ser informada pela loja do valor a pagar, segundo sua opção, percebeu uma diferença entre seu cálculo e o valor que lhe foi apresentado.\n\nO valor apresentado, pela loja, comparado ao valor calculado pela cliente, foi,",
     "alternatives": {
       "a": "R$ 2,00 menor",
       "b": "R$ 100,00 menor",
@@ -662,7 +719,7 @@
   },
   {
     "number": 168,
-    "text": "Uma pessoa precisa se deslocar de automóvel do ponto P para o ponto Q, indicados na figura, na qual as linhas verticais e horizontais simbolizam ruas. Por causa do sentido de tráfego nessas ruas, o caminho poligonal destacado é a possibilidade mais curta de efetuar esse deslocamento. Para descrevê-lo deve-se especificar qual o sentido a ser tomado em cada cruzamento de ruas, em relação à direção de deslocamento do automóvel, que se movimentará continuamente. Para isso, empregam-se as letras E, F e D para indicar “vire à esquerda”, “siga em frente” e “vire à direita”, respectivamente. A sequência de letras que descreve o caminho poligonal destacado é",
+    "text": "Uma pessoa precisa se deslocar de automóvel do ponto P para o ponto Q, indicados na figura, na qual as linhas verticais e horizontais simbolizam ruas.\n\n[Figura]\n\nPor causa do sentido de tráfego nessas ruas, o caminho poligonal destacado é a possibilidade mais curta de efetuar esse deslocamento. Para descrevê-lo deve-se especificar qual o sentido a ser tomado em cada cruzamento de ruas, em relação à direção de deslocamento do automóvel, que se movimentará continuamente. Para isso, empregam-se as letras E, F e D para indicar \"vire à esquerda\", \"siga em frente\" e \"vire à direita\", respectivamente.\n\nA sequência de letras que descreve o caminho poligonal destacado é",
     "alternatives": {
       "a": "DDEFDDEEFFD",
       "b": "DFEFDDDEFFD",
@@ -670,7 +727,9 @@
       "d": "EFDFEEDDFFE",
       "e": "EFDFEEEDFFE"
     },
-    "images": [],
+    "images": [
+      "figuras/q168_2022_fig1.png"
+    ],
     "tags": [
       "geometria plana",
       "mecânica newtoniana"
@@ -683,7 +742,7 @@
   },
   {
     "number": 169,
-    "text": "Uma loja comercializa cinco modelos de caixas-d’água (I, II, III, IV e V), todos em formato de cilindro reto de base circular. Os modelos II, III, IV e V têm as especificações de suas dimensões dadas em relação às dimensões do modelo I, cuja profundidade é P e área da base é A, como segue: \n• modelo II: o dobro da profundidade e a metade da área da base do modelo I;\n• modelo III: o dobro da profundidade e a metade do raio da base do modelo I;\n• modelo IV: a metade da profundidade e o dobro da área da base do modelo I;\n• modelo V: a metade da profundidade e o dobro do raio da base do modelo I.\nUma pessoa pretende comprar nessa loja o modelo de caixa-d’água que ofereça a maior capacidade volumétrica. O modelo escolhido deve ser o",
+    "text": "Uma loja comercializa cinco modelos de caixas-d'água (I, II, III, IV e V), todos em formato de cilindro reto de base circular. Os modelos II, III, IV e V têm as especificações de suas dimensões dadas em relação às dimensões do modelo I, cuja profundidade é P e área da base é A, como segue:\n• modelo II: o dobro da profundidade e a metade da área da base do modelo I;\n• modelo III: o dobro da profundidade e a metade do raio da base do modelo I;\n• modelo IV: a metade da profundidade e o dobro da área da base do modelo I;\n• modelo V: a metade da profundidade e o dobro do raio da base do modelo I.\n\nUma pessoa pretende comprar nessa loja o modelo de caixa-d'água que ofereça a maior capacidade volumétrica.\n\nO modelo escolhido deve ser o",
     "alternatives": {
       "a": "I.",
       "b": "II.",
@@ -704,7 +763,7 @@
   },
   {
     "number": 170,
-    "text": "A rentabilidade do aluguel de um imóvel é calculada ela razão entre o valor mensal de aluguel e o valor de mercado desse imóvel. Com base nos dados fornecedidos, em que ano a entabilidade do aluguel foi maior?",
+    "text": "No período de 2005 a 2013, o valor de venda dos imóveis em uma cidade apresentou alta, o que resultou no aumento dos aluguéis. Os gráficos apresentam a evolução desses valores, para um mesmo imóvel, no mercado imobiliário dessa cidade.\n\n[Gráfico]\n\n[Gráfico]\n\nA rentabilidade do aluguel de um imóvel é calculada pela razão entre o valor mensal de aluguel e o valor de mercado desse imóvel.\n\nCom base nos dados fornecidos, em que ano a rentabilidade do aluguel foi maior?",
     "alternatives": {
       "a": "2005",
       "b": "2007",
@@ -712,7 +771,10 @@
       "d": "2011",
       "e": "2013"
     },
-    "images": [],
+    "images": [
+      "figuras/q170_2022_fig1.png",
+      "figuras/q170_2022_fig2.png"
+    ],
     "tags": [
       "aritmética e números"
     ],
@@ -724,7 +786,7 @@
   },
   {
     "number": 171,
-    "text": "No quadro estão registradas as pontuações desses cinco jogadores nos quatro primeiros jogos da finais deste ano. O quinto e último jogo será realizado para decidir a equipe campeã e qual o melhor jogador da temporada. O jogador que precisa fazer a menor quantidade de pontos no quinto jogo, para igualar a média de pontos do melhor jogador da temporada passada, é o",
+    "text": "Nos cinco jogos finais da última temporada, com uma média de 18 pontos por jogo, um jogador foi eleito o melhor do campeonato de basquete. Na atual temporada, cinco jogadores têm a chance de igualar ou melhorar essa média. No quadro estão registradas as pontuações desses cinco jogadores nos quatro primeiros jogos das finais deste ano.\n\n|Jogadores|Jogo 1|Jogo 2|Jogo 3|Jogo 4|\n|-|-|-|-|-|\n|I|12|25|20|20|\n|II|12|12|27|20|\n|III|14|14|17|26|\n|IV|15|18|21|27|\n|V|22|15|23|15|\nO quinto e último jogo será realizado para decidir a equipe campeã e qual o melhor jogador da temporada.\n\nO jogador que precisa fazer a menor quantidade de pontos no quinto jogo, para igualar a média de pontos do melhor jogador da temporada passada, é o",
     "alternatives": {
       "a": "I.",
       "b": "II.",
@@ -744,7 +806,7 @@
   },
   {
     "number": 172,
-    "text": "Um casal planeja construir em sua chácara um piscina com o formato de um paralelepípedo retângulo com capacidade para 90 000 L de água. O casal contratou uma empresa de construções que apresentou cinco projetos com diferentes combinações nas dimensões internas de profundidade, largura e comprimento. A piscina a ser construída terá revestimento interno em suas paredes e fundo com um mesma cerâmica, e o casal irá escolher o projeto que exija a menor área de revestimento.",
+    "text": "Um casal planeja construir em sua chácara uma piscina com o formato de um paralelepípedo retângulo com capacidade para 90 000 L de água. O casal contratou uma empresa de construções que apresentou cinco projetos com diferentes combinações nas dimensões internas de profundidade, largura e comprimento. A piscina a ser construída terá revestimento interno em suas paredes e fundo com uma mesma cerâmica, e o casal irá escolher o projeto que exija a menor área de revestimento.\nAs dimensões internas de profundidade, largura e comprimento, respectivamente, para cada um dos projetos, são:\n• projeto I: 1,8 m, 2,0 m e 25,0 m;\n• projeto II: 2,0 m, 5,0 m e 9,0 m;\n• projeto III: 1,0 m, 6,0 m e 15,0 m;\n• projeto IV: 1,5 m, 15,0 m e 4,0 m;\n• projeto V: 2,5 m, 3,0 m e 12,0 m.\n\nO projeto que o casal deverá escolher será o",
     "alternatives": {
       "a": "I",
       "b": "II",
@@ -765,7 +827,7 @@
   },
   {
     "number": 173,
-    "text": "Qual foi o número total de candidatos inscritos nesse processo seletivo?",
+    "text": "Uma instituição de ensino superior ofereceu vagas em um processo seletivo de acesso a seus cursos. Finalizadas as inscrições, foi divulgada a relação do número de candidatos por vaga em cada um dos cursos oferecidos. Esses dados são apresentados no quadro.\n\n|Curso|Número de vagas oferecidas|Número de candidatos por vaga|\n|-|-|-|\n|Administração|30|6|\n|Ciências Contábeis|40|6|\n|Engenharia Elétrica|50|7|\n|História|30|8|\n|Letras|25|4|\n|Pedagogia|25|5|\n\nQual foi o número total de candidatos inscritos nesse processo seletivo?",
     "alternatives": {
       "a": "200",
       "b": "400",
@@ -785,7 +847,7 @@
   },
   {
     "number": 174,
-    "text": "Peças metálicas de aeronaves abandonadas em eroportos serão recicladas. Uma dessas peças é maciça e tem o formato cilíndrico, com a medida do raio a base igual a 4 cm e a da altura igual a 50 cm. Ela será erretida, e o volume de metal resultante será utilizado ara a fabricação de esferas maciças com diâmetro de cm, a serem usadas para confeccionar rolamentos. Para estimar a quantidade de esferas que poderão ser obtidas a partir de cada uma das peças cilíndricas, admite-se que não ocorre perda de material durante o processo de derretimento. Quantas dessas esferas poderão ser obtidas a partir de cada peça cilíndrica?",
+    "text": "Peças metálicas de aeronaves abandonadas em aeroportos serão recicladas. Uma dessas peças é maciça e tem o formato cilíndrico, com a medida do raio da base igual a 4 cm e a da altura igual a 50 cm. Ela será derretida, e o volume de metal resultante será utilizado para a fabricação de esferas maciças com diâmetro de 1 cm, a serem usadas para confeccionar rolamentos. Para estimar a quantidade de esferas que poderão ser produzidas a partir de cada uma das peças cilíndricas, admite-se que não ocorre perda de material durante o processo de derretimento.\n\nQuantas dessas esferas poderão ser obtidas a partir de cada peça cilíndrica?",
     "alternatives": {
       "a": "800",
       "b": "1 200",
@@ -806,7 +868,7 @@
   },
   {
     "number": 175,
-    "text": "Ao escutar a notícia de que um filme recém-lançado arrecadou, no primeiro mês de lançamento, R$ 1,35 bilhão em bilheteria, um estudante escreveu corretamente o número que representa essa quantia, com todos os seus algarismos. O número escrito pelo estudante foi",
+    "text": "Ao escutar a notícia de que um filme recém-lançado arrecadou, no primeiro mês de lançamento, R$ 1,35 bilhão em bilheteria, um estudante escreveu corretamente o número que representa essa quantia, com todos os seus algarismos.\n\nO número escrito pelo estudante foi",
     "alternatives": {
       "a": "135 000,00.",
       "b": "1 350 000,00.",
@@ -826,7 +888,7 @@
   },
   {
     "number": 176,
-    "text": "O governo de um estado pretende realizar uma obra de infraestrutura para auxiliar na integração no processo de escoamento da produção agrícola de duas cidades. O projeto consiste na interligação direta das cidades A e B com a Rodovia 003, pela construção das Rodovias 001 e 002. Pretende-se que a distância percorrida entre as duas cidades, pelas Rodovias 001 e 002, passando pelo ponto de conexão, seja a menor possível. Dadas as exigências do projeto, qual das localizações sugeridas deve ser a escolhida para o ponto de conexão?",
+    "text": "O governo de um estado pretende realizar uma obra de infraestrutura para auxiliar na integração e no processo de escoamento da produção agrícola de duas cidades. O projeto consiste na interligação direta das cidades A e B com a Rodovia 003, pela construção das Rodovias 001 e 002. As duas rodovias serão construídas em linha reta e deverão se conectar à Rodovia 003 em um mesmo ponto, conforme esquema apresentado na figura, na qual estão também indicadas as posições das cidades A e B, considerando o eixo x posicionado sobre a Rodovia 003, e cinco localizações sugeridas para o ponto de conexão entre as três rodovias.[Figura]Pretende-se que a distância percorrida entre as duas cidades, pelas Rodovias 001 e 002, passando pelo ponto de conexão, seja a menor possível.\n\nDadas as exigências do projeto, qual das localizações sugeridas deve ser a escolhida para o ponto de conexão?",
     "alternatives": {
       "a": "A",
       "b": "B",
@@ -834,7 +896,9 @@
       "d": "D",
       "e": "E"
     },
-    "images": [],
+    "images": [
+      "figuras/q176_2022_fig1.png"
+    ],
     "tags": [
       "aritmética e números",
       "geometria plana"
@@ -847,7 +911,7 @@
   },
   {
     "number": 177,
-    "text": "Uma pessoa precisa contratar um operário para azer um serviço em sua casa. Para isso, ela postou um núncio em uma rede social. Cinco pessoas responderam informando preços por hora trabalhada, gasto diário com transporte e tempo necessário para conclusão do serviço. Se a pessoa pretende gastar o mínimo possível com essa contratação, irá contratar o operário",
+    "text": "Uma pessoa precisa contratar um operário para fazer um serviço em sua casa. Para isso, ela postou um anúncio em uma rede social.\nCinco pessoas responderam informando preços por hora trabalhada, gasto diário com transporte e tempo necessário para conclusão do serviço, conforme valores apresentados no quadro.\n\n|Operário|Preço por hora (real)|Preço do transporte (real)|Tempo até conclusão (hora)|\n|-|-|-|-|\n|I|120|0,00|8|\n|II|180|0,00|6|\n|III|170|20,00|6|\n|IV|110|10,00|6|\n|V|110|0,00|10|\n\nSe a pessoa pretende gastar o mínimo possível com essa contratação, irá contratar o operário",
     "alternatives": {
       "a": "I.",
       "b": "II.",
@@ -868,7 +932,7 @@
   },
   {
     "number": 178,
-    "text": "Usando uma receita-base de massa, ela repara uma porção, com a qual produz 50 docinhos maciços de formato esférico, com 2 cm de diâmetro. Um cliente encomenda 150 desses docinhos, mas pede que cada um tenha formato esférico com 4 cm de diâmetro. A cozinheira pretende preparar o número exato de porções da receita-base de massa necessário para produzir os docinhos dessa encomenda. Quantas porções da receita-base de massa ela deve preparar para atender esse cliente?",
+    "text": "Uma cozinheira produz docinhos especiais por encomenda. Usando uma receita-base de massa, ela prepara uma porção, com a qual produz 50 docinhos maciços de formato esférico, com 2 cm de diâmetro. Um cliente encomenda 150 desses docinhos, mas pede que cada um tenha formato esférico com 4 cm de diâmetro. A cozinheira pretende preparar o número exato de porções da receita-base de massa necessário para produzir os docinhos dessa encomenda.\n\nQuantas porções da receita-base de massa ela deve preparar para atender esse cliente?",
     "alternatives": {
       "a": "2",
       "b": "3",
@@ -889,7 +953,7 @@
   },
   {
     "number": 179,
-    "text": "Pode-se observar que a esperança de vida ao nascimento em 2012 foi exatamente a média das registradas nos anos de 2011 e 2013. Suponha que esse fato também ocorreu com a esperança de vida ao nascimento em 2013, em relação às esperanças de vida de 2012 e de 2014. Caso a suposição feita tenha sido confirmada, qual será a esperança de vida ao nascimento no Brasil no ano de 2014?",
+    "text": "Pode-se observar que a esperança de vida ao nascer em 2012 foi exatamente a média das registradas nos anos de 2011 e 2013. Suponha que esse fato também ocorreu com a esperança de vida ao nascer em 2013, em relação às esperanças de vida de 2012 e de 2014.\n\nCaso a suposição feita tenha sido confirmada, a esperança de vida ao nascer no Brasil no ano de 2014 terá sido, em ano, igual a",
     "alternatives": {
       "a": "74,23",
       "b": "74,51",
@@ -905,19 +969,27 @@
     "test": "ENEM",
     "area": "math",
     "answer": "b",
-    "difficulty": 5
+    "difficulty": 5,
+    "contextId": "enem_2022_math_q179_ctx1"
   },
   {
     "number": 180,
-    "text": "Na figura estão destacadas duas trajetórias sobre a superfície do globo terrestre, descritas ao se percorrer parte dos meridianos 1, 2 e da Linha do Equador, sendo que os meridianos 1 e 2 estão contidos em planos perpendiculares entre si. O plano α é paralelo ao que contém a Linha do Equador. A vista superior da projeção ortogonal sobre o plano α dessas duas trajetórias é",
+    "text": "Na figura estão destacadas duas trajetórias sobre a superfície do globo terrestre, descritas ao se percorrer parte dos meridianos 1, 2 e da Linha do Equador, sendo que os meridianos 1 e 2 estão contidos em planos perpendiculares entre si. O plano α é paralelo ao que contém a Linha do Equador.\n\n[Figura]\n\nA vista superior da projeção ortogonal sobre o plano α dessas duas trajetórias é",
     "alternatives": {
-      "a": "",
-      "b": "",
-      "c": "",
-      "d": "",
-      "e": ""
+      "a": "[Figura]",
+      "b": "[Figura]",
+      "c": "[Figura]",
+      "d": "[Figura]",
+      "e": "[Figura]"
     },
-    "images": [],
+    "images": [
+      "figuras/q180_2022_fig1.png",
+      "figuras/q180_2022_fig2.png",
+      "figuras/q180_2022_fig3.png",
+      "figuras/q180_2022_fig4.png",
+      "figuras/q180_2022_fig5.png",
+      "figuras/q180_2022_fig6.png"
+    ],
     "tags": [
       "geometria plana",
       "trigonometria"

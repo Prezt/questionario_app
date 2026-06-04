@@ -55,11 +55,11 @@ REVISAO:
     [x] humanas
     [x] ciencias
     [x] matematica
- [] ENEM 2022
+ [x] ENEM 2022
     [x] linguagens
     [x] humanas
     [x] ciencias
-    [] matematica
+    [x] matematica
  [] ENEM 2021
     [] linguagens
     [] humanas
