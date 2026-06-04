@@ -114,6 +114,9 @@ const CHANGELOG = [
     date: '04/06/2026',
     items: [
       '2022 matemática revisada',
+      'Resumo: cor âmbar distingue questões em branco das erradas',
+      'Resumo: placar mostra corretas/respondidas/total',
+      'Alterações apenas visuais — dados continuam armazenados como antes',
     ],
   },
   {
@@ -2268,11 +2271,20 @@ export default function App() {
                   style={{ width: `${(wrongCount / sortedQuestions.length) * 100}%` }}
                 />
               )}
+              {unansweredCount > 0 && (
+                <div
+                  className="summary-score-bar-fill summary-score-bar-fill--skip"
+                  style={{ width: `${(unansweredCount / sortedQuestions.length) * 100}%` }}
+                />
+              )}
             </div>
             <span className="summary-score-pct">
-              {sortedQuestions.length > 0
-                ? Math.round((correctCount / sortedQuestions.length) * 100)
-                : 0}%
+              <span className="summary-score-frac">{correctCount}/{answeredCount}/{scorableQuestions.length}</span>
+              <span className="summary-score-pct-val">
+                {sortedQuestions.length > 0
+                  ? Math.round((correctCount / sortedQuestions.length) * 100)
+                  : 0}%
+              </span>
             </span>
           </div>
 
@@ -2430,18 +2442,18 @@ export default function App() {
                   {sortedQuestions.map((q) => {
                     const att = attempts[q.number]
                     const t = questionTimes[q.number]
-                    const rowClass = att ? (att.correct ? 'summary-row--ok' : 'summary-row--bad') : ''
+                    const rowClass = att ? (att.correct ? 'summary-row--ok' : 'summary-row--bad') : 'summary-row--skip'
                     return (
                       <tr key={q.number} className={rowClass}>
                         <td className="summary-td-num">{q.number}</td>
-                        <td>{att?.selected?.toUpperCase() ?? <span className="summary-dash">—</span>}</td>
+                        <td>{att?.selected?.toUpperCase() ?? <span className="summary-dash summary-dash--skip">—</span>}</td>
                         <td>{q.answer.toUpperCase()}</td>
                         <td className="summary-td-result">
                           {att
                             ? att.correct
                               ? <span className="summary-tick">✓</span>
                               : <span className="summary-cross">✗</span>
-                            : <span className="summary-dash">—</span>}
+                            : <span className="summary-dash summary-dash--skip">○</span>}
                         </td>
                         <td className="summary-td-time">{t ? formatTime(t) : <span className="summary-dash">—</span>}</td>
                       </tr>
