@@ -1,13 +1,37 @@
 [
   {
+    "number": 1,
+    "text": "O texto, que aborda questões referentes ao tema do culto à celebridade, tem o objetivo de",
+    "alternatives": {
+      "a": "destacar os méritos das celebridades.",
+      "b": "criticar o consumismo das celebridades.",
+      "c": "ressaltar a necessidade de reflexão dos fãs.",
+      "d": "culpar as celebridades pela obsessão dos fãs.",
+      "e": "valorizar o marketing pessoal das celebridades."
+    },
+    "images": [],
+    "tags": [
+      "interpretação de texto"
+    ],
+    "difficulty": 5,
+    "year": 2021,
+    "test": "ENEM",
+    "area": "linguagens",
+    "answer": "c",
+    "contextIds": [
+      "enem_2021_lang_q1_ctx1"
+    ],
+    "language": "en"
+  },
+  {
     "number": 2,
     "text": "Ao descrever o processo de formação da Inglaterra, o autor do poema recorre a características de outro gênero textual para evidenciar",
     "alternatives": {
-      "a": "a riqueza da mistura culutral.",
+      "a": "a riqueza da mistura cultural.",
       "b": "um legado de origem geográfica.",
       "c": "um impacto de natureza histórica.",
       "d": "um problema de estratificação social.",
-      "e": "a questão da intolerância linguistica."
+      "e": "a questão da intolerância linguística."
     },
     "images": [],
     "tags": [
@@ -25,32 +49,37 @@
   },
   {
     "number": 3,
-    "text": "[UNABLE TO EXTRACT - SOURCE TEXT SEVERELY CORRUPTED]",
+    "text": "A crítica do livro de memórias de Michelle Obama, ex-primeira-dama dos EUA, aborda a história das relações humanas na cidade natal da autora. Nesse contexto, o uso do vocábulo \"unthinkable\" ressalta que",
     "alternatives": {
-      "a": "[CORRUPTED]",
-      "b": "[CORRUPTED]",
-      "c": "[CORRUPTED]",
-      "d": "[CORRUPTED]",
-      "e": "[CORRUPTED]"
+      "a": "a ascensão social era improvável.",
+      "b": "a mudança de nome era impensável.",
+      "c": "a origem do indivíduo era irrelevante.",
+      "d": "o trabalho feminino era inimaginável.",
+      "e": "o comportamento parental era irresponsável."
     },
     "images": [],
-    "tags": [],
+    "tags": [
+      "interpretação de texto"
+    ],
     "difficulty": 5,
     "year": 2021,
     "test": "ENEM",
     "area": "linguagens",
     "answer": "a",
-    "language": "en"
+    "language": "en",
+    "contextIds": [
+      "enem_2021_lang_q3_ctx1"
+    ]
   },
   {
     "number": 4,
-    "text": "A presença de \"at odds with\"na fala da personagem do cartum revela o(a)",
+    "text": "A presença de \"at odds with\" na fala da personagem do cartum revela o(a)",
     "alternatives": {
       "a": "necessidade de acessar informações confiáveis.",
-      "b": "dificuldades de conciliar diferentes anseios.",
+      "b": "dificuldade de conciliar diferentes anseios.",
       "c": "desejo de dominar novas tecnologias.",
       "d": "desafio de permanecer imparcial.",
-      "e": "vontade de ler noticias positivas."
+      "e": "vontade de ler notícias positivas."
     },
     "images": [],
     "tags": [],
@@ -66,13 +95,163 @@
   },
   {
     "number": 5,
-    "text": "O texto apresenta uma cena de filme. Qual é a principal característica dessa cena?",
+    "text": "Considerando-se o olhar dos personagens, esse trecho do roteiro de um filme permite reconhecer que a avaliação sobre um lugar depende do(a)",
     "alternatives": {
-      "a": "A apresentação de personagens em ambientes externos.",
-      "b": "A descrição detalhada de diálogos entre personagens.",
-      "c": "A narração de eventos que ocorrem durante o dia.",
-      "d": "A crítica sobre a qualidade cinematográfica.",
-      "e": "A exploração de temas relacionados a museus."
+      "a": "beleza do próprio local.",
+      "b": "perspectiva do visitante.",
+      "c": "contexto histórico do local.",
+      "d": "tempo de permanência no local.",
+      "e": "finalidade da viagem do visitante."
+    },
+    "images": [],
+    "tags": [
+      "interpretação de texto"
+    ],
+    "difficulty": 5,
+    "year": 2021,
+    "test": "ENEM",
+    "area": "linguagens",
+    "answer": "b",
+    "language": "en",
+    "contextIds": [
+      "enem_2021_lang_q5_ctx1"
+    ]
+  },
+  {
+    "number": 1,
+    "text": "Esse trecho da resenha de um livro de entrevistas concedidas por Federico García Lorca tem por finalidade",
+    "alternatives": {
+      "a": "ressaltar a atração do entrevistado por questões místicas.",
+      "b": "divulgar a comoção das elites com as obras do entrevistado.",
+      "c": "salientar o compromisso do entrevistado com as questões sociais.",
+      "d": "mostrar a atualidade das obras poéticas e teatrais do entrevistado.",
+      "e": "criticar o interesse do entrevistado por particularidades da vida humana."
+    },
+    "images": [],
+    "tags": [
+      "interpretação de texto"
+    ],
+    "difficulty": 5,
+    "year": 2021,
+    "test": "ENEM",
+    "area": "linguagens",
+    "answer": "c",
+    "language": "es",
+    "contextIds": [
+      "enem_2021_lang_es_q1_ctx1"
+    ]
+  },
+  {
+    "number": 2,
+    "text": "No fragmento do romance, a uruguaia Auxilio narra a experiência que viveu no México ao trabalhar voluntariamente para dois escritores espanhóis. Com base na relação com os escritores, ela reflete sobre a(s)",
+    "alternatives": {
+      "a": "variação linguística do espanhol.",
+      "b": "sujeira dos livros de literatura.",
+      "c": "distintas maneiras de acolher do mexicano.",
+      "d": "orientações sobre a limpeza das casas dos espanhóis.",
+      "e": "dificuldades de comunicação entre patrão e empregada."
+    },
+    "images": [],
+    "tags": [
+      "interpretação de texto",
+      "língua espanhola"
+    ],
+    "difficulty": 5,
+    "year": 2021,
+    "test": "ENEM",
+    "area": "linguagens",
+    "answer": "a",
+    "language": "es",
+    "contextIds": [
+      "enem_2021_lang_es_q2_ctx1"
+    ]
+  },
+  {
+    "number": 3,
+    "text": "O texto trata da evolução inerente às funcionalidades de recursos tecnológicos. A expressão \"la guillotina del siglo XXI\" destaca que os celulares de hoje podem",
+    "alternatives": {
+      "a": "oferecer recursos com funções múltiplas.",
+      "b": "reunir usuários com ideias semelhantes.",
+      "c": "divulgar informação instantânea.",
+      "d": "organizar movimentos sociais.",
+      "e": "assumir utilidade jurídica."
+    },
+    "images": [],
+    "tags": [
+      "interpretação de texto",
+      "língua espanhola"
+    ],
+    "difficulty": 5,
+    "year": 2021,
+    "test": "ENEM",
+    "area": "linguagens",
+    "answer": "e",
+    "language": "es",
+    "contextIds": [
+      "enem_2021_lang_es_q3_ctx1"
+    ]
+  },
+  {
+    "number": 4,
+    "text": "No âmbito literário, são mobilizados diferentes recursos que visam à expressividade. No texto, a analogia estabelecida pela expressão \"como las aguas a una piedra\" tem a função de",
+    "alternatives": {
+      "a": "enfatizar a ação do tempo sobre a personagem.",
+      "b": "descrever a objetificação do ambiente.",
+      "c": "expor a anacronia da personagem.",
+      "d": "caracterizar o espaço do conto.",
+      "e": "narrar a perenidade da velhice."
+    },
+    "images": [],
+    "tags": [
+      "interpretação de texto",
+      "língua espanhola"
+    ],
+    "difficulty": 5,
+    "year": 2021,
+    "test": "ENEM",
+    "area": "linguagens",
+    "answer": "a",
+    "language": "es",
+    "contextIds": [
+      "enem_2021_lang_es_q4_ctx1"
+    ]
+  },
+  {
+    "number": 5,
+    "text": "A charge evoca uma situação de assombro frente a uma realidade que assola as sociedades contemporâneas.\n\nSeu efeito humorístico reside na crítica diante do(a)",
+    "alternatives": {
+      "a": "constatação do ser humano como o responsável pela condição caótica do mundo.",
+      "b": "apelo à religiosidade diante das dificuldades enfrentadas pela humanidade.",
+      "c": "indignação dos trabalhadores em face das injustiças sociais.",
+      "d": "veiculação de informações trágicas pelos telejornais.",
+      "e": "manipulação das notícias difundidas pelas mídias."
+    },
+    "images": [
+      "figuras/q005_2021_fig1_es.png"
+    ],
+    "tags": [
+      "interpretação de texto",
+      "língua espanhola"
+    ],
+    "difficulty": 5,
+    "year": 2021,
+    "test": "ENEM",
+    "area": "linguagens",
+    "answer": "a",
+    "language": "es",
+    "contextIds": [
+      "enem_2021_lang_es_q5_ctx1"
+    ]
+  },
+  {
+    "number": 6,
+    "text": "Qual estratégia caracteriza o texto como uma notícia alarmante?",
+    "alternatives": {
+      "a": "A descrição da velocidade do asteroide.",
+      "b": "A recorrência de formulações hipotéticas.",
+      "c": "A referência à opinião dos astrônomos.",
+      "d": "A utilização da locução adverbial \"no mínimo\".",
+      "e": "A comparação com a distância da Lua à Terra."
     },
     "images": [],
     "tags": [
@@ -84,17 +263,91 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "b",
-    "language": "en"
+    "contextIds": [
+      "enem_2021_linguagens_q6_ctx1"
+    ]
   },
   {
-    "number": 1,
-    "text": "Qual é a principal função dessa entrevista?",
+    "number": 7,
+    "text": "Ao criticar o preciosismo linguístico do literato e ao sugerir a dicionarização de expressões locais, o poeta expressa uma concepção de língua que",
     "alternatives": {
-      "a": "ressaltar a atração do entrevistado por questões sociais e políticas",
-      "b": "divulgar a comoção das elites com as obras do entrevistado",
-      "c": "salientar o compromisso do entrevistado com a inovação formal",
-      "d": "mostrar a atualidade das obras poéticas e teatrais do entrevistado",
-      "e": "criticar o interesse do entrevistado por particularidades regionais"
+      "a": "contrapõe características da escrita e da fala.",
+      "b": "ironiza a comunicação fora da norma-padrão.",
+      "c": "substitui regionalismos por registros formais.",
+      "d": "valoriza o uso de variedades populares.",
+      "e": "defende novas regras gramaticais."
+    },
+    "images": [],
+    "tags": [
+      "linguística e variação linguística",
+      "literatura brasileira"
+    ],
+    "difficulty": 5,
+    "year": 2021,
+    "test": "ENEM",
+    "area": "linguagens",
+    "answer": "d",
+    "contextIds": [
+      "enem_2021_linguagens_q7_ctx1"
+    ]
+  },
+  {
+    "number": 8,
+    "text": "No segundo parágrafo, uma citação afirma que o documentário \"foi o único trabalho produzido por equipes fora do eixo Estados Unidos-Europa entre os finalistas\". Ao usar esse recurso, o texto expressa uma estratégia argumentativa que reforça a",
+    "alternatives": {
+      "a": "originalidade da iniciativa de homenagem à vida e à obra de Luiz Gonzaga.",
+      "b": "falta de concorrentes ao prêmio de uma das associações mais antigas do mundo.",
+      "c": "proeza da premiação de uma história ambientada no interior do Nordeste brasileiro.",
+      "d": "escassez de investimentos para a produção cinematográfica independente no país.",
+      "e": "importância da parceria entre brasileiros e britânicos para a realização das filmagens."
+    },
+    "images": [],
+    "tags": [
+      "interpretação de texto",
+      "comunicação e mídia"
+    ],
+    "difficulty": 5,
+    "year": 2021,
+    "test": "ENEM",
+    "area": "linguagens",
+    "answer": "c",
+    "contextIds": [
+      "enem_2021_linguagens_q8_ctx1"
+    ]
+  },
+  {
+    "number": 9,
+    "text": "Esse texto tem importância singular como patrimônio linguístico para a preservação da cultura nacional devido",
+    "alternatives": {
+      "a": "à menção a enfermidades que indicam falta de cuidado pessoal.",
+      "b": "à referência a profissões já extintas que caracterizam a vida no campo.",
+      "c": "aos nomes de personagens que acentuam aspectos de sua personalidade.",
+      "d": "ao emprego de ditados populares que resgatam memórias e saberes coletivos.",
+      "e": "às descrições de costumes regionais que desmistificam crenças e superstições."
+    },
+    "images": [],
+    "tags": [
+      "literatura brasileira",
+      "linguística e variação linguística"
+    ],
+    "difficulty": 6,
+    "year": 2021,
+    "test": "ENEM",
+    "area": "linguagens",
+    "answer": "d",
+    "contextIds": [
+      "enem_2021_linguagens_q9_ctx1"
+    ]
+  },
+  {
+    "number": 10,
+    "text": "A resenha é, normalmente, um texto de base argumentativa. Na resenha do filme Son of Saul, o trecho da sequência argumentativa que se constitui como opinião implícita é",
+    "alternatives": {
+      "a": "\"[...] em longa-metragens László Nemes, vencedor do Grande Prêmio do Júri no último Festival de Cannes [...]\".",
+      "b": "\"Ele é Saul (Géza Röhrig), um dos encarregados de conduzir as execuções de judeus [...]\".",
+      "c": "\"[...] a câmera está o tempo todo com o personagem, seja por sobre seus ombros, seja com um close em primeiro plano [...]\".",
+      "d": "\"Saul percorre diferentes divisões de Auschwitz; à procura de um rabino que possa conduzir o enterro da criança [...]\".",
+      "e": "\"[...] premiar uma abordagem tão ousada e radical como Son of Saul não deixaria de ser um passo à frente dos votantes\"."
     },
     "images": [],
     "tags": [
@@ -105,46 +358,24 @@
     "year": 2021,
     "test": "ENEM",
     "area": "linguagens",
-    "answer": "c",
-    "language": "es"
+    "answer": "e",
+    "contextIds": [
+      "enem_2021_linguagens_q10_ctx1"
+    ]
   },
   {
-    "number": 2,
-    "text": "Conforme o texto, qual é a principal característica do amuleto?",
+    "number": 11,
+    "text": "No fragmento da letra da canção, o vocabulário empregado e a situação retratada são relevantes para o patrimônio linguístico e identitário do país, na medida em que",
     "alternatives": {
-      "a": "Serve para proteger a casa e as janelas.",
-      "b": "Possui propriedades mágicas que trazem sorte.",
-      "c": "É um objeto antigo de grande valor histórico.",
-      "d": "Funciona como símbolo de identidade cultural.",
-      "e": "Atua como talismã espiritual de proteção pessoal."
+      "a": "remetem à violência física e simbólica contra os povos escravizados.",
+      "b": "valorizam as influências da cultura africana sobre a música nacional.",
+      "c": "relativizam o sincretismo constitutivo das práticas religiosas brasileiras.",
+      "d": "narram os infortúnios da relação amorosa entre membros de classes sociais diferentes.",
+      "e": "problematizam as diferenças étnicas vigentes na sociedade durante o período colonial."
     },
     "images": [],
     "tags": [
-      "interpretação de texto",
-      "gêneros textuais",
-      "literatura mundial"
-    ],
-    "difficulty": 5,
-    "year": 2021,
-    "test": "ENEM",
-    "area": "linguagens",
-    "answer": "a",
-    "language": "es"
-  },
-  {
-    "number": 3,
-    "text": "O texto aborda a importância das redes sociais e da internet na sociedade contemporânea, destacando sua capacidade de mobilizar pessoas com ideais comuns e gerar movimentos sociais. A questão busca compreender como essas plataformas digitais influenciam na divulgação de informações e na organização de ações coletivas, particularmente em casos que envolvem justiça social.",
-    "alternatives": {
-      "a": "As redes sociais são ferramentas exclusivamente de entretenimento e diversão.",
-      "b": "A internet facilita a disseminação de informações falsas e prejudiciais.",
-      "c": "As plataformas digitais podem ser utilizadas para mobilizar pessoas em torno de causas sociais e gerar movimentos coletivos.",
-      "d": "A tecnologia substitui completamente as formas tradicionais de comunicação.",
-      "e": "As redes sociais têm apenas impacto negativo na sociedade contemporânea."
-    },
-    "images": [],
-    "tags": [
-      "interpretação de texto",
-      "comunicação e mídia",
+      "literatura brasileira",
       "cultura e identidade"
     ],
     "difficulty": 5,
@@ -152,203 +383,37 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "a",
-    "language": "es"
+    "contextIds": [
+      "enem_2021_linguagens_q11_ctx1"
+    ]
   },
   {
-    "number": 4,
-    "text": "Unable to extract — source text is corrupted/unreadable",
+    "number": 12,
+    "text": "A associação entre o texto verbal e as imagens da garrafa e do cão configura recurso expressivo que busca",
     "alternatives": {
-      "a": "Unable to extract",
-      "b": "Unable to extract",
-      "c": "Unable to extract",
-      "d": "Unable to extract",
-      "e": "Unable to extract"
-    },
-    "images": [],
-    "tags": [
-      "interpretación de texto"
-    ],
-    "difficulty": 5,
-    "year": 2021,
-    "test": "ENEM",
-    "area": "linguagens",
-    "answer": "b",
-    "language": "es"
-  },
-  {
-    "number": 5,
-    "text": "Por Dios! ¿Qué le ha pasado guerra crisis al mundo? Inseguridad, miseria, violencia, lujo nosotros. Obsceno",
-    "alternatives": {
-      "a": "",
-      "b": "",
-      "c": "",
-      "d": "",
-      "e": ""
-    },
-    "images": [],
-    "tags": [
-      "língua espanhola",
-      "interpretação de texto"
-    ],
-    "difficulty": 5,
-    "year": 2021,
-    "test": "ENEM",
-    "area": "linguagens",
-    "answer": "b",
-    "language": "es"
-  },
-  {
-    "number": 6,
-    "text": "Um asteroide de cerca de um mil metros de diâmetro aproximou-se da Terra, pouco mais do dobro da distância que nos separa da Lua. Se esse asteroide tivesse sido capturado pelo campo gravitacional do nosso planeta, qual seria a consequência mais alarmante?",
-    "alternatives": {
-      "a": "A morte instantânea de todos os seres vivos do planeta.",
-      "b": "A alteração permanente da órbita terrestre.",
-      "c": "A alteração do campo magnético da Terra.",
-      "d": "A formação de uma cratera gigantesca e possível extinção em massa.",
-      "e": "A destruição completa da atmosfera terrestre."
+      "a": "estimular denúncias de maus-tratos contra animais.",
+      "b": "desvincular o conceito de descarte da ideia de negligência.",
+      "c": "incentivar campanhas de adoção de animais em situação de rua.",
+      "d": "sensibilizar o público em relação ao abandono de animais domésticos.",
+      "e": "alertar a população sobre as sanções legais acerca de uma prática criminosa."
     },
     "images": [],
     "tags": [
       "interpretação de texto",
       "comunicação e mídia"
-    ],
-    "difficulty": 5,
-    "year": 2021,
-    "test": "ENEM",
-    "area": "linguagens",
-    "answer": "b"
-  },
-  {
-    "number": 7,
-    "text": "Queria captura pega estar na draga, viver na draga por estar sem dinheiro, viver na miséria. Qual é a classe gramatical da palavra destacada no verso?",
-    "alternatives": {
-      "a": "Verbo",
-      "b": "Nome",
-      "c": "Adjetivo",
-      "d": "Advérbio",
-      "e": "Preposição"
-    },
-    "images": [],
-    "tags": [
-      "linguística e variação linguística",
-      "interpretação de texto"
-    ],
-    "difficulty": 5,
-    "year": 2021,
-    "test": "ENEM",
-    "area": "linguagens",
-    "answer": "d"
-  },
-  {
-    "number": 8,
-    "text": "De acordo com o diretor, qual é o sentido da experiência vivida pelo menino?",
-    "alternatives": {
-      "a": "A experiência demonstra a importância de conhecer instituições estrangeiras.",
-      "b": "A experiência mostra que é possível criar espaços de memória e cultura.",
-      "c": "A experiência comprova que museus devem receber visitantes frequentemente.",
-      "d": "A experiência revela que crianças têm dificuldades em compreender arte e história.",
-      "e": "importância da parceria entre brasileiros e britânicos"
-    },
-    "images": [],
-    "tags": [
-      "interpretação de texto",
-      "literatura brasileira"
-    ],
-    "difficulty": 5,
-    "year": 2021,
-    "test": "ENEM",
-    "area": "linguagens",
-    "answer": "c"
-  },
-  {
-    "number": 9,
-    "text": "O fragmento do conto \"A volta do marido pródigo\" apresenta características do estilo de Guimarães Rosa. A expressão \"P'ra uns, as vacas morrem … p'ra outros até boi pega\" exemplifica o recurso estilístico de Rosa relacionado",
-    "alternatives": {
-      "a": "à criação de palavras que expressam sentimentos e emoções do homem rural.",
-      "b": "à utilização de estruturas sintáticas que refletem o modo de falar coloquial.",
-      "c": "aos nomes de personagens que acentuam aspectos psicológicos e sociais.",
-      "d": "ao emprego de ditados populares que resgatam a sabedoria ancestral.",
-      "e": "à recriação de mitos e lendas que caracterizam a cultura brasileira."
-    },
-    "images": [],
-    "tags": [
-      "literatura brasileira",
-      "gêneros textuais"
     ],
     "difficulty": 6,
     "year": 2021,
     "test": "ENEM",
     "area": "linguagens",
     "answer": "d",
-    "contextId": "enem_2021_linguagens_q9_q40_ctx1"
-  },
-  {
-    "number": 10,
-    "text": "De acordo com o texto, qual é a característica principal do filme Son of Saul?",
-    "alternatives": {
-      "a": "Retrata o horror do holocausto de forma intensa e original",
-      "b": "Utiliza técnicas de close em primeiro plano para aproximar o espectador",
-      "c": "Apresenta uma abordagem convencional e tradicional do tema",
-      "d": "Exige certa entrega do espectador por meio de uma via crucis visual",
-      "e": "Premia uma abordagem ousada e radical ao tratar do holocausto"
-    },
-    "images": [],
-    "tags": [
-      "interpretação de texto",
-      "gêneros textuais",
-      "comunicação e mídia"
-    ],
-    "difficulty": 5,
-    "year": 2021,
-    "test": "ENEM",
-    "area": "linguagens",
-    "answer": "e"
-  },
-  {
-    "number": 11,
-    "text": "[Texto severamente corrompido na extração - impossível reconstruir]",
-    "alternatives": {
-      "a": "[Ilegível]",
-      "b": "[Ilegível]",
-      "c": "[Ilegível]",
-      "d": "[Ilegível]",
-      "e": "[Ilegível]"
-    },
-    "images": [],
-    "tags": [
-      "interpretação de texto"
-    ],
-    "difficulty": 5,
-    "year": 2021,
-    "test": "ENEM",
-    "area": "linguagens",
-    "answer": "a"
-  },
-  {
-    "number": 12,
-    "text": "Observando o cartaz e considerando as funções da linguagem, qual é o objetivo principal da mensagem?",
-    "alternatives": {
-      "a": "Informar sobre os tipos de plástico utilizados na indústria de embalagens.",
-      "b": "Desvincular o conceito de descarte da ideia de sustentabilidade ambiental.",
-      "c": "Conscientizar a população sobre a importância da reciclagem de materiais plásticos.",
-      "d": "Orientar o consumidor sobre o modo correto de descartar embalagens de plástico.",
-      "e": "Alertar a população sobre as sanções legais acerca do abandono de resíduos no meio ambiente."
-    },
-    "images": [],
-    "tags": [
-      "interpretação de texto",
-      "comunicação e mídia",
-      "linguística e variação linguística"
-    ],
-    "difficulty": 6,
-    "year": 2021,
-    "test": "ENEM",
-    "area": "linguagens",
-    "answer": "d"
+    "contextIds": [
+      "enem_2021_linguagens_q12_ctx1"
+    ]
   },
   {
     "number": 13,
-    "text": "[Tirinha de HENFIL, publicada em 1970. 4 quadrinhos retratando um personagem nordestino narrando sua jornada migratória para a cidade.]\n\nNessa tirinha, produzida na década de 1970, os recursos verbais e não verbais sinalizam a finalidade de",
+    "text": "[Imagem]\n\nNessa tirinha, produzida na década de 1970, os recursos verbais e não verbais sinalizam a finalidade de",
     "alternatives": {
       "a": "reforçar a luta por direitos civis.",
       "b": "explicitar a autonomia feminina.",
@@ -359,50 +424,51 @@
     "images": [],
     "tags": [
       "interpretação de texto",
-      "gêneros textuais",
-      "comunicação e mídia"
+      "gêneros textuais"
     ],
     "difficulty": 6,
     "year": 2021,
     "test": "ENEM",
     "area": "linguagens",
-    "answer": "c"
+    "answer": "c",
+    "contextIds": [
+      "enem_2021_linguagens_q13_ctx1"
+    ]
   },
   {
     "number": 14,
-    "text": "A crise dos refugiados imortalizada para sempre no fundo do mar — A balsa de Lampedusa [Figura: obra de arte submersa representando balsa com refugiados] — é nome da obra do artista que criou esculturas submersas para compor o acervo do primeiro museu subaquático do mundo, localizado na Itália. Uma delas, uma menina debruçada sobre a beira do bote, [Figura: detalhe da escultura da menina] representa a urgência e o desespero enfrentados pelos imigrantes. Considerando tanto a obra de arte quanto a reportagem sobre ela [Figura: imagem de contexto jornalístico], qual é o propósito textual compartilhado por ambas?",
+    "text": "Além de apresentar ao público a obra A balsa de Lampedusa, essa reportagem cumpre, paralelamente, a função de chamar a atenção para",
     "alternatives": {
-      "a": "denunciar a negligência dos governos europeus frente à morte de imigrantes no Mediterrâneo",
-      "b": "informar sobre a construção de um museu submarino como memorial para as vítimas das travessias no mar",
-      "c": "criticar a falta de políticas de acolhimento para refugiados na Europa",
-      "d": "a construção do museu submarino como um memorial para as centenas de imigrantes mortos nas travessias marítimas",
-      "e": "sensibilizar o público sobre a tragédia humanitária dos refugiados através da arte e do jornalismo"
+      "a": "a ilha de Lanzarote, localizada no arquipélago das Canárias, com vocação para o turismo.",
+      "b": "as muitas vidas perdidas nas travessias marítimas em embarcações precárias ao longo dos séculos.",
+      "c": "a inovação relativa à construção de um museu no fundo do mar, que só pode ser visitado por mergulhadores.",
+      "d": "a construção do museu submarino como um memorial para as centenas de imigrantes mortos nas travessias pelo mar.",
+      "e": "a arte como perpetuadora de episódios marcantes da humanidade que têm de ser relembrados para que não tornem a ocorrer."
     },
-    "images": [
-      "figuras/q014_2021_fig1.png",
-      "figuras/q014_2021_fig2.png",
-      "figuras/q014_2021_fig3.png"
-    ],
+    "images": [],
     "tags": [
-      "artes visuais",
       "interpretação de texto",
-      "comunicação e mídia"
+      "artes visuais"
     ],
     "difficulty": 6,
     "year": 2021,
     "test": "ENEM",
     "area": "linguagens",
-    "answer": "e"
+    "answer": "e",
+    "contextIds": [
+      "enem_2021_linguagens_q14_ctx1",
+      "enem_2021_linguagens_q14_ctx2"
+    ]
   },
   {
     "number": 15,
-    "text": "A leitura dos dois textos permite afirmar que a obra de Machado de Assis é representativa da",
+    "text": "O conto de Machado de Assis faz uma referência velada ao maxixe, gênero musical inicialmente associado à escravidão e à mestiçagem. No Texto II, o conflito do personagem em compor obras do gênero é representativa da",
     "alternatives": {
-      "a": "originalidade de um autor que se afasta dos modelos europeus e funda uma literatura inteiramente brasileira.",
-      "b": "capacidade de diálogo entre duas tradições literárias, ainda que se reconheça a dificuldade dessa convivência.",
-      "c": "supremacia do modelo clássico vienense sobre as influências populares e dançantes das composições líricas.",
-      "d": "tensa relação entre o erudito e o popular no Brasil, sendo impossível harmonizar essas duas dimensões da obra.",
-      "e": "recusa em incorporar elementos da cultura popular, mantendo-se fiel aos princípios do classicismo europeu."
+      "a": "pouca complexidade musical das composições ajustadas ao gosto do grande público.",
+      "b": "prevalência de referências musicais africanas no imaginário da população brasileira.",
+      "c": "indevida atribuição de prestígio social a músicas instrumentais feitas para a dança.",
+      "d": "tensa relação entre o erudito e o popular na constituição da música brasileira.",
+      "e": "importância da música clássica na sociedade brasileira do século XIX."
     },
     "images": [],
     "tags": [
@@ -415,19 +481,19 @@
     "area": "linguagens",
     "answer": "d",
     "contextIds": [
-      "enem_2021_linguagens_q9_q40_ctx1",
-      "enem_2021_linguagens_q15_q21_ctx1"
+      "enem_2021_linguagens_q15_ctx1",
+      "enem_2021_linguagens_q15_ctx2"
     ]
   },
   {
     "number": 16,
-    "text": "Nesse artigo de opinião, a apresentação da letra da canção Sinal fechado é uma estratégia argumentativa",
+    "text": "Nesse artigo de opinião, a apresentação da letra da canção Sinal fechado é uma estratégia argumentativa que visa sensibilizar o leitor porque",
     "alternatives": {
-      "a": "adverte sobre os riscos que o ritmo acelerado da vida moderna provoca.",
-      "b": "ilustra a dificuldade de estabelecer relacionamentos no mundo contemporâneo.",
-      "c": "contrapõe situações de aceleração e de serenidade para questionar o estilo de vida atual.",
-      "d": "demonstra como a música popular brasileira reflete a velocidade do mundo moderno.",
-      "e": "apresenta soluções para a cultura da correria que as pessoas vivenciam no dia a dia."
+      "a": "adverte sobre os riscos que o ritmo acelerado da vida oferece.",
+      "b": "exemplifica o fato criticado no texto com uma situação concreta.",
+      "c": "contrapõe situações de aceleração e de serenidade na vida das pessoas.",
+      "d": "questiona o clichê sobre a rapidez e a aceleração da vida moderna.",
+      "e": "apresenta soluções para a cultura da correria que as pessoas vivenciam hoje."
     },
     "images": [],
     "tags": [
@@ -440,17 +506,20 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "b",
-    "contextId": "enem_2021_linguagens_q9_q40_ctx1"
+    "contextId": "enem_2021_linguagens_q16_ctx1",
+    "contextIds": [
+      "enem_2021_linguagens_q16_ctx1"
+    ]
   },
   {
     "number": 17,
-    "text": "Sua ousadia consistiu em pronunciar a palavra",
+    "text": "O texto atribui o enfraquecimento do mito da democracia racial no futebol à",
     "alternatives": {
-      "a": "[Source text corrupted - unrecoverable]",
-      "b": "[Source text corrupted - unrecoverable]",
-      "c": "[Source text corrupted - unrecoverable]",
-      "d": "[Source text corrupted - unrecoverable]",
-      "e": "[Source text corrupted - unrecoverable]"
+      "a": "responsabilização de jogadores negros pela derrota na final da Copa de 1950.",
+      "b": "projeção mundial da nação por um esporte antes destinado aos pobres.",
+      "c": "depreciação de um esporte associado à marginalidade.",
+      "d": "interdição da palavra \"racismo\" no contexto esportivo.",
+      "e": "atitude contestadora de um \"jogador-problema\"."
     },
     "images": [],
     "tags": [
@@ -461,21 +530,22 @@
     "year": 2021,
     "test": "ENEM",
     "area": "linguagens",
-    "answer": "e"
+    "answer": "e",
+    "contextIds": [
+      "enem_2021_linguagens_q17_ctx1"
+    ]
   },
   {
     "number": 18,
-    "text": "Nessa obra, que retrata uma cena de Caramuru, célebre [Figura: ]",
+    "text": "Nessa obra, que retrata uma cena de Caramuru, célebre poema épico brasileiro, a filiação à estética romântica manifesta-se na",
     "alternatives": {
-      "a": "",
-      "b": "",
-      "c": "",
-      "d": "",
-      "e": ""
+      "a": "exaltação do retrato fiel da beleza feminina.",
+      "b": "tematização da fragilidade humana diante da morte.",
+      "c": "ressignificação de obras do cânone literário nacional.",
+      "d": "representação dramática e idealizada do corpo da índia.",
+      "e": "oposição entre a condição humana e a natureza."
     },
-    "images": [
-      "figuras/q018_2021_fig1.png"
-    ],
+    "images": [],
     "tags": [
       "literatura brasileira"
     ],
@@ -484,17 +554,20 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "d",
-    "contextId": "enem_2021_linguagens_caramuru"
+    "contextId": "enem_2021_linguagens_q18_ctx1",
+    "contextIds": [
+      "enem_2021_linguagens_q18_ctx1"
+    ]
   },
   {
     "number": 19,
-    "text": "Qual é o efeito de sentido provocado pelo uso da expressão \"estão mais sobrecarregadas por deveres e atividades\" em relação às crianças mencionadas no texto?",
+    "text": "O texto indica que as transformações nas experiências lúdicas na infância",
     "alternatives": {
-      "a": "Demonstra que as crianças têm mais tempo livre para brincar",
-      "b": "Indica que as crianças possuem menos oportunidades de lazer",
-      "c": "Incentivaram a criação de novos espaços para se brincar",
-      "d": "Mostra que as famílias investem em educação formal",
-      "e": "Revela a falta de interesse das crianças em atividades ao ar livre"
+      "a": "fomentaram as relações sociais entre as crianças.",
+      "b": "tornaram o lazer uma prática difundida entre as crianças.",
+      "c": "incentivaram a criação de novos espaços para se divertir.",
+      "d": "promoveram uma vivência corporal menos ativa.",
+      "e": "contribuíram para o aumento do tempo dedicado para brincar."
     },
     "images": [],
     "tags": [
@@ -506,17 +579,20 @@
     "year": 2021,
     "test": "ENEM",
     "area": "linguagens",
-    "answer": "d"
+    "answer": "d",
+    "contextIds": [
+      "enem_2021_linguagens_q19_ctx1"
+    ]
   },
   {
     "number": 20,
-    "text": "Que tal transformar a internet em palco para a dança?\n\n[Figura: texto sobre dança digital e miniaturas]\n\nO criador mencionado no texto é considerado inovador por",
+    "text": "Considerado o primeiro projeto de dança contemporânea concebido para a rede, esse trabalho é apresentado como",
     "alternatives": {
-      "a": "adotar uma perspectiva conceitual como contraposição ao recurso tecnológico",
-      "b": "expandir as possibilidades de dança ao incorporar elementos da web",
-      "c": "privilegiar movimentos gerados por computação em detrimento da dança convencional",
-      "d": "utilizar a internet como ferramenta de divulgação de danças tradicionais",
-      "e": "questionar a relevância das apresentações de dança no espaço físico"
+      "a": "adotar uma perspectiva conceitual como contraposição à tradição de grandes espetáculos.",
+      "b": "criar novas formas de financiamento ao utilizar a internet para divulgação das apresentações.",
+      "c": "privilegiar movimentos gerados por computação gráfica, com a substituição do palco pela tela.",
+      "d": "produzir uma arte multimodal com o intuito de ampliar as possibilidades de expressão estética.",
+      "e": "redefinir a extensão e o propósito do espetáculo para adaptá-lo ao perfil de diferentes usuários."
     },
     "images": [],
     "tags": [
@@ -528,17 +604,20 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "d",
-    "contextId": "enem_2021_linguagens_q9_q40_ctx1"
+    "contextId": "enem_2021_linguagens_q20_ctx1",
+    "contextIds": [
+      "enem_2021_linguagens_q20_ctx1"
+    ]
   },
   {
     "number": 21,
-    "text": "Com base nos textos, qual é a principal diferença entre as abordagens apresentadas sobre a estiagem em São Paulo?",
+    "text": "Os textos I e II abordam a situação dos reservatórios de água doce do planeta. Entretanto, a divergência entre eles está na ideia de que é possível",
     "alternatives": {
-      "a": "O Texto I nega a existência da estiagem, enquanto o Texto II a confirma.",
-      "b": "O Texto I apresenta uma visão mítica, enquanto o Texto II oferece uma explicação científica.",
-      "c": "O Texto I culpa as indústrias, enquanto o Texto II culpa a natureza.",
-      "d": "O Texto I defende que a água simplesmente desaparece, enquanto o Texto II explica o ciclo da água.",
-      "e": "O Texto I propõe soluções práticas, enquanto o Texto II apenas descreve o problema."
+      "a": "manter os estoques de água doce.",
+      "b": "utilizar a água superficial para o consumo.",
+      "c": "repor os estoques de água doce em regiões áridas.",
+      "d": "reduzir as taxas de precipitação e evaporação de água.",
+      "e": "equalizar a distribuição de água doce nas diferentes regiões."
     },
     "images": [],
     "tags": [
@@ -551,19 +630,19 @@
     "area": "linguagens",
     "answer": "a",
     "contextIds": [
-      "enem_2021_linguagens_q9_q40_ctx1",
-      "enem_2021_linguagens_q15_q21_ctx1"
+      "enem_2021_linguagens_q21_ctx1",
+      "enem_2021_linguagens_q21_ctx2"
     ]
   },
   {
     "number": 22,
-    "text": "A questão aborda a variação linguística do uso de pronomes de segunda pessoa em diferentes regiões do Brasil. Qual das alternativas melhor descreve o fenômeno de variação entre 'tu' e 'você' nas regiões mencionadas?",
+    "text": "No texto, constata-se que os usos de pronomes variaram ao longo do tempo e que atualmente têm empregos diversos pelas regiões do Brasil. Esse processo revela que",
     "alternatives": {
-      "a": "O pronome 'tu' é exclusivamente utilizado na região Sul do Brasil.",
-      "b": "O pronome 'você' é empregado de forma uniforme em todo o território brasileiro.",
-      "c": "O pronome 'tu' tem sido empregado em situações cada vez menos formais.",
-      "d": "A variação entre 'tu' e 'você' não representa diferenças sociolinguísticas significativas.",
-      "e": "O pronome 'você' é uma forma conservadora de tratamento em relação ao 'tu'."
+      "a": "a escolha de \"você\" ou de \"tu\" está condicionada à idade da pessoa que usa o pronome.",
+      "b": "a possibilidade de se usar tanto \"tu\" quanto \"você\" caracteriza a diversidade da língua.",
+      "c": "o pronome \"tu\" tem sido empregado em situações informais por todo o país.",
+      "d": "a ocorrência simultânea de \"tu\" e de \"você\" evidencia a inexistência da distinção entre níveis de formalidade.",
+      "e": "o emprego de \"você\" em documentos escritos demonstra que a língua tende a se manter inalterada."
     },
     "images": [],
     "tags": [
@@ -574,17 +653,20 @@
     "year": 2021,
     "test": "ENEM",
     "area": "linguagens",
-    "answer": "b"
+    "answer": "b",
+    "contextIds": [
+      "enem_2021_linguagens_q22_ctx1"
+    ]
   },
   {
     "number": 23,
-    "text": "A morte do cisne demonstra que",
+    "text": "A forma original de John Lennon da Silva reinterpretar a coreografia de A morte do cisne demonstra que",
     "alternatives": {
-      "a": "a dança clássica é impecavelmente branca e realizada na ponta dos pés",
-      "b": "a dança clássica é superior à dança urbana contemporânea",
-      "c": "a variação entre os modos de dançar um mesmo balé é expressão de identidades diferentes",
-      "d": "a dança clássica e a dança urbana contemporânea são formas de expressão antagônicas",
-      "e": "a dança clássica permanece imutável ao longo do tempo e das culturas"
+      "a": "a composição da coreografia foi influenciada pela escolha do figurino.",
+      "b": "a criação artística é beneficiada pelo encontro de modelos oriundos de diferentes realidades socioculturais.",
+      "c": "a variação entre os modos de dançar uma mesma música evidencia a hierarquia que marca manifestações artísticas.",
+      "d": "a formação erudita, à qual o dançarino não teve acesso, resulta em artistas que só conhecem a estética da arte popular.",
+      "e": "a interpretação, por homens, de coreografias originalmente concebidas para mulheres exige uma adaptação complexa."
     },
     "images": [],
     "tags": [
@@ -597,18 +679,18 @@
     "area": "linguagens",
     "answer": "b",
     "contextIds": [
-      "enem_2021_linguagens_q9_q40_ctx1"
+      "enem_2021_linguagens_q23_ctx1"
     ]
   },
   {
     "number": 24,
-    "text": "A frase 'Assim na terra como embaixo da terra' refere-se a qual conceito ou obra?",
+    "text": "A narrativa concentra sua força expressiva no manejo de recursos formais e numa representação ficcional que",
     "alternatives": {
-      "a": "",
-      "b": "",
-      "c": "",
-      "d": "",
-      "e": ""
+      "a": "buscam perpetuar visões do senso comum.",
+      "b": "trazem à tona atitudes de um estado de exceção.",
+      "c": "promovem a interlocução com grupos silenciados.",
+      "d": "inspiram o sentimento de justiça por meio da empatia.",
+      "e": "recorrem ao absurdo como forma de traduzir a realidade."
     },
     "images": [],
     "tags": [
@@ -619,17 +701,20 @@
     "year": 2021,
     "test": "ENEM",
     "area": "linguagens",
-    "answer": "b"
+    "answer": "b",
+    "contextIds": [
+      "enem_2021_linguagens_q24_ctx1"
+    ]
   },
   {
     "number": 25,
-    "text": "A representação do discurso intimidador engendrada no texto serve para",
+    "text": "A representação do discurso intimidador engendrada no fragmento é responsável por",
     "alternatives": {
-      "a": "ir além da caracterização psicológica das personagens",
-      "b": "criar distanciamento entre o leitor e as personagens",
-      "c": "dissimular o ponto de vista do narrador",
-      "d": "acentuar conflitos decorrentes de relações sociais",
-      "e": "estabelecer relações de poder estereotipadas"
+      "a": "ironizar atitudes e ideias xenofóbicas.",
+      "b": "conferir à narrativa um tom anedótico.",
+      "c": "dissimular o ponto de vista do narrador.",
+      "d": "acentuar a hostilidade das personagens.",
+      "e": "exaltar relações de poder estereotipadas."
     },
     "images": [],
     "tags": [
@@ -640,17 +725,20 @@
     "year": 2021,
     "test": "ENEM",
     "area": "linguagens",
-    "answer": "b"
+    "answer": "b",
+    "contextIds": [
+      "enem_2021_linguagens_q25_ctx1"
+    ]
   },
   {
     "number": 26,
-    "text": "O texto apresentado contém passagens ilegíveis ou corrompidas. Não é possível extrair uma questão válida desta imagem.",
+    "text": "Considerando-se as operações de retomada de informações na estruturação do texto, há interdependência entre as expressões",
     "alternatives": {
-      "a": "",
-      "b": "",
-      "c": "",
-      "d": "",
-      "e": ""
+      "a": "\"Os velhos papéis\" e \"É assim\".",
+      "b": "\"algo novo\" e \"sobre o qual\".",
+      "c": "\"um nome antigo\" e \"Por exemplo\".",
+      "d": "\"O gigante do Brasil\" e \"O Pedro mencionado\".",
+      "e": "\"o imperador Dom Pedro II\" e \"O bruxo do Cosme Velho\"."
     },
     "images": [],
     "tags": [],
@@ -658,17 +746,18 @@
     "year": 2021,
     "test": "ENEM",
     "area": "linguagens",
-    "answer": "d"
+    "answer": "d",
+    "contextId": "enem_2021_linguagens_q26_ctx1"
   },
   {
     "number": 27,
-    "text": "[Imagem: fotografia de cadeiras e poltronas de Sérgio Rodrigues. Fonte: RODRIGUES, S. Acervo pessoal.]\n\nA revolução estética que empregou os designers de móveis dos anos 1950 e início dos anos 1960 para o novo design criou, ao trocar Ouro Preto por Brasília, um mobiliário minimalista que hoje vemos nas lojas e nas salas de espera dos consultórios. O desenho era feito em madeiras nobres, como o jacarandá e a peroba, e apresentava linhas retas e curvas suaves.\n\nCHAVES, D. Disponível em: www.vjpl.com.br. Acesso em: 29 jul. 2010.\n\nNessa reportagem sobre os 50 anos de Brasília, de Débora Chaves, com a reprodução fotográfica de cadeiras e poltronas de Sérgio Rodrigues, verifica-se que os elementos da estética brasileira",
+    "text": "Na reportagem sobre os 50 anos de Brasília, de Débora Chaves, com a reprodução fotográfica de cadeiras e poltronas de Sérgio Rodrigues, verifica-se que os elementos da estética brasiliense",
     "alternatives": {
-      "a": "aparecem definidas nas linhas retas dos objetos.",
-      "b": "mostram a expressão assimétrica das linhas curvas suaves.",
-      "c": "apontam a unidade de matéria-prima utilizada em sua confecção.",
-      "d": "surgem na simplificação das informações visuais de cada composição.",
-      "e": "resultam da integração de linhas orgânicas com referências à tradição colonial brasileira."
+      "a": "aparecem definidos nas linhas retas dos objetos.",
+      "b": "expressam o desenho rebuscado por meio das linhas.",
+      "c": "mostram a expressividade assimétrica das linhas curvas.",
+      "d": "apontam a unidade de matéria-prima utilizada em sua fabricação.",
+      "e": "surgem na simplificação das informações visuais de cada composição."
     },
     "images": [],
     "tags": [
@@ -680,17 +769,18 @@
     "year": 2021,
     "test": "ENEM",
     "area": "linguagens",
-    "answer": "e"
+    "answer": "e",
+    "contextId": "enem_2021_linguagens_q27_ctx1"
   },
   {
     "number": 28,
-    "text": "[Figura: captura de tela de rede social com postagem e comentários]",
+    "text": "O texto relata que uma rede social virtual realizará sua maior mudança de design dos últimos anos. Esse fato revela que as tecnologias de informação e comunicação",
     "alternatives": {
-      "a": "A busca por uma comunicação mais direta e objetiva.",
-      "b": "As redes sociais como espaço de debate político.",
-      "c": "A preferência dos usuários por mensagens mais breves.",
-      "d": "A importância da segmentação para direcionar anúncios publicitários.",
-      "e": "A evolução contínua das estratégias de marketing digital."
+      "a": "buscam oferecer mais privacidade.",
+      "b": "assimilam os comportamentos dos usuários.",
+      "c": "promovem maior interação em ambientes virtuais.",
+      "d": "oferecem mais facilidades para obter cada vez mais lucro.",
+      "e": "evoluem para ficar mais parecidas umas com as outras."
     },
     "images": [],
     "tags": [
@@ -702,11 +792,11 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "b",
-    "contextId": "enem_2021_linguagens_q9_q40_ctx1"
+    "contextId": "enem_2021_linguagens_q28_ctx1"
   },
   {
     "number": 29,
-    "text": "O texto a seguir faz parte de um artigo sobre como ler notícias na era da informação. O autor argumenta que o leitor não deve consumir passivamente as informações recebidas, mas deve questionar, investigar e desenvolver ceticismo crítico diante dos fatos divulgados. Esse comportamento deve partir de uma iniciativa individual e tornar-se coletivo.\n\nNo texto, os argumentos apresentados permitem inferir que o objetivo do autor é convencer os leitores a",
+    "text": "No texto, os argumentos apresentados permitem inferir que o objetivo do autor é convencer os leitores a",
     "alternatives": {
       "a": "buscarem fontes de informação comprometidas com a verdade.",
       "b": "privilegiarem notícias veiculadas em jornais de grande circulação.",
@@ -724,17 +814,18 @@
     "year": 2021,
     "test": "ENEM",
     "area": "linguagens",
-    "answer": "c"
+    "answer": "c",
+    "contextId": "enem_2021_linguagens_q29_ctx1"
   },
   {
     "number": 30,
-    "text": "A Nova Califórnia, de Lima Barreto, apresenta um protagonista que corrige constantemente a fala dos outros. Com base no fragmento apresentado, qual é a atitude do autor em relação a essa prática de correção linguística?",
+    "text": "Do ponto de vista linguístico, a defesa da norma-padrão pelo personagem caracteriza-se por",
     "alternatives": {
-      "a": "A contestar o ensino de regras em detrimento do uso natural da língua.",
-      "b": "A criticar a falta de habilidade dos falantes em aplicar as regras gramaticais.",
-      "c": "A adotar uma perspectiva complacente em relação aos erros linguísticos cometidos.",
-      "d": "A defender a necessidade absoluta de se corrigir toda e qualquer inadequação linguística.",
-      "e": "A demonstrar que a correção constante é essencial para o aperfeiçoamento intelectual dos indivíduos."
+      "a": "contestar o ensino de regras em detrimento do conteúdo das informações.",
+      "b": "resgatar valores patrióticos relacionados às tradições da língua portuguesa.",
+      "c": "adotar uma perspectiva complacente em relação aos desvios gramaticais.",
+      "d": "invalidar os usos da língua pautados pelos preceitos da gramática normativa.",
+      "e": "desconsiderar diferentes níveis de formalidade nas situações de comunicação."
     },
     "images": [],
     "tags": [
@@ -746,17 +837,17 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "e",
-    "contextId": "enem_2021_linguagens_q9_q40_ctx1"
+    "contextId": "enem_2021_linguagens_q30_ctx1"
   },
   {
     "number": 31,
-    "text": "O texto narra a história do skate no Brasil, relatando que a modalidade surgiu como atividade de lazer nas regiões litorâneas na década de 1960. O engenheiro Frank Nasworthy desenvolveu, em 1972, rodas de poliuretano que impulsionaram enormemente a prática, levando ao surgimento de campeonatos, marcas e lojas especializadas. Com o tempo, o esporte ganhou reconhecimento global e social.\n\nDe acordo com o texto, diversos fatores históricos",
+    "text": "De acordo com o texto, diversos fatores ao longo do tempo",
     "alternatives": {
       "a": "contribuíram para a democratização do skate.",
-      "b": "evidenciaram as demandas corporativas dos skatistas.",
-      "c": "definiram a carreira de skatistas profissionais.",
+      "b": "evidenciaram as demandas comerciais dos skatistas.",
+      "c": "definiram a carreira de skatista profissional.",
       "d": "permitiram que a prática social do skate substituísse o surfe.",
-      "e": "indicaram a autonomia dos praticantes de skate em relação às instituições esportivas."
+      "e": "indicaram a autonomia dos praticantes de skate."
     },
     "images": [],
     "tags": [
@@ -768,17 +859,18 @@
     "year": 2021,
     "test": "ENEM",
     "area": "linguagens",
-    "answer": "a"
+    "answer": "a",
+    "contextId": "enem_2021_linguagens_q31_ctx1"
   },
   {
     "number": 32,
-    "text": "Qual é o principal efeito de sentido da repetição da estrutura 'comprar aquilo que os caras anunciavam como o top' ao longo do texto?",
+    "text": "No texto, há marcas da função da linguagem que nele predomina. Essas marcas são responsáveis por colocar em foco o(a)",
     "alternatives": {
-      "a": "Demonstrar a variedade de produtos escolares disponíveis no mercado.",
-      "b": "Criticar a influência da publicidade no consumo infantil.",
-      "c": "Destacar a qualidade superior dos produtos anunciados.",
-      "d": "Enfatizar a pressão social para adquirir produtos de marca.",
-      "e": "Indicar a evolução do mercado de artigos escolares."
+      "a": "mensagem, elevando-a à categoria de objeto estético do mundo das artes.",
+      "b": "código, transformando a linguagem utilizada no texto na própria temática abordada.",
+      "c": "contexto, fazendo das informações presentes no texto seu aspecto essencial.",
+      "d": "enunciador, buscando expressar sua atitude em relação ao conteúdo do enunciado.",
+      "e": "interlocutor, considerando-o responsável pelo direcionamento dado à narrativa pelo enunciador."
     },
     "images": [],
     "tags": [
@@ -789,17 +881,18 @@
     "year": 2021,
     "test": "ENEM",
     "area": "linguagens",
-    "answer": "d"
+    "answer": "d",
+    "contextId": "enem_2021_linguagens_q32_ctx1"
   },
   {
     "number": 33,
-    "text": "De acordo com o texto, qual é a última etapa necessária para a conclusão da produção do livro?",
+    "text": "O que assegura o reconhecimento desse texto em quadrinhos como prefácio é o(a)",
     "alternatives": {
-      "a": "A realização de pesquisa sobre o tema a ser abordado.",
-      "b": "A edição e colorização digital dos desenhos feitos à tinta.",
-      "c": "A seleção e elaboração de um roteiro com as informações.",
-      "d": "A disponibilização do material na internet para consulta.",
-      "e": "A leitura da obra pelo público."
+      "a": "função de apresentação do livro.",
+      "b": "apelo emocional apoiado nas imagens.",
+      "c": "descrição do processo criativo da autora.",
+      "d": "referência à mescla dos trabalhos manual e digital.",
+      "e": "uso de elementos gráficos voltados para o público-alvo."
     },
     "images": [],
     "tags": [
@@ -815,7 +908,7 @@
   },
   {
     "number": 34,
-    "text": "O infográfico intitulado \"Os riscos para crianças do uso do celular antes de dormir\" apresenta, por meio de ícones e setas, os malefícios causados pelo uso de dispositivos digitais antes de dormir — como obesidade, comprometimento do sistema imunológico e depressão — e recomendações para evitá-los, como permanecer duas horas sem telas antes de dormir e manter o telefone longe da cama.\n\nNo texto, os recursos verbais e não verbais empregados têm por objetivo",
+    "text": "No texto, os recursos verbais e não verbais empregados têm por objetivo",
     "alternatives": {
       "a": "divulgar informações científicas sobre o uso indiscriminado de aparelhos celulares.",
       "b": "influenciar o leitor a mudar atitudes e hábitos considerados prejudiciais às crianças.",
@@ -833,17 +926,18 @@
     "year": 2021,
     "test": "ENEM",
     "area": "linguagens",
-    "answer": "b"
+    "answer": "b",
+    "contextId": "enem_2021_linguagens_q34_ctx1"
   },
   {
     "number": 35,
-    "text": "Sobre o texto \"Singular ocorrência\", de Machado de Assis, qual é a principal característica estilística que define a narrativa?",
+    "text": "No diálogo, descortinam-se aspectos da condição da mulher em meados do século XIX. O ponto de vista dos personagens manifesta conceitos segundo os quais a mulher",
     "alternatives": {
-      "a": "O uso de linguagem coloquial e direta para relatar os eventos",
-      "b": "A apresentação de diálogos extensos entre as personagens",
-      "c": "O emprego de ironia e crítica social disfarçadas na narrativa",
-      "d": "A descrição minuciosa e realista do cenário urbano",
-      "e": "A utilização de monólogos introspectivos das personagens"
+      "a": "encontra um modo de dignificar-se na prática da caridade.",
+      "b": "preserva a aparência jovem conforme seu estilo de vida.",
+      "c": "condiciona seu bem-estar à estabilidade do casamento.",
+      "d": "tem sua identidade e seu lugar referendados pelo homem.",
+      "e": "renuncia à sua participação no mercado de trabalho."
     },
     "images": [],
     "tags": [
@@ -854,17 +948,18 @@
     "year": 2021,
     "test": "ENEM",
     "area": "linguagens",
-    "answer": "d"
+    "answer": "d",
+    "contextId": "enem_2021_linguagens_q35_ctx1"
   },
   {
     "number": 36,
-    "text": "Unable to extract: source text contains excessive corruption and is unreadable. The reference texts (TEXTO I and TEXTO II) and question stem are not legible due to character encoding errors, symbol corruption, or OCR artifacts that prevent faithful reproduction in Portuguese.",
+    "text": "Romuald Hazoumé costuma dizer que sua obra apenas manda de volta ao oeste o refugo de uma sociedade de consumo cada vez mais invasiva.\n\nA obra desse artista africano que vive no Benim denota o(a)",
     "alternatives": {
-      "a": "Unable to extract",
-      "b": "Unable to extract",
-      "c": "Unable to extract",
-      "d": "Unable to extract",
-      "e": "Unable to extract"
+      "a": "empobrecimento do valor artístico pela combinação de diferentes matérias-primas.",
+      "b": "reposicionamento estético de objetos por meio da mudança de função.",
+      "c": "convite aos espectadores para interagir e completar obras inacabadas.",
+      "d": "militância com temas da ecologia que marcam o continente africano.",
+      "e": "realidade precária de suas condições de produção artística."
     },
     "images": [],
     "tags": [],
@@ -872,17 +967,18 @@
     "year": 2021,
     "test": "ENEM",
     "area": "linguagens",
-    "answer": "b"
+    "answer": "b",
+    "contextId": "enem_2021_linguagens_q36_ctx1"
   },
   {
     "number": 37,
-    "text": "A letra da música apresenta elementos que remetem ao contexto sociocultural brasileiro. Qual é a principal crítica social presente na canção?",
+    "text": "Pela análise do tema e dos procedimentos argumentativos utilizados na letra da canção composta por Gonzaguinha na década de 1970, infere-se o objetivo de",
     "alternatives": {
-      "a": "A valorização excessiva do carnaval como única forma de expressão cultural.",
-      "b": "A importância de manter o comportamento adequado em todas as circunstâncias sociais.",
-      "c": "A restrição da liberdade de expressão cultural pela imposição de normas de conduta.",
-      "d": "A falta de diálogo entre gerações sobre tradições populares.",
-      "e": "A necessidade de educação formal para ascensão social."
+      "a": "ironizar a incorporação de ideias e atitudes conformistas.",
+      "b": "convencer o público sobre a importância dos deveres cívicos.",
+      "c": "relacionar o discurso religioso à resolução de problemas sociais.",
+      "d": "questionar o valor atribuído pela população às festas populares.",
+      "e": "defender uma postura coletiva indiferente aos valores dominantes."
     },
     "images": [],
     "tags": [
@@ -894,11 +990,12 @@
     "year": 2021,
     "test": "ENEM",
     "area": "linguagens",
-    "answer": "a"
+    "answer": "a",
+    "contextId": "enem_2021_linguagens_q37_ctx1"
   },
   {
     "number": 38,
-    "text": "Se for possível, manda-me dizer:\n— É lua cheia. A casa está vazia —\nManda-me dizer, e o paraíso\nHá de ficar mais perto, e mais recente\nMe há de parecer teu rosto incerto.\nManda-me buscar se tens o dia\nTão longo como a noite. Se é verdade\nQue sem mim só vês monotonia,\nE se te lembras do brilho das marés\nDe alguns peixes rosados\nNumas águas\nE dos meus pés molhados, manda-me dizer:\n— É lua nova —\nE revestida de luz te volto a ver.\n\nHILST, H. Júbilo, memória, noviciado da paixão. São Paulo: Cia. das Letras, 2018.\n\nFalando ao outro, o eu lírico revela-se vocalizando um desejo que remete ao",
+    "text": "Falando ao outro, o eu lírico revela-se vocalizando um desejo que remete ao",
     "alternatives": {
       "a": "ceticismo quanto à possibilidade do reencontro.",
       "b": "tédio provocado pela distância física do ser amado.",
@@ -915,17 +1012,18 @@
     "year": 2021,
     "test": "ENEM",
     "area": "linguagens",
-    "answer": "c"
+    "answer": "c",
+    "contextId": "enem_2021_linguagens_q38_ctx1"
   },
   {
     "number": 39,
-    "text": "Qual é a característica principal do \"falso moralista\" retratado no texto?",
+    "text": "As letras de samba normalmente se caracterizam por apresentarem marcas informais do uso da língua. Nessa letra de Nelson Sargento, são exemplos dessas marcas",
     "alternatives": {
-      "a": "Aceita o teatro de revista",
-      "b": "Bebe bem a noite inteira",
-      "c": "Pede dispensa para ir ao oculista",
-      "d": "Vai curar sua ressaca simplesmente",
-      "e": "É um verdadeiro sambista"
+      "a": "\"falação\" e \"pros bailes\".",
+      "b": "\"você\" e \"teatro de revista\".",
+      "c": "\"perfeito\" e \"Carnaval\".",
+      "d": "\"bebe bem\" e \"oculista\".",
+      "e": "\"curar\" e \"falso moralista\"."
     },
     "images": [],
     "tags": [
@@ -936,17 +1034,18 @@
     "year": 2021,
     "test": "ENEM",
     "area": "linguagens",
-    "answer": "a"
+    "answer": "a",
+    "contextId": "enem_2021_linguagens_q39_ctx1"
   },
   {
     "number": 40,
-    "text": "O texto apresenta características que evidenciam qual aspecto da poesia de Cecília Meireles?",
+    "text": "Ao descrever uma mulher internada em um hospital psiquiátrico, o narrador compõe um quadro que expressa sua percepção",
     "alternatives": {
-      "a": "A valorização da forma fixa e métrica tradicional.",
-      "b": "A abordagem de temas políticos e sociais diretos.",
-      "c": "A exploração da subjetividade e sensibilidade lírica.",
-      "d": "A utilização de linguagem coloquial e popular.",
-      "e": "A predominância de narrativas e enredo linear."
+      "a": "irônica quanto aos efeitos do abandono familiar.",
+      "b": "resignada em face dos métodos terapêuticos em vigor.",
+      "c": "alimentada pela imersão lírica no espaço da segregação.",
+      "d": "inspirada pelo universo pouco conhecido da mente humana.",
+      "e": "demarcada por uma linguagem alinhada à busca da lucidez."
     },
     "images": [],
     "tags": [
@@ -958,17 +1057,17 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "c",
-    "contextId": "enem_2021_linguagens_q9_q40_ctx1"
+    "contextId": "enem_2021_linguagens_q40_ctx1"
   },
   {
     "number": 41,
-    "text": "Na construção do soneto, as cores representam um",
+    "text": "Na construção do soneto, as cores representam um recurso poético que configura uma imagem com a qual o eu lírico",
     "alternatives": {
-      "a": "recurso estético que enaltece a figura do pavão",
-      "b": "símbolo de sentimentos e sensações do eu lírico",
-      "c": "elemento descritivo que caracteriza a natureza",
-      "d": "meio de expressão que comunica ao leitor mensagens cifradas",
-      "e": "elemento de ligação entre a forma e o conteúdo poético"
+      "a": "revela a intenção de isolar-se em seu espaço.",
+      "b": "simboliza a beleza e o esplendor da natureza.",
+      "c": "experimenta a fusão de percepções sensoriais.",
+      "d": "metaforiza a conquista de sua plena realização.",
+      "e": "expressa uma visão de mundo mística e espiritualizada."
     },
     "images": [],
     "tags": [
@@ -980,21 +1079,19 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "d",
-    "contextId": "enem_2021_linguagens_ctx41"
+    "contextId": "enem_2021_linguagens_q41_ctx1"
   },
   {
     "number": 42,
-    "text": "Observando a obra \"Garota com bola\", de Roy Lichtenstein, identifique qual alternativa melhor descreve as características do movimento Pop Art representado nesta obra.",
+    "text": "A obra, da década de 1960, pertencente ao movimento artístico <i>Pop Art</i>, explora a beleza e a sensualidade do corpo feminino em uma situação de divertimento. Historicamente, a sociedade inventou e continua reinventando o corpo como objeto de intervenções sociais, buscando atender aos valores e costumes de cada época.\n\nNa reprodução desses preceitos, a erotização do corpo feminino tem sido constituída pela",
     "alternatives": {
-      "a": "Valorização da arte clássica e rejeição aos temas populares.",
-      "b": "Uso de cores vibrantes e referências à cultura de massa.",
-      "c": "Foco exclusivo em temas abstratos e geométricos.",
-      "d": "Imitação fotográfica dos objetos representados.",
-      "e": "Prioridade ao realismo tradicional e técnicas renascentistas."
+      "a": "realização de exercícios físicos sistemáticos e excessivos.",
+      "b": "utilização de medicamentos e produtos estéticos.",
+      "c": "educação do gesto, da vontade e do comportamento.",
+      "d": "construção de espaços para vivência de práticas corporais.",
+      "e": "promoção de novas experiências de movimento humano no lazer."
     },
-    "images": [
-      "figuras/q042_2021_fig1.png"
-    ],
+    "images": [],
     "tags": [
       "artes visuais",
       "história da cultura e arte"
@@ -1003,22 +1100,20 @@
     "year": 2021,
     "test": "ENEM",
     "area": "linguagens",
-    "answer": "c"
+    "answer": "c",
+    "contextId": "enem_2021_linguagens_q42_ctx1"
   },
   {
     "number": 43,
-    "text": "O TATA CONTOU SOBRE O CALUNGA, MAR QUE NÃO ACABA. LONGE DAQUI... NANA, SE A GENTE BEBER A NSANGA E ENFRENTAR O CALUNGA, PODEMOS FICAR JUNTOS LA NA OUTRA TERRA. ...LONGE DISSO TUDO [Figura: imagem com texto distorcido e símbolos] [Figura: imagem com texto distorcido e símbolos]",
+    "text": "A sequência dos quadrinhos conjuga lirismo e violência ao",
     "alternatives": {
-      "a": "su",
-      "b": "re",
-      "c": "representar o abatimento diante da desumanidade",
-      "d": "ac",
-      "e": "W"
+      "a": "sugerir a impossibilidade de manutenção dos afetos.",
+      "b": "revelar os corpos marcados pela brutalidade colonial.",
+      "c": "representar o abatimento diante da desumanidade vivida.",
+      "d": "acentuar a resistência identitária dos povos escravizados.",
+      "e": "expor os sujeitos alijados de sua ancestralidade pelo exílio."
     },
-    "images": [
-      "figuras/q043_2021_fig1.png",
-      "figuras/q043_2021_fig2.png"
-    ],
+    "images": [],
     "tags": [
       "interpretação de texto",
       "literatura brasileira",
@@ -1028,17 +1123,18 @@
     "year": 2021,
     "test": "ENEM",
     "area": "linguagens",
-    "answer": "d"
+    "answer": "d",
+    "contextId": "enem_2021_linguagens_q43_ctx1"
   },
   {
     "number": 44,
-    "text": "Na passagem em que o narrador descreve a população no sistema da matraca, como ele caracteriza a relação entre o personagem e a comunidade?",
+    "text": "O fragmento faz uma referência irônica a formas de divulgação e circulação de informações em uma localidade sem imprensa. Ao destacar a confiança da população no sistema da matraca, o narrador associa esse recurso à disseminação de",
     "alternatives": {
-      "a": "Como uma relação de dependência mútua e confiança.",
-      "b": "Como uma relação de manipulação e controle social.",
-      "c": "Como uma relação de respeito e admiração pessoal.",
-      "d": "Como uma relação de indiferença e desinteresse.",
-      "e": "Como uma relação de conflito e desacordo constante."
+      "a": "campanhas políticas.",
+      "b": "anúncios publicitários.",
+      "c": "notícias de apelo popular.",
+      "d": "informações não fidedignas.",
+      "e": "serviços de utilidade pública."
     },
     "images": [],
     "tags": [
@@ -1049,16 +1145,17 @@
     "year": 2021,
     "test": "ENEM",
     "area": "linguagens",
-    "answer": "d"
+    "answer": "d",
+    "contextId": "enem_2021_linguagens_q44_ctx1"
   },
   {
     "number": 45,
-    "text": "O texto narra a trajetória artística de Abel Ferreira, clarinetista e compositor do choro, celebrando aproximadamente 100 anos da realização do choro da Fazenda do Bom Retiro. Descrito como um gênio musical brasileiro, Abel Ferreira compôs cerca de 50 choros, incluindo \"Ingênuo\" (1958), transmitindo seu legado aos seus herdeiros musicais.\n\nFERRAZ, L. Disponível em: cartacapital.com.br, 2019 (adaptado).\n\nConsiderando-se o contexto da vida artística de Abel Ferreira, os argumentos trazidos pela autora do texto buscam",
+    "text": "Considerando-se o contexto, o gênero e o público-alvo, os argumentos trazidos pela autora do texto buscam",
     "alternatives": {
       "a": "atribuir o desconhecimento da obra de Abel Ferreira ao ensino de música nas escolas.",
-      "b": "reivindicar mais investimentos estatais para a preservação das tecnologias de informação e comunicação.",
+      "b": "reivindicar mais investimentos estatais para a preservação do acervo musical nacional.",
       "c": "destacar a relevância histórica e a riqueza estética do choro no cenário musical brasileiro.",
-      "d": "apresentar ao leitor dados biográficos pouco conhecidos que facilitam o acesso à obra.",
+      "d": "apresentar ao leitor dados biográficos pouco conhecidos sobre a trajetória de Abel Ferreira.",
       "e": "constatar a impopularidade do choro diante da preferência do público por músicas populares."
     },
     "images": [],
@@ -1071,6 +1168,7 @@
     "year": 2021,
     "test": "ENEM",
     "area": "linguagens",
-    "answer": "c"
+    "answer": "c",
+    "contextId": "enem_2021_linguagens_q45_ctx1"
   }
 ]

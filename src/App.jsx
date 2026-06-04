@@ -94,7 +94,7 @@ function formatTime(seconds) {
   return `${m}:${String(s).padStart(2, '0')}`
 }
 
-const APP_VERSION = '1.14.3'
+const APP_VERSION = '1.14.4'
 const APP_VERSION_DATE = '04/06/2026'
 
 const REVIEW_STATUS = [
@@ -102,13 +102,21 @@ const REVIEW_STATUS = [
   { year: 2024, linguagens: true, humanas: true, natureza: true, matematica: true },
   { year: 2023, linguagens: true, humanas: true, natureza: true, matematica: true },
   { year: 2022, linguagens: true, humanas: true, natureza: true, matematica: true },
-  { year: 2021, linguagens: false, humanas: false, natureza: false, matematica: false },
+  { year: 2021, linguagens: true, humanas: true, natureza: false, matematica: false },
   { year: 2020, linguagens: false, humanas: false, natureza: false, matematica: false },
   { year: 2019, linguagens: false, humanas: false, natureza: false, matematica: false },
   { year: 2018, linguagens: true, humanas: true, natureza: true, matematica: true },
 ]
 
 const CHANGELOG = [
+  {
+    version: '1.14.4',
+    date: '04/06/2026',
+    items: [
+      '2021 linguagens revisada',
+      '2021 humanas revisada',
+    ],
+  },
   {
     version: '1.14.3',
     date: '04/06/2026',

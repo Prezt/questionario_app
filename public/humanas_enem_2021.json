@@ -1,38 +1,16 @@
 [
   {
     "number": 46,
-    "text": "A simples vontade de checar mensagens do trabalho pós-expediente prejudica sua saúde — e a de sua família. Qual é a consequência dessa atitude?",
+    "text": "O texto indica práticas nas relações cotidianas do trabalho que causam para o indivíduo a",
     "alternatives": {
-      "a": "Melhora o desempenho profissional",
-      "b": "Reduz o estresse pessoal",
-      "c": "Prejudica a saúde e o bem-estar familiar",
-      "d": "Aumenta a produtividade",
-      "e": "Fortalece as relações interpessoais"
+      "a": "proteção da vida privada.",
+      "b": "ampliação de atividades extras.",
+      "c": "elevação de etapas burocráticas.",
+      "d": "diversificação de lazer recreativo.",
+      "e": "desobrigação de afazeres domésticos."
     },
     "images": [],
     "tags": [
-      "cultura e identidade",
-      "direitos humanos e cidadania"
-    ],
-    "difficulty": 5,
-    "year": 2021,
-    "test": "ENEM",
-    "area": "humanas",
-    "answer": "b"
-  },
-  {
-    "number": 47,
-    "text": "Conforme o texto, qual é a principal consequência da desigualdade de renda e acumulação de capital na sociedade contemporânea?",
-    "alternatives": {
-      "a": "A impossibilidade de poupar uma parte limitada da renda de seu capital",
-      "b": "O aumento exponencial da renda de todos os cidadãos",
-      "c": "A redução das diferenças sociais e econômicas",
-      "d": "A concentração de riqueza e poder nas mãos de poucos",
-      "e": "A eliminação completa do sistema capitalista"
-    },
-    "images": [],
-    "tags": [
-      "filosofia moderna e contemporânea",
       "sociologia e estrutura social",
       "direitos humanos e cidadania"
     ],
@@ -40,14 +18,41 @@
     "year": 2021,
     "test": "ENEM",
     "area": "humanas",
-    "answer": "a"
+    "answer": "b",
+    "contextIds": [
+      "enem_2021_humanas_q46_ctx1"
+    ]
+  },
+  {
+    "number": 47,
+    "text": "Considerando os princípios que legitimam as democracias liberais, a lógica econômica descrita no texto enfraquece o(a)",
+    "alternatives": {
+      "a": "ideologia do mérito.",
+      "b": "direito de nascimento.",
+      "c": "eficácia da legislação.",
+      "d": "ganho das financeiras.",
+      "e": "eficiência dos mercados."
+    },
+    "images": [],
+    "tags": [
+      "filosofia moderna e contemporânea",
+      "sociologia e estrutura social"
+    ],
+    "difficulty": 6,
+    "year": 2021,
+    "test": "ENEM",
+    "area": "humanas",
+    "answer": "a",
+    "contextIds": [
+      "enem_2021_humanas_q47_ctx1"
+    ]
   },
   {
     "number": 48,
-    "text": "Atualmente, o Programa de Melhoramento \"Uvas do Brasil\" utiliza métodos clássicos de melhoramento, como seleção massal, seleção clonal e hibridações. Ações de ajuste de manejo de seleções avançadas vêm sendo desenvolvidas paralelamente ao Programa de Melhoramento, no sentido de viabilização desses materiais. Ao longo dos seus 40 anos, uma grande equipe técnica trabalhou para executar projetos de pesquisa para atender às necessidades e às demandas de diferentes atores da vitivinicultura nacional, incluindo produtores de uvas de mesa para exportação do semiárido nordestino, viticultores interessados em produzir sucos em regiões tropicais ou pequenos produtores familiares da região da Serra Gaúcha, interessados em melhorar a qualidade do vinho artesanal que produzem.\n\nPrograma de Melhoramento Genético \"Uvas do Brasil\". Disponível em: www.embrapa.br. Acesso em: 24 nov. 2018 (adaptado).\n\nPara melhorar a produção agrícola nas regiões mencionadas, as técnicas referidas no texto buscaram adaptar o cultivo aos(às)",
+    "text": "Para melhorar a produção agrícola nas regiões mencionadas, as técnicas referidas no texto buscaram adaptar o cultivo aos(às)",
     "alternatives": {
       "a": "espécies nativas ameaçadas.",
-      "b": "economias autônomas.",
+      "b": "cadeias econômicas autônomas.",
       "c": "estruturas fundiárias tradicionais.",
       "d": "elementos ambientais singulares.",
       "e": "mercados consumidores internos."
@@ -55,24 +60,26 @@
     "images": [],
     "tags": [
       "geografia humana e urbana",
-      "meio ambiente e sustentabilidade",
-      "ciência e tecnologia"
+      "meio ambiente e sustentabilidade"
     ],
     "difficulty": 5,
     "year": 2021,
     "test": "ENEM",
     "area": "humanas",
-    "answer": "d"
+    "answer": "d",
+    "contextIds": [
+      "enem_2021_humanas_q48_ctx1"
+    ]
   },
   {
     "number": 49,
-    "text": "Considerando os textos apresentados, qual é a principal crítica feita aos sistemas tradicionais de proteção do patrimônio histórico?",
+    "text": "Escritos em temporalidade histórica aproximada, os textos se distanciam ao apresentarem pontos de vista diferentes sobre a(s)",
     "alternatives": {
-      "a": "Consideram o monumento desvinculado da realidade social e econômica.",
-      "b": "Promovem a valorização excessiva do patrimônio sem considerar sua manutenção.",
-      "c": "Não reconhecem a importância da transmissão das obras do passado.",
-      "d": "Impedem a modernização necessária das estruturas históricas.",
-      "e": "Priorizam apenas os monumentos de valor espiritual elevado."
+      "a": "ampliação do comércio de imagens sacras.",
+      "b": "substituição de materiais de valor artístico.",
+      "c": "políticas de conservação de bens culturais.",
+      "d": "defesa da privatização de sítios arqueológicos.",
+      "e": "medidas de salvaguarda de peças museológicas."
     },
     "images": [],
     "tags": [
@@ -85,89 +92,98 @@
     "area": "humanas",
     "answer": "c",
     "contextIds": [
-      "enem_2021_humanas_q49_q81_ctx1",
-      "enem_2021_humanas_q49_q50_ctx1"
+      "enem_2021_humanas_q49_ctx1",
+      "enem_2021_humanas_q49_ctx2"
     ]
   },
   {
     "number": 50,
-    "text": "[CONTEÚDO ILEGÍVEL - OCR SEVERAMENTE CORROMPIDO]",
+    "text": "No contexto das discussões ambientais, as práticas descritas nos textos refletem um padrão de relações derivado do(a)",
     "alternatives": {
-      "a": "[ILEGÍVEL]",
-      "b": "[ILEGÍVEL]",
-      "c": "[ILEGÍVEL]",
-      "d": "[ILEGÍVEL]",
-      "e": "[ILEGÍVEL]"
+      "a": "exercício pleno da cidadania.",
+      "b": "divisão internacional do trabalho.",
+      "c": "gestão empresarial do toyotismo.",
+      "d": "concepção sustentável da economia.",
+      "e": "protecionismo alfandegário dos Estados."
     },
     "images": [],
-    "tags": [],
-    "difficulty": 5,
+    "tags": [
+      "meio ambiente e sustentabilidade",
+      "geopolítica e relações internacionais",
+      "sociologia e estrutura social"
+    ],
+    "difficulty": 6,
     "year": 2021,
     "test": "ENEM",
     "area": "humanas",
     "answer": "b",
     "contextIds": [
-      "enem_2021_humanas_q49_q81_ctx1",
-      "enem_2021_humanas_q49_q50_ctx1"
+      "enem_2021_humanas_q50_ctx1",
+      "enem_2021_humanas_q50_ctx2"
     ]
   },
   {
     "number": 51,
-    "text": "O texto apresenta informações sobre o desenvolvimento dos recursos hídricos. Qual é a principal preocupação abordada no Relatório Mundial das Nações Unidas sobre Desenvolvimento dos Recursos Hídricos?",
+    "text": "Considerando o debate sobre a segurança hídrica, a proposta apresentada no texto está pautada no(a)",
     "alternatives": {
-      "a": "A abundância de água doce em todas as regiões do planeta",
-      "b": "A distribuição desigual dos recursos hídricos",
-      "c": "O aumento da poluição industrial nas cidades",
-      "d": "A redução do consumo de água nas zonas rurais",
-      "e": "A preservação de ecossistemas aquáticos intocados"
+      "a": "distribuição equitativa do abastecimento.",
+      "b": "monitoramento do fornecimento urbano.",
+      "c": "racionamento da capacidade industrial.",
+      "d": "revitalização gradativa de solos.",
+      "e": "geração de produtos recicláveis."
     },
     "images": [],
     "tags": [
       "meio ambiente e sustentabilidade",
-      "geopolítica e território"
+      "geografia humana e urbana"
     ],
     "difficulty": 5,
     "year": 2021,
     "test": "ENEM",
     "area": "humanas",
     "answer": "a",
-    "contextId": "enem_2021_humanas_q49_q81_ctx1"
+    "contextIds": [
+      "enem_2021_humanas_q51_ctx1"
+    ]
   },
   {
     "number": 52,
-    "text": "entretanto, ainda receava que, sem um tratado anglo que impedisse os brasileiros de um dia voltarem aos seu comércio de escravo. As tensões relacionadas ao interesse britânico em qual aspecto?",
+    "text": "As tensões diplomáticas expressas no texto indicam o interesse britânico em",
     "alternatives": {
-      "a": "interesse britânico",
-      "b": "abolição do comércio",
-      "c": "tensões comerciais",
-      "d": "tratado anglo",
-      "e": "comércio de escravo"
+      "a": "estabelecer jurisdição conciliadora.",
+      "b": "compartilhar negócios marítimos.",
+      "c": "fomentar políticas higienistas.",
+      "d": "manter a proibição comercial.",
+      "e": "promover o negócio familiar."
     },
     "images": [],
     "tags": [
       "história do brasil imperial",
       "geopolítica e relações internacionais"
     ],
-    "difficulty": 5,
+    "difficulty": 6,
     "year": 2021,
     "test": "ENEM",
     "area": "humanas",
-    "answer": "d"
+    "answer": "d",
+    "contextIds": [
+      "enem_2021_humanas_q52_ctx1"
+    ]
   },
   {
     "number": 53,
-    "text": "Ao destacar as expressões e vivências populares do cotidiano, o texto mobiliza os seguintes aspectos da diversidade regional:",
+    "text": "Ao destacar expressões e vivências populares do cotidiano, o texto mobiliza os seguintes aspectos da diversidade regional:",
     "alternatives": {
       "a": "Alianças afetivas conectadas ao ritual matrimonial.",
       "b": "Práticas místicas associadas ao patrimônio cultural.",
-      "c": "Manifestações teatrais atreladas ao imaginario político.",
-      "d": "Narrativas fílmicas relacionas as intempéries climáticas",
-      "e": "Argumentações literarias interligadas as catástrofes ambientais."
+      "c": "Manifestações teatrais atreladas ao imaginário político.",
+      "d": "Narrativas fílmicas relacionadas às intempéries climáticas.",
+      "e": "Argumentações literárias interligadas às catástrofes ambientais."
     },
     "images": [],
     "tags": [
-      "literatura brasileira",
-      "cultura e identidade"
+      "cultura e identidade",
+      "história da cultura e arte"
     ],
     "difficulty": 5,
     "year": 2021,
@@ -180,138 +196,164 @@
   },
   {
     "number": 54,
-    "text": "O uso de novas tecnologias envolve a assimilação de novos padrões de produção e não constitui apenas um processo técnico na medida em que pressupõe uma nova orientação no controle do capital, nas relações entre empresas e trabalhadores e nos processos de organização do trabalho. As inovações tecnológicas transformam as formas de produção capitalista e alteram profundamente a estrutura da vida social. O uso de novas tecnologias relacionado ao controle do trabalho está associado a qual transformação socioeconômica?",
+    "text": "O uso de novas tecnologias relacionado ao controle empresarial está calcado no texto em razão da",
     "alternatives": {
-      "a": "À consolidação do modelo econômico feudal nos países em desenvolvimento.",
-      "b": "À formação de corporações de ofício nas cidades medievais.",
-      "c": "À transição entre os modos de produção pré-capitalista e capitalista.",
-      "d": "Ao declínio econômico e político dos centros urbanos.",
-      "e": "Ao fortalecimento das estruturas de produção artesanal."
+      "a": "operacionalização da tarefa laboral.",
+      "b": "capacitação de profissionais liberais.",
+      "c": "fragilização das relações de trabalho.",
+      "d": "hierarquização dos cargos executivos.",
+      "e": "aplicação dos conhecimentos da ciência."
     },
     "images": [],
     "tags": [
       "sociologia e estrutura social",
-      "história moderna e contemporânea"
+      "ciência e tecnologia"
     ],
     "difficulty": 6,
     "year": 2021,
     "test": "ENEM",
     "area": "humanas",
-    "answer": "c"
+    "answer": "c",
+    "contextIds": [
+      "enem_2021_humanas_q54_ctx1"
+    ]
   },
   {
     "number": 55,
-    "text": "Questão com texto corrompido — impossível extrair conteúdo legível.",
+    "text": "A condição de transitoriedade dos refugiados no Brasil, conforme abordada no texto, é provocada pela associação entre",
     "alternatives": {
-      "a": "Conteúdo ilegível",
-      "b": "Conteúdo ilegível",
-      "c": "Conteúdo ilegível",
-      "d": "Conteúdo ilegível",
-      "e": "Conteúdo ilegível"
+      "a": "ascensão social e burocracia estatal.",
+      "b": "miscigenação étnica e limites fronteiriços.",
+      "c": "desqualificação profissional e ação policial.",
+      "d": "instabilidade financeira e crises econômicas.",
+      "e": "desenraizamento cultural e insegurança legal."
     },
     "images": [],
     "tags": [
-      "filosofia e sociologia"
+      "geopolítica e relações internacionais",
+      "direitos humanos e cidadania",
+      "sociologia e estrutura social"
     ],
-    "difficulty": 5,
+    "difficulty": 6,
     "year": 2021,
     "test": "ENEM",
     "area": "humanas",
-    "answer": "e"
+    "answer": "e",
+    "contextIds": [
+      "enem_2021_humanas_q55_ctx1"
+    ]
   },
   {
     "number": 56,
-    "text": "A questão apresenta um texto com problemas de extração que impedem a leitura clara do enunciado e das alternativas.",
+    "text": "No contexto do século XIX, a relação das mulheres com o campo científico, descrita no texto, é representativa da",
     "alternatives": {
-      "a": "Texto ilegível",
-      "b": "Texto ilegível",
-      "c": "Texto ilegível",
-      "d": "Texto ilegível",
-      "e": "Texto ilegível"
+      "a": "afirmação da igualdade de gênero.",
+      "b": "transformação dos espaços de lazer.",
+      "c": "adequação do pensamento patriarcal.",
+      "d": "incorporação das estruturas sociais.",
+      "e": "substituição das atividades domésticas."
     },
     "images": [],
-    "tags": [],
-    "difficulty": 5,
+    "tags": [
+      "sociologia e estrutura social",
+      "história moderna e contemporânea",
+      "ciência e tecnologia"
+    ],
+    "difficulty": 6,
     "year": 2021,
     "test": "ENEM",
     "area": "humanas",
-    "answer": "d"
+    "answer": "c",
+    "contextIds": [
+      "enem_2021_humanas_q56_ctx1"
+    ]
   },
   {
     "number": 57,
-    "text": "Nos setores mais altamente desenvolvidos da sociedade contemporânea, o transplante de necessidade",
+    "text": "O texto indica que, no capitalismo, a satisfação dos desejos pessoais é influenciada por",
     "alternatives": {
-      "a": "po",
-      "b": "in",
-      "c": "pr",
-      "d": "me",
-      "e": "re"
-    },
-    "images": [],
-    "tags": [],
-    "difficulty": 5,
-    "year": 2021,
-    "test": "ENEM",
-    "area": "humanas",
-    "answer": "d"
-  },
-  {
-    "number": 58,
-    "text": "A cidade é um produto do trabalho humano, um artefato social, cultural e político. Nessa perspectiva, ela não é simplesmente um conjunto de edifícios, mas um espaço onde se materializam relações sociais, conflitos e contradições. O texto apresenta uma crítica sobre a mercantilização da cidade, onde pedaços da cidade são vendidos, no mercado, como mercadorias. Qual é a principal consequência dessa mercantilização para a estrutura urbana e para a vida social?",
-    "alternatives": {
-      "a": "A transformação da cidade em um produto de consumo que fragmenta o espaço urbano e reduz a vida social a transações comerciais.",
-      "b": "A destruição completa das relações sociais tradicionais e a eliminação de qualquer forma de organização comunitária.",
-      "c": "A concentração exclusiva do poder nas mãos dos empresários imobiliários e a exclusão total do Estado.",
-      "d": "A homogeneização total da cidade e a extinção de qualquer diferença cultural ou social entre seus habitantes.",
-      "e": "A manutenção de um espaço urbano igualitário onde todos têm acesso às mesmas oportunidades e recursos."
+      "a": "políticas estatais de divulgação.",
+      "b": "incentivos econômicos de consumo.",
+      "c": "prescrições coletivas da organização.",
+      "d": "mecanismos subjetivos de identificação.",
+      "e": "repressões racionalizadas do narcisismo."
     },
     "images": [],
     "tags": [
       "filosofia moderna e contemporânea",
-      "sociologia e estrutura social",
-      "geopolítica e território"
+      "sociologia e estrutura social"
     ],
     "difficulty": 6,
     "year": 2021,
     "test": "ENEM",
     "area": "humanas",
-    "answer": "e"
+    "answer": "d",
+    "contextIds": [
+      "enem_2021_humanas_q57_ctx1"
+    ]
   },
   {
-    "number": 59,
-    "text": "O texto apresenta uma discussão sobre a formação e desenvolvimento de determinado fenômeno geográfico. Com base nas informações contidas no trecho, qual das alternativas melhor caracteriza o processo descrito?",
+    "number": 58,
+    "text": "No contexto das grandes cidades brasileiras, a situação apresentada no texto vem ocorrendo como consequência da",
     "alternatives": {
-      "a": "Constitui pela transformação direta de materiais vulcânicos",
-      "b": "Resulta da ação contínua de agentes erosivos sobre rochas",
-      "c": "Forma-se exclusivamente em ambientes marinhos profundos",
-      "d": "Desenvolve-se através de processos de sedimentação e compactação",
-      "e": "Origina-se apenas em regiões com clima tropical úmido"
+      "a": "manutenção dos modos de convívio social.",
+      "b": "preservação da estética do espaço público.",
+      "c": "ampliação das normas de controle ambiental.",
+      "d": "flexibilização das regras de participação política.",
+      "e": "alteração da organização da paisagem geográfica."
     },
     "images": [],
     "tags": [
-      "geografia física e geologia",
-      "meio ambiente e sustentabilidade"
+      "geografia humana e urbana",
+      "sociologia e estrutura social"
     ],
     "difficulty": 5,
     "year": 2021,
     "test": "ENEM",
     "area": "humanas",
-    "answer": "b"
+    "answer": "e",
+    "contextIds": [
+      "enem_2021_humanas_q58_ctx1"
+    ]
+  },
+  {
+    "number": 59,
+    "text": "O texto expõe a produção de um conhecimento que se constitui pela",
+    "alternatives": {
+      "a": "técnica científica.",
+      "b": "experiência perceptiva.",
+      "c": "repetição das tradições.",
+      "d": "padronização das culturas.",
+      "e": "uniformização das informações."
+    },
+    "images": [],
+    "tags": [
+      "cultura e identidade",
+      "filosofia moderna e contemporânea"
+    ],
+    "difficulty": 5,
+    "year": 2021,
+    "test": "ENEM",
+    "area": "humanas",
+    "answer": "b",
+    "contextIds": [
+      "enem_2021_humanas_q59_ctx1"
+    ]
   },
   {
     "number": 60,
-    "text": "Qual comportamento coletivo é criticado no trecho da letra da canção lancada em 1979?",
+    "text": "Qual comportamento coletivo é criticado no trecho da letra da canção lançada em 1979?",
     "alternatives": {
-      "a": "Militancia política.",
+      "a": "Militância política.",
       "b": "Passividade social.",
-      "c": "Altruismo religioso.",
+      "c": "Altruísmo religioso.",
       "d": "Autocontrole moral.",
       "e": "Inconformismo eleitoral."
     },
     "images": [],
     "tags": [
-      "literatura brasileira",
-      "música e dança"
+      "cultura e identidade",
+      "sociologia e estrutura social"
     ],
     "difficulty": 5,
     "year": 2021,
@@ -326,57 +368,89 @@
     "number": 61,
     "text": "As intervenções urbanas descritas derivam de um processo socioespacial que busca a",
     "alternatives": {
-      "a": "requalificação de espaços públicos mediante políticas de financiamento privado",
-      "b": "valorização do patrimônio histórico através da manutenção das funções tradicionais",
-      "c": "transformação de áreas portuárias em espaços de consumo e circulação de capital",
-      "d": "democratização do acesso à moradia em regiões de waterfronts",
-      "e": "preservação das atividades econômicas tradicionais nas áreas portuárias"
+      "a": "intensificação da participação na competitividade global.",
+      "b": "contenção da expansão do mercado imobiliário.",
+      "c": "democratização da habitação popular.",
+      "d": "valorização das funções tradicionais.",
+      "e": "priorização da gestão participativa."
     },
     "images": [],
     "tags": [
       "geografia humana e urbana",
-      "geopolítica e território"
+      "geopolítica e relações internacionais"
     ],
     "difficulty": 6,
     "year": 2021,
     "test": "ENEM",
     "area": "humanas",
-    "answer": "a"
+    "answer": "a",
+    "contextIds": [
+      "enem_2021_humanas_q61_ctx1"
+    ]
   },
   {
     "number": 62,
-    "text": "A industrialização do Brasil ante a nova divisão internacional do trabalho",
+    "text": "Um efeito desse cenário para a sociedade brasileira tem sido o(a)",
     "alternatives": {
-      "a": "A inserção brasileira nas novas tecnologias ancoradas na indústria de base",
-      "b": "O aprofundamento da especialização em produtos relacionados a commodities",
-      "c": "A manutenção da dependência tecnológica e da vulnerabilidade estrutural",
-      "d": "A diversificação produtiva com redução da importância do setor primário",
-      "e": "A substituição completa da indústria tradicional pela indústria de ponta"
+      "a": "barateamento da cesta básica.",
+      "b": "retorno à estatização econômica.",
+      "c": "ampliação do poder de consumo.",
+      "d": "subordinação aos fluxos globais.",
+      "e": "incentivo à política de modernização."
     },
     "images": [],
     "tags": [
-      "história do brasil república",
-      "geopolítica e relações internacionais"
+      "geopolítica e relações internacionais",
+      "história contemporânea do brasil",
+      "ciência e tecnologia"
     ],
-    "difficulty": 5,
+    "difficulty": 6,
     "year": 2021,
     "test": "ENEM",
     "area": "humanas",
-    "answer": "d"
+    "answer": "d",
+    "contextIds": [
+      "enem_2021_humanas_q62_ctx1"
+    ]
   },
   {
     "number": 63,
-    "text": "As atividades mineradoras têm criado conflitos com extrativistas, quilombolas, pescadores artesanais e povos indígenas. Depois da instalação da atividade mineradora, nem sempre com reconhecimento do impacto ao seu território pelo Estado e pela empresa, ficando sem qualquer tipo de compensação econômica. Em outros casos, nem a compensação econômica tem sido capaz de evitar o esgarçamento das relações sociais destes grupos que sofrem com a recorrente disputa das suas identidades e de suas dinâmicas territoriais.\n\nPALHETA, J. M. et al. Conflitos pelo uso do território na Amazônia mineral. Brasília: Presidência da República, 2010.\n\nPara analisar esses conflitos territoriais no contexto das ciências humanas, o conceito mais adequado é o de",
+    "text": "O texto apresenta uma relação entre atividade econômica e organização social marcada pelo(a)",
     "alternatives": {
-      "a": "luta de classes.",
-      "b": "alcance da crítica do método científico.",
-      "c": "paradigmas do processo indagativo.",
-      "d": "domínio do fetichismo da mercadoria.",
-      "e": "noção de alienação do trabalhador."
+      "a": "escassez de incentivo cultural.",
+      "b": "rompimento de vínculos locais.",
+      "c": "carência de investimento financeiro.",
+      "d": "estabelecimento de práticas agroecológicas.",
+      "e": "enriquecimento das comunidades autóctones."
     },
     "images": [],
     "tags": [
-      "geopolítica e território",
+      "geografia humana e urbana",
+      "meio ambiente e sustentabilidade",
+      "direitos humanos e cidadania"
+    ],
+    "difficulty": 6,
+    "year": 2021,
+    "test": "ENEM",
+    "area": "humanas",
+    "answer": "b",
+    "contextIds": [
+      "enem_2021_humanas_q63_ctx1"
+    ]
+  },
+  {
+    "number": 64,
+    "text": "No texto, a caracterização de uma minoria decorre da existência de",
+    "alternatives": {
+      "a": "ameaças de extinção social.",
+      "b": "políticas de incentivos estatais.",
+      "c": "relações de natureza arbitrária.",
+      "d": "valorações de conexões simétricas.",
+      "e": "hierarquizações de origem biológica."
+    },
+    "images": [],
+    "tags": [
+      "filosofia moderna e contemporânea",
       "sociologia e estrutura social",
       "direitos humanos e cidadania"
     ],
@@ -384,92 +458,87 @@
     "year": 2021,
     "test": "ENEM",
     "area": "humanas",
-    "answer": "b"
-  },
-  {
-    "number": 64,
-    "text": "The text contains severely corrupted content with incomplete sentences, random characters, and formatting artifacts that prevent clear extraction of a coherent question stem and alternatives.",
-    "alternatives": {
-      "a": "[UNRECOVERABLE]",
-      "b": "[UNRECOVERABLE]",
-      "c": "[UNRECOVERABLE]",
-      "d": "[UNRECOVERABLE]",
-      "e": "[UNRECOVERABLE]"
-    },
-    "images": [],
-    "tags": [],
-    "difficulty": 5,
-    "year": 2021,
-    "test": "ENEM",
-    "area": "humanas",
-    "answer": "c"
+    "answer": "c",
+    "contextIds": [
+      "enem_2021_humanas_q64_ctx1"
+    ]
   },
   {
     "number": 65,
-    "text": "A situação da classe trabalhadora na Inglaterra",
+    "text": "No texto, o autor apresenta delineamentos éticos que correspondem ao(à)",
     "alternatives": {
-      "a": "era compatível com os princípios humanitários do capitalismo industrial",
-      "b": "gerou descontentamento que impulsionou movimentos de contestação social",
-      "c": "era ignorada pela intelectualidade da época",
-      "d": "não apresentava diferenças em relação às condições de trabalho medievais",
-      "e": "era defendida pelos pensadores socialistas como modelo ideal"
+      "a": "conceito de luta de classes.",
+      "b": "alcance da ideia de mais-valia.",
+      "c": "fundamentos do método científico.",
+      "d": "paradigmas do processo indagativo.",
+      "e": "domínio do fetichismo da mercadoria."
     },
     "images": [],
     "tags": [
-      "história moderna",
-      "sociologia e estrutura social"
+      "filosofia moderna e contemporânea",
+      "sociologia e estrutura social",
+      "história moderna e contemporânea"
     ],
     "difficulty": 5,
     "year": 2021,
     "test": "ENEM",
     "area": "humanas",
-    "answer": "a"
+    "answer": "a",
+    "contextIds": [
+      "enem_2021_humanas_q65_ctx1"
+    ]
   },
   {
     "number": 66,
-    "text": "A questão refere-se a um mapa do encarceramento e à análise de dados sobre a população carcerária, incluindo presos adultos condenados e questões patrimoniais.",
+    "text": "Nesse contexto, as políticas públicas para minimizar a problemática descrita devem privilegiar a",
     "alternatives": {
-      "a": "yW&k*+\"#\"",
-      "b": "(*+\t+\t",
-      "c": "*+\n(\\t",
-      "d": "*+(*+(\\t5\n",
-      "e": "W(+(5\\t+"
+      "a": "flexibilização do Código Civil.",
+      "b": "promoção da inclusão social.",
+      "c": "redução da maioridade penal.",
+      "d": "contenção da corrupção política.",
+      "e": "expansão do período de reclusão."
     },
     "images": [],
     "tags": [
       "sociologia e estrutura social",
-      "geopolítica e território"
+      "direitos humanos e cidadania"
     ],
     "difficulty": 5,
     "year": 2021,
     "test": "ENEM",
     "area": "humanas",
-    "answer": "b"
+    "answer": "b",
+    "contextIds": [
+      "enem_2021_humanas_q66_ctx1"
+    ]
   },
   {
     "number": 67,
-    "text": "Qual era a importância da paisagem nas sociedades medievais?",
+    "text": "De acordo com o texto, a catástrofe descrita impactava as sociedades medievais por proporcionar a",
     "alternatives": {
-      "a": "Correção dos métodos preventivos e das regras",
-      "b": "Conversão da devastação em oportunidade econômica",
-      "c": "Proporcionar recursos para subsistência",
-      "d": "Influência na organização política",
-      "e": "Desenvolvimento de técnicas agrícolas"
+      "a": "correção dos métodos preventivos e das regras sanitárias.",
+      "b": "revelação do descaso público e das degradações ambientais.",
+      "c": "reorientação do imaginário popular e das crenças religiosas.",
+      "d": "remodelação dos sistemas políticos e das administrações locais.",
+      "e": "reconfiguração dos espaços ocupados e das dinâmicas comunitárias."
     },
     "images": [],
     "tags": [
       "história medieval",
-      "história moderna"
+      "história da cultura e arte"
     ],
-    "difficulty": 5,
+    "difficulty": 6,
     "year": 2021,
     "test": "ENEM",
     "area": "humanas",
-    "answer": "e"
+    "answer": "e",
+    "contextIds": [
+      "enem_2021_humanas_q67_ctx1"
+    ]
   },
   {
     "number": 68,
-    "text": "O protagonismo indígena vem optando por uma estratégia de \"des-invisibilização\", valendo-se da dinâmica das novas tecnologias. Em outubro de 2012, após receberem uma liminar lhes negando o direito a permanecer em suas terras, os Guarani de Pyelito Kue divulgaram uma carta na qual se dispunham a morrer, mas não a sair de suas terras. Esse fato foi amplamente divulgado, gerando uma grande mobilização na internet, que levou milhares de pessoas a escolherem seu lado, divulgando a hashtag \"#somostodosGuarani-Kaiowá\" ou acrescentando o sobrenome Guarani-Kaiowá a seus nomes nos perfis das principais redes sociais.\n\nCAPIBERIBE, A.; BONILLA, O. A Ocupação do Congresso: contra o que lutam os índios? Estudos Avançados, n. 83, 2015 (adaptado).\n\nA estratégia comunicativa adotada pelos indígenas, no contexto em pauta, teve por efeito",
+    "text": "A estratégia comunicativa adotada pelos indígenas, no contexto em pauta, teve por efeito",
     "alternatives": {
       "a": "enfraquecer as formas de militância política.",
       "b": "abalar a identidade de povos tradicionais.",
@@ -479,19 +548,22 @@
     },
     "images": [],
     "tags": [
-      "história do brasil república",
+      "cultura e identidade",
       "direitos humanos e cidadania",
-      "cultura e identidade"
+      "ciência e tecnologia"
     ],
     "difficulty": 5,
     "year": 2021,
     "test": "ENEM",
     "area": "humanas",
-    "answer": "e"
+    "answer": "e",
+    "contextIds": [
+      "enem_2021_humanas_q68_ctx1"
+    ]
   },
   {
     "number": 69,
-    "text": "O governo Vargas, principalmente durante o Estado Novo (1937-1945), pretendeu construir um Estado capaz de criar uma nova sociedade. Uma dimensão-chave desse projeto tinha no território seu foco principal. Não por acaso, foram criadas então instituições encarregadas de fornecer dados confiáveis para a ação do governo, como o Conselho Nacional de Geografia, o Conselho Nacional de Cartografia, o Conselho Nacional de Estatística e o Instituto Brasileiro de Geografia e Estatística (IBGE), este de 1938.\n\nLIPPI, L. A conquista do Oeste. Disponível em: http://cpdoc.fgv.br. Acesso em: 7 nov. 2014 (adaptado).\n\nA criação dessas instituições pelo governo Vargas representava uma estratégia política de",
+    "text": "A criação dessas instituições pelo governo Vargas representava uma estratégia política de",
     "alternatives": {
       "a": "levantar informações para a preservação da paisagem dos sertões.",
       "b": "controlar o crescimento exponencial da população brasileira.",
@@ -501,104 +573,115 @@
     },
     "images": [],
     "tags": [
-      "história do brasil república",
-      "geopolítica e território",
-      "sociologia e estrutura social"
+      "história contemporânea do brasil",
+      "geografia humana e urbana"
     ],
     "difficulty": 5,
     "year": 2021,
     "test": "ENEM",
     "area": "humanas",
-    "answer": "c"
+    "answer": "c",
+    "contextIds": [
+      "enem_2021_humanas_q69_ctx1"
+    ]
   },
   {
     "number": 70,
-    "text": "O texto apresenta informações sobre tecnologias indígenas relacionadas ao processamento de alimentos. Com base nas características descritas, qual é a principal vantagem dessa tecnologia?",
+    "text": "No texto, a relação socioespacial dos indígenas evidencia a importância do(a)",
     "alternatives": {
-      "a": "Aumentar a durabilidade dos alimentos através da fermentação controlada.",
-      "b": "Facilitar o transporte de alimentos frescos por longas distâncias.",
-      "c": "Reduzir o tempo de cozimento dos alimentos duros.",
-      "d": "Permitir o armazenamento de alimentos em clima tropical.",
-      "e": "Garantir a eliminação completa de patógenos prejudiciais."
+      "a": "prática agrícola para a logística nacional.",
+      "b": "cultivo de hortaliças para o consumo urbano.",
+      "c": "saber tradicional para a conservação ambiental.",
+      "d": "criação de gado para o aprimoramento genético.",
+      "e": "reflorestamento comercial para a produção orgânica."
     },
     "images": [],
     "tags": [
-      "história da cultura e arte",
+      "cultura e identidade",
       "meio ambiente e sustentabilidade"
     ],
     "difficulty": 5,
     "year": 2021,
     "test": "ENEM",
     "area": "humanas",
-    "answer": "c"
+    "answer": "c",
+    "contextIds": [
+      "enem_2021_humanas_q70_ctx1"
+    ]
   },
   {
     "number": 71,
-    "text": "Desde os primórdios da formação da crosta terrestre até os dias de hoje, as rochas têm sido continuamente destruídas. Os produtos resultantes da destruição das rochas são transportados pela água, vento e gelo à toda superfície terrestre, acionados pela gravidade. Cessada a energia transportadora, são depositados nas regiões mais baixas da crosta, podendo formar pacotes rochosos.\n\nLENZ, C. Geologia geral. São Paulo: Editora Renovação, n. 72, maio-ago. 2016 (adaptado).\n\nAs transformações na superfície terrestre, conforme descrito no texto, compõem o seguinte processo geomorfológico:",
+    "text": "As transformações na superfície terrestre, conforme descrito no texto, compõem o seguinte processo geomorfológico:",
     "alternatives": {
       "a": "Ciclo sedimentar.",
       "b": "Instabilidade sísmica.",
-      "c": "Metamorfismo regional.",
+      "c": "Intemperismo biológico.",
       "d": "Derramamento basáltico.",
       "e": "Compactação superficial."
     },
     "images": [],
     "tags": [
-      "geografia física e geologia",
-      "meio ambiente e sustentabilidade"
+      "geografia física e geologia"
     ],
     "difficulty": 4,
     "year": 2021,
     "test": "ENEM",
     "area": "humanas",
-    "answer": "a"
+    "answer": "a",
+    "contextIds": [
+      "enem_2021_humanas_q71_ctx1"
+    ]
   },
   {
     "number": 72,
     "text": "Qual medida promove a participação social descrita no texto?",
     "alternatives": {
-      "a": "Imposição de regras urbanísticas pela administração pública.",
-      "b": "Articulação entre diferentes grupos sociais para deliberação conjunta.",
-      "c": "Segregação espacial entre grupos com interesses distintos.",
-      "d": "Restrição do acesso às informações sobre planejamento urbano.",
-      "e": "Limitação da interferência da população nas decisões governamentais."
+      "a": "Redução dos impostos municipais.",
+      "b": "Privatização dos espaços públicos.",
+      "c": "Adensamento das áreas de comércio.",
+      "d": "Valorização dos condomínios fechados.",
+      "e": "Fortalecimento das associações de bairro."
     },
     "images": [],
     "tags": [
       "geografia humana e urbana",
-      "sociologia e estrutura social",
       "direitos humanos e cidadania"
     ],
     "difficulty": 5,
     "year": 2021,
     "test": "ENEM",
     "area": "humanas",
-    "answer": "e"
+    "answer": "e",
+    "contextIds": [
+      "enem_2021_humanas_q72_ctx1"
+    ]
   },
   {
     "number": 73,
-    "text": "O texto apresenta uma reflexão sobre a importância da imprensa no contexto histórico brasileiro. Com base na análise do trecho, qual é a função primordial da imprensa mencionada no texto?",
+    "text": "O evento analisado no texto teve como repercussão imediata na política nacional a",
     "alternatives": {
-      "a": "Servir como instrumento de propaganda do Estado",
-      "b": "Garantir a liberdade de expressão e informação",
-      "c": "Manter a ordem social estabelecida",
-      "d": "Educar a população sobre valores morais",
-      "e": "Promover entretenimento e diversão"
+      "a": "reação popular.",
+      "b": "intervenção militar.",
+      "c": "abertura democrática.",
+      "d": "campanha anticomunista.",
+      "e": "radicalização oposicionista."
     },
     "images": [],
     "tags": [
-      "história do brasil república",
-      "direitos humanos e cidadania"
+      "história contemporânea do brasil"
     ],
     "difficulty": 5,
     "year": 2021,
     "test": "ENEM",
     "area": "humanas",
-    "answer": "a"
+    "answer": "a",
+    "contextIds": [
+      "enem_2021_humanas_q73_ctx1"
+    ]
   },
   {
     "number": 74,
-    "text": "Eu, Dom João, pela graça de Deus, fago saber a V. Mercê que me aprouve baixar para esta cidade vários ciganos — homens, mulheres e crianças — dado o seu estabelecido procedimento neste reino. Tiveram ordem de seguir em diversas partes destinadas a esse povo, sendo-lhes proibido, por lei recente, o uso da sua língua habitual; ordenando a V. Mercê que cumpra essa lei sob ameaça de penalidades, não permitindo que ensinem dito idioma a seus filhos, de maneira que este venha a desaparecer.\n\nTEIXEIRA, R. História dos ciganos no Brasil. Disponível em: http://rocloc.fgv.br. Acesso em: 7 nov. 2014 (adaptado).\n\nA ordem emanada da Coroa portuguesa para sua colônia brasileira, em 1718, apresentava um tratamento da população cigana que visava",
+    "text": "A ordem emanada da Coroa portuguesa para sua colônia brasileira, em 1718, apresentava um tratamento da população cigana que visava",
     "alternatives": {
       "a": "converter grupos infiéis à religião oficial.",
       "b": "suprimir formas divergentes de interação social.",
@@ -616,87 +699,73 @@
     "year": 2021,
     "test": "ENEM",
     "area": "humanas",
-    "answer": "b"
+    "answer": "b",
+    "contextIds": [
+      "enem_2021_humanas_q74_ctx1"
+    ]
   },
   {
     "number": 75,
-    "text": "O texto apresenta informações sobre práticas de cura e conhecimentos médicos. Com base no contexto, qual é a principal característica dos curandeiros mencionados?",
+    "text": "Conforme o texto, o que caracteriza a construção da prática medicinal descrita é a",
     "alternatives": {
-      "a": "Eram versados nas artes de curar, tendo aprendido através de formação acadêmica formal.",
-      "b": "Aprenderam a maioria de seus conhecimentos de forma prática e empírica.",
-      "c": "Possuíam formação científica reconhecida pelas instituições de saúde.",
-      "d": "Transmitiam seus conhecimentos exclusivamente através de documentos escritos.",
-      "e": "Utilizavam apenas plantas medicinais sem qualquer base de conhecimento sistemático."
-    },
-    "images": [],
-    "tags": [
-      "história moderna",
-      "história da cultura e arte"
-    ],
-    "difficulty": 5,
-    "year": 2021,
-    "test": "ENEM",
-    "area": "humanas",
-    "answer": "e"
-  },
-  {
-    "number": 76,
-    "text": "O comportamento desse religioso demonstra um",
-    "alternatives": {
-      "a": "desprezo pela vida espiritual",
-      "b": "interesse pela vida intelectual",
-      "c": "medo pela salvação da alma",
-      "d": "conflito entre a fé e a razão",
-      "e": "compromisso com a vida contemplativa"
-    },
-    "images": [],
-    "tags": [
-      "história medieval",
-      "filosofia e religião"
-    ],
-    "difficulty": 5,
-    "year": 2021,
-    "test": "ENEM",
-    "area": "humanas",
-    "answer": "b",
-    "contextId": "enem_2021_humanas_q49_q81_ctx1"
-  },
-  {
-    "number": 77,
-    "text": "Por que o Brasil continuou um só enquanto a América espanhola se dividiu em vários países?",
-    "alternatives": {
-      "a": "As elites coloniais brasileiras e hispano-americanas tiveram visões divergentes em relação ao processo de independência política.",
-      "b": "O Brasil manteve uma estrutura administrativa centralizada, enquanto a América espanhola apresentava descentralização administrativa que facilitou a fragmentação política.",
-      "c": "A transferência da corte portuguesa para o Rio de Janeiro gerou uma unidade política que se manteve mesmo após a independência.",
-      "d": "Os movimentos independentistas brasileiros contaram com maior apoio militar do que os hispano-americanos.",
-      "e": "O protagonismo assumido pelos meios de comunicação no Brasil permitiu maior integração territorial que na América espanhola."
+      "a": "adoção de rituais místicos.",
+      "b": "rejeição dos dogmas cristãos.",
+      "c": "superação da tradição popular.",
+      "d": "imposição da farmacologia nativa.",
+      "e": "conjugação de saberes empíricos."
     },
     "images": [],
     "tags": [
       "história do brasil colonial",
-      "história do brasil império",
-      "história moderna"
+      "ciência e tecnologia"
+    ],
+    "difficulty": 5,
+    "year": 2021,
+    "test": "ENEM",
+    "area": "humanas",
+    "answer": "e",
+    "contextIds": [
+      "enem_2021_humanas_q75_ctx1"
+    ]
+  },
+  {
+    "number": 76,
+    "text": "O comportamento desse religioso demonstra uma preocupação com as características assumidas pela igreja com as desigualdades sociais compartilhada no seu tempo pelo(as)",
+    "alternatives": {
+      "a": "senhores feudais.",
+      "b": "movimentos heréticos.",
+      "c": "integrantes das Cruzadas.",
+      "d": "corporações de ofício.",
+      "e": "universidades medievais."
+    },
+    "images": [],
+    "tags": [
+      "história medieval",
+      "história da cultura e arte"
     ],
     "difficulty": 6,
     "year": 2021,
     "test": "ENEM",
     "area": "humanas",
-    "answer": "a"
+    "answer": "b",
+    "contextIds": [
+      "enem_2021_humanas_q76_ctx1"
+    ]
   },
   {
-    "number": 78,
-    "text": "Os dois textos apresentam interpretações sobre as revoltas camponesas na Inglaterra dos séculos XIV e XVI. Qual é a principal diferença entre essas interpretações?",
+    "number": 77,
+    "text": "Os pontos de vista dos historiadores referidos no texto são divergentes em relação ao",
     "alternatives": {
-      "a": "A primeira enfatiza as causas econômicas, enquanto a segunda destaca os fatores políticos",
-      "b": "A primeira aborda a resistência à modernização, enquanto a segunda analisa a luta pela terra",
-      "c": "A primeira considera as revoltas como movimentos sociais organizados, enquanto a segunda as vê como reações espontâneas à miséria",
-      "d": "A primeira atribui as revoltas à ganância dos senhores feudais, enquanto a segunda as relaciona com a depressão econômica",
-      "e": "A primeira prioriza fatores culturais, enquanto a segunda enfatiza questões econômicas e sociais"
+      "a": "papel desempenhado pelas instituições de ensino na criação das múltiplas identidades.",
+      "b": "controle exercido pelos grupos de imprensa na centralização das esferas administrativas.",
+      "c": "abandono sofrido pelas comunidades de docentes na concepção de coletividades políticas.",
+      "d": "lugar ocupado pelas associações de acadêmicos no fortalecimento das agremiações estudantis.",
+      "e": "protagonismo assumido pelos meios de comunicação no desenvolvimento das nações alfabetizadas."
     },
     "images": [],
     "tags": [
-      "história moderna",
-      "história contemporânea"
+      "história do brasil colonial",
+      "geopolítica e relações internacionais"
     ],
     "difficulty": 6,
     "year": 2021,
@@ -704,77 +773,110 @@
     "area": "humanas",
     "answer": "a",
     "contextIds": [
-      "enem_2021_humanas_78_ctx1",
-      "enem_2021_humanas_78_ctx2"
+      "enem_2021_humanas_q77_ctx1"
+    ]
+  },
+  {
+    "number": 78,
+    "text": "A concepção da Revolução Inglesa apresentada no Texto II diferencia-se da do Texto I ao destacar a existência de",
+    "alternatives": {
+      "a": "pluralidade das demandas sociais.",
+      "b": "homogeneidade das lutas religiosas.",
+      "c": "unicidade das abordagens históricas.",
+      "d": "superficialidade dos interesses políticos.",
+      "e": "superioridade dos aspectos econômicos."
+    },
+    "images": [],
+    "tags": [
+      "história moderna e contemporânea",
+      "história da cultura e arte"
+    ],
+    "difficulty": 6,
+    "year": 2021,
+    "test": "ENEM",
+    "area": "humanas",
+    "answer": "a",
+    "contextIds": [
+      "enem_2021_humanas_q78_ctx1",
+      "enem_2021_humanas_q78_ctx2"
     ]
   },
   {
     "number": 79,
-    "text": "As grandes empresas seriam, certamente, responsáveis por gerar empregos e desenvolver tecnologias. Porém, uma preocupação frequente alimentar é a ideia de enclave: plantas industriais que estabelecem relações escassas com o entorno, mas que exploram recursos naturais e mão de obra local.",
+    "text": "Que tipo de ação tomada por empresas reflete a forma de territorialização da produção industrial apresentada no texto?",
     "alternatives": {
-      "a": "As indústrias se instalam nas regiões menos desenvolvidas do país para minimizar custos de produção.",
-      "b": "As indústrias se instalam em regiões com tecnologia avançada para potencializar a inovação.",
-      "c": "As indústrias funcionam como espaços isolados que extraem recursos locais sem promover integração com a região.",
-      "d": "As indústrias buscam se localizar em áreas urbanas para facilitar a comercialização de seus produtos.",
-      "e": "As indústrias estabelecem múltiplas relações comerciais com empresas locais e regionais para expandir o mercado."
+      "a": "Criação de vilas operárias.",
+      "b": "Promoção de eventos comunitários.",
+      "c": "Recuperação de áreas degradadas.",
+      "d": "Incorporação de saberes tradicionais.",
+      "e": "Importação de mão de obra qualificada."
     },
     "images": [],
     "tags": [
       "geografia humana e urbana",
-      "geopolítica e território"
+      "sociologia e estrutura social"
     ],
     "difficulty": 5,
     "year": 2021,
     "test": "ENEM",
     "area": "humanas",
-    "answer": "e"
+    "answer": "e",
+    "review": true,
+    "contextIds": [
+      "enem_2021_humanas_q79_ctx1"
+    ]
   },
   {
     "number": 80,
-    "text": "De acordo com a perspectiva apresentada, central na sociologia do desenvolvimento é a questão:",
+    "text": "De acordo com a perspectiva apresentada, central no pensamento social brasileiro dos anos 1950 a 1960, o desenvolvimento do país foi marcado por",
     "alternatives": {
-      "a": "racionalidade dos atores sociais",
-      "b": "antagonismo entre forças sociais progressistas e conservadoras",
-      "c": "descompassos na construção de quadro institucional",
-      "d": "ilegitimidade na atuação dos movimentos de caráter popular",
-      "e": "variabilidade nas formas de atuação do Estado"
+      "a": "radicalização nas agendas de reforma das elites dirigentes.",
+      "b": "anomalias na execução dos planos econômicos ortodoxos.",
+      "c": "descompassos na construção de quadros institucionais modernos.",
+      "d": "ilegitimidade na atuação dos movimentos de representação classista.",
+      "e": "vagarosidade na dinâmica de aperfeiçoamento dos programas partidários."
     },
     "images": [],
     "tags": [
       "sociologia e estrutura social",
-      "história contemporânea"
+      "história contemporânea do brasil"
     ],
-    "difficulty": 5,
+    "difficulty": 6,
     "year": 2021,
     "test": "ENEM",
     "area": "humanas",
-    "answer": "c"
+    "answer": "c",
+    "contextIds": [
+      "enem_2021_humanas_q80_ctx1"
+    ]
   },
   {
     "number": 81,
-    "text": "O texto apresenta ideias do Manifesto dos Pioneiros da Educação Nova de 1932. Com base nas propostas educacionais expostas, qual era o objetivo principal dessa reforma educacional?",
+    "text": "Os autores do manifesto citado procuravam contrapor-se ao caráter oligárquico da sociedade brasileira. Nesse sentido, o trecho propõe uma relação necessária entre",
     "alternatives": {
-      "a": "Manter a educação restrita às elites sociais, preservando a hierarquia tradicional.",
-      "b": "Recrutar talentos em todos os grupos sociais para desenvolver as capacidades individuais.",
-      "c": "Implementar um sistema educacional único e uniforme para toda a população.",
-      "d": "Preparar os alunos exclusivamente para o mercado de trabalho industrial.",
-      "e": "Eliminar completamente a influência religiosa nas instituições escolares brasileiras."
+      "a": "ensino técnico e mercado de trabalho.",
+      "b": "acesso à escola e valorização do mérito.",
+      "c": "ampliação de vagas e formação de operários.",
+      "d": "disponibilidade de financiamento e pesquisa anual.",
+      "e": "modernização de professores e extinção do analfabetismo."
     },
     "images": [],
     "tags": [
-      "história do brasil república",
-      "filosofia e política"
+      "história contemporânea do brasil",
+      "sociologia e estrutura social"
     ],
     "difficulty": 6,
     "year": 2021,
     "test": "ENEM",
     "area": "humanas",
     "answer": "b",
-    "contextId": "enem_2021_humanas_q49_q81_ctx1"
+    "contextIds": [
+      "enem_2021_humanas_q81_ctx1"
+    ]
   },
   {
     "number": 82,
-    "text": "Sócrates: \"Quem não sabe o que uma coisa é, como poderia saber de que tipo de coisa ela é? Ou te parece ser possível alguém que não conhece absolutamente quem é Mênon, saber se ele é belo, se é rico e ainda se é nobre? Parece-te ser isso possível? Assim, Mênon, que coisa afirmar ser a virtude?\"\n\nPLATÃO. Mênon. Rio de Janeiro: PUC-Rio; São Paulo: Loyola, 2001 (adaptado).\n\nA atitude apresentada na interlocução do filósofo com Mênon é um exemplo da utilização do(a)",
+    "text": "A atitude apresentada na interlocução do filósofo com Mênon é um exemplo da utilização do(a)",
     "alternatives": {
       "a": "escrita epistolar.",
       "b": "método dialético.",
@@ -784,14 +886,16 @@
     },
     "images": [],
     "tags": [
-      "filosofia antiga e medieval",
-      "ética e política"
+      "filosofia antiga e medieval"
     ],
     "difficulty": 5,
     "year": 2021,
     "test": "ENEM",
     "area": "humanas",
-    "answer": "b"
+    "answer": "b",
+    "contextIds": [
+      "enem_2021_humanas_q82_ctx1"
+    ]
   },
   {
     "number": 83,
@@ -800,11 +904,14 @@
       "a": "pedagogia dos costumes sociais.",
       "b": "imposição das formas de comunicação.",
       "c": "desvalorização dos comportamentos da juventude.",
-      "d": "destituição dos valores do matrimonio.",
+      "d": "destituição dos valores do matrimônio.",
       "e": "etnografia das celebrações religiosas."
     },
     "images": [],
-    "tags": [],
+    "tags": [
+      "cultura e identidade",
+      "história da cultura e arte"
+    ],
     "difficulty": 5,
     "year": 2021,
     "test": "ENEM",
@@ -825,7 +932,10 @@
       "e": "modernizar o comércio tradicional."
     },
     "images": [],
-    "tags": [],
+    "tags": [
+      "cultura e identidade",
+      "história da cultura e arte"
+    ],
     "difficulty": 5,
     "year": 2021,
     "test": "ENEM",
@@ -837,29 +947,31 @@
   },
   {
     "number": 85,
-    "text": "Analise o anúncio de fuga de escravo publicado no Jornal Correio Paulistano no século XIX e considere as informações sobre o escravo José. Qual das seguintes alternativas melhor caracteriza o contexto histórico e social em que tal anúncio foi produzido?",
+    "text": "No anúncio publicado na segunda metade do século XIX, qual a estratégia de resistência escrava apresentada?",
     "alternatives": {
-      "a": "A abolição da escravidão estava próxima, o que levava ao aumento de fugas e à publicação de anúncios para captura de escravos.",
-      "b": "A escravidão era amplamente aceita como instituição legítima, e os anúncios de fuga refletiam a preocupação dos senhores em recuperar sua propriedade.",
-      "c": "Os escravos fugidos frequentemente conseguiam se estabelecer legalmente como homens livres nas cidades grandes.",
-      "d": "A lei garantia proteção total aos escravos fugidos, o que explicava a necessidade de anúncios públicos.",
-      "e": "O sistema de escravidão estava em colapso devido ao grande número de fugas registradas nos jornais da época."
+      "a": "Criação de redes de trabalho.",
+      "b": "Fundação de territórios quilombolas.",
+      "c": "Apropriação da aplicação de normas.",
+      "d": "Regularização das funções remuneradas.",
+      "e": "Constituição de economia de subsistência."
     },
     "images": [],
     "tags": [
       "história do brasil imperial",
-      "ética e política"
+      "direitos humanos e cidadania"
     ],
     "difficulty": 6,
     "year": 2021,
     "test": "ENEM",
     "area": "humanas",
-    "answer": "a",
-    "contextId": "enem_2021_humanas_q85_ctx1"
+    "answer": "c",
+    "contextIds": [
+      "enem_2021_humanas_q85_ctx1"
+    ]
   },
   {
     "number": 86,
-    "text": "\"A filosofia é como uma árvore, cujas raízes são a metafísica; o tronco, a física, e os ramos que saem do tronco são todas as outras ciências, que se reduzem a três principais: a medicina, a mecânica e a moral, entendendo por moral a mais elevada e a mais perfeita porque pressupõe um saber integral das outras ciências, e é o último grau da sabedoria.\"\n\nDESCARTES, R. Princípios da filosofia. Lisboa: Edições 70, 1997 (adaptado).\n\nEssa construção alegórica de Descartes, acerca da condição epistemológica da filosofia, tem como objetivo",
+    "text": "Essa construção alegórica de Descartes, acerca da condição epistemológica da filosofia, tem como objetivo",
     "alternatives": {
       "a": "sustentar a unidade essencial do conhecimento.",
       "b": "refutar o elemento fundamental das crenças.",
@@ -869,18 +981,20 @@
     },
     "images": [],
     "tags": [
-      "filosofia moderna e contemporânea",
-      "ética e política"
+      "filosofia moderna e contemporânea"
     ],
     "difficulty": 6,
     "year": 2021,
     "test": "ENEM",
     "area": "humanas",
-    "answer": "a"
+    "answer": "a",
+    "contextIds": [
+      "enem_2021_humanas_q86_ctx1"
+    ]
   },
   {
     "number": 87,
-    "text": "\"Minha fórmula para o que há de grande no indivíduo é amor fati: nada desejar além daquilo que é, nem diante de si, nem atrás de si, nem nos séculos dos séculos. Não se contentar em suportar o inevitável, e ainda menos dissimulá-lo, amá-lo.\"\n\nNIETZSCHE apud FERRY, L. Aprender a viver: filosofia para os novos tempos. Rio de Janeiro: Objetiva, 2010 (adaptado).\n\nEssa fórmula indicada por Nietzsche consiste em uma crítica à tradição cristã que",
+    "text": "Essa fórmula indicada por Nietzsche consiste em uma crítica à tradição cristã que",
     "alternatives": {
       "a": "combate as práticas sociais de cunho afetivo.",
       "b": "impede o avanço científico no contexto moderno.",
@@ -890,64 +1004,67 @@
     },
     "images": [],
     "tags": [
-      "filosofia moderna e contemporânea",
-      "ética e política"
-    ],
-    "difficulty": 6,
-    "year": 2021,
-    "test": "ENEM",
-    "area": "humanas",
-    "answer": "e"
-  },
-  {
-    "number": 88,
-    "text": "O texto apresenta uma reflexão sobre a vida cristã e a busca pela simplicidade espiritual. A partir dessa perspectiva, qual é a principal mensagem transmitida pela passagem?",
-    "alternatives": {
-      "a": "A satisfação material é fundamental para a vida cristã equilibrada.",
-      "b": "A mortificação dos sentidos é essencial para alcançar a perfeição espiritual.",
-      "c": "A riqueza e os prazeres são caminhos válidos para a virtude.",
-      "d": "A renúncia aos desejos corporais deve ser acompanhada de contentamento com o pouco.",
-      "e": "A simplicidade é apenas uma virtude secundária na doutrina cristã."
-    },
-    "images": [],
-    "tags": [
-      "filosofia antiga e medieval",
-      "ética e política",
-      "história da cultura e arte"
+      "filosofia moderna e contemporânea"
     ],
     "difficulty": 6,
     "year": 2021,
     "test": "ENEM",
     "area": "humanas",
     "answer": "e",
-    "contextId": "enem_2021_humanas_q88_ctx1"
+    "contextIds": [
+      "enem_2021_humanas_q87_ctx1"
+    ]
   },
   {
-    "number": 89,
-    "text": "<b>Movimento de translação da terra</b>\n[Figura: Disponivel em www.cdcc.usp.br. Acesso em 27, jul. 2010 (adaptado).]\nConsiderando as informações apresentadas, o predio do Congresso Nacional em Brasilia, no dia 21 de junho às 12 horas, projetará sua sombra para a direção   ",
+    "number": 88,
+    "text": "Qual característica do ascetismo medieval é destacada no texto?",
     "alternatives": {
-      "a": "norte.",
-      "b": "sul.",
-      "c": "leste.",
-      "d": "oeste.",
-      "e": "norteste."
+      "a": "Exaltação do ritualismo litúrgico.",
+      "b": "Afirmação do pensamento racional.",
+      "c": "Desqualificação da atividade humana.",
+      "d": "Condenação da alimentação impura.",
+      "e": "Desvalorização da materialidade corpórea."
     },
-    "images": [
-      "figuras/q089_2021_fig1.png"
-    ],
+    "images": [],
     "tags": [
-      "Geografia: geografia física e geologia",
-      "climatologia"
+      "filosofia antiga e medieval",
+      "história da cultura e arte"
     ],
     "difficulty": 5,
     "year": 2021,
     "test": "ENEM",
     "area": "humanas",
-    "answer": "b"
+    "answer": "e",
+    "contextIds": [
+      "enem_2021_humanas_q88_ctx1"
+    ]
+  },
+  {
+    "number": 89,
+    "text": "Considerando as informações apresentadas, o prédio do Congresso Nacional em Brasília, no dia 21 de junho às 12 horas, projetará sua sombra para a direção",
+    "alternatives": {
+      "a": "norte.",
+      "b": "sul.",
+      "c": "leste.",
+      "d": "oeste.",
+      "e": "nordeste."
+    },
+    "images": [],
+    "tags": [
+      "geografia física e geologia"
+    ],
+    "difficulty": 5,
+    "year": 2021,
+    "test": "ENEM",
+    "area": "humanas",
+    "answer": "b",
+    "contextIds": [
+      "enem_2021_humanas_q89_ctx1"
+    ]
   },
   {
     "number": 90,
-    "text": "TEXTO I\n[Fotografia de EIGENHEER, E. M. Lixo: a limpeza urbana através dos tempos. Porto Alegre: Gráfica Palloti, 2009. Registra pessoas escravizadas carregando barris na cabeça em ambiente urbano do Rio de Janeiro, século XIX.]\n\nTEXTO II\nA repugnante tarefa de carregar lixo e os dejetos da casa para as praças e praias era geralmente destinada ao único escravo da família ou ao de menor status ou valor. Todas as noites, depois das dez horas, os escravos conhecidos popularmente como \"tigres\" levavam tubos ou barris de excremento e lixo sobre a cabeça pelas ruas do Rio.\n\nKARASCH, M. C. A vida dos escravos no Rio de Janeiro, 1808-1850. Rio de Janeiro: Cia. das Letras, 2000.\n\nA ação representada na imagem e descrita no texto evidencia uma prática do cotidiano nas cidades no Brasil nos séculos XVIII e XIX caracterizada pela",
+    "text": "A ação representada na imagem e descrita no texto evidencia uma prática do cotidiano nas cidades no Brasil nos séculos XVIII e XIX caracterizada pela",
     "alternatives": {
       "a": "valorização do trabalho braçal.",
       "b": "reiteração das hierarquias sociais.",
@@ -965,6 +1082,10 @@
     "year": 2021,
     "test": "ENEM",
     "area": "humanas",
-    "answer": "b"
+    "answer": "b",
+    "contextIds": [
+      "enem_2021_humanas_q90_ctx1",
+      "enem_2021_humanas_q90_ctx2"
+    ]
   }
 ]

@@ -61,8 +61,8 @@ REVISAO:
     [x] ciencias
     [x] matematica
  [] ENEM 2021
-    [] linguagens
-    [] humanas
+    [x] linguagens
+    [x] humanas
     [] ciencias
     [] matematica
  [] ENEM 2020

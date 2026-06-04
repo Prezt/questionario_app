@@ -1,13 +1,13 @@
 [
   {
     "number": 91,
-    "text": "A tabela apresenta a composição de uma solução nutritiva de referência e de uma solução nutritiva preparada para o cultivo hidropônico de alface. A solução de referência possui pH entre 5,5 e 6,5, sendo adequada para o desenvolvimento da planta. A solução preparada apresenta pH = 4,3, o que pode prejudicar o desenvolvimento das plantas, pois causa a precipitação de alguns nutrientes e aumenta a toxidez de outros. Para corrigir o pH dessa solução preparada e aproximá-lo ao da solução de referência, qual substância deveria ser adicionada?",
+    "text": "No cultivo por hidroponia, são utilizadas soluções nutritivas contendo macronutrientes e micronutrientes essenciais. Além dos nutrientes, o pH é um parâmetro de extrema importância, uma vez que ele afeta a preparação da solução nutritiva e a absorção dos nutrientes pelas plantas. Para o cultivo de alface, valores de pH entre 5,5 e 6,5 são ideais para o seu desenvolvimento. As correções de pH são feitas pela adição de compostos ácidos ou básicos, mas não devem introduzir elementos nocivos às plantas. Na tabela, são apresentados alguns dados da composição da solução nutritiva de referência para esse cultivo. Também é apresentada a composição de uma solução preparada por um produtor de cultivo hidropônico.\n\n|Espécies químicas||Concentração, mmol/L||\n|-|-|-|-|\n|||Composição de referência (5,5 < pH < 6,5)|Solução nutritiva preparada (pH = 4,3)|\n|Macronutrientes|N (NH<sub>4</sub><sup>+</sup>)|1,0|0,8|\n||P (H<sub>2</sub>PO<sub>4</sub><sup>−</sup>)|1,0|1,0|\n||K<sup>+</sup>|6,0|3,5|\n||Ca<sup>2+</sup>|4,0|3,0|\n||SO<sub>4</sub><sup>2−</sup>|2,0|1,0|\n|Micronutrientes|Fe<sup>2+</sup>|90 × 10<sup>−3</sup>|70 × 10<sup>−3</sup>|\n||Cl<sup>−</sup>|−|4,5 × 10<sup>−3</sup>|\n\nPara correção do pH da solução nutritiva preparada, esse produtor pode empregar uma solução de",
     "alternatives": {
-      "a": "ácido fosfórico, H₃PO₄",
-      "b": "sulfato de cálcio, CaSO₄",
-      "c": "óxido de alumínio, Al₂O₃",
-      "d": "cloreto de ferro(II), FeCl₂",
-      "e": "hidróxido de potássio, KOH"
+      "a": "ácido fosfórico, H<sub>3</sub>PO<sub>4</sub>.",
+      "b": "sulfato de cálcio, CaSO<sub>4</sub>.",
+      "c": "óxido de alumínio, Al<sub>2</sub>O<sub>3</sub>.",
+      "d": "cloreto de ferro(II), FeCl<sub>2</sub>.",
+      "e": "hidróxido de potássio, KOH."
     },
     "images": [],
     "tags": [
@@ -22,15 +22,17 @@
   },
   {
     "number": 92,
-    "text": "O sino dos ventos é composto por várias barras metálicas de mesmo material e espessura, mas de comprimentos diferentes. Considere f₁ e v₁, respectivamente, como a frequência e a velocidade do som emitido pela barra de menor comprimento, e f₂ e v₂ as mesmas grandezas para o som emitido pela barra de maior comprimento. As relações entre as frequências fundamentais e entre as velocidades do som são:",
+    "text": "O sino dos ventos é composto por várias barras metálicas de mesmo material e espessura, mas de comprimentos diferentes, conforme a figura.\n\n[Imagem]\n\nConsidere f<sub>1</sub> e v<sub>1</sub>, respectivamente, como a frequência fundamental e a velocidade de propagação do som emitido pela barra de menor comprimento, e f<sub>2</sub> e v<sub>2</sub> são essas mesmas grandezas para o som emitido pela barra de maior comprimento.\n\nAs relações entre as frequências fundamentais e entre as velocidades de propagação são, respectivamente,",
     "alternatives": {
-      "a": "f₁ > f₂ e v₁ = v₂",
-      "b": "f₁ <I f₂ e v₁ = v₂",
-      "c": "f₁ > f₂ e v₁ > v₂",
-      "d": "f₁ < f₂ e v₁ > v₂",
-      "e": "f₁ = f₂ e v₁ = v₂"
+      "a": "f<sub>1</sub> < f<sub>2</sub> e v<sub>1</sub> < v<sub>2</sub>.",
+      "b": "f<sub>1</sub> < f<sub>2</sub> e v<sub>1</sub> = v<sub>2</sub>.",
+      "c": "f<sub>1</sub> < f<sub>2</sub> e v<sub>1</sub> > v<sub>2</sub>.",
+      "d": "f<sub>1</sub> > f<sub>2</sub> e v<sub>1</sub> = v<sub>2</sub>.",
+      "e": "f<sub>1</sub> > f<sub>2</sub> e v<sub>1</sub> > v<sub>2</sub>."
     },
-    "images": [],
+    "images": [
+      "figuras/q092_2021_fig1.png"
+    ],
     "tags": [
       "ondulatória e acústica"
     ],
@@ -66,7 +68,7 @@
   },
   {
     "number": 94,
-    "text": "No jogo, dois competidores controlam os canhões A e B, disparando balas alternadamente com o objetivo de acertar o alvo inimigo. Os valores estimados para o módulo da velocidade inicial do disparo (υ₀) e para o ângulo de disparo (θ) são dados conforme necessário. Em determinado momento de uma partida, o competidor B deve disparar; ele sabe que a bala disparada anteriormente, com θ = 53°, passou tangenciando o ponto P. No jogo, υ₀ é igual a 10 m/s. Considere sen 53° = 0,8 e cos 53° = 0,6. Com base nas distâncias dadas e mantendo o último ângulo de disparo, qual deveria ser, aproximadamente, o menor valor de υ₀ que permitiria ao disparo efetuado por B atingir o alvo em A?",
+    "text": "A figura foi extraída de um antigo jogo para computadores, chamado Bang! Bang!\n\n[Figura]\n\nNo jogo, dois competidores controlam os canhões A e B, disparando balas alternadamente com o objetivo de atingir o canhão do adversário; para isso, atribuem valores estimados para o módulo da velocidade inicial de disparo (|v⃗<sub>0</sub>|) e para o ângulo de disparo (θ).\n\nEm determinado momento de uma partida, o competidor B deve disparar; ele sabe que a bala disparada anteriormente, θ = 53°, passou tangenciando o ponto P.\n\nNo jogo, |g⃗| é igual a 10 m/s². Considere sen 53° = 0,8, cos 53° = 0,6 e desprezível a ação de forças dissipativas.\n\nCom base nas distâncias dadas e mantendo o último ângulo de disparo, qual deveria ser, aproximadamente, o menor valor de |v⃗<sub>0</sub>| que permitiria ao disparo efetuado pelo canhão B atingir o canhão A?",
     "alternatives": {
       "a": "30 m/s",
       "b": "35 m/s",
@@ -74,10 +76,11 @@
       "d": "45 m/s",
       "e": "50 m/s"
     },
-    "images": [],
+    "images": [
+      "figuras/q094_2021_fig1.png"
+    ],
     "tags": [
-      "mecânica newtoniana",
-      "trigonometria"
+      "mecânica newtoniana"
     ],
     "difficulty": 7,
     "year": 2021,
@@ -87,18 +90,17 @@
   },
   {
     "number": 95,
-    "text": "Os pesticidas organoclorados foram amplamente utilizados na agricultura do século XX, porém foram banidos em diversos países por apresentarem elevadas toxicidades e persistências no meio ambiente. Considere um pesticida organoclorado que, em condições normais de solo, apresenta meia-vida de 5 anos. Se uma quantidade inicial de 1 kg desse pesticida organoclorado for aplicada em uma cultura e que, em seguida, não haja nenhuma reaplicação, a massa do pesticida no decorrer de 35 anos será mais próxima de",
+    "text": "Os pesticidas organoclorados foram amplamente empregados na agricultura, contudo, em razão das suas elevadas toxicidades e persistências no meio ambiente, eles foram banidos. Considere a aplicação de 500 g de um pesticida organoclorado em uma cultura e que, em certas condições, o tempo de meia-vida do pesticida no solo seja de 5 anos.\n\nA massa do pesticida no decorrer de 35 anos será mais próxima de",
     "alternatives": {
-      "a": "3,9 g",
-      "b": "31,2 g",
-      "c": "62,5 g",
-      "d": "125,0 g",
-      "e": "250,0 g"
+      "a": "3,9 g.",
+      "b": "31,2 g.",
+      "c": "62,5 g.",
+      "d": "125,0 g.",
+      "e": "250,0 g."
     },
     "images": [],
     "tags": [
-      "química geral e inorgânica",
-      "estequiometria"
+      "química geral e inorgânica"
     ],
     "difficulty": 6,
     "year": 2021,
@@ -108,13 +110,13 @@
   },
   {
     "number": 96,
-    "text": "A sequência de nucleotídeos do RNA mensageiro presentes em um gene de um fungo, constituída de sete códons, está escrita a seguir.\n1 2 3 4 5 6 7\nUUU CAA\n\nPesquisadores submeteram a sequência a mutações. Qual das alternativas apresenta a sequência de nucleotídeos após uma mutação que insira os códons de parada UAG e UAA?",
+    "text": "A sequência de nucleotídeos do RNA mensageiro presentes em um gene de um fungo, constituída de sete códons, está escrita a seguir.\n\n|1|2|3|4|5|6|7|\n|-|-|-|-|-|-|-|\n|AUG|UUU|GUU|CAA|UGU|AGU|UAG|\n\nPesquisadores submeteram a sequência a mutações independentes. Sabe-se que os códons UAG e UAA são terminais, ou seja, indicam a interrupção da tradução.\n\nQual mutação produzirá a menor proteína?",
     "alternatives": {
-      "a": "UUU CAA UAG UAA",
-      "b": "UUU CAA UAG UAA",
-      "c": "UUU CAA UAG UAA",
-      "d": "UUU CAA UAG UAA",
-      "e": "UUU CAA UAG UAA"
+      "a": "Deleção de G no códon 3.",
+      "b": "Substituição de C por U no códon 4.",
+      "c": "Substituição de G por C no códon 6.",
+      "d": "Substituição de A por G no códon 7.",
+      "e": "Deleção dos dois primeiros nucleotídeos no códon 5."
     },
     "images": [],
     "tags": [
@@ -129,18 +131,17 @@
   },
   {
     "number": 97,
-    "text": "Jogue a pia o óleo de cozinha usado pode contribuir para a poluição da água. Para evitar esse tipo de poluição, o descarte adequado do óleo é fundamental. Um modelo ideal de descarte, mas uma alternativa simples é a reutilização do óleo para a produção de sabão. Para isso, são necessários, além do próprio óleo, água e soda cáustica. A reação química responsável pela transformação do óleo vegetal em sabão e glicerol é denominada",
+    "text": "A simples atitude de não jogar direto no lixo ou no ralo da pia o óleo de cozinha usado pode contribuir para a redução da poluição ambiental. Mas o que fazer com o óleo vegetal que não será mais usado? Não existe um modelo ideal de descarte, mas uma alternativa simples tem sido reaproveitá-lo para fazer sabão. Para isso, são necessários, além do próprio óleo, água e soda cáustica.\n\nCom base no texto, a reação química que permite o reaproveitamento do óleo vegetal é denominada",
     "alternatives": {
-      "a": "hidrólise",
-      "b": "neutralização",
-      "c": "saponificação",
-      "d": "esterificação",
-      "e": "transesterificação"
+      "a": "redução.",
+      "b": "epoxidação.",
+      "c": "substituição.",
+      "d": "esterificação.",
+      "e": "saponificação."
     },
     "images": [],
     "tags": [
-      "química orgânica",
-      "estequiometria"
+      "química orgânica"
     ],
     "difficulty": 5,
     "year": 2021,
@@ -150,18 +151,17 @@
   },
   {
     "number": 98,
-    "text": "Durante o desenvolvimento embrionário humano, o coração passa por diferentes estágios até alcançar sua forma final. Em um desses estágios, o coração é constituído de duas câmaras (átrio e ventrículo únicos), semelhante ao coração de peixes atuais. Em outro estágio, apresenta três câmaras (dois átrios e um ventrículo), semelhante ao coração de anfíbios e répteis. Qual grupo de vertebrados possui uma estrutura cardíaca que impede completamente a mistura de sangue venoso com o arterial durante todo o ciclo cardíaco?",
+    "text": "Durante o desenvolvimento embrionário humano ocorre uma comunicação entre os átrios direito e esquerdo através do forame oval (ou forame de Botal). Essa comunicação não causa prejuízos à circulação do bebê em formação, exceto se ela perdurar após o nascimento.\n\nOs prejuízos no período embrionário são evitados porque a circulação fetal se assemelha à dos(as)",
     "alternatives": {
-      "a": "mamíferos, porque possuem um septo interventricular completo que impede totalmente a mistura de sangue.",
+      "a": "aves, porque a pequena circulação e a grande circulação estão presentes.",
       "b": "répteis, porque a mistura de sangue é minimizada por um metabolismo lento.",
-      "c": "aves, porque possuem um septo completo que impede a mistura sanguínea.",
-      "d": "peixes, porque apresentam circulação simples, na qual todo o sangue passa pelo coração uma única vez antes de chegar aos tecidos.",
+      "c": "crocodilianos, porque a separação dos ventrículos impede a mistura sanguínea.",
+      "d": "peixes, porque a circulação é simples, ocorrendo uma passagem única pelo coração.",
       "e": "anfíbios, porque pressões diferenciais isolam temporalmente o sangue venoso do arterial."
     },
     "images": [],
     "tags": [
       "fisiologia humana",
-      "evolução",
       "zoologia"
     ],
     "difficulty": 6,
@@ -172,18 +172,19 @@
   },
   {
     "number": 99,
-    "text": "Ao cruzar a ilha de calor, a brisa marítima absorve energia térmica das superfícies quentes e transfere essa energia para a atmosfera. No processo de fortes chuvas no centro da cidade, a ilha de calor afasta as chuvas de regiões próximas. O diagrama apresenta os três subsistemas que trocam energia nesse fenômeno. Identifique os processos de transferência de calor: entre o Sol e a ilha de calor, e entre a ilha de calor e a brisa marítima.",
+    "text": "Na cidade de São Paulo, as ilhas de calor são responsáveis pela alteração da direção do fluxo da brisa marítima que deveria atingir a região de mananciais. Mas, ao cruzar a ilha de calor, a brisa marítima agora encontra um fluxo de ar vertical, que transfere para ela a energia térmica absorvida das superfícies quentes da cidade, deslocando-a para altas altitudes. Dessa maneira, há condensação e chuvas fortes no centro da cidade, em vez de na região de mananciais. A imagem apresenta os três subsistemas que trocam energia nesse fenômeno.\n\n[Esquema]\n\nNo processo de fortes chuvas no centro da cidade de São Paulo, há dois mecanismos dominantes de transferência de calor: entre o Sol e a ilha de calor, e entre a ilha de calor e a brisa marítima.\n\nEsses mecanismos são, respectivamente,",
     "alternatives": {
-      "a": "Radiação; condução",
-      "b": "Radiação; convecção",
-      "c": "Condução; convecção",
-      "d": "Convecção; radiação",
-      "e": "Convecção; condução"
+      "a": "irradiação e convecção.",
+      "b": "irradiação e irradiação.",
+      "c": "condução e irradiação.",
+      "d": "convecção e irradiação.",
+      "e": "convecção e convecção."
     },
-    "images": [],
+    "images": [
+      "figuras/q099_2021_fig1.png"
+    ],
     "tags": [
-      "termologia",
-      "climatologia"
+      "termologia"
     ],
     "difficulty": 6,
     "year": 2021,
@@ -193,18 +194,17 @@
   },
   {
     "number": 100,
-    "text": "No seu estudo sobre a queda dos corpos, Aristóteles acreditava que se abandonarmos corpos leves e pesados de uma mesma altura, o mais pesado chegaria mais rápido ao solo. Essa ideia está apoiada em algo que parece ser baseado no senso comum.\n\nApós uma aula de física, dois colegas estavam discutindo sobre a queda dos corpos, e um tentava convencer o outro de sua ideia.\n\nColega A: \"O corpo mais pesado cai mais rápido que um menos pesado, quando largado de uma mesma altura. Eu provo, largando uma pedra e uma rolha. A pedra chega primeiro. Pronto! Tá provado!\".\n\nColega B: \"Espera aí. Peguei uma folha de papel, e ela caiu bem devagar. Depois peguei a mesma folha, amassadinha e deixei cair. Quando amassai, ela caiu mais rápido. Como isso é possível? Se era a mesma folha de papel, deveria cair do mesmo jeito. Tem que ter outra explicação!\".\n\nO aspecto físico comum que explica a diferença de comportamento na queda dos corpos, observada pelo colega B, está relacionado ao(a)",
+    "text": "No seu estudo sobre a queda dos corpos, Aristóteles afirmava que se abandonarmos corpos leves e pesados de uma mesma altura, o mais pesado chegaria mais rápido ao solo. Essa ideia está apoiada em algo que é difícil de refutar, a observação direta da realidade baseada no senso comum.\n\nApós uma aula de física, dois colegas estavam discutindo sobre a queda dos corpos, e um tentava convencer o outro de que tinha razão.\n\nColega A: \"O corpo mais pesado cai mais rápido que um menos pesado, quando largado de uma mesma altura. Eu provo, largando uma pedra e uma rolha. A pedra chega primeiro. Pronto! Tá provado!\".\n\nColega B: \"Eu não acho! Peguei uma folha de papel esticado e deixei cair. Quando amassei, ela caiu mais rápido. Como isso é possível? Se era a mesma folha de papel, deveria cair do mesmo jeito. Tem que ter outra explicação!\".\n\nO aspecto físico comum que explica a diferença de comportamento dos corpos em queda nessa discussão é o(a)",
     "alternatives": {
       "a": "peso dos corpos.",
       "b": "resistência do ar.",
       "c": "massa dos corpos.",
       "d": "densidade dos corpos.",
-      "e": "volume dos corpos."
+      "e": "aceleração da gravidade."
     },
     "images": [],
     "tags": [
-      "mecânica newtoniana",
-      "fisiologia humana"
+      "mecânica newtoniana"
     ],
     "difficulty": 6,
     "year": 2021,
@@ -214,7 +214,7 @@
   },
   {
     "number": 101,
-    "text": "O melaço utilizado apresentou 50 kg de monossacarídeos na forma de glicose. O volume de etanol, em litro, obtido nesse processo é mais próximo de",
+    "text": "A obtenção de etanol utilizando a cana-de-açúcar envolve a fermentação dos monossacarídeos formadores da sacarose contida no melaço. Um desses formadores é a glicose (C<sub>6</sub>H<sub>12</sub>O<sub>6</sub>), cuja fermentação produz cerca de 50 g de etanol a partir de 100 g de glicose, conforme a equação química descrita.\n\n[Esquema]\n\nEm uma condição específica de fermentação, obteve-se 80% de conversão em etanol que, após sua purificação, apresenta densidade igual a 0,80 g/mL. O melaço utilizado apresentou 50 kg de monossacarídeos na forma de glicose.\n\nO volume de etanol, em litro, obtido nesse processo é mais próximo de",
     "alternatives": {
       "a": "16",
       "b": "20",
@@ -222,7 +222,9 @@
       "d": "64",
       "e": "100"
     },
-    "images": [],
+    "images": [
+      "figuras/q101_2021_fig1.png"
+    ],
     "tags": [
       "estequiometria",
       "química geral e inorgânica"
@@ -231,12 +233,11 @@
     "year": 2021,
     "test": "ENEM",
     "area": "nature",
-    "answer": "c",
-    "contextId": "enem_2021_nature_q101_q108_ctx1"
+    "answer": "c"
   },
   {
     "number": 102,
-    "text": "É possível ligar aparelhos elétricos de baixa corrente utilizando materiais comuns de laboratório no lugar das pilhas comerciais. [Esquema - célula galvânica com eletrodos de cobre e zinco em solução de sulfato]",
+    "text": "É possível ligar aparelhos elétricos de baixa corrente utilizando materiais comuns de laboratório no lugar das tradicionais pilhas. A ilustração apresenta uma montagem que faz funcionar um cronômetro digital.\n\n[Esquema]\n\nUtilizando a representação de projetos elétricos, o circuito equivalente a esse sistema é",
     "alternatives": {
       "a": "A",
       "b": "B",
@@ -259,7 +260,7 @@
   },
   {
     "number": 103,
-    "text": "Um técnico analisou um lote de analgésico e realizou os seguintes testes: [Figura: estrutura do ácido acetilsalicílico e testes químicos]. O lote foi reprovado porque a quantidade de ácido acetilsalicílico estava abaixo do especificado. O teste que permitiu reprovar o lote de analgésicos foi o de número",
+    "text": "Um técnico analisou um lote de analgésicos que supostamente estaria fora das especificações. A composição prevista era 100 mg de ácido acetilsalicílico por comprimido (genérico ativo, cuja estrutura está representada na figura), além do amido e da celulose (componentes inertes). O técnico realizou os seguintes testes:\n\n1) obtenção da massa do comprimido;\n2) medição da densidade do comprimido;\n3) verificação do pH com papel indicador;\n4) determinação da temperatura de fusão do comprimido;\n5) titulação com solução aquosa de NaOH.\n\nApós a realização dos testes, o lote do medicamento foi reprovado porque a quantidade de ácido acetilsalicílico por comprimido foi de apenas 40% da esperada.\n\n[Figura]\n\nO teste que permitiu reprovar o lote de analgésicos foi o de número",
     "alternatives": {
       "a": "1",
       "b": "2",
@@ -282,13 +283,13 @@
   },
   {
     "number": 104,
-    "text": "O derramamento de produtos tóxicos nas águas do Rio Doce, ocorridos em 2015, ainda têm consequências para os organismos que habitam o Parque Nacional Marinho de Abrolhos localizado a mais de 1 000 quilômetros de distância. Concentrações mais elevadas dos compostos citados seriam encontradas em qual nível trófico?",
+    "text": "O rompimento da barragem de rejeitos de mineração no município mineiro de Mariana e o derramamento de produtos tóxicos nas águas do Rio Doce, ocorridos em 2015, ainda têm consequências para os organismos que habitam o Parque Nacional Marinho de Abrolhos, localizado a mais de 1 000 quilômetros de distância. Esse desastre ambiental afetou o fitoplâncton, as esponjas, as algas macroscópicas, os peixes herbívoros e os golfinhos.\n\nFRANKER, O.; SICILIANO, S.; TAVARES, D. C. Franciscana calfs for help [...] International Whaling Commission, Conference Paper, jun. 2019 (adaptado).\n\nConcentrações mais elevadas dos compostos citados são encontradas em",
     "alternatives": {
-      "a": "esponjas",
-      "b": "peixes carnívoros",
-      "c": "crustáceos",
-      "d": "peixes herbívoros",
-      "e": "algas macroscópicas"
+      "a": "esponjas.",
+      "b": "golfinhos.",
+      "c": "fitoplâncton.",
+      "d": "peixes herbívoros.",
+      "e": "algas macroscópicas."
     },
     "images": [],
     "tags": [
@@ -303,15 +304,22 @@
   },
   {
     "number": 105,
-    "text": "Duas esferas carregadas com cargas iguais estão presas nos extremos de uma haste rígida isolante na forma de haltere. O sistema se encontra em repouso e imerso em um campo magnético horizontal uniforme, da esquerda para a direita. A imagem apresenta o sistema em movimento de rotação em torno do seu centro de massa, com velocidades v nos sentidos opostos. Desprezando-se a gravidade, visto de cima, o diagrama esquemático das forças magnéticas que atuam no sistema, no momento inicial em que as velocidades são perpendiculares ao campo magnético, está representado em",
+    "text": "Duas esferas carregadas com cargas iguais em módulo e sinais contrários estão ligadas por uma haste rígida isolante na forma de haltere. O sistema se movimenta sob ação da gravidade numa região que tem um campo magnético horizontal uniforme (\\(\\vec{B}\\)), da esquerda para a direita. A imagem apresenta o sistema visto de cima para baixo, no mesmo sentido da aceleração da gravidade (\\(\\vec{g}\\)) que atua na região.\n\n[Figura]\n\nVisto de cima, o diagrama esquemático das forças magnéticas que atuam no sistema, no momento inicial em que as cargas penetram na região de campo magnético, está representado em",
     "alternatives": {
-      "a": "[Descrição da alternativa A - diagrama das forças]",
-      "b": "[Descrição da alternativa B - diagrama das forças]",
-      "c": "[Descrição da alternativa C - diagrama das forças]",
-      "d": "[Descrição da alternativa D - diagrama das forças]",
-      "e": "[Descrição da alternativa E - diagrama das forças]"
+      "a": "[Figura]",
+      "b": "[Figura]",
+      "c": "[Figura]",
+      "d": "[Figura]",
+      "e": "[Figura]"
     },
-    "images": [],
+    "images": [
+      "figuras/q105_2021_fig1.png",
+      "figuras/q105_2021_fig2.png",
+      "figuras/q105_2021_fig3.png",
+      "figuras/q105_2021_fig4.png",
+      "figuras/q105_2021_fig5.png",
+      "figuras/q105_2021_fig6.png"
+    ],
     "tags": [
       "eletricidade e magnetismo",
       "mecânica newtoniana"
@@ -324,13 +332,13 @@
   },
   {
     "number": 106,
-    "text": "Na presença de luz, a bilirrubina é convertida em lumirrubina, que é excretada pela bile ou pela urina. A imagem ilustra o que ocorre com a bilirrubina quando exposta à luz.\n\n[Figura: Estrutura química da bilirrubina e lumirrubina com representação de isomeria]\n\nQual é o tipo de isomeria que ocorre na conversão de bilirrubina em lumirrubina?",
+    "text": "A icterícia, popularmente conhecida por amarelão, é uma patologia frequente em recém-nascidos. Um bebê com icterícia não consegue metabolizar e excretar de forma eficiente a bilirrubina. Com isso, o acúmulo dessa substância deixa a pele amarelada. A fototerapia é um tratamento da icterícia neonatal, que consiste na irradiação de luz no bebê. Na presença de luz, a bilirrubina é convertida no seu isômero lumirrubina que, por ser mais solúvel em água, é excretada pela bile ou pela urina. A imagem ilustra o que ocorre nesse tratamento.\n\nHOERSKA, M. et al. O exame nacional do alto risco: teoria e prática do cuidar [on-line]. Rio de Janeiro: Fiocruz, 2004 (adaptado).\n\n[Figura]\n\nWAAG, C. et al. Challenges of phototherapy for neonatal hyperbilirubinemia (Review). Experimental and Therapeutic Medicine, p. 61, 2021 (adaptado).\n\nNa fototerapia, a luz provoca a conversão da bilirrubina no seu isômero",
     "alternatives": {
-      "a": "Ótico",
-      "b": "Funcional",
-      "c": "De cadeia",
-      "d": "De posição",
-      "e": "Geométrico"
+      "a": "ótico.",
+      "b": "funcional.",
+      "c": "de cadeia.",
+      "d": "de posição.",
+      "e": "geométrico."
     },
     "images": [
       "figuras/q106_2021_fig1.png"
@@ -347,13 +355,13 @@
   },
   {
     "number": 107,
-    "text": "Considerando o mesmo automóvel em duas versões, uma delas funcionando a álcool e outra, a gasolina, com os seguintes parâmetros:\n\nMotor a gasolina:\n  - Tempo de 0 a 100 km/h em 13 s\n  - Velocidade máxima 165 km/h\n\nMotor a álcool:\n  - Tempo de 0 a 100 km/h em 12,9 s\n  - Velocidade máxima 163 km/h\n\nQual das seguintes afirmações está correta?",
+    "text": "Analisando a ficha técnica de um automóvel popular, verificam-se algumas características em relação ao seu desempenho. Considerando o mesmo automóvel em duas versões, uma delas funcionando a álcool e outra, a gasolina, tem-se os dados apresentados no quadro, em relação ao desempenho de cada motor.\n\n|Parâmetro|Motor a gasolina|Motor a álcool|\n|-|-|-|\n|Aceleração|de 0 a 100 km/h em 13,4 s|de 0 a 100 km/h em 12,9 s|\n|Velocidade máxima|165 km/h|163 km/h|\n\nConsiderando desprezível a resistência do ar, qual versão apresenta a maior potência?",
     "alternatives": {
-      "a": "O motor a gasolina desenvolve maior potência.",
-      "b": "O motor a álcool desenvolve maior potência.",
-      "c": "O motor a gasolina possui maior potência.",
-      "d": "A potência desenvolvida é a mesma.",
-      "e": "O motor a álcool desenvolve a maior potência."
+      "a": "Como a versão a gasolina consegue a maior aceleração, esta é a que desenvolve a maior potência.",
+      "b": "Como a versão a gasolina atinge o maior valor de energia cinética, esta é a que desenvolve a maior potência.",
+      "c": "Como a versão a álcool apresenta a maior taxa de variação de energia cinética, esta é a que desenvolve a maior potência.",
+      "d": "Como ambas as versões apresentam a mesma variação de velocidade no cálculo da aceleração, a potência desenvolvida é a mesma.",
+      "e": "Como a versão a gasolina fica com o motor trabalhando por mais tempo para atingir os 100 km/h, esta é a que desenvolve a maior potência."
     },
     "images": [],
     "tags": [
@@ -389,17 +397,18 @@
     "contextIds": [
       "enem_2021_nature_q101_q108_ctx1",
       "enem_2021_nature_q108_ctx1"
-    ]
+    ],
+    "contextId": "q108_2021_ctx1"
   },
   {
     "number": 109,
-    "text": "A tabela apresenta as áreas e comprimentos de alguns fios. Considere que a resistividade elétrica é a mesma para todos os fios. Ordene a resistência elétrica dos fios em ordem crescente.",
+    "text": "Cientistas da Universidade de New South Wales, na Austrália, demonstraram em 2012 que a Lei de Ohm é válida mesmo para fios finíssimos, cuja área da seção reta compreende alguns poucos átomos. A tabela apresenta as áreas e os comprimentos de alguns dos fios construídos (respectivamente com as mesmas unidades de medida). Considere que a resistividade se mantém constante para todas as geometrias (uma aproximação confirmada pelo estudo).\n\n| |Área|Comprimento|Resistência elétrica|\n|-|-|-|-|\n|Fio 1|9|312|R<sub>1</sub>|\n|Fio 2|4|47|R<sub>2</sub>|\n|Fio 3|2|54|R<sub>3</sub>|\n|Fio 4|1|106|R<sub>4</sub>|\n\nWEBER, B. B. et al. Ohm's Law Survives to the Atomic Scale. Science, p. 336, jan. 2012 (adaptado).\n\nAs resistências elétricas dos fios, em ordem crescente, são",
     "alternatives": {
-      "a": "R1 < R2 < R3 < R4",
-      "b": "R2 < R1 < R3 < R4",
-      "c": "R2 < R3 < R1 < R4",
-      "d": "R4 < R1 < R3 < R2",
-      "e": "R4 < R3 < R2 < R1"
+      "a": "R<sub>1</sub> < R<sub>2</sub> < R<sub>3</sub> < R<sub>4</sub>",
+      "b": "R<sub>2</sub> < R<sub>1</sub> < R<sub>3</sub> < R<sub>4</sub>",
+      "c": "R<sub>2</sub> < R<sub>3</sub> < R<sub>1</sub> < R<sub>4</sub>",
+      "d": "R<sub>4</sub> < R<sub>1</sub> < R<sub>3</sub> < R<sub>2</sub>",
+      "e": "R<sub>4</sub> < R<sub>3</sub> < R<sub>2</sub> < R<sub>1</sub>"
     },
     "images": [],
     "tags": [
@@ -413,13 +422,13 @@
   },
   {
     "number": 110,
-    "text": "Organismos autótrofos e heterótrofos realizam processos complementares que associam os ciclos do carbono e da energia. A matéria sintetizada por organismos autótrofos a partir da luz luminosa ou a partir de compostos inorgânicos é eventualmente degradado pelos organismos, resultando em fontes de carbono como metano ou gás carbônico. Parte do carbono pode ser incorporada em outros organismos e circulada pelos seres, com menor rendimento energético, produzindo compostos secundários (subprodutos) que podem funcionar como combustíveis ambientais. Qual dos processos biológicos a seguir é responsável pelo armazenamento de energia em moléculas que podem funcionar como combustíveis ambientais é a",
+    "text": "Organismos autótrofos e heterótrofos realizam processos complementares que associam os ciclos do carbono e do oxigênio. O carbono fixado pela energia luminosa ou a partir de compostos inorgânicos é eventualmente degradado pelos organismos, resultando em formas de carbono como metano ou gás carbônico. Ainda, outros compostos orgânicos são catabolizados pelos seres com menor rendimento energético, produzindo compostos secundários (subprodutos) que podem funcionar como combustíveis ambientais.\n\nO processo metabólico associado à expressão combustíveis ambientais é a",
     "alternatives": {
-      "a": "fotossíntese",
-      "b": "respiração aeróbica",
-      "c": "quimiossíntese",
-      "d": "fermentação anaeróbica",
-      "e": "quimiossíntese heterotrófica"
+      "a": "fotossíntese.",
+      "b": "fermentação.",
+      "c": "quimiossíntese.",
+      "d": "respiração aeróbica.",
+      "e": "fosforilação oxidativa."
     },
     "images": [],
     "tags": [
