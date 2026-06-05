@@ -102,7 +102,7 @@ const REVIEW_STATUS = [
   { year: 2024, linguagens: true, humanas: true, natureza: true, matematica: true },
   { year: 2023, linguagens: true, humanas: true, natureza: true, matematica: true },
   { year: 2022, linguagens: true, humanas: true, natureza: true, matematica: true },
-  { year: 2021, linguagens: true, humanas: true, natureza: false, matematica: false },
+  { year: 2021, linguagens: true, humanas: true, natureza: true, matematica: true },
   { year: 2020, linguagens: false, humanas: false, natureza: false, matematica: false },
   { year: 2019, linguagens: false, humanas: false, natureza: false, matematica: false },
   { year: 2018, linguagens: true, humanas: true, natureza: true, matematica: true },
@@ -115,6 +115,9 @@ const CHANGELOG = [
     items: [
       '2021 linguagens revisada',
       '2021 humanas revisada',
+      '2021 matemática revisada',
+      '2021 ciências da natureza revisada',
+      'Figuras refeitas (corte limpo, sem texto sangrando): Q161 (alt C) 2021, Q168 2020, Q168 2021, Q170 2021, Q171 2019',
     ],
   },
   {
