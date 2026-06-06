@@ -1,7 +1,7 @@
 [
   {
     "number": 46,
-    "text": "Embora inegáveis os benefícios que ambas as economias têm auferido do intercâmbio comercial, o Brasil tem reiterado seu objetivo de desenvolver com a China uma relação comercial menos assimétrica. Os números revelam com clareza a assimetria. As exportações brasileiras de produtos básicos, especialmente soja, minério de ferro e petróleo, compõem, dependendo do ano, algo entre 75% e 80% da pauta, ao passo que as importações brasileiras consistem, aproximadamente, em 95% de produtos industrializados chineses, que vão desde os mais variados bens de consumo até máquinas e equipamentos de alto valor.\n\nUma ação estatal de longo prazo capaz de reduzir a assimetria na balança comercial brasileira, conforme exposto no texto, é o(a)",
+    "text": "Uma ação estatal de longo prazo capaz de reduzir a assimetria na balança comercial brasileira, conforme exposto no texto, é o(a)",
     "alternatives": {
       "a": "expansão do setor extrativista.",
       "b": "incremento da atividade agrícola.",
@@ -18,7 +18,10 @@
     "year": 2020,
     "test": "ENEM",
     "area": "humanas",
-    "answer": "d"
+    "answer": "d",
+    "contextIds": [
+      "enem_2020_humanas_q46_ctx1"
+    ]
   },
   {
     "number": 47,
@@ -89,7 +92,7 @@
   },
   {
     "number": 50,
-    "text": "A expansão das cidades e a formação das aglomerações urbanas no Brasil foram marcadas pela produção industrial e pela consolidação das metrópoles como locais de seu desenvolvimento. Na segunda metade do século XX, as metrópoles brasileiras estenderam-se por áreas de ocupação contínua, configurando densas regiões urbanizadas.\n\nO resultado do processo geográfico descrito foi o(a)",
+    "text": "O resultado do processo geográfico descrito foi o(a)",
     "alternatives": {
       "a": "valorização da escala local.",
       "b": "crescimento das áreas periféricas.",
@@ -106,11 +109,12 @@
     "year": 2020,
     "test": "ENEM",
     "area": "humanas",
-    "answer": "b"
+    "answer": "b",
+    "contextId": "enem_2020_humanas_q50_ctx1"
   },
   {
     "number": 51,
-    "text": "Zona de pastoreio e cultura do algodão e cereais do agreste (1963)\n\n[Figura]\n\nA dinâmica produtiva apresentada na imagem tem como estratégia central a",
+    "text": "A dinâmica produtiva apresentada na imagem tem como estratégia central a",
     "alternatives": {
       "a": "separação pelo tipo de solo.",
       "b": "exportação da colheita sazonal.",
@@ -118,9 +122,7 @@
       "d": "adequação pelo tempo da natureza.",
       "e": "intensificação da atividade pecuária."
     },
-    "images": [
-      "figuras/q051_2020_fig1.png"
-    ],
+    "images": [],
     "tags": [
       "geografia humana e urbana",
       "meio ambiente e sustentabilidade"
@@ -129,7 +131,8 @@
     "year": 2020,
     "test": "ENEM",
     "area": "humanas",
-    "answer": "d"
+    "answer": "d",
+    "contextId": "enem_2020_humanas_q51_ctx1"
   },
   {
     "number": 52,
@@ -221,7 +224,7 @@
   },
   {
     "number": 56,
-    "text": "A demanda mundial para a produção de alimentos aumenta progressivamente a taxas muito altas. Atualmente, na maioria dos países, continentes e regiões, a água consumida na agricultura é de cerca de 70% da disponibilidade total.\n\nPara que haja a redução da pressão sobre o recurso natural mencionado, a expansão da agricultura demanda melhorias no(a)",
+    "text": "Para que haja a redução da pressão sobre o recurso natural mencionado, a expansão da agricultura demanda melhorias no(a)",
     "alternatives": {
       "a": "fertilização química do solo.",
       "b": "escoamento hídrico do terreno.",
@@ -238,7 +241,10 @@
     "year": 2020,
     "test": "ENEM",
     "area": "humanas",
-    "answer": "d"
+    "answer": "d",
+    "contextIds": [
+      "enem_2020_humanas_q56_ctx1"
+    ]
   },
   {
     "number": 57,
@@ -264,7 +270,7 @@
   },
   {
     "number": 58,
-    "text": "O planejamento deixou de controlar o crescimento urbano e passou a encorajá-lo por todos os meios possíveis e imagináveis. Cidades, a nova mensagem soou em alto e bom som, eram máquinas de produzir riquezas; o primeiro e principal objetivo do planejamento devia ser o de azeitar a máquina.\n\nO modelo de planejamento urbano problematizado no texto é marcado pelo(a)",
+    "text": "O modelo de planejamento urbano problematizado no texto é marcado pelo(a)",
     "alternatives": {
       "a": "primazia da gestão popular.",
       "b": "uso de práticas sustentáveis.",
@@ -281,7 +287,8 @@
     "year": 2020,
     "test": "ENEM",
     "area": "humanas",
-    "answer": "e"
+    "answer": "e",
+    "contextId": "enem_2020_humanas_q58_ctx1"
   },
   {
     "number": 59,
@@ -351,7 +358,7 @@
   },
   {
     "number": 62,
-    "text": "Sexto rei sumério (governante entre os séculos XVIII e XVII a.C.) e nascido em Babel, \"Khammu-rabi\" (pronúncia em babilônio) foi fundador do I Império Babilônico (correspondente ao atual Iraque), unificando amplamente o mundo mesopotâmico, unindo os semitas e os sumérios e levando a Babilônia ao máximo esplendor. O nome de Hamurabi permanece indissociavelmente ligado a um código jurídico tido como o mais remoto já descoberto: o Código de Hamurabi. O legislador babilônico consolidou a tradição jurídica, harmonizou os costumes e estendeu o direito e a lei a todos os súditos.\n\nNesse contexto de organização da vida social, as leis contidas no Código citado tinham o sentido de",
+    "text": "Nesse contexto de organização da vida social, as leis contidas no Código citado tinham o sentido de",
     "alternatives": {
       "a": "assegurar garantias individuais aos cidadãos livres.",
       "b": "tipificar regras referentes aos atos dignos de punição.",
@@ -368,7 +375,8 @@
     "year": 2020,
     "test": "ENEM",
     "area": "humanas",
-    "answer": "b"
+    "answer": "b",
+    "contextId": "enem_2020_humanas_q62_ctx1"
   },
   {
     "number": 63,
@@ -395,7 +403,7 @@
   },
   {
     "number": 64,
-    "text": "É difícil imaginar que nos anos 1990, num país com setores da população na pobreza absoluta e sem uma rede de benefícios sociais em que se apoiar, um governo possa abandonar o papel de promotor de programas de geração de emprego, de assistência social, de desenvolvimento da infraestrutura e de promoção de regiões excluídas, na expectativa de que o mercado venha algum dia a dar uma resposta adequada a tudo isso.\n\nNesse contexto, a criticada postura dos governos frente à situação social do país coincidiu com a priorização de que medidas?",
+    "text": "Nesse contexto, a criticada postura dos governos frente à situação social do país coincidiu com a priorização de que medidas?",
     "alternatives": {
       "a": "Expansão dos investimentos nas empresas públicas e nos bancos estatais.",
       "b": "Democratização do crédito habitacional e da aquisição de moradias populares.",
@@ -413,11 +421,14 @@
     "year": 2020,
     "test": "ENEM",
     "area": "humanas",
-    "answer": "e"
+    "answer": "e",
+    "contextIds": [
+      "enem_2020_humanas_q64_ctx1"
+    ]
   },
   {
     "number": 65,
-    "text": "[Figura]\n\nO conjunto representado pelo agronegócio demanda condições específicas que passam a ser exigidas dos territórios. Como há uma elevação da formação de fluxos, materiais e imateriais, a crescente articulação com as escalas que vão do local ao global terminam por pressionar o Estado a agir visando uma instalação no território de fixos diversos, bem como de uma regulação específica.\n\nO mapa e o texto se complementam indicando que a expansão das rodovias se deu como resposta ao(à)",
+    "text": "O mapa e o texto se complementam indicando que a expansão das rodovias se deu como resposta ao(à)",
     "alternatives": {
       "a": "alteração da matriz econômica.",
       "b": "substituição do modal hidroviário.",
@@ -425,9 +436,7 @@
       "d": "projeção do escoamento produtivo.",
       "e": "estagnação de lavouras policultoras."
     },
-    "images": [
-      "figuras/q065_2020_fig1.png"
-    ],
+    "images": [],
     "tags": [
       "Geografia: geografia humana e urbana",
       "Geopolítica e território"
@@ -436,11 +445,12 @@
     "year": 2020,
     "test": "ENEM",
     "area": "humanas",
-    "answer": "d"
+    "answer": "d",
+    "contextId": "enem_2020_humanas_q65_ctx1"
   },
   {
     "number": 66,
-    "text": "Um dos resquícios franceses na dança são os comandos proferidos pelo marcador da quadrilha. Seu papel é anunciar os próximos passos da coreografia. O abrasileiramento de termos franceses deu origem, por exemplo, ao saruê (soirée — reunião social noturna, ordem para todos se juntarem no centro do salão), anarriê (en arrière — para trás) e anavã (en avant — para frente).\n\nA característica apresentada dessa manifestação popular resulta do seguinte processo socio-histórico:",
+    "text": "A característica apresentada dessa manifestação popular resulta do seguinte processo socio-histórico:",
     "alternatives": {
       "a": "Massificação da arte erudita.",
       "b": "Rejeição de hábitos elitistas.",
@@ -457,7 +467,8 @@
     "year": 2020,
     "test": "ENEM",
     "area": "humanas",
-    "answer": "e"
+    "answer": "e",
+    "contextId": "enem_2020_humanas_q66_ctx1"
   },
   {
     "number": 67,
@@ -574,7 +585,7 @@
   },
   {
     "number": 72,
-    "text": "Montaigne deu o nome para um novo gênero literário; foi dos primeiros a instituir na literatura moderna um espaço privado, o espaço do \"eu\", do texto íntimo. Ele cria um novo processo de escrita filosófica, no qual hesitações, autocríticas, correções entram no próprio texto.\n\nO novo gênero de escrita aludido no texto é o(a)",
+    "text": "O novo gênero de escrita aludido no texto é o(a)",
     "alternatives": {
       "a": "confissão, que relata experiências de transformação",
       "b": "ensaio, que expõe concepções subjetivas de um tema",
@@ -591,7 +602,8 @@
     "year": 2020,
     "test": "ENEM",
     "area": "humanas",
-    "answer": "b"
+    "answer": "b",
+    "contextId": "enem_2020_humanas_q72_ctx1"
   },
   {
     "number": 73,
@@ -617,7 +629,7 @@
   },
   {
     "number": 74,
-    "text": "Os textos mostram-se alinhados a um entendimento cerca da ideia de conhecimento, numa perspectiva que mpara a",
+    "text": "Os textos mostram-se alinhados a um entendimento acerca da ideia de conhecimento, numa perspectiva que ampara a",
     "alternatives": {
       "a": "anterioridade da razão no domínio cognitivo.",
       "b": "confirmação da existência de saberes inatos.",
@@ -635,11 +647,14 @@
     "test": "ENEM",
     "area": "humanas",
     "answer": "c",
-    "contextId": "enem_2020_humanas_q74_ctx1"
+    "contextIds": [
+      "enem_2020_humanas_q74_ctx1",
+      "enem_2020_humanas_q74_ctx2"
+    ]
   },
   {
     "number": 75,
-    "text": "Afirmar que a cartografia da época moderna integrou o processo de invenção da América por parte dos europeus significa que os conhecimentos dos ameríndios sobre o território foram ignorados pela cartografia europeia ou que eles foram privados de sua representação territorial e da autoridade que seus conhecimentos tinham sobre o espaço.\n\nNa análise contida no texto, a representação cartográfica da América foi marcada por",
+    "text": "Na análise contida no texto, a representação cartográfica da América foi marcada por",
     "alternatives": {
       "a": "asserção da cultura dos nativos.",
       "b": "avanço dos estudos do ambiente.",
@@ -657,7 +672,8 @@
     "year": 2020,
     "test": "ENEM",
     "area": "humanas",
-    "answer": "c"
+    "answer": "c",
+    "contextId": "enem_2020_humanas_q75_ctx1"
   },
   {
     "number": 76,
@@ -705,7 +721,7 @@
   },
   {
     "number": 78,
-    "text": "O toyotismo, a partir dos anos 1970, teve grande impacto no mundo ocidental, quando se mostrou para os países avançados como uma opção possível para a superação de uma crise de acumulação.\n\nA característica organizacional do modelo em questão, requerida no contexto de crise, foi o(a)",
+    "text": "A característica organizacional do modelo em questão, requerida no contexto de crise, foi o(a)",
     "alternatives": {
       "a": "expansão dos grandes estoques.",
       "b": "incremento da fabricação em massa.",
@@ -722,11 +738,14 @@
     "year": 2020,
     "test": "ENEM",
     "area": "humanas",
-    "answer": "c"
+    "answer": "c",
+    "contextIds": [
+      "enem_2020_humanas_q78_ctx1"
+    ]
   },
   {
     "number": 79,
-    "text": "O fenômeno histórico conhecido como \"tráfico de coolies\" esteve associado diretamente ao período que vai do final da década de 1840 até o ano de 1874, quando milhares de chineses foram encaminhados principalmente para Cuba e Peru e muitos abusos no recrutamento de mão de obra foram identificados. O tráfico de coolies ou, em outros termos, o transporte por meios coativos de mão de obra de um lugar para outro, foi comparado ao tráfico africano de escravos por muitos periodistas e analistas do século XIX.\n\nA comparação mencionada no texto foi possível em razão da seguinte característica:",
+    "text": "A comparação mencionada no texto foi possível em razão da seguinte característica:",
     "alternatives": {
       "a": "Oferta de contrato formal.",
       "b": "Origem étnica dos grupos de trabalhadores.",
@@ -744,11 +763,12 @@
     "year": 2020,
     "test": "ENEM",
     "area": "humanas",
-    "answer": "d"
+    "answer": "d",
+    "contextId": "enem_2020_humanas_q79_ctx1"
   },
   {
     "number": 80,
-    "text": "Os seringueiros amazônicos eram invisíveis no cenário nacional nos anos 1970. Começaram a se articular como um movimento agrário no início dos anos 1980, e na década seguinte conseguiram reconhecimento nacional, obtendo a implantação das primeiras reservas extrativas após o assassinato de Chico Mendes. Assim, em vinte anos, os camponeses da floresta passaram da invisibilidade à posição de paradigma de desenvolvimento sustentável com participação popular.\n\nDe acordo com o texto, a visibilidade dos seringueiros amazônicos foi estabelecida pela relação entre",
+    "text": "De acordo com o texto, a visibilidade dos seringueiros amazônicos foi estabelecida pela relação entre",
     "alternatives": {
       "a": "crescimento econômico e migração de trabalhadores",
       "b": "produção de borracha e escassez de recursos naturais",
@@ -766,7 +786,8 @@
     "year": 2020,
     "test": "ENEM",
     "area": "humanas",
-    "answer": "c"
+    "answer": "c",
+    "contextId": "enem_2020_humanas_q80_ctx1"
   },
   {
     "number": 81,
@@ -792,7 +813,7 @@
   },
   {
     "number": 82,
-    "text": "As cidades de Puebla, no México, e Legazpi, nas Filipinas, não têm quase nada em comum. Estão muito longe uma da outra e são habitadas por povos muito diferentes. O que as une é um trágico detalhe de sua geografia. Elas foram erguidas na vizinhança de alguns dos vulcões mais perigosos do mundo: o mexicano Popocatepétl e o filipino Mayon. Seus habitantes precisam estar prontos para correr a qualquer hora. Eles fazem parte dos 550 milhões de indivíduos que moram em zonas de risco vulcânico no mundo. Ao contrário do que seria sensato, continuam ali, indiferentes ao perigo que os espreita.\n\nA característica física que justifica a fixação do homem nos locais apresentados no texto é a ocorrência de",
+    "text": "A característica física que justifica a fixação do homem nos locais apresentados no texto é a ocorrência de",
     "alternatives": {
       "a": "solo fértil",
       "b": "encosta íngreme",
@@ -809,7 +830,10 @@
     "year": 2020,
     "test": "ENEM",
     "area": "humanas",
-    "answer": "a"
+    "answer": "a",
+    "contextIds": [
+      "enem_2020_humanas_q82_ctx1"
+    ]
   },
   {
     "number": 83,
@@ -835,7 +859,7 @@
   },
   {
     "number": 84,
-    "text": "A colisão entre uma placa continental e uma oceânica provocará a subducção desta última sob a placa continental, que, a exemplo dos arcos e ilhas, produzirá um arco magmático na borda do continente, composto por rochas vulcânicas acompanhado de deformações e metamorfismo tanto de rochas preexistentes como de parte das rochas formadas no processo.\n\nQual feição fisiográfica é gerada pelo processo tectônico apresentado?",
+    "text": "Qual feição fisiográfica é gerada pelo processo tectônico apresentado?",
     "alternatives": {
       "a": "Planícies abissais.",
       "b": "Planaltos cristalinos.",
@@ -852,7 +876,8 @@
     "year": 2020,
     "test": "ENEM",
     "area": "humanas",
-    "answer": "e"
+    "answer": "e",
+    "contextId": "enem_2020_humanas_q84_ctx1"
   },
   {
     "number": 85,
@@ -900,7 +925,7 @@
   },
   {
     "number": 87,
-    "text": "Na Grécia, o conceito de povo abrange tão somente aqueles indivíduos considerados cidadãos. Assim é possível perceber que o conceito de povo era muito restritivo. Mesmo tendo isso em conta, a forma democrática vivenciada e experimentada pelos gregos atenienses nos séculos IV e V a.C. pode ser caracterizada, fundamentalmente, como direta.\n\nNaquele contexto, a emergência do sistema de governo mencionado no excerto promoveu o(a)",
+    "text": "Naquele contexto, a emergência do sistema de governo mencionado no excerto promoveu o(a)",
     "alternatives": {
       "a": "competição para a escolha de representantes",
       "b": "campanha pela revitalização das oligarquias",
@@ -917,7 +942,8 @@
     "year": 2020,
     "test": "ENEM",
     "area": "humanas",
-    "answer": "e"
+    "answer": "e",
+    "contextId": "enem_2020_humanas_q87_ctx1"
   },
   {
     "number": 88,
@@ -939,7 +965,10 @@
     "test": "ENEM",
     "area": "humanas",
     "answer": "c",
-    "contextId": "enem_2020_humanas_q88_ctx1"
+    "contextIds": [
+      "enem_2020_humanas_q88_ctx1",
+      "enem_2020_humanas_q88_ctx2"
+    ]
   },
   {
     "number": 89,
@@ -983,6 +1012,9 @@
     "test": "ENEM",
     "area": "humanas",
     "answer": "d",
-    "contextId": "enem_2020_humanas_q90_ctx1"
+    "contextIds": [
+      "enem_2020_humanas_q90_ctx1",
+      "enem_2020_humanas_q90_ctx2"
+    ]
   }
 ]

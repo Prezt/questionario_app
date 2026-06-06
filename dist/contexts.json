@@ -74,6 +74,15 @@
     "reference": "VELOSO, C. Meu Rio de Janeiro. Sony, 2021.",
     "images": []
   },
+  "enem_2020_humanas_q51_ctx1": {
+    "title": "Zona de pastoreio e cultura do algodão e cereais do agreste (1963)",
+    "subtitle": null,
+    "text": "",
+    "images": [
+      "figuras/q051_2020_fig1.png"
+    ],
+    "reference": "ANDRADE, M. C. A terra e o homem no Nordeste. São Paulo: Brasiliense, 1963."
+  },
   "enem_2020_humanas_q54_ctx1": {
     "title": null,
     "subtitle": null,
@@ -95,12 +104,56 @@
     "images": [],
     "reference": "GALEANO, E. As veias abertas da América Latina. São Paulo: Paz e Terra, 1978."
   },
-  "enem_2020_humanas_q74_ctx1": {
-    "title": "TEXTO I e TEXTO II",
+  "enem_2020_humanas_q62_ctx1": {
+    "title": null,
     "subtitle": null,
-    "text": "TEXTO I\n\nOs meus pensamentos são todos sensações.\nPenso com os olhos e com os ouvidos\nE com as mãos e os pés\nE com o nariz e a boca.\n\nTEXTO II\n\nTudo aquilo que sei do mundo, mesmo por ciência, eu o sei a partir de uma visão minha ou de uma experiência do mundo sem a qual os símbolos da ciência não poderiam dizer nada.",
+    "text": "Sexto rei sumério (governante entre os séculos XVIII e XVII a.C.) e nascido em Babel, \"Khammu-rabi\" (pronúncia em babilônio) foi fundador do I Império Babilônico (correspondente ao atual Iraque), unificando amplamente o mundo mesopotâmico, unindo os semitas e os sumérios e levando a Babilônia ao máximo esplendor. O nome de Hamurabi permanece indissociavelmente ligado ao código jurídico tido como o mais remoto já descoberto: o Código de Hamurabi. O legislador babilônico consolidou a tradição jurídica, harmonizou os costumes e estendeu o direito e a lei a todos os súditos.",
     "images": [],
-    "reference": "PESSOA, F. O guardador de rebanhos – IX. In: GALHOZ, M. A. (Org.). Obras poéticas. Rio de Janeiro: Nova Aguilar, 1999 (fragmento). MERLEAU-PONTY, M. Fenomenologia da percepção. São Paulo: Martins Fontes, 1999 (adaptado)."
+    "reference": "Disponível em: www.direitoshumanos.usp.br. Acesso em: 12 fev. 2013 (adaptado)."
+  },
+  "enem_2020_humanas_q65_ctx1": {
+    "title": "",
+    "subtitle": "",
+    "text": "[Imagem: mapa]O conjunto representado pelo agronegócio demanda condições específicas que passam a ser exigidas dos territórios. Como há uma elevação da formação de fluxos, materiais e imateriais, a crescente articulação com as escalas que vão do local ao global terminam por pressionar o Estado a agir visando uma instalação no território de fixos diversos, bem como de uma regulação específica.",
+    "images": [
+      "figuras/q065_2020_fig1.png"
+    ],
+    "reference": "LIMA, R. C.; PENNA, N. A. A logística de transportes do agronegócio em Mato Grosso (Brasil). Confins, n. 26, fev. 2016."
+  },
+  "enem_2020_humanas_q74_ctx1": {
+    "title": "TEXTO I",
+    "subtitle": null,
+    "text": "Os meus pensamentos são todos sensações.\nPenso com os olhos e com os ouvidos\nE com as mãos e os pés\nE com o nariz e a boca.",
+    "images": [],
+    "reference": "PESSOA, F. O guardador de rebanhos – IX. In: GALHOZ, M. A. (Org.). Obras poéticas. Rio de Janeiro: Nova Aguilar, 1999 (fragmento)."
+  },
+  "enem_2020_humanas_q74_ctx2": {
+    "title": "TEXTO II",
+    "subtitle": null,
+    "text": "Tudo aquilo que sei do mundo, mesmo por ciência, eu o sei a partir de uma visão minha ou de uma experiência do mundo sem a qual os símbolos da ciência não poderiam dizer nada.",
+    "images": [],
+    "reference": "MERLEAU-PONTY, M. Fenomenologia da percepção. São Paulo: Martins Fontes, 1999 (adaptado)."
+  },
+  "enem_2020_humanas_q75_ctx1": {
+    "title": null,
+    "subtitle": null,
+    "text": "Afirmar que a cartografia da época moderna integrou o processo de invenção da América por parte dos europeus significa que os conhecimentos dos ameríndios sobre o território foram ignorados pela cartografia europeia ou que eles foram privados de sua representação territorial e da autoridade que seus conhecimentos tinham sobre o espaço.",
+    "images": [],
+    "reference": "OLIVEIRA, T. K. Desconstruindo mapas, revelando espacializações: reflexões sobre o uso da cartografia em estudos sobre o Brasil colonial. Revista Brasileira de História, n. 68, 2014 (adaptado)."
+  },
+  "enem_2020_humanas_q79_ctx1": {
+    "title": null,
+    "subtitle": null,
+    "text": "O fenômeno histórico conhecido como \"tráfico de coolies\" esteve associado diretamente ao período que vai do final da década de 1840 até o ano de 1874, quando milhares de chineses foram encaminhados principalmente para Cuba e Peru e muitos abusos no recrutamento de mão de obra foram identificados. O tráfico de coolies ou, em outros termos, o transporte por meios coativos de mão de obra de um lugar para outro, foi comparado ao tráfico africano de escravos por muitos periodistas e analistas do século XIX.",
+    "images": [],
+    "reference": "SANTOS, M. A. Migrações e trabalho sob contrato no século XIX. História, n. 12, 2017."
+  },
+  "enem_2020_humanas_q84_ctx1": {
+    "title": null,
+    "subtitle": null,
+    "text": "A colisão entre uma placa continental e uma oceânica provocará a subducção desta última sob a placa continental, que, a exemplo dos arcos e ilhas, produzirá um arco magmático na borda do continente, composto por rochas vulcânicas acompanhado de deformações e metamorfismo tanto de rochas preexistentes como de parte das rochas formadas no processo.",
+    "images": [],
+    "reference": "TEIXEIRA, W. et al. (Org.). Decifrando a Terra. São Paulo: Oficina de Textos, 2000."
   },
   "enem_2020_humanas_q49_ctx1": {
     "title": null,
@@ -108,6 +161,41 @@
     "text": "A propriedade compreende, em seu conteúdo e alcance, além do tradicional direito de uso, gozo e disposição por parte de seu titular, a obrigatoriedade do atendimento de sua função social, cuja definição é inseparável do requisito obrigatório do uso racional da propriedade e dos recursos ambientais que lhe são integrantes. O proprietário, como membro integrante da comunidade, se sujeita a obrigações crescentes que, ultrapassando os limites do direito de vizinhança, no âmbito do direito privado, abrangem o campo dos direitos da coletividade, visando o bem-estar geral, no âmbito do direito público.",
     "images": [],
     "reference": "JELINEK, R. O princípio da função social da propriedade e sua repercussão sobre o sistema do Código Civil. Disponível em: www.mp.rs.gov.br. Acesso em: 20 fev. 2013."
+  },
+  "enem_2020_humanas_q50_ctx1": {
+    "title": null,
+    "subtitle": null,
+    "text": "A expansão das cidades e a formação das aglomerações urbanas no Brasil foram marcadas pela produção industrial e pela consolidação das metrópoles como locais de seu desenvolvimento. Na segunda metade do século XX, as metrópoles brasileiras estenderam-se por áreas de ocupação contínua, configurando densas regiões urbanizadas.",
+    "images": [],
+    "reference": "MOURA, R. Arranjos urbano-regionais no Brasil: especificidades e reprodução de padrões. Disponível em: www.ub.edu. Acesso em: 11 fev. 2015."
+  },
+  "enem_2020_humanas_q58_ctx1": {
+    "title": null,
+    "subtitle": null,
+    "text": "O planejamento deixou de controlar o crescimento urbano e passou a encorajá-lo por todos os meios possíveis e imagináveis. Cidades, a nova mensagem soou em alto e bom som, eram máquinas de produzir riquezas; o primeiro e principal objetivo do planejamento devia ser o de azeitar a máquina.",
+    "images": [],
+    "reference": "HALL, P. Cidades do amanhã: uma história intelectual do planejamento e do projeto urbanos no século XX. São Paulo: Perspectiva, 2016 (adaptado)."
+  },
+  "enem_2020_humanas_q66_ctx1": {
+    "title": null,
+    "subtitle": null,
+    "text": "Um dos resquícios franceses na dança são os comandos proferidos pelo marcador da quadrilha. Seu papel é anunciar os próximos passos da coreografia. O abrasileiramento de termos franceses deu origem, por exemplo, ao saruê (soirée — reunião social noturna, ordem para todos se juntarem no centro do salão), anarriê (en arrière — para trás) e anavã (en avant — para frente).",
+    "images": [],
+    "reference": "Disponível em: www.ebc.com.br. Acesso em: 6 jul. 2015."
+  },
+  "enem_2020_humanas_q80_ctx1": {
+    "title": null,
+    "subtitle": null,
+    "text": "Os seringueiros amazônicos eram invisíveis no cenário nacional nos anos 1970. Começaram a se articular como um movimento agrário no início dos anos 1980, e na década seguinte conseguiram reconhecimento nacional, obtendo a implantação das primeiras reservas extrativas após o assassinato de Chico Mendes. Assim, em vinte anos, os camponeses da floresta passaram da invisibilidade à posição de paradigma de desenvolvimento sustentável com participação popular.",
+    "images": [],
+    "reference": "ALMEIDA, M. W. B. Direitos à floresta e ambientalismo: seringueiros e suas lutas. Revista Brasileira de Ciências Sociais, n. 55, 2004."
+  },
+  "enem_2020_humanas_q87_ctx1": {
+    "title": null,
+    "subtitle": null,
+    "text": "Na Grécia, o conceito de povo abrange tão somente aqueles indivíduos considerados cidadãos. Assim é possível perceber que o conceito de povo era muito restritivo. Mesmo tendo isso em conta, a forma democrática vivenciada e experimentada pelos gregos atenienses nos séculos IV e V a.C. pode ser caracterizada, fundamentalmente, como direta.",
+    "images": [],
+    "reference": "MANDUCO, A. Ciência política. São Paulo: Saraiva, 2011."
   },
   "enem_2020_humanas_q69_ctx1": {
     "title": null,
@@ -123,6 +211,13 @@
     "images": [],
     "reference": "CORALINA, C. Textos e contextos: poemas dos becos de Goiás e estórias mais. São Paulo: Global, 1997 (fragmento)"
   },
+  "enem_2020_humanas_q72_ctx1": {
+    "title": null,
+    "subtitle": null,
+    "text": "Montaigne deu o nome para um novo gênero literário; foi dos primeiros a instituir na literatura moderna um espaço privado, o espaço do \"eu\", do texto íntimo. Ele cria um novo processo de escrita filosófica, no qual hesitações, autocríticas, correções entram no próprio texto.",
+    "images": [],
+    "reference": "COELHO, M. Montaigne. São Paulo: Publifolha, 2001 (adaptado)."
+  },
   "enem_2020_linguagens_q35_ctx1": {
     "title": null,
     "subtitle": null,
@@ -132,24 +227,31 @@
   },
   "enem_2020_linguagens_q38_ctx1": {
     "title": "Relatos de viagem: nas curvas da Nacional 222, em Portugal",
-    "subtitle": null,
-    "text": "Em abril deste ano, fomos a Portugal para uma viagem de um mês que esperávamos há um ano. Pois no dia 4 de maio, chegávamos ao Aeroporto Francisco Sá Carneiro, no Porto. Que linda a \"antiga, muy nobre, sempre leal e invicta\" cidade do Porto! \"Encantei-me\", diriam eles... pelas belas paisagens, construções históricas com lindas fachadas, parques e praças muito bem cuidados.\nOs tripeiros, sinônimo de portuenses, têm orgulho de sua cidade, apelidada de Invicta — nunca foi invadida. E valorizam tudo o que há de bom ali, como \"a melhor estrada para se dirigir do mundo\", a Nacional 222.\nPois na manhã do 25 de abril, dia da Revolução dos Cravos, resolvemos conhecer a tal maravilha. A cada 10 km tínhamos que encostar: corríamos, dançávamos, tomávamos chocolate quente, sopa, tudo que fosse quentinho. E lá íamos para mais uma etapa. Uma aventura deliciosa. Depois de três horas — mais ou menos o dobro do tempo necessário, não fossem as paradas para aquecimento —, chegamos a casa! Congelados, mas maravilhados e invictos!",
+    "subtitle": "",
+    "text": "Em abril deste ano, fomos a Portugal para uma viagem de um mês que esperávamos há um ano. Pois no dia 4 de maio, chegávamos ao Aeroporto Francisco Sá Carneiro, no Porto. Que linda a \"antiga, muy nobre, sempre leal e invicta\" cidade do Porto! \"Encantei-me\", diriam eles... pelas belas paisagens, construções históricas com lindas fachadas, parques e praças muito bem cuidados.\n\nOs tripeiros, sinônimo de portuenses, têm orgulho de sua cidade, apelidada de Invicta — nunca foi invadida. E valorizam tudo o que há de bom ali, como \"a melhor estrada para se dirigir do mundo\", a Nacional 222.\n\nPois na manhã do 25 de abril, dia da Revolução dos Cravos, resolvemos conhecer a tal maravilha. A cada 10 km tínhamos que encostar: corríamos, dançávamos, tomávamos chocolate quente, sopa, tudo que fosse quentinho. E lá íamos para mais uma etapa. Uma aventura deliciosa. Depois de três horas — mais ou menos o dobro do tempo necessário, não fossem as paradas para aquecimento —, chegamos a casa! Congelados, mas maravilhados e invictos!",
     "images": [],
     "reference": "Disponível em: https://oglobo.globo.com. Acesso em: 6 dez. 2017 (adaptado)."
   },
   "enem_2020_linguagens_q3_en_ctx1": {
     "title": "A Mother in a Refugee Camp",
-    "subtitle": null,
-    "text": "No Madonna and Child could touch\nHer tenderness for a son\nShe soon would have to forget...\n\nThe air was heavy with odors of diarrhea,\nOf unwashed children with washed-out ribs\nAnd dried-up bottoms waddling in labored steps\nBehind blown-empty bellies. Other mothers there\nHad long ceased to care, but not this one:\nShe held a ghost-smile between her teeth,\nand in her eyes the memory\nOf a mother's pride... She had bathed him\nAnd rubbed him down with bare palms.\nShe took from their bundle of possessions\nA broken comb and combed\nThe rust-colored hair left on his skull\nAnd then — humming in her eyes — began carefully\n      [to part it.\nIn their former life this was perhaps\nA little daily act of no consequence\nBefore his breakfast and school; now she did it\nLike putting flowers on a tiny grave.",
+    "subtitle": "",
+    "text": "No Madonna and Child could touch\nHer tenderness for a son\nShe soon would have to forget...\nThe air was heavy with odors of diarrhea,\nOf unwashed children with washed-out ribs\nAnd dried-up bottoms waddling in labored steps\nBehind blown-empty bellies. Other mothers there\nHad long ceased to care, but not this one:\nShe held a ghost-smile between her teeth,\nand in her eyes the memory\nOf a mother's pride... She had bathed him\nAnd rubbed him down with bare palms.\nShe took from their bundle of possessions\nA broken comb and combed\nThe rust-colored hair left on his skull\nAnd then — humming in her eyes — began carefully to part it.\nIn their former life this was perhaps\nA little daily act of no consequence\nBefore his breakfast and school; now she did it\nLike putting flowers on a tiny grave.",
     "images": [],
     "reference": "ACHEBE, C. Collected Poems. New York: Anchor Books, 2004."
   },
+  "enem_2020_linguagens_q12_ctx1": {
+    "title": "TEXTO I",
+    "subtitle": "",
+    "text": "É pau, é pedra, é o fim do caminho\nÉ um resto de toco, é um pouco sozinho\nÉ um caco de vidro, é a vida, é o sol\nÉ a noite, é a morte, é o laço, é o anzol\nÉ peroba-do-campo, é o nó da madeira\nCaingá, candeia, é o matita-pereira",
+    "images": [],
+    "reference": "TOM JOBIM. Águas de março. O Tom de Jobim e o tal de João Bosco (disco de bolso). Salvador: Zen Produtora, 1972 (fragmento)."
+  },
   "enem_2020_linguagens_q12_q14_ctx1": {
     "title": "TEXTO II",
-    "subtitle": null,
-    "text": "A inspiração súbita e certeira do compositor serve ainda de exemplo do lema antigo: nada vem do nada. Para ninguém, nem mesmo para Tom Jobim. Duas fontes são razoavelmente conhecidas. A primeira é o poema \"O caçador de esmeraldas\", do mestre parnasiano Olavo Bilac: \"Foi em março, ao findar da chuva, quase à entrada do outono, quando a terra em sede requeimada bebera longamente as águas da estação [...].\". E a outra é um ponto de macumba, gravado com sucesso por J. B. Carvalho, do Conjunto Tupi: \"É pau, é pedra, é seixo miúdo, roda a baiana por cima de tudo\".\n\nCombinar Olavo Bilac e macumba já seria bom; mas o que se vê em \"Águas de março\" vai muito além: tudo se transforma numa outra coisa e numa outra música, que recompõem o mundo para nós.",
+    "subtitle": "",
+    "text": "A inspiração súbita e certeira do compositor serve ainda de exemplo do lema antigo: nada vem do nada. Para ninguém, nem mesmo para Tom Jobim. Duas fontes são razoavelmente conhecidas. A primeira é o poema \"O caçador de esmeraldas\", do mestre parnasiano Olavo Bilac: \"Foi em março, ao findar da chuva, quase à entrada do outono, quando a terra em sede requeimada bebera longamente as águas da estação [...].\". E a outra é um ponto de macumba, gravado com sucesso por J. B. Carvalho, do Conjunto Tupi: \"É pau, é pedra, é seixo miúdo, roda a baiana por cima de tudo\".\nCombinar Olavo Bilac e macumba já seria bom; mas o que se vê em \"Águas de março\" vai muito além: tudo se transforma numa outra coisa e numa outra música, que recompõem o mundo para nós.",
     "images": [],
-    "reference": "Nestrovski, A. O samba mais bonito do mundo. In: Três canções de Tom Jobim. São Paulo: Cosac Naify, 2006"
+    "reference": "NESTROVSKI, A. O samba mais bonito do mundo. In: Três canções de Tom Jobim. São Paulo: Cosac Naify, 2006."
   },
   "enem_2020_math_q136_ctx1": {
     "title": "Lei n. 5.700, de 1º de setembro de 1971",
@@ -266,8 +368,8 @@
     "reference": "SENNET, R. Carne e pedra. Rio de Janeiro: Record, 2008."
   },
   "enem_2020_humanas_q52_ctx1": {
-    "title": "Texto",
-    "subtitle": null,
+    "title": "",
+    "subtitle": "",
     "text": "Dois grandes eventos históricos tornaram possível um caso como o de Menocchio: a invenção da imprensa e a Reforma. A imprensa lhe permitiu confrontar os livros com a tradição oral em que havia crescido e lhe forneceu as palavras para organizar o amontoado de ideias e fantasias que nele conviviam. A Reforma lhe deu audácia para comunicar o que pensava ao padre do vilarejo, conterrâneos, inquisidores — mesmo não tendo conseguido dizer tudo diante do papa, dos cardeais e dos príncipes, como queria.",
     "images": [],
     "reference": "GINZBURG, C. O queijo e os vermes: o cotidiano e as ideias de um moleiro perseguido pela Inquisição. São Paulo: Cia. das Letras, 2006."
@@ -342,6 +444,41 @@
     "images": [],
     "reference": "SILVA, J. G. Velhos e novos mitos do rural brasileiro. Estudos Avançados, n. 43, dez. 2001."
   },
+  "enem_2020_humanas_q46_ctx1": {
+    "title": null,
+    "subtitle": null,
+    "text": "Embora inegáveis os benefícios que ambas as economias têm auferido do intercâmbio comercial, o Brasil tem reiterado seu objetivo de desenvolver com a China uma relação comercial menos assimétrica. Os números revelam com clareza a assimetria. As exportações brasileiras de produtos básicos, especialmente soja, minério de ferro e petróleo, compõem, dependendo do ano, algo entre 75% e 80% da pauta, ao passo que as importações brasileiras consistem, aproximadamente, em 95% de produtos industrializados chineses, que vão desde os mais variados bens de consumo até máquinas e equipamentos de alto valor.",
+    "images": [],
+    "reference": "LEÃO, V. C. Prefácio. In: CINTRA, M. A. M.; SILVA FILHO, E. B.; PINTO, E. C. (Org.). China em transformação: dimensões econômicas e geopolíticas do desenvolvimento. Rio de Janeiro: Ipea, 2015."
+  },
+  "enem_2020_humanas_q56_ctx1": {
+    "title": null,
+    "subtitle": null,
+    "text": "A demanda mundial para a produção de alimentos aumenta progressivamente a taxas muito altas. Atualmente, na maioria dos países, continentes e regiões, a água consumida na agricultura é de cerca de 70% da disponibilidade total.",
+    "images": [],
+    "reference": "TUNDISI, J. G. Recursos hídricos no futuro: problemas e soluções. Estudos Avançados, n. 63, 2008 (adaptado)."
+  },
+  "enem_2020_humanas_q64_ctx1": {
+    "title": null,
+    "subtitle": null,
+    "text": "É difícil imaginar que nos anos 1990, num país com setores da população na pobreza absoluta e sem uma rede de benefícios sociais em que se apoiar, um governo possa abandonar o papel de promotor de programas de geração de emprego, de assistência social, de desenvolvimento da infraestrutura e de promoção de regiões excluídas, na expectativa de que o mercado venha algum dia a dar uma resposta adequada a tudo isso.",
+    "images": [],
+    "reference": "SORJ, B. A nova sociedade brasileira. Rio de Janeiro: Jorge Zahar, 2000 (adaptado)."
+  },
+  "enem_2020_humanas_q78_ctx1": {
+    "title": null,
+    "subtitle": null,
+    "text": "O toyotismo, a partir dos anos 1970, teve grande impacto no mundo ocidental, quando se mostrou para os países avançados como uma opção possível para a superação de uma crise de acumulação.",
+    "images": [],
+    "reference": "ANTUNES, R. Os sentidos do trabalho: ensaio sobre a afirmação e a negação do trabalho. São Paulo: Boitempo, 2009 (adaptado)."
+  },
+  "enem_2020_humanas_q82_ctx1": {
+    "title": null,
+    "subtitle": null,
+    "text": "As cidades de Puebla, no México, e Legazpi, nas Filipinas, não têm quase nada em comum. Estão muito longe uma da outra e são habitadas por povos muito diferentes. O que as une é um trágico detalhe de sua geografia. Elas foram erguidas na vizinhança de alguns dos vulcões mais perigosos do mundo: o mexicano Popocatepétl e o filipino Mayon. Seus habitantes precisam estar prontos para correr a qualquer hora. Eles fazem parte dos 550 milhões de indivíduos que moram em zonas de risco vulcânico no mundo. Ao contrário do que seria sensato, continuam ali, indiferentes ao perigo que os espreita.",
+    "images": [],
+    "reference": "ANGELO, C. Disponível em: http://super.abril.com.br. Acesso em: 24 out. 2015 (adaptado)."
+  },
   "enem_2020_humanas_q53_ctx1": {
     "title": null,
     "subtitle": null,
@@ -371,8 +508,8 @@
     "reference": "LEITE, S. História da Companhia de Jesus no Brasil. Rio de Janeiro: Civilização Brasileira, 1938 (adaptado)."
   },
   "enem_2020_linguagens_q1_ctx1": {
-    "title": "Pôster de divulgação de campanha",
-    "subtitle": null,
+    "title": "",
+    "subtitle": "",
     "text": "[Figura: pôster de divulgação de campanha]",
     "images": [
       "figuras/q001_2020_fig1.png"
@@ -387,51 +524,51 @@
     "reference": "Disponível em: https://exame.abril.com.br. Acesso em: 1 dez. 2017."
   },
   "enem_2020_linguagens_q11_ctx2": {
-    "title": "Texto",
-    "subtitle": null,
+    "title": "",
+    "subtitle": "",
     "text": "Na sua imaginação perturbada sentia a natureza toda agitando-se para sufocá-la. Aumentavam as sombras. No céu, nuvens colossais e túmidas rolavam para o abismo do horizonte... Na várzea, ao clarão indeciso do crepúsculo, os seres tomavam ares de monstros... As montanhas, subindo ameaçadoras da terra, perfilavam-se tenebrosas... Os caminhos, espreguiçando-se sobre os campos, animavam-se quais serpentes infinitas... As árvores soltas choravam ao vento, como carpideiras fantásticas da natureza morta... Os aflitivos pássaros noturnos gemiam gouros com pios fúnebres. Maria quis fugir, mas os membros cansados não acudiam aos ímpetos do medo e deixavam-na prostrada em uma angústia desesperada.",
     "images": [],
     "reference": "ARANHA, J. P. G. Canaã. São Paulo: Ática, 1997."
   },
   "enem_2020_linguagens_q39_ctx2": {
     "title": "Hino à Bandeira",
-    "subtitle": null,
-    "text": "Em teu seio formoso retratas\nEste céu de puríssimo azul,\nA verdura sem par destas matas,\nE o esplendor do Cruzeiro do Sul.\nContemplando o teu vulto sagrado,\nCompreendemos o nosso dever,\nE o Brasil por seus filhos amado,\nPoderoso e feliz há de ser!\nSobre a imensa Nação Brasileira,\nNos momentos de festa ou de dor,\nPaira sempre sagrada bandeira\nPavilhão da justiça e do amor!",
+    "subtitle": "",
+    "text": "Em teu seio formoso retratas\nEste céu de puríssimo azul,\nA verdura sem par destas matas,\nE o esplendor do Cruzeiro do Sul.\n\nContemplando o teu vulto sagrado,\nCompreendemos o nosso dever,\nE o Brasil por seus filhos amado,\nPoderoso e feliz há de ser!\n\nSobre a imensa Nação Brasileira,\nNos momentos de festa ou de dor,\nPaira sempre sagrada bandeira\nPavilhão da justiça e do amor!",
     "images": [],
     "reference": "BILAC, O.; BRAGA, F."
   },
   "enem_2020_linguagens_q42_ctx2": {
-    "title": "Texto",
-    "subtitle": null,
+    "title": "",
+    "subtitle": "",
     "text": "Atualmente os jovens estão imersos numa sociedade permeada pela tecnologia. Nesse contexto, os jogos digitais são artefatos muito empregados. Videogames ativos ou exergames foram introduzidos como forma de permitir que o corpo controlasse tais jogos. Como resultado, passaram a ser vistos como uma ferramenta auxiliar na adoção de um estilo de vida menos sedentário, com efeitos positivos sobre a saúde. Tem-se defendido que os exergames podem contribuir para a prática regular de atividade física moderada, bem como promover a interação entre jogadores, reduzindo o sentimento de isolamento social. Por outro lado, argumenta-se que os exergames não podem substituir a experiência real das práticas corporais, pois não motivam a longo prazo a prática permanente de atividades físicas.",
     "images": [],
     "reference": "FINCO, M. D.; REATEGUI, E. B.; ZARO, M. A. Laboratório de exergames: um espaço complementar para as aulas de educação física. Movimento, n. 3, 2015 (adaptado)."
   },
   "enem_2020_linguagens_q17_ctx1": {
-    "title": "Texto",
-    "subtitle": null,
+    "title": "",
+    "subtitle": "",
     "text": "Uma das mais contundentes críticas ao discurso da aptidão física relacionada à saúde está no caráter eminentemente individual de suas propostas, o que serve para obscurecer outros determinantes da saúde. Ou seja, costuma-se apresentar o indivíduo como o problema e a mudança do estilo de vida como a solução. Argumenta-se ainda que o movimento da aptidão física relacionada à saúde considera a existência de uma cultura homogênea na qual todos seriam livres para escolher seus estilos de vida, o que não condiz com a realidade. O fato é que vivemos numa sociedade dividida em classes sociais, na qual nem todas as pessoas têm condições econômicas para adotar um estilo de vida ativo e saudável. Há desigualdades estruturais com raízes políticas, econômicas e sociais que dificultam a adoção desses estilos de vida.",
     "images": [],
     "reference": "FERREIRA, M. S. Aptidão física e saúde na educação física escolar: ampliando o enfoque. RBCE, n. 2, jan. 2001 (adaptado)"
   },
   "enem_2020_linguagens_q23_ctx1": {
-    "title": "Texto",
-    "subtitle": null,
+    "title": "",
+    "subtitle": "",
     "text": "Eu tenho empresas e sou digno do visto para ir a Nova York. O dinheiro que chove em Nova York é para pessoas com poder de compra. Pessoas que tenham um visto do consulado americano. O dinheiro que chove em Nova York também é para os nova-iorquinos. São milhares de dólares. [...] Estou indo para Nova York, onde está chovendo dinheiro. Sou um grande administrador. Sim, está chovendo dinheiro em Nova York. Deu no rádio. Vejo que há pedestres invadindo a via onde trafega meu carro vermelho, importado da Alemanha. Vejo que há carros nacionais trafegando pela via onde trafega meu carro vermelho, importado da Alemanha. Ao chegar em Nova York, tomarei providências.",
     "images": [],
     "reference": "SANT'ANNA, A. O importado vermelho de Noé. In: MORICONI, I. (Org.). Os cem melhores contos. Rio de Janeiro: Objetiva, 2007."
   },
   "enem_2020_linguagens_q34_ctx2": {
-    "title": "Texto",
-    "subtitle": null,
+    "title": "",
+    "subtitle": "",
     "text": "A vida às vezes é como um jogo brincado na rua: estamos no último minuto de uma brincadeira bem quente e não sabemos que a qualquer momento pode chegar um mais velho a avisar que a brincadeira já acabou e está na hora de jantar. A vida afinal acontece muito de repente — nunca ninguém nos avisou que aquele era mesmo o último Carnaval da Vitória. O Carnaval também chegava sempre de repente. Nós, as crianças, vivíamos num tempo fora do tempo, sem nunca sabermos dos calendários de verdade. [...] O \"dia da véspera do Carnaval\", como dizia avó Nhé, era dia de confusão com roupas e pinturas a serem preparadas, sonhadas e inventadas. Mas quando acontecia era um dia rápido, porque os dias mágicos passam depressa deixando marcas fundas na nossa memória, que alguns chamam também de coração.\nONDJAKI. Os da minha rua. Rio de Janeiro: Língua Geral, 2007.",
     "images": [],
     "reference": "ONDJAKI. Os da minha rua. Rio de Janeiro: Língua Geral, 2007."
   },
   "enem_2020_linguagens_q45_ctx2": {
-    "title": null,
-    "subtitle": null,
-    "text": "Viajo Curitiba das conferências positivistas, elas ão onze em Curitiba, há treze no mundo inteiro; do ocador de realejo que não roda a manivela desde que macaquinho morreu; dos bravos soldados do fogo que assam chispando no carro vermelho atrás do incêndio ue ninguém não viu, esta Curitiba e a do cachorro-quente om chope duplo no Buraco do Tatu eu viajo.\nCuritiba, aquela do Burro Brabo, um cidadão misterioso morreu nos braços da Rosicler, quem foi? uem não foi? foi o reizinho do Sião; da Ponte Preta da stação, a única ponte da cidade, sem rio por baixo, esta Curitiba viajo.\nCuritiba sem pinheiro ou céu azul, pelo que vosmecê — província, cárcere, lar —, esta Curitiba, e não a outra ara inglês ver, com amor eu viajo, viajo, viajo.",
+    "title": "",
+    "subtitle": "",
+    "text": "Viajo Curitiba das conferências positivistas, elas são onze em Curitiba, há treze no mundo inteiro; do tocador de realejo que não roda a manivela desde que macaquinho morreu; dos bravos soldados do fogo que assam chispando no carro vermelho atrás do incêndio que ninguém não viu, esta Curitiba e a do cachorro-quente com chope duplo no Buraco do Tatu eu viajo.\n\nCuritiba, aquela do Burro Brabo, um cidadão misterioso morreu nos braços da Rosicler, quem foi? quem não foi? foi o reizinho do Sião; da Ponte Preta da estação, a única ponte da cidade, sem rio por baixo, esta Curitiba viajo.\n\nCuritiba sem pinheiro ou céu azul, pelo que vosmecê — província, cárcere, lar —, esta Curitiba, e não a outra ara inglês ver, com amor eu viajo, viajo, viajo.",
     "images": [],
     "reference": "TREVISAN, D. Em busca de Curitiba perdida. Rio de Janeiro: Record, 1992."
   },
@@ -450,9 +587,9 @@
     "reference": "SÁNCHEZ, H. El héroe de la familia. Bogotá: Tercer Mundo, 1988."
   },
   "enem_2020_linguagens_q13_ctx1": {
-    "title": null,
-    "subtitle": null,
-    "text": "Deu vontade de jogar, mas não sabe como reunir os amigos...\nMuitas vezes é difícil encontrar grupos para bater uma bola. Em função disso, estão sendo disponibilizados aplicativos que reúnem times e reservam espaços para os adeptos da paixão nacional. Num exemplo dessas iniciativas, é possível organizar uma partida de futebol se inscrever para participar de um jogo, alugar campos e quadras, convidar jogadores. O aplicativo tem dois tipos de usuários: um que o usa como ferramenta de gestão do grupo, convidando amigos para jogar, vendo quem confirmou e avaliando os jogos. Outro usuário é o que busca partidas perto de onde ele está, caso de pessoas que estão de passagem numa cidade.\nBENEDICTO, M.; MARLI, M. Bola na rede. Retrato, a revista do IBGE, n. 2, 2017 (adaptado).",
+    "title": "Deu vontade de jogar, mas não sabe como reunir os amigos...",
+    "subtitle": "",
+    "text": "Muitas vezes é difícil encontrar grupos para bater uma bola. Em função disso, estão sendo disponibilizados aplicativos que reúnem times e reservam espaços para os adeptos da paixão nacional. Num exemplo dessas iniciativas, é possível organizar uma partida de futebol se inscrever para participar de um jogo, alugar campos e quadras, convidar jogadores. O aplicativo tem dois tipos de usuários: um que o usa como ferramenta de gestão do grupo, convidando amigos para jogar, vendo quem confirmou e avaliando os jogos. Outro usuário é o que busca partidas perto de onde ele está, caso de pessoas que estão de passagem numa cidade.",
     "images": [],
     "reference": "BENEDICTO, M.; MARLI, M. Bola na rede. Retrato, a revista do IBGE, n. 2, 2017 (adaptado)."
   },
@@ -460,13 +597,15 @@
     "title": null,
     "subtitle": null,
     "text": "O suor para estar em competições nacionais e internacionais de alto nível é o mesmo para homens e mulheres, mas não raramente as remunerações são menores para elas. Se no tênis, um dos esportes mais equânimes em termos de gênero, todos os principais torneios oferecem prêmios idênticos nas disputas femininas e masculinas, no futebol a desigualdade atinge seu ápice. Neymar e Marta são dois expoentes dessa paixão nacional. Ela já foi eleita cinco vezes a melhor jogadora do mundo pela Fifa. Ele conquistou o terceiro lugar na última votação para melhor do mundo. Mas é na conta bancária que a diferença entre os dois se sobressai.",
-    "images": [],
+    "images": [
+      "figuras/q015_2020_fig1.png"
+    ],
     "reference": "Disponível em: http://apublica.org. Acesso em: 9 ago. 2017 (adaptado)"
   },
   "enem_2020_linguagens_q20_ctx2": {
-    "title": null,
-    "subtitle": null,
-    "text": "Por que a indústria do empreendedorismo de palco irá destruir você\n\nSe, antigamente, os livros, enormes e com suas setecentas páginas, cuspiam fórmulas, equações e cálculos que te ensinavam a lidar com o fluxo de caixa da sua empresa, hoje eles dizem: \"Você irá chegar lá. Acredite, você irá vencer!\".\n\nMindset, empoderamento, millennials, networking, coworking, deal, business, deadline, salesman com perfil hunter… tudo isso faz parte do seu vocabulário.\n\nO pacote de livros é sempre idêntico e as experiências são passadas da mesma forma: você está a um único centímetro da vitória. Não pare!\n\nSe desistir agora, será para sempre. Tome, leia a estratégia do oceano azul. Faça mais uma mentoria, participe de mais uma sessão de coaching. O problema é que o seu mindset não está ajustado. Você precisa ser mais proativo. Vamos fazer mais um powerminds? Eu consigo um precinho bacana para você…",
+    "title": "Por que a indústria do empreendedorismo de palco irá destruir você",
+    "subtitle": "",
+    "text": "Se, antigamente, os livros, enormes e com suas setecentas páginas, cuspiam fórmulas, equações e cálculos que te ensinavam a lidar com o fluxo de caixa da sua empresa, hoje eles dizem: \"Você irá chegar lá. Acredite, você irá vencer!\".\n\nMindset, empoderamento, millennials, networking, coworking, deal, business, deadline, salesman com perfil hunter… tudo isso faz parte do seu vocabulário.\n\nO pacote de livros é sempre idêntico e as experiências são passadas da mesma forma: você está a um único centímetro da vitória. Não pare!\n\nSe desistir agora, será para sempre. Tome, leia a estratégia do oceano azul. Faça mais uma mentoria, participe de mais uma sessão de coaching. O problema é que o seu mindset não está ajustado. Você precisa ser mais proativo. Vamos fazer mais um powerminds? Eu consigo um precinho bacana para você…",
     "images": [],
     "reference": "CARVALHO, Í. C. Disponível em: https://medium.com. Acesso em: 17 ago. 2017 (adaptado)"
   },
@@ -487,22 +626,22 @@
     "reference": "www.facebook.com/ministeriodoesporte. Acesso em: 7 dez. 2017."
   },
   "enem_2020_linguagens_q27_ctx1": {
-    "title": "Texto",
-    "subtitle": null,
+    "title": "",
+    "subtitle": "",
     "text": "Caminhando contra o vento,\nSem lenço e sem documento\nNo sol de quase dezembro\nEu vou\nO sol se reparte em crimes\nEspaçonaves, guerrilhas\nEm cardinales bonitas\nEu vou\nEm caras de presidentes\nEm grandes beijos de amor\nEm dentes, pernas, bandeiras\nBombas e Brigitte Bardot\nO sol nas bancas de revista\nMe enche de alegria e preguiça\nQuem lê tanta notícia\nEu vou",
     "images": [],
     "reference": "VELOSO, C. Alegria, alegria. In: Caetano Veloso. São Paulo: Phillips, 1967 (fragmento)"
   },
   "enem_2020_linguagens_q33_ctx1": {
     "title": "TEXTO I",
-    "subtitle": "Poesia em cartaz",
+    "subtitle": "<b><center>Poesia em cartaz</center></b>",
     "text": "O caminho habitual para o trabalho, aquele em que a gente já nem repara direito, pode ficar mais belo com um poema. O projeto #UmLambePorDia nasceu dessa intenção: trazer mais cor e alegria para a cidade por meio de cartazes coloridos ao estilo lambe-lambe. Quem teve a ideia foi o escritor Leonardo Beltrão, em Belo Horizonte. \"Em meio a olhares cada vez mais viciados, acabamos nos esquecendo da beleza envolvida em cada esquina e no próprio poder transformador da palavra\". Assim, cada dia um cartaz é colocado por aí, para nos lembrar de reparar na cidade, na vida que corre ao redor e também em nós mesmos.",
     "images": [],
-    "reference": null
+    "reference": ""
   },
   "enem_2020_linguagens_q33_ctx2": {
     "title": "TEXTO II",
-    "subtitle": null,
+    "subtitle": "",
     "text": "[Figura: lambe-lambe colado em poste com poema \"Ontem, fui dormir com saudades de mim e hoje, subitamente, voltei.\"]",
     "images": [
       "figuras/q033_2020_fig1.png"
@@ -6045,14 +6184,14 @@
   },
   "enem_2020_linguagens_q4_en_ctx1": {
     "title": "A Minor Bird",
-    "subtitle": null,
-    "text": "I have wished a bird would fly away,\nAnd not sing by my house all day;\n\nHave clapped my hands at him from the door\nWhen it seemed as if I could bear no more.\n\nThe fault must partly have been in me.\nThe bird was not to blame for his key.\n\nAnd of course there must be something wrong\nIn wanting to silence any song.",
+    "subtitle": "",
+    "text": "I have wished a bird would fly away,\nAnd not sing by my house all day;\n\nHave clapped my hands at him from the door\nWhen it seemed as if I could bear no more.\nThe fault must partly have been in me.\nThe bird was not to blame for his key.\n\nAnd of course there must be something wrong\nIn wanting to silence any song.",
     "images": [],
     "reference": "FROST, R. West-running Brook. New York: Henry Holt and Company, 1928."
   },
   "enem_2020_linguagens_q5_en_ctx1": {
-    "title": null,
-    "subtitle": null,
+    "title": "",
+    "subtitle": "",
     "text": "Finally, Aisha finished with her customer and asked what colour Ifemelu wanted for her hair attachments.\n\n\"Colour four.\"\n\n\"Not good colour,\" Aisha said promptly.\n\n\"That's what I use.\"\n\n\"It look dirty. You don't want colour one?\"\n\n\"Colour one is too black, it looks fake,\" Ifemelu said, loosening her headwrap. \"Sometimes I use colour two, but colour four is closest to my natural colour.\"\n\n[...]\n\nShe touched Ifemelu's hair. \"Why you don't have relaxer?\"\n\n\"I like my hair the way God made it.\"\n\n\"But how you comb it? Hard to comb,\" Aisha said.\n\nIfemelu had brought her own comb. She gently combed her hair, dense, soft and tightly coiled, until it framed her head like a halo. \"It's not hard to comb if you moisturize it properly,\" she said, slipping into the coaxing tone of the proselytizer that she used whenever she was trying to convince other black women about the merits of wearing their hair natural. Aisha snorted; she clearly could not understand why anybody would choose to suffer through combing natural hair, instead of simply relaxing it. She sectioned out Ifemelu's hair, plucked a little attachment from the pile on the table and began deftly to twist.",
     "images": [],
     "reference": "ADICHIE, C. Americanah: A novel. New York: Anchor Books, 2013."
@@ -6109,13 +6248,20 @@
     "reference": "SILVEIRA, E. Disponível em: www.revistaplaneta.com.br. Acesso em: 6 dez. 2017 (adaptado)."
   },
   "enem_2020_linguagens_q14_ctx1": {
-    "title": "TEXTO I e TEXTO II",
+    "title": "TEXTO I",
     "subtitle": null,
-    "text": "TEXTO I\n\n[Figura: Damien Hirst, Mother and Child. Bezerro dividido em duas partes: 1029 x 1689 x 625mm, 1993 (detalhe). Vidro, aço pintado, silicone, acrílico, monofilamento, aço inoxidável, bezerro e solução de formaldeído.]\n\nTEXTO II\n\nO grupo Jovens Artistas Britânicos (YABs), que surgiu no final da década de 1980, possui obras diversificadas que incluem fotografias, instalações, pinturas e carcaças desmembradas. O trabalho desses artistas chamou a atenção no final do período da recessão, por utilizar materiais incomuns, como esterco de elefantes, sangue e legumes, o que expressava os detritos da vida e uma atmosfera de niilismo, temperada por um humor mordaz.",
+    "text": "[Imagem]",
     "images": [
       "figuras/q014_2020_fig1.png"
     ],
-    "reference": "HIRST, D. Mother and Child. Disponível em: http://damienhirst.com. Acesso em: 15 jul. 2015. FARTHING, S. Tudo sobre arte. Rio de Janeiro: Sextante, 2011 (adaptado)."
+    "reference": "HIRST, D. Mother and Child. Disponível em: http://damienhirst.com. Acesso em: 15 jul. 2015."
+  },
+  "enem_2020_linguagens_q14_ctx2": {
+    "title": "TEXTO II",
+    "subtitle": null,
+    "text": "O grupo Jovens Artistas Britânicos (YABs), que surgiu no final da década de 1980, possui obras diversificadas que incluem fotografias, instalações, pinturas e carcaças desmembradas. O trabalho desses artistas chamou a atenção no final do período da recessão, por utilizar materiais incomuns, como esterco de elefantes, sangue e legumes, o que expressava os detritos da vida e uma atmosfera de niilismo, temperada por um humor mordaz.",
+    "images": [],
+    "reference": "FARTHING, S. Tudo sobre arte. Rio de Janeiro: Sextante, 2011 (adaptado)."
   },
   "enem_2020_linguagens_q16_ctx1": {
     "title": null,
@@ -6141,7 +6287,7 @@
   "enem_2020_linguagens_q24_ctx1": {
     "title": "DECRETO N. 28 314, DE 28 DE SETEMBRO DE 2007",
     "subtitle": "Demite o Gerúndio do Distrito Federal e dá outras providências.",
-    "text": "O GOVERNADOR DO DISTRITO FEDERAL, no uso das atribuições que lhe confere o artigo 100, incisos VII e XXVI, da Lei Orgânica do Distrito Federal, DECRETA:\n\nArt. 1º Fica demitido o Gerúndio de todos os órgãos do Governo do Distrito Federal.\n\nArt. 2º Fica proibido, a partir desta data, o uso do gerúndio para desculpa de INEFICIÊNCIA.\n\nArt. 3º Este Decreto entra em vigor na data de sua publicação.\n\nArt. 4º Revogam-se as disposições em contrário.\n\nBrasília, 28 de setembro de 2007.\n119º da República e 48º de Brasília",
+    "text": "O GOVERNADOR DO DISTRITO FEDERAL, no uso das atribuições que lhe confere o artigo 100, incisos VII e XXVI, da Lei Orgânica do Distrito Federal, DECRETA:\n\nArt. 1º Fica demitido o Gerúndio de todos os órgãos do Governo do Distrito Federal.\nArt. 2º Fica proibido, a partir desta data, o uso do gerúndio para desculpa de INEFICIÊNCIA.\nArt. 3º Este Decreto entra em vigor na data de sua publicação.\nArt. 4º Revogam-se as disposições em contrário.\n\nBrasília, 28 de setembro de 2007.\n119º da República e 48º de Brasília",
     "images": [],
     "reference": "Disponível em: www.dodf.gov.br. Acesso em: 11 dez. 2017."
   },
@@ -6155,23 +6301,23 @@
     "reference": "KOSUTH, J. One and Three Chairs. Museu Reina Sofia, Espanha, 1965. Disponível em: www.museoreinasofia.es. Acesso em: 4 jun. 2018 (adaptado)."
   },
   "enem_2020_linguagens_q28_ctx1": {
-    "title": null,
-    "subtitle": null,
-    "text": "Leandro Aparecido Ferreira, o MC Fioti, compôs em 2017 a música Bum bum tam tam, que gerou, em nove meses, 480 milhões de visualizações no YouTube. É o funk brasileiro mais ouvido na história do site.\n\nA partir de uma gravação da flauta que achou na internet, MC Fioti fez tudo sozinho: compôs, cantou e produziu em uma noite só. \"Comecei a pesquisar alguns tipos de flauta, coisas antigas. E nisso eu achei a 'flautinha do Sebastian Bach'\", conta. A descoberta foi por acaso: Fioti não sabia quem era o músico alemão e não sabe tocar o instrumento.\n\nA \"flauta envolvente\" da música é um trecho da Partita em Lá menor, escrita pelo alemão Johann Sebastian Bach por volta de 1723.",
+    "title": "",
+    "subtitle": "",
+    "text": "Leandro Aparecido Ferreira, o MC Fioti, compôs em 2017 a música Bum bum tam tam, que gerou, em nove meses, 480 milhões de visualizações no YouTube. É o funk brasileiro mais ouvido na história do site.\nA partir de uma gravação da flauta que achou na internet, MC Fioti fez tudo sozinho: compôs, cantou e produziu em uma noite só. \"Comecei a pesquisar alguns tipos de flauta, coisas antigas. E nisso eu achei a 'flautinha do Sebastian Bach'\", conta. A descoberta foi por acaso: Fioti não sabia quem era o músico alemão e não sabe tocar o instrumento.\nA \"flauta envolvente\" da música é um trecho da Partita em Lá menor, escrita pelo alemão Johann Sebastian Bach por volta de 1723.",
     "images": [],
     "reference": "Disponível em: https://g1.globo.com. Acesso em: 6 jun. 2018 (adaptado)."
   },
   "enem_2020_linguagens_q29_ctx1": {
     "title": "Seu delegado",
-    "subtitle": null,
-    "text": "Eu sou viúvo e tenho um filho homem\nArrumei uma viúva e fui me casar\nA minha sogra era muito teimosa\nCom o meu filho foi se matrimoniar\nDesse matrimônio nasceu um garoto\nDesde esse dia que eu ando é louco\n\nEsse garoto é filho do meu filho\nE o filho da minha sogra é irmão da minha mulher\nEle é meu neto e eu sou cunhado dele\nA minha nora é minha sogra\nMeu filho meu sogro é\nNessa confusão já nem sei quem sou\nAcaba esse garoto sendo meu avô.",
+    "subtitle": "",
+    "text": "Eu sou viúvo e tenho um filho homem\nArrumei uma viúva e fui me casar\nA minha sogra era muito teimosa\nCom o meu filho foi se matrimoniar\nDesse matrimônio nasceu um garoto\nDesde esse dia que eu ando é louco\nEsse garoto é filho do meu filho\nE o filho da minha sogra é irmão da minha mulher\nEle é meu neto e eu sou cunhado dele\nA minha nora é minha sogra\nMeu filho meu sogro é\nNessa confusão já nem sei quem sou\nAcaba esse garoto sendo meu avô.",
     "images": [],
     "reference": "TRIO FORROZÃO. Agitando a rapaziada. Rio de Janeiro: Natasha Records, 2009."
   },
   "enem_2020_linguagens_q32_ctx1": {
-    "title": null,
-    "subtitle": null,
-    "text": "Chiquito tinha quase trinta quando conheceu Mariana num baile de casamento na Forquilha, onde moravam uns parentes dele. Por lá foi ficando, remanchando. Fez mal à moça, como costumavam dizer, tiveram de casar às pressas. Morou uns tempos com o sogro, descombinaram. Foi só conta de colher o milho e vender. Mudou pra casa do velho Chico Lourenço [seu pai]. Fumaça própria só viu subir um par de anos depois, quando o pai repartiu as terras. De tão parecidos, pai e filho nunca combinaram direito. Cada qual mais topetudo, muitas vezes dona Aparecida ouvia o marido reclamar da natureza forte do filho. Ela escutava com paciência e respondia dum jeito sempre igual:\n\n— \"Quem herda, não rouba\".\n\nVinha um brilho nos olhos, o velho se acalmava.",
+    "title": "",
+    "subtitle": "",
+    "text": "Chiquito tinha quase trinta quando conheceu Mariana num baile de casamento na Forquilha, onde moravam uns parentes dele. Por lá foi ficando, remanchando. Fez mal à moça, como costumavam dizer, tiveram de casar às pressas. Morou uns tempos com o sogro, descombinaram. Foi só conta de colher o milho e vender. Mudou pra casa do velho Chico Lourenço [seu pai]. Fumaça própria só viu subir um par de anos depois, quando o pai repartiu as terras. De tão parecidos, pai e filho nunca combinaram direito. Cada qual mais topetudo, muitas vezes dona Aparecida ouvia o marido reclamar da natureza forte do filho. Ela escutava com paciência e respondia dum jeito sempre igual:\n— \"Quem herda, não rouba\".\nVinha um brilho nos olhos, o velho se acalmava.",
     "images": [],
     "reference": "ROMANO, O. Casos de Minas. Rio de Janeiro: Paz e Terra, 1982."
   },
@@ -6213,20 +6359,34 @@
     "reference": "KAZEZ, J. O peso das coisas: filosofia para o bem-viver. Rio de Janeiro: Tinta Negra, 2004."
   },
   "enem_2020_humanas_q88_ctx1": {
-    "title": "TEXTO I e TEXTO II",
+    "title": "TEXTO I",
     "subtitle": null,
-    "text": "TEXTO I\n\n[Figura: foto aérea do Rio Tietê em São Paulo]\n\nTEXTO II\n\nO Rio Tietê está morto. Ao menos uma parte dele: 137 quilômetros, para ser mais preciso. Uma pesquisa da Fundação SOS Mata Atlântica mostra que, em 2016, o trecho do rio com qualidade de água classificada como ruim ou péssima começa em Itaquaquecetuba, passa por toda a Região Metropolitana de São Paulo e chega até Cabreúva, já no interior de São Paulo. Nesse trecho, a água não tem oxigênio suficiente para abrigar vida.",
+    "text": "",
     "images": [
       "figuras/q088_2020_fig1.png"
     ],
-    "reference": "Rio Tietê, São Paulo (SP). Foto: Delfim Martins/Pulsar. Disponível em: http://epoca.globo.com. Acesso em: 7 dez. 2017 (adaptado)."
+    "reference": "Rio Tietê, São Paulo (SP). Foto: Delfim Martins/Pulsar."
+  },
+  "enem_2020_humanas_q88_ctx2": {
+    "title": "TEXTO II",
+    "subtitle": null,
+    "text": "O Rio Tietê está morto. Ao menos uma parte dele: 137 quilômetros, para ser mais preciso. Uma pesquisa da Fundação SOS Mata Atlântica mostra que, em 2016, o trecho do rio com qualidade de água classificada como ruim ou péssima começa em Itaquaquecetuba, passa por toda a Região Metropolitana de São Paulo e chega até Cabreúva, já no interior de São Paulo. Nesse trecho, a água não tem oxigênio suficiente para abrigar vida.",
+    "images": [],
+    "reference": "Disponível em: http://epoca.globo.com. Acesso em: 7 dez. 2017 (adaptado)."
   },
   "enem_2020_humanas_q90_ctx1": {
-    "title": "TEXTO I e TEXTO II",
+    "title": "TEXTO I",
     "subtitle": null,
-    "text": "TEXTO I\n\nO aumento de casos suspeitos de febre amarela em Minas pode estar relacionado à tragédia de Mariana, em 2015, segundo a bióloga da Fiocruz Márcia Chame. A hipótese tem como ponto de partida a localização das cidades mineiras que identificaram até o momento casos de pacientes com sintomas da doença. Grande parte está na região próxima do Rio Doce, afetado pelo rompimento da Barragem de Fundão, em novembro de 2015.\n\nTEXTO II\n\nPor outro lado, Servio Ribeiro considera remota a possibilidade de influência da tragédia de Mariana (MG) neste surto de febre amarela em Minas Gerais. \"A febre amarela é uma doença de interior de floresta. O mosquito que a transmite põe ovos em cavidades de árvores e em bromélias. É um mosquito da estrutura da floresta. Ele não se relaciona muito com grandes corpos-d'água e com rios. As cidades afetadas pela doença estão em uma região onde os rejeitos não chegaram com força para derrubar a floresta\", diz o biólogo.",
+    "text": "O aumento de casos suspeitos de febre amarela em Minas pode estar relacionado à tragédia de Mariana, em 2015, segundo a bióloga da Fiocruz Márcia Chame. A hipótese tem como ponto de partida a localização das cidades mineiras que identificaram até o momento casos de pacientes com sintomas da doença. Grande parte está na região próxima do Rio Doce, afetado pelo rompimento da Barragem de Fundão, em novembro de 2015.",
     "images": [],
-    "reference": "FORMENTI, L. Para bióloga, surto de febre amarela pode ter relação com tragédia de Mariana. O Estado de São Paulo, 14 jan. 2017. RODRIGUES, L. Especialistas investigam relação entre febre amarela e degradação ambiental. Agência Brasil, 25 jan. 2017."
+    "reference": "FORMENTI, L. Para bióloga, surto de febre amarela pode ter relação com tragédia de Mariana. O Estado de São Paulo, 14 jan. 2017."
+  },
+  "enem_2020_humanas_q90_ctx2": {
+    "title": "TEXTO II",
+    "subtitle": null,
+    "text": "Por outro lado, Servio Ribeiro considera remota a possibilidade de influência da tragédia de Mariana (MG) neste surto de febre amarela em Minas Gerais. \"A febre amarela é uma doença de interior de floresta. O mosquito que a transmite põe ovos em cavidades de árvores e em bromélias. É um mosquito da estrutura da floresta. Ele não se relaciona muito com grandes corpos-d'água e com rios. As cidades afetadas pela doença estão em uma região onde os rejeitos não chegaram com força para derrubar a floresta\", diz o biólogo.",
+    "images": [],
+    "reference": "RODRIGUES, L. Especialistas investigam relação entre febre amarela e degradação ambiental. Agência Brasil, 25 jan. 2017."
   },
   "enem_2021_nature_q106_ctx1": {
     "title": "",

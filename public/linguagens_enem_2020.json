@@ -387,7 +387,10 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "a",
-    "contextId": "enem_2020_linguagens_q12_q14_ctx1"
+    "contextIds": [
+      "enem_2020_linguagens_q12_ctx1",
+      "enem_2020_linguagens_q12_q14_ctx1"
+    ]
   },
   {
     "number": 13,
@@ -431,7 +434,10 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "b",
-    "contextId": "enem_2020_linguagens_q14_ctx1"
+    "contextIds": [
+      "enem_2020_linguagens_q14_ctx1",
+      "enem_2020_linguagens_q14_ctx2"
+    ]
   },
   {
     "number": 15,
@@ -681,7 +687,7 @@
   },
   {
     "number": 26,
-    "text": "A realidade virtual é uma tecnologia de informação que, conforme sugere a imagem, tem como uma de suas principais funções\n\n[Figura: realidade virtual]",
+    "text": "[Figura: realidade virtual]A realidade virtual é uma tecnologia de informação que, conforme sugere a imagem, tem como uma de suas principais funções",
     "alternatives": {
       "a": "promover a manipulação eficiente de conhecimentos e informações de difícil compreensão no mundo físico.",
       "b": "conduzir escolhas profissionais da área de ciência da computação, oferecendo um leque de opções de atuação.",
@@ -772,7 +778,7 @@
   },
   {
     "number": 30,
-    "text": "Essa campanha de conscientização sobre o assédio sofrido pelas mulheres nas ruas constrói-se pela combinação da linguagem verbal e não verbal. [Figura: mulher com nariz e boca cobertos por lenço] A imagem da mulher com o nariz e a boca cobertos por um lenço é a representação não verbal do(a)",
+    "text": "[Figura: mulher com nariz e boca cobertos por lenço]Essa campanha de conscientização sobre o assédio sofrido pelas mulheres nas ruas constrói-se pela combinação da linguagem verbal e não verbal. A imagem da mulher com o nariz e a boca cobertos por um lenço é a representação não verbal do(a)",
     "alternatives": {
       "a": "silêncio imposto às mulheres, que não podem denunciar o assédio sofrido.",
       "b": "metáfora de que as mulheres precisam defender-se do assédio masculino.",
