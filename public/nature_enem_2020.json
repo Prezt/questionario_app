@@ -54,7 +54,11 @@
       "e": "E"
     },
     "images": [
-      "figuras/q093_2020_fig1.png"
+      "figuras/q093_2020_fig1.png",
+      "figuras/q093_2020_fig2.png",
+      "figuras/q093_2020_fig3.png",
+      "figuras/q093_2020_fig4.png",
+      "figuras/q093_2020_fig5.png"
     ],
     "tags": [
       "eletricidade e magnetismo"
@@ -63,8 +67,7 @@
     "year": 2020,
     "test": "ENEM",
     "area": "nature",
-    "answer": "b",
-    "review": true
+    "answer": "b"
   },
   {
     "number": 94,
@@ -111,7 +114,7 @@
   },
   {
     "number": 96,
-    "text": "A sacarase (ou invertase) é uma enzima que atua no intestino humano hidrolisando o dissacarídeo sacarose nos monossacarídeos glicose e frutose. Em um estudo cinético da reação de hidrólise da sacarose (C<sub>12</sub>H<sub>22</sub>O<sub>11</sub>), foram dissolvidos 171 g de sacarose em 500 mL de água. Observou-se que, a cada 100 minutos de reação, a concentração de sacarose foi reduzida à metade, qualquer que fosse o momento escolhido como tempo inicial.\n\nAs massas molares dos elementos H, C e O são iguais a 1, 12 e 16 g·mol⁻¹, respectivamente.\n\nQual é a concentração de sacarose depois de 400 minutos do início da reação de hidrólise?",
+    "text": "A sacarase (ou invertase) é uma enzima que atua no intestino humano hidrolisando o dissacarídeo sacarose nos monossacarídeos glicose e frutose. Em um estudo cinético da reação de hidrólise da sacarose (C<sub>12</sub>H<sub>22</sub>O<sub>11</sub>), foram dissolvidos 171 g de sacarose em 500 mL de água. Observou-se que, a cada 100 minutos de reação, a concentração de sacarose foi reduzida à metade, qualquer que fosse o momento escolhido como tempo inicial.\nAs massas molares dos elementos H, C e O são iguais a 1, 12 e 16 g·mol⁻¹, respectivamente.\n\nQual é a concentração de sacarose depois de 400 minutos do início da reação de hidrólise?",
     "alternatives": {
       "a": "2,50 × 10⁻³ mol·L⁻¹.",
       "b": "6,25 × 10⁻² mol·L⁻¹.",
@@ -173,7 +176,7 @@
   },
   {
     "number": 99,
-    "text": "Você foi contratado para sincronizar os quatro semáforos de uma avenida, indicados pelas letras O, A, B e C, conforme a figura.\n\nOs semáforos estão separados por uma distância de 500 m. Segundo os dados estatísticos da companhia controladora de trânsito, um veículo, que está inicialmente parado no semáforo O, tipicamente parte com aceleração constante de 1 m·s⁻² até atingir velocidade de 72 km·h⁻¹ e, a partir daí, prossegue com velocidade constante. Você deve ajustar os semáforos A, B e C de modo que eles mudem para a cor verde quando o veículo estiver a 100 m de cruzá-los, para que ele não tenha que reduzir a velocidade em nenhum momento.\n\nConsiderando essas condições, aproximadamente quanto tempo depois da abertura do semáforo O os semáforos A, B e C devem abrir, respectivamente?",
+    "text": "Você foi contratado para sincronizar os quatro semáforos de uma avenida, indicados pelas letras O, A, B e C, conforme a figura.[Figura]Os semáforos estão separados por uma distância de 500 m. Segundo os dados estatísticos da companhia controladora de trânsito, um veículo, que está inicialmente parado no semáforo O, tipicamente parte com aceleração constante de 1 m·s⁻² até atingir velocidade de 72 km·h⁻¹ e, a partir daí, prossegue com velocidade constante. Você deve ajustar os semáforos A, B e C de modo que eles mudem para a cor verde quando o veículo estiver a 100 m de cruzá-los, para que ele não tenha que reduzir a velocidade em nenhum momento.\n\nConsiderando essas condições, aproximadamente quanto tempo depois da abertura do semáforo O os semáforos A, B e C devem abrir, respectivamente?",
     "alternatives": {
       "a": "20 s, 45 s e 70 s.",
       "b": "25 s, 50 s e 75 s.",
@@ -181,7 +184,9 @@
       "d": "30 s, 55 s e 80 s.",
       "e": "35 s, 60 s e 85 s."
     },
-    "images": [],
+    "images": [
+      "figuras/q099_2020_fig1.png"
+    ],
     "tags": [
       "cinemática"
     ],
@@ -191,9 +196,7 @@
     "area": "nature",
     "answer": "d",
     "review": true,
-    "contextIds": [
-      "enem_2020_nature_q99_ctx1"
-    ]
+    "contextIds": []
   },
   {
     "number": 100,
@@ -243,7 +246,7 @@
   },
   {
     "number": 102,
-    "text": "A obtenção de óleos vegetais, de maneira geral, passa pelas etapas descritas no quadro.\n\n|Etapa|Subetapa|O que ocorre|\n|-|-|-|\n|Preparação da matéria-prima|Seleção dos grãos|Separação das sujidades mais grossas|\n||Descascamento|Separação de polpa e casca|\n||Trituração|Rompimento dos tecidos e das paredes das células|\n||Cozimento|Aumento da permeabilidade das membranas celulares|\n|Extração do óleo bruto|Prensagem|Remoção parcial do óleo|\n||Extração|Obtenção do óleo bruto com hexano|\n||Destilação|Separação do óleo e do solvente|\n\nQual das subetapas do processo é realizada em função apenas da polaridade das substâncias?",
+    "text": "A obtenção de óleos vegetais, de maneira geral, passa pelas etapas descritas no quadro.\n\n|Etapa|Subetapa|O que ocorre|\n|-|-|-|\n|Preparação da matéria-prima|Seleção dos grãos|Separação das sujidades mais grossas|\n|Preparação da matéria-prima|Descascamento|Separação de polpa e casca|\n|Preparação da matéria-prima|Trituração|Rompimento dos tecidos e das paredes das células|\n|Preparação da matéria-prima|Cozimento|Aumento da permeabilidade das membranas celulares|\n|Extração do óleo bruto|Prensagem|Remoção parcial do óleo|\n|Extração do óleo bruto|Extração|Obtenção do óleo bruto com hexano|\n|Extração do óleo bruto|Destilação|Separação do óleo e do solvente|\n\nQual das subetapas do processo é realizada em função apenas da polaridade das substâncias?",
     "alternatives": {
       "a": "Trituração.",
       "b": "Cozimento.",
@@ -457,7 +460,7 @@
   },
   {
     "number": 112,
-    "text": "Para garantir que produtos eletrônicos estejam armazenados de forma adequada antes da venda, algumas empresas utilizam cartões indicadores de umidade nas embalagens desses produtos. Alguns desses cartões contêm um sal de cobalto que muda de cor em presença de água, de acordo com a equação química:\n\nCoCl<sub>2</sub> (s) + 6 H<sub>2</sub>O (g) ⇌ CoCl<sub>2</sub>·6H<sub>2</sub>O (s)    ΔH < 0\n     (azul)                              (rosa)\n\nComo você procederia para reutilizar, num curto intervalo de tempo, um cartão que já estivesse com a coloração rosa?",
+    "text": "Para garantir que produtos eletrônicos estejam armazenados de forma adequada antes da venda, algumas empresas utilizam cartões indicadores de umidade nas embalagens desses produtos. Alguns desses cartões contêm um sal de cobalto que muda de cor em presença de água, de acordo com a equação química:\n\n<center>CoCl<sub>2</sub> (s) + 6 H<sub>2</sub>O (g) ⇌ CoCl<sub>2</sub>·6H<sub>2</sub>O (s)    ΔH < 0\n     (azul)                              (rosa)</center>\n\nComo você procederia para reutilizar, num curto intervalo de tempo, um cartão que já estivesse com a coloração rosa?",
     "alternatives": {
       "a": "Resfriaria no congelador.",
       "b": "Borrifaria com spray de água.",
@@ -570,7 +573,7 @@
   },
   {
     "number": 117,
-    "text": "Pesquisadores dos Estados Unidos desenvolveram uma nova técnica, que utiliza raios de luz infravermelha (invisíveis a olho nu) para destruir tumores. Primeiramente, o paciente recebe uma injeção com versões modificadas de anticorpos que têm a capacidade de \"grudar\" apenas nas células cancerosas. Sozinhos, eles não fazem nada contra o tumor. Entretanto, esses anticorpos estão ligados a uma molécula, denominada IR700, que funcionará como uma \"microbomba\", que irá destruir o câncer. Em seguida, o paciente recebe raios infravermelhos. Esses raios penetram o corpo e chegam até a molécula IR700, que é ativada e libera uma substância que ataca a célula cancerosa.\n\nCom base nas etapas de desenvolvimento, o nome apropriado para a técnica descrita é",
+    "text": "Com base nas etapas de desenvolvimento, o nome apropriado para a técnica descrita é",
     "alternatives": {
       "a": "Radioterapia.",
       "b": "Cromoterapia.",
@@ -614,7 +617,7 @@
   },
   {
     "number": 119,
-    "text": "Pesquisadores coletaram amostras de água de um rio em pontos diferentes, distantes alguns quilômetros um do outro. Ao longo do rio, há locais de águas limpas, como também locais que recebem descarga de esgoto de área urbana, e locais onde há decomposição ativa com ausência de peixes. Os pesquisadores analisaram dois parâmetros: oxigênio dissolvido (OD) e demanda bioquímica de oxigênio (DBO) em cada ponto de coleta de água, obtendo o gráfico apresentado.\n\nValores limites permitidos para águas doces destinadas ao abastecimento para o consumo humano após tratamento convencional, segundo Resolução Conama n. 357/2005: OD ≥ 5 mg·L⁻¹ e DBO ≤ 5 mg·L⁻¹.\n\nO OD é proveniente da atmosfera e da fotossíntese que ocorre no curso-d'água e sua concentração é função das variáveis físicas, químicas e bioquímicas locais. A DBO é a quantidade de oxigênio consumido por microrganismos em condições aeróbicas para degradar uma determinada quantidade de matéria orgânica, durante um período de tempo, numa temperatura de incubação específica.\n\nQual ponto de amostragem da água do rio está mais próximo ao local em que o rio recebe despejo de esgoto?",
+    "text": "Qual ponto de amostragem da água do rio está mais próximo ao local em que o rio recebe despejo de esgoto?",
     "alternatives": {
       "a": "1.",
       "b": "2.",
@@ -622,9 +625,7 @@
       "d": "4.",
       "e": "5."
     },
-    "images": [
-      "figuras/q119_2020_fig1.png"
-    ],
+    "images": [],
     "tags": [
       "ecologia",
       "meio ambiente e sustentabilidade"
@@ -633,11 +634,12 @@
     "year": 2020,
     "test": "ENEM",
     "area": "nature",
-    "answer": "a"
+    "answer": "a",
+    "contextId": "enem_2020_nature_q119_ctx1"
   },
   {
     "number": 120,
-    "text": "O crescimento da frota de veículos em circulação no mundo tem levado à busca e desenvolvimento de tecnologias que permitam minimizar emissões de poluentes atmosféricos. O uso de veículos elétricos é uma das propostas mais propagandeadas por serem de emissão zero. Podemos comparar a emissão de carbono na forma de CO<sub>2</sub> (massa molar igual a 44 g·mol⁻¹) para dois tipos de carros (a combustão e elétrico). Considere que os veículos tradicionais a combustão, movidos a etanol (massa molar igual a 46 g·mol⁻¹), emitem uma média de 2,6 mol de CO<sub>2</sub> por quilômetro rodado, e os elétricos emitem o equivalente a 0,45 mol de CO<sub>2</sub> por quilômetro rodado (considerando as emissões na geração e transmissão da eletricidade). A reação de combustão do etanol pode ser representada pela equação química:\n\nC<sub>2</sub>H<sub>5</sub>OH (l) + 3 O<sub>2</sub> (g) → 2 CO<sub>2</sub> (g) + 3 H<sub>2</sub>O (g).\n\nForam analisadas as emissões de CO<sub>2</sub> envolvidas em dois veículos, um movido a etanol e outro elétrico, em um mesmo trajeto de 1 000 km.\n\nA quantidade equivalente de etanol economizada, em quilograma, com o uso do veículo elétrico nesse trajeto, é mais próxima de",
+    "text": "A quantidade equivalente de etanol economizada, em quilograma, com o uso do veículo elétrico nesse trajeto, é mais próxima de",
     "alternatives": {
       "a": "50.",
       "b": "60.",
@@ -654,11 +656,14 @@
     "year": 2020,
     "test": "ENEM",
     "area": "nature",
-    "answer": "a"
+    "answer": "a",
+    "contextIds": [
+      "enem_2020_nature_q120_ctx1"
+    ]
   },
   {
     "number": 121,
-    "text": "Em uma aula sobre metabolismo energético, foi apresentado um experimento clássico realizado por Engelmann. Um recipiente contendo bactérias aeróbias e uma alga verde filamentosa foi submetido à iluminação de uma fonte de luz, representada pelo microespectro. Após a explicação, um aluno esquematizou na lousa o resultado do referido experimento.\n\nConsiderando a figura, a faixa do microespectro em que a alga possui maior taxa de realização fotossintética é a do",
+    "text": "Em uma aula sobre metabolismo energético, foi apresentado um experimento clássico realizado por Engelmann. Um recipiente contendo bactérias aeróbias e uma alga verde filamentosa foi submetido à iluminação de uma fonte de luz, representada pelo microespectro. Após a explicação, um aluno esquematizou na lousa o resultado do referido experimento.[Imagem]\nConsiderando a figura, a faixa do microespectro em que a alga possui maior taxa de realização fotossintética é a do",
     "alternatives": {
       "a": "anil.",
       "b": "verde.",
@@ -681,7 +686,7 @@
   },
   {
     "number": 122,
-    "text": "O exame parasitológico de fezes é utilizado para detectar ovos de parasitos. Um dos métodos utilizados, denominado de centrífugo-flutuação, considera a densidade dos ovos em relação a uma solução de densidade 1,15 g·mL⁻¹. Assim, ovos que flutuam na superfície dessa solução são detectados. Os dados de densidade dos ovos de alguns parasitos estão apresentados na tabela.\n\n|Parasito|Densidade (g·mL⁻¹)|\n|-|-|\n|<i>Ancylostoma</i>|1,06|\n|<i>Ascaris lumbricoides</i>|1,11|\n|<i>Ascaris suum</i>|1,13|\n|<i>Schistosoma mansoni</i>|1,18|\n|<i>Taenia saginata</i>|1,30|\n\nConsiderando-se a densidade dos ovos e da solução, ovos de quais parasitos podem ser detectados por esse método?",
+    "text": "Considerando-se a densidade dos ovos e da solução, ovos de quais parasitos podem ser detectados por esse método?",
     "alternatives": {
       "a": "<i>A. lumbricoides</i>, <i>A. suum</i> e <i>S. mansoni</i>.",
       "b": "<i>S. mansoni</i>, <i>T. saginata</i> e <i>Ancylostoma</i>.",
@@ -705,7 +710,7 @@
   },
   {
     "number": 123,
-    "text": "Em seu laboratório, um técnico em química foi incumbido de tratar um resíduo, evitando seu descarte direto no meio ambiente. Ao encontrar o frasco, observou a seguinte informação: \"Resíduo: mistura de acetato de etila e água\".\n\nConsidere os dados do acetato de etila:\n- Baixa solubilidade em água;\n- Massa específica = 0,9 g·cm⁻³;\n- Temperatura de fusão = −83 °C;\n- Pressão de vapor maior que a da água.\n\nA fim de tratar o resíduo, recuperando o acetato de etila, o técnico deve",
+    "text": "Em seu laboratório, um técnico em química foi incumbido de tratar um resíduo, evitando seu descarte direto no meio ambiente. Ao encontrar o frasco, observou a seguinte informação: \"<i>Resíduo: mistura de acetato de etila e água</i>\".\n\nConsidere os dados do acetato de etila:\n- Baixa solubilidade em água;\n- Massa específica = 0,9 g·cm⁻³;\n- Temperatura de fusão = −83 °C;\n- Pressão de vapor maior que a da água.\n\nA fim de tratar o resíduo, recuperando o acetato de etila, o técnico deve",
     "alternatives": {
       "a": "evaporar o acetato de etila sem alterar o conteúdo de água.",
       "b": "filtrar a mistura utilizando um funil comum e um papel de filtro.",
@@ -787,7 +792,7 @@
   },
   {
     "number": 127,
-    "text": "Plantas pioneiras são as que iniciam o processo natural de cicatrização de uma área desprovida de vegetação. Em geral, têm pequeno porte e crescem muito rápido, desenvolvem-se a pleno sol e são pouco exigentes quanto às condições do solo. Produzem grande quantidade de sementes e possuem ciclo de vida curto.\n\nEssas plantas são importantes em um projeto de restauração ambiental, pois promovem, no solo,",
+    "text": "Essas plantas são importantes em um projeto de restauração ambiental, pois promovem, no solo,",
     "alternatives": {
       "a": "aumento da incidência de luz solar.",
       "b": "diminuição da absorção de água.",
@@ -831,7 +836,7 @@
   },
   {
     "number": 129,
-    "text": "Em uma pesquisa estão sendo testados cinco quimioterápicos quanto à sua capacidade antitumoral. No entanto, para o tratamento de pacientes, sabe-se que é necessário verificar também quanto cada composto agride células normais. Para o experimento, partiu-se de cultivos de células tumorais (colunas escuras na figura) e células normais (colunas claras) com o mesmo número de células iniciais. Dois grupos-controle não receberam quimioterápicos: controle de células tumorais (CT) e de células normais (CN). As colunas I, II, III, IV e V correspondem aos grupos tratados com os cinco compostos. O número de células viáveis após os tratamentos está representado pelas colunas.\n\nQual quimioterápico deve ser escolhido para tratamento desse tipo de tumor?",
+    "text": "Em uma pesquisa estão sendo testados cinco quimioterápicos quanto à sua capacidade antitumoral. No entanto, para o tratamento de pacientes, sabe-se que é necessário verificar também quanto cada composto agride células normais. Para o experimento, partiu-se de cultivos de células tumorais (colunas escuras na figura) e células normais (colunas claras) com o mesmo número de células iniciais. Dois grupos-controle não receberam quimioterápicos: controle de células tumorais (CT) e de células normais (CN). As colunas I, II, III, IV e V correspondem aos grupos tratados com os cinco compostos. O número de células viáveis após os tratamentos está representado pelas colunas.[Gráfico]\n\nQual quimioterápico deve ser escolhido para tratamento desse tipo de tumor?",
     "alternatives": {
       "a": "I.",
       "b": "II.",
@@ -854,7 +859,7 @@
   },
   {
     "number": 130,
-    "text": "Herschel, em 1880, começou a escrever sobre a condensação da luz solar no foco de uma lente e queria verificar de que maneira os raios coloridos contribuem para o aquecimento. Para isso, ele projetou sobre um anteparo o espectro solar obtido com um prisma, colocou termômetros nas diversas faixas de cores e verificou nos dados obtidos que um dos termômetros iluminados indicou um aumento de temperatura maior para uma determinada faixa de frequências.\n\nPara verificar a hipótese de Herschel, um estudante montou o dispositivo apresentado na figura. Nesse aparato, cinco recipientes contendo água, à mesma temperatura inicial, e separados por um material isolante térmico e refletor são posicionados lado a lado (A, B, C, D e E) no interior de uma caixa de material isolante térmico e opaco. A luz solar, ao entrar na caixa, atravessa o prisma e incide sobre os recipientes. O estudante aguarda até que ocorra o aumento da temperatura e a afere em cada recipiente.\n\n[Figura]\n\nEm qual dos recipientes a água terá maior temperatura ao final do experimento?",
+    "text": "Para verificar a hipótese de Herschel, um estudante montou o dispositivo apresentado na figura. Nesse aparato, cinco recipientes contendo água, à mesma temperatura inicial, e separados por um material isolante térmico e refletor são posicionados lado a lado (A, B, C, D e E) no interior de uma caixa de material isolante térmico e opaco. A luz solar, ao entrar na caixa, atravessa o prisma e incide sobre os recipientes. O estudante aguarda até que ocorra o aumento da temperatura e a afere em cada recipiente.[Figura]\n\nEm qual dos recipientes a água terá maior temperatura ao final do experimento?",
     "alternatives": {
       "a": "A.",
       "b": "B.",
@@ -901,7 +906,7 @@
   },
   {
     "number": 132,
-    "text": "Megaespetáculos com queima de grande quantidade de fogos de artifício em festas de final de ano são muito comuns no Brasil. Após a queima, grande quantidade de material particulado permanece suspensa no ar. Entre os resíduos, encontram-se compostos de sódio, potássio, bário, cálcio, chumbo, antimônio, cromo, além de percloratos e gases, como os dióxidos de nitrogênio e enxofre.\n\nEsses espetáculos promovem riscos ambientais, porque",
+    "text": "Esses espetáculos promovem riscos ambientais, porque",
     "alternatives": {
       "a": "as substâncias resultantes da queima de fogos de artifício são inflamáveis.",
       "b": "os resíduos produzidos na queima de fogos de artifício ainda são explosivos.",
@@ -925,7 +930,7 @@
   },
   {
     "number": 133,
-    "text": "Há muitos mitos em relação a como se proteger de raios, cobrir espelhos e não pegar em facas, garfos e outros objetos metálicos, por exemplo. Mas, de fato, se houver uma tempestade com raios, alguns cuidados são importantes, como evitar ambientes abertos. Um bom abrigo para proteção é o interior de um automóvel, desde que este não seja conversível.\n\nQual o motivo físico da proteção fornecida pelos automóveis, conforme citado no texto?",
+    "text": "Qual o motivo físico da proteção fornecida pelos automóveis, conforme citado no texto?",
     "alternatives": {
       "a": "Isolamento elétrico dos pneus.",
       "b": "Efeito de para-raios da antena.",

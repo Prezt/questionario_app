@@ -254,37 +254,64 @@
     "reference": "NESTROVSKI, A. O samba mais bonito do mundo. In: Três canções de Tom Jobim. São Paulo: Cosac Naify, 2006."
   },
   "enem_2020_math_q136_ctx1": {
-    "title": "Lei n. 5.700, de 1º de setembro de 1971",
-    "subtitle": "Símbolos Nacionais — Dimensões da Bandeira Nacional",
-    "text": "Para cálculos das dimensões, será tomada por base a largura, dividindo-a em 14 (quatorze) partes iguais, sendo que cada uma das partes será considerada uma medida ou módulo (M). Os demais requisitos dimensionais seguem o critério abaixo:\nI. Comprimento será de vinte módulos (20 M);\nII. A distância dos vértices do losango amarelo ao quadro externo será de um módulo e sete décimos (1,7 M);\nIII. O raio do círculo azul no meio do losango amarelo será de três módulos e meio (3,5 M).",
-    "images": [],
-    "reference": "BRASIL. Lei n. 5.700, de 1º de setembro de 1971. Disponível em: www.planalto.gov.br"
-  },
-  "enem_2020_math_q143_ctx1": {
     "title": null,
     "subtitle": null,
-    "text": "",
+    "text": "A fabricação da Bandeira Nacional deve obedecer ao descrito na Lei n. 5.700, de 1º de setembro de 1971, que trata dos Símbolos Nacionais. No artigo que se refere às dimensões da Bandeira, observa-se:\n\n\"Para cálculos das dimensões, será tomada por base a largura, dividindo-a em 14 (quatorze) partes iguais, sendo que cada uma das partes será considerada uma medida ou módulo (M). Os demais requisitos dimensionais seguem o critério abaixo:\n\nI. Comprimento será de vinte módulos (20 M);\nII. A distância dos vértices do losango amarelo ao quadro externo será de um módulo e sete décimos (1,7 M);\nIII. O raio do círculo azul no meio do losango amarelo será de três módulos e meio (3,5 M).\"\n\nA figura indica as cores da bandeira do Brasil e localiza o quadro externo a que se refere a Lei n. 5.700.\n\n[Figura]",
+    "images": [
+      "figuras/q136_2020_fig1.png"
+    ],
+    "reference": "BRASIL. Lei n. 5.700, de 1º de setembro de 1971. Disponível em: www.planalto.gov.br. Acesso em: 15 set. 2015."
+  },
+  "enem_2020_math_q143_ctx1": {
+    "title": "",
+    "subtitle": "",
+    "text": "No Brasil, o tempo necessário para um estudante realizar sua formação até a diplomação em um curso superior, considerando os 9 anos de ensino fundamental, os 3 anos do ensino médio e os 4 anos de graduação (tempo médio), é de 16 anos. No entanto, a realidade dos brasileiros mostra que o tempo médio de estudo de pessoas acima de 14 anos é ainda muito pequeno, conforme apresentado na tabela.\n<b><center>Tempo médio de estudo de pessoas acima de 14 anos</center></b>\n|Ano da Pesquisa|1995|1999|2003|2007|\n|-|-|-|-|-|\n|Tempo de estudo (em ano)|5,2|5,8|6,4|7,0|",
     "images": [],
     "reference": "Disponível em: www.ibge.gov.br. Acesso em: 19 dez. 2012 (adaptado)."
   },
   "enem_2020_math_q148_ctx1": {
     "title": null,
     "subtitle": null,
-    "text": "",
-    "images": [],
+    "text": "A Pesquisa Nacional por Amostra de Domicílios (Pnad) é uma pesquisa feita anualmente pelo IBGE, exceto nos anos em que há Censo. Em um ano, foram entrevistados 363 mil jovens para fazer um levantamento sobre suas atividades profissionais e/ou acadêmicas. Os resultados da pesquisa estão indicados no gráfico.\n\n[Gráfico]",
+    "images": [
+      "figuras/q148_2020_fig1.png"
+    ],
     "reference": "Disponível em: http://noticias.uol.com.br. Acesso em: 20 ago. 2014."
+  },
+  "enem_2020_math_q149_ctx1": {
+    "title": null,
+    "subtitle": null,
+    "text": "A Lei de Zipf, batizada com o nome do linguista americano George Zipf, é uma lei empírica que relaciona a frequência (f) de uma palavra em um dado texto com o seu ranking (r). Ela é dada por\n<center>\\(f = \\frac{A}{r^B}\\)</center>\nO ranking da palavra é a sua posição ao ordenar as palavras por ordem de frequência. Ou seja, r = 1 para a palavra mais frequente, r = 2 para a segunda palavra mais frequente e assim sucessivamente. A e B são constantes positivas.",
+    "images": [],
+    "reference": "Disponível em: http://klein.sbm.org.br. Acesso em: 12 ago. 2020 (adaptado)."
+  },
+  "enem_2020_math_q169_ctx1": {
+    "title": null,
+    "subtitle": null,
+    "text": "Um grupo sanguíneo, ou tipo sanguíneo, baseia-se na presença ou ausência de dois antígenos, A e B, na superfície das células vermelhas do sangue. Como dois antígenos estão envolvidos, os quatro tipos sanguíneos distintos são:\n- Tipo A: apenas o antígeno A está presente;\n- Tipo B: apenas o antígeno B está presente;\n- Tipo AB: ambos os antígenos estão presentes;\n- Tipo O: nenhum dos antígenos está presente.",
+    "images": [],
+    "reference": "Disponível em: http://saude.hsw.uol.com.br. Acesso em: 15 abr. 2012 (adaptado)."
+  },
+  "enem_2020_math_q179_ctx1": {
+    "title": null,
+    "subtitle": null,
+    "text": "Um pé de eucalipto em idade adequada para o corte rende, em média, 20 mil folhas de papel A4. A densidade superficial do papel A4, medida pela razão da massa de uma folha desse papel por sua área, é de 75 gramas por metro quadrado, e a área de uma folha de A4 é 0,062 metro quadrado.",
+    "images": [],
+    "reference": "Disponível em: http://revistagalileu.globo.com. Acesso em: 28 fev. 2013 (adaptado)."
   },
   "enem_2020_math_q164_ctx1": {
     "title": null,
     "subtitle": null,
-    "text": "",
-    "images": [],
+    "text": "A exposição a barulhos excessivos, como os que percebemos em geral em trânsitos intensos, casas noturnas e espetáculos musicais, podem provocar insônia, estresse, infarto, perda de audição, entre outras enfermidades. De acordo com a Organização Mundial da Saúde, todo e qualquer som que ultrapasse os 55 decibéis (unidade de intensidade do som) já pode ser considerado nocivo para a saúde. O gráfico foi elaborado a partir da medição do ruído produzido, durante um dia, em um canteiro de obras.\n\n[Gráfico]",
+    "images": [
+      "figuras/q164_2020_fig1.png"
+    ],
     "reference": "Disponível em: www.revistaencontro.com.br. Acesso em: 12 ago. 2020 (adaptado)."
   },
   "enem_2020_nature_q91_ctx1": {
-    "title": null,
-    "subtitle": null,
-    "text": "[Tirinha em três quadrinhos com Garfield: no primeiro, o personagem aparece esfregando-se nas pernas de uma calça; no segundo, eriçado e estalando de eletricidade estática (\"PURR\"); no terceiro, declara: \"EU ODEIO ELETRICIDADE ESTÁTICA.\"]",
+    "title": "",
+    "subtitle": "",
+    "text": "[Tirinha]",
     "images": [
       "figuras/q091_2020_fig1.png"
     ],
@@ -293,8 +320,10 @@
   "enem_2020_nature_q99_ctx1": {
     "title": null,
     "subtitle": null,
-    "text": "[Esquema da avenida com os quatro semáforos O, A, B e C dispostos em sequência reta, separados por 500 m cada.]",
-    "images": [],
+    "text": "",
+    "images": [
+      "figuras/q099_2020_fig1.png"
+    ],
     "reference": null
   },
   "enem_2020_nature_q111_ctx1": {
@@ -312,44 +341,60 @@
     "reference": "OLIVEIRA, M. Remédio na planta. <b>Pesquisa Fapesp</b>, n. 206, abr. 2013."
   },
   "enem_2020_nature_q117_ctx1": {
-    "title": null,
-    "subtitle": null,
+    "title": "",
+    "subtitle": "",
     "text": "Pesquisadores dos Estados Unidos desenvolveram uma nova técnica, que utiliza raios de luz infravermelha (invisíveis a olho nu) para destruir tumores. Primeiramente, o paciente recebe uma injeção com versões modificadas de anticorpos que têm a capacidade de \"grudar\" apenas nas células cancerosas. Sozinhos, eles não fazem nada contra o tumor. Entretanto, esses anticorpos estão ligados a uma molécula, denominada IR700, que funcionará como uma \"microbomba\", que irá destruir o câncer. Em seguida, o paciente recebe raios infravermelhos. Esses raios penetram no corpo e chegam até a molécula IR700, que é ativada e libera uma substância que ataca a célula cancerosa.",
     "images": [],
     "reference": "Disponível em: http://super.abril.com.br. Acesso em: 13 dez. 2012 (adaptado)."
   },
+  "enem_2020_nature_q119_ctx1": {
+    "title": "",
+    "subtitle": "",
+    "text": "Pesquisadores coletaram amostras de água de um rio em pontos diferentes, distantes alguns quilômetros um do outro. Ao longo do rio, há locais de águas limpas, como também locais que recebem descarga de esgoto de área urbana, e locais onde há decomposição ativa com ausência de peixes. Os pesquisadores analisaram dois parâmetros: oxigênio dissolvido (OD) e demanda bioquímica de oxigênio (DBO) em cada ponto de coleta de água, obtendo o gráfico:\n\n[Gráfico: Valores limites permitidos para águas doces destinadas ao abastecimento para o consumo humano após tratamento convencional, segundo Resolução Conama n. 357/2005: OD ≥ 5 mg·L⁻¹ e DBO ≤ 5 mg·L⁻¹.]\nO OD é proveniente da atmosfera e da fotossíntese que ocorre no curso-d'água e sua concentração é função das variáveis físicas, químicas e bioquímicas locais. A DBO é a quantidade de oxigênio consumido por microrganismos em condições aeróbicas para degradar uma determinada quantidade de matéria orgânica, durante um período de tempo, numa temperatura de incubação específica.",
+    "images": [
+      "figuras/q119_2020_fig1.png"
+    ],
+    "reference": "Disponível em: www.programaaguaazul.rn.gov.br. Acesso em: 16 ago. 2014 (adaptado)."
+  },
+  "enem_2020_nature_q120_ctx1": {
+    "title": null,
+    "subtitle": null,
+    "text": "O crescimento da frota de veículos em circulação no mundo tem levado à busca e desenvolvimento de tecnologias que permitam minimizar emissões de poluentes atmosféricos. O uso de veículos elétricos é uma das propostas mais propagandeadas por serem de emissão zero. Podemos comparar a emissão de carbono na forma de CO<sub>2</sub> (massa molar igual a 44 g·mol⁻¹) para dois tipos de carros (a combustão e elétrico). Considere que os veículos tradicionais a combustão, movidos a etanol (massa molar igual a 46 g·mol⁻¹), emitem uma média de 2,6 mol de CO<sub>2</sub> por quilômetro rodado, e os elétricos emitem o equivalente a 0,45 mol de CO<sub>2</sub> por quilômetro rodado (considerando as emissões na geração e transmissão da eletricidade). A reação de combustão do etanol pode ser representada pela equação química:\n<center>C<sub>2</sub>H<sub>5</sub>OH (l) + 3 O<sub>2</sub> (g) → 2 CO<sub>2</sub> (g) + 3 H<sub>2</sub>O (g).</center>Foram analisadas as emissões de CO<sub>2</sub> envolvidas em dois veículos, um movido a etanol e outro elétrico, em um mesmo trajeto de 1 000 km.",
+    "images": [],
+    "reference": "CHIARADIA, C. A. Estudo da viabilidade da implantação de frotas de veículos elétricos e híbridos elétricos no atual cenário econômico, político, energético e ambiental brasileiro. Guaratinguetá: Unesp, 2015 (adaptado)."
+  },
   "enem_2020_nature_q122_ctx1": {
     "title": null,
     "subtitle": null,
-    "text": "",
+    "text": "O exame parasitológico de fezes é utilizado para detectar ovos de parasitos. Um dos métodos utilizados, denominado de centrífugo-flutuação, considera a densidade dos ovos em relação a uma solução de densidade 1,15 g·mL⁻¹. Assim, ovos que flutuam na superfície dessa solução são detectados. Os dados de densidade dos ovos de alguns parasitos estão apresentados na tabela.\n\n|Parasito|Densidade (g·mL⁻¹)|\n|-|-|\n|<i>Ancylostoma</i>|1,06|\n|<i>Ascaris lumbricoides</i>|1,11|\n|<i>Ascaris suum</i>|1,13|\n|<i>Schistosoma mansoni</i>|1,18|\n|<i>Taenia saginata</i>|1,30|",
     "images": [],
     "reference": "ZERBINI, A. M. <b>Identificação e análise de viabilidade de ovos de helmintos em um sistema de tratamento de águas residuárias constituído de reatores anaeróbios e rampas de escoamento superficial</b>. Belo Horizonte: Prosab, 2001 (adaptado)."
   },
   "enem_2020_nature_q127_ctx1": {
     "title": null,
     "subtitle": null,
-    "text": "",
+    "text": "Plantas pioneiras são as que iniciam o processo natural de cicatrização de uma área desprovida de vegetação. Em geral, têm pequeno porte e crescem muito rápido, desenvolvem-se a pleno sol e são pouco exigentes quanto às condições do solo. Produzem grande quantidade de sementes e possuem ciclo de vida curto.",
     "images": [],
     "reference": "BLUM, C. T. Lista preliminar de espécies vegetais pioneiras nativas do Paraná – versão 2008. Disponível em: www.chaua.org.br. Acesso em: 10 fev. 2015."
   },
   "enem_2020_nature_q130_ctx1": {
-    "title": null,
-    "subtitle": null,
-    "text": "",
+    "title": "",
+    "subtitle": "",
+    "text": "Herschel, em 1880, começou a escrever sobre a condensação da luz solar no foco de uma lente e queria verificar de que maneira os raios coloridos contribuem para o aquecimento. Para isso, ele projetou sobre um anteparo o espectro solar obtido com um prisma, colocou termômetros nas diversas faixas de cores e verificou nos dados obtidos que um dos termômetros iluminados indicou um aumento de temperatura maior para uma determinada faixa de frequências.",
     "images": [],
     "reference": "SAYURI, M.; GASPAR, M. B. <b>Infravermelho</b>. Disponível em: www.ifsc.usp.br. Acesso em: 9 nov. 2018."
   },
   "enem_2020_nature_q132_ctx1": {
     "title": null,
     "subtitle": null,
-    "text": "",
+    "text": "Megaespetáculos com queima de grande quantidade de fogos de artifício em festas de final de ano são muito comuns no Brasil. Após a queima, grande quantidade de material particulado permanece suspensa no ar. Entre os resíduos, encontram-se compostos de sódio, potássio, bário, cálcio, chumbo, antimônio, cromo, além de percloratos e gases, como os dióxidos de nitrogênio e enxofre.",
     "images": [],
     "reference": "BRUNNING, A. <b>The Chemistry of Fireworks</b>. Disponível em: www.compoundchem.com. Acesso em: 1 dez. 2017 (adaptado)."
   },
   "enem_2020_nature_q133_ctx1": {
     "title": null,
     "subtitle": null,
-    "text": "",
+    "text": "Há muitos mitos em relação a como se proteger de raios, cobrir espelhos e não pegar em facas, garfos e outros objetos metálicos, por exemplo. Mas, de fato, se houver uma tempestade com raios, alguns cuidados são importantes, como evitar ambientes abertos. Um bom abrigo para proteção é o interior de um automóvel, desde que este não seja conversível.",
     "images": [],
     "reference": "OLIVEIRA, A. <b>Raios nas tempestades de verão</b>. Disponível em: http://cienciahoje.uol.com.br. Acesso em: 10 dez. 2014 (adaptado)."
   },

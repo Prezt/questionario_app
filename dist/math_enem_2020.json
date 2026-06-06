@@ -9,9 +9,7 @@
       "d": "63.",
       "e": "90."
     },
-    "images": [
-      "figuras/q136_2020_fig1.png"
-    ],
+    "images": [],
     "tags": [
       "geometria plana",
       "aritmética e números"
@@ -27,7 +25,7 @@
   },
   {
     "number": 137,
-    "text": "Uma empresa de ônibus utiliza um sistema de vendas de passagens que fornece a imagem de todos os assentos do ônibus, diferenciando os assentos já vendidos, por uma cor mais escura, dos assentos ainda disponíveis. A empresa monitora, permanentemente, o número de assentos já vendidos e compara-o com o número total de assentos do ônibus para avaliar a necessidade de alocação de veículos extras.\n\nNa imagem tem-se a informação dos assentos já vendidos e dos ainda disponíveis em um determinado instante.\n\nA razão entre o número de assentos já vendidos e o total de assentos desse ônibus, no instante considerado na imagem, é",
+    "text": "Uma empresa de ônibus utiliza um sistema de vendas de passagens que fornece a imagem de todos os assentos do ônibus, diferenciando os assentos já vendidos, por uma cor mais escura, dos assentos ainda disponíveis. A empresa monitora, permanentemente, o número de assentos já vendidos e compara-o com o número total de assentos do ônibus para avaliar a necessidade de alocação de veículos extras.\nNa imagem tem-se a informação dos assentos já vendidos e dos ainda disponíveis em um determinado instante.[Imagem]\n\nA razão entre o número de assentos já vendidos e o total de assentos desse ônibus, no instante considerado na imagem, é",
     "alternatives": {
       "a": "\\(\\frac{16}{42}\\).",
       "b": "\\(\\frac{16}{26}\\).",
@@ -49,7 +47,7 @@
   },
   {
     "number": 138,
-    "text": "A caixa-d'água de um edifício terá a forma de um paralelepípedo retângulo reto com volume igual a 28 080 litros. Em uma maquete que representa o edifício, a caixa-d'água tem dimensões 2 cm × 3,51 cm × 4 cm.\n\nDado: 1 dm³ = 1 L.\n\nA escala usada pelo arquiteto foi",
+    "text": "A caixa-d'água de um edifício terá a forma de um paralelepípedo retângulo reto com volume igual a 28 080 litros. Em uma maquete que representa o edifício, a caixa-d'água tem dimensões 2 cm × 3,51 cm × 4 cm.\nDado: 1 dm³ = 1 L.\n\nA escala usada pelo arquiteto foi",
     "alternatives": {
       "a": "1 : 10.",
       "b": "1 : 100.",
@@ -70,7 +68,7 @@
   },
   {
     "number": 139,
-    "text": "Os gráficos representam a produção de peças em uma indústria e as horas trabalhadas dos funcionários no período de cinco dias. Em cada dia, o gerente de produção aplica uma metodologia diferente de trabalho. Seu objetivo é avaliar a metodologia mais eficiente para utilizá-la como modelo nos próximos períodos. Sabe-se que, neste caso, quanto maior for a razão entre o número de peças produzidas e o número de horas trabalhadas, maior será a eficiência da metodologia.\n\nEm qual dia foi aplicada a metodologia mais eficiente?",
+    "text": "Os gráficos representam a produção de peças em uma indústria e as horas trabalhadas dos funcionários no período de cinco dias. Em cada dia, o gerente de produção aplica uma metodologia diferente de trabalho. Seu objetivo é avaliar a metodologia mais eficiente para utilizá-lá como modelo nos próximos períodos. Sabe-se que, neste caso, quanto maior for a razão entre o número de peças produzidas e o número de horas trabalhadas, maior será a eficiência da metodologia.[Gráfico]\n\nEm qual dia foi aplicada a metodologia mais eficiente?",
     "alternatives": {
       "a": "1.",
       "b": "2.",
@@ -155,7 +153,7 @@
   },
   {
     "number": 143,
-    "text": "No Brasil, o tempo necessário para um estudante realizar sua formação até a diplomação em um curso superior, considerando os 9 anos de ensino fundamental, os 3 anos do ensino médio e os 4 anos de graduação (tempo médio), é de 16 anos. No entanto, a realidade dos brasileiros mostra que o tempo médio de estudo de pessoas acima de 14 anos é ainda muito pequeno, conforme apresentado na tabela.\n\n|Ano da Pesquisa|1995|1999|2003|2007|\n|-|-|-|-|-|\n|Tempo de estudo (em ano)|5,2|5,8|6,4|7,0|\n\nConsidere que o incremento no tempo de estudo, a cada período, para essas pessoas, se mantenha constante até o ano 2050, e que se pretenda chegar ao patamar de 70% do tempo necessário à obtenção do curso superior dado anteriormente.\n\nO ano em que o tempo médio de estudo de pessoas acima de 14 anos atingirá o percentual pretendido será",
+    "text": "Considere que o incremento no tempo de estudo, a cada período, para essas pessoas, se mantenha constante até o ano 2050, e que se pretenda chegar ao patamar de 70% do tempo necessário à obtenção do curso superior dado anteriormente.\n\nO ano em que o tempo médio de estudo de pessoas acima de 14 anos atingirá o percentual pretendido será",
     "alternatives": {
       "a": "2018.",
       "b": "2023.",
@@ -199,7 +197,7 @@
   },
   {
     "number": 145,
-    "text": "Um clube deseja produzir miniaturas em escala do troféu que ganhou no último campeonato. O troféu está representado na Figura 1 e é composto por uma base em formato de um paralelepípedo reto-retângulo de madeira, sobre a qual estão fixadas três hastes verticais que sustentam uma esfera de 30 cm de diâmetro, que fica centralizada sobre a base de madeira. O troféu tem 100 cm de altura, incluída sua base.\n\nA miniatura desse troféu deverá ser instalada no interior de uma caixa de vidro, em formato de paralelepípedo reto-retângulo, cujas dimensões internas de sua base estão indicadas na Figura 2, de modo que a base do troféu seja colada na base da caixa e distante das paredes laterais da caixa de vidro em pelo menos 1 cm. Deve ainda haver uma distância de exatos 2 cm entre o topo da esfera e a tampa dessa caixa de vidro. Nessas condições deseja-se fazer a maior miniatura possível.\n\nA medida da altura, em centímetro, dessa caixa de vidro deverá ser igual a",
+    "text": "Um clube deseja produzir miniaturas em escala do troféu que ganhou no último campeonato. O troféu está representado na Figura 1 e é composto por uma base em formato de um paralelepípedo reto-retângulo de madeira, sobre a qual estão fixadas três hastes verticais que sustentam uma esfera de 30 cm de diâmetro, que fica centralizada sobre a base de madeira. O troféu tem 100 cm de altura, incluída sua base.[Esquema]A miniatura desse troféu deverá ser instalada no interior de uma caixa de vidro, em formato de paralelepípedo reto-retângulo, cujas dimensões internas de sua base estão indicadas na Figura 2, de modo que a base do troféu seja colada na base da caixa e distante das paredes laterais da caixa de vidro em pelo menos 1 cm. Deve ainda haver uma distância de exatos 2 cm entre o topo da esfera e a tampa dessa caixa de vidro. Nessas condições deseja-se fazer a maior miniatura possível.\n\nA medida da altura, em centímetro, dessa caixa de vidro deverá ser igual a",
     "alternatives": {
       "a": "12.",
       "b": "14.",
@@ -222,7 +220,7 @@
   },
   {
     "number": 146,
-    "text": "Uma casa de dois andares está sendo projetada. É necessário incluir no projeto a construção de uma escada para o acesso ao segundo andar. Para o cálculo das dimensões dos degraus utilizam-se as regras:\n\n|2h + b − 63,5| ≤ 1,5 e 16 ≤ h ≤ 19,\n\nnas quais h é a altura do degrau (denominada espelho) e b é a profundidade da pisada, como mostra a figura.\n\nPor conveniência, escolheu-se a altura do degrau como sendo h = 16. As unidades de h e b estão em centímetro.\n\nNesse caso, o mais amplo intervalo numérico ao qual a profundidade da pisada (b) deve pertencer, para que as regras sejam satisfeitas é",
+    "text": "Uma casa de dois andares está sendo projetada. É necessário incluir no projeto a construção de uma escada para o acesso ao segundo andar. Para o cálculo das dimensões dos degraus utilizam-se as regras:\n<center>|2h + b − 63,5| ≤ 1,5 e 16 ≤ h ≤ 19,</center>nas quais h é a altura do degrau (denominada espelho) e b é a profundidade da pisada, como mostra a figura.\nPor conveniência, escolheu-se a altura do degrau como sendo h = 16. As unidades de h e b estão em centímetro.\n\nNesse caso, o mais amplo intervalo numérico ao qual a profundidade da pisada (b) deve pertencer, para que as regras sejam satisfeitas é",
     "alternatives": {
       "a": "30 ≤ b.",
       "b": "30 ≤ b ≤ 31,5.",
@@ -265,7 +263,7 @@
   },
   {
     "number": 148,
-    "text": "A Pesquisa Nacional por Amostra de Domicílios (Pnad) é uma pesquisa feita anualmente pelo IBGE, exceto nos anos em que há Censo. Em um ano, foram entrevistados 363 mil jovens para fazer um levantamento sobre suas atividades profissionais e/ou acadêmicas. Os resultados da pesquisa estão indicados no gráfico.\n\nDe acordo com as informações dadas, o número de jovens entrevistados que trabalha é",
+    "text": "De acordo com as informações dadas, o número de jovens entrevistados que trabalha é",
     "alternatives": {
       "a": "114 708.",
       "b": "164 076.",
@@ -273,9 +271,7 @@
       "d": "284 592.",
       "e": "291 582."
     },
-    "images": [
-      "figuras/q148_2020_fig1.png"
-    ],
+    "images": [],
     "tags": [
       "aritmética e números",
       "estatística"
@@ -291,7 +287,7 @@
   },
   {
     "number": 149,
-    "text": "A Lei de Zipf, batizada com o nome do linguista americano George Zipf, é uma lei empírica que relaciona a frequência (f) de uma palavra em um dado texto com o seu ranking (r). Ela é dada por\n\n\\(f = \\frac{A}{r^B}\\)\n\nO ranking da palavra é a sua posição ao ordenar as palavras por ordem de frequência. Ou seja, r = 1 para a palavra mais frequente, r = 2 para a segunda palavra mais frequente e assim sucessivamente. A e B são constantes positivas.\n\nCom base nos valores de X = log (r) e Y = log (f), é possível estimar valores para A e B.\n\nNo caso hipotético em que a lei é verificada exatamente, a relação entre Y e X é",
+    "text": "Com base nos valores de X = log (r) e Y = log (f), é possível estimar valores para A e B.\n\nNo caso hipotético em que a lei é verificada exatamente, a relação entre Y e X é",
     "alternatives": {
       "a": "Y = log (A) − B · X.",
       "b": "\\(Y = \\frac{\\log(A)}{X + \\log(B)}\\).",
@@ -308,11 +304,14 @@
     "year": 2020,
     "test": "ENEM",
     "area": "math",
-    "answer": "a"
+    "answer": "a",
+    "contextIds": [
+      "enem_2020_math_q149_ctx1"
+    ]
   },
   {
     "number": 150,
-    "text": "Enquanto um ser está vivo, a quantidade de carbono 14 nele existente não se altera. Quando ele morre, essa quantidade vai diminuindo. Sabe-se que a meia-vida do carbono 14 é de 5 730 anos, ou seja, num fóssil de um organismo que morreu há 5 730 anos haverá metade do carbono 14 que existia quando ele estava vivo. Assim, cientistas e arqueólogos usam a seguinte fórmula para saber a idade de um fóssil encontrado:\n\n\\(Q(t) = Q_0 \\cdot 2^{-t/5730}\\),\n\nem que t é o tempo, medido em anos, Q(t) é a quantidade de carbono 14 medida no instante t e Q<sub>0</sub> é a quantidade de carbono 14 no ser vivo correspondente.\n\nUm grupo de arqueólogos, numa de suas expedições, encontrou 5 fósseis de espécies conhecidas e mediram a quantidade de carbono 14 neles existente. Na tabela vemos esses valores juntamente com a quantidade de carbono 14 nas referidas espécies vivas.\n\n|Fóssil|Q<sub>0</sub>|Q(t)|\n|-|-|-|\n|1|128|32|\n|2|256|8|\n|3|512|64|\n|4|1 024|512|\n|5|2 048|128|\n\nO fóssil mais antigo encontrado nessa expedição foi",
+    "text": "Enquanto um ser está vivo, a quantidade de carbono 14 nele existente não se altera. Quando ele morre, essa quantidade vai diminuindo. Sabe-se que a meia-vida do carbono 14 é de 5 730 anos, ou seja, num fóssil de um organismo que morreu há 5 730 anos haverá metade do carbono 14 que existia quando ele estava vivo. Assim, cientistas e arqueólogos usam a seguinte fórmula para saber a idade de um fóssil encontrado:\\(Q(t) = Q_0 \\cdot 2^{-t/5730}\\) em que t é o tempo, medido em anos, Q(t) é a quantidade de carbono 14 medida no instante t e Q<sub>0</sub> é a quantidade de carbono 14 no ser vivo correspondente.\nUm grupo de arqueólogos, numa de suas expedições, encontrou 5 fósseis de espécies conhecidas e mediram a quantidade de carbono 14 neles existente. Na tabela vemos esses valores juntamente com a quantidade de carbono 14 nas referidas espécies vivas.\n|Fóssil|Q<sub>0</sub>|Q(t)|\n|-|-|-|\n|1|128|32|\n|2|256|8|\n|3|512|64|\n|4|1 024|512|\n|5|2 048|128|\n\nO fóssil mais antigo encontrado nessa expedição foi",
     "alternatives": {
       "a": "1.",
       "b": "2.",
@@ -354,7 +353,7 @@
   },
   {
     "number": 152,
-    "text": "Um processo de aeração, que consiste na introdução de ar num líquido, acontece do seguinte modo: uma bomba B retira o líquido de um tanque T<sub>1</sub> e o faz passar pelo aerador A<sub>1</sub>, que aumenta o volume do líquido em 15%, e em seguida pelo aerador A<sub>2</sub>, ganhando novo aumento de volume de 10%. Ao final, ele fica armazenado num tanque T<sub>2</sub>, de acordo com a figura.\n\n[Figura]\n\nOs tanques T<sub>1</sub> e T<sub>2</sub> são prismas retos de bases retangulares, sendo que a base de T<sub>1</sub> tem comprimento c e largura L, e a base de T<sub>2</sub> tem comprimento c/2 e largura 2L.\n\nPara finalizar o processo de aeração sem derramamento do líquido em T<sub>2</sub>, o responsável deve saber a relação entre a altura da coluna de líquido que já saiu de T<sub>1</sub>, denotada por X, e a altura da coluna de líquido que chegou a T<sub>2</sub>, denotada por y.\n\nA equação que relaciona as medidas das alturas y e X é dada por",
+    "text": "Um processo de aeração, que consiste na introdução de ar num líquido, acontece do seguinte modo: uma bomba B retira o líquido de um tanque T<sub>1</sub> e o faz passar pelo aerador A<sub>1</sub>, que aumenta o volume do líquido em 15%, e em seguida pelo aerador A<sub>2</sub>, ganhando novo aumento de volume de 10%. Ao final, ele fica armazenado num tanque T<sub>2</sub>, de acordo com a figura.[Figura]Os tanques T<sub>1</sub> e T<sub>2</sub> são prismas retos de bases retangulares, sendo que a base de T<sub>1</sub> tem comprimento c e largura L, e a base de T<sub>2</sub> tem comprimento c/2 e largura 2L.\n\nPara finalizar o processo de aeração sem derramamento do líquido em T<sub>2</sub>, o responsável deve saber a relação entre a altura da coluna de líquido que já saiu de T<sub>1</sub>, denotada por X, e a altura da coluna de líquido que chegou a T<sub>2</sub>, denotada por y.\n\nA equação que relaciona as medidas das alturas y e X é dada por",
     "alternatives": {
       "a": "y = 1,265X.",
       "b": "y = 1,250X.",
@@ -397,7 +396,7 @@
   },
   {
     "number": 154,
-    "text": "Pesquisadores da Universidade de Tecnologia de Viena, na Áustria, produziram miniaturas de objetos em impressoras 3D de alta precisão. Ao serem ativadas, tais impressoras lançam feixes de laser sobre um tipo de resina, esculpindo o objeto desejado. O produto final da impressão é uma escultura microscópica de três dimensões, como visto na imagem ampliada.\n\nA escultura apresentada é uma miniatura de um carro de Fórmula 1, com 100 micrômetros de comprimento. Um micrômetro é a milionésima parte de um metro.\n\nUsando notação científica, qual é a representação do comprimento dessa miniatura, em metro?",
+    "text": "Pesquisadores da Universidade de Tecnologia de Viena, na Áustria, produziram miniaturas de objetos em impressoras 3D de alta precisão. Ao serem ativadas, tais impressoras lançam feixes de laser sobre um tipo de resina, esculpindo o objeto desejado. O produto final da impressão é uma escultura microscópica de três dimensões, como visto na imagem ampliada.[Imagem]A escultura apresentada é uma miniatura de um carro de Fórmula 1, com 100 micrômetros de comprimento. Um micrômetro é a milionésima parte de um metro.\n\nUsando notação científica, qual é a representação do comprimento dessa miniatura, em metro?",
     "alternatives": {
       "a": "1,0 × 10<sup>−1</sup>.",
       "b": "1,0 × 10<sup>−3</sup>.",
@@ -419,7 +418,7 @@
   },
   {
     "number": 155,
-    "text": "O artista gráfico holandês Maurits Cornelius Escher criou belíssimas obras nas quais as imagens se repetiam com diferentes tamanhos, induzindo ao raciocínio de repetição infinita das imagens. Inspirado por ele, um artista fez um rascunho de uma obra na qual propunha a ideia de construção de uma sequência de infinitos quadrados cada vez menores, uns sob os outros, conforme indicado na figura.\n\nO quadrado PRST, com lado de medida 1, é o ponto de partida. O segundo quadrado é construído sob ele tomando-se o ponto médio da base do quadrado anterior e criando-se um novo quadrado, cujo lado corresponde à metade dessa base. Essa sequência de construção se repete recursivamente.\n\nQual é a medida do lado do centésimo quadrado construído de acordo com esse padrão?",
+    "text": "O artista gráfico holandês Maurits Cornelius Escher criou belíssimas obras nas quais as imagens se repetiam com diferentes tamanhos, induzindo ao raciocínio de repetição infinita das imagens. Inspirado por ele, um artista fez um rascunho de uma obra na qual propunha a ideia de construção de uma sequência de infinitos quadrados cada vez menores, uns sob os outros, conforme indicado na figura.[Figura]O quadrado PRST, com lado de medida 1, é o ponto de partida. O segundo quadrado é construído sob ele tomando-se o ponto médio da base do quadrado anterior e criando-se um novo quadrado, cujo lado corresponde à metade dessa base. Essa sequência de construção se repete recursivamente.\n\nQual é a medida do lado do centésimo quadrado construído de acordo com esse padrão?",
     "alternatives": {
       "a": "\\(\\left(\\frac{1}{2}\\right)^{100}\\).",
       "b": "\\(\\left(\\frac{1}{2}\\right)^{99}\\).",
@@ -441,7 +440,7 @@
   },
   {
     "number": 156,
-    "text": "O gerente de uma loja de cosméticos colocou à venda cinco diferentes tipos de perfume, tendo em estoque na loja as mesmas quantidades de cada um deles. O setor de controle de estoque encaminhou ao gerente registros gráficos descrevendo os preços unitários de cada perfume, em real, e a quantidade vendida de cada um deles, em percentual, ocorrida no mês de novembro.\n\nDada a chegada do final de ano e o aumento das vendas, a gerência pretende aumentar a quantidade estocada do perfume do tipo que gerou a maior arrecadação em espécie, em real, no mês de novembro.\n\nNessas condições, qual o tipo de perfume que deverá ter maior reposição no estoque?",
+    "text": "O gerente de uma loja de cosméticos colocou à venda cinco diferentes tipos de perfume, tendo em estoque na loja as mesmas quantidades de cada um deles. O setor de controle de estoque encaminhou ao gerente registros gráficos descrevendo os preços unitários de cada perfume, em real, e a quantidade vendida de cada um deles, em percentual, ocorrida no mês de novembro.[Gráficos]Dada a chegada do final de ano e o aumento das vendas, a gerência pretende aumentar a quantidade estocada do perfume do tipo que gerou a maior arrecadação em espécie, em real, no mês de novembro.\n\nNessas condições, qual o tipo de perfume que deverá ter maior reposição no estoque?",
     "alternatives": {
       "a": "I.",
       "b": "II.",
@@ -484,7 +483,7 @@
   },
   {
     "number": 158,
-    "text": "Três amigos, André, Bernardo e Carlos, moram em um condomínio fechado de uma cidade. O quadriculado representa a localização das ruas paralelas e perpendiculares, delimitando quadras de mesmo tamanho nesse condomínio, em que nos pontos A, B e C estão localizadas as casas de André, Bernardo e Carlos, respectivamente.\n\nAndré deseja deslocar-se da sua casa até a casa de Bernardo, sem passar pela casa de Carlos, seguindo ao longo das ruas do condomínio, fazendo sempre deslocamentos para a direita (→) ou para cima (↑) segundo o esquema da figura.\n\nO número de diferentes caminhos que André poderá utilizar para realizar o deslocamento nas condições propostas é",
+    "text": "Três amigos, André, Bernardo e Carlos, moram em um condomínio fechado de uma cidade. O quadriculado representa a localização das ruas paralelas e perpendiculares, delimitando quadras de mesmo tamanho nesse condomínio, em que nos pontos A, B e C estão localizadas as casas de André, Bernardo e Carlos, respectivamente.[Figura]André deseja deslocar-se da sua casa até a casa de Bernardo, sem passar pela casa de Carlos, seguindo ao longo das ruas do condomínio, fazendo sempre deslocamentos para a direita (→) ou para cima (↑) segundo o esquema da figura.\n\nO número de diferentes caminhos que André poderá utilizar para realizar o deslocamento nas condições propostas é",
     "alternatives": {
       "a": "4.",
       "b": "14.",
@@ -506,7 +505,7 @@
   },
   {
     "number": 159,
-    "text": "Uma pessoa precisa comprar 15 sacos de cimento para uma reforma em sua casa. Faz pesquisa de preço em cinco depósitos que vendem o cimento de sua preferência e cobram frete para entrega do material, conforme a distância do depósito à sua casa. As informações sobre preço do cimento, valor do frete e distância do depósito até a casa dessa pessoa estão apresentadas no quadro.\n\n|Depósito|Valor do saco de cimento (R$)|Valor do frete para cada quilômetro (R$)|Distância entre a casa e o depósito (km)|\n|-|-|-|-|\n|A|23,00|1,00|10|\n|B|21,50|3,00|12|\n|C|22,00|1,50|14|\n|D|21,00|3,50|18|\n|E|24,00|2,50|2|\n\nA pessoa escolherá um desses depósitos para realizar sua compra, considerando os preços do cimento e do frete oferecidos em cada opção.\n\nSe a pessoa decidir pela opção mais econômica, o depósito escolhido para a realização dessa compra será o",
+    "text": "Uma pessoa precisa comprar 15 sacos de cimento para uma reforma em sua casa. Faz pesquisa de preço em cinco depósitos que vendem o cimento de sua preferência e cobram frete para entrega do material, conforme a distância do depósito à sua casa. As informações sobre preço do cimento, valor do frete e distância do depósito até a casa dessa pessoa estão apresentadas no quadro.\n|Depósito|Valor do saco de cimento (R$)|Valor do frete para cada quilômetro (R$)|Distância entre a casa e o depósito (km)|\n|-|-|-|-|\n|A|23,00|1,00|10|\n|B|21,50|3,00|12|\n|C|22,00|1,50|14|\n|D|21,00|3,50|18|\n|E|24,00|2,50|2|\nA pessoa escolherá um desses depósitos para realizar sua compra, considerando os preços do cimento e do frete oferecidos em cada opção.\n\nSe a pessoa decidir pela opção mais econômica, o depósito escolhido para a realização dessa compra será o",
     "alternatives": {
       "a": "A.",
       "b": "B.",
@@ -568,7 +567,7 @@
   },
   {
     "number": 162,
-    "text": "A lei municipal para a edificação de casas em lote de uma cidade determina que sejam obedecidos os seguintes critérios:\n- afastamento mínimo de 4 m da rua;\n- afastamento mínimo de 1 m da divisa com outro lote;\n- área total construída da casa entre 40% e 50% da área total do lote.\n\nUm construtor submeteu para aprovação na prefeitura dessa cidade uma planta com propostas para construção de casas em seus 5 lotes. Cada lote tem área medindo 200 m².\n\nA imagem apresenta um esquema, sem escala, no qual estão representados os lotes, as ruas e os afastamentos considerados nos projetos entre as casas e as divisas dos lotes. As medidas indicadas no esquema estão expressas em metro.\n\nA prefeitura aprovará apenas a planta da casa",
+    "text": "A lei municipal para a edificação de casas em lote de uma cidade determina que sejam obedecidos os seguintes critérios:\n - afastamento mínimo de 4 m da rua;\n - afastamento mínimo de 1 m da divisa com outro lote;\n - área total construída da casa entre 40% e 50% da área total do lote.\nUm construtor submeteu para aprovação na prefeitura dessa cidade uma planta com propostas para construção de casas em seus 5 lotes. Cada lote tem área medindo 200 m².\nA imagem apresenta um esquema, sem escala, no qual estão representados os lotes, as ruas e os afastamentos considerados nos projetos entre as casas e as divisas dos lotes. As medidas indicadas no esquema estão expressas em metro.[Esquema]\n\nA prefeitura aprovará apenas a planta da casa",
     "alternatives": {
       "a": "1.",
       "b": "2.",
@@ -591,7 +590,7 @@
   },
   {
     "number": 163,
-    "text": "Nos livros <i>Harry Potter</i>, um anagrama do nome do personagem \"TOM MARVOLO RIDDLE\" gerou a frase \"I AM LORD VOLDEMORT\".\n\nSuponha que Harry quisesse formar todos os anagramas da frase \"I AM POTTER\", de tal forma que as vogais e consoantes aparecessem sempre intercaladas, e sem considerar o espaçamento entre as letras.\n\nNessas condições, o número de anagramas formados é dado por",
+    "text": "Nos livros <i>Harry Potter</i>, um anagrama do nome do personagem \"TOM MARVOLO RIDDLE\" gerou a frase \"I AM LORD VOLDEMORT\".\nSuponha que Harry quisesse formar todos os anagramas da frase \"I AM POTTER\", de tal forma que as vogais e consoantes aparecessem sempre intercaladas, e sem considerar o espaçamento entre as letras.\n\nNessas condições, o número de anagramas formados é dado por",
     "alternatives": {
       "a": "9!",
       "b": "4! · 5!",
@@ -611,7 +610,7 @@
   },
   {
     "number": 164,
-    "text": "A exposição a barulhos excessivos, como os que percebemos em geral em trânsitos intensos, casas noturnas e espetáculos musicais, podem provocar insônia, estresse, infarto, perda de audição, entre outras enfermidades. De acordo com a Organização Mundial da Saúde, todo e qualquer som que ultrapasse os 55 decibéis (unidade de intensidade do som) já pode ser considerado nocivo para a saúde. O gráfico foi elaborado a partir da medição do ruído produzido, durante um dia, em um canteiro de obras.\n\nNesse dia, durante quantas horas o ruído esteve acima de 55 decibéis?",
+    "text": "Nesse dia, durante quantas horas o ruído esteve acima de 55 decibéis?",
     "alternatives": {
       "a": "5.",
       "b": "8.",
@@ -619,9 +618,7 @@
       "d": "11.",
       "e": "13."
     },
-    "images": [
-      "figuras/q164_2020_fig1.png"
-    ],
+    "images": [],
     "tags": [
       "estatística"
     ],
@@ -685,7 +682,7 @@
   },
   {
     "number": 167,
-    "text": "O quadro representa os gastos mensais, em real, de uma família com internet, mensalidade escolar e mesada do filho.\n\n|Internet|Mensalidade escolar|Mesada do filho|\n|-|-|-|\n|120|700|400|\n\nNo início do ano, a internet e a mensalidade escolar tiveram acréscimos, respectivamente, de 20% e 10%. Necessitando manter o valor da despesa mensal total com os itens citados, a família reduzirá a mesada do filho.\n\nQual será a porcentagem da redução da mesada?",
+    "text": "O quadro representa os gastos mensais, em real, de uma família com internet, mensalidade escolar e mesada do filho.\n\n|Internet|Mensalidade escolar|Mesada do filho|\n|-|-|-|\n|120|700|400|\nNo início do ano, a internet e a mensalidade escolar tiveram acréscimos, respectivamente, de 20% e 10%. Necessitando manter o valor da despesa mensal total com os itens citados, a família reduzirá a mesada do filho.\n\nQual será a porcentagem da redução da mesada?",
     "alternatives": {
       "a": "15,0.",
       "b": "23,5.",
@@ -706,7 +703,7 @@
   },
   {
     "number": 168,
-    "text": "Num recipiente com a forma de paralelepípedo reto-retângulo, colocou-se água até a altura de 8 cm, e nela foi posto um objeto, que ficou flutuando na superfície da água. Para retirar o objeto de dentro do recipiente, a altura da coluna de água deve ser de, pelo menos, 15 cm. Para a coluna de água chegar até essa altura, é necessário colocar dentro do recipiente bolinhas de volume igual a 6 cm³ cada, que ficarão totalmente submersas.\n\nO número mínimo de bolinhas necessárias para que se possa retirar o objeto que flutua na água, seguindo as instruções dadas, é de",
+    "text": "Num recipiente com a forma de paralelepípedo reto-retângulo, colocou-se água até a altura de 8 cm, e nela foi posto um objeto, que ficou flutuando na superfície da água. Para retirar o objeto de dentro do recipiente, a altura da coluna de água deve ser de, pelo menos, 15 cm. Para a coluna de água chegar até essa altura, é necessário colocar dentro do recipiente bolinhas de volume igual a 6 cm³ cada, que ficarão totalmente submersas.[Esquema]\n\nO número mínimo de bolinhas necessárias para que se possa retirar o objeto que flutua na água, seguindo as instruções dadas, é de",
     "alternatives": {
       "a": "14.",
       "b": "16.",
@@ -728,7 +725,7 @@
   },
   {
     "number": 169,
-    "text": "Um grupo sanguíneo, ou tipo sanguíneo, baseia-se na presença ou ausência de dois antígenos, A e B, na superfície das células vermelhas do sangue. Como dois antígenos estão envolvidos, os quatro tipos sanguíneos distintos são:\n- Tipo A: apenas o antígeno A está presente;\n- Tipo B: apenas o antígeno B está presente;\n- Tipo AB: ambos os antígenos estão presentes;\n- Tipo O: nenhum dos antígenos está presente.\n\nForam coletadas amostras de sangue de 200 pessoas e, após análise laboratorial, foi identificado que em 100 amostras está presente o antígeno A, em 110 amostras há presença do antígeno B e em 20 amostras nenhum dos antígenos está presente.\n\nDessas pessoas que foram submetidas à coleta de sangue, o número das que possuem o tipo sanguíneo A é igual a",
+    "text": "Foram coletadas amostras de sangue de 200 pessoas e, após análise laboratorial, foi identificado que em 100 amostras está presente o antígeno A, em 110 amostras há presença do antígeno B e em 20 amostras nenhum dos antígenos está presente.\n\nDessas pessoas que foram submetidas à coleta de sangue, o número das que possuem o tipo sanguíneo A é igual a",
     "alternatives": {
       "a": "30.",
       "b": "60.",
@@ -745,7 +742,10 @@
     "year": 2020,
     "test": "ENEM",
     "area": "math",
-    "answer": "c"
+    "answer": "c",
+    "contextIds": [
+      "enem_2020_math_q169_ctx1"
+    ]
   },
   {
     "number": 170,
@@ -793,7 +793,7 @@
   },
   {
     "number": 172,
-    "text": "No período de fim de ano, o síndico de um condomínio resolveu colocar, em um poste, uma iluminação natalina em formato de cone, lembrando uma árvore de Natal conforme as figuras 1 e 2.\n\n[Figura]\n\nA árvore deverá ser feita colocando-se mangueira de iluminação, consideradas segmentos de reta de mesmo comprimento, a partir de um ponto situado a 3 m de altura no poste até um ponto de uma circunferência de fixação, no chão, de tal forma que esta fique dividida em 20 arcos iguais. O poste está fixado no ponto C (centro da circunferência) perpendicularmente ao plano do chão. Para economizar, ele utilizará mangueiras de iluminação aproveitadas de anos anteriores, que juntas totalizaram pouco mais de 100 m de comprimento, dos quais ele decide usar exatamente 100 m e deixar o restante como reserva.\n\nPara que ele atinja seu objetivo, o raio, em metro, da circunferência deverá ser de",
+    "text": "No período de fim de ano, o síndico de um condomínio resolveu colocar, em um poste, uma iluminação natalina em formato de cone, lembrando uma árvore de Natal conforme as figuras 1 e 2.[Figura 1][Figura 2]\n\nA árvore deverá ser feita colocando-se mangueira de iluminação, consideradas segmentos de reta de mesmo comprimento, a partir de um ponto situado a 3 m de altura no poste até um ponto de uma circunferência de fixação, no chão, de tal forma que esta fique dividida em 20 arcos iguais. O poste está fixado no ponto C (centro da circunferência) perpendicularmente ao plano do chão. Para economizar, ele utilizará mangueiras de iluminação aproveitadas de anos anteriores, que juntas totalizaram pouco mais de 100 m de comprimento, dos quais ele decide usar exatamente 100 m e deixar o restante como reserva.\n\nPara que ele atinja seu objetivo, o raio, em metro, da circunferência deverá ser de",
     "alternatives": {
       "a": "4,00",
       "b": "4,87",
@@ -802,7 +802,8 @@
       "e": "6,26"
     },
     "images": [
-      "figuras/q172_2020_fig1.png"
+      "figuras/q172_2020_fig1.png",
+      "figuras/q172_2020_fig2.png"
     ],
     "tags": [
       "geometria espacial",
@@ -816,7 +817,7 @@
   },
   {
     "number": 173,
-    "text": "Pergolado é o nome que se dá a um tipo de cobertura projetada por arquitetos, comumente em praças e jardins, para criar um ambiente para pessoas ou plantas, no qual há uma quebra da quantidade de luz, dependendo da posição do sol. É feito como um estrado de vigas iguais, postas paralelas e perfeitamente em fila, como ilustra a figura.\n\n[Figura]\n\nUm arquiteto projeta um pergolado com vãos de 30 cm de distância entre suas vigas, de modo que, no solstício de verão, a trajetória do sol durante o dia seja realizada num plano perpendicular à direção das vigas, e que o sol da tarde, no momento em que seus raios fizerem 30° com a posição a pino, gere a metade da luz que passa no pergolado ao meio-dia.\n\nPara atender à proposta do projeto elaborado pelo arquiteto, as vigas do pergolado devem ser construídas de maneira que a altura, em centímetro, seja a mais próxima possível de",
+    "text": "Pergolado é o nome que se dá a um tipo de cobertura projetada por arquitetos, comumente em praças e jardins, para criar um ambiente para pessoas ou plantas, no qual há uma quebra da quantidade de luz, dependendo da posição do sol. É feito como um estrado de vigas iguais, postas paralelas e perfeitamente em fila, como ilustra a figura.[Figura]Um arquiteto projeta um pergolado com vãos de 30 cm de distância entre suas vigas, de modo que, no solstício de verão, a trajetória do sol durante o dia seja realizada num plano perpendicular à direção das vigas, e que o sol da tarde, no momento em que seus raios fizerem 30° com a posição a pino, gere a metade da luz que passa no pergolado ao meio-dia.\n\nPara atender à proposta do projeto elaborado pelo arquiteto, as vigas do pergolado devem ser construídas de maneira que a altura, em centímetro, seja a mais próxima possível de",
     "alternatives": {
       "a": "9",
       "b": "15",
@@ -839,7 +840,7 @@
   },
   {
     "number": 174,
-    "text": "O fenômeno das manifestações populares de massa traz à discussão como estimar o número de pessoas presentes nesse tipo de evento. Uma metodologia usada no momento do ápice do evento é feita uma foto aérea da via pública principal na área ocupada, bem como das afluentes que apresentem aglomerações de pessoas. A foto é sobreposta por um mapa virtual das vias, ambos na mesma escala, fazendo-se um esboço geométrico da situação. Em seguida, subdivide-se o espaço total em trechos, quantificando a densidade, da seguinte forma:\n  - 4 pessoas por metro quadrado, se elas estiverem andando em uma mesma direção;\n  - 5 pessoas por metro quadrado, se elas estiverem se movimentando sem deixar o local;\n  - 6 pessoas por metro quadrado, se elas estiverem paradas.\n\nÉ feito, então, o cálculo do total de pessoas, considerando os diversos trechos, e desconta-se daí 1 000 pessoas para cada carro de som fotografado.\n\nCom essa metodologia, procederam-se aos cálculos para estimar o número de participantes na manifestação cujo esboço geométrico é dado na figura. Há três trechos na via principal: MN, NO e OP, e um trecho numa via afluente QR.\n\n[Figura]\n\nSegundo a metodologia descrita, o número estimado de pessoas presentes a essa manifestação foi igual a (considere as medidas dadas):",
+    "text": "O fenômeno das manifestações populares de massa traz à discussão como estimar o número de pessoas presentes nesse tipo de evento. Uma metodologia usada no momento do ápice do evento é feita uma foto aérea da via pública principal na área ocupada, bem como das afluentes que apresentem aglomerações de pessoas. A foto é sobreposta por um mapa virtual das vias, ambos na mesma escala, fazendo-se um esboço geométrico da situação. Em seguida, subdivide-se o espaço total em trechos, quantificando a densidade, da seguinte forma:\n  - 4 pessoas por metro quadrado, se elas estiverem andando em uma mesma direção;\n  - 5 pessoas por metro quadrado, se elas estiverem se movimentando sem deixar o local;\n  - 6 pessoas por metro quadrado, se elas estiverem paradas.\nÉ feito, então, o cálculo do total de pessoas, considerando os diversos trechos, e desconta-se daí 1 000 pessoas para cada carro de som fotografado.\nCom essa metodologia, procederam-se aos cálculos para estimar o número de participantes na manifestação cujo esboço geométrico é dado na figura. Há três trechos na via principal: MN, NO e OP, e um trecho numa via afluente da principal: QR.[Figura]\n\nSegundo a metodologia descrita, o número estimado de pessoas presentes a essa manifestação foi igual a (considere as medidas dadas):",
     "alternatives": {
       "a": "110 000",
       "b": "104 000",
@@ -871,7 +872,12 @@
       "e": "E"
     },
     "images": [
-      "figuras/q175_2020_fig1.png"
+      "figuras/q175_2020_fig1.png",
+      "figuras/q175_2020_fig2.png",
+      "figuras/q175_2020_fig3.png",
+      "figuras/q175_2020_fig4.png",
+      "figuras/q175_2020_fig5.png",
+      "figuras/q175_2020_fig6.png"
     ],
     "tags": [
       "funções",
@@ -887,14 +893,19 @@
     "number": 176,
     "text": "Em um jogo desenvolvido para uso no computador, objetos tridimensionais vão descendo do alto da tela até alcançarem o plano da base. O usuário pode mover ou girar cada objeto durante sua descida para posicioná-lo convenientemente no plano horizontal. Um desses objetos é formado pela justaposição de quatro cubos idênticos, formando assim um sólido rígido, como ilustrado na figura.\n\n[Figura]\n\nPara facilitar a movimentação do objeto pelo usuário, o programa projeta ortogonalmente esse sólido em três planos quadriculados perpendiculares entre si, durante sua descida.\n\nA figura que apresenta uma possível posição desse sólido, com suas respectivas projeções ortogonais sobre os três planos citados, durante sua descida é",
     "alternatives": {
-      "a": "A",
-      "b": "B",
-      "c": "C",
-      "d": "D",
-      "e": "E"
+      "a": "[Figura]",
+      "b": "[Figura]",
+      "c": "[Figura]",
+      "d": "[Figura]",
+      "e": "[Figura]"
     },
     "images": [
-      "figuras/q176_2020_fig1.png"
+      "figuras/q176_2020_fig1.png",
+      "figuras/q176_2020_fig2.png",
+      "figuras/q176_2020_fig3.png",
+      "figuras/q176_2020_fig4.png",
+      "figuras/q176_2020_fig5.png",
+      "figuras/q176_2020_fig6.png"
     ],
     "tags": [
       "geometria espacial",
@@ -908,7 +919,7 @@
   },
   {
     "number": 177,
-    "text": "A Figura 1 apresenta uma casa e a planta do seu telhado, em que as setas indicam o sentido do escoamento da água de chuva. Um pedreiro precisa fazer a planta do escoamento da água de chuva de um telhado que tem três caídas de água, como apresentado na Figura 2.\n\n[Figura]\n\nA figura que representa a planta do telhado da Figura 2 com o escoamento da água de chuva que o pedreiro precisa fazer é",
+    "text": "A Figura 1 apresenta uma casa e a planta do seu telhado, em que as setas indicam o sentido do escoamento da água de chuva. Um pedreiro precisa fazer a planta do escoamento da água de chuva de um telhado que tem três caídas de água, como apresentado na Figura 2.[Figura 1 e Figura 2]\n\nA figura que representa a planta do telhado da Figura 2 com o escoamento da água de chuva que o pedreiro precisa fazer é",
     "alternatives": {
       "a": "A",
       "b": "B",
@@ -917,7 +928,12 @@
       "e": "E"
     },
     "images": [
-      "figuras/q177_2020_fig1.png"
+      "figuras/q177_2020_fig1.png",
+      "figuras/q177_2020_fig2.png",
+      "figuras/q177_2020_fig3.png",
+      "figuras/q177_2020_fig4.png",
+      "figuras/q177_2020_fig5.png",
+      "figuras/q177_2020_fig6.png"
     ],
     "tags": [
       "geometria plana",
@@ -931,7 +947,7 @@
   },
   {
     "number": 178,
-    "text": "Suponha que uma equipe de corrida de automóvel disponha de cinco tipos de pneu (I, II, III, IV, V), em que o fator de eficiência climática EC (índice que fornece comportamento do pneu em uso, dependendo do clima) é apresentado:\n  - EC do pneu I: com chuva 6, sem chuva 3;\n  - EC do pneu II: com chuva 7, sem chuva −4;\n  - EC do pneu III: com chuva −2, sem chuva 10;\n  - EC do pneu IV: com chuva 2, sem chuva 8;\n  - EC do pneu V: com chuva −6, sem chuva 7.\n\nO coeficiente de rendimento climático (CRC) de um pneu é calculado como a soma dos produtos dos fatores de EC, com ou sem chuva, pelas correspondentes probabilidades de se ter tais condições climáticas e ele é utilizado para determinar qual pneu deve ser selecionado para uma dada corrida, escolhendo-se o pneu que apresentar o maior CRC naquele dia. No dia de certa corrida, a probabilidade de chover era de 70%, e o chefe da equipe calculou o CRC de cada um dos cinco tipos de pneu.\n\nO pneu escolhido foi",
+    "text": "Suponha que uma equipe de corrida de automóvel disponha de cinco tipos de pneu (I, II, III, IV, V), em que o fator de eficiência climática EC (índice que fornece comportamento do pneu em uso, dependendo do clima) é apresentado:\n  - EC do pneu I: com chuva 6, sem chuva 3;\n  - EC do pneu II: com chuva 7, sem chuva −4;\n  - EC do pneu III: com chuva −2, sem chuva 10;\n  - EC do pneu IV: com chuva 2, sem chuva 8;\n  - EC do pneu V: com chuva −6, sem chuva 7.\nO coeficiente de rendimento climático (CRC) de um pneu é calculado como a soma dos produtos dos fatores de EC, com ou sem chuva, pelas correspondentes probabilidades de se ter tais condições climáticas e ele é utilizado para determinar qual pneu deve ser selecionado para uma dada corrida, escolhendo-se o pneu que apresentar o maior CRC naquele dia. No dia de certa corrida, a probabilidade de chover era de 70%, e o chefe da equipe calculou o CRC de cada um dos cinco tipos de pneu.\n\nO pneu escolhido foi",
     "alternatives": {
       "a": "I",
       "b": "II",
@@ -952,7 +968,7 @@
   },
   {
     "number": 179,
-    "text": "Um pé de eucalipto em idade adequada para o corte rende, em média, 20 mil folhas de papel A4. A densidade superficial do papel A4, medida pela razão da massa de uma folha desse papel por sua área, é de 75 gramas por metro quadrado, e a área de uma folha de A4 é 0,062 metro quadrado. Nessas condições, quantos quilogramas de papel rende, em média, um pé de eucalipto?",
+    "text": "Nessas condições, quantos quilogramas de papel rende, em média, um pé de eucalipto?",
     "alternatives": {
       "a": "4 301",
       "b": "1 500",
@@ -969,11 +985,12 @@
     "year": 2020,
     "test": "ENEM",
     "area": "math",
-    "answer": "e"
+    "answer": "e",
+    "contextId": "enem_2020_math_q179_ctx1"
   },
   {
     "number": 180,
-    "text": "Com o objetivo de contratar uma empresa responsável pelo serviço de atendimento ao público, os executivos de uma agência bancária realizaram uma pesquisa de satisfação envolvendo cinco empresas especializadas nesse segmento. Os procedimentos analisados (com pesos que medem sua importância para a agência) e as respectivas notas que cada empresa recebeu estão organizados no quadro.\n\n| Procedimento | Peso | X | Y | Z | W | T |\n|---|---|---|---|---|---|---|\n| Rapidez no atendimento | 3 | 5 | 1 | 4 | 3 | 4 |\n| Clareza nas informações passadas aos clientes | 5 | 1 | 4 | 3 | 3 | 2 |\n| Cortesia no atendimento | 2 | 2 | 2 | 2 | 3 | 4 |\n\nA agência bancária contratará a empresa com a maior média ponderada das notas obtidas nos procedimentos analisados. Após a análise dos resultados da pesquisa de satisfação, os executivos da agência bancária contrataram a empresa",
+    "text": "Com o objetivo de contratar uma empresa responsável pelo serviço de atendimento ao público, os executivos de uma agência bancária realizaram uma pesquisa de satisfação envolvendo cinco empresas especializadas nesse segmento. Os procedimentos analisados (com pesos que medem sua importância para a agência) e as respectivas notas que cada empresa recebeu estão organizados no quadro.\n| Procedimento | Peso | X | Y | Z | W | T |\n|---|---|---|---|---|---|---|\n| Rapidez no atendimento | 3 | 5 | 1 | 4 | 3 | 4 |\n| Clareza nas informações passadas aos clientes | 5 | 1 | 4 | 3 | 3 | 2 |\n| Cortesia no atendimento | 2 | 2 | 2 | 2 | 3 | 4 |\nA agência bancária contratará a empresa com a maior média ponderada das notas obtidas nos procedimentos analisados. \n\nApós a análise dos resultados da pesquisa de satisfação, os executivos da agência bancária contrataram a empresa",
     "alternatives": {
       "a": "X",
       "b": "Y",
