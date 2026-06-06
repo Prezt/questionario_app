@@ -94,8 +94,8 @@ function formatTime(seconds) {
   return `${m}:${String(s).padStart(2, '0')}`
 }
 
-const APP_VERSION = '1.14.4'
-const APP_VERSION_DATE = '04/06/2026'
+const APP_VERSION = '1.14.5'
+const APP_VERSION_DATE = '05/06/2026'
 
 const REVIEW_STATUS = [
   { year: 2025, linguagens: true, humanas: true, natureza: true, matematica: true },
@@ -103,12 +103,22 @@ const REVIEW_STATUS = [
   { year: 2023, linguagens: true, humanas: true, natureza: true, matematica: true },
   { year: 2022, linguagens: true, humanas: true, natureza: true, matematica: true },
   { year: 2021, linguagens: true, humanas: true, natureza: true, matematica: true },
-  { year: 2020, linguagens: false, humanas: false, natureza: false, matematica: false },
+  { year: 2020, linguagens: true, humanas: true, natureza: true, matematica: true },
   { year: 2019, linguagens: false, humanas: false, natureza: false, matematica: false },
   { year: 2018, linguagens: true, humanas: true, natureza: true, matematica: true },
 ]
 
 const CHANGELOG = [
+  {
+    version: '1.14.5',
+    date: '05/06/2026',
+    items: [
+      '2020 linguagens revisada',
+      '2020 humanas revisada',
+      '2020 ciências da natureza revisada',
+      '2020 matemática revisada',
+    ],
+  },
   {
     version: '1.14.4',
     date: '04/06/2026',

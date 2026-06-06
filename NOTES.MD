@@ -65,11 +65,11 @@ REVISAO:
     [x] humanas
     [x] ciencias
     [x] matematica
- [] ENEM 2020
-    [] linguagens
-    [] humanas
-    [] ciencias
-    [] matematica
+ [x] ENEM 2020
+    [x] linguagens
+    [x] humanas
+    [x] ciencias
+    [x] matematica
  [] ENEM 2019
     [] linguagens
     [] humanas
