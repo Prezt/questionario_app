@@ -439,7 +439,7 @@ function QuestionForm({ question, onSave, onCancel, saving }) {
   )
 }
 
-export default function QuestionEditor() {
+export default function QuestionEditor({ onClose }) {
   const token = localStorage.getItem('token')
   const user  = (() => { try { return JSON.parse(localStorage.getItem('user')) } catch { return null } })()
 
@@ -505,7 +505,7 @@ export default function QuestionEditor() {
 
   useEffect(() => {
     if (!token || (user?.role !== 'prof' && user?.role !== 'admin')) {
-      window.location.href = '/'
+      onClose?.()
     }
   }, [])
 
@@ -657,7 +657,7 @@ export default function QuestionEditor() {
   return (
     <div className="qe-shell">
       <div className="qe-header">
-        <button type="button" className="qe-back-btn" onClick={() => window.location.href = '/'}>← Voltar</button>
+        <button type="button" className="qe-back-btn" onClick={() => onClose?.()}>← Voltar</button>
         <h1 className="qe-title">Criar</h1>
         <button type="button" className="qe-theme-btn" onClick={() => setDark(d => !d)} aria-label="Alternar tema">
           {dark ? <SunIcon /> : <MoonIcon />}

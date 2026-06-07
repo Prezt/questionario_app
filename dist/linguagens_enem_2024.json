@@ -24,8 +24,7 @@
     "answer": "c",
     "difficulty": 3,
     "disciplinas": [
-      "lingua_estrangeira",
-      "portugues"
+      "ingles"
     ]
   },
   {
@@ -54,8 +53,7 @@
       "enem_2024_linguagens_q2_ctx1"
     ],
     "disciplinas": [
-      "lingua_estrangeira",
-      "portugues"
+      "ingles"
     ]
   },
   {
@@ -83,8 +81,7 @@
     "answer": "a",
     "difficulty": 4,
     "disciplinas": [
-      "lingua_estrangeira",
-      "portugues"
+      "ingles"
     ]
   },
   {
@@ -112,7 +109,7 @@
       "enem_2024_linguagens_q4_ctx1"
     ],
     "disciplinas": [
-      "lingua_estrangeira"
+      "ingles"
     ]
   },
   {
@@ -139,8 +136,7 @@
     "answer": "e",
     "difficulty": 3,
     "disciplinas": [
-      "lingua_estrangeira",
-      "portugues"
+      "ingles"
     ]
   },
   {
@@ -169,8 +165,7 @@
       "enem_2024_linguagens_q1_ctx1"
     ],
     "disciplinas": [
-      "lingua_estrangeira",
-      "portugues"
+      "espanhol"
     ]
   },
   {
@@ -198,7 +193,7 @@
       "enem_2024_linguagens_q2_ctx2"
     ],
     "disciplinas": [
-      "lingua_estrangeira"
+      "espanhol"
     ]
   },
   {
@@ -227,9 +222,8 @@
       "enem_2024_linguagens_q3_ctx1"
     ],
     "disciplinas": [
-      "lingua_estrangeira",
-      "literatura",
-      "portugues"
+      "espanhol",
+      "literatura"
     ]
   },
   {
@@ -258,8 +252,7 @@
       "enem_2024_linguagens_q4_ctx2"
     ],
     "disciplinas": [
-      "lingua_estrangeira",
-      "portugues"
+      "espanhol"
     ]
   },
   {
@@ -288,7 +281,7 @@
       "enem_2024_linguagens_q5_ctx1"
     ],
     "disciplinas": [
-      "lingua_estrangeira",
+      "espanhol",
       "literatura"
     ]
   },
@@ -316,7 +309,7 @@
       "enem_2024_linguagens_q6_ctx1"
     ],
     "disciplinas": [
-      "portugues"
+      "gramatica"
     ]
   },
   {
@@ -343,7 +336,7 @@
       "enem_2024_linguagens_q7_ctx1"
     ],
     "disciplinas": [
-      "portugues"
+      "interpretacao"
     ]
   },
   {
@@ -397,7 +390,7 @@
     "answer": "e",
     "difficulty": 3,
     "disciplinas": [
-      "portugues"
+      "interpretacao"
     ]
   },
   {
@@ -424,7 +417,7 @@
     "answer": "c",
     "difficulty": 3,
     "disciplinas": [
-      "portugues"
+      "interpretacao"
     ]
   },
   {
@@ -442,7 +435,8 @@
     },
     "images": [],
     "tags": [
-      "linguística e variação linguística"
+      "linguística e variação linguística",
+      "variação linguística"
     ],
     "year": 2024,
     "test": "ENEM",
@@ -450,7 +444,7 @@
     "answer": "e",
     "difficulty": 5,
     "disciplinas": [
-      "portugues"
+      "gramatica"
     ]
   },
   {
@@ -496,7 +490,8 @@
     "images": [],
     "tags": [
       "direitos humanos e cidadania",
-      "linguística e variação linguística"
+      "linguística e variação linguística",
+      "funções da linguagem"
     ],
     "year": 2024,
     "test": "ENEM",
@@ -504,7 +499,7 @@
     "answer": "d",
     "difficulty": 3,
     "disciplinas": [
-      "portugues"
+      "gramatica"
     ]
   },
   {
@@ -530,7 +525,7 @@
     "answer": "c",
     "difficulty": 3,
     "disciplinas": [
-      "portugues"
+      "gramatica"
     ]
   },
   {
@@ -556,7 +551,7 @@
     "answer": "b",
     "difficulty": 4,
     "disciplinas": [
-      "portugues"
+      "interpretacao"
     ]
   },
   {
@@ -609,7 +604,7 @@
     "answer": "e",
     "difficulty": 3,
     "disciplinas": [
-      "portugues"
+      "interpretacao"
     ]
   },
   {
@@ -636,7 +631,7 @@
     "answer": "d",
     "difficulty": 4,
     "disciplinas": [
-      "portugues"
+      "interpretacao"
     ]
   },
   {
@@ -664,8 +659,8 @@
     "answer": "d",
     "difficulty": 7,
     "disciplinas": [
-      "literatura",
-      "portugues"
+      "interpretacao",
+      "literatura"
     ]
   },
   {
@@ -692,7 +687,7 @@
     "answer": "c",
     "difficulty": 6,
     "disciplinas": [
-      "portugues"
+      "interpretacao"
     ]
   },
   {
@@ -751,7 +746,7 @@
     "answer": "c",
     "difficulty": 7,
     "disciplinas": [
-      "portugues"
+      "interpretacao"
     ]
   },
   {
@@ -770,7 +765,8 @@
     "images": [],
     "tags": [
       "gêneros textuais",
-      "linguística e variação linguística"
+      "linguística e variação linguística",
+      "figuras de linguagem"
     ],
     "year": 2024,
     "test": "ENEM",
@@ -778,7 +774,8 @@
     "answer": "b",
     "difficulty": 5,
     "disciplinas": [
-      "portugues"
+      "gramatica",
+      "interpretacao"
     ]
   },
   {
@@ -794,7 +791,8 @@
     "images": [],
     "tags": [
       "linguística e variação linguística",
-      "literatura brasileira"
+      "literatura brasileira",
+      "variação linguística"
     ],
     "year": 2024,
     "test": "ENEM",
@@ -805,8 +803,8 @@
       "enem_2024_linguagens_q24_ctx1"
     ],
     "disciplinas": [
-      "literatura",
-      "portugues"
+      "gramatica",
+      "literatura"
     ]
   },
   {
@@ -860,7 +858,7 @@
       "enem_2024_linguagens_q26_ctx1"
     ],
     "disciplinas": [
-      "portugues"
+      "interpretacao"
     ]
   },
   {
@@ -888,7 +886,7 @@
       "enem_2024_linguagens_q27_ctx1"
     ],
     "disciplinas": [
-      "portugues"
+      "interpretacao"
     ]
   },
   {
@@ -915,8 +913,8 @@
       "enem_2024_linguagens_q28_ctx1"
     ],
     "disciplinas": [
-      "literatura",
-      "portugues"
+      "interpretacao",
+      "literatura"
     ]
   },
   {
@@ -972,7 +970,7 @@
     ],
     "disciplinas": [
       "artes",
-      "portugues"
+      "interpretacao"
     ]
   },
   {
@@ -1051,7 +1049,7 @@
     "answer": "d",
     "difficulty": 3,
     "disciplinas": [
-      "portugues"
+      "interpretacao"
     ]
   },
   {
@@ -1078,7 +1076,7 @@
       "enem_2024_linguagens_q34_ctx1"
     ],
     "disciplinas": [
-      "portugues"
+      "interpretacao"
     ]
   },
   {
@@ -1151,7 +1149,8 @@
     "images": [],
     "tags": [
       "interpretação de texto",
-      "linguística e variação linguística"
+      "linguística e variação linguística",
+      "figuras de linguagem"
     ],
     "year": 2024,
     "test": "ENEM",
@@ -1162,7 +1161,8 @@
       "enem_2024_linguagens_q37_ctx1"
     ],
     "disciplinas": [
-      "portugues"
+      "gramatica",
+      "interpretacao"
     ]
   },
   {
@@ -1215,7 +1215,7 @@
       "enem_2024_linguagens_q39_ctx1"
     ],
     "disciplinas": [
-      "portugues"
+      "gramatica"
     ]
   },
   {
@@ -1269,7 +1269,7 @@
       "enem_2024_linguagens_q41_ctx1"
     ],
     "disciplinas": [
-      "portugues"
+      "interpretacao"
     ]
   },
   {
@@ -1296,7 +1296,8 @@
       "enem_2024_linguagens_q42_ctx1"
     ],
     "disciplinas": [
-      "portugues"
+      "gramatica",
+      "interpretacao"
     ]
   },
   {
@@ -1351,7 +1352,7 @@
       "enem_2024_linguagens_q44_ctx1"
     ],
     "disciplinas": [
-      "educacao_fisica"
+      "interpretacao"
     ]
   },
   {
@@ -1378,7 +1379,8 @@
       "enem_2024_linguagens_q45_ctx1"
     ],
     "disciplinas": [
-      "portugues"
+      "gramatica",
+      "interpretacao"
     ]
   }
 ]

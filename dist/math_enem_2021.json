@@ -12,7 +12,8 @@
     "images": [],
     "tags": [
       "sequências e progressões",
-      "álgebra"
+      "álgebra",
+      "proporção"
     ],
     "difficulty": 6,
     "year": 2021,
@@ -33,7 +34,13 @@
       "d": "D",
       "e": "E"
     },
-    "images": [],
+    "images": [
+      "figuras/q137_2021_fig2.png",
+      "figuras/q137_2021_fig3.png",
+      "figuras/q137_2021_fig4.png",
+      "figuras/q137_2021_fig5.png",
+      "figuras/q137_2021_fig6.png"
+    ],
     "tags": [
       "geometria espacial"
     ],
@@ -62,7 +69,8 @@
     },
     "images": [],
     "tags": [
-      "análise combinatória"
+      "análise combinatória",
+      "frações"
     ],
     "difficulty": 7,
     "year": 2021,
@@ -136,7 +144,8 @@
     "images": [],
     "tags": [
       "álgebra",
-      "matemática financeira"
+      "matemática financeira",
+      "proporção"
     ],
     "difficulty": 3,
     "year": 2021,
@@ -159,7 +168,8 @@
     },
     "images": [],
     "tags": [
-      "probabilidade"
+      "probabilidade",
+      "frações"
     ],
     "difficulty": 6,
     "year": 2021,
@@ -234,7 +244,8 @@
     "images": [],
     "tags": [
       "estatística",
-      "aritmética e números"
+      "aritmética e números",
+      "proporção"
     ],
     "difficulty": 4,
     "year": 2021,
@@ -260,7 +271,8 @@
     },
     "images": [],
     "tags": [
-      "estatística"
+      "estatística",
+      "proporção"
     ],
     "difficulty": 6,
     "year": 2021,
@@ -309,7 +321,9 @@
     },
     "images": [],
     "tags": [
-      "estatística"
+      "estatística",
+      "proporção",
+      "regra de três"
     ],
     "difficulty": 4,
     "year": 2021,
@@ -337,7 +351,8 @@
       "figuras/q149_2021_fig1.png"
     ],
     "tags": [
-      "estatística"
+      "estatística",
+      "operações básicas"
     ],
     "difficulty": 4,
     "year": 2021,
@@ -363,7 +378,8 @@
     ],
     "tags": [
       "aritmética e números",
-      "estatística"
+      "estatística",
+      "proporção"
     ],
     "difficulty": 3,
     "year": 2021,
@@ -388,7 +404,9 @@
       "figuras/q151_2021_fig1.png"
     ],
     "tags": [
-      "estatística"
+      "estatística",
+      "frações",
+      "proporção"
     ],
     "difficulty": 5,
     "year": 2021,
@@ -412,7 +430,9 @@
     "images": [],
     "tags": [
       "álgebra",
-      "funções"
+      "funções",
+      "frações",
+      "operações básicas"
     ],
     "difficulty": 7,
     "year": 2021,
@@ -439,7 +459,9 @@
     ],
     "tags": [
       "geometria plana",
-      "aritmética e números"
+      "aritmética e números",
+      "proporção",
+      "regra de três"
     ],
     "difficulty": 4,
     "year": 2021,
@@ -464,7 +486,9 @@
     "images": [],
     "tags": [
       "aritmética e números",
-      "estatística"
+      "estatística",
+      "proporção",
+      "regra de três"
     ],
     "difficulty": 5,
     "year": 2021,
@@ -490,7 +514,8 @@
     },
     "images": [],
     "tags": [
-      "aritmética e números"
+      "aritmética e números",
+      "proporção"
     ],
     "difficulty": 4,
     "year": 2021,
@@ -563,7 +588,8 @@
     },
     "images": [],
     "tags": [
-      "aritmética e números"
+      "aritmética e números",
+      "proporção"
     ],
     "difficulty": 4,
     "year": 2021,
@@ -586,7 +612,9 @@
     },
     "images": [],
     "tags": [
-      "aritmética e números"
+      "aritmética e números",
+      "proporção",
+      "regra de três"
     ],
     "difficulty": 4,
     "year": 2021,
@@ -670,7 +698,8 @@
     ],
     "tags": [
       "funções",
-      "matemática financeira"
+      "matemática financeira",
+      "proporção"
     ],
     "difficulty": 5,
     "year": 2021,
@@ -694,7 +723,9 @@
     "images": [],
     "tags": [
       "aritmética e números",
-      "álgebra"
+      "álgebra",
+      "proporção",
+      "regra de três"
     ],
     "difficulty": 5,
     "year": 2021,
@@ -741,7 +772,8 @@
     },
     "images": [],
     "tags": [
-      "aritmética e números"
+      "aritmética e números",
+      "regra de três"
     ],
     "difficulty": 4,
     "year": 2021,
@@ -764,7 +796,8 @@
     },
     "images": [],
     "tags": [
-      "geometria espacial"
+      "geometria espacial",
+      "proporção"
     ],
     "difficulty": 6,
     "year": 2021,
@@ -788,7 +821,8 @@
     "images": [],
     "tags": [
       "geometria espacial",
-      "aritmética e números"
+      "aritmética e números",
+      "frações"
     ],
     "difficulty": 5,
     "year": 2021,
@@ -838,7 +872,8 @@
       "figuras/q169_2021_fig1.png"
     ],
     "tags": [
-      "geometria plana"
+      "geometria plana",
+      "proporção"
     ],
     "difficulty": 4,
     "year": 2021,
@@ -909,7 +944,8 @@
     },
     "images": [],
     "tags": [
-      "aritmética e números"
+      "aritmética e números",
+      "proporção"
     ],
     "difficulty": 4,
     "year": 2021,
@@ -956,7 +992,8 @@
     "images": [],
     "tags": [
       "matemática financeira",
-      "aritmética e números"
+      "aritmética e números",
+      "proporção"
     ],
     "difficulty": 5,
     "year": 2021,
@@ -1004,7 +1041,8 @@
     },
     "images": [],
     "tags": [
-      "aritmética e números"
+      "aritmética e números",
+      "operações básicas"
     ],
     "difficulty": 3,
     "year": 2021,
@@ -1028,7 +1066,8 @@
     },
     "images": [],
     "tags": [
-      "aritmética e números"
+      "aritmética e números",
+      "operações básicas"
     ],
     "difficulty": 4,
     "year": 2021,
@@ -1075,7 +1114,8 @@
     },
     "images": [],
     "tags": [
-      "análise combinatória"
+      "análise combinatória",
+      "frações"
     ],
     "difficulty": 5,
     "year": 2021,

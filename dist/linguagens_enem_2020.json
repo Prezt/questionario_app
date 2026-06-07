@@ -22,8 +22,7 @@
     "contextId": "enem_2020_linguagens_q1_ctx1",
     "language": "en",
     "disciplinas": [
-      "lingua_estrangeira",
-      "portugues"
+      "ingles"
     ]
   },
   {
@@ -49,8 +48,7 @@
     "contextId": "enem_2020_linguagens_q2_en_ctx1",
     "language": "en",
     "disciplinas": [
-      "lingua_estrangeira",
-      "portugues"
+      "ingles"
     ]
   },
   {
@@ -77,9 +75,8 @@
     "contextId": "enem_2020_linguagens_q3_en_ctx1",
     "language": "en",
     "disciplinas": [
-      "lingua_estrangeira",
-      "literatura",
-      "portugues"
+      "ingles",
+      "literatura"
     ]
   },
   {
@@ -106,9 +103,8 @@
     "contextId": "enem_2020_linguagens_q4_en_ctx1",
     "language": "en",
     "disciplinas": [
-      "lingua_estrangeira",
-      "literatura",
-      "portugues"
+      "ingles",
+      "literatura"
     ]
   },
   {
@@ -134,9 +130,8 @@
     "contextId": "enem_2020_linguagens_q5_en_ctx1",
     "language": "en",
     "disciplinas": [
-      "lingua_estrangeira",
-      "literatura",
-      "portugues"
+      "ingles",
+      "literatura"
     ]
   },
   {
@@ -162,9 +157,8 @@
     "contextId": "enem_2020_linguagens_q1_es_ctx1",
     "language": "es",
     "disciplinas": [
-      "lingua_estrangeira",
-      "literatura",
-      "portugues"
+      "espanhol",
+      "literatura"
     ]
   },
   {
@@ -190,8 +184,7 @@
     "contextId": "enem_2020_linguagens_q2_es_ctx1",
     "language": "es",
     "disciplinas": [
-      "lingua_estrangeira",
-      "portugues"
+      "espanhol"
     ]
   },
   {
@@ -217,8 +210,7 @@
     "contextId": "enem_2020_linguagens_q3_ctx1",
     "language": "es",
     "disciplinas": [
-      "lingua_estrangeira",
-      "portugues"
+      "espanhol"
     ]
   },
   {
@@ -244,9 +236,8 @@
     "contextId": "enem_2020_linguagens_q4_es_ctx1",
     "language": "es",
     "disciplinas": [
-      "lingua_estrangeira",
-      "literatura",
-      "portugues"
+      "espanhol",
+      "literatura"
     ]
   },
   {
@@ -272,8 +263,7 @@
     "contextId": "enem_2020_linguagens_q5_ctx1",
     "language": "es",
     "disciplinas": [
-      "lingua_estrangeira",
-      "portugues"
+      "espanhol"
     ]
   },
   {
@@ -290,7 +280,8 @@
     "tags": [
       "interpretação de texto",
       "gêneros textuais",
-      "linguística e variação linguística"
+      "linguística e variação linguística",
+      "funções da linguagem"
     ],
     "difficulty": 6,
     "year": 2020,
@@ -299,7 +290,8 @@
     "answer": "c",
     "contextId": "enem_2020_linguagens_q6_ctx1",
     "disciplinas": [
-      "portugues"
+      "gramatica",
+      "interpretacao"
     ]
   },
   {
@@ -315,7 +307,8 @@
     "images": [],
     "tags": [
       "linguística e variação linguística",
-      "interpretação de texto"
+      "interpretação de texto",
+      "morfologia"
     ],
     "difficulty": 6,
     "year": 2020,
@@ -324,7 +317,8 @@
     "answer": "e",
     "contextId": "enem_2020_linguagens_q7_ctx1",
     "disciplinas": [
-      "portugues"
+      "gramatica",
+      "interpretacao"
     ]
   },
   {
@@ -350,8 +344,9 @@
     "answer": "a",
     "contextId": "enem_2020_linguagens_q8_ctx1",
     "disciplinas": [
-      "literatura",
-      "portugues"
+      "gramatica",
+      "interpretacao",
+      "literatura"
     ]
   },
   {
@@ -377,8 +372,9 @@
     "answer": "a",
     "contextId": "enem_2020_linguagens_q9_ctx1",
     "disciplinas": [
-      "literatura",
-      "portugues"
+      "gramatica",
+      "interpretacao",
+      "literatura"
     ]
   },
   {
@@ -403,7 +399,7 @@
     "answer": "c",
     "contextId": "enem_2020_linguagens_q10_ctx1",
     "disciplinas": [
-      "portugues"
+      "interpretacao"
     ]
   },
   {
@@ -428,8 +424,8 @@
     "answer": "b",
     "contextId": "enem_2020_linguagens_q11_ctx2",
     "disciplinas": [
-      "literatura",
-      "portugues"
+      "interpretacao",
+      "literatura"
     ]
   },
   {
@@ -458,8 +454,8 @@
       "enem_2020_linguagens_q12_q14_ctx1"
     ],
     "disciplinas": [
-      "literatura",
-      "portugues"
+      "interpretacao",
+      "literatura"
     ]
   },
   {
@@ -484,7 +480,7 @@
     "answer": "e",
     "contextId": "enem_2020_linguagens_q13_ctx1",
     "disciplinas": [
-      "portugues"
+      "interpretacao"
     ]
   },
   {
@@ -513,7 +509,7 @@
     ],
     "disciplinas": [
       "artes",
-      "portugues"
+      "interpretacao"
     ]
   },
   {
@@ -539,7 +535,7 @@
     "answer": "b",
     "contextId": "enem_2020_linguagens_q15_ctx1",
     "disciplinas": [
-      "portugues"
+      "interpretacao"
     ]
   },
   {
@@ -564,7 +560,7 @@
     "answer": "e",
     "contextId": "enem_2020_linguagens_q16_ctx1",
     "disciplinas": [
-      "portugues"
+      "interpretacao"
     ]
   },
   {
@@ -589,7 +585,7 @@
     "answer": "d",
     "contextId": "enem_2020_linguagens_q17_ctx1",
     "disciplinas": [
-      "portugues"
+      "interpretacao"
     ]
   },
   {
@@ -614,8 +610,8 @@
     "answer": "a",
     "contextId": "enem_2020_linguagens_q18_ctx1",
     "disciplinas": [
-      "literatura",
-      "portugues"
+      "interpretacao",
+      "literatura"
     ]
   },
   {
@@ -641,8 +637,8 @@
     "answer": "c",
     "contextId": "enem_2020_linguagens_q19_ctx1",
     "disciplinas": [
-      "literatura",
-      "portugues"
+      "interpretacao",
+      "literatura"
     ]
   },
   {
@@ -667,7 +663,8 @@
     "answer": "d",
     "contextId": "enem_2020_linguagens_q20_ctx2",
     "disciplinas": [
-      "portugues"
+      "gramatica",
+      "interpretacao"
     ]
   },
   {
@@ -693,8 +690,8 @@
     "answer": "b",
     "contextId": "enem_2020_linguagens_q21_ctx1",
     "disciplinas": [
-      "literatura",
-      "portugues"
+      "interpretacao",
+      "literatura"
     ]
   },
   {
@@ -719,7 +716,7 @@
     "answer": "a",
     "contextId": "enem_2020_linguagens_q22_ctx1",
     "disciplinas": [
-      "portugues"
+      "interpretacao"
     ]
   },
   {
@@ -745,7 +742,8 @@
     "answer": "a",
     "contextId": "enem_2020_linguagens_q23_ctx1",
     "disciplinas": [
-      "portugues"
+      "gramatica",
+      "interpretacao"
     ]
   },
   {
@@ -770,7 +768,8 @@
     "answer": "d",
     "contextId": "enem_2020_linguagens_q24_ctx1",
     "disciplinas": [
-      "portugues"
+      "gramatica",
+      "interpretacao"
     ]
   },
   {
@@ -796,7 +795,7 @@
     "contextId": "enem_2020_linguagens_q25_ctx1",
     "disciplinas": [
       "artes",
-      "portugues"
+      "interpretacao"
     ]
   },
   {
@@ -822,7 +821,7 @@
     "area": "linguagens",
     "answer": "d",
     "disciplinas": [
-      "portugues"
+      "interpretacao"
     ]
   },
   {
@@ -848,8 +847,8 @@
     "answer": "d",
     "contextId": "enem_2020_linguagens_q27_ctx1",
     "disciplinas": [
-      "literatura",
-      "portugues"
+      "interpretacao",
+      "literatura"
     ]
   },
   {
@@ -876,7 +875,7 @@
     "contextId": "enem_2020_linguagens_q28_ctx1",
     "disciplinas": [
       "artes",
-      "portugues"
+      "interpretacao"
     ]
   },
   {
@@ -901,7 +900,7 @@
     "answer": "b",
     "contextId": "enem_2020_linguagens_q29_ctx1",
     "disciplinas": [
-      "portugues"
+      "interpretacao"
     ]
   },
   {
@@ -927,7 +926,7 @@
     "area": "linguagens",
     "answer": "b",
     "disciplinas": [
-      "portugues"
+      "interpretacao"
     ]
   },
   {
@@ -952,7 +951,7 @@
     "answer": "e",
     "contextId": "enem_2020_linguagens_q31_ctx1",
     "disciplinas": [
-      "portugues"
+      "interpretacao"
     ]
   },
   {
@@ -978,8 +977,8 @@
     "answer": "b",
     "contextId": "enem_2020_linguagens_q32_ctx1",
     "disciplinas": [
-      "literatura",
-      "portugues"
+      "interpretacao",
+      "literatura"
     ]
   },
   {
@@ -1007,7 +1006,7 @@
       "enem_2020_linguagens_q33_ctx2"
     ],
     "disciplinas": [
-      "portugues"
+      "interpretacao"
     ]
   },
   {
@@ -1032,8 +1031,8 @@
     "answer": "a",
     "contextId": "enem_2020_linguagens_q34_ctx2",
     "disciplinas": [
-      "literatura",
-      "portugues"
+      "interpretacao",
+      "literatura"
     ]
   },
   {
@@ -1059,7 +1058,7 @@
     "answer": "a",
     "contextId": "enem_2020_linguagens_q35_ctx1",
     "disciplinas": [
-      "portugues"
+      "interpretacao"
     ]
   },
   {
@@ -1084,8 +1083,8 @@
     "answer": "d",
     "contextId": "enem_2020_linguagens_q36_ctx1",
     "disciplinas": [
-      "educacao_fisica",
-      "portugues"
+      "gramatica",
+      "interpretacao"
     ]
   },
   {
@@ -1111,7 +1110,7 @@
     "area": "linguagens",
     "answer": "e",
     "disciplinas": [
-      "portugues"
+      "interpretacao"
     ]
   },
   {
@@ -1136,7 +1135,7 @@
     "answer": "a",
     "contextId": "enem_2020_linguagens_q38_ctx1",
     "disciplinas": [
-      "portugues"
+      "interpretacao"
     ]
   },
   {
@@ -1161,8 +1160,8 @@
     "answer": "c",
     "contextId": "enem_2020_linguagens_q39_ctx2",
     "disciplinas": [
-      "literatura",
-      "portugues"
+      "interpretacao",
+      "literatura"
     ]
   },
   {
@@ -1187,8 +1186,8 @@
     "answer": "a",
     "contextId": "enem_2020_linguagens_q40_ctx1",
     "disciplinas": [
-      "literatura",
-      "portugues"
+      "interpretacao",
+      "literatura"
     ]
   },
   {
@@ -1214,8 +1213,9 @@
     "answer": "a",
     "contextId": "enem_2020_linguagens_q41_ctx1",
     "disciplinas": [
-      "literatura",
-      "portugues"
+      "gramatica",
+      "interpretacao",
+      "literatura"
     ]
   },
   {
@@ -1240,7 +1240,7 @@
     "answer": "a",
     "contextId": "enem_2020_linguagens_q42_ctx2",
     "disciplinas": [
-      "portugues"
+      "interpretacao"
     ]
   },
   {
@@ -1265,7 +1265,7 @@
     "answer": "d",
     "contextId": "enem_2020_linguagens_q43_ctx1",
     "disciplinas": [
-      "portugues"
+      "interpretacao"
     ]
   },
   {
@@ -1290,7 +1290,7 @@
     "answer": "b",
     "contextId": "enem_2020_linguagens_q44_ctx1",
     "disciplinas": [
-      "portugues"
+      "interpretacao"
     ]
   },
   {
@@ -1315,8 +1315,8 @@
     "answer": "b",
     "contextId": "enem_2020_linguagens_q45_ctx2",
     "disciplinas": [
-      "literatura",
-      "portugues"
+      "interpretacao",
+      "literatura"
     ]
   }
 ]

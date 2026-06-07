@@ -24,8 +24,7 @@
       "enem_2018_linguagens_q1_ctx1_en"
     ],
     "disciplinas": [
-      "lingua_estrangeira",
-      "portugues"
+      "ingles"
     ]
   },
   {
@@ -53,8 +52,7 @@
     ],
     "language": "en",
     "disciplinas": [
-      "lingua_estrangeira",
-      "portugues"
+      "ingles"
     ]
   },
   {
@@ -83,8 +81,7 @@
     ],
     "language": "en",
     "disciplinas": [
-      "lingua_estrangeira",
-      "portugues"
+      "ingles"
     ]
   },
   {
@@ -114,8 +111,7 @@
     ],
     "language": "en",
     "disciplinas": [
-      "lingua_estrangeira",
-      "portugues"
+      "ingles"
     ]
   },
   {
@@ -143,9 +139,8 @@
     ],
     "language": "en",
     "disciplinas": [
-      "lingua_estrangeira",
-      "literatura",
-      "portugues"
+      "ingles",
+      "literatura"
     ]
   },
   {
@@ -173,9 +168,8 @@
     ],
     "language": "es",
     "disciplinas": [
-      "lingua_estrangeira",
-      "literatura",
-      "portugues"
+      "espanhol",
+      "literatura"
     ]
   },
   {
@@ -203,8 +197,7 @@
       "enem_2018_linguagens_q2_ctx1_es"
     ],
     "disciplinas": [
-      "lingua_estrangeira",
-      "portugues"
+      "espanhol"
     ]
   },
   {
@@ -233,8 +226,7 @@
       "enem_2018_linguagens_q3_ctx1_es"
     ],
     "disciplinas": [
-      "lingua_estrangeira",
-      "portugues"
+      "espanhol"
     ]
   },
   {
@@ -264,8 +256,7 @@
       "enem_2018_linguagens_q4_ctx1_es"
     ],
     "disciplinas": [
-      "lingua_estrangeira",
-      "portugues"
+      "espanhol"
     ]
   },
   {
@@ -293,8 +284,7 @@
     ],
     "language": "es",
     "disciplinas": [
-      "lingua_estrangeira",
-      "portugues"
+      "espanhol"
     ]
   },
   {
@@ -322,7 +312,7 @@
       "enem_2018_linguagens_q6_ctx1"
     ],
     "disciplinas": [
-      "portugues"
+      "interpretacao"
     ]
   },
   {
@@ -338,7 +328,8 @@
     "images": [],
     "tags": [
       "linguística e variação linguística",
-      "comunicação e mídia"
+      "comunicação e mídia",
+      "variação linguística"
     ],
     "difficulty": 5,
     "year": 2018,
@@ -349,7 +340,8 @@
       "enem_2018_linguagens_q7_ctx1"
     ],
     "disciplinas": [
-      "portugues"
+      "gramatica",
+      "interpretacao"
     ]
   },
   {
@@ -378,8 +370,9 @@
       "enem_2018_linguagens_q8_ctx1"
     ],
     "disciplinas": [
-      "literatura",
-      "portugues"
+      "gramatica",
+      "interpretacao",
+      "literatura"
     ]
   },
   {
@@ -406,7 +399,8 @@
       "enem_2018_linguagens_q9_ctx1"
     ],
     "disciplinas": [
-      "portugues"
+      "gramatica",
+      "interpretacao"
     ]
   },
   {
@@ -434,8 +428,8 @@
       "enem_2018_linguagens_q10_ctx1"
     ],
     "disciplinas": [
-      "literatura",
-      "portugues"
+      "interpretacao",
+      "literatura"
     ]
   },
   {
@@ -464,7 +458,7 @@
     ],
     "disciplinas": [
       "artes",
-      "portugues"
+      "interpretacao"
     ]
   },
   {
@@ -481,7 +475,8 @@
     "tags": [
       "linguística e variação linguística",
       "comunicação e mídia",
-      "interpretação de texto"
+      "interpretação de texto",
+      "funções da linguagem"
     ],
     "difficulty": 6,
     "year": 2018,
@@ -493,7 +488,8 @@
       "enem_2018_linguagens_q12_ctx1"
     ],
     "disciplinas": [
-      "portugues"
+      "gramatica",
+      "interpretacao"
     ]
   },
   {
@@ -521,7 +517,8 @@
       "enem_2018_linguagens_q13_ctx1_2"
     ],
     "disciplinas": [
-      "portugues"
+      "gramatica",
+      "interpretacao"
     ]
   },
   {
@@ -549,7 +546,7 @@
       "enem_2018_linguagens_q14_ctx1"
     ],
     "disciplinas": [
-      "portugues"
+      "interpretacao"
     ]
   },
   {
@@ -577,8 +574,8 @@
       "enem_2018_linguagens_q15_ctx1"
     ],
     "disciplinas": [
-      "literatura",
-      "portugues"
+      "interpretacao",
+      "literatura"
     ]
   },
   {
@@ -605,8 +602,8 @@
       "enem_2018_lang_q16_ctx1"
     ],
     "disciplinas": [
-      "literatura",
-      "portugues"
+      "interpretacao",
+      "literatura"
     ]
   },
   {
@@ -635,8 +632,8 @@
       "enem_2018_linguagens_q17_ctx1"
     ],
     "disciplinas": [
-      "literatura",
-      "portugues"
+      "interpretacao",
+      "literatura"
     ]
   },
   {
@@ -665,7 +662,7 @@
       "enem_2018_linguagens_q18_ctx1"
     ],
     "disciplinas": [
-      "portugues"
+      "interpretacao"
     ]
   },
   {
@@ -692,7 +689,7 @@
       "enem_2018_lang_q19_ctx1"
     ],
     "disciplinas": [
-      "portugues"
+      "interpretacao"
     ]
   },
   {
@@ -720,8 +717,8 @@
       "enem_2018_lang_q20_ctx1"
     ],
     "disciplinas": [
-      "literatura",
-      "portugues"
+      "interpretacao",
+      "literatura"
     ]
   },
   {
@@ -737,7 +734,8 @@
     "images": [],
     "tags": [
       "linguística e variação linguística",
-      "gêneros textuais"
+      "gêneros textuais",
+      "variação linguística"
     ],
     "difficulty": 6,
     "year": 2018,
@@ -749,7 +747,8 @@
       "enem_2018_linguagens_q21_ctx1"
     ],
     "disciplinas": [
-      "portugues"
+      "gramatica",
+      "interpretacao"
     ]
   },
   {
@@ -775,7 +774,8 @@
     "area": "linguagens",
     "answer": "b",
     "disciplinas": [
-      "portugues"
+      "gramatica",
+      "interpretacao"
     ]
   },
   {
@@ -802,8 +802,8 @@
       "enem_2018_lang_q23_ctx1"
     ],
     "disciplinas": [
-      "literatura",
-      "portugues"
+      "interpretacao",
+      "literatura"
     ]
   },
   {
@@ -820,7 +820,8 @@
     "tags": [
       "interpretação de texto",
       "linguística e variação linguística",
-      "gêneros textuais"
+      "gêneros textuais",
+      "funções da linguagem"
     ],
     "difficulty": 6,
     "year": 2018,
@@ -831,7 +832,8 @@
       "enem_2018_lang_q24_ctx1"
     ],
     "disciplinas": [
-      "portugues"
+      "gramatica",
+      "interpretacao"
     ]
   },
   {
@@ -859,7 +861,7 @@
     "answer": "d",
     "disciplinas": [
       "artes",
-      "portugues"
+      "interpretacao"
     ]
   },
   {
@@ -886,8 +888,7 @@
       "enem_2018_lang_q26_ctx1"
     ],
     "disciplinas": [
-      "educacao_fisica",
-      "portugues"
+      "interpretacao"
     ]
   },
   {
@@ -916,7 +917,7 @@
       "enem_2018_linguagens_q27_ctx1"
     ],
     "disciplinas": [
-      "portugues"
+      "interpretacao"
     ]
   },
   {
@@ -943,7 +944,7 @@
       "enem_2018_lang_q28_ctx1"
     ],
     "disciplinas": [
-      "portugues"
+      "interpretacao"
     ]
   },
   {
@@ -972,7 +973,7 @@
     ],
     "disciplinas": [
       "artes",
-      "portugues"
+      "interpretacao"
     ]
   },
   {
@@ -1000,8 +1001,8 @@
       "enem_2018_linguagens_q30_ctx1"
     ],
     "disciplinas": [
-      "literatura",
-      "portugues"
+      "interpretacao",
+      "literatura"
     ]
   },
   {
@@ -1029,7 +1030,7 @@
       "enem_2018_linguagens_q31_ctx1"
     ],
     "disciplinas": [
-      "portugues"
+      "interpretacao"
     ]
   },
   {
@@ -1057,7 +1058,7 @@
     "answer": "b",
     "disciplinas": [
       "artes",
-      "portugues"
+      "interpretacao"
     ]
   },
   {
@@ -1085,7 +1086,7 @@
       "enem_2018_linguagens_q33_ctx1"
     ],
     "disciplinas": [
-      "portugues"
+      "interpretacao"
     ]
   },
   {
@@ -1114,7 +1115,7 @@
     ],
     "disciplinas": [
       "artes",
-      "portugues"
+      "interpretacao"
     ]
   },
   {
@@ -1142,8 +1143,8 @@
       "enem_2018_linguagens_q35_ctx1"
     ],
     "disciplinas": [
-      "literatura",
-      "portugues"
+      "interpretacao",
+      "literatura"
     ]
   },
   {
@@ -1171,8 +1172,8 @@
       "enem_2018_linguagens_q36_ctx1"
     ],
     "disciplinas": [
-      "literatura",
-      "portugues"
+      "interpretacao",
+      "literatura"
     ]
   },
   {
@@ -1189,7 +1190,8 @@
     "tags": [
       "linguística e variação linguística",
       "cultura e identidade",
-      "interpretação de texto"
+      "interpretação de texto",
+      "variação linguística"
     ],
     "difficulty": 6,
     "year": 2018,
@@ -1200,7 +1202,8 @@
       "enem_2018_linguagens_q37_ctx1"
     ],
     "disciplinas": [
-      "portugues"
+      "gramatica",
+      "interpretacao"
     ]
   },
   {
@@ -1217,7 +1220,8 @@
     "tags": [
       "interpretação de texto",
       "gêneros textuais",
-      "linguística e variação linguística"
+      "linguística e variação linguística",
+      "semântica"
     ],
     "difficulty": 6,
     "year": 2018,
@@ -1229,7 +1233,8 @@
       "enem_2018_linguagens_q38_ctx1"
     ],
     "disciplinas": [
-      "portugues"
+      "gramatica",
+      "interpretacao"
     ]
   },
   {
@@ -1257,7 +1262,7 @@
       "enem_2018_linguagens_q39_ctx1"
     ],
     "disciplinas": [
-      "portugues"
+      "interpretacao"
     ]
   },
   {
@@ -1284,7 +1289,7 @@
       "enem_2018_linguagens_q40_ctx1"
     ],
     "disciplinas": [
-      "portugues"
+      "interpretacao"
     ]
   },
   {
@@ -1313,7 +1318,7 @@
       "enem_2018_linguagens_q41_ctx1"
     ],
     "disciplinas": [
-      "portugues"
+      "interpretacao"
     ]
   },
   {
@@ -1341,8 +1346,8 @@
       "enem_2018_linguagens_q42_ctx1"
     ],
     "disciplinas": [
-      "literatura",
-      "portugues"
+      "interpretacao",
+      "literatura"
     ]
   },
   {
@@ -1369,7 +1374,7 @@
       "enem_2018_linguagens_q43_ctx1"
     ],
     "disciplinas": [
-      "portugues"
+      "interpretacao"
     ]
   },
   {
@@ -1397,7 +1402,7 @@
       "enem_2018_linguagens_q44_ctx1"
     ],
     "disciplinas": [
-      "portugues"
+      "interpretacao"
     ]
   },
   {
@@ -1425,7 +1430,7 @@
       "enem_2018_linguagens_q45_ctx2"
     ],
     "disciplinas": [
-      "portugues"
+      "interpretacao"
     ]
   }
 ]

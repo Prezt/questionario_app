@@ -37,7 +37,8 @@
     "images": [],
     "tags": [
       "estatística",
-      "probabilidade"
+      "probabilidade",
+      "frações"
     ],
     "year": 2022,
     "test": "ENEM",
@@ -62,7 +63,8 @@
       "figuras/q138_2022_fig1.png"
     ],
     "tags": [
-      "estatística"
+      "estatística",
+      "operações básicas"
     ],
     "year": 2022,
     "test": "ENEM",
@@ -86,7 +88,9 @@
     "images": [],
     "tags": [
       "aritmética e números",
-      "geometria plana"
+      "geometria plana",
+      "proporção",
+      "regra de três"
     ],
     "year": 2022,
     "test": "ENEM",
@@ -136,7 +140,8 @@
       "figuras/q141_2022_fig1.png"
     ],
     "tags": [
-      "probabilidade"
+      "probabilidade",
+      "frações"
     ],
     "year": 2022,
     "test": "ENEM",
@@ -193,7 +198,8 @@
     ],
     "tags": [
       "geometria espacial",
-      "geometria plana"
+      "geometria plana",
+      "frações"
     ],
     "year": 2022,
     "test": "ENEM",
@@ -220,7 +226,8 @@
     ],
     "tags": [
       "aritmética e números",
-      "álgebra"
+      "álgebra",
+      "operações básicas"
     ],
     "year": 2022,
     "test": "ENEM",
@@ -244,7 +251,8 @@
     "images": [],
     "tags": [
       "aritmética e números",
-      "matemática financeira"
+      "matemática financeira",
+      "proporção"
     ],
     "year": 2022,
     "test": "ENEM",
@@ -290,7 +298,10 @@
     },
     "images": [],
     "tags": [
-      "aritmética e números"
+      "aritmética e números",
+      "proporção",
+      "regra de três",
+      "operações básicas"
     ],
     "year": 2022,
     "test": "ENEM",
@@ -314,7 +325,9 @@
     "images": [],
     "tags": [
       "gravitação e astronomia",
-      "mecânica newtoniana"
+      "mecânica newtoniana",
+      "frações",
+      "proporção"
     ],
     "year": 2022,
     "test": "ENEM",
@@ -364,7 +377,8 @@
     ],
     "tags": [
       "geometria analítica",
-      "álgebra"
+      "álgebra",
+      "frações"
     ],
     "year": 2022,
     "test": "ENEM",
@@ -388,7 +402,8 @@
     },
     "images": [],
     "tags": [
-      "aritmética e números"
+      "aritmética e números",
+      "proporção"
     ],
     "year": 2022,
     "test": "ENEM",
@@ -416,7 +431,8 @@
     ],
     "tags": [
       "aritmética e números",
-      "geometria plana"
+      "geometria plana",
+      "proporção"
     ],
     "year": 2022,
     "test": "ENEM",
@@ -443,7 +459,8 @@
     ],
     "tags": [
       "geometria espacial",
-      "geometria plana"
+      "geometria plana",
+      "proporção"
     ],
     "year": 2022,
     "test": "ENEM",
@@ -466,7 +483,8 @@
     },
     "images": [],
     "tags": [
-      "estatística"
+      "estatística",
+      "proporção"
     ],
     "year": 2022,
     "test": "ENEM",
@@ -491,7 +509,8 @@
     "images": [],
     "tags": [
       "análise combinatória",
-      "probabilidade"
+      "probabilidade",
+      "frações"
     ],
     "year": 2022,
     "test": "ENEM",
@@ -522,7 +541,9 @@
       "figuras/q156_2022_fig7.png"
     ],
     "tags": [
-      "geometria plana"
+      "geometria plana",
+      "frações",
+      "proporção"
     ],
     "year": 2022,
     "test": "ENEM",
@@ -655,7 +676,9 @@
     ],
     "tags": [
       "aritmética e números",
-      "geometria plana"
+      "geometria plana",
+      "proporção",
+      "regra de três"
     ],
     "year": 2022,
     "test": "ENEM",
@@ -706,7 +729,8 @@
     },
     "images": [],
     "tags": [
-      "estatística"
+      "estatística",
+      "proporção"
     ],
     "year": 2022,
     "test": "ENEM",
@@ -730,7 +754,8 @@
     },
     "images": [],
     "tags": [
-      "aritmética e números"
+      "aritmética e números",
+      "regra de três"
     ],
     "year": 2022,
     "test": "ENEM",
@@ -802,7 +827,9 @@
     },
     "images": [],
     "tags": [
-      "matemática financeira"
+      "matemática financeira",
+      "operações básicas",
+      "proporção"
     ],
     "year": 2022,
     "test": "ENEM",
@@ -852,7 +879,9 @@
     "images": [],
     "tags": [
       "geometria espacial",
-      "geometria plana"
+      "geometria plana",
+      "frações",
+      "proporção"
     ],
     "year": 2022,
     "test": "ENEM",
@@ -878,7 +907,8 @@
       "figuras/q170_2022_fig2.png"
     ],
     "tags": [
-      "aritmética e números"
+      "aritmética e números",
+      "proporção"
     ],
     "year": 2022,
     "test": "ENEM",
@@ -901,7 +931,8 @@
     },
     "images": [],
     "tags": [
-      "estatística"
+      "estatística",
+      "frações"
     ],
     "year": 2022,
     "test": "ENEM",

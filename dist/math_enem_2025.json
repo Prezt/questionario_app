@@ -12,7 +12,9 @@
     "images": [],
     "tags": [
       "aritmética e números",
-      "álgebra"
+      "álgebra",
+      "proporção",
+      "regra de três"
     ],
     "year": 2025,
     "test": "ENEM",
@@ -39,7 +41,8 @@
     "tags": [
       "aritmética e números",
       "estatística",
-      "probabilidade"
+      "probabilidade",
+      "frações"
     ],
     "year": 2025,
     "test": "ENEM",
@@ -96,7 +99,8 @@
     ],
     "tags": [
       "geometria plana",
-      "álgebra"
+      "álgebra",
+      "regra de três"
     ],
     "year": 2025,
     "test": "ENEM",
@@ -120,7 +124,8 @@
     "images": [],
     "tags": [
       "aritmética e números",
-      "álgebra"
+      "álgebra",
+      "proporção"
     ],
     "year": 2025,
     "test": "ENEM",
@@ -144,7 +149,8 @@
     "images": [],
     "tags": [
       "aritmética e números",
-      "álgebra"
+      "álgebra",
+      "proporção"
     ],
     "year": 2025,
     "test": "ENEM",
@@ -167,7 +173,8 @@
     },
     "images": [],
     "tags": [
-      "estatística"
+      "estatística",
+      "regra de três"
     ],
     "year": 2025,
     "test": "ENEM",
@@ -242,7 +249,9 @@
     ],
     "tags": [
       "estatística",
-      "funções"
+      "funções",
+      "proporção",
+      "regra de três"
     ],
     "year": 2025,
     "test": "ENEM",
@@ -291,7 +300,8 @@
     ],
     "tags": [
       "aritmética e números",
-      "estatística"
+      "estatística",
+      "proporção"
     ],
     "year": 2025,
     "test": "ENEM",
@@ -316,7 +326,9 @@
       "figuras/q148_2025_fig2.png"
     ],
     "tags": [
-      "aritmética e números"
+      "aritmética e números",
+      "proporção",
+      "regra de três"
     ],
     "year": 2025,
     "test": "ENEM",
@@ -412,7 +424,8 @@
     "images": [],
     "tags": [
       "análise combinatória",
-      "probabilidade"
+      "probabilidade",
+      "frações"
     ],
     "year": 2025,
     "test": "ENEM",
@@ -512,7 +525,9 @@
       "figuras/q156_2025_fig1.png"
     ],
     "tags": [
-      "aritmética e números"
+      "aritmética e números",
+      "proporção",
+      "regra de três"
     ],
     "year": 2025,
     "test": "ENEM",
@@ -564,7 +579,8 @@
     "tags": [
       "aritmética e números",
       "matemática financeira",
-      "álgebra"
+      "álgebra",
+      "proporção"
     ],
     "year": 2025,
     "test": "ENEM",
@@ -615,7 +631,8 @@
     "tags": [
       "estatística",
       "funções",
-      "trigonometria"
+      "trigonometria",
+      "frações"
     ],
     "year": 2025,
     "test": "ENEM",
@@ -642,7 +659,8 @@
     "tags": [
       "cartografia",
       "geometria plana",
-      "álgebra"
+      "álgebra",
+      "proporção"
     ],
     "year": 2025,
     "test": "ENEM",
@@ -667,7 +685,8 @@
     "tags": [
       "aritmética e números",
       "matemática financeira",
-      "álgebra"
+      "álgebra",
+      "proporção"
     ],
     "year": 2025,
     "test": "ENEM",
@@ -720,7 +739,8 @@
     ],
     "tags": [
       "geometria plana",
-      "trigonometria"
+      "trigonometria",
+      "regra de três"
     ],
     "year": 2025,
     "test": "ENEM",
@@ -797,7 +817,9 @@
     "tags": [
       "aritmética e números",
       "estatística",
-      "matemática financeira"
+      "matemática financeira",
+      "frações",
+      "regra de três"
     ],
     "year": 2025,
     "test": "ENEM",
@@ -1022,7 +1044,8 @@
     "images": [],
     "tags": [
       "aritmética e números",
-      "mecânica newtoniana"
+      "mecânica newtoniana",
+      "regra de três"
     ],
     "year": 2025,
     "test": "ENEM",
@@ -1072,7 +1095,8 @@
     "images": [],
     "tags": [
       "análise combinatória",
-      "probabilidade"
+      "probabilidade",
+      "frações"
     ],
     "year": 2025,
     "test": "ENEM",
@@ -1096,7 +1120,8 @@
     "images": [],
     "tags": [
       "aritmética e números",
-      "mecânica newtoniana"
+      "mecânica newtoniana",
+      "proporção"
     ],
     "year": 2025,
     "test": "ENEM",

@@ -25,8 +25,7 @@
       "enem_2025_linguagens_q1_ctx1"
     ],
     "disciplinas": [
-      "lingua_estrangeira",
-      "portugues"
+      "ingles"
     ]
   },
   {
@@ -55,8 +54,7 @@
       "enem_2025_linguagens_q2_ctx1"
     ],
     "disciplinas": [
-      "lingua_estrangeira",
-      "portugues"
+      "ingles"
     ]
   },
   {
@@ -86,9 +84,8 @@
       "enem_2025_linguagens_q3_ctx1"
     ],
     "disciplinas": [
-      "lingua_estrangeira",
-      "literatura",
-      "portugues"
+      "ingles",
+      "literatura"
     ]
   },
   {
@@ -117,8 +114,7 @@
       "enem_2025_linguagens_q4_ctx1"
     ],
     "disciplinas": [
-      "lingua_estrangeira",
-      "portugues"
+      "ingles"
     ]
   },
   {
@@ -146,8 +142,7 @@
     "answer": "a",
     "difficulty": 3,
     "disciplinas": [
-      "lingua_estrangeira",
-      "portugues"
+      "ingles"
     ]
   },
   {
@@ -176,8 +171,7 @@
       "enem_2025_linguagens_q1_ctx2"
     ],
     "disciplinas": [
-      "lingua_estrangeira",
-      "portugues"
+      "espanhol"
     ]
   },
   {
@@ -206,8 +200,7 @@
       "enem_2025_linguagens_q2_ctx2"
     ],
     "disciplinas": [
-      "lingua_estrangeira",
-      "portugues"
+      "espanhol"
     ]
   },
   {
@@ -226,7 +219,8 @@
       "gêneros textuais",
       "linguística e variação linguística",
       "literatura brasileira",
-      "língua espanhola"
+      "língua espanhola",
+      "morfologia"
     ],
     "year": 2025,
     "area": "linguagens",
@@ -237,9 +231,8 @@
       "enem_2025_linguagens_q3_ctx2"
     ],
     "disciplinas": [
-      "lingua_estrangeira",
-      "literatura",
-      "portugues"
+      "espanhol",
+      "literatura"
     ]
   },
   {
@@ -259,7 +252,9 @@
     "tags": [
       "gêneros textuais",
       "linguística e variação linguística",
-      "língua espanhola"
+      "língua espanhola",
+      "variação linguística",
+      "morfologia"
     ],
     "year": 2025,
     "area": "linguagens",
@@ -267,8 +262,7 @@
     "answer": "d",
     "difficulty": 5,
     "disciplinas": [
-      "lingua_estrangeira",
-      "portugues"
+      "espanhol"
     ]
   },
   {
@@ -298,7 +292,7 @@
       "enem_2025_linguagens_q5_ctx1"
     ],
     "disciplinas": [
-      "lingua_estrangeira"
+      "espanhol"
     ]
   },
   {
@@ -323,7 +317,8 @@
     "contextId": "enem_2025_linguagens_q6_q10_ctx1",
     "difficulty": 5,
     "disciplinas": [
-      "portugues"
+      "gramatica",
+      "interpretacao"
     ]
   },
   {
@@ -347,7 +342,7 @@
     "contextId": "enem_2025_linguagens_q6_q10_ctx1",
     "difficulty": 5,
     "disciplinas": [
-      "portugues"
+      "interpretacao"
     ]
   },
   {
@@ -373,7 +368,8 @@
     "contextId": "enem_2025_linguagens_q6_q10_ctx1",
     "difficulty": 4,
     "disciplinas": [
-      "portugues"
+      "gramatica",
+      "interpretacao"
     ]
   },
   {
@@ -399,7 +395,8 @@
     "contextId": "enem_2025_linguagens_q6_q10_ctx1",
     "difficulty": 4,
     "disciplinas": [
-      "portugues"
+      "gramatica",
+      "interpretacao"
     ]
   },
   {
@@ -425,7 +422,8 @@
     "contextId": "enem_2025_linguagens_q6_q10_ctx1",
     "difficulty": 7,
     "disciplinas": [
-      "portugues"
+      "gramatica",
+      "interpretacao"
     ]
   },
   {
@@ -478,7 +476,7 @@
       "enem_2025_linguagens_q12_ctx1"
     ],
     "disciplinas": [
-      "portugues"
+      "interpretacao"
     ]
   },
   {
@@ -506,7 +504,8 @@
       "enem_2025_linguagens_q13_ctx1"
     ],
     "disciplinas": [
-      "portugues"
+      "gramatica",
+      "interpretacao"
     ]
   },
   {
@@ -533,8 +532,8 @@
     "answer": "c",
     "difficulty": 5,
     "disciplinas": [
-      "literatura",
-      "portugues"
+      "interpretacao",
+      "literatura"
     ]
   },
   {
@@ -587,8 +586,8 @@
       "enem_2025_linguagens_q16_ctx1"
     ],
     "disciplinas": [
-      "literatura",
-      "portugues"
+      "interpretacao",
+      "literatura"
     ]
   },
   {
@@ -616,8 +615,8 @@
       "enem_2025_linguagens_q17_ctx1"
     ],
     "disciplinas": [
-      "literatura",
-      "portugues"
+      "interpretacao",
+      "literatura"
     ]
   },
   {
@@ -646,7 +645,7 @@
       "enem_2025_linguagens_q18_ctx1"
     ],
     "disciplinas": [
-      "portugues"
+      "interpretacao"
     ]
   },
   {
@@ -674,7 +673,7 @@
       "enem_2025_linguagens_q19_ctx1"
     ],
     "disciplinas": [
-      "portugues"
+      "interpretacao"
     ]
   },
   {
@@ -690,7 +689,8 @@
     "images": [],
     "tags": [
       "cultura e identidade",
-      "linguística e variação linguística"
+      "linguística e variação linguística",
+      "semântica"
     ],
     "year": 2025,
     "area": "linguagens",
@@ -701,7 +701,7 @@
       "enem_2025_linguagens_q20_ctx1"
     ],
     "disciplinas": [
-      "portugues"
+      "gramatica"
     ]
   },
   {
@@ -729,8 +729,8 @@
       "enem_2025_linguagens_21_ctx1"
     ],
     "disciplinas": [
-      "literatura",
-      "portugues"
+      "interpretacao",
+      "literatura"
     ]
   },
   {
@@ -812,7 +812,7 @@
     "answer": "b",
     "difficulty": 4,
     "disciplinas": [
-      "portugues"
+      "interpretacao"
     ]
   },
   {
@@ -840,8 +840,9 @@
       "enem_2025_linguagens_q25_ctx1"
     ],
     "disciplinas": [
-      "literatura",
-      "portugues"
+      "gramatica",
+      "interpretacao",
+      "literatura"
     ]
   },
   {
@@ -860,7 +861,8 @@
     "tags": [
       "cultura e identidade",
       "linguística e variação linguística",
-      "literatura brasileira"
+      "literatura brasileira",
+      "variação linguística"
     ],
     "year": 2025,
     "area": "linguagens",
@@ -868,8 +870,8 @@
     "answer": "b",
     "difficulty": 3,
     "disciplinas": [
-      "literatura",
-      "portugues"
+      "gramatica",
+      "literatura"
     ]
   },
   {
@@ -897,7 +899,7 @@
     "answer": "a",
     "difficulty": 4,
     "disciplinas": [
-      "educacao_fisica"
+      "interpretacao"
     ]
   },
   {
@@ -924,8 +926,8 @@
       "enem_2025_linguagens_q28_ctx1"
     ],
     "disciplinas": [
-      "literatura",
-      "portugues"
+      "interpretacao",
+      "literatura"
     ]
   },
   {
@@ -980,7 +982,8 @@
       "enem_2025_linguagens_q30_ctx1"
     ],
     "disciplinas": [
-      "portugues"
+      "gramatica",
+      "interpretacao"
     ]
   },
   {
@@ -1007,8 +1010,9 @@
     "answer": "d",
     "difficulty": 6,
     "disciplinas": [
-      "literatura",
-      "portugues"
+      "gramatica",
+      "interpretacao",
+      "literatura"
     ]
   },
   {
@@ -1035,7 +1039,7 @@
       "enem_2025_linguagens_q32_ctx1"
     ],
     "disciplinas": [
-      "portugues"
+      "interpretacao"
     ]
   },
   {
@@ -1061,7 +1065,7 @@
     "answer": "b",
     "difficulty": 3,
     "disciplinas": [
-      "portugues"
+      "interpretacao"
     ]
   },
   {
@@ -1080,7 +1084,8 @@
     "tags": [
       "gêneros textuais",
       "linguística e variação linguística",
-      "literatura brasileira"
+      "literatura brasileira",
+      "funções da linguagem"
     ],
     "year": 2025,
     "area": "linguagens",
@@ -1088,8 +1093,9 @@
     "answer": "c",
     "difficulty": 6,
     "disciplinas": [
-      "literatura",
-      "portugues"
+      "gramatica",
+      "interpretacao",
+      "literatura"
     ]
   },
   {
@@ -1117,7 +1123,7 @@
       "enem_2025_linguagens_q35_ctx1"
     ],
     "disciplinas": [
-      "portugues"
+      "interpretacao"
     ]
   },
   {
@@ -1133,7 +1139,8 @@
     "images": [],
     "tags": [
       "interpretação de texto",
-      "linguística e variação linguística"
+      "linguística e variação linguística",
+      "variação linguística"
     ],
     "year": 2025,
     "area": "linguagens",
@@ -1144,7 +1151,8 @@
       "enem_2025_linguagens_q36_ctx1"
     ],
     "disciplinas": [
-      "portugues"
+      "gramatica",
+      "interpretacao"
     ]
   },
   {
@@ -1173,8 +1181,8 @@
       "enem_2025_linguagens_q37_ctx2"
     ],
     "disciplinas": [
-      "literatura",
-      "portugues"
+      "interpretacao",
+      "literatura"
     ]
   },
   {
@@ -1202,8 +1210,8 @@
       "enem_2025_linguagens_q38_ctx1"
     ],
     "disciplinas": [
-      "literatura",
-      "portugues"
+      "interpretacao",
+      "literatura"
     ]
   },
   {
@@ -1230,7 +1238,7 @@
       "enem_2025_linguagens_q39_ctx1"
     ],
     "disciplinas": [
-      "portugues"
+      "interpretacao"
     ]
   },
   {
@@ -1257,8 +1265,8 @@
       "enem_2025_linguagens_q40_ctx1"
     ],
     "disciplinas": [
-      "literatura",
-      "portugues"
+      "interpretacao",
+      "literatura"
     ]
   },
   {
@@ -1289,7 +1297,7 @@
     ],
     "disciplinas": [
       "artes",
-      "portugues"
+      "gramatica"
     ]
   },
   {
@@ -1304,7 +1312,8 @@
     },
     "images": [],
     "tags": [
-      "linguística e variação linguística"
+      "linguística e variação linguística",
+      "figuras de linguagem"
     ],
     "year": 2025,
     "area": "linguagens",
@@ -1315,7 +1324,7 @@
       "enem_2025_linguagens_q42_ctx1"
     ],
     "disciplinas": [
-      "portugues"
+      "gramatica"
     ]
   },
   {
@@ -1343,7 +1352,7 @@
       "enem_2025_linguagens_q43_ctx1"
     ],
     "disciplinas": [
-      "portugues"
+      "interpretacao"
     ]
   },
   {
@@ -1370,7 +1379,7 @@
       "enem_2025_linguagens_q44_ctx1"
     ],
     "disciplinas": [
-      "portugues"
+      "interpretacao"
     ]
   },
   {
@@ -1399,7 +1408,8 @@
     ],
     "disciplinas": [
       "artes",
-      "portugues"
+      "gramatica",
+      "interpretacao"
     ]
   }
 ]

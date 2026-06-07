@@ -61,7 +61,8 @@
     "images": [],
     "tags": [
       "estatística",
-      "probabilidade"
+      "probabilidade",
+      "proporção"
     ],
     "year": 2023,
     "test": "ENEM",
@@ -135,7 +136,8 @@
     "images": [],
     "tags": [
       "estatística",
-      "probabilidade"
+      "probabilidade",
+      "frações"
     ],
     "year": 2023,
     "test": "ENEM",
@@ -183,7 +185,8 @@
     },
     "images": [],
     "tags": [
-      "probabilidade"
+      "probabilidade",
+      "proporção"
     ],
     "year": 2023,
     "test": "ENEM",
@@ -339,7 +342,9 @@
     ],
     "tags": [
       "aritmética e números",
-      "geometria plana"
+      "geometria plana",
+      "proporção",
+      "regra de três"
     ],
     "year": 2023,
     "test": "ENEM",
@@ -363,7 +368,8 @@
     },
     "images": [],
     "tags": [
-      "álgebra"
+      "álgebra",
+      "proporção"
     ],
     "year": 2023,
     "test": "ENEM",
@@ -545,7 +551,8 @@
     ],
     "tags": [
       "aritmética e números",
-      "estatística"
+      "estatística",
+      "proporção"
     ],
     "year": 2023,
     "test": "ENEM",
@@ -568,7 +575,8 @@
     },
     "images": [],
     "tags": [
-      "matemática financeira"
+      "matemática financeira",
+      "proporção"
     ],
     "year": 2023,
     "test": "ENEM",
@@ -592,7 +600,8 @@
     "images": [],
     "tags": [
       "funções exponenciais",
-      "logaritmos"
+      "logaritmos",
+      "regra de três"
     ],
     "year": 2023,
     "test": "ENEM",
@@ -639,7 +648,8 @@
     },
     "images": [],
     "tags": [
-      "matemática financeira"
+      "matemática financeira",
+      "proporção"
     ],
     "year": 2023,
     "test": "ENEM",
@@ -663,7 +673,8 @@
     "images": [],
     "tags": [
       "funções",
-      "matemática financeira"
+      "matemática financeira",
+      "proporção"
     ],
     "year": 2023,
     "test": "ENEM",
@@ -694,7 +705,8 @@
     ],
     "tags": [
       "funções",
-      "geometria plana"
+      "geometria plana",
+      "regra de três"
     ],
     "year": 2023,
     "test": "ENEM",
@@ -791,7 +803,8 @@
     },
     "images": [],
     "tags": [
-      "aritmética e números"
+      "aritmética e números",
+      "proporção"
     ],
     "year": 2023,
     "test": "ENEM",
@@ -815,7 +828,8 @@
     },
     "images": [],
     "tags": [
-      "probabilidade"
+      "probabilidade",
+      "frações"
     ],
     "year": 2023,
     "test": "ENEM",
@@ -842,7 +856,8 @@
     ],
     "tags": [
       "progressão geométrica",
-      "funções exponenciais"
+      "funções exponenciais",
+      "frações"
     ],
     "year": 2023,
     "test": "ENEM",
@@ -866,7 +881,8 @@
     "images": [],
     "tags": [
       "funções",
-      "álgebra"
+      "álgebra",
+      "proporção"
     ],
     "year": 2023,
     "test": "ENEM",
@@ -919,7 +935,8 @@
       "figuras/q172_2023_fig2.png"
     ],
     "tags": [
-      "geometria plana"
+      "geometria plana",
+      "operações básicas"
     ],
     "year": 2023,
     "test": "ENEM",
@@ -943,7 +960,9 @@
     },
     "images": [],
     "tags": [
-      "aritmética e números"
+      "aritmética e números",
+      "proporção",
+      "regra de três"
     ],
     "year": 2023,
     "test": "ENEM",
@@ -1023,7 +1042,8 @@
     ],
     "tags": [
       "aritmética e números",
-      "geometria plana"
+      "geometria plana",
+      "frações"
     ],
     "year": 2023,
     "test": "ENEM",
