@@ -23,8 +23,7 @@
     ],
     "language": "en",
     "disciplinas": [
-      "ingles",
-      "portugues"
+      "ingles"
     ]
   },
   {
@@ -51,8 +50,7 @@
     ],
     "language": "en",
     "disciplinas": [
-      "ingles",
-      "portugues"
+      "ingles"
     ]
   },
   {
@@ -79,8 +77,7 @@
       "enem_2021_lang_q3_ctx1"
     ],
     "disciplinas": [
-      "ingles",
-      "portugues"
+      "ingles"
     ]
   },
   {
@@ -132,8 +129,7 @@
       "enem_2021_lang_q5_ctx1"
     ],
     "disciplinas": [
-      "ingles",
-      "portugues"
+      "ingles"
     ]
   },
   {
@@ -160,8 +156,7 @@
       "enem_2021_lang_es_q1_ctx1"
     ],
     "disciplinas": [
-      "espanhol",
-      "portugues"
+      "espanhol"
     ]
   },
   {
@@ -189,8 +184,7 @@
       "enem_2021_lang_es_q2_ctx1"
     ],
     "disciplinas": [
-      "espanhol",
-      "portugues"
+      "espanhol"
     ]
   },
   {
@@ -218,8 +212,7 @@
       "enem_2021_lang_es_q3_ctx1"
     ],
     "disciplinas": [
-      "espanhol",
-      "portugues"
+      "espanhol"
     ]
   },
   {
@@ -247,8 +240,7 @@
       "enem_2021_lang_es_q4_ctx1"
     ],
     "disciplinas": [
-      "espanhol",
-      "portugues"
+      "espanhol"
     ]
   },
   {
@@ -278,8 +270,7 @@
       "enem_2021_lang_es_q5_ctx1"
     ],
     "disciplinas": [
-      "espanhol",
-      "portugues"
+      "espanhol"
     ]
   },
   {
@@ -306,7 +297,7 @@
       "enem_2021_linguagens_q6_ctx1"
     ],
     "disciplinas": [
-      "portugues"
+      "interpretacao"
     ]
   },
   {
@@ -333,8 +324,8 @@
       "enem_2021_linguagens_q7_ctx1"
     ],
     "disciplinas": [
-      "literatura",
-      "portugues"
+      "gramatica",
+      "literatura"
     ]
   },
   {
@@ -361,7 +352,7 @@
       "enem_2021_linguagens_q8_ctx1"
     ],
     "disciplinas": [
-      "portugues"
+      "interpretacao"
     ]
   },
   {
@@ -388,8 +379,8 @@
       "enem_2021_linguagens_q9_ctx1"
     ],
     "disciplinas": [
-      "literatura",
-      "portugues"
+      "gramatica",
+      "literatura"
     ]
   },
   {
@@ -416,7 +407,7 @@
       "enem_2021_linguagens_q10_ctx1"
     ],
     "disciplinas": [
-      "portugues"
+      "interpretacao"
     ]
   },
   {
@@ -470,7 +461,7 @@
       "enem_2021_linguagens_q12_ctx1"
     ],
     "disciplinas": [
-      "portugues"
+      "interpretacao"
     ]
   },
   {
@@ -497,7 +488,7 @@
       "enem_2021_linguagens_q13_ctx1"
     ],
     "disciplinas": [
-      "portugues"
+      "interpretacao"
     ]
   },
   {
@@ -526,7 +517,7 @@
     ],
     "disciplinas": [
       "artes",
-      "portugues"
+      "interpretacao"
     ]
   },
   {
@@ -554,8 +545,8 @@
       "enem_2021_linguagens_q15_ctx2"
     ],
     "disciplinas": [
-      "literatura",
-      "portugues"
+      "interpretacao",
+      "literatura"
     ]
   },
   {
@@ -584,7 +575,7 @@
       "enem_2021_linguagens_q16_ctx1"
     ],
     "disciplinas": [
-      "portugues"
+      "interpretacao"
     ]
   },
   {
@@ -611,7 +602,8 @@
       "enem_2021_linguagens_q17_ctx1"
     ],
     "disciplinas": [
-      "portugues"
+      "gramatica",
+      "interpretacao"
     ]
   },
   {
@@ -666,7 +658,7 @@
       "enem_2021_linguagens_q19_ctx1"
     ],
     "disciplinas": [
-      "portugues"
+      "interpretacao"
     ]
   },
   {
@@ -694,7 +686,7 @@
       "enem_2021_linguagens_q20_ctx1"
     ],
     "disciplinas": [
-      "portugues"
+      "interpretacao"
     ]
   },
   {
@@ -722,7 +714,7 @@
       "enem_2021_linguagens_q21_ctx2"
     ],
     "disciplinas": [
-      "portugues"
+      "interpretacao"
     ]
   },
   {
@@ -749,7 +741,8 @@
       "enem_2021_linguagens_q22_ctx1"
     ],
     "disciplinas": [
-      "portugues"
+      "gramatica",
+      "interpretacao"
     ]
   },
   {
@@ -776,7 +769,7 @@
       "enem_2021_linguagens_q23_ctx1"
     ],
     "disciplinas": [
-      "portugues"
+      "interpretacao"
     ]
   },
   {
@@ -803,8 +796,8 @@
       "enem_2021_linguagens_q24_ctx1"
     ],
     "disciplinas": [
-      "literatura",
-      "portugues"
+      "interpretacao",
+      "literatura"
     ]
   },
   {
@@ -831,7 +824,7 @@
       "enem_2021_linguagens_q25_ctx1"
     ],
     "disciplinas": [
-      "portugues"
+      "interpretacao"
     ]
   },
   {
@@ -853,7 +846,7 @@
     "answer": "d",
     "contextId": "enem_2021_linguagens_q26_ctx1",
     "disciplinas": [
-      "portugues"
+      "interpretacao"
     ]
   },
   {
@@ -880,7 +873,7 @@
     "contextId": "enem_2021_linguagens_q27_ctx1",
     "disciplinas": [
       "artes",
-      "portugues"
+      "interpretacao"
     ]
   },
   {
@@ -905,7 +898,8 @@
     "answer": "b",
     "contextId": "enem_2021_linguagens_q28_ctx1",
     "disciplinas": [
-      "portugues"
+      "gramatica",
+      "interpretacao"
     ]
   },
   {
@@ -931,7 +925,7 @@
     "answer": "c",
     "contextId": "enem_2021_linguagens_q29_ctx1",
     "disciplinas": [
-      "portugues"
+      "interpretacao"
     ]
   },
   {
@@ -956,8 +950,8 @@
     "answer": "e",
     "contextId": "enem_2021_linguagens_q30_ctx1",
     "disciplinas": [
-      "literatura",
-      "portugues"
+      "interpretacao",
+      "literatura"
     ]
   },
   {
@@ -983,7 +977,7 @@
     "answer": "a",
     "contextId": "enem_2021_linguagens_q31_ctx1",
     "disciplinas": [
-      "portugues"
+      "interpretacao"
     ]
   },
   {
@@ -1008,7 +1002,7 @@
     "answer": "d",
     "contextId": "enem_2021_linguagens_q32_ctx1",
     "disciplinas": [
-      "portugues"
+      "interpretacao"
     ]
   },
   {
@@ -1033,7 +1027,7 @@
     "answer": "a",
     "contextId": "enem_2021_linguagens_q33_ctx1",
     "disciplinas": [
-      "portugues"
+      "interpretacao"
     ]
   },
   {
@@ -1059,7 +1053,7 @@
     "answer": "b",
     "contextId": "enem_2021_linguagens_q34_ctx1",
     "disciplinas": [
-      "portugues"
+      "interpretacao"
     ]
   },
   {
@@ -1084,8 +1078,8 @@
     "answer": "d",
     "contextId": "enem_2021_linguagens_q35_ctx1",
     "disciplinas": [
-      "literatura",
-      "portugues"
+      "interpretacao",
+      "literatura"
     ]
   },
   {
@@ -1133,8 +1127,8 @@
     "answer": "a",
     "contextId": "enem_2021_linguagens_q37_ctx1",
     "disciplinas": [
-      "literatura",
-      "portugues"
+      "interpretacao",
+      "literatura"
     ]
   },
   {
@@ -1159,8 +1153,8 @@
     "answer": "c",
     "contextId": "enem_2021_linguagens_q38_ctx1",
     "disciplinas": [
-      "literatura",
-      "portugues"
+      "interpretacao",
+      "literatura"
     ]
   },
   {
@@ -1185,8 +1179,8 @@
     "answer": "a",
     "contextId": "enem_2021_linguagens_q39_ctx1",
     "disciplinas": [
-      "literatura",
-      "portugues"
+      "interpretacao",
+      "literatura"
     ]
   },
   {
@@ -1211,8 +1205,8 @@
     "answer": "c",
     "contextId": "enem_2021_linguagens_q40_ctx1",
     "disciplinas": [
-      "literatura",
-      "portugues"
+      "interpretacao",
+      "literatura"
     ]
   },
   {
@@ -1237,8 +1231,8 @@
     "answer": "d",
     "contextId": "enem_2021_linguagens_q41_ctx1",
     "disciplinas": [
-      "literatura",
-      "portugues"
+      "interpretacao",
+      "literatura"
     ]
   },
   {
@@ -1289,8 +1283,9 @@
     "answer": "d",
     "contextId": "enem_2021_linguagens_q43_ctx1",
     "disciplinas": [
-      "literatura",
-      "portugues"
+      "gramatica",
+      "interpretacao",
+      "literatura"
     ]
   },
   {
@@ -1315,8 +1310,8 @@
     "answer": "d",
     "contextId": "enem_2021_linguagens_q44_ctx1",
     "disciplinas": [
-      "literatura",
-      "portugues"
+      "interpretacao",
+      "literatura"
     ]
   },
   {
@@ -1343,7 +1338,7 @@
     "contextId": "enem_2021_linguagens_q45_ctx1",
     "disciplinas": [
       "artes",
-      "portugues"
+      "interpretacao"
     ]
   }
 ]

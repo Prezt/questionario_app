@@ -124,6 +124,8 @@ const CHANGELOG = [
       'Picker da tela inicial reorganizado por disciplina com filtro "Multidisciplinar" para questões que cruzam mais de uma disciplina',
       'Tela de resumo agora mostra desempenho agrupado por disciplina antes do agrupamento por assunto',
       'Língua Estrangeira separada em Inglês e Espanhol como disciplinas independentes',
+      'Educação Física removida da taxonomia (poucas questões; questões realocadas para Interpretação de Texto)',
+      'Português dividido em Interpretação de Texto e Gramática; questões em inglês/espanhol agora classificam apenas como Inglês ou Espanhol',
     ],
   },
   {

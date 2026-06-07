@@ -2,19 +2,19 @@
 // Slugs are ascii lowercase; labels keep accents for display.
 
 export const DISCIPLINAS_BY_AREA = {
-  linguagens: ['portugues', 'literatura', 'ingles', 'espanhol', 'artes', 'educacao_fisica'],
+  linguagens: ['interpretacao', 'gramatica', 'literatura', 'ingles', 'espanhol', 'artes'],
   humanas:    ['historia', 'geografia', 'filosofia', 'sociologia'],
   nature:     ['fisica', 'quimica', 'biologia'],
   math:       ['matematica'],
 }
 
 export const DISCIPLINA_LABELS = {
-  portugues:          'Português',
+  interpretacao:      'Interpretação de Texto',
+  gramatica:          'Gramática',
   literatura:         'Literatura',
   ingles:             'Inglês',
   espanhol:           'Espanhol',
   artes:              'Artes',
-  educacao_fisica:    'Educação Física',
   historia:           'História',
   geografia:          'Geografia',
   filosofia:          'Filosofia',

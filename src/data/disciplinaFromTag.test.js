@@ -19,7 +19,9 @@ describe('disciplinasForTag', () => {
   })
 
   it('maps unambiguous linguagens tags', () => {
-    expect(disciplinasForTag('linguagens', 'interpretação de texto')).toEqual(['portugues'])
+    expect(disciplinasForTag('linguagens', 'interpretação de texto')).toEqual(['interpretacao'])
+    expect(disciplinasForTag('linguagens', 'gêneros textuais')).toEqual(['interpretacao'])
+    expect(disciplinasForTag('linguagens', 'linguística e variação linguística')).toEqual(['gramatica'])
     expect(disciplinasForTag('linguagens', 'literatura brasileira')).toEqual(['literatura'])
     expect(disciplinasForTag('linguagens', 'língua inglesa')).toEqual(['ingles'])
     expect(disciplinasForTag('linguagens', 'língua espanhola')).toEqual(['espanhol'])
@@ -42,8 +44,8 @@ describe('disciplinasForTag', () => {
     expect(disciplinasForTag('humanas', 'totally-made-up')).toEqual([])
   })
 
-  it('maps linguagens::comunicação e mídia to portugues', () => {
-    expect(disciplinasForTag('linguagens', 'comunicação e mídia')).toEqual(['portugues'])
+  it('maps linguagens::comunicação e mídia to interpretacao', () => {
+    expect(disciplinasForTag('linguagens', 'comunicação e mídia')).toEqual(['interpretacao'])
   })
 })
 
@@ -71,7 +73,7 @@ describe('disciplinasForQuestion', () => {
     })).toEqual(['biologia'])
   })
 
-  it('adds ingles when language is en, espanhol when language is es', () => {
+  it('returns only ingles/espanhol for foreign-language questions, ignoring tags', () => {
     expect(disciplinasForQuestion({
       area: 'linguagens',
       tags: [],
@@ -82,11 +84,17 @@ describe('disciplinasForQuestion', () => {
       tags: [],
       language: 'es',
     })).toEqual(['espanhol'])
+    // Tags must NOT pollute foreign-language questions
+    expect(disciplinasForQuestion({
+      area: 'linguagens',
+      tags: ['interpretação de texto', 'gêneros textuais'],
+      language: 'en',
+    })).toEqual(['ingles'])
     expect(disciplinasForQuestion({
       area: 'linguagens',
       tags: ['interpretação de texto'],
       language: 'es',
-    })).toEqual(['espanhol', 'portugues'])
+    })).toEqual(['espanhol'])
   })
 
   it('returns [] when no tag maps and no language hint', () => {

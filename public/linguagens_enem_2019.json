@@ -22,8 +22,7 @@
     "contextId": "enem_2019_linguagens_q1_q39_ctx1",
     "language": "en",
     "disciplinas": [
-      "ingles",
-      "portugues"
+      "ingles"
     ]
   },
   {
@@ -50,8 +49,7 @@
     "contextId": "enem_2019_linguagens_q2_q4_ctx1",
     "language": "en",
     "disciplinas": [
-      "ingles",
-      "portugues"
+      "ingles"
     ]
   },
   {
@@ -78,8 +76,7 @@
     "contextId": "enem_2019_linguagens_q1_q39_ctx1",
     "language": "en",
     "disciplinas": [
-      "ingles",
-      "portugues"
+      "ingles"
     ]
   },
   {
@@ -105,8 +102,7 @@
     "contextId": "enem_2019_linguagens_q2_q4_ctx1",
     "language": "en",
     "disciplinas": [
-      "ingles",
-      "portugues"
+      "ingles"
     ]
   },
   {
@@ -135,8 +131,7 @@
     ],
     "language": "es",
     "disciplinas": [
-      "espanhol",
-      "portugues"
+      "espanhol"
     ]
   },
   {
@@ -164,8 +159,7 @@
     "language": "es",
     "disciplinas": [
       "espanhol",
-      "literatura",
-      "portugues"
+      "literatura"
     ]
   },
   {
@@ -191,8 +185,7 @@
     "contextId": "enem_2019_linguagens_q1_q5_ctx1",
     "language": "es",
     "disciplinas": [
-      "espanhol",
-      "portugues"
+      "espanhol"
     ]
   },
   {
@@ -218,8 +211,7 @@
     "contextId": "enem_2019_linguagens_q1_q5_ctx1",
     "language": "es",
     "disciplinas": [
-      "espanhol",
-      "portugues"
+      "espanhol"
     ]
   },
   {
@@ -247,8 +239,7 @@
     "language": "es",
     "disciplinas": [
       "espanhol",
-      "literatura",
-      "portugues"
+      "literatura"
     ]
   },
   {
@@ -274,8 +265,7 @@
     "contextId": "enem_2019_linguagens_q1_q5_ctx1",
     "language": "es",
     "disciplinas": [
-      "espanhol",
-      "portugues"
+      "espanhol"
     ]
   },
   {
@@ -301,7 +291,7 @@
     "answer": "b",
     "contextId": "enem_2019_linguagens_q6_ctx1",
     "disciplinas": [
-      "portugues"
+      "interpretacao"
     ]
   },
   {
@@ -327,7 +317,7 @@
     "answer": "c",
     "contextId": "enem_2019_linguagens_q7_ctx1",
     "disciplinas": [
-      "portugues"
+      "interpretacao"
     ]
   },
   {
@@ -352,7 +342,7 @@
     "answer": "b",
     "contextId": "enem_2019_linguagens_q1_q39_ctx1",
     "disciplinas": [
-      "portugues"
+      "interpretacao"
     ]
   },
   {
@@ -377,7 +367,7 @@
     "answer": "a",
     "contextId": "enem_2019_linguagens_q1_q39_ctx1",
     "disciplinas": [
-      "portugues"
+      "interpretacao"
     ]
   },
   {
@@ -401,7 +391,7 @@
     "area": "linguagens",
     "answer": "a",
     "disciplinas": [
-      "portugues"
+      "interpretacao"
     ]
   },
   {
@@ -426,7 +416,7 @@
     "area": "linguagens",
     "answer": "d",
     "disciplinas": [
-      "portugues"
+      "interpretacao"
     ]
   },
   {
@@ -455,7 +445,7 @@
       "enem_2019_linguagens_q12_q36_ctx1"
     ],
     "disciplinas": [
-      "portugues"
+      "interpretacao"
     ]
   },
   {
@@ -480,8 +470,8 @@
     "answer": "b",
     "contextId": "enem_2019_linguagens_q13_ctx1",
     "disciplinas": [
-      "literatura",
-      "portugues"
+      "interpretacao",
+      "literatura"
     ]
   },
   {
@@ -507,8 +497,8 @@
     "answer": "e",
     "contextId": "enem_2019_linguagens_q1_q39_ctx1",
     "disciplinas": [
-      "literatura",
-      "portugues"
+      "interpretacao",
+      "literatura"
     ]
   },
   {
@@ -534,7 +524,7 @@
     "answer": "c",
     "contextId": "enem_2019_linguagens_q15_ctx1",
     "disciplinas": [
-      "portugues"
+      "interpretacao"
     ]
   },
   {
@@ -559,7 +549,7 @@
     "answer": "d",
     "contextId": "enem_2019_linguagens_q16_ctx1",
     "disciplinas": [
-      "portugues"
+      "interpretacao"
     ]
   },
   {
@@ -584,7 +574,7 @@
     "answer": "a",
     "contextId": "enem_2019_linguagens_q1_q39_ctx1",
     "disciplinas": [
-      "portugues"
+      "interpretacao"
     ]
   },
   {
@@ -609,7 +599,7 @@
     "answer": "a",
     "contextId": "enem_2019_linguagens_q1_q39_ctx1",
     "disciplinas": [
-      "portugues"
+      "interpretacao"
     ]
   },
   {
@@ -634,7 +624,7 @@
     "answer": "e",
     "contextId": "enem_2019_linguagens_q19_ctx1",
     "disciplinas": [
-      "portugues"
+      "interpretacao"
     ]
   },
   {
@@ -659,7 +649,7 @@
     "answer": "c",
     "contextId": "enem_2019_linguagens_q20_ctx1",
     "disciplinas": [
-      "portugues"
+      "interpretacao"
     ]
   },
   {
@@ -684,8 +674,8 @@
     "answer": "d",
     "contextId": "enem_2019_linguagens_q1_q39_ctx1",
     "disciplinas": [
-      "literatura",
-      "portugues"
+      "interpretacao",
+      "literatura"
     ]
   },
   {
@@ -710,8 +700,8 @@
     "answer": "a",
     "contextId": "enem_2019_linguagens_q22_ctx1",
     "disciplinas": [
-      "literatura",
-      "portugues"
+      "interpretacao",
+      "literatura"
     ]
   },
   {
@@ -738,7 +728,7 @@
     "contextId": "enem_2019_linguagens_q23_ctx1",
     "disciplinas": [
       "artes",
-      "portugues"
+      "interpretacao"
     ]
   },
   {
@@ -764,7 +754,8 @@
     "answer": "c",
     "contextId": "enem_2019_linguagens_q24_ctx1",
     "disciplinas": [
-      "portugues"
+      "gramatica",
+      "interpretacao"
     ]
   },
   {
@@ -789,8 +780,8 @@
     "area": "linguagens",
     "answer": "b",
     "disciplinas": [
-      "literatura",
-      "portugues"
+      "interpretacao",
+      "literatura"
     ]
   },
   {
@@ -818,7 +809,7 @@
       "enem_2019_linguagens_q12_q36_ctx1"
     ],
     "disciplinas": [
-      "portugues"
+      "interpretacao"
     ]
   },
   {
@@ -842,7 +833,7 @@
     "area": "linguagens",
     "answer": "c",
     "disciplinas": [
-      "portugues"
+      "interpretacao"
     ]
   },
   {
@@ -867,8 +858,8 @@
     "answer": "b",
     "contextId": "enem_2019_linguagens_q28_ctx1",
     "disciplinas": [
-      "literatura",
-      "portugues"
+      "interpretacao",
+      "literatura"
     ]
   },
   {
@@ -893,7 +884,7 @@
     "answer": "c",
     "contextId": "enem_2019_linguagens_q1_q39_ctx1",
     "disciplinas": [
-      "portugues"
+      "interpretacao"
     ]
   },
   {
@@ -922,8 +913,9 @@
       "enem_2019_linguagens_q12_q36_ctx1"
     ],
     "disciplinas": [
-      "literatura",
-      "portugues"
+      "gramatica",
+      "interpretacao",
+      "literatura"
     ]
   },
   {
@@ -949,7 +941,7 @@
     "contextId": "enem_2019_linguagens_q1_q39_ctx1",
     "disciplinas": [
       "artes",
-      "portugues"
+      "interpretacao"
     ]
   },
   {
@@ -974,8 +966,7 @@
     "answer": "e",
     "contextId": "enem_2019_linguagens_q32_ctx1",
     "disciplinas": [
-      "educacao_fisica",
-      "portugues"
+      "interpretacao"
     ]
   },
   {
@@ -1000,8 +991,8 @@
     "answer": "e",
     "contextId": "enem_2019_linguagens_q1_q39_ctx1",
     "disciplinas": [
-      "literatura",
-      "portugues"
+      "interpretacao",
+      "literatura"
     ]
   },
   {
@@ -1026,7 +1017,7 @@
     "answer": "a",
     "contextId": "enem_2019_linguagens_q1_q39_ctx1",
     "disciplinas": [
-      "portugues"
+      "gramatica"
     ]
   },
   {
@@ -1050,7 +1041,7 @@
     "area": "linguagens",
     "answer": "a",
     "disciplinas": [
-      "portugues"
+      "interpretacao"
     ]
   },
   {
@@ -1080,7 +1071,7 @@
     ],
     "disciplinas": [
       "artes",
-      "portugues"
+      "interpretacao"
     ]
   },
   {
@@ -1106,7 +1097,8 @@
     "answer": "d",
     "contextId": "enem_2019_linguagens_q37_ctx1",
     "disciplinas": [
-      "portugues"
+      "gramatica",
+      "interpretacao"
     ]
   },
   {
@@ -1131,7 +1123,7 @@
     "answer": "d",
     "contextId": "enem_2019_linguagens_q38_ctx1",
     "disciplinas": [
-      "portugues"
+      "interpretacao"
     ]
   },
   {
@@ -1156,8 +1148,8 @@
     "answer": "b",
     "contextId": "enem_2019_linguagens_q1_q39_ctx1",
     "disciplinas": [
-      "literatura",
-      "portugues"
+      "interpretacao",
+      "literatura"
     ]
   },
   {
@@ -1182,8 +1174,8 @@
     "answer": "b",
     "contextId": "enem_2019_linguagens_q40_ctx1",
     "disciplinas": [
-      "literatura",
-      "portugues"
+      "interpretacao",
+      "literatura"
     ]
   },
   {
@@ -1208,8 +1200,8 @@
     "answer": "c",
     "contextId": "enem_2019_linguagens_q41_ctx1",
     "disciplinas": [
-      "literatura",
-      "portugues"
+      "interpretacao",
+      "literatura"
     ]
   },
   {
@@ -1235,7 +1227,7 @@
     "answer": "d",
     "contextId": "enem_2019_linguagens_q42_ctx1",
     "disciplinas": [
-      "portugues"
+      "interpretacao"
     ]
   },
   {
@@ -1259,7 +1251,7 @@
     "area": "linguagens",
     "answer": "c",
     "disciplinas": [
-      "portugues"
+      "interpretacao"
     ]
   },
   {
@@ -1285,8 +1277,9 @@
     "answer": "e",
     "contextId": "enem_2019_linguagens_q44_ctx1",
     "disciplinas": [
-      "literatura",
-      "portugues"
+      "gramatica",
+      "interpretacao",
+      "literatura"
     ]
   },
   {
@@ -1312,8 +1305,9 @@
     "answer": "b",
     "contextId": "enem_2019_linguagens_q45_ctx1",
     "disciplinas": [
-      "literatura",
-      "portugues"
+      "gramatica",
+      "interpretacao",
+      "literatura"
     ]
   }
 ]

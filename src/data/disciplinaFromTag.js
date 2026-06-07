@@ -74,11 +74,13 @@ for (const t of [
   'ciência e tecnologia', 'educação e políticas públicas',
 ]) add('humanas', t, 'sociologia')
 
-// ── Linguagens → Português ───────────────────────────────────────────────────
+// ── Linguagens → Interpretação de Texto ──────────────────────────────────────
 for (const t of [
-  'interpretação de texto', 'linguística e variação linguística',
-  'gêneros textuais', 'comunicação e mídia',
-]) add('linguagens', t, 'portugues')
+  'interpretação de texto', 'gêneros textuais', 'comunicação e mídia',
+]) add('linguagens', t, 'interpretacao')
+
+// ── Linguagens → Gramática ───────────────────────────────────────────────────
+add('linguagens', 'linguística e variação linguística', 'gramatica')
 
 // ── Linguagens → Literatura ──────────────────────────────────────────────────
 for (const t of [
@@ -107,14 +109,18 @@ export function disciplinasForQuestion(question) {
   if (!question) return []
   if (question.area === 'math') return ['matematica']
 
+  // Foreign-language linguagens questions classify as exactly that one disciplina,
+  // regardless of any tags they may carry (avoids polluting English/Spanish quizzes
+  // with Português text-interpretation tagging).
+  if (question.area === 'linguagens') {
+    if (question.language === 'en') return ['ingles']
+    if (question.language === 'es') return ['espanhol']
+  }
+
   const set = new Set()
   for (const tag of question.tags ?? []) {
     const slug = M[`${question.area}::${tag}`] ?? M[`${question.area}::${tag.toLowerCase()}`]
     if (slug) set.add(slug)
-  }
-  if (question.area === 'linguagens') {
-    if (question.language === 'en') set.add('ingles')
-    else if (question.language === 'es') set.add('espanhol')
   }
   return [...set].sort()
 }

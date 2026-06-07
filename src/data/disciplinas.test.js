@@ -15,9 +15,9 @@ describe('DISCIPLINAS_BY_AREA', () => {
     )
   })
 
-  it('linguagens has six disciplinas (Português, Literatura, Inglês, Espanhol, Artes, Educação Física)', () => {
+  it('linguagens has six disciplinas (Interpretação, Gramática, Literatura, Inglês, Espanhol, Artes)', () => {
     expect(DISCIPLINAS_BY_AREA.linguagens).toEqual([
-      'portugues', 'literatura', 'ingles', 'espanhol', 'artes', 'educacao_fisica',
+      'interpretacao', 'gramatica', 'literatura', 'ingles', 'espanhol', 'artes',
     ])
   })
 
@@ -52,11 +52,11 @@ describe('DISCIPLINA_LABELS', () => {
   })
 
   it('keeps accents in labels', () => {
-    expect(DISCIPLINA_LABELS.portugues).toBe('Português')
     expect(DISCIPLINA_LABELS.matematica).toBe('Matemática')
-    expect(DISCIPLINA_LABELS.educacao_fisica).toBe('Educação Física')
     expect(DISCIPLINA_LABELS.ingles).toBe('Inglês')
     expect(DISCIPLINA_LABELS.espanhol).toBe('Espanhol')
+    expect(DISCIPLINA_LABELS.interpretacao).toBe('Interpretação de Texto')
+    expect(DISCIPLINA_LABELS.gramatica).toBe('Gramática')
   })
 })
 
@@ -64,7 +64,8 @@ describe('DISCIPLINA_AREA reverse lookup', () => {
   it('maps each disciplina back to its area', () => {
     expect(DISCIPLINA_AREA.quimica).toBe('nature')
     expect(DISCIPLINA_AREA.historia).toBe('humanas')
-    expect(DISCIPLINA_AREA.portugues).toBe('linguagens')
+    expect(DISCIPLINA_AREA.interpretacao).toBe('linguagens')
+    expect(DISCIPLINA_AREA.gramatica).toBe('linguagens')
     expect(DISCIPLINA_AREA.matematica).toBe('math')
   })
 

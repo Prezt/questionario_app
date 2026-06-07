@@ -48,8 +48,7 @@
     "language": "es",
     "contextId": "enem_2022_linguagens_q1es_ctx1",
     "disciplinas": [
-      "espanhol",
-      "portugues"
+      "espanhol"
     ]
   },
   {
@@ -75,8 +74,7 @@
     "language": "en",
     "contextId": "enem_2022_linguagens_q2en_ctx1",
     "disciplinas": [
-      "ingles",
-      "portugues"
+      "ingles"
     ]
   },
   {
@@ -128,8 +126,7 @@
     "language": "en",
     "contextId": "enem_2022_linguagens_q3en_ctx1",
     "disciplinas": [
-      "ingles",
-      "portugues"
+      "ingles"
     ]
   },
   {
@@ -180,8 +177,7 @@
     "language": "en",
     "contextId": "enem_2022_linguagens_q4en_ctx1",
     "disciplinas": [
-      "ingles",
-      "portugues"
+      "ingles"
     ]
   },
   {
@@ -208,8 +204,7 @@
     "contextId": "enem_2022_linguagens_q4es_ctx1",
     "disciplinas": [
       "espanhol",
-      "literatura",
-      "portugues"
+      "literatura"
     ]
   },
   {
@@ -235,8 +230,7 @@
     "language": "en",
     "contextId": "enem_2022_linguagens_q5en_ctx1",
     "disciplinas": [
-      "ingles",
-      "portugues"
+      "ingles"
     ]
   },
   {
@@ -285,7 +279,7 @@
     "difficulty": 7,
     "contextId": "enem_2022_linguagens_q6_ctx1",
     "disciplinas": [
-      "portugues"
+      "gramatica"
     ]
   },
   {
@@ -313,7 +307,7 @@
     "language": null,
     "difficulty": 5,
     "disciplinas": [
-      "portugues"
+      "interpretacao"
     ]
   },
   {
@@ -338,7 +332,7 @@
     "difficulty": 4,
     "contextId": "enem_2022_linguagens_q8_ctx1",
     "disciplinas": [
-      "portugues"
+      "interpretacao"
     ]
   },
   {
@@ -363,7 +357,7 @@
     "difficulty": 5,
     "contextId": "enem_2022_linguagens_q9_ctx1",
     "disciplinas": [
-      "portugues"
+      "interpretacao"
     ]
   },
   {
@@ -412,7 +406,7 @@
     "difficulty": 5,
     "contextId": "enem_2022_linguagens_q11_ctx1",
     "disciplinas": [
-      "portugues"
+      "interpretacao"
     ]
   },
   {
@@ -437,8 +431,8 @@
     "difficulty": 6,
     "contextId": "enem_2022_linguagens_q12_ctx1",
     "disciplinas": [
-      "literatura",
-      "portugues"
+      "gramatica",
+      "literatura"
     ]
   },
   {
@@ -462,7 +456,7 @@
     "difficulty": 5,
     "contextId": "enem_2022_linguagens_q13_ctx1",
     "disciplinas": [
-      "portugues"
+      "interpretacao"
     ]
   },
   {
@@ -489,7 +483,7 @@
       "enem_2022_linguagens_q14_ctx2"
     ],
     "disciplinas": [
-      "portugues"
+      "gramatica"
     ]
   },
   {
@@ -514,7 +508,7 @@
     "difficulty": 5,
     "contextId": "enem_2022_linguagens_q15_ctx1",
     "disciplinas": [
-      "portugues"
+      "interpretacao"
     ]
   },
   {
@@ -538,7 +532,7 @@
     "difficulty": 4,
     "contextId": "enem_2022_linguagens_q16_ctx1",
     "disciplinas": [
-      "portugues"
+      "interpretacao"
     ]
   },
   {
@@ -563,7 +557,8 @@
     "contextId": "enem_2022_linguagens_q17_ctx1",
     "difficulty": 7,
     "disciplinas": [
-      "portugues"
+      "gramatica",
+      "interpretacao"
     ]
   },
   {
@@ -588,8 +583,8 @@
     "difficulty": 7,
     "contextId": "enem_2022_linguagens_q18_ctx1",
     "disciplinas": [
-      "literatura",
-      "portugues"
+      "interpretacao",
+      "literatura"
     ]
   },
   {
@@ -613,7 +608,7 @@
     "difficulty": 3,
     "contextId": "enem_2022_linguagens_q19_ctx1",
     "disciplinas": [
-      "portugues"
+      "interpretacao"
     ]
   },
   {
@@ -638,7 +633,7 @@
     "difficulty": 5,
     "contextId": "enem_2022_linguagens_q20_ctx1",
     "disciplinas": [
-      "portugues"
+      "interpretacao"
     ]
   },
   {
@@ -691,7 +686,7 @@
       "enem_2022_linguagens_q22_ctx2"
     ],
     "disciplinas": [
-      "portugues"
+      "interpretacao"
     ]
   },
   {
@@ -716,8 +711,8 @@
     "difficulty": 7,
     "contextId": "enem_2022_linguagens_q23_ctx1",
     "disciplinas": [
-      "literatura",
-      "portugues"
+      "interpretacao",
+      "literatura"
     ]
   },
   {
@@ -742,7 +737,8 @@
     "difficulty": 4,
     "contextId": "enem_2022_linguagens_q24_ctx1",
     "disciplinas": [
-      "portugues"
+      "gramatica",
+      "interpretacao"
     ]
   },
   {
@@ -767,7 +763,7 @@
     "difficulty": 3,
     "contextId": "enem_2022_linguagens_q25_ctx1",
     "disciplinas": [
-      "portugues"
+      "interpretacao"
     ]
   },
   {
@@ -792,8 +788,8 @@
     "difficulty": 7,
     "contextId": "enem_2022_linguagens_q26_ctx1",
     "disciplinas": [
-      "literatura",
-      "portugues"
+      "interpretacao",
+      "literatura"
     ]
   },
   {
@@ -817,7 +813,7 @@
     "difficulty": 5,
     "contextId": "enem_2022_linguagens_q27_ctx1",
     "disciplinas": [
-      "portugues"
+      "interpretacao"
     ]
   },
   {
@@ -842,7 +838,7 @@
     "difficulty": 5,
     "contextId": "enem_2022_linguagens_q28_ctx1",
     "disciplinas": [
-      "portugues"
+      "gramatica"
     ]
   },
   {
@@ -891,8 +887,8 @@
     "difficulty": 7,
     "contextId": "enem_2022_linguagens_q30_ctx1",
     "disciplinas": [
-      "literatura",
-      "portugues"
+      "interpretacao",
+      "literatura"
     ]
   },
   {
@@ -917,8 +913,8 @@
     "difficulty": 8,
     "contextId": "enem_2022_linguagens_q31_ctx1",
     "disciplinas": [
-      "literatura",
-      "portugues"
+      "interpretacao",
+      "literatura"
     ]
   },
   {
@@ -943,7 +939,7 @@
     "difficulty": 3,
     "contextId": "enem_2022_linguagens_q32_ctx1",
     "disciplinas": [
-      "portugues"
+      "interpretacao"
     ]
   },
   {
@@ -968,8 +964,8 @@
     "difficulty": 7,
     "contextId": "enem_2022_linguagens_q33_ctx1",
     "disciplinas": [
-      "literatura",
-      "portugues"
+      "gramatica",
+      "literatura"
     ]
   },
   {
@@ -993,8 +989,7 @@
     "difficulty": 3,
     "contextId": "enem_2022_linguagens_q34_ctx1",
     "disciplinas": [
-      "educacao_fisica",
-      "portugues"
+      "interpretacao"
     ]
   },
   {
@@ -1019,8 +1014,8 @@
     "difficulty": 6,
     "contextId": "enem_2022_linguagens_q35_ctx1",
     "disciplinas": [
-      "literatura",
-      "portugues"
+      "interpretacao",
+      "literatura"
     ]
   },
   {
@@ -1045,7 +1040,7 @@
     "difficulty": 3,
     "contextId": "enem_2022_linguagens_q36_ctx1",
     "disciplinas": [
-      "portugues"
+      "interpretacao"
     ]
   },
   {
@@ -1070,7 +1065,7 @@
     "difficulty": 5,
     "contextId": "enem_2022_linguagens_q37_ctx1",
     "disciplinas": [
-      "portugues"
+      "interpretacao"
     ]
   },
   {
@@ -1196,7 +1191,7 @@
     "difficulty": 5,
     "contextId": "enem_2022_linguagens_q42_ctx1",
     "disciplinas": [
-      "portugues"
+      "interpretacao"
     ]
   },
   {
@@ -1221,8 +1216,8 @@
     "difficulty": 7,
     "contextId": "enem_2022_linguagens_q43_ctx1",
     "disciplinas": [
-      "literatura",
-      "portugues"
+      "interpretacao",
+      "literatura"
     ]
   },
   {
