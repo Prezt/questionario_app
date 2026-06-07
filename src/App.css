@@ -1828,6 +1828,119 @@
   color: #fff;
 }
 
+/* ── Per-tab accent colors (consumed by tab strip + Iniciar button) ── */
+.home-screen--estude {
+  --tab-accent: #cc2222;
+  --tab-accent-dark: #aa1a1a;
+  --tab-accent-shadow: rgba(204, 34, 34, 0.4);
+  --tab-accent-shadow-strong: rgba(204, 34, 34, 0.5);
+}
+.home-screen--simule {
+  --tab-accent: #c2410c;
+  --tab-accent-dark: #9a3412;
+  --tab-accent-shadow: rgba(194, 65, 12, 0.4);
+  --tab-accent-shadow-strong: rgba(194, 65, 12, 0.5);
+}
+.home-screen--ensine {
+  --tab-accent: #1e40af;
+  --tab-accent-dark: #1e3a8a;
+  --tab-accent-shadow: rgba(30, 64, 175, 0.4);
+  --tab-accent-shadow-strong: rgba(30, 64, 175, 0.5);
+}
+.dark .home-screen--simule {
+  --tab-accent: #ea580c;
+  --tab-accent-dark: #c2410c;
+  --tab-accent-shadow: rgba(234, 88, 12, 0.35);
+  --tab-accent-shadow-strong: rgba(234, 88, 12, 0.45);
+}
+.dark .home-screen--ensine {
+  --tab-accent: #3b82f6;
+  --tab-accent-dark: #2563eb;
+  --tab-accent-shadow: rgba(59, 130, 246, 0.35);
+  --tab-accent-shadow-strong: rgba(59, 130, 246, 0.45);
+}
+
+/* ── Top-level home header + tab strip ── */
+.home-header {
+  position: relative;
+  z-index: 1;
+  width: calc(100% - 2rem);
+  max-width: 380px;
+  margin: 0 auto 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.home-header-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+.home-header-title {
+  font-size: 1rem;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+  color: var(--text);
+}
+
+.home-header-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.home-tab-strip {
+  display: flex;
+  border-radius: 999px;
+  border: 1.5px solid var(--border);
+  overflow: hidden;
+  background: var(--alt-bg);
+  width: 100%;
+}
+
+.home-tab-btn {
+  flex: 1;
+  height: 2.4rem;
+  border: none;
+  background: transparent;
+  color: var(--text-soft);
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.home-tab-btn:not(:last-child) {
+  border-right: 1.5px solid var(--border);
+}
+
+.home-tab-btn.active {
+  background: var(--tab-accent, var(--accent));
+  color: #fff;
+}
+
+.home-tab-content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.home-ensine-message {
+  font-size: 0.92rem;
+  color: var(--text-soft);
+  line-height: 1.5;
+  text-align: center;
+  margin: 1rem 0;
+  max-width: 320px;
+}
+
 /* ── Gear FAB + popover ── */
 .options-overlay {
   position: fixed;
@@ -2035,20 +2148,20 @@
   padding: 0 2.5rem;
   border: none;
   border-radius: 999px;
-  background: var(--accent);
+  background: var(--tab-accent, var(--accent));
   color: #fff;
   font-size: 0.95rem;
   font-weight: 700;
   letter-spacing: 0.03em;
   cursor: pointer;
   transition: background 0.15s, transform 0.1s, box-shadow 0.15s;
-  box-shadow: 0 4px 16px rgba(204, 34, 34, 0.4);
+  box-shadow: 0 4px 16px var(--tab-accent-shadow, rgba(204, 34, 34, 0.4));
   -webkit-tap-highlight-color: transparent;
 }
 
 .home-start-btn:hover:not(:disabled) {
-  background: var(--accent-dark);
-  box-shadow: 0 4px 20px rgba(204, 34, 34, 0.5);
+  background: var(--tab-accent-dark, var(--accent-dark));
+  box-shadow: 0 4px 20px var(--tab-accent-shadow-strong, rgba(204, 34, 34, 0.5));
 }
 
 .home-start-btn:active:not(:disabled) {
@@ -2073,6 +2186,55 @@
 .changelog-wrap {
   width: 100%;
   margin-top: 0.25rem;
+}
+
+/* Page-level footer that hosts the changelog under the home card */
+.home-footer {
+  position: relative;
+  z-index: 1;
+  width: calc(100% - 2rem);
+  max-width: 380px;
+  margin: 0.75rem auto 1.5rem;
+  text-align: center;
+}
+
+.home-footer .changelog-wrap {
+  margin-top: 0;
+}
+
+.home-footer .changelog-trigger {
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.5rem 0.25rem;
+  font-size: 0.78rem;
+  color: var(--text-soft);
+  opacity: 0.7;
+  transition: opacity 0.15s;
+}
+
+.home-footer .changelog-trigger:hover {
+  opacity: 1;
+}
+
+.home-footer .changelog-trigger > * + *::before {
+  content: '·';
+  margin-right: 0.5rem;
+  opacity: 0.5;
+}
+
+.home-footer .changelog-version {
+  color: var(--text-soft);
+  font-weight: 600;
+}
+
+.home-footer .changelog-label {
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+.home-footer .changelog-chevron {
+  margin-left: 0;
+  font-size: 0.55rem;
 }
 
 .changelog-trigger {

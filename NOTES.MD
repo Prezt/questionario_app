@@ -71,8 +71,8 @@ REVISAO:
     [x] ciencias
     [x] matematica
  [] ENEM 2019
-    [] linguagens
-    [] humanas
+    [x] linguagens
+    [x] humanas
     [] ciencias
     [] matematica
  [x] ENEM 2018
