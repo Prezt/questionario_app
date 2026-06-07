@@ -287,7 +287,7 @@ function QuestionForm({ question, onSave, onCancel, saving }) {
   )
 }
 
-export default function QuestionEditor({ onClose, embedded = false }) {
+export default function QuestionEditor({ onClose, embedded = false, quickAdd = false }) {
   const token = localStorage.getItem('token')
   const user  = (() => { try { return JSON.parse(localStorage.getItem('user')) } catch { return null } })()
 
@@ -387,6 +387,8 @@ export default function QuestionEditor({ onClose, embedded = false }) {
           if (isAdmin && data.created_by && data.created_by !== user?.id && !targetUserId) {
             setTargetUserId(data.created_by)
           }
+          // Quick-add mode: jump straight to the new-question form
+          if (quickAdd) setEditingQ('new')
         }
         setLoading(false)
       })
@@ -450,9 +452,10 @@ export default function QuestionEditor({ onClose, embedded = false }) {
           : (prev.questions ?? []).map(q => q.id === data.id ? data : q),
       }))
       setEditingQ(null)
+      if (quickAdd) onClose?.()
     } catch { setError('Erro de rede') }
     finally { setSaving(false) }
-  }, [editingQ, token, targetUserId, userIdParam])
+  }, [editingQ, token, targetUserId, userIdParam, quickAdd, onClose])
 
   const deleteQuestion = useCallback(async (q) => {
     if (!window.confirm(`Remover questão ${q.number}?`)) return
@@ -510,7 +513,7 @@ export default function QuestionEditor({ onClose, embedded = false }) {
     <div className={shellClass}>
       <div className="qe-header">
         <button type="button" className="qe-back-btn" onClick={() => onClose?.()}>← Voltar</button>
-        {!embedded && <h1 className="qe-title">Criar</h1>}
+        {!embedded && <h1 className="qe-title">{quickAdd ? 'Nova questão' : 'Criar'}</h1>}
         {!embedded && (
           <button type="button" className="qe-theme-btn" onClick={() => setDark(d => !d)} aria-label="Alternar tema">
             {dark ? <SunIcon /> : <MoonIcon />}
@@ -537,7 +540,8 @@ export default function QuestionEditor({ onClose, embedded = false }) {
         </section>
       )}
 
-      {/* Set name + year */}
+      {/* Set name + year — hidden in quick-add (single-question) mode */}
+      {!quickAdd && (
       <section className="qe-section">
         <h2 className="qe-section-title">Lista</h2>
         <div className="qe-set-row">
@@ -568,10 +572,12 @@ export default function QuestionEditor({ onClose, embedded = false }) {
           </p>
         )}
       </section>
+      )}
 
       {set && (
         <>
-          {/* Question list */}
+          {/* Question list — hidden in quick-add mode (focus on the new question form) */}
+          {!quickAdd && (
           <section className="qe-section">
             <div className="qe-section-header">
               <h2 className="qe-section-title">Questões ({questions.length})</h2>
@@ -616,6 +622,7 @@ export default function QuestionEditor({ onClose, embedded = false }) {
               ))}
             </div>
           </section>
+          )}
 
           {/* ENEM picker */}
           {importing && (
@@ -636,7 +643,7 @@ export default function QuestionEditor({ onClose, embedded = false }) {
               <QuestionForm
                 question={editingQ === 'new' ? EMPTY_QUESTION : editingQ}
                 onSave={saveQuestion}
-                onCancel={() => setEditingQ(null)}
+                onCancel={() => { setEditingQ(null); if (quickAdd) onClose?.() }}
                 saving={saving}
               />
             </section>

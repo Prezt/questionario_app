@@ -1,6 +1,12 @@
 import { useState, useMemo, useEffect, useRef } from 'react'
 import './QuestionEditor.css'
-import { richHtmlBr } from './richHtml.js'
+import { richHtml, richHtmlBr } from './richHtml.js'
+
+function publicImageSrc(path) {
+  if (!path) return ''
+  if (path.startsWith('http://') || path.startsWith('https://') || path.startsWith('data:')) return path
+  return path.startsWith('/') ? path : `/${path}`
+}
 
 const AREA_LABELS = {
   linguagens: 'Linguagens',
@@ -15,6 +21,7 @@ function makeKey(q) {
 
 export default function ExplanationsEditor({
   allQuestions,
+  contexts = {},
   explanationOverrides,
   setExplanationOverrides,
   token,
@@ -24,6 +31,7 @@ export default function ExplanationsEditor({
   const [filterYear, setFilterYear] = useState('all')
   const [search, setSearch] = useState('')
   const [showOnlyEmpty, setShowOnlyEmpty] = useState(false)
+  const [hideAnswer, setHideAnswer] = useState(false)
   const [selectedKey, setSelectedKey] = useState(null)
   const [draft, setDraft] = useState('')
   const [saving, setSaving] = useState(false)
@@ -220,26 +228,134 @@ export default function ExplanationsEditor({
           {filtered.length > 200 && <li className="explainer-empty">Mostrando 200 de {filtered.length} — refine o filtro.</li>}
         </ul>
 
+        {selectedQ && (() => {
+          const ctxIds = selectedQ.contextIds ?? (selectedQ.contextId ? [selectedQ.contextId] : [])
+          const letters = Object.keys(selectedQ.alternatives ?? {})
+          const images = selectedQ.images ?? []
+          const hasStemImg = images.length > 0 && images.length === letters.length + 1
+          const altImgsOnly = images.length > 0 && images.length === letters.length
+          const stemImage = hasStemImg ? images[0] : null
+          const altImageFor = (index) => hasStemImg ? images[index + 1] : altImgsOnly ? images[index] : null
+          return (
+              <div className="explainer-question">
+                <div className="explainer-question-meta">
+                  <span>
+                    Questão #{selectedQ.number} · {selectedQ.year} · {AREA_LABELS[selectedQ.area]}
+                    {selectedQ.language && <> · {selectedQ.language.toUpperCase()}</>}
+                  </span>
+                  <label className="explainer-question-meta-toggle">
+                    <input
+                      type="checkbox"
+                      checked={hideAnswer}
+                      onChange={(e) => setHideAnswer(e.target.checked)}
+                    />
+                    <span>Ocultar gabarito</span>
+                  </label>
+                </div>
+
+                {ctxIds.map((id) => {
+                  const ctx = contexts[id]
+                  if (!ctx) return null
+                  return (
+                    <div key={id} className="explainer-context">
+                      {ctx.title && (
+                        <div
+                          className="explainer-context-title"
+                          dangerouslySetInnerHTML={{ __html: richHtml(ctx.title) }}
+                        />
+                      )}
+                      {ctx.subtitle && (
+                        <div
+                          className="explainer-context-subtitle"
+                          dangerouslySetInnerHTML={{ __html: richHtml(ctx.subtitle) }}
+                        />
+                      )}
+                      {ctx.text && (
+                        <div
+                          className="explainer-context-text"
+                          dangerouslySetInnerHTML={{ __html: richHtml(ctx.text) }}
+                        />
+                      )}
+                      {(ctx.images ?? []).map((img, i) => (
+                        <img
+                          key={i}
+                          className="explainer-image"
+                          src={publicImageSrc(typeof img === 'string' ? img : img?.src)}
+                          alt={typeof img === 'string' ? '' : (img?.caption ?? '')}
+                        />
+                      ))}
+                      {ctx.reference && (
+                        <div
+                          className="explainer-context-ref"
+                          dangerouslySetInnerHTML={{ __html: richHtmlBr(ctx.reference) }}
+                        />
+                      )}
+                    </div>
+                  )
+                })}
+
+                {stemImage && (
+                  <img
+                    className="explainer-image"
+                    src={publicImageSrc(typeof stemImage === 'string' ? stemImage : stemImage?.src)}
+                    alt=""
+                  />
+                )}
+
+                <div
+                  className="explainer-question-text"
+                  dangerouslySetInnerHTML={{ __html: richHtml(selectedQ.text ?? '') }}
+                />
+
+                {letters.length > 0 && (
+                  <ul className="explainer-alts">
+                    {letters.map((letter, i) => {
+                      const altText = selectedQ.alternatives[letter]
+                      const isCorrect = !hideAnswer && letter === selectedQ.answer
+                      const altImg = altImageFor(i)
+                      return (
+                        <li
+                          key={letter}
+                          className={`explainer-alt${isCorrect ? ' explainer-alt--correct' : ''}`}
+                        >
+                          <span className="explainer-alt-letter">{letter.toUpperCase()}</span>
+                          <div className="explainer-alt-body">
+                            {altText && (
+                              <span
+                                className="explainer-alt-text"
+                                dangerouslySetInnerHTML={{ __html: richHtml(altText) }}
+                              />
+                            )}
+                            {altImg && (
+                              <img
+                                className="explainer-alt-image"
+                                src={publicImageSrc(typeof altImg === 'string' ? altImg : altImg?.src)}
+                                alt={letter.toUpperCase()}
+                              />
+                            )}
+                          </div>
+                          {isCorrect && <span className="explainer-alt-check">✓</span>}
+                        </li>
+                      )
+                    })}
+                  </ul>
+                )}
+
+                {!hideAnswer && (
+                  <div className="explainer-answer">
+                    Gabarito: <strong>{(selectedQ.answer ?? '').toUpperCase() || '—'}</strong>
+                  </div>
+                )}
+              </div>
+          )
+        })()}
+
         <div className="explainer-editor">
           {!selectedQ && (
             <p className="explainer-hint">Selecione uma questão à esquerda para editar a explicação.</p>
           )}
           {selectedQ && (
             <>
-              <div className="explainer-question">
-                <div className="explainer-question-meta">
-                  Questão #{selectedQ.number} · {selectedQ.year} · {AREA_LABELS[selectedQ.area]}
-                  {selectedQ.language && <> · {selectedQ.language.toUpperCase()}</>}
-                </div>
-                <div
-                  className="explainer-question-text"
-                  dangerouslySetInnerHTML={{ __html: richHtmlBr(selectedQ.text ?? '') }}
-                />
-                <div className="explainer-answer">
-                  Gabarito: <strong>{(selectedQ.answer ?? '').toUpperCase() || '—'}</strong>
-                </div>
-              </div>
-
               <label className="explainer-label">Explicação</label>
               <textarea
                 className="explainer-textarea"

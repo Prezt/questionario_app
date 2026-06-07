@@ -645,7 +645,7 @@ function ExplanationBlock({ text, canEdit, onSave }) {
       </summary>
       <div
         className="explanation-body"
-        dangerouslySetInnerHTML={richHtmlBr(text || 'Sem explicação ainda.')}
+        dangerouslySetInnerHTML={{ __html: richHtmlBr(text || 'Sem explicação ainda.') }}
       />
     </details>
   )
@@ -2377,10 +2377,15 @@ export default function App() {
                     <Suspense fallback={<p className="qe-loading">Carregando…</p>}>
                       <QuestionEditor embedded onClose={() => setEnsineTool(null)} />
                     </Suspense>
+                  ) : ensineTool === 'criar-questao' ? (
+                    <Suspense fallback={<p className="qe-loading">Carregando…</p>}>
+                      <QuestionEditor embedded quickAdd onClose={() => setEnsineTool(null)} />
+                    </Suspense>
                   ) : ensineTool === 'explicar' ? (
                     <Suspense fallback={<p className="qe-loading">Carregando…</p>}>
                       <ExplanationsEditor
                         allQuestions={allQuestions}
+                        contexts={contexts}
                         explanationOverrides={explanationOverrides}
                         setExplanationOverrides={setExplanationOverrides}
                         token={token}
@@ -2395,6 +2400,13 @@ export default function App() {
                         onClick={() => setEnsineTool('criar-lista')}
                       >
                         Criar lista
+                      </button>
+                      <button
+                        type="button"
+                        className="home-start-btn"
+                        onClick={() => setEnsineTool('criar-questao')}
+                      >
+                        Criar questão
                       </button>
                       <button
                         type="button"
