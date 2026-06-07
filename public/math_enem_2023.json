@@ -20,7 +20,10 @@
     "test": "ENEM",
     "area": "math",
     "answer": "b",
-    "difficulty": 7
+    "difficulty": 7,
+    "disciplinas": [
+      "matematica"
+    ]
   },
   {
     "number": 137,
@@ -40,7 +43,10 @@
     "test": "ENEM",
     "area": "math",
     "answer": "c",
-    "difficulty": 2
+    "difficulty": 2,
+    "disciplinas": [
+      "matematica"
+    ]
   },
   {
     "number": 138,
@@ -61,7 +67,10 @@
     "test": "ENEM",
     "area": "math",
     "answer": "c",
-    "difficulty": 6
+    "difficulty": 6,
+    "disciplinas": [
+      "matematica"
+    ]
   },
   {
     "number": 139,
@@ -82,7 +91,10 @@
     "area": "math",
     "answer": "d",
     "difficulty": 5,
-    "review": true
+    "review": true,
+    "disciplinas": [
+      "matematica"
+    ]
   },
   {
     "number": 140,
@@ -105,7 +117,10 @@
     "area": "math",
     "answer": "e",
     "difficulty": 6,
-    "review": true
+    "review": true,
+    "disciplinas": [
+      "matematica"
+    ]
   },
   {
     "number": 141,
@@ -127,7 +142,10 @@
     "area": "math",
     "answer": "e",
     "difficulty": 4,
-    "review": true
+    "review": true,
+    "disciplinas": [
+      "matematica"
+    ]
   },
   {
     "number": 142,
@@ -148,7 +166,10 @@
     "area": "math",
     "answer": "a",
     "difficulty": 6,
-    "review": true
+    "review": true,
+    "disciplinas": [
+      "matematica"
+    ]
   },
   {
     "number": 143,
@@ -168,7 +189,10 @@
     "test": "ENEM",
     "area": "math",
     "answer": "b",
-    "difficulty": 5
+    "difficulty": 5,
+    "disciplinas": [
+      "matematica"
+    ]
   },
   {
     "number": 144,
@@ -190,7 +214,10 @@
     "test": "ENEM",
     "area": "math",
     "answer": "c",
-    "difficulty": 4
+    "difficulty": 4,
+    "disciplinas": [
+      "matematica"
+    ]
   },
   {
     "number": 145,
@@ -213,7 +240,10 @@
     "area": "math",
     "answer": "b",
     "difficulty": 7,
-    "review": true
+    "review": true,
+    "disciplinas": [
+      "matematica"
+    ]
   },
   {
     "number": 146,
@@ -236,7 +266,10 @@
     "test": "ENEM",
     "area": "math",
     "answer": "e",
-    "difficulty": 7
+    "difficulty": 7,
+    "disciplinas": [
+      "matematica"
+    ]
   },
   {
     "number": 147,
@@ -259,6 +292,9 @@
     "difficulty": 2,
     "contextIds": [
       "enem_2023_math_q147_ctx1"
+    ],
+    "disciplinas": [
+      "matematica"
     ]
   },
   {
@@ -283,7 +319,10 @@
     "area": "math",
     "answer": "c",
     "difficulty": 5,
-    "review": true
+    "review": true,
+    "disciplinas": [
+      "matematica"
+    ]
   },
   {
     "number": 149,
@@ -307,7 +346,10 @@
     "area": "math",
     "answer": "e",
     "difficulty": 5,
-    "review": true
+    "review": true,
+    "disciplinas": [
+      "matematica"
+    ]
   },
   {
     "number": 150,
@@ -330,6 +372,9 @@
     "difficulty": 1,
     "contextIds": [
       "enem_2023_math_q150_ctx1"
+    ],
+    "disciplinas": [
+      "matematica"
     ]
   },
   {
@@ -353,7 +398,10 @@
     "test": "ENEM",
     "area": "math",
     "answer": "b",
-    "difficulty": 3
+    "difficulty": 3,
+    "disciplinas": [
+      "matematica"
+    ]
   },
   {
     "number": 152,
@@ -377,6 +425,9 @@
     "difficulty": 5,
     "contextIds": [
       "enem_2023_math_q152_ctx1"
+    ],
+    "disciplinas": [
+      "matematica"
     ]
   },
   {
@@ -398,7 +449,10 @@
     "test": "ENEM",
     "area": "math",
     "answer": "e",
-    "difficulty": 2
+    "difficulty": 2,
+    "disciplinas": [
+      "matematica"
+    ]
   },
   {
     "number": 154,
@@ -420,7 +474,10 @@
     "test": "ENEM",
     "area": "math",
     "answer": "b",
-    "difficulty": 3
+    "difficulty": 3,
+    "disciplinas": [
+      "matematica"
+    ]
   },
   {
     "number": 155,
@@ -442,7 +499,10 @@
     "test": "ENEM",
     "area": "math",
     "answer": "d",
-    "difficulty": 3
+    "difficulty": 3,
+    "disciplinas": [
+      "matematica"
+    ]
   },
   {
     "number": 156,
@@ -465,7 +525,10 @@
     "test": "ENEM",
     "area": "math",
     "answer": "a",
-    "difficulty": 3
+    "difficulty": 3,
+    "disciplinas": [
+      "matematica"
+    ]
   },
   {
     "number": 157,
@@ -488,7 +551,10 @@
     "test": "ENEM",
     "area": "math",
     "answer": "b",
-    "difficulty": 4
+    "difficulty": 4,
+    "disciplinas": [
+      "matematica"
+    ]
   },
   {
     "number": 158,
@@ -508,7 +574,10 @@
     "test": "ENEM",
     "area": "math",
     "answer": "d",
-    "difficulty": 7
+    "difficulty": 7,
+    "disciplinas": [
+      "matematica"
+    ]
   },
   {
     "number": 159,
@@ -529,7 +598,10 @@
     "test": "ENEM",
     "area": "math",
     "answer": "d",
-    "difficulty": 5
+    "difficulty": 5,
+    "disciplinas": [
+      "matematica"
+    ]
   },
   {
     "number": 160,
@@ -550,7 +622,10 @@
     "test": "ENEM",
     "area": "math",
     "answer": "a",
-    "difficulty": 7
+    "difficulty": 7,
+    "disciplinas": [
+      "matematica"
+    ]
   },
   {
     "number": 161,
@@ -570,7 +645,10 @@
     "test": "ENEM",
     "area": "math",
     "answer": "d",
-    "difficulty": 7
+    "difficulty": 7,
+    "disciplinas": [
+      "matematica"
+    ]
   },
   {
     "number": 162,
@@ -591,7 +669,10 @@
     "test": "ENEM",
     "area": "math",
     "answer": "d",
-    "difficulty": 1
+    "difficulty": 1,
+    "disciplinas": [
+      "matematica"
+    ]
   },
   {
     "number": 163,
@@ -619,7 +700,10 @@
     "test": "ENEM",
     "area": "math",
     "answer": "a",
-    "difficulty": 4
+    "difficulty": 4,
+    "disciplinas": [
+      "matematica"
+    ]
   },
   {
     "number": 164,
@@ -641,7 +725,10 @@
     "test": "ENEM",
     "area": "math",
     "answer": "annulled",
-    "difficulty": 2
+    "difficulty": 2,
+    "disciplinas": [
+      "matematica"
+    ]
   },
   {
     "number": 165,
@@ -663,7 +750,10 @@
     "test": "ENEM",
     "area": "math",
     "answer": "e",
-    "difficulty": 5
+    "difficulty": 5,
+    "disciplinas": [
+      "matematica"
+    ]
   },
   {
     "number": 166,
@@ -684,7 +774,10 @@
     "area": "math",
     "answer": "c",
     "difficulty": 3,
-    "review": true
+    "review": true,
+    "disciplinas": [
+      "matematica"
+    ]
   },
   {
     "number": 167,
@@ -705,7 +798,10 @@
     "area": "math",
     "answer": "a",
     "difficulty": 5,
-    "review": true
+    "review": true,
+    "disciplinas": [
+      "matematica"
+    ]
   },
   {
     "number": 168,
@@ -726,7 +822,10 @@
     "area": "math",
     "answer": "a",
     "difficulty": 7,
-    "review": true
+    "review": true,
+    "disciplinas": [
+      "matematica"
+    ]
   },
   {
     "number": 169,
@@ -749,7 +848,10 @@
     "test": "ENEM",
     "area": "math",
     "answer": "d",
-    "difficulty": 4
+    "difficulty": 4,
+    "disciplinas": [
+      "matematica"
+    ]
   },
   {
     "number": 170,
@@ -771,7 +873,10 @@
     "area": "math",
     "answer": "d",
     "difficulty": 5,
-    "review": true
+    "review": true,
+    "disciplinas": [
+      "matematica"
+    ]
   },
   {
     "number": 171,
@@ -794,6 +899,9 @@
     "difficulty": 3,
     "contextIds": [
       "enem_2023_math_q171_ctx1"
+    ],
+    "disciplinas": [
+      "matematica"
     ]
   },
   {
@@ -818,7 +926,10 @@
     "area": "math",
     "answer": "c",
     "difficulty": 6,
-    "review": true
+    "review": true,
+    "disciplinas": [
+      "matematica"
+    ]
   },
   {
     "number": 173,
@@ -842,6 +953,9 @@
     "review": true,
     "contextIds": [
       "enem_2023_math_q173_ctx1"
+    ],
+    "disciplinas": [
+      "matematica"
     ]
   },
   {
@@ -865,7 +979,10 @@
     "test": "ENEM",
     "area": "math",
     "answer": "e",
-    "difficulty": 3
+    "difficulty": 3,
+    "disciplinas": [
+      "matematica"
+    ]
   },
   {
     "number": 175,
@@ -886,7 +1003,10 @@
     "area": "math",
     "answer": "b",
     "difficulty": 4,
-    "review": true
+    "review": true,
+    "disciplinas": [
+      "matematica"
+    ]
   },
   {
     "number": 176,
@@ -909,7 +1029,10 @@
     "test": "ENEM",
     "area": "math",
     "answer": "e",
-    "difficulty": 5
+    "difficulty": 5,
+    "disciplinas": [
+      "matematica"
+    ]
   },
   {
     "number": 177,
@@ -939,7 +1062,10 @@
     "area": "math",
     "answer": "a",
     "difficulty": 5,
-    "review": true
+    "review": true,
+    "disciplinas": [
+      "matematica"
+    ]
   },
   {
     "number": 178,
@@ -966,7 +1092,10 @@
     "area": "math",
     "answer": "b",
     "difficulty": 3,
-    "review": true
+    "review": true,
+    "disciplinas": [
+      "matematica"
+    ]
   },
   {
     "number": 179,
@@ -989,7 +1118,10 @@
     "test": "ENEM",
     "area": "math",
     "answer": "c",
-    "difficulty": 4
+    "difficulty": 4,
+    "disciplinas": [
+      "matematica"
+    ]
   },
   {
     "number": 180,
@@ -1010,6 +1142,9 @@
     "test": "ENEM",
     "area": "math",
     "answer": "c",
-    "difficulty": 2
+    "difficulty": 2,
+    "disciplinas": [
+      "matematica"
+    ]
   }
 ]

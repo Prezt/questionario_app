@@ -18,7 +18,10 @@
     "year": 2021,
     "test": "ENEM",
     "area": "nature",
-    "answer": "e"
+    "answer": "e",
+    "disciplinas": [
+      "quimica"
+    ]
   },
   {
     "number": 92,
@@ -40,7 +43,10 @@
     "year": 2021,
     "test": "ENEM",
     "area": "nature",
-    "answer": "d"
+    "answer": "d",
+    "disciplinas": [
+      "fisica"
+    ]
   },
   {
     "number": 93,
@@ -64,7 +70,10 @@
     "year": 2021,
     "test": "ENEM",
     "area": "nature",
-    "answer": "e"
+    "answer": "e",
+    "disciplinas": [
+      "biologia"
+    ]
   },
   {
     "number": 94,
@@ -86,7 +95,10 @@
     "year": 2021,
     "test": "ENEM",
     "area": "nature",
-    "answer": "c"
+    "answer": "c",
+    "disciplinas": [
+      "fisica"
+    ]
   },
   {
     "number": 95,
@@ -106,7 +118,10 @@
     "year": 2021,
     "test": "ENEM",
     "area": "nature",
-    "answer": "a"
+    "answer": "a",
+    "disciplinas": [
+      "quimica"
+    ]
   },
   {
     "number": 96,
@@ -127,7 +142,10 @@
     "year": 2021,
     "test": "ENEM",
     "area": "nature",
-    "answer": "b"
+    "answer": "b",
+    "disciplinas": [
+      "biologia"
+    ]
   },
   {
     "number": 97,
@@ -147,7 +165,10 @@
     "year": 2021,
     "test": "ENEM",
     "area": "nature",
-    "answer": "e"
+    "answer": "e",
+    "disciplinas": [
+      "quimica"
+    ]
   },
   {
     "number": 98,
@@ -168,7 +189,10 @@
     "year": 2021,
     "test": "ENEM",
     "area": "nature",
-    "answer": "d"
+    "answer": "d",
+    "disciplinas": [
+      "biologia"
+    ]
   },
   {
     "number": 99,
@@ -190,7 +214,10 @@
     "year": 2021,
     "test": "ENEM",
     "area": "nature",
-    "answer": "a"
+    "answer": "a",
+    "disciplinas": [
+      "fisica"
+    ]
   },
   {
     "number": 100,
@@ -210,7 +237,10 @@
     "year": 2021,
     "test": "ENEM",
     "area": "nature",
-    "answer": "b"
+    "answer": "b",
+    "disciplinas": [
+      "fisica"
+    ]
   },
   {
     "number": 101,
@@ -233,7 +263,10 @@
     "year": 2021,
     "test": "ENEM",
     "area": "nature",
-    "answer": "c"
+    "answer": "c",
+    "disciplinas": [
+      "quimica"
+    ]
   },
   {
     "number": 102,
@@ -256,7 +289,10 @@
     "year": 2021,
     "test": "ENEM",
     "area": "nature",
-    "answer": "b"
+    "answer": "b",
+    "disciplinas": [
+      "quimica"
+    ]
   },
   {
     "number": 103,
@@ -279,7 +315,10 @@
     "year": 2021,
     "test": "ENEM",
     "area": "nature",
-    "answer": "e"
+    "answer": "e",
+    "disciplinas": [
+      "quimica"
+    ]
   },
   {
     "number": 104,
@@ -301,7 +340,10 @@
     "test": "ENEM",
     "area": "nature",
     "answer": "b",
-    "contextId": "q104_2021_ctx1"
+    "contextId": "q104_2021_ctx1",
+    "disciplinas": [
+      "biologia"
+    ]
   },
   {
     "number": 105,
@@ -329,7 +371,10 @@
     "year": 2021,
     "test": "ENEM",
     "area": "nature",
-    "answer": "a"
+    "answer": "a",
+    "disciplinas": [
+      "fisica"
+    ]
   },
   {
     "number": 106,
@@ -354,6 +399,9 @@
     "contextIds": [
       "enem_2021_nature_q106_ctx1",
       "enem_2021_nature_q106_ctx2"
+    ],
+    "disciplinas": [
+      "quimica"
     ]
   },
   {
@@ -375,7 +423,10 @@
     "year": 2021,
     "test": "ENEM",
     "area": "nature",
-    "answer": "c"
+    "answer": "c",
+    "disciplinas": [
+      "fisica"
+    ]
   },
   {
     "number": 108,
@@ -400,6 +451,9 @@
     "contextIds": [
       "enem_2021_nature_q101_q108_ctx1",
       "enem_2021_nature_q108_ctx1"
+    ],
+    "disciplinas": [
+      "fisica"
     ]
   },
   {
@@ -423,6 +477,9 @@
     "answer": "c",
     "contextIds": [
       "enem_2021_nature_q109_ctx1"
+    ],
+    "disciplinas": [
+      "fisica"
     ]
   },
   {
@@ -444,7 +501,10 @@
     "year": 2021,
     "test": "ENEM",
     "area": "nature",
-    "answer": "b"
+    "answer": "b",
+    "disciplinas": [
+      "biologia"
+    ]
   },
   {
     "number": 111,
@@ -465,7 +525,10 @@
     "year": 2021,
     "test": "ENEM",
     "area": "nature",
-    "answer": "b"
+    "answer": "b",
+    "disciplinas": [
+      "biologia"
+    ]
   },
   {
     "number": 112,
@@ -489,6 +552,9 @@
     "answer": "e",
     "contextIds": [
       "enem_2021_nature_q112_ctx1"
+    ],
+    "disciplinas": [
+      "biologia"
     ]
   },
   {
@@ -511,7 +577,10 @@
     "year": 2021,
     "test": "ENEM",
     "area": "nature",
-    "answer": "e"
+    "answer": "e",
+    "disciplinas": [
+      "quimica"
+    ]
   },
   {
     "number": 114,
@@ -532,7 +601,10 @@
     "year": 2021,
     "test": "ENEM",
     "area": "nature",
-    "answer": "b"
+    "answer": "b",
+    "disciplinas": [
+      "biologia"
+    ]
   },
   {
     "number": 115,
@@ -553,7 +625,10 @@
     "year": 2021,
     "test": "ENEM",
     "area": "nature",
-    "answer": "b"
+    "answer": "b",
+    "disciplinas": [
+      "fisica"
+    ]
   },
   {
     "number": 116,
@@ -576,7 +651,10 @@
     "year": 2021,
     "test": "ENEM",
     "area": "nature",
-    "answer": "c"
+    "answer": "c",
+    "disciplinas": [
+      "quimica"
+    ]
   },
   {
     "number": 117,
@@ -598,7 +676,11 @@
     "test": "ENEM",
     "area": "nature",
     "answer": "b",
-    "contextId": "q117_2021_ctx1"
+    "contextId": "q117_2021_ctx1",
+    "disciplinas": [
+      "biologia",
+      "quimica"
+    ]
   },
   {
     "number": 118,
@@ -622,6 +704,9 @@
     "answer": "d",
     "contextIds": [
       "enem_2021_nature_q118_ctx1"
+    ],
+    "disciplinas": [
+      "biologia"
     ]
   },
   {
@@ -643,7 +728,10 @@
     "year": 2021,
     "test": "ENEM",
     "area": "nature",
-    "answer": "a"
+    "answer": "a",
+    "disciplinas": [
+      "biologia"
+    ]
   },
   {
     "number": 120,
@@ -668,6 +756,9 @@
     "answer": "a",
     "contextIds": [
       "enem_2021_nature_q120_ctx1"
+    ],
+    "disciplinas": [
+      "biologia"
     ]
   },
   {
@@ -691,7 +782,10 @@
     "test": "ENEM",
     "area": "nature",
     "answer": "e",
-    "contextId": "q121_2021_ctx1"
+    "contextId": "q121_2021_ctx1",
+    "disciplinas": [
+      "biologia"
+    ]
   },
   {
     "number": 122,
@@ -715,6 +809,9 @@
     "answer": "c",
     "contextIds": [
       "enem_2021_nature_q122_ctx1"
+    ],
+    "disciplinas": [
+      "biologia"
     ]
   },
   {
@@ -736,7 +833,10 @@
     "year": 2021,
     "test": "ENEM",
     "area": "nature",
-    "answer": "d"
+    "answer": "d",
+    "disciplinas": [
+      "biologia"
+    ]
   },
   {
     "number": 124,
@@ -760,6 +860,9 @@
     "answer": "c",
     "contextIds": [
       "enem_2021_nature_q124_ctx1"
+    ],
+    "disciplinas": [
+      "quimica"
     ]
   },
   {
@@ -784,7 +887,8 @@
     "test": "ENEM",
     "area": "nature",
     "answer": "b",
-    "contextIds": []
+    "contextIds": [],
+    "disciplinas": []
   },
   {
     "number": 126,
@@ -812,7 +916,10 @@
     "year": 2021,
     "test": "ENEM",
     "area": "nature",
-    "answer": "d"
+    "answer": "d",
+    "disciplinas": [
+      "fisica"
+    ]
   },
   {
     "number": 127,
@@ -836,6 +943,9 @@
     "answer": "c",
     "contextIds": [
       "enem_2021_nature_q127_ctx1"
+    ],
+    "disciplinas": [
+      "biologia"
     ]
   },
   {
@@ -857,7 +967,10 @@
     "year": 2021,
     "test": "ENEM",
     "area": "nature",
-    "answer": "d"
+    "answer": "d",
+    "disciplinas": [
+      "fisica"
+    ]
   },
   {
     "number": 129,
@@ -879,7 +992,10 @@
     "year": 2021,
     "test": "ENEM",
     "area": "nature",
-    "answer": "b"
+    "answer": "b",
+    "disciplinas": [
+      "biologia"
+    ]
   },
   {
     "number": 130,
@@ -900,7 +1016,10 @@
     "year": 2021,
     "test": "ENEM",
     "area": "nature",
-    "answer": "b"
+    "answer": "b",
+    "disciplinas": [
+      "quimica"
+    ]
   },
   {
     "number": 131,
@@ -923,7 +1042,11 @@
     "year": 2021,
     "test": "ENEM",
     "area": "nature",
-    "answer": "b"
+    "answer": "b",
+    "disciplinas": [
+      "biologia",
+      "fisica"
+    ]
   },
   {
     "number": 132,
@@ -946,6 +1069,9 @@
     "answer": "a",
     "contextIds": [
       "enem_2021_nature_q132_ctx1"
+    ],
+    "disciplinas": [
+      "biologia"
     ]
   },
   {
@@ -967,7 +1093,11 @@
     "year": 2021,
     "test": "ENEM",
     "area": "nature",
-    "answer": "d"
+    "answer": "d",
+    "disciplinas": [
+      "fisica",
+      "quimica"
+    ]
   },
   {
     "number": 134,
@@ -992,6 +1122,9 @@
     "answer": "c",
     "contextIds": [
       "enem_2021_nature_q134_ctx1"
+    ],
+    "disciplinas": [
+      "quimica"
     ]
   },
   {
@@ -1020,6 +1153,10 @@
     "test": "ENEM",
     "area": "nature",
     "answer": "d",
-    "contextId": "enem_2021_nature_q135_ctx1"
+    "contextId": "enem_2021_nature_q135_ctx1",
+    "disciplinas": [
+      "biologia",
+      "quimica"
+    ]
   }
 ]

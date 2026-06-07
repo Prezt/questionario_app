@@ -20,7 +20,11 @@
     "area": "linguagens",
     "answer": "b",
     "contextId": "enem_2019_linguagens_q1_q39_ctx1",
-    "language": "en"
+    "language": "en",
+    "disciplinas": [
+      "lingua_estrangeira",
+      "portugues"
+    ]
   },
   {
     "number": 2,
@@ -44,7 +48,11 @@
     "area": "linguagens",
     "answer": "d",
     "contextId": "enem_2019_linguagens_q2_q4_ctx1",
-    "language": "en"
+    "language": "en",
+    "disciplinas": [
+      "lingua_estrangeira",
+      "portugues"
+    ]
   },
   {
     "number": 3,
@@ -68,7 +76,11 @@
     "area": "linguagens",
     "answer": "a",
     "contextId": "enem_2019_linguagens_q1_q39_ctx1",
-    "language": "en"
+    "language": "en",
+    "disciplinas": [
+      "lingua_estrangeira",
+      "portugues"
+    ]
   },
   {
     "number": 4,
@@ -91,7 +103,11 @@
     "area": "linguagens",
     "answer": "b",
     "contextId": "enem_2019_linguagens_q2_q4_ctx1",
-    "language": "en"
+    "language": "en",
+    "disciplinas": [
+      "lingua_estrangeira",
+      "portugues"
+    ]
   },
   {
     "number": 5,
@@ -117,7 +133,11 @@
     "contextIds": [
       "enem_2019_linguagens_q1_q5_ctx1"
     ],
-    "language": "es"
+    "language": "es",
+    "disciplinas": [
+      "lingua_estrangeira",
+      "portugues"
+    ]
   },
   {
     "number": 1,
@@ -141,7 +161,12 @@
     "area": "linguagens",
     "answer": "b",
     "contextId": "enem_2019_linguagens_q1_q5_ctx1",
-    "language": "es"
+    "language": "es",
+    "disciplinas": [
+      "lingua_estrangeira",
+      "literatura",
+      "portugues"
+    ]
   },
   {
     "number": 2,
@@ -164,7 +189,11 @@
     "area": "linguagens",
     "answer": "d",
     "contextId": "enem_2019_linguagens_q1_q5_ctx1",
-    "language": "es"
+    "language": "es",
+    "disciplinas": [
+      "lingua_estrangeira",
+      "portugues"
+    ]
   },
   {
     "number": 3,
@@ -187,7 +216,11 @@
     "area": "linguagens",
     "answer": "a",
     "contextId": "enem_2019_linguagens_q1_q5_ctx1",
-    "language": "es"
+    "language": "es",
+    "disciplinas": [
+      "lingua_estrangeira",
+      "portugues"
+    ]
   },
   {
     "number": 4,
@@ -211,7 +244,12 @@
     "area": "linguagens",
     "answer": "b",
     "contextId": "enem_2019_linguagens_q1_q39_ctx1",
-    "language": "es"
+    "language": "es",
+    "disciplinas": [
+      "lingua_estrangeira",
+      "literatura",
+      "portugues"
+    ]
   },
   {
     "number": 5,
@@ -234,7 +272,11 @@
     "area": "linguagens",
     "answer": "e",
     "contextId": "enem_2019_linguagens_q1_q5_ctx1",
-    "language": "es"
+    "language": "es",
+    "disciplinas": [
+      "lingua_estrangeira",
+      "portugues"
+    ]
   },
   {
     "number": 6,
@@ -257,7 +299,10 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "b",
-    "contextId": "enem_2019_linguagens_q6_ctx1"
+    "contextId": "enem_2019_linguagens_q6_ctx1",
+    "disciplinas": [
+      "portugues"
+    ]
   },
   {
     "number": 7,
@@ -280,7 +325,10 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "c",
-    "contextId": "enem_2019_linguagens_q7_ctx1"
+    "contextId": "enem_2019_linguagens_q7_ctx1",
+    "disciplinas": [
+      "portugues"
+    ]
   },
   {
     "number": 8,
@@ -302,7 +350,10 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "b",
-    "contextId": "enem_2019_linguagens_q1_q39_ctx1"
+    "contextId": "enem_2019_linguagens_q1_q39_ctx1",
+    "disciplinas": [
+      "portugues"
+    ]
   },
   {
     "number": 9,
@@ -324,7 +375,10 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "a",
-    "contextId": "enem_2019_linguagens_q1_q39_ctx1"
+    "contextId": "enem_2019_linguagens_q1_q39_ctx1",
+    "disciplinas": [
+      "portugues"
+    ]
   },
   {
     "number": 10,
@@ -345,7 +399,10 @@
     "year": 2019,
     "test": "ENEM",
     "area": "linguagens",
-    "answer": "a"
+    "answer": "a",
+    "disciplinas": [
+      "portugues"
+    ]
   },
   {
     "number": 11,
@@ -367,7 +424,10 @@
     "year": 2019,
     "test": "ENEM",
     "area": "linguagens",
-    "answer": "d"
+    "answer": "d",
+    "disciplinas": [
+      "portugues"
+    ]
   },
   {
     "number": 12,
@@ -393,6 +453,9 @@
     "contextIds": [
       "enem_2019_linguagens_q1_q39_ctx1",
       "enem_2019_linguagens_q12_q36_ctx1"
+    ],
+    "disciplinas": [
+      "portugues"
     ]
   },
   {
@@ -415,7 +478,11 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "b",
-    "contextId": "enem_2019_linguagens_q13_ctx1"
+    "contextId": "enem_2019_linguagens_q13_ctx1",
+    "disciplinas": [
+      "literatura",
+      "portugues"
+    ]
   },
   {
     "number": 14,
@@ -438,7 +505,11 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "e",
-    "contextId": "enem_2019_linguagens_q1_q39_ctx1"
+    "contextId": "enem_2019_linguagens_q1_q39_ctx1",
+    "disciplinas": [
+      "literatura",
+      "portugues"
+    ]
   },
   {
     "number": 15,
@@ -461,7 +532,10 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "c",
-    "contextId": "enem_2019_linguagens_q15_ctx1"
+    "contextId": "enem_2019_linguagens_q15_ctx1",
+    "disciplinas": [
+      "portugues"
+    ]
   },
   {
     "number": 16,
@@ -483,7 +557,10 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "d",
-    "contextId": "enem_2019_linguagens_q16_ctx1"
+    "contextId": "enem_2019_linguagens_q16_ctx1",
+    "disciplinas": [
+      "portugues"
+    ]
   },
   {
     "number": 17,
@@ -505,7 +582,10 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "a",
-    "contextId": "enem_2019_linguagens_q1_q39_ctx1"
+    "contextId": "enem_2019_linguagens_q1_q39_ctx1",
+    "disciplinas": [
+      "portugues"
+    ]
   },
   {
     "number": 18,
@@ -527,7 +607,10 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "a",
-    "contextId": "enem_2019_linguagens_q1_q39_ctx1"
+    "contextId": "enem_2019_linguagens_q1_q39_ctx1",
+    "disciplinas": [
+      "portugues"
+    ]
   },
   {
     "number": 19,
@@ -549,7 +632,10 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "e",
-    "contextId": "enem_2019_linguagens_q19_ctx1"
+    "contextId": "enem_2019_linguagens_q19_ctx1",
+    "disciplinas": [
+      "portugues"
+    ]
   },
   {
     "number": 20,
@@ -571,7 +657,10 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "c",
-    "contextId": "enem_2019_linguagens_q20_ctx1"
+    "contextId": "enem_2019_linguagens_q20_ctx1",
+    "disciplinas": [
+      "portugues"
+    ]
   },
   {
     "number": 21,
@@ -593,7 +682,11 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "d",
-    "contextId": "enem_2019_linguagens_q1_q39_ctx1"
+    "contextId": "enem_2019_linguagens_q1_q39_ctx1",
+    "disciplinas": [
+      "literatura",
+      "portugues"
+    ]
   },
   {
     "number": 22,
@@ -615,7 +708,11 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "a",
-    "contextId": "enem_2019_linguagens_q22_ctx1"
+    "contextId": "enem_2019_linguagens_q22_ctx1",
+    "disciplinas": [
+      "literatura",
+      "portugues"
+    ]
   },
   {
     "number": 23,
@@ -638,7 +735,11 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "e",
-    "contextId": "enem_2019_linguagens_q23_ctx1"
+    "contextId": "enem_2019_linguagens_q23_ctx1",
+    "disciplinas": [
+      "artes",
+      "portugues"
+    ]
   },
   {
     "number": 24,
@@ -661,7 +762,10 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "c",
-    "contextId": "enem_2019_linguagens_q24_ctx1"
+    "contextId": "enem_2019_linguagens_q24_ctx1",
+    "disciplinas": [
+      "portugues"
+    ]
   },
   {
     "number": 25,
@@ -683,7 +787,11 @@
     "year": 2019,
     "test": "ENEM",
     "area": "linguagens",
-    "answer": "b"
+    "answer": "b",
+    "disciplinas": [
+      "literatura",
+      "portugues"
+    ]
   },
   {
     "number": 26,
@@ -708,6 +816,9 @@
     "contextIds": [
       "enem_2019_linguagens_q1_q39_ctx1",
       "enem_2019_linguagens_q12_q36_ctx1"
+    ],
+    "disciplinas": [
+      "portugues"
     ]
   },
   {
@@ -729,7 +840,10 @@
     "year": 2019,
     "test": "ENEM",
     "area": "linguagens",
-    "answer": "c"
+    "answer": "c",
+    "disciplinas": [
+      "portugues"
+    ]
   },
   {
     "number": 28,
@@ -751,7 +865,11 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "b",
-    "contextId": "enem_2019_linguagens_q28_ctx1"
+    "contextId": "enem_2019_linguagens_q28_ctx1",
+    "disciplinas": [
+      "literatura",
+      "portugues"
+    ]
   },
   {
     "number": 29,
@@ -773,7 +891,10 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "c",
-    "contextId": "enem_2019_linguagens_q1_q39_ctx1"
+    "contextId": "enem_2019_linguagens_q1_q39_ctx1",
+    "disciplinas": [
+      "portugues"
+    ]
   },
   {
     "number": 30,
@@ -799,6 +920,10 @@
     "contextIds": [
       "enem_2019_linguagens_q1_q39_ctx1",
       "enem_2019_linguagens_q12_q36_ctx1"
+    ],
+    "disciplinas": [
+      "literatura",
+      "portugues"
     ]
   },
   {
@@ -821,7 +946,11 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "d",
-    "contextId": "enem_2019_linguagens_q1_q39_ctx1"
+    "contextId": "enem_2019_linguagens_q1_q39_ctx1",
+    "disciplinas": [
+      "artes",
+      "portugues"
+    ]
   },
   {
     "number": 32,
@@ -843,7 +972,10 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "e",
-    "contextId": "enem_2019_linguagens_q32_ctx1"
+    "contextId": "enem_2019_linguagens_q32_ctx1",
+    "disciplinas": [
+      "portugues"
+    ]
   },
   {
     "number": 33,
@@ -865,7 +997,11 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "e",
-    "contextId": "enem_2019_linguagens_q1_q39_ctx1"
+    "contextId": "enem_2019_linguagens_q1_q39_ctx1",
+    "disciplinas": [
+      "literatura",
+      "portugues"
+    ]
   },
   {
     "number": 34,
@@ -887,7 +1023,10 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "a",
-    "contextId": "enem_2019_linguagens_q1_q39_ctx1"
+    "contextId": "enem_2019_linguagens_q1_q39_ctx1",
+    "disciplinas": [
+      "portugues"
+    ]
   },
   {
     "number": 35,
@@ -908,7 +1047,10 @@
     "year": 2019,
     "test": "ENEM",
     "area": "linguagens",
-    "answer": "a"
+    "answer": "a",
+    "disciplinas": [
+      "portugues"
+    ]
   },
   {
     "number": 36,
@@ -934,6 +1076,10 @@
     "contextIds": [
       "enem_2019_linguagens_q1_q39_ctx1",
       "enem_2019_linguagens_q12_q36_ctx1"
+    ],
+    "disciplinas": [
+      "artes",
+      "portugues"
     ]
   },
   {
@@ -957,7 +1103,10 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "d",
-    "contextId": "enem_2019_linguagens_q37_ctx1"
+    "contextId": "enem_2019_linguagens_q37_ctx1",
+    "disciplinas": [
+      "portugues"
+    ]
   },
   {
     "number": 38,
@@ -979,7 +1128,10 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "d",
-    "contextId": "enem_2019_linguagens_q38_ctx1"
+    "contextId": "enem_2019_linguagens_q38_ctx1",
+    "disciplinas": [
+      "portugues"
+    ]
   },
   {
     "number": 39,
@@ -1001,7 +1153,11 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "b",
-    "contextId": "enem_2019_linguagens_q1_q39_ctx1"
+    "contextId": "enem_2019_linguagens_q1_q39_ctx1",
+    "disciplinas": [
+      "literatura",
+      "portugues"
+    ]
   },
   {
     "number": 40,
@@ -1023,7 +1179,11 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "b",
-    "contextId": "enem_2019_linguagens_q40_ctx1"
+    "contextId": "enem_2019_linguagens_q40_ctx1",
+    "disciplinas": [
+      "literatura",
+      "portugues"
+    ]
   },
   {
     "number": 41,
@@ -1045,7 +1205,11 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "c",
-    "contextId": "enem_2019_linguagens_q41_ctx1"
+    "contextId": "enem_2019_linguagens_q41_ctx1",
+    "disciplinas": [
+      "literatura",
+      "portugues"
+    ]
   },
   {
     "number": 42,
@@ -1068,7 +1232,10 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "d",
-    "contextId": "enem_2019_linguagens_q42_ctx1"
+    "contextId": "enem_2019_linguagens_q42_ctx1",
+    "disciplinas": [
+      "portugues"
+    ]
   },
   {
     "number": 43,
@@ -1089,7 +1256,10 @@
     "year": 2019,
     "test": "ENEM",
     "area": "linguagens",
-    "answer": "c"
+    "answer": "c",
+    "disciplinas": [
+      "portugues"
+    ]
   },
   {
     "number": 44,
@@ -1112,7 +1282,11 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "e",
-    "contextId": "enem_2019_linguagens_q44_ctx1"
+    "contextId": "enem_2019_linguagens_q44_ctx1",
+    "disciplinas": [
+      "literatura",
+      "portugues"
+    ]
   },
   {
     "number": 45,
@@ -1135,6 +1309,10 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "b",
-    "contextId": "enem_2019_linguagens_q45_ctx1"
+    "contextId": "enem_2019_linguagens_q45_ctx1",
+    "disciplinas": [
+      "literatura",
+      "portugues"
+    ]
   }
 ]

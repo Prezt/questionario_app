@@ -19,7 +19,11 @@
     "answer": "d",
     "difficulty": 5,
     "language": "en",
-    "contextId": "enem_2022_linguagens_q1en_ctx1"
+    "contextId": "enem_2022_linguagens_q1en_ctx1",
+    "disciplinas": [
+      "lingua_estrangeira",
+      "literatura"
+    ]
   },
   {
     "number": 1,
@@ -42,7 +46,11 @@
     "answer": "e",
     "difficulty": 3,
     "language": "es",
-    "contextId": "enem_2022_linguagens_q1es_ctx1"
+    "contextId": "enem_2022_linguagens_q1es_ctx1",
+    "disciplinas": [
+      "lingua_estrangeira",
+      "portugues"
+    ]
   },
   {
     "number": 2,
@@ -65,7 +73,11 @@
     "answer": "c",
     "difficulty": 5,
     "language": "en",
-    "contextId": "enem_2022_linguagens_q2en_ctx1"
+    "contextId": "enem_2022_linguagens_q2en_ctx1",
+    "disciplinas": [
+      "lingua_estrangeira",
+      "portugues"
+    ]
   },
   {
     "number": 2,
@@ -88,7 +100,10 @@
     "answer": "d",
     "difficulty": 4,
     "language": "es",
-    "contextId": "enem_2022_linguagens_q2es_ctx1"
+    "contextId": "enem_2022_linguagens_q2es_ctx1",
+    "disciplinas": [
+      "lingua_estrangeira"
+    ]
   },
   {
     "number": 3,
@@ -111,7 +126,11 @@
     "answer": "b",
     "difficulty": 3,
     "language": "en",
-    "contextId": "enem_2022_linguagens_q3en_ctx1"
+    "contextId": "enem_2022_linguagens_q3en_ctx1",
+    "disciplinas": [
+      "lingua_estrangeira",
+      "portugues"
+    ]
   },
   {
     "number": 3,
@@ -133,7 +152,10 @@
     "answer": "c",
     "difficulty": 5,
     "language": "es",
-    "contextId": "enem_2022_linguagens_q3es_ctx1"
+    "contextId": "enem_2022_linguagens_q3es_ctx1",
+    "disciplinas": [
+      "lingua_estrangeira"
+    ]
   },
   {
     "number": 4,
@@ -156,7 +178,11 @@
     "answer": "d",
     "difficulty": 5,
     "language": "en",
-    "contextId": "enem_2022_linguagens_q4en_ctx1"
+    "contextId": "enem_2022_linguagens_q4en_ctx1",
+    "disciplinas": [
+      "lingua_estrangeira",
+      "portugues"
+    ]
   },
   {
     "number": 4,
@@ -179,7 +205,12 @@
     "answer": "a",
     "difficulty": 6,
     "language": "es",
-    "contextId": "enem_2022_linguagens_q4es_ctx1"
+    "contextId": "enem_2022_linguagens_q4es_ctx1",
+    "disciplinas": [
+      "lingua_estrangeira",
+      "literatura",
+      "portugues"
+    ]
   },
   {
     "number": 5,
@@ -202,7 +233,11 @@
     "answer": "e",
     "difficulty": 5,
     "language": "en",
-    "contextId": "enem_2022_linguagens_q5en_ctx1"
+    "contextId": "enem_2022_linguagens_q5en_ctx1",
+    "disciplinas": [
+      "lingua_estrangeira",
+      "portugues"
+    ]
   },
   {
     "number": 5,
@@ -224,7 +259,10 @@
     "answer": "a",
     "difficulty": 5,
     "language": "es",
-    "contextId": "enem_2022_linguagens_q5es_ctx1"
+    "contextId": "enem_2022_linguagens_q5es_ctx1",
+    "disciplinas": [
+      "lingua_estrangeira"
+    ]
   },
   {
     "number": 6,
@@ -245,7 +283,10 @@
     "area": "linguagens",
     "answer": "e",
     "difficulty": 7,
-    "contextId": "enem_2022_linguagens_q6_ctx1"
+    "contextId": "enem_2022_linguagens_q6_ctx1",
+    "disciplinas": [
+      "portugues"
+    ]
   },
   {
     "number": 7,
@@ -270,7 +311,10 @@
       "enem_2022_linguagens_q7_ctx2"
     ],
     "language": null,
-    "difficulty": 5
+    "difficulty": 5,
+    "disciplinas": [
+      "portugues"
+    ]
   },
   {
     "number": 8,
@@ -292,7 +336,10 @@
     "area": "linguagens",
     "answer": "a",
     "difficulty": 4,
-    "contextId": "enem_2022_linguagens_q8_ctx1"
+    "contextId": "enem_2022_linguagens_q8_ctx1",
+    "disciplinas": [
+      "portugues"
+    ]
   },
   {
     "number": 9,
@@ -314,7 +361,8 @@
     "area": "linguagens",
     "answer": "a",
     "difficulty": 5,
-    "contextId": "enem_2022_linguagens_q9_ctx1"
+    "contextId": "enem_2022_linguagens_q9_ctx1",
+    "disciplinas": []
   },
   {
     "number": 10,
@@ -336,7 +384,10 @@
     "area": "linguagens",
     "answer": "c",
     "difficulty": 5,
-    "contextId": "enem_2022_linguagens_q10_ctx1"
+    "contextId": "enem_2022_linguagens_q10_ctx1",
+    "disciplinas": [
+      "artes"
+    ]
   },
   {
     "number": 11,
@@ -357,7 +408,10 @@
     "area": "linguagens",
     "answer": "a",
     "difficulty": 5,
-    "contextId": "enem_2022_linguagens_q11_ctx1"
+    "contextId": "enem_2022_linguagens_q11_ctx1",
+    "disciplinas": [
+      "portugues"
+    ]
   },
   {
     "number": 12,
@@ -379,7 +433,11 @@
     "area": "linguagens",
     "answer": "b",
     "difficulty": 6,
-    "contextId": "enem_2022_linguagens_q12_ctx1"
+    "contextId": "enem_2022_linguagens_q12_ctx1",
+    "disciplinas": [
+      "literatura",
+      "portugues"
+    ]
   },
   {
     "number": 13,
@@ -400,7 +458,8 @@
     "area": "linguagens",
     "answer": "b",
     "difficulty": 5,
-    "contextId": "enem_2022_linguagens_q13_ctx1"
+    "contextId": "enem_2022_linguagens_q13_ctx1",
+    "disciplinas": []
   },
   {
     "number": 14,
@@ -424,6 +483,9 @@
     "contextIds": [
       "enem_2022_linguagens_q14_ctx1",
       "enem_2022_linguagens_q14_ctx2"
+    ],
+    "disciplinas": [
+      "portugues"
     ]
   },
   {
@@ -446,7 +508,8 @@
     "area": "linguagens",
     "answer": "b",
     "difficulty": 5,
-    "contextId": "enem_2022_linguagens_q15_ctx1"
+    "contextId": "enem_2022_linguagens_q15_ctx1",
+    "disciplinas": []
   },
   {
     "number": 16,
@@ -467,7 +530,10 @@
     "area": "linguagens",
     "answer": "e",
     "difficulty": 4,
-    "contextId": "enem_2022_linguagens_q16_ctx1"
+    "contextId": "enem_2022_linguagens_q16_ctx1",
+    "disciplinas": [
+      "portugues"
+    ]
   },
   {
     "number": 17,
@@ -489,7 +555,10 @@
     "area": "linguagens",
     "answer": "b",
     "contextId": "enem_2022_linguagens_q17_ctx1",
-    "difficulty": 7
+    "difficulty": 7,
+    "disciplinas": [
+      "portugues"
+    ]
   },
   {
     "number": 18,
@@ -511,7 +580,11 @@
     "area": "linguagens",
     "answer": "a",
     "difficulty": 7,
-    "contextId": "enem_2022_linguagens_q18_ctx1"
+    "contextId": "enem_2022_linguagens_q18_ctx1",
+    "disciplinas": [
+      "literatura",
+      "portugues"
+    ]
   },
   {
     "number": 19,
@@ -532,7 +605,10 @@
     "area": "linguagens",
     "answer": "c",
     "difficulty": 3,
-    "contextId": "enem_2022_linguagens_q19_ctx1"
+    "contextId": "enem_2022_linguagens_q19_ctx1",
+    "disciplinas": [
+      "portugues"
+    ]
   },
   {
     "number": 20,
@@ -554,7 +630,10 @@
     "area": "linguagens",
     "answer": "c",
     "difficulty": 5,
-    "contextId": "enem_2022_linguagens_q20_ctx1"
+    "contextId": "enem_2022_linguagens_q20_ctx1",
+    "disciplinas": [
+      "portugues"
+    ]
   },
   {
     "number": 21,
@@ -576,7 +655,10 @@
     "area": "linguagens",
     "answer": "b",
     "difficulty": 7,
-    "contextId": "enem_2022_linguagens_q21_ctx1"
+    "contextId": "enem_2022_linguagens_q21_ctx1",
+    "disciplinas": [
+      "literatura"
+    ]
   },
   {
     "number": 22,
@@ -601,7 +683,8 @@
     "contextIds": [
       "enem_2022_linguagens_q22_ctx1",
       "enem_2022_linguagens_q22_ctx2"
-    ]
+    ],
+    "disciplinas": []
   },
   {
     "number": 23,
@@ -623,7 +706,11 @@
     "area": "linguagens",
     "answer": "e",
     "difficulty": 7,
-    "contextId": "enem_2022_linguagens_q23_ctx1"
+    "contextId": "enem_2022_linguagens_q23_ctx1",
+    "disciplinas": [
+      "literatura",
+      "portugues"
+    ]
   },
   {
     "number": 24,
@@ -645,7 +732,10 @@
     "area": "linguagens",
     "answer": "e",
     "difficulty": 4,
-    "contextId": "enem_2022_linguagens_q24_ctx1"
+    "contextId": "enem_2022_linguagens_q24_ctx1",
+    "disciplinas": [
+      "portugues"
+    ]
   },
   {
     "number": 25,
@@ -667,7 +757,10 @@
     "area": "linguagens",
     "answer": "c",
     "difficulty": 3,
-    "contextId": "enem_2022_linguagens_q25_ctx1"
+    "contextId": "enem_2022_linguagens_q25_ctx1",
+    "disciplinas": [
+      "portugues"
+    ]
   },
   {
     "number": 26,
@@ -689,7 +782,11 @@
     "area": "linguagens",
     "answer": "c",
     "difficulty": 7,
-    "contextId": "enem_2022_linguagens_q26_ctx1"
+    "contextId": "enem_2022_linguagens_q26_ctx1",
+    "disciplinas": [
+      "literatura",
+      "portugues"
+    ]
   },
   {
     "number": 27,
@@ -710,7 +807,8 @@
     "area": "linguagens",
     "answer": "b",
     "difficulty": 5,
-    "contextId": "enem_2022_linguagens_q27_ctx1"
+    "contextId": "enem_2022_linguagens_q27_ctx1",
+    "disciplinas": []
   },
   {
     "number": 28,
@@ -732,7 +830,10 @@
     "area": "linguagens",
     "answer": "b",
     "difficulty": 5,
-    "contextId": "enem_2022_linguagens_q28_ctx1"
+    "contextId": "enem_2022_linguagens_q28_ctx1",
+    "disciplinas": [
+      "portugues"
+    ]
   },
   {
     "number": 29,
@@ -753,7 +854,10 @@
     "area": "linguagens",
     "answer": "d",
     "difficulty": 7,
-    "contextId": "enem_2022_linguagens_q29_ctx1"
+    "contextId": "enem_2022_linguagens_q29_ctx1",
+    "disciplinas": [
+      "literatura"
+    ]
   },
   {
     "number": 30,
@@ -775,7 +879,11 @@
     "area": "linguagens",
     "answer": "c",
     "difficulty": 7,
-    "contextId": "enem_2022_linguagens_q30_ctx1"
+    "contextId": "enem_2022_linguagens_q30_ctx1",
+    "disciplinas": [
+      "literatura",
+      "portugues"
+    ]
   },
   {
     "number": 31,
@@ -797,7 +905,11 @@
     "area": "linguagens",
     "answer": "a",
     "difficulty": 8,
-    "contextId": "enem_2022_linguagens_q31_ctx1"
+    "contextId": "enem_2022_linguagens_q31_ctx1",
+    "disciplinas": [
+      "literatura",
+      "portugues"
+    ]
   },
   {
     "number": 32,
@@ -819,7 +931,10 @@
     "area": "linguagens",
     "answer": "a",
     "difficulty": 3,
-    "contextId": "enem_2022_linguagens_q32_ctx1"
+    "contextId": "enem_2022_linguagens_q32_ctx1",
+    "disciplinas": [
+      "portugues"
+    ]
   },
   {
     "number": 33,
@@ -841,7 +956,11 @@
     "area": "linguagens",
     "answer": "a",
     "difficulty": 7,
-    "contextId": "enem_2022_linguagens_q33_ctx1"
+    "contextId": "enem_2022_linguagens_q33_ctx1",
+    "disciplinas": [
+      "literatura",
+      "portugues"
+    ]
   },
   {
     "number": 34,
@@ -862,7 +981,8 @@
     "area": "linguagens",
     "images": [],
     "difficulty": 3,
-    "contextId": "enem_2022_linguagens_q34_ctx1"
+    "contextId": "enem_2022_linguagens_q34_ctx1",
+    "disciplinas": []
   },
   {
     "number": 35,
@@ -884,7 +1004,11 @@
     "area": "linguagens",
     "answer": "c",
     "difficulty": 6,
-    "contextId": "enem_2022_linguagens_q35_ctx1"
+    "contextId": "enem_2022_linguagens_q35_ctx1",
+    "disciplinas": [
+      "literatura",
+      "portugues"
+    ]
   },
   {
     "number": 36,
@@ -906,7 +1030,10 @@
     "area": "linguagens",
     "answer": "c",
     "difficulty": 3,
-    "contextId": "enem_2022_linguagens_q36_ctx1"
+    "contextId": "enem_2022_linguagens_q36_ctx1",
+    "disciplinas": [
+      "portugues"
+    ]
   },
   {
     "number": 37,
@@ -928,7 +1055,8 @@
     "area": "linguagens",
     "answer": "a",
     "difficulty": 5,
-    "contextId": "enem_2022_linguagens_q37_ctx1"
+    "contextId": "enem_2022_linguagens_q37_ctx1",
+    "disciplinas": []
   },
   {
     "number": 38,
@@ -952,6 +1080,9 @@
     "contextIds": [
       "enem_2022_linguagens_q38_ctx1",
       "enem_2022_linguagens_q38_ctx2"
+    ],
+    "disciplinas": [
+      "artes"
     ]
   },
   {
@@ -976,6 +1107,9 @@
     "contextIds": [
       "enem_2022_linguagens_q39_ctx1",
       "enem_2022_linguagens_q39_ctx2"
+    ],
+    "disciplinas": [
+      "artes"
     ]
   },
   {
@@ -997,7 +1131,10 @@
     "area": "linguagens",
     "answer": "d",
     "difficulty": 7,
-    "contextId": "enem_2022_linguagens_q40_ctx1"
+    "contextId": "enem_2022_linguagens_q40_ctx1",
+    "disciplinas": [
+      "literatura"
+    ]
   },
   {
     "number": 41,
@@ -1018,7 +1155,10 @@
     "area": "linguagens",
     "images": [],
     "difficulty": 6,
-    "contextId": "enem_2022_linguagens_q41_ctx1"
+    "contextId": "enem_2022_linguagens_q41_ctx1",
+    "disciplinas": [
+      "literatura"
+    ]
   },
   {
     "number": 42,
@@ -1039,7 +1179,10 @@
     "area": "linguagens",
     "answer": "d",
     "difficulty": 5,
-    "contextId": "enem_2022_linguagens_q42_ctx1"
+    "contextId": "enem_2022_linguagens_q42_ctx1",
+    "disciplinas": [
+      "portugues"
+    ]
   },
   {
     "number": 43,
@@ -1061,7 +1204,11 @@
     "area": "linguagens",
     "answer": "e",
     "difficulty": 7,
-    "contextId": "enem_2022_linguagens_q43_ctx1"
+    "contextId": "enem_2022_linguagens_q43_ctx1",
+    "disciplinas": [
+      "literatura",
+      "portugues"
+    ]
   },
   {
     "number": 44,
@@ -1085,6 +1232,9 @@
     "contextIds": [
       "enem_2022_linguagens_q44_ctx1",
       "enem_2022_linguagens_q44_ctx2"
+    ],
+    "disciplinas": [
+      "artes"
     ]
   },
   {
@@ -1107,6 +1257,9 @@
     "area": "linguagens",
     "answer": "e",
     "difficulty": 5,
-    "contextId": "enem_2022_linguagens_q45_ctx1"
+    "contextId": "enem_2022_linguagens_q45_ctx1",
+    "disciplinas": [
+      "artes"
+    ]
   }
 ]

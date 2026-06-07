@@ -22,6 +22,10 @@
     "difficulty": 3,
     "contextIds": [
       "enem_2025_humanas_q46_ctx1"
+    ],
+    "disciplinas": [
+      "geografia",
+      "historia"
     ]
   },
   {
@@ -46,7 +50,10 @@
     "test": "ENEM",
     "year": 2025,
     "answer": "d",
-    "difficulty": 5
+    "difficulty": 5,
+    "disciplinas": [
+      "geografia"
+    ]
   },
   {
     "number": 48,
@@ -70,6 +77,9 @@
     "difficulty": 8,
     "contextIds": [
       "enem_2025_humanas_q48_ctx1"
+    ],
+    "disciplinas": [
+      "filosofia"
     ]
   },
   {
@@ -96,6 +106,10 @@
     "contextIds": [
       "enem_2025_humanas_q49_ctx1",
       "enem_2025_humanas_q49_ctx2"
+    ],
+    "disciplinas": [
+      "filosofia",
+      "historia"
     ]
   },
   {
@@ -120,6 +134,9 @@
     "difficulty": 9,
     "contextIds": [
       "enem_2025_humanas_q50_ctx1"
+    ],
+    "disciplinas": [
+      "filosofia"
     ]
   },
   {
@@ -145,6 +162,10 @@
     "difficulty": 3,
     "contextIds": [
       "enem_2025_humanas_q51_ctx1"
+    ],
+    "disciplinas": [
+      "filosofia",
+      "sociologia"
     ]
   },
   {
@@ -169,6 +190,10 @@
     "difficulty": 5,
     "contextIds": [
       "enem_2025_humanas_q52_ctx1"
+    ],
+    "disciplinas": [
+      "filosofia",
+      "historia"
     ]
   },
   {
@@ -194,6 +219,10 @@
     "contextIds": [
       "enem_2025_humanas_q53_ctx1",
       "enem_2025_humanas_q53_ctx2"
+    ],
+    "disciplinas": [
+      "historia",
+      "sociologia"
     ]
   },
   {
@@ -217,6 +246,9 @@
     "difficulty": 6,
     "contextIds": [
       "enem_2025_humanas_q54_ctx1"
+    ],
+    "disciplinas": [
+      "geografia"
     ]
   },
   {
@@ -242,6 +274,10 @@
     "difficulty": 8,
     "contextIds": [
       "enem_2025_humanas_q55_ctx1"
+    ],
+    "disciplinas": [
+      "filosofia",
+      "sociologia"
     ]
   },
   {
@@ -267,6 +303,9 @@
     "difficulty": 3,
     "contextIds": [
       "enem_2025_humanas_q56_ctx1"
+    ],
+    "disciplinas": [
+      "geografia"
     ]
   },
   {
@@ -292,6 +331,11 @@
     "difficulty": 5,
     "contextIds": [
       "enem_2025_humanas_q57_ctx1"
+    ],
+    "disciplinas": [
+      "geografia",
+      "historia",
+      "sociologia"
     ]
   },
   {
@@ -316,6 +360,10 @@
     "difficulty": 6,
     "contextIds": [
       "enem_2025_humanas_q58_ctx1"
+    ],
+    "disciplinas": [
+      "historia",
+      "sociologia"
     ]
   },
   {
@@ -339,6 +387,9 @@
     "difficulty": 5,
     "contextIds": [
       "enem_2025_humanas_q59_ctx1"
+    ],
+    "disciplinas": [
+      "geografia"
     ]
   },
   {
@@ -364,6 +415,11 @@
     "difficulty": 7,
     "contextIds": [
       "enem_2025_humanas_q60_ctx1"
+    ],
+    "disciplinas": [
+      "filosofia",
+      "historia",
+      "sociologia"
     ]
   },
   {
@@ -388,6 +444,9 @@
     "difficulty": 6,
     "contextIds": [
       "enem_2025_humanas_q61_ctx1"
+    ],
+    "disciplinas": [
+      "filosofia"
     ]
   },
   {
@@ -412,6 +471,10 @@
     "difficulty": 5,
     "contextIds": [
       "enem_2025_humanas_q62_ctx1"
+    ],
+    "disciplinas": [
+      "filosofia",
+      "sociologia"
     ]
   },
   {
@@ -435,7 +498,10 @@
     "test": "ENEM",
     "year": 2025,
     "answer": "b",
-    "difficulty": 5
+    "difficulty": 5,
+    "disciplinas": [
+      "geografia"
+    ]
   },
   {
     "number": 64,
@@ -458,6 +524,9 @@
     "difficulty": 7,
     "contextIds": [
       "enem_2025_humanas_q64_ctx1"
+    ],
+    "disciplinas": [
+      "historia"
     ]
   },
   {
@@ -482,6 +551,9 @@
     "difficulty": 7,
     "contextIds": [
       "enem_2025_humanas_q65_ctx1"
+    ],
+    "disciplinas": [
+      "filosofia"
     ]
   },
   {
@@ -506,6 +578,10 @@
     "difficulty": 8,
     "contextIds": [
       "enem_2025_humanas_q66_ctx1"
+    ],
+    "disciplinas": [
+      "filosofia",
+      "sociologia"
     ]
   },
   {
@@ -530,6 +606,10 @@
     "difficulty": 5,
     "contextIds": [
       "enem_2025_humanas_q67_ctx1"
+    ],
+    "disciplinas": [
+      "geografia",
+      "sociologia"
     ]
   },
   {
@@ -554,7 +634,11 @@
     "test": "ENEM",
     "year": 2025,
     "answer": "e",
-    "difficulty": 3
+    "difficulty": 3,
+    "disciplinas": [
+      "geografia",
+      "sociologia"
+    ]
   },
   {
     "number": 69,
@@ -579,6 +663,10 @@
     "difficulty": 5,
     "contextIds": [
       "enem_2025_humanas_q69_ctx1"
+    ],
+    "disciplinas": [
+      "historia",
+      "sociologia"
     ]
   },
   {
@@ -602,6 +690,9 @@
     "difficulty": 5,
     "contextIds": [
       "enem_2025_humanas_q70_ctx1"
+    ],
+    "disciplinas": [
+      "geografia"
     ]
   },
   {
@@ -626,6 +717,9 @@
     "difficulty": 3,
     "contextIds": [
       "enem_2025_humanas_q71_ctx1"
+    ],
+    "disciplinas": [
+      "historia"
     ]
   },
   {
@@ -651,6 +745,9 @@
     "contextIds": [
       "enem_2025_humanas_q72_ctx1",
       "enem_2025_humanas_q72_ctx2"
+    ],
+    "disciplinas": [
+      "filosofia"
     ]
   },
   {
@@ -676,6 +773,11 @@
     "difficulty": 6,
     "contextIds": [
       "enem_2025_humanas_q73_ctx1"
+    ],
+    "disciplinas": [
+      "geografia",
+      "historia",
+      "sociologia"
     ]
   },
   {
@@ -701,6 +803,10 @@
     "difficulty": 7,
     "contextIds": [
       "enem_2025_humanas_q74_ctx1"
+    ],
+    "disciplinas": [
+      "historia",
+      "sociologia"
     ]
   },
   {
@@ -724,6 +830,9 @@
     "difficulty": 5,
     "contextIds": [
       "enem_2025_humanas_q75_ctx1"
+    ],
+    "disciplinas": [
+      "geografia"
     ]
   },
   {
@@ -749,6 +858,10 @@
     "difficulty": 7,
     "contextIds": [
       "enem_2025_humanas_q76_ctx1"
+    ],
+    "disciplinas": [
+      "filosofia",
+      "sociologia"
     ]
   },
   {
@@ -772,6 +885,9 @@
     "difficulty": 6,
     "contextIds": [
       "enem_2025_humanas_q77_ctx1"
+    ],
+    "disciplinas": [
+      "geografia"
     ]
   },
   {
@@ -798,6 +914,10 @@
     "difficulty": 5,
     "contextIds": [
       "enem_2025_humanas_q78_ctx1"
+    ],
+    "disciplinas": [
+      "historia",
+      "sociologia"
     ]
   },
   {
@@ -821,6 +941,9 @@
     "difficulty": 7,
     "contextIds": [
       "enem_2025_humanas_q79_ctx1"
+    ],
+    "disciplinas": [
+      "filosofia"
     ]
   },
   {
@@ -845,6 +968,9 @@
     "difficulty": 5,
     "contextIds": [
       "enem_2025_humanas_q80_ctx1"
+    ],
+    "disciplinas": [
+      "geografia"
     ]
   },
   {
@@ -870,6 +996,9 @@
     "difficulty": 5,
     "contextIds": [
       "enem_2025_humanas_q81_ctx1"
+    ],
+    "disciplinas": [
+      "sociologia"
     ]
   },
   {
@@ -895,6 +1024,10 @@
     "difficulty": 7,
     "contextIds": [
       "enem_2025_humanas_q82_ctx1"
+    ],
+    "disciplinas": [
+      "filosofia",
+      "historia"
     ]
   },
   {
@@ -918,6 +1051,9 @@
     "difficulty": 6,
     "contextIds": [
       "enem_2025_humanas_q83_ctx1"
+    ],
+    "disciplinas": [
+      "historia"
     ]
   },
   {
@@ -941,6 +1077,9 @@
     "difficulty": 3,
     "contextIds": [
       "enem_2025_humanas_q84_ctx1"
+    ],
+    "disciplinas": [
+      "geografia"
     ]
   },
   {
@@ -967,6 +1106,10 @@
     "contextIds": [
       "enem_2025_humanas_q85_ctx1",
       "enem_2025_humanas_q85_ctx2"
+    ],
+    "disciplinas": [
+      "historia",
+      "sociologia"
     ]
   },
   {
@@ -990,6 +1133,9 @@
     "difficulty": 3,
     "contextIds": [
       "enem_2025_humanas_q86_ctx1"
+    ],
+    "disciplinas": [
+      "geografia"
     ]
   },
   {
@@ -1014,6 +1160,9 @@
     "difficulty": 5,
     "contextIds": [
       "enem_2025_humanas_q87_ctx1"
+    ],
+    "disciplinas": [
+      "historia"
     ]
   },
   {
@@ -1039,6 +1188,10 @@
     "difficulty": 3,
     "contextIds": [
       "enem_2025_humanas_q88_ctx1"
+    ],
+    "disciplinas": [
+      "geografia",
+      "sociologia"
     ]
   },
   {
@@ -1065,6 +1218,10 @@
       "enem_2025_humanas_q89_ctx1",
       "enem_2025_humanas_q89_ctx2",
       "enem_2025_humanas_q89_ctx3"
+    ],
+    "disciplinas": [
+      "historia",
+      "sociologia"
     ]
   },
   {
@@ -1090,6 +1247,10 @@
     "difficulty": 7,
     "contextIds": [
       "enem_2025_humanas_q90_ctx1"
+    ],
+    "disciplinas": [
+      "geografia",
+      "historia"
     ]
   }
 ]

@@ -22,7 +22,11 @@
     "area": "linguagens",
     "language": "en",
     "answer": "c",
-    "difficulty": 3
+    "difficulty": 3,
+    "disciplinas": [
+      "lingua_estrangeira",
+      "portugues"
+    ]
   },
   {
     "number": 2,
@@ -48,6 +52,10 @@
     "difficulty": 3,
     "contextIds": [
       "enem_2024_linguagens_q2_ctx1"
+    ],
+    "disciplinas": [
+      "lingua_estrangeira",
+      "portugues"
     ]
   },
   {
@@ -73,7 +81,11 @@
     "area": "linguagens",
     "language": "en",
     "answer": "a",
-    "difficulty": 4
+    "difficulty": 4,
+    "disciplinas": [
+      "lingua_estrangeira",
+      "portugues"
+    ]
   },
   {
     "number": 4,
@@ -98,6 +110,9 @@
     "difficulty": 4,
     "contextIds": [
       "enem_2024_linguagens_q4_ctx1"
+    ],
+    "disciplinas": [
+      "lingua_estrangeira"
     ]
   },
   {
@@ -122,7 +137,11 @@
     "area": "linguagens",
     "language": "en",
     "answer": "e",
-    "difficulty": 3
+    "difficulty": 3,
+    "disciplinas": [
+      "lingua_estrangeira",
+      "portugues"
+    ]
   },
   {
     "number": 1,
@@ -148,6 +167,10 @@
     "difficulty": 5,
     "contextIds": [
       "enem_2024_linguagens_q1_ctx1"
+    ],
+    "disciplinas": [
+      "lingua_estrangeira",
+      "portugues"
     ]
   },
   {
@@ -173,6 +196,9 @@
     "difficulty": 4,
     "contextIds": [
       "enem_2024_linguagens_q2_ctx2"
+    ],
+    "disciplinas": [
+      "lingua_estrangeira"
     ]
   },
   {
@@ -199,6 +225,11 @@
     "difficulty": 5,
     "contextIds": [
       "enem_2024_linguagens_q3_ctx1"
+    ],
+    "disciplinas": [
+      "lingua_estrangeira",
+      "literatura",
+      "portugues"
     ]
   },
   {
@@ -225,6 +256,10 @@
     "difficulty": 5,
     "contextIds": [
       "enem_2024_linguagens_q4_ctx2"
+    ],
+    "disciplinas": [
+      "lingua_estrangeira",
+      "portugues"
     ]
   },
   {
@@ -251,6 +286,10 @@
     "difficulty": 5,
     "contextIds": [
       "enem_2024_linguagens_q5_ctx1"
+    ],
+    "disciplinas": [
+      "lingua_estrangeira",
+      "literatura"
     ]
   },
   {
@@ -275,6 +314,9 @@
     "difficulty": 3,
     "contextIds": [
       "enem_2024_linguagens_q6_ctx1"
+    ],
+    "disciplinas": [
+      "portugues"
     ]
   },
   {
@@ -299,6 +341,9 @@
     "difficulty": 3,
     "contextIds": [
       "enem_2024_linguagens_q7_ctx1"
+    ],
+    "disciplinas": [
+      "portugues"
     ]
   },
   {
@@ -322,7 +367,8 @@
     "difficulty": 5,
     "contextIds": [
       "enem_2024_linguagens_q8_ctx1"
-    ]
+    ],
+    "disciplinas": []
   },
   {
     "number": 9,
@@ -347,7 +393,10 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "e",
-    "difficulty": 3
+    "difficulty": 3,
+    "disciplinas": [
+      "portugues"
+    ]
   },
   {
     "number": 10,
@@ -371,7 +420,10 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "c",
-    "difficulty": 3
+    "difficulty": 3,
+    "disciplinas": [
+      "portugues"
+    ]
   },
   {
     "number": 11,
@@ -394,7 +446,10 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "e",
-    "difficulty": 5
+    "difficulty": 5,
+    "disciplinas": [
+      "portugues"
+    ]
   },
   {
     "number": 12,
@@ -418,7 +473,10 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "d",
-    "difficulty": 5
+    "difficulty": 5,
+    "disciplinas": [
+      "artes"
+    ]
   },
   {
     "number": 13,
@@ -442,7 +500,10 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "d",
-    "difficulty": 3
+    "difficulty": 3,
+    "disciplinas": [
+      "portugues"
+    ]
   },
   {
     "number": 14,
@@ -465,7 +526,10 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "c",
-    "difficulty": 3
+    "difficulty": 3,
+    "disciplinas": [
+      "portugues"
+    ]
   },
   {
     "number": 15,
@@ -488,7 +552,8 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "b",
-    "difficulty": 4
+    "difficulty": 4,
+    "disciplinas": []
   },
   {
     "number": 16,
@@ -512,7 +577,10 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "d",
-    "difficulty": 6
+    "difficulty": 6,
+    "disciplinas": [
+      "artes"
+    ]
   },
   {
     "number": 17,
@@ -535,7 +603,8 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "e",
-    "difficulty": 3
+    "difficulty": 3,
+    "disciplinas": []
   },
   {
     "number": 18,
@@ -559,7 +628,10 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "d",
-    "difficulty": 4
+    "difficulty": 4,
+    "disciplinas": [
+      "portugues"
+    ]
   },
   {
     "number": 19,
@@ -584,7 +656,11 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "d",
-    "difficulty": 7
+    "difficulty": 7,
+    "disciplinas": [
+      "literatura",
+      "portugues"
+    ]
   },
   {
     "number": 20,
@@ -608,7 +684,10 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "c",
-    "difficulty": 6
+    "difficulty": 6,
+    "disciplinas": [
+      "portugues"
+    ]
   },
   {
     "number": 21,
@@ -635,7 +714,10 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "e",
-    "difficulty": 7
+    "difficulty": 7,
+    "disciplinas": [
+      "artes"
+    ]
   },
   {
     "number": 22,
@@ -661,7 +743,10 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "c",
-    "difficulty": 7
+    "difficulty": 7,
+    "disciplinas": [
+      "portugues"
+    ]
   },
   {
     "number": 23,
@@ -685,7 +770,10 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "b",
-    "difficulty": 5
+    "difficulty": 5,
+    "disciplinas": [
+      "portugues"
+    ]
   },
   {
     "number": 24,
@@ -709,6 +797,10 @@
     "difficulty": 7,
     "contextIds": [
       "enem_2024_linguagens_q24_ctx1"
+    ],
+    "disciplinas": [
+      "literatura",
+      "portugues"
     ]
   },
   {
@@ -732,7 +824,11 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "c",
-    "difficulty": 6
+    "difficulty": 6,
+    "disciplinas": [
+      "artes",
+      "literatura"
+    ]
   },
   {
     "number": 26,
@@ -756,6 +852,9 @@
     "difficulty": 4,
     "contextIds": [
       "enem_2024_linguagens_q26_ctx1"
+    ],
+    "disciplinas": [
+      "portugues"
     ]
   },
   {
@@ -781,6 +880,9 @@
     "difficulty": 4,
     "contextIds": [
       "enem_2024_linguagens_q27_ctx1"
+    ],
+    "disciplinas": [
+      "portugues"
     ]
   },
   {
@@ -805,6 +907,10 @@
     "difficulty": 8,
     "contextIds": [
       "enem_2024_linguagens_q28_ctx1"
+    ],
+    "disciplinas": [
+      "literatura",
+      "portugues"
     ]
   },
   {
@@ -829,6 +935,9 @@
     "difficulty": 7,
     "contextIds": [
       "enem_2024_linguagens_q29_ctx1"
+    ],
+    "disciplinas": [
+      "literatura"
     ]
   },
   {
@@ -854,6 +963,10 @@
     "contextIds": [
       "enem_2024_linguagens_q30_ctx1",
       "enem_2024_linguagens_q30_ctx2"
+    ],
+    "disciplinas": [
+      "artes",
+      "portugues"
     ]
   },
   {
@@ -878,6 +991,9 @@
     "difficulty": 7,
     "contextIds": [
       "enem_2024_linguagens_q31_ctx1"
+    ],
+    "disciplinas": [
+      "literatura"
     ]
   },
   {
@@ -902,6 +1018,9 @@
     "difficulty": 6,
     "contextIds": [
       "enem_2024_linguagens_q32_ctx1"
+    ],
+    "disciplinas": [
+      "literatura"
     ]
   },
   {
@@ -924,7 +1043,10 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "d",
-    "difficulty": 3
+    "difficulty": 3,
+    "disciplinas": [
+      "portugues"
+    ]
   },
   {
     "number": 34,
@@ -948,7 +1070,8 @@
     "difficulty": 4,
     "contextIds": [
       "enem_2024_linguagens_q34_ctx1"
-    ]
+    ],
+    "disciplinas": []
   },
   {
     "number": 35,
@@ -972,6 +1095,9 @@
     "difficulty": 5,
     "contextIds": [
       "enem_2024_linguagens_q35_ctx1"
+    ],
+    "disciplinas": [
+      "literatura"
     ]
   },
   {
@@ -998,7 +1124,11 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "d",
-    "difficulty": 5
+    "difficulty": 5,
+    "disciplinas": [
+      "artes",
+      "literatura"
+    ]
   },
   {
     "number": 37,
@@ -1022,6 +1152,9 @@
     "difficulty": 6,
     "contextIds": [
       "enem_2024_linguagens_q37_ctx1"
+    ],
+    "disciplinas": [
+      "portugues"
     ]
   },
   {
@@ -1046,6 +1179,9 @@
     "difficulty": 6,
     "contextIds": [
       "enem_2024_linguagens_q38_ctx1"
+    ],
+    "disciplinas": [
+      "literatura"
     ]
   },
   {
@@ -1069,6 +1205,9 @@
     "difficulty": 5,
     "contextIds": [
       "enem_2024_linguagens_q39_ctx1"
+    ],
+    "disciplinas": [
+      "portugues"
     ]
   },
   {
@@ -1093,6 +1232,9 @@
     "difficulty": 5,
     "contextIds": [
       "enem_2024_linguagens_q40_ctx1"
+    ],
+    "disciplinas": [
+      "artes"
     ]
   },
   {
@@ -1117,6 +1259,9 @@
     "difficulty": 3,
     "contextIds": [
       "enem_2024_linguagens_q41_ctx1"
+    ],
+    "disciplinas": [
+      "portugues"
     ]
   },
   {
@@ -1141,6 +1286,9 @@
     "difficulty": 6,
     "contextIds": [
       "enem_2024_linguagens_q42_ctx1"
+    ],
+    "disciplinas": [
+      "portugues"
     ]
   },
   {
@@ -1167,6 +1315,9 @@
     "contextIds": [
       "enem_2024_linguagens_q43_ctx1",
       "enem_2024_linguagens_q43_ctx2"
+    ],
+    "disciplinas": [
+      "artes"
     ]
   },
   {
@@ -1190,7 +1341,8 @@
     "difficulty": 3,
     "contextIds": [
       "enem_2024_linguagens_q44_ctx1"
-    ]
+    ],
+    "disciplinas": []
   },
   {
     "number": 45,
@@ -1214,6 +1366,9 @@
     "difficulty": 4,
     "contextIds": [
       "enem_2024_linguagens_q45_ctx1"
+    ],
+    "disciplinas": [
+      "portugues"
     ]
   }
 ]
