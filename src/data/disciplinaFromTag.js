@@ -23,7 +23,8 @@ for (const t of [
   'termoquímica e cinética', 'termoquímica', 'estequiometria',
   'soluções e solubilidade', 'eletroquímica', 'equilíbrio químico',
   'cinética química', 'análise qualitativa', 'ligações químicas',
-  'propriedades dos líquidos', 'chemistry estrutura molecular',
+  'propriedades dos líquidos',
+  'chemistry estrutura molecular', // sic — verbatim tag from public/nature_enem_2021.json
 ]) add('nature', t, 'quimica')
 
 // ── Nature → Biologia ────────────────────────────────────────────────────────
@@ -94,7 +95,7 @@ for (const t of [
   'artes visuais', 'música e dança', 'história da cultura e arte',
 ]) add('linguagens', t, 'artes')
 
-export const TAG_TO_DISCIPLINA = M
+export const TAG_TO_DISCIPLINA = Object.freeze({ ...M })
 
 export function disciplinasForTag(area, tag) {
   const slug = M[`${area}::${tag}`]
