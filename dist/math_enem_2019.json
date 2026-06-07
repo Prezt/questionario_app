@@ -23,7 +23,9 @@
     "answer": "e",
     "disciplinas": [
       "matematica"
-    ]
+    ],
+    "explanation": "Sem explicação ainda.",
+    "review": true
   },
   {
     "number": 137,
@@ -47,7 +49,9 @@
     "answer": "e",
     "disciplinas": [
       "matematica"
-    ]
+    ],
+    "explanation": "Sem explicação ainda.",
+    "review": true
   },
   {
     "number": 138,
@@ -73,7 +77,9 @@
     "answer": "e",
     "disciplinas": [
       "matematica"
-    ]
+    ],
+    "explanation": "Sem explicação ainda.",
+    "review": true
   },
   {
     "number": 139,
@@ -106,7 +112,9 @@
     "answer": "a",
     "disciplinas": [
       "matematica"
-    ]
+    ],
+    "explanation": "Sem explicação ainda.",
+    "review": true
   },
   {
     "number": 140,
@@ -129,7 +137,9 @@
     "answer": "d",
     "disciplinas": [
       "matematica"
-    ]
+    ],
+    "explanation": "Sem explicação ainda.",
+    "review": true
   },
   {
     "number": 141,
@@ -156,7 +166,9 @@
     "answer": "b",
     "disciplinas": [
       "matematica"
-    ]
+    ],
+    "explanation": "Sem explicação ainda.",
+    "review": true
   },
   {
     "number": 142,
@@ -180,7 +192,9 @@
     "answer": "e",
     "disciplinas": [
       "matematica"
-    ]
+    ],
+    "explanation": "Sem explicação ainda.",
+    "review": true
   },
   {
     "number": 143,
@@ -206,7 +220,9 @@
     "contextId": "enem_2019_math_q143_ctx1",
     "disciplinas": [
       "matematica"
-    ]
+    ],
+    "explanation": "Sem explicação ainda.",
+    "review": true
   },
   {
     "number": 144,
@@ -230,7 +246,9 @@
     "answer": "a",
     "disciplinas": [
       "matematica"
-    ]
+    ],
+    "explanation": "Sem explicação ainda.",
+    "review": true
   },
   {
     "number": 145,
@@ -255,7 +273,9 @@
     "answer": "c",
     "disciplinas": [
       "matematica"
-    ]
+    ],
+    "explanation": "Sem explicação ainda.",
+    "review": true
   },
   {
     "number": 146,
@@ -280,7 +300,9 @@
     "answer": "a",
     "disciplinas": [
       "matematica"
-    ]
+    ],
+    "explanation": "Sem explicação ainda.",
+    "review": true
   },
   {
     "number": 147,
@@ -305,7 +327,9 @@
     "answer": "b",
     "disciplinas": [
       "matematica"
-    ]
+    ],
+    "explanation": "Sem explicação ainda.",
+    "review": true
   },
   {
     "number": 148,
@@ -330,7 +354,9 @@
     "answer": "c",
     "disciplinas": [
       "matematica"
-    ]
+    ],
+    "explanation": "Sem explicação ainda.",
+    "review": true
   },
   {
     "number": 149,
@@ -354,7 +380,9 @@
     "answer": "d",
     "disciplinas": [
       "matematica"
-    ]
+    ],
+    "explanation": "Sem explicação ainda.",
+    "review": true
   },
   {
     "number": 150,
@@ -379,7 +407,9 @@
     "answer": "b",
     "disciplinas": [
       "matematica"
-    ]
+    ],
+    "explanation": "Sem explicação ainda.",
+    "review": true
   },
   {
     "number": 151,
@@ -406,7 +436,9 @@
     "answer": "a",
     "disciplinas": [
       "matematica"
-    ]
+    ],
+    "explanation": "Sem explicação ainda.",
+    "review": true
   },
   {
     "number": 152,
@@ -432,7 +464,9 @@
     "answer": "b",
     "disciplinas": [
       "matematica"
-    ]
+    ],
+    "explanation": "Sem explicação ainda.",
+    "review": true
   },
   {
     "number": 153,
@@ -457,7 +491,9 @@
     "answer": "e",
     "disciplinas": [
       "matematica"
-    ]
+    ],
+    "explanation": "Sem explicação ainda.",
+    "review": true
   },
   {
     "number": 154,
@@ -483,7 +519,9 @@
     "answer": "c",
     "disciplinas": [
       "matematica"
-    ]
+    ],
+    "explanation": "Sem explicação ainda.",
+    "review": true
   },
   {
     "number": 155,
@@ -507,7 +545,9 @@
     "answer": "e",
     "disciplinas": [
       "matematica"
-    ]
+    ],
+    "explanation": "Sem explicação ainda.",
+    "review": true
   },
   {
     "number": 156,
@@ -530,7 +570,9 @@
     "answer": "c",
     "disciplinas": [
       "matematica"
-    ]
+    ],
+    "explanation": "Sem explicação ainda.",
+    "review": true
   },
   {
     "number": 157,
@@ -555,7 +597,9 @@
     "answer": "a",
     "disciplinas": [
       "matematica"
-    ]
+    ],
+    "explanation": "Sem explicação ainda.",
+    "review": true
   },
   {
     "number": 158,
@@ -581,7 +625,9 @@
     "answer": "c",
     "disciplinas": [
       "matematica"
-    ]
+    ],
+    "explanation": "Sem explicação ainda.",
+    "review": true
   },
   {
     "number": 159,
@@ -605,7 +651,9 @@
     "answer": "d",
     "disciplinas": [
       "matematica"
-    ]
+    ],
+    "explanation": "Sem explicação ainda.",
+    "review": true
   },
   {
     "number": 160,
@@ -630,7 +678,9 @@
     "answer": "c",
     "disciplinas": [
       "matematica"
-    ]
+    ],
+    "explanation": "Sem explicação ainda.",
+    "review": true
   },
   {
     "number": 161,
@@ -654,7 +704,9 @@
     "answer": "b",
     "disciplinas": [
       "matematica"
-    ]
+    ],
+    "explanation": "Sem explicação ainda.",
+    "review": true
   },
   {
     "number": 162,
@@ -678,7 +730,9 @@
     "answer": "d",
     "disciplinas": [
       "matematica"
-    ]
+    ],
+    "explanation": "Sem explicação ainda.",
+    "review": true
   },
   {
     "number": 163,
@@ -703,7 +757,9 @@
     "answer": "c",
     "disciplinas": [
       "matematica"
-    ]
+    ],
+    "explanation": "Sem explicação ainda.",
+    "review": true
   },
   {
     "number": 164,
@@ -727,7 +783,9 @@
     "answer": "c",
     "disciplinas": [
       "matematica"
-    ]
+    ],
+    "explanation": "Sem explicação ainda.",
+    "review": true
   },
   {
     "number": 165,
@@ -752,7 +810,9 @@
     "answer": "e",
     "disciplinas": [
       "matematica"
-    ]
+    ],
+    "explanation": "Sem explicação ainda.",
+    "review": true
   },
   {
     "number": 166,
@@ -777,7 +837,9 @@
     "answer": "d",
     "disciplinas": [
       "matematica"
-    ]
+    ],
+    "explanation": "Sem explicação ainda.",
+    "review": true
   },
   {
     "number": 167,
@@ -801,7 +863,9 @@
     "answer": "c",
     "disciplinas": [
       "matematica"
-    ]
+    ],
+    "explanation": "Sem explicação ainda.",
+    "review": true
   },
   {
     "number": 168,
@@ -825,7 +889,9 @@
     "answer": "d",
     "disciplinas": [
       "matematica"
-    ]
+    ],
+    "explanation": "Sem explicação ainda.",
+    "review": true
   },
   {
     "number": 169,
@@ -850,7 +916,9 @@
     "contextId": "enem_2019_math_q169_ctx1",
     "disciplinas": [
       "matematica"
-    ]
+    ],
+    "explanation": "Sem explicação ainda.",
+    "review": true
   },
   {
     "number": 170,
@@ -874,7 +942,9 @@
     "answer": "b",
     "disciplinas": [
       "matematica"
-    ]
+    ],
+    "explanation": "Sem explicação ainda.",
+    "review": true
   },
   {
     "number": 171,
@@ -898,7 +968,9 @@
     "answer": "e",
     "disciplinas": [
       "matematica"
-    ]
+    ],
+    "explanation": "Sem explicação ainda.",
+    "review": true
   },
   {
     "number": 172,
@@ -923,7 +995,9 @@
     "answer": "d",
     "disciplinas": [
       "matematica"
-    ]
+    ],
+    "explanation": "Sem explicação ainda.",
+    "review": true
   },
   {
     "number": 173,
@@ -948,7 +1022,9 @@
     "answer": "e",
     "disciplinas": [
       "matematica"
-    ]
+    ],
+    "explanation": "Sem explicação ainda.",
+    "review": true
   },
   {
     "number": 174,
@@ -976,7 +1052,9 @@
     "answer": "c",
     "disciplinas": [
       "matematica"
-    ]
+    ],
+    "explanation": "Sem explicação ainda.",
+    "review": true
   },
   {
     "number": 175,
@@ -1000,7 +1078,9 @@
     "answer": "d",
     "disciplinas": [
       "matematica"
-    ]
+    ],
+    "explanation": "Sem explicação ainda.",
+    "review": true
   },
   {
     "number": 176,
@@ -1025,7 +1105,9 @@
     "answer": "d",
     "disciplinas": [
       "matematica"
-    ]
+    ],
+    "explanation": "Sem explicação ainda.",
+    "review": true
   },
   {
     "number": 177,
@@ -1050,7 +1132,9 @@
     "answer": "d",
     "disciplinas": [
       "matematica"
-    ]
+    ],
+    "explanation": "Sem explicação ainda.",
+    "review": true
   },
   {
     "number": 178,
@@ -1077,7 +1161,9 @@
     "answer": "b",
     "disciplinas": [
       "matematica"
-    ]
+    ],
+    "explanation": "Sem explicação ainda.",
+    "review": true
   },
   {
     "number": 179,
@@ -1101,7 +1187,9 @@
     "answer": "a",
     "disciplinas": [
       "matematica"
-    ]
+    ],
+    "explanation": "Sem explicação ainda.",
+    "review": true
   },
   {
     "number": 180,
@@ -1126,6 +1214,8 @@
     "answer": "a",
     "disciplinas": [
       "matematica"
-    ]
+    ],
+    "explanation": "Sem explicação ainda.",
+    "review": true
   }
 ]

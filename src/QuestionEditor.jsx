@@ -1,6 +1,7 @@
-import { useState, useEffect, useLayoutEffect, useCallback, useRef } from 'react'
+import { useState, useEffect, useCallback, useRef } from 'react'
 import './QuestionEditor.css'
 import FormatToolbar from './FormatToolbar.jsx'
+import EnemPicker, { diffLabel } from './EnemPicker.jsx'
 
 function SunIcon()  { return <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg> }
 function MoonIcon() { return <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg> }
@@ -155,188 +156,35 @@ function ImageInput({ images, onChange, onInsertTag, onAdd }) {
   )
 }
 
-const ENEM_AREAS = [
-  { key: 'math',       label: 'Matemática' },
-  { key: 'nature',     label: 'C. Natureza' },
-  { key: 'linguagens', label: 'Linguagens' },
-  { key: 'humanas',    label: 'C. Humanas' },
-]
-const ENEM_YEARS = [2025, 2024, 2023, 2022, 2021, 2020, 2019, 2018]
-
-function diffLabel(d) {
-  if (typeof d === 'string') return d
-  return d <= 3 ? 'easy' : d <= 6 ? 'medium' : 'hard'
+// Build the editor stem for an ENEM question: "Q123 - 2024 ENEM\n\n[context]\n\n<hr>\n\n[text]"
+function buildImportedStem(q, contexts) {
+  const header = `Q${q.number} - ${q.year} ENEM`
+  let body = q.text ?? q.stem ?? ''
+  const ids = q.contextIds ?? (q.contextId ? [q.contextId] : [])
+  if (ids.length) {
+    const parts = []
+    for (const id of ids) {
+      const ctx = contexts?.[id]
+      if (!ctx) continue
+      if (ctx.text?.trim()) parts.push(ctx.text.trim())
+      if (ctx.reference?.trim()) parts.push(ctx.reference.trim())
+    }
+    if (parts.length) body = parts.join('\n\n') + '\n\n<hr>\n\n' + body
+  }
+  return header + '\n\n' + body
 }
 
-function EnemPicker({ onSelect, onCancel }) {
-  const [area, setArea] = useState('math')
-  const [year, setYear] = useState(2025)
-  const [questions, setQuestions] = useState([])
-  const [fetching, setFetching] = useState(false)
-  const [search, setSearch] = useState('')
-  const [mode, setMode] = useState('search') // 'search' | 'number'
-  const [selectedNum, setSelectedNum] = useState('')
-  const [contexts, setContexts] = useState({})
-  const listRef = useRef(null)
-
-  useEffect(() => {
-    fetch('/contexts.json').then(r => r.ok ? r.json() : {}).catch(() => {}).then(c => setContexts(c ?? {}))
-  }, [])
-
-  useEffect(() => {
-    setFetching(true)
-    setQuestions([])
-    setSelectedNum('')
-    setSearch('')
-    fetch(`/${area}_enem_${year}.json`)
-      .then(r => r.ok ? r.json() : [])
-      .catch(() => [])
-      .then(qs => { setQuestions(qs); setFetching(false) })
-  }, [area, year])
-
-  // Reset scroll to top when search changes — useLayoutEffect runs before paint
-  useLayoutEffect(() => {
-    if (listRef.current) listRef.current.scrollTop = 0
-  }, [search])
-
-  const filtered = search.trim()
-    ? questions.filter(q =>
-        q.text?.toLowerCase().includes(search.toLowerCase()) ||
-        q.tags?.some(t => t.toLowerCase().includes(search.toLowerCase()))
-      )
-    : questions
-
-  const buildStem = (q) => {
-    const qYear = q.year ?? year
-    const header = `Q${q.number} - ${qYear} ENEM`
-    let body = q.text ?? q.stem ?? ''
-    if (q.contextIds?.length) {
-      const parts = []
-      for (const id of q.contextIds) {
-        const ctx = contexts[id]
-        if (!ctx) continue
-        if (ctx.text?.trim()) parts.push(ctx.text.trim())
-        if (ctx.reference?.trim()) parts.push(ctx.reference.trim())
-      }
-      if (parts.length) body = parts.join('\n\n') + '\n\n<hr>\n\n' + body
-    }
-    return header + '\n\n' + body
+function importedFromEnem(q, contexts) {
+  return {
+    stem: buildImportedStem(q, contexts),
+    images: (q.images ?? []).map(img =>
+      typeof img === 'string' ? { src: img, caption: '' } : img
+    ),
+    alternatives: q.alternatives ?? { a: '', b: '', c: '', d: '', e: '' },
+    correct: q.answer ?? 'a',
+    tags: q.tags ?? [],
+    difficulty: diffLabel(q.difficulty ?? 'medium'),
   }
-
-  const handleSelect = (q) => {
-    onSelect({
-      stem: buildStem(q),
-      images: (q.images ?? []).map(img =>
-        typeof img === 'string' ? { src: img, caption: '' } : img
-      ),
-      alternatives: q.alternatives ?? { a: '', b: '', c: '', d: '', e: '' },
-      correct: q.answer ?? 'a',
-      tags: q.tags ?? [],
-      difficulty: diffLabel(q.difficulty ?? 'medium'),
-    })
-  }
-
-  const selectedQuestion = mode === 'number' && selectedNum
-    ? questions.find(q => q.number === Number(selectedNum))
-    : null
-
-  return (
-    <div className="qe-picker">
-      <div className="qe-picker-filters">
-        <div className="qe-picker-seg">
-          {ENEM_AREAS.map(a => (
-            <button
-              key={a.key}
-              type="button"
-              className={`qe-picker-seg-btn${area === a.key ? ' active' : ''}`}
-              onClick={() => setArea(a.key)}
-            >
-              {a.label}
-            </button>
-          ))}
-        </div>
-
-        <div className="qe-picker-mode-row">
-          <button type="button" className={`qe-picker-mode-btn${mode === 'search' ? ' active' : ''}`} onClick={() => setMode('search')}>Buscar</button>
-          <button type="button" className={`qe-picker-mode-btn${mode === 'number' ? ' active' : ''}`} onClick={() => setMode('number')}>Por número</button>
-        </div>
-
-        {mode === 'search' && (
-          <>
-            <div className="qe-picker-years">
-              {ENEM_YEARS.map(y => (
-                <button
-                  key={y}
-                  type="button"
-                  className={`qe-picker-year-btn${year === y ? ' active' : ''}`}
-                  onClick={() => setYear(y)}
-                >
-                  {y}
-                </button>
-              ))}
-            </div>
-            <input
-              className="qe-input"
-              placeholder="Buscar por texto ou assunto…"
-              value={search}
-              onChange={e => setSearch(e.target.value)}
-            />
-          </>
-        )}
-
-        {mode === 'number' && (
-          <div className="qe-picker-number-row">
-            <select className="qe-input" value={year} onChange={e => setYear(Number(e.target.value))}>
-              {ENEM_YEARS.map(y => <option key={y} value={y}>{y}</option>)}
-            </select>
-            <select className="qe-input" value={selectedNum} onChange={e => setSelectedNum(e.target.value)} disabled={fetching}>
-              <option value="">{fetching ? 'Carregando…' : 'Questão…'}</option>
-              {questions.map(q => <option key={q.number} value={q.number}>Q{q.number}</option>)}
-            </select>
-            <button
-              type="button"
-              className="qe-btn qe-btn--primary"
-              disabled={!selectedQuestion}
-              onClick={() => selectedQuestion && handleSelect(selectedQuestion)}
-            >
-              Usar
-            </button>
-          </div>
-        )}
-      </div>
-
-      {mode === 'search' && (
-        <div key={`${area}-${year}-${fetching ? 'loading' : filtered.length === 0 ? 'empty' : 'has'}`} className="qe-picker-list" ref={listRef}>
-          {fetching && <p key="loading" className="qe-picker-empty">Carregando…</p>}
-          {!fetching && filtered.length === 0 && <p key="empty" className="qe-picker-empty">Nenhuma questão encontrada.</p>}
-          {filtered.map(q => (
-            <div key={q.number} className="qe-picker-item">
-              <div className="qe-picker-item-meta">
-                <span className="qe-picker-item-num">Q{q.number}</span>
-                {q.tags?.slice(0, 2).map(t => (
-                  <span key={t} className="qe-picker-item-tag">{t}</span>
-                ))}
-              </div>
-              <p className="qe-picker-item-stem">
-                {(q.text ?? q.stem ?? '').slice(0, 120)}…
-              </p>
-              <button
-                type="button"
-                className="qe-btn qe-btn--primary qe-picker-use-btn"
-                onClick={() => handleSelect(q)}
-              >
-                Usar
-              </button>
-            </div>
-          ))}
-        </div>
-      )}
-
-      <div className="qe-form-actions">
-        <button type="button" className="qe-btn qe-btn--ghost" onClick={onCancel}>Cancelar</button>
-      </div>
-    </div>
-  )
 }
 
 function QuestionForm({ question, onSave, onCancel, saving }) {
@@ -774,7 +622,8 @@ export default function QuestionEditor({ onClose, embedded = false }) {
             <section className="qe-section">
               <h2 className="qe-section-title">Importar questão do ENEM</h2>
               <EnemPicker
-                onSelect={(prefilled) => { setImporting(false); saveQuestion(prefilled) }}
+                actionLabel="Usar"
+                onSelect={(q, contexts) => { setImporting(false); saveQuestion(importedFromEnem(q, contexts)) }}
                 onCancel={() => setImporting(false)}
               />
             </section>

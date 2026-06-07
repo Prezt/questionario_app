@@ -22,7 +22,9 @@
     "contextId": "enem_2019_humanas_q46_q78_ctx1",
     "disciplinas": [
       "geografia"
-    ]
+    ],
+    "explanation": "Sem explicação ainda.",
+    "review": true
   },
   {
     "number": 47,
@@ -47,7 +49,9 @@
     "contextId": "enem_2019_humanas_q47_ctx1",
     "disciplinas": [
       "geografia"
-    ]
+    ],
+    "explanation": "Sem explicação ainda.",
+    "review": true
   },
   {
     "number": 48,
@@ -72,7 +76,9 @@
     "contextId": "enem_2019_humanas_q46_q78_ctx1",
     "disciplinas": [
       "filosofia"
-    ]
+    ],
+    "explanation": "Sem explicação ainda.",
+    "review": true
   },
   {
     "number": 49,
@@ -96,7 +102,9 @@
     "answer": "c",
     "disciplinas": [
       "geografia"
-    ]
+    ],
+    "explanation": "Sem explicação ainda.",
+    "review": true
   },
   {
     "number": 50,
@@ -123,7 +131,9 @@
     "disciplinas": [
       "filosofia",
       "sociologia"
-    ]
+    ],
+    "explanation": "Sem explicação ainda.",
+    "review": true
   },
   {
     "number": 51,
@@ -150,7 +160,9 @@
     "disciplinas": [
       "filosofia",
       "sociologia"
-    ]
+    ],
+    "explanation": "Sem explicação ainda.",
+    "review": true
   },
   {
     "number": 52,
@@ -175,7 +187,9 @@
     "disciplinas": [
       "geografia",
       "historia"
-    ]
+    ],
+    "explanation": "Sem explicação ainda.",
+    "review": true
   },
   {
     "number": 53,
@@ -200,7 +214,9 @@
     "contextId": "enem_2019_humanas_q53_ctx1",
     "disciplinas": [
       "geografia"
-    ]
+    ],
+    "explanation": "Sem explicação ainda.",
+    "review": true
   },
   {
     "number": 54,
@@ -226,7 +242,9 @@
     "disciplinas": [
       "geografia",
       "historia"
-    ]
+    ],
+    "explanation": "Sem explicação ainda.",
+    "review": true
   },
   {
     "number": 55,
@@ -252,7 +270,9 @@
     "disciplinas": [
       "historia",
       "sociologia"
-    ]
+    ],
+    "explanation": "Sem explicação ainda.",
+    "review": true
   },
   {
     "number": 56,
@@ -276,7 +296,9 @@
     "answer": "d",
     "disciplinas": [
       "geografia"
-    ]
+    ],
+    "explanation": "Sem explicação ainda.",
+    "review": true
   },
   {
     "number": 57,
@@ -301,7 +323,9 @@
     "contextId": "enem_2019_humanas_q57_ctx1",
     "disciplinas": [
       "geografia"
-    ]
+    ],
+    "explanation": "Sem explicação ainda.",
+    "review": true
   },
   {
     "number": 58,
@@ -326,11 +350,13 @@
     "contextId": "enem_2019_humanas_q58_ctx1",
     "disciplinas": [
       "filosofia"
-    ]
+    ],
+    "explanation": "Sem explicação ainda.",
+    "review": true
   },
   {
     "number": 59,
-    "text": "A divisão política do mundo como apresentada na [Figura: mapa-múndi com divisões políticas] é dependente pela estabilidade do(a)",
+    "text": "A divisão política do mundo como apresentada na imagem é dependente pela estabilidade do(a)",
     "alternatives": {
       "a": "ciclo hidrológico",
       "b": "processo erosivo",
@@ -338,9 +364,7 @@
       "d": "índice pluviométrico",
       "e": "pressão atmosférica"
     },
-    "images": [
-      "figuras/q059_2019_fig1.png"
-    ],
+    "images": [],
     "tags": [
       "geopolítica e território",
       "geografia física e geologia"
@@ -352,7 +376,10 @@
     "answer": "c",
     "disciplinas": [
       "geografia"
-    ]
+    ],
+    "explanation": "Sem explicação ainda.",
+    "contextId": "enem_2019_humanas_q59_ctx1",
+    "review": true
   },
   {
     "number": 60,
@@ -379,7 +406,9 @@
     "disciplinas": [
       "geografia",
       "historia"
-    ]
+    ],
+    "explanation": "Sem explicação ainda.",
+    "review": true
   },
   {
     "number": 61,
@@ -407,7 +436,9 @@
     ],
     "disciplinas": [
       "sociologia"
-    ]
+    ],
+    "explanation": "Sem explicação ainda.",
+    "review": true
   },
   {
     "number": 62,
@@ -434,7 +465,9 @@
     "disciplinas": [
       "filosofia",
       "sociologia"
-    ]
+    ],
+    "explanation": "Sem explicação ainda.",
+    "review": true
   },
   {
     "number": 63,
@@ -462,7 +495,9 @@
     ],
     "disciplinas": [
       "historia"
-    ]
+    ],
+    "explanation": "Sem explicação ainda.",
+    "review": true
   },
   {
     "number": 64,
@@ -489,7 +524,9 @@
     "disciplinas": [
       "filosofia",
       "historia"
-    ]
+    ],
+    "explanation": "Sem explicação ainda.",
+    "review": true
   },
   {
     "number": 65,
@@ -514,7 +551,9 @@
     "contextId": "enem_2019_humanas_q65_ctx1",
     "disciplinas": [
       "filosofia"
-    ]
+    ],
+    "explanation": "Sem explicação ainda.",
+    "review": true
   },
   {
     "number": 66,
@@ -541,7 +580,9 @@
       "filosofia",
       "historia",
       "sociologia"
-    ]
+    ],
+    "explanation": "Sem explicação ainda.",
+    "review": true
   },
   {
     "number": 67,
@@ -569,7 +610,9 @@
     ],
     "disciplinas": [
       "filosofia"
-    ]
+    ],
+    "explanation": "Sem explicação ainda.",
+    "review": true
   },
   {
     "number": 68,
@@ -596,7 +639,9 @@
     "disciplinas": [
       "geografia",
       "sociologia"
-    ]
+    ],
+    "explanation": "Sem explicação ainda.",
+    "review": true
   },
   {
     "number": 69,
@@ -622,7 +667,9 @@
     "disciplinas": [
       "geografia",
       "historia"
-    ]
+    ],
+    "explanation": "Sem explicação ainda.",
+    "review": true
   },
   {
     "number": 70,
@@ -647,7 +694,9 @@
     "contextId": "enem_2019_humanas_q70_ctx1",
     "disciplinas": [
       "sociologia"
-    ]
+    ],
+    "explanation": "Sem explicação ainda.",
+    "review": true
   },
   {
     "number": 71,
@@ -673,7 +722,9 @@
     "disciplinas": [
       "filosofia",
       "sociologia"
-    ]
+    ],
+    "explanation": "Sem explicação ainda.",
+    "review": true
   },
   {
     "number": 72,
@@ -701,7 +752,9 @@
     "disciplinas": [
       "historia",
       "sociologia"
-    ]
+    ],
+    "explanation": "Sem explicação ainda.",
+    "review": true
   },
   {
     "number": 73,
@@ -727,7 +780,9 @@
     "disciplinas": [
       "historia",
       "sociologia"
-    ]
+    ],
+    "explanation": "Sem explicação ainda.",
+    "review": true
   },
   {
     "number": 74,
@@ -752,7 +807,9 @@
     "contextId": "enem_2019_humanas_q74_ctx1",
     "disciplinas": [
       "filosofia"
-    ]
+    ],
+    "explanation": "Sem explicação ainda.",
+    "review": true
   },
   {
     "number": 75,
@@ -782,7 +839,9 @@
     "disciplinas": [
       "filosofia",
       "geografia"
-    ]
+    ],
+    "explanation": "Sem explicação ainda.",
+    "review": true
   },
   {
     "number": 76,
@@ -810,11 +869,13 @@
       "filosofia",
       "geografia",
       "sociologia"
-    ]
+    ],
+    "explanation": "Sem explicação ainda.",
+    "review": true
   },
   {
     "number": 77,
-    "text": "Fala-se aqui de uma arte criada nas ruas e para as ruas, marcadas antes de tudo pela vida cotidiana, seus conflitos e suas possibilidades, que poderiam envolver técnicas, agentes e temas que não fossem encontrados nas instituições mais tradicionais e formais.\n\n[Figura: manifestação artística em espaço público]\n\nA manifestação artística expressa na imagem apresentada no texto integra um movimento contemporâneo de",
+    "text": "A manifestação artística expressa na imagem apresentada no texto integra um movimento contemporâneo de",
     "alternatives": {
       "a": "regulação das relações sociais.",
       "b": "apropriação dos espaços públicos.",
@@ -822,9 +883,7 @@
       "d": "valorização dos formalismos estéticos.",
       "e": "revitalização dos patrimônios históricos."
     },
-    "images": [
-      "figuras/q077_2019_fig1.png"
-    ],
+    "images": [],
     "tags": [
       "história da cultura e arte",
       "geografia humana e urbana",
@@ -839,7 +898,10 @@
       "geografia",
       "historia",
       "sociologia"
-    ]
+    ],
+    "explanation": "Sem explicação ainda.",
+    "contextId": "enem_2019_humanas_q77_ctx1",
+    "review": true
   },
   {
     "number": 78,
@@ -867,7 +929,9 @@
     ],
     "disciplinas": [
       "filosofia"
-    ]
+    ],
+    "explanation": "Sem explicação ainda.",
+    "review": true
   },
   {
     "number": 79,
@@ -893,7 +957,9 @@
     "disciplinas": [
       "filosofia",
       "historia"
-    ]
+    ],
+    "explanation": "Sem explicação ainda.",
+    "review": true
   },
   {
     "number": 80,
@@ -919,7 +985,9 @@
     "disciplinas": [
       "historia",
       "sociologia"
-    ]
+    ],
+    "explanation": "Sem explicação ainda.",
+    "review": true
   },
   {
     "number": 81,
@@ -945,7 +1013,9 @@
     "disciplinas": [
       "geografia",
       "historia"
-    ]
+    ],
+    "explanation": "Sem explicação ainda.",
+    "review": true
   },
   {
     "number": 82,
@@ -970,7 +1040,9 @@
     "contextId": "enem_2019_humanas_q82_ctx1",
     "disciplinas": [
       "historia"
-    ]
+    ],
+    "explanation": "Sem explicação ainda.",
+    "review": true
   },
   {
     "number": 83,
@@ -997,7 +1069,9 @@
       "filosofia",
       "geografia",
       "sociologia"
-    ]
+    ],
+    "explanation": "Sem explicação ainda.",
+    "review": true
   },
   {
     "number": 84,
@@ -1025,11 +1099,13 @@
       "geografia",
       "historia",
       "sociologia"
-    ]
+    ],
+    "explanation": "Sem explicação ainda.",
+    "review": true
   },
   {
     "number": 85,
-    "text": "[Figura: expressão de conflito entre culturas e sua presença em museus]\n\nA imagem expressa um conflito entre culturas e sua presença em museus decorrente da",
+    "text": "A imagem expressa um conflito entre culturas e sua presença em museus decorrente da",
     "alternatives": {
       "a": "valorização do mercado das obras de arte.",
       "b": "definição dos critérios de criação de acervos.",
@@ -1037,9 +1113,7 @@
       "d": "burocratização do acesso dos espaços expositivos.",
       "e": "fragmentação dos territórios das comunidades representadas."
     },
-    "images": [
-      "figuras/q085_2019_fig1.png"
-    ],
+    "images": [],
     "tags": [
       "história da cultura e arte",
       "direitos humanos e cidadania"
@@ -1052,7 +1126,10 @@
     "disciplinas": [
       "historia",
       "sociologia"
-    ]
+    ],
+    "explanation": "Sem explicação ainda.",
+    "contextId": "enem_2019_humanas_q85_ctx1",
+    "review": true
   },
   {
     "number": 86,
@@ -1078,7 +1155,9 @@
     "disciplinas": [
       "geografia",
       "historia"
-    ]
+    ],
+    "explanation": "Sem explicação ainda.",
+    "review": true
   },
   {
     "number": 87,
@@ -1102,7 +1181,9 @@
     "answer": "a",
     "disciplinas": [
       "sociologia"
-    ]
+    ],
+    "explanation": "Sem explicação ainda.",
+    "review": true
   },
   {
     "number": 88,
@@ -1126,7 +1207,9 @@
     "answer": "c",
     "disciplinas": [
       "geografia"
-    ]
+    ],
+    "explanation": "Sem explicação ainda.",
+    "review": true
   },
   {
     "number": 89,
@@ -1151,7 +1234,9 @@
     "contextId": "enem_2019_humanas_q89_ctx1",
     "disciplinas": [
       "geografia"
-    ]
+    ],
+    "explanation": "Sem explicação ainda.",
+    "review": true
   },
   {
     "number": 90,
@@ -1178,6 +1263,8 @@
     "disciplinas": [
       "filosofia",
       "geografia"
-    ]
+    ],
+    "explanation": "Sem explicação ainda.",
+    "review": true
   }
 ]

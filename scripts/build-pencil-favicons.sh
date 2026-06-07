@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # Generate pencil-shaped favicons in tab-specific colors.
-# Output: public/favicon-{red,amber,blue}-32.png + public/favicon-{red,amber,blue}.ico
+# Output: public/favicon-{red,amber,blue,green,purple}-32.png + matching .ico
 #         public/logo-192.png (default red)
 # Default favicon.ico is a copy of the red one.
 set -eo pipefail
@@ -10,8 +10,8 @@ TMP="$(mktemp -d)"
 trap 'rm -rf "$TMP"' EXIT
 
 # Parallel arrays (bash 3.2 has no assoc arrays on macOS).
-NAMES=(red amber blue)
-HEXES=("#cc2222" "#c2410c" "#1e40af")
+NAMES=(red amber blue green purple)
+HEXES=("#cc2222" "#ea580c" "#3b82f6" "#16a34a" "#9333ea")
 
 render_svg() {
   local body="$1"

@@ -16,6 +16,11 @@ const ROUTES = {
   'POST /api/daily-challenge':      '../api/daily-challenge/index.js',
   'POST /api/daily-challenge/result': '../api/daily-challenge/result.js',
   'POST /api/feedback':             '../api/feedback/index.js',
+  // /api/explanations: locally backed by public/explanations.json so dev runs without Postgres.
+  'GET /api/explanations':          './explanations-local.js',
+  'POST /api/explanations':         './explanations-local.js',
+  'DELETE /api/explanations':       './explanations-local.js',
+  'POST /api/explanations/freeze':  './freeze-explanations-local.js',
   'GET /api/question-sets':         '../api/question-sets/index.js',
   'POST /api/question-sets':        '../api/question-sets/index.js',
   'PATCH /api/question-sets':       '../api/question-sets/index.js',

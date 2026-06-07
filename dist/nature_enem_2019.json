@@ -21,7 +21,9 @@
     "answer": "a",
     "disciplinas": [
       "quimica"
-    ]
+    ],
+    "explanation": "Sem explicação ainda.",
+    "review": true
   },
   {
     "number": 92,
@@ -45,7 +47,9 @@
     "answer": "a",
     "disciplinas": [
       "fisica"
-    ]
+    ],
+    "explanation": "Sem explicação ainda.",
+    "review": true
   },
   {
     "number": 93,
@@ -69,7 +73,9 @@
     "answer": "e",
     "disciplinas": [
       "biologia"
-    ]
+    ],
+    "explanation": "Sem explicação ainda.",
+    "review": true
   },
   {
     "number": 94,
@@ -94,7 +100,9 @@
     "disciplinas": [
       "biologia",
       "fisica"
-    ]
+    ],
+    "explanation": "Sem explicação ainda.",
+    "review": true
   },
   {
     "number": 95,
@@ -118,7 +126,9 @@
     "answer": "a",
     "disciplinas": [
       "quimica"
-    ]
+    ],
+    "explanation": "Sem explicação ainda.",
+    "review": true
   },
   {
     "number": 96,
@@ -143,7 +153,9 @@
     "contextId": "enem_2019_nature_q96_ctx1",
     "disciplinas": [
       "biologia"
-    ]
+    ],
+    "explanation": "Sem explicação ainda.",
+    "review": true
   },
   {
     "number": 97,
@@ -167,7 +179,9 @@
     "answer": "d",
     "disciplinas": [
       "biologia"
-    ]
+    ],
+    "explanation": "Sem explicação ainda.",
+    "review": true
   },
   {
     "number": 98,
@@ -192,7 +206,9 @@
     "disciplinas": [
       "biologia",
       "fisica"
-    ]
+    ],
+    "explanation": "Sem explicação ainda.",
+    "review": true
   },
   {
     "number": 99,
@@ -216,7 +232,9 @@
     "answer": "a",
     "disciplinas": [
       "biologia"
-    ]
+    ],
+    "explanation": "Sem explicação ainda.",
+    "review": true
   },
   {
     "number": 100,
@@ -240,7 +258,9 @@
     "answer": "d",
     "disciplinas": [
       "biologia"
-    ]
+    ],
+    "explanation": "Sem explicação ainda.",
+    "review": true
   },
   {
     "number": 101,
@@ -265,7 +285,9 @@
     "contextId": "enem_2019_nature_q101_ctx1",
     "disciplinas": [
       "biologia"
-    ]
+    ],
+    "explanation": "Sem explicação ainda.",
+    "review": true
   },
   {
     "number": 102,
@@ -289,7 +311,9 @@
     "answer": "b",
     "disciplinas": [
       "fisica"
-    ]
+    ],
+    "explanation": "Sem explicação ainda.",
+    "review": true
   },
   {
     "number": 103,
@@ -313,7 +337,9 @@
     "answer": "c",
     "disciplinas": [
       "quimica"
-    ]
+    ],
+    "explanation": "Sem explicação ainda.",
+    "review": true
   },
   {
     "number": 104,
@@ -339,7 +365,9 @@
     "disciplinas": [
       "biologia",
       "quimica"
-    ]
+    ],
+    "explanation": "Sem explicação ainda.",
+    "review": true
   },
   {
     "number": 105,
@@ -364,7 +392,9 @@
     "disciplinas": [
       "fisica",
       "quimica"
-    ]
+    ],
+    "explanation": "Sem explicação ainda.",
+    "review": true
   },
   {
     "number": 106,
@@ -387,7 +417,9 @@
     "answer": "d",
     "disciplinas": [
       "fisica"
-    ]
+    ],
+    "explanation": "Sem explicação ainda.",
+    "review": true
   },
   {
     "number": 107,
@@ -411,7 +443,9 @@
     "answer": "b",
     "disciplinas": [
       "biologia"
-    ]
+    ],
+    "explanation": "Sem explicação ainda.",
+    "review": true
   },
   {
     "number": 108,
@@ -435,7 +469,9 @@
     "answer": "c",
     "disciplinas": [
       "quimica"
-    ]
+    ],
+    "explanation": "Sem explicação ainda.",
+    "review": true
   },
   {
     "number": 109,
@@ -459,7 +495,9 @@
     "answer": "b",
     "disciplinas": [
       "fisica"
-    ]
+    ],
+    "explanation": "Sem explicação ainda.",
+    "review": true
   },
   {
     "number": 110,
@@ -483,7 +521,9 @@
     "answer": "d",
     "disciplinas": [
       "biologia"
-    ]
+    ],
+    "explanation": "Sem explicação ainda.",
+    "review": true
   },
   {
     "number": 111,
@@ -506,7 +546,9 @@
     "answer": "a",
     "disciplinas": [
       "fisica"
-    ]
+    ],
+    "explanation": "Sem explicação ainda.",
+    "review": true
   },
   {
     "number": 112,
@@ -530,7 +572,9 @@
     "answer": "d",
     "disciplinas": [
       "quimica"
-    ]
+    ],
+    "explanation": "Sem explicação ainda.",
+    "review": true
   },
   {
     "number": 113,
@@ -556,7 +600,9 @@
     "answer": "a",
     "disciplinas": [
       "fisica"
-    ]
+    ],
+    "explanation": "Sem explicação ainda.",
+    "review": true
   },
   {
     "number": 114,
@@ -580,7 +626,9 @@
     "answer": "e",
     "disciplinas": [
       "biologia"
-    ]
+    ],
+    "explanation": "Sem explicação ainda.",
+    "review": true
   },
   {
     "number": 115,
@@ -605,7 +653,9 @@
     "disciplinas": [
       "biologia",
       "quimica"
-    ]
+    ],
+    "explanation": "Sem explicação ainda.",
+    "review": true
   },
   {
     "number": 116,
@@ -632,7 +682,9 @@
     "disciplinas": [
       "biologia",
       "quimica"
-    ]
+    ],
+    "explanation": "Sem explicação ainda.",
+    "review": true
   },
   {
     "number": 117,
@@ -657,7 +709,9 @@
     "disciplinas": [
       "fisica",
       "quimica"
-    ]
+    ],
+    "explanation": "Sem explicação ainda.",
+    "review": true
   },
   {
     "number": 118,
@@ -669,9 +723,7 @@
       "d": "OH⁻(aq)",
       "e": "Zn(OH)₄²⁻(aq)"
     },
-    "images": [
-      "figuras/q118_2019_fig1.png"
-    ],
+    "images": [],
     "tags": [
       "eletroquímica",
       "equilíbrio químico"
@@ -686,7 +738,9 @@
     ],
     "disciplinas": [
       "quimica"
-    ]
+    ],
+    "explanation": "Sem explicação ainda.",
+    "review": true
   },
   {
     "number": 119,
@@ -710,7 +764,9 @@
     "answer": "b",
     "disciplinas": [
       "fisica"
-    ]
+    ],
+    "explanation": "Sem explicação ainda.",
+    "review": true
   },
   {
     "number": 120,
@@ -735,7 +791,9 @@
     "answer": "a",
     "disciplinas": [
       "quimica"
-    ]
+    ],
+    "explanation": "Sem explicação ainda.",
+    "review": true
   },
   {
     "number": 121,
@@ -759,7 +817,9 @@
     "answer": "b",
     "disciplinas": [
       "fisica"
-    ]
+    ],
+    "explanation": "Sem explicação ainda.",
+    "review": true
   },
   {
     "number": 122,
@@ -783,7 +843,9 @@
     "answer": "e",
     "disciplinas": [
       "quimica"
-    ]
+    ],
+    "explanation": "Sem explicação ainda.",
+    "review": true
   },
   {
     "number": 123,
@@ -810,7 +872,9 @@
     "disciplinas": [
       "biologia",
       "fisica"
-    ]
+    ],
+    "explanation": "Sem explicação ainda.",
+    "review": true
   },
   {
     "number": 124,
@@ -834,7 +898,9 @@
     "answer": "b",
     "disciplinas": [
       "quimica"
-    ]
+    ],
+    "explanation": "Sem explicação ainda.",
+    "review": true
   },
   {
     "number": 125,
@@ -859,7 +925,9 @@
     "contextId": "enem_2019_nature_q125_ctx1",
     "disciplinas": [
       "biologia"
-    ]
+    ],
+    "explanation": "Sem explicação ainda.",
+    "review": true
   },
   {
     "number": 126,
@@ -882,7 +950,9 @@
     "answer": "b",
     "disciplinas": [
       "fisica"
-    ]
+    ],
+    "explanation": "Sem explicação ainda.",
+    "review": true
   },
   {
     "number": 127,
@@ -908,7 +978,9 @@
     "disciplinas": [
       "biologia",
       "quimica"
-    ]
+    ],
+    "explanation": "Sem explicação ainda.",
+    "review": true
   },
   {
     "number": 128,
@@ -932,7 +1004,9 @@
     "answer": "e",
     "disciplinas": [
       "quimica"
-    ]
+    ],
+    "explanation": "Sem explicação ainda.",
+    "review": true
   },
   {
     "number": 129,
@@ -956,7 +1030,9 @@
     "answer": "c",
     "disciplinas": [
       "quimica"
-    ]
+    ],
+    "explanation": "Sem explicação ainda.",
+    "review": true
   },
   {
     "number": 130,
@@ -980,7 +1056,9 @@
     "answer": "e",
     "disciplinas": [
       "biologia"
-    ]
+    ],
+    "explanation": "Sem explicação ainda.",
+    "review": true
   },
   {
     "number": 131,
@@ -1004,7 +1082,9 @@
     "answer": "b",
     "disciplinas": [
       "fisica"
-    ]
+    ],
+    "explanation": "Sem explicação ainda.",
+    "review": true
   },
   {
     "number": 132,
@@ -1029,7 +1109,9 @@
     "disciplinas": [
       "biologia",
       "fisica"
-    ]
+    ],
+    "explanation": "Sem explicação ainda.",
+    "review": true
   },
   {
     "number": 133,
@@ -1053,7 +1135,9 @@
     "answer": "a",
     "disciplinas": [
       "biologia"
-    ]
+    ],
+    "explanation": "Sem explicação ainda.",
+    "review": true
   },
   {
     "number": 134,
@@ -1077,7 +1161,9 @@
     "answer": "d",
     "disciplinas": [
       "quimica"
-    ]
+    ],
+    "explanation": "Sem explicação ainda.",
+    "review": true
   },
   {
     "number": 135,
@@ -1101,6 +1187,8 @@
     "answer": "c",
     "disciplinas": [
       "fisica"
-    ]
+    ],
+    "explanation": "Sem explicação ainda.",
+    "review": true
   }
 ]

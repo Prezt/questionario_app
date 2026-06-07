@@ -51,5 +51,17 @@ CREATE TABLE IF NOT EXISTS daily_challenge_results (
   UNIQUE(user_id, challenge_date)
 );
 
+-- Teacher/admin explanations per ENEM question, keyed by (area, year, test, number).
+CREATE TABLE IF NOT EXISTS explanations (
+  area        TEXT NOT NULL,
+  year        INTEGER NOT NULL,
+  test        TEXT NOT NULL,
+  number      INTEGER NOT NULL,
+  explanation TEXT NOT NULL,
+  updated_by  INTEGER REFERENCES users(id) ON DELETE SET NULL,
+  updated_at  TIMESTAMPTZ DEFAULT NOW(),
+  PRIMARY KEY (area, year, test, number)
+);
+
 -- Indexes
 CREATE INDEX IF NOT EXISTS idx_test_results_user_id ON test_results(user_id);

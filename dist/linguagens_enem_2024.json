@@ -25,7 +25,8 @@
     "difficulty": 3,
     "disciplinas": [
       "ingles"
-    ]
+    ],
+    "explanation": "Sem explicação ainda."
   },
   {
     "number": 2,
@@ -54,7 +55,8 @@
     ],
     "disciplinas": [
       "ingles"
-    ]
+    ],
+    "explanation": "Sem explicação ainda."
   },
   {
     "number": 3,
@@ -82,7 +84,8 @@
     "difficulty": 4,
     "disciplinas": [
       "ingles"
-    ]
+    ],
+    "explanation": "Sem explicação ainda."
   },
   {
     "number": 4,
@@ -110,7 +113,8 @@
     ],
     "disciplinas": [
       "ingles"
-    ]
+    ],
+    "explanation": "Sem explicação ainda."
   },
   {
     "number": 5,
@@ -137,7 +141,8 @@
     "difficulty": 3,
     "disciplinas": [
       "ingles"
-    ]
+    ],
+    "explanation": "Sem explicação ainda."
   },
   {
     "number": 1,
@@ -166,7 +171,8 @@
     ],
     "disciplinas": [
       "espanhol"
-    ]
+    ],
+    "explanation": "Sem explicação ainda."
   },
   {
     "number": 2,
@@ -194,7 +200,8 @@
     ],
     "disciplinas": [
       "espanhol"
-    ]
+    ],
+    "explanation": "Sem explicação ainda."
   },
   {
     "number": 3,
@@ -224,7 +231,8 @@
     "disciplinas": [
       "espanhol",
       "literatura"
-    ]
+    ],
+    "explanation": "Sem explicação ainda."
   },
   {
     "number": 4,
@@ -253,7 +261,8 @@
     ],
     "disciplinas": [
       "espanhol"
-    ]
+    ],
+    "explanation": "Sem explicação ainda."
   },
   {
     "number": 5,
@@ -283,7 +292,8 @@
     "disciplinas": [
       "espanhol",
       "literatura"
-    ]
+    ],
+    "explanation": "Sem explicação ainda."
   },
   {
     "number": 6,
@@ -310,7 +320,8 @@
     ],
     "disciplinas": [
       "linguistica"
-    ]
+    ],
+    "explanation": "Sem explicação ainda."
   },
   {
     "number": 7,
@@ -337,7 +348,8 @@
     ],
     "disciplinas": [
       "interpretacao"
-    ]
+    ],
+    "explanation": "Sem explicação ainda."
   },
   {
     "number": 8,
@@ -363,7 +375,8 @@
     ],
     "disciplinas": [
       "artes"
-    ]
+    ],
+    "explanation": "Sem explicação ainda."
   },
   {
     "number": 9,
@@ -391,7 +404,8 @@
     "difficulty": 3,
     "disciplinas": [
       "interpretacao"
-    ]
+    ],
+    "explanation": "Sem explicação ainda."
   },
   {
     "number": 10,
@@ -418,7 +432,8 @@
     "difficulty": 3,
     "disciplinas": [
       "interpretacao"
-    ]
+    ],
+    "explanation": "Sem explicação ainda."
   },
   {
     "number": 11,
@@ -445,7 +460,8 @@
     "difficulty": 5,
     "disciplinas": [
       "linguistica"
-    ]
+    ],
+    "explanation": "Sem explicação ainda."
   },
   {
     "number": 12,
@@ -472,7 +488,8 @@
     "difficulty": 5,
     "disciplinas": [
       "artes"
-    ]
+    ],
+    "explanation": "Sem explicação ainda."
   },
   {
     "number": 13,
@@ -500,7 +517,8 @@
     "difficulty": 3,
     "disciplinas": [
       "linguistica"
-    ]
+    ],
+    "explanation": "Sem explicação ainda."
   },
   {
     "number": 14,
@@ -526,7 +544,8 @@
     "difficulty": 3,
     "disciplinas": [
       "linguistica"
-    ]
+    ],
+    "explanation": "Sem explicação ainda."
   },
   {
     "number": 15,
@@ -552,7 +571,8 @@
     "difficulty": 4,
     "disciplinas": [
       "interpretacao"
-    ]
+    ],
+    "explanation": "Sem explicação ainda."
   },
   {
     "number": 16,
@@ -579,7 +599,8 @@
     "difficulty": 6,
     "disciplinas": [
       "artes"
-    ]
+    ],
+    "explanation": "Sem explicação ainda."
   },
   {
     "number": 17,
@@ -605,7 +626,8 @@
     "difficulty": 3,
     "disciplinas": [
       "interpretacao"
-    ]
+    ],
+    "explanation": "Sem explicação ainda."
   },
   {
     "number": 18,
@@ -632,7 +654,8 @@
     "difficulty": 4,
     "disciplinas": [
       "interpretacao"
-    ]
+    ],
+    "explanation": "Sem explicação ainda."
   },
   {
     "number": 19,
@@ -661,7 +684,8 @@
     "disciplinas": [
       "interpretacao",
       "literatura"
-    ]
+    ],
+    "explanation": "Sem explicação ainda."
   },
   {
     "number": 20,
@@ -688,7 +712,8 @@
     "difficulty": 6,
     "disciplinas": [
       "interpretacao"
-    ]
+    ],
+    "explanation": "Sem explicação ainda."
   },
   {
     "number": 21,
@@ -718,7 +743,8 @@
     "difficulty": 7,
     "disciplinas": [
       "artes"
-    ]
+    ],
+    "explanation": "Sem explicação ainda."
   },
   {
     "number": 22,
@@ -747,7 +773,8 @@
     "difficulty": 7,
     "disciplinas": [
       "interpretacao"
-    ]
+    ],
+    "explanation": "Sem explicação ainda."
   },
   {
     "number": 23,
@@ -776,7 +803,8 @@
     "disciplinas": [
       "interpretacao",
       "linguistica"
-    ]
+    ],
+    "explanation": "Sem explicação ainda."
   },
   {
     "number": 24,
@@ -805,7 +833,8 @@
     "disciplinas": [
       "linguistica",
       "literatura"
-    ]
+    ],
+    "explanation": "Sem explicação ainda."
   },
   {
     "number": 25,
@@ -832,7 +861,8 @@
     "disciplinas": [
       "artes",
       "literatura"
-    ]
+    ],
+    "explanation": "Sem explicação ainda."
   },
   {
     "number": 26,
@@ -859,7 +889,8 @@
     ],
     "disciplinas": [
       "interpretacao"
-    ]
+    ],
+    "explanation": "Sem explicação ainda."
   },
   {
     "number": 27,
@@ -887,7 +918,8 @@
     ],
     "disciplinas": [
       "interpretacao"
-    ]
+    ],
+    "explanation": "Sem explicação ainda."
   },
   {
     "number": 28,
@@ -915,7 +947,8 @@
     "disciplinas": [
       "interpretacao",
       "literatura"
-    ]
+    ],
+    "explanation": "Sem explicação ainda."
   },
   {
     "number": 29,
@@ -942,7 +975,8 @@
     ],
     "disciplinas": [
       "literatura"
-    ]
+    ],
+    "explanation": "Sem explicação ainda."
   },
   {
     "number": 30,
@@ -971,7 +1005,8 @@
     "disciplinas": [
       "artes",
       "interpretacao"
-    ]
+    ],
+    "explanation": "Sem explicação ainda."
   },
   {
     "number": 31,
@@ -998,7 +1033,8 @@
     ],
     "disciplinas": [
       "literatura"
-    ]
+    ],
+    "explanation": "Sem explicação ainda."
   },
   {
     "number": 32,
@@ -1025,7 +1061,8 @@
     ],
     "disciplinas": [
       "literatura"
-    ]
+    ],
+    "explanation": "Sem explicação ainda."
   },
   {
     "number": 33,
@@ -1050,7 +1087,8 @@
     "difficulty": 3,
     "disciplinas": [
       "interpretacao"
-    ]
+    ],
+    "explanation": "Sem explicação ainda."
   },
   {
     "number": 34,
@@ -1077,7 +1115,8 @@
     ],
     "disciplinas": [
       "interpretacao"
-    ]
+    ],
+    "explanation": "Sem explicação ainda."
   },
   {
     "number": 35,
@@ -1104,7 +1143,8 @@
     ],
     "disciplinas": [
       "literatura"
-    ]
+    ],
+    "explanation": "Sem explicação ainda."
   },
   {
     "number": 36,
@@ -1134,7 +1174,8 @@
     "disciplinas": [
       "artes",
       "literatura"
-    ]
+    ],
+    "explanation": "Sem explicação ainda."
   },
   {
     "number": 37,
@@ -1163,7 +1204,8 @@
     "disciplinas": [
       "interpretacao",
       "linguistica"
-    ]
+    ],
+    "explanation": "Sem explicação ainda."
   },
   {
     "number": 38,
@@ -1190,7 +1232,8 @@
     ],
     "disciplinas": [
       "literatura"
-    ]
+    ],
+    "explanation": "Sem explicação ainda."
   },
   {
     "number": 39,
@@ -1216,7 +1259,8 @@
     ],
     "disciplinas": [
       "linguistica"
-    ]
+    ],
+    "explanation": "Sem explicação ainda."
   },
   {
     "number": 40,
@@ -1243,7 +1287,8 @@
     ],
     "disciplinas": [
       "artes"
-    ]
+    ],
+    "explanation": "Sem explicação ainda."
   },
   {
     "number": 41,
@@ -1270,7 +1315,8 @@
     ],
     "disciplinas": [
       "interpretacao"
-    ]
+    ],
+    "explanation": "Sem explicação ainda."
   },
   {
     "number": 42,
@@ -1298,7 +1344,8 @@
     "disciplinas": [
       "interpretacao",
       "linguistica"
-    ]
+    ],
+    "explanation": "Sem explicação ainda."
   },
   {
     "number": 43,
@@ -1327,7 +1374,8 @@
     ],
     "disciplinas": [
       "artes"
-    ]
+    ],
+    "explanation": "Sem explicação ainda."
   },
   {
     "number": 44,
@@ -1353,7 +1401,8 @@
     ],
     "disciplinas": [
       "interpretacao"
-    ]
+    ],
+    "explanation": "Sem explicação ainda."
   },
   {
     "number": 45,
@@ -1381,6 +1430,7 @@
     "disciplinas": [
       "interpretacao",
       "linguistica"
-    ]
+    ],
+    "explanation": "Sem explicação ainda."
   }
 ]

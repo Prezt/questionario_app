@@ -23,7 +23,8 @@
     "disciplinas": [
       "ingles",
       "literatura"
-    ]
+    ],
+    "explanation": "Sem explicação ainda."
   },
   {
     "number": 1,
@@ -49,7 +50,8 @@
     "contextId": "enem_2022_linguagens_q1es_ctx1",
     "disciplinas": [
       "espanhol"
-    ]
+    ],
+    "explanation": "Sem explicação ainda."
   },
   {
     "number": 2,
@@ -75,7 +77,8 @@
     "contextId": "enem_2022_linguagens_q2en_ctx1",
     "disciplinas": [
       "ingles"
-    ]
+    ],
+    "explanation": "Sem explicação ainda."
   },
   {
     "number": 2,
@@ -101,7 +104,8 @@
     "contextId": "enem_2022_linguagens_q2es_ctx1",
     "disciplinas": [
       "espanhol"
-    ]
+    ],
+    "explanation": "Sem explicação ainda."
   },
   {
     "number": 3,
@@ -127,7 +131,8 @@
     "contextId": "enem_2022_linguagens_q3en_ctx1",
     "disciplinas": [
       "ingles"
-    ]
+    ],
+    "explanation": "Sem explicação ainda."
   },
   {
     "number": 3,
@@ -152,7 +157,8 @@
     "contextId": "enem_2022_linguagens_q3es_ctx1",
     "disciplinas": [
       "espanhol"
-    ]
+    ],
+    "explanation": "Sem explicação ainda."
   },
   {
     "number": 4,
@@ -178,7 +184,8 @@
     "contextId": "enem_2022_linguagens_q4en_ctx1",
     "disciplinas": [
       "ingles"
-    ]
+    ],
+    "explanation": "Sem explicação ainda."
   },
   {
     "number": 4,
@@ -205,7 +212,8 @@
     "disciplinas": [
       "espanhol",
       "literatura"
-    ]
+    ],
+    "explanation": "Sem explicação ainda."
   },
   {
     "number": 5,
@@ -231,7 +239,8 @@
     "contextId": "enem_2022_linguagens_q5en_ctx1",
     "disciplinas": [
       "ingles"
-    ]
+    ],
+    "explanation": "Sem explicação ainda."
   },
   {
     "number": 5,
@@ -256,7 +265,8 @@
     "contextId": "enem_2022_linguagens_q5es_ctx1",
     "disciplinas": [
       "espanhol"
-    ]
+    ],
+    "explanation": "Sem explicação ainda."
   },
   {
     "number": 6,
@@ -281,7 +291,8 @@
     "contextId": "enem_2022_linguagens_q6_ctx1",
     "disciplinas": [
       "linguistica"
-    ]
+    ],
+    "explanation": "Sem explicação ainda."
   },
   {
     "number": 7,
@@ -309,7 +320,8 @@
     "difficulty": 5,
     "disciplinas": [
       "interpretacao"
-    ]
+    ],
+    "explanation": "Sem explicação ainda."
   },
   {
     "number": 8,
@@ -334,7 +346,8 @@
     "contextId": "enem_2022_linguagens_q8_ctx1",
     "disciplinas": [
       "interpretacao"
-    ]
+    ],
+    "explanation": "Sem explicação ainda."
   },
   {
     "number": 9,
@@ -359,7 +372,8 @@
     "contextId": "enem_2022_linguagens_q9_ctx1",
     "disciplinas": [
       "interpretacao"
-    ]
+    ],
+    "explanation": "Sem explicação ainda."
   },
   {
     "number": 10,
@@ -384,7 +398,8 @@
     "contextId": "enem_2022_linguagens_q10_ctx1",
     "disciplinas": [
       "artes"
-    ]
+    ],
+    "explanation": "Sem explicação ainda."
   },
   {
     "number": 11,
@@ -408,7 +423,8 @@
     "contextId": "enem_2022_linguagens_q11_ctx1",
     "disciplinas": [
       "interpretacao"
-    ]
+    ],
+    "explanation": "Sem explicação ainda."
   },
   {
     "number": 12,
@@ -434,7 +450,8 @@
     "disciplinas": [
       "linguistica",
       "literatura"
-    ]
+    ],
+    "explanation": "Sem explicação ainda."
   },
   {
     "number": 13,
@@ -458,7 +475,8 @@
     "contextId": "enem_2022_linguagens_q13_ctx1",
     "disciplinas": [
       "interpretacao"
-    ]
+    ],
+    "explanation": "Sem explicação ainda."
   },
   {
     "number": 14,
@@ -485,7 +503,8 @@
     ],
     "disciplinas": [
       "linguistica"
-    ]
+    ],
+    "explanation": "Sem explicação ainda."
   },
   {
     "number": 15,
@@ -510,7 +529,8 @@
     "contextId": "enem_2022_linguagens_q15_ctx1",
     "disciplinas": [
       "interpretacao"
-    ]
+    ],
+    "explanation": "Sem explicação ainda."
   },
   {
     "number": 16,
@@ -534,7 +554,8 @@
     "contextId": "enem_2022_linguagens_q16_ctx1",
     "disciplinas": [
       "interpretacao"
-    ]
+    ],
+    "explanation": "Sem explicação ainda."
   },
   {
     "number": 17,
@@ -562,7 +583,8 @@
     "disciplinas": [
       "interpretacao",
       "linguistica"
-    ]
+    ],
+    "explanation": "Sem explicação ainda."
   },
   {
     "number": 18,
@@ -588,7 +610,8 @@
     "disciplinas": [
       "interpretacao",
       "literatura"
-    ]
+    ],
+    "explanation": "Sem explicação ainda."
   },
   {
     "number": 19,
@@ -612,7 +635,8 @@
     "contextId": "enem_2022_linguagens_q19_ctx1",
     "disciplinas": [
       "interpretacao"
-    ]
+    ],
+    "explanation": "Sem explicação ainda."
   },
   {
     "number": 20,
@@ -637,7 +661,8 @@
     "contextId": "enem_2022_linguagens_q20_ctx1",
     "disciplinas": [
       "interpretacao"
-    ]
+    ],
+    "explanation": "Sem explicação ainda."
   },
   {
     "number": 21,
@@ -662,7 +687,8 @@
     "contextId": "enem_2022_linguagens_q21_ctx1",
     "disciplinas": [
       "literatura"
-    ]
+    ],
+    "explanation": "Sem explicação ainda."
   },
   {
     "number": 22,
@@ -690,7 +716,8 @@
     ],
     "disciplinas": [
       "interpretacao"
-    ]
+    ],
+    "explanation": "Sem explicação ainda."
   },
   {
     "number": 23,
@@ -716,7 +743,8 @@
     "disciplinas": [
       "interpretacao",
       "literatura"
-    ]
+    ],
+    "explanation": "Sem explicação ainda."
   },
   {
     "number": 24,
@@ -743,7 +771,8 @@
     "disciplinas": [
       "interpretacao",
       "linguistica"
-    ]
+    ],
+    "explanation": "Sem explicação ainda."
   },
   {
     "number": 25,
@@ -768,7 +797,8 @@
     "contextId": "enem_2022_linguagens_q25_ctx1",
     "disciplinas": [
       "interpretacao"
-    ]
+    ],
+    "explanation": "Sem explicação ainda."
   },
   {
     "number": 26,
@@ -794,7 +824,8 @@
     "disciplinas": [
       "interpretacao",
       "literatura"
-    ]
+    ],
+    "explanation": "Sem explicação ainda."
   },
   {
     "number": 27,
@@ -818,7 +849,8 @@
     "contextId": "enem_2022_linguagens_q27_ctx1",
     "disciplinas": [
       "interpretacao"
-    ]
+    ],
+    "explanation": "Sem explicação ainda."
   },
   {
     "number": 28,
@@ -843,7 +875,8 @@
     "contextId": "enem_2022_linguagens_q28_ctx1",
     "disciplinas": [
       "linguistica"
-    ]
+    ],
+    "explanation": "Sem explicação ainda."
   },
   {
     "number": 29,
@@ -867,7 +900,8 @@
     "contextId": "enem_2022_linguagens_q29_ctx1",
     "disciplinas": [
       "literatura"
-    ]
+    ],
+    "explanation": "Sem explicação ainda."
   },
   {
     "number": 30,
@@ -893,7 +927,8 @@
     "disciplinas": [
       "interpretacao",
       "literatura"
-    ]
+    ],
+    "explanation": "Sem explicação ainda."
   },
   {
     "number": 31,
@@ -919,7 +954,8 @@
     "disciplinas": [
       "interpretacao",
       "literatura"
-    ]
+    ],
+    "explanation": "Sem explicação ainda."
   },
   {
     "number": 32,
@@ -944,7 +980,8 @@
     "contextId": "enem_2022_linguagens_q32_ctx1",
     "disciplinas": [
       "interpretacao"
-    ]
+    ],
+    "explanation": "Sem explicação ainda."
   },
   {
     "number": 33,
@@ -971,7 +1008,8 @@
     "disciplinas": [
       "linguistica",
       "literatura"
-    ]
+    ],
+    "explanation": "Sem explicação ainda."
   },
   {
     "number": 34,
@@ -995,7 +1033,8 @@
     "contextId": "enem_2022_linguagens_q34_ctx1",
     "disciplinas": [
       "interpretacao"
-    ]
+    ],
+    "explanation": "Sem explicação ainda."
   },
   {
     "number": 35,
@@ -1021,7 +1060,8 @@
     "disciplinas": [
       "interpretacao",
       "literatura"
-    ]
+    ],
+    "explanation": "Sem explicação ainda."
   },
   {
     "number": 36,
@@ -1046,7 +1086,8 @@
     "contextId": "enem_2022_linguagens_q36_ctx1",
     "disciplinas": [
       "interpretacao"
-    ]
+    ],
+    "explanation": "Sem explicação ainda."
   },
   {
     "number": 37,
@@ -1071,7 +1112,8 @@
     "contextId": "enem_2022_linguagens_q37_ctx1",
     "disciplinas": [
       "interpretacao"
-    ]
+    ],
+    "explanation": "Sem explicação ainda."
   },
   {
     "number": 38,
@@ -1098,7 +1140,8 @@
     ],
     "disciplinas": [
       "artes"
-    ]
+    ],
+    "explanation": "Sem explicação ainda."
   },
   {
     "number": 39,
@@ -1125,7 +1168,8 @@
     ],
     "disciplinas": [
       "artes"
-    ]
+    ],
+    "explanation": "Sem explicação ainda."
   },
   {
     "number": 40,
@@ -1149,7 +1193,8 @@
     "contextId": "enem_2022_linguagens_q40_ctx1",
     "disciplinas": [
       "literatura"
-    ]
+    ],
+    "explanation": "Sem explicação ainda."
   },
   {
     "number": 41,
@@ -1173,7 +1218,8 @@
     "contextId": "enem_2022_linguagens_q41_ctx1",
     "disciplinas": [
       "literatura"
-    ]
+    ],
+    "explanation": "Sem explicação ainda."
   },
   {
     "number": 42,
@@ -1197,7 +1243,8 @@
     "contextId": "enem_2022_linguagens_q42_ctx1",
     "disciplinas": [
       "interpretacao"
-    ]
+    ],
+    "explanation": "Sem explicação ainda."
   },
   {
     "number": 43,
@@ -1223,7 +1270,8 @@
     "disciplinas": [
       "interpretacao",
       "literatura"
-    ]
+    ],
+    "explanation": "Sem explicação ainda."
   },
   {
     "number": 44,
@@ -1250,7 +1298,8 @@
     ],
     "disciplinas": [
       "artes"
-    ]
+    ],
+    "explanation": "Sem explicação ainda."
   },
   {
     "number": 45,
@@ -1275,6 +1324,7 @@
     "contextId": "enem_2022_linguagens_q45_ctx1",
     "disciplinas": [
       "artes"
-    ]
+    ],
+    "explanation": "Sem explicação ainda."
   }
 ]

@@ -45,6 +45,8 @@ import {
 } from './data/disciplinas.js'
 const ReviewPage  = lazy(() => import('./ReviewPage.jsx'))
 const QuestionEditor = lazy(() => import('./QuestionEditor.jsx'))
+const ExplanationsEditor = lazy(() => import('./ExplanationsEditor.jsx'))
+const EnemPicker = lazy(() => import('./EnemPicker.jsx'))
 
 const ATTEMPTS_SESSION_KEY = 'trilha-integrar-tentativas'
 const PAUSED_SESSION_KEY   = 'trilha-integrar-sessao'
@@ -101,7 +103,7 @@ function formatTime(seconds) {
   return `${m}:${String(s).padStart(2, '0')}`
 }
 
-const APP_VERSION = '1.16.0'
+const APP_VERSION = '2.0.0'
 const APP_VERSION_DATE = '07/06/2026'
 
 const REVIEW_STATUS = [
@@ -111,44 +113,46 @@ const REVIEW_STATUS = [
   { year: 2022, linguagens: true, humanas: true, natureza: true, matematica: true },
   { year: 2021, linguagens: true, humanas: true, natureza: true, matematica: true },
   { year: 2020, linguagens: true, humanas: true, natureza: true, matematica: true },
-  { year: 2019, linguagens: true, humanas: true, natureza: false, matematica: false },
+  { year: 2019, linguagens: false, humanas: false, natureza: false, matematica: false },
   { year: 2018, linguagens: true, humanas: true, natureza: true, matematica: true },
 ]
 
 const CHANGELOG = [
   {
-    version: '1.16.0',
-    date: '07/06/2026',
-    items: [
-      'Nova taxonomia de 13 disciplinas',
-      'Português, Língua Estrangeira e Educação Física reorganizadas',
-      'Estude dividido em sub-abas ENEM e Listas',
-      'Novo picker de disciplina com subtemas e quantidade',
-      'Resumo agrupado por disciplina antes dos assuntos',
-      'Novos subtemas de Linguística detectados por enunciado',
-      'Subtemas de Matemática: frações, proporção, regra de três',
-      'Mudanças significativas no visual da página',
-      'Criar lista abre na mesma página',
-      'ENEM 2019 Linguagens Q30: contextos reais criados',
-      'ENEM 2019 Linguagens Q31: criado contexto próprio com a escultura "Cabeça de touro" (atribuição pendente)',
-      'ENEM 2019 Linguagens Q32: título e subtítulo extraídos da reportagem ("Emagrecer sem exercício?" / "Hormônio aumenta…")',
-      'ENEM 2019 Linguagens: removidas 15 referências a contextos compartilhados errados (texto inglês de pets, sugar letter, comic artist) que apareciam em questões portuguesas de tema totalmente diferente; questões afetadas agora ficam sem contexto até receberem a fonte real',
-      'Logo do Integrar movido para o cabeçalho (ao lado de "Trilha Integrar" e do botão sol/lua), liberando espaço no card',
-    ],
-  },
-  {
-    version: '1.15.0',
+    version: '2.0.0',
     date: '07/06/2026',
     items: [
       'Projeto renomeado para Trilha Integrar',
-      'Nova navegação por abas: Estude, Simule e Ensine',
-      'Estude reúne Desafio, áreas e listas Integrar',
-      'Simule concentra a prova completa',
-      'Ensine reúne Criar lista e Painel Admin',
-      'Cores próprias por aba: vermelho, âmbar, azul',
-      'Histórico de versões movido para rodapé discreto',
-      'ENEM 2019 Linguagens revisada com correções',
-      'ENEM 2019 Humanas revisada com novos contextos',
+      'Cinco abas: Estude, Simule, Pesquise, Ensine, Administre',
+      'Cores e favicons próprios por aba',
+      'Deep-link por URL para cada aba',
+      'Card e cabeçalho na largura total',
+      'Logo movido para o cabeçalho',
+      'Histórico de versões abre da versão',
+      'Nova taxonomia de 13 disciplinas',
+      'Estude dividido em sub-abas ENEM e Listas',
+      'Novo picker de disciplina com subtemas',
+      'Subtemas novos de Matemática e Linguística',
+      'Resumo agrupado por disciplina',
+      'Nova aba Pesquise com busca de questões',
+      'Filtros por disciplina e assunto',
+      'Busca insensível a acentos',
+      'Filtros como dropdowns no estilo Estude',
+      'Nova aba Administre apenas para admins',
+      'Painel Admin embutido na nova aba',
+      'Nova ferramenta Explicar para professores',
+      'Criar lista e Explicar embutidos no Ensine',
+      'Convenção de imagens em contextos inline',
+    ],
+  },
+  {
+    version: '1.14.6',
+    date: '07/06/2026',
+    items: [
+      'ENEM 2019 - Questões de Linguagens corrigidas',
+      'ENEM 2019 - Questões de Humanas corrigidas',
+      'ENEM 2019 - Questões de Matemática corrigidas',
+      'ENEM 2019 - Questões de Ciências da Natureza corrigidas',
     ],
   },
   {
@@ -486,25 +490,36 @@ function legacyPlainToHtml(raw) {
 function ChangelogSection() {
   const [open, setOpen] = useState(false)
   const [tab, setTab] = useState('changelog') // 'changelog' | 'status'
+  const wrapRef = useRef(null)
+
+  // Close when the user clicks outside the popover.
+  useEffect(() => {
+    if (!open) return
+    const onPointerDown = (e) => {
+      if (wrapRef.current && !wrapRef.current.contains(e.target)) setOpen(false)
+    }
+    document.addEventListener('mousedown', onPointerDown)
+    return () => document.removeEventListener('mousedown', onPointerDown)
+  }, [open])
 
   const areaAbbr = ['Ling', 'Hum', 'Nat', 'Mat']
   const areaKeys = ['linguagens', 'humanas', 'natureza', 'matematica']
 
   return (
-    <div className="changelog-wrap">
+    <div className="changelog-wrap" ref={wrapRef}>
       <button
         type="button"
-        className="changelog-trigger"
+        className="changelog-pill-trigger"
         onClick={() => setOpen((v) => !v)}
+        aria-expanded={open}
+        aria-haspopup="menu"
+        title={`Histórico de versões · v${APP_VERSION} (${APP_VERSION_DATE})`}
       >
-        <span className="changelog-version">v{APP_VERSION}</span>
-        <span className="changelog-date">{APP_VERSION_DATE}</span>
-        <span className="changelog-label">Histórico</span>
-        <span className="changelog-chevron">{open ? '▲' : '▼'}</span>
+        V{APP_VERSION}
       </button>
 
       {open && (
-        <div className="changelog-panel">
+        <div className="changelog-panel changelog-panel--popover" role="menu">
           <div className="changelog-tabs">
             <button
               type="button"
@@ -566,6 +581,76 @@ function ChangelogSection() {
   )
 }
 
+function ExplanationBlock({ text, canEdit, onSave }) {
+  const [editing, setEditing] = useState(false)
+  const [draft, setDraft] = useState(text)
+  const [saving, setSaving] = useState(false)
+  const [error, setError] = useState('')
+
+  if (editing) {
+    return (
+      <div className="explanation explanation--editing">
+        <div className="explanation-summary">Editando explicação</div>
+        <div className="explanation-body">
+          <textarea
+            className="explanation-textarea"
+            value={draft}
+            onChange={(e) => setDraft(e.target.value)}
+            rows={6}
+            autoFocus
+          />
+          {error && <p className="explanation-error">{error}</p>}
+          <div className="explanation-edit-actions">
+            <button
+              type="button"
+              className="btn--ghost"
+              onClick={() => { setEditing(false); setDraft(text); setError('') }}
+              disabled={saving}
+            >
+              Cancelar
+            </button>
+            <button
+              type="button"
+              className="home-start-btn"
+              onClick={async () => {
+                setSaving(true); setError('')
+                try { await onSave(draft); setEditing(false) }
+                catch (err) { setError(err.message ?? 'Erro ao salvar') }
+                finally { setSaving(false) }
+              }}
+              disabled={saving || draft === text}
+            >
+              {saving ? 'Salvando…' : 'Salvar'}
+            </button>
+          </div>
+        </div>
+      </div>
+    )
+  }
+
+  return (
+    <details className="explanation">
+      <summary className="explanation-summary">
+        <span>Explicação</span>
+        {canEdit && (
+          <button
+            type="button"
+            className="explanation-edit-btn"
+            onClick={(e) => { e.preventDefault(); setDraft(text); setEditing(true) }}
+            title="Editar explicação"
+          >
+            Editar
+          </button>
+        )}
+      </summary>
+      <div
+        className="explanation-body"
+        dangerouslySetInnerHTML={richHtmlBr(text || 'Sem explicação ainda.')}
+      />
+    </details>
+  )
+}
+
 export default function App() {
   if (window.location.pathname === '/review') return <Suspense fallback={null}><ReviewPage /></Suspense>
 
@@ -574,13 +659,15 @@ export default function App() {
   // Active tool inside the Ensine tab: null = tool launcher, otherwise the tool id.
   const [ensineTool, setEnsineTool] = useState(null)
   useEffect(() => {
-    if (window.location.pathname === '/editor') {
+    const p = window.location.pathname
+    if (p === '/editor' || ['/estude', '/simule', '/pesquise', '/ensine', '/administre'].includes(p)) {
       window.history.replaceState(null, '', '/')
     }
   }, [])
   // All questions loaded from manifest
   const [allQuestions, setAllQuestions] = useState([])
   const [contexts, setContexts] = useState({}) // { [contextId]: { title, subtitle, text, reference } }
+  const [explanationOverrides, setExplanationOverrides] = useState({}) // { "area:year:test:number": text } from DB
   // Active set for current quiz session (set when quiz starts)
   const [questions, setQuestions] = useState([])
   const [question, setQuestion] = useState(null)
@@ -664,9 +751,15 @@ export default function App() {
   const [optionsOpen, setOptionsOpen] = useState(false)
   const [headerMenuOpen, setHeaderMenuOpen] = useState(false)
   const [activeTab, setActiveTab] = useState(() => {
+    const VALID = ['estude', 'simule', 'pesquise', 'ensine', 'administre']
+    // Deep-link via path (e.g. /ensine). URL is rewritten back to / by the effect above for cleanliness.
+    if (typeof window !== 'undefined') {
+      const p = window.location.pathname.replace(/^\/+|\/+$/g, '')
+      if (VALID.includes(p)) return p
+    }
     try {
       const stored = localStorage.getItem('trilha-integrar-active-tab')
-      return (stored === 'estude' || stored === 'simule' || stored === 'ensine') ? stored : 'estude'
+      return VALID.includes(stored) ? stored : 'estude'
     } catch { return 'estude' }
   })
   const [estudeSubTab, setEstudeSubTab] = useState(() => {
@@ -685,7 +778,7 @@ export default function App() {
     if (tab !== 'ensine') setEnsineTool(null)
   }
   useEffect(() => {
-    const FAVICON_COLOR_BY_TAB = { estude: 'red', simule: 'amber', ensine: 'blue' }
+    const FAVICON_COLOR_BY_TAB = { estude: 'red', simule: 'amber', pesquise: 'green', ensine: 'blue', administre: 'purple' }
     const color = FAVICON_COLOR_BY_TAB[activeTab] ?? 'red'
     const ico = document.querySelector('link[rel="icon"][type="image/x-icon"]')
     const png = document.querySelector('link[rel="icon"][type="image/png"]')
@@ -740,9 +833,10 @@ export default function App() {
   useEffect(() => {
     async function load() {
       try {
-        const [manifest, ctxMap] = await Promise.all([
+        const [manifest, ctxMap, explanationMap] = await Promise.all([
           fetch('/questions-manifest.json').then((r) => r.json()),
           fetch('/contexts.json').then((r) => r.json()).catch(() => ({})),
+          fetch('/api/explanations').then((r) => r.json()).catch(() => ({})),
         ])
         const datasets = await Promise.all(
           manifest.map((file) => fetch(`/${file}`).then((r) => r.json()).catch(() => []))
@@ -751,6 +845,7 @@ export default function App() {
         const all = staticQs.sort((a, b) => a.number - b.number)
         setAllQuestions(all)
         setContexts(ctxMap)
+        setExplanationOverrides(explanationMap)
 
         // Auto-restore a paused session if the user is logged in
         const savedUser  = localStorage.getItem('user')
@@ -1181,7 +1276,7 @@ export default function App() {
     setPhase('login')
   }
 
-  const openAdminPanel = useCallback(async () => {
+  const loadAdminStats = useCallback(async () => {
     setAdminLoading(true)
     setAdminError('')
     try {
@@ -1191,13 +1286,20 @@ export default function App() {
       const data = await res.json()
       if (!res.ok) { setAdminError(data.error ?? 'Erro'); return }
       setAdminStats(data)
-      setPhase('admin')
     } catch {
       setAdminError('Erro de conexão')
     } finally {
       setAdminLoading(false)
     }
   }, [token])
+
+  // Auto-load admin stats when the Administre tab activates (admins only, fetched lazily once).
+  useEffect(() => {
+    if (activeTab !== 'administre') return
+    if (user?.role !== 'admin') return
+    if (adminStats || adminLoading) return
+    loadAdminStats()
+  }, [activeTab, user?.role, adminStats, adminLoading, loadAdminStats])
 
   const pauseQuiz = useCallback(() => {
     // Snapshot times before leaving
@@ -1402,6 +1504,28 @@ export default function App() {
     setQuestionElapsed(0)
     setPhase('quiz')
   }, [allQuestions, selectedTest, selectedYear, selectedDay, foreignLang])
+
+  // Open a single ENEM question in study mode (used by the Pesquise tab).
+  const startSingleQuestionStudy = useCallback((rawQ) => {
+    if (!rawQ) return
+    const match = allQuestions.find(q =>
+      q.test === 'ENEM' && q.year === rawQ.year && q.area === rawQ.area && q.number === rawQ.number
+    )
+    const studyQ = match ?? rawQ
+    clearPausedSession()
+    setAttempts({})
+    saveAttemptsToSession({})
+    const now = Date.now()
+    startTimeRef.current = now
+    questionStartRef.current = now
+    accQuestionTimesRef.current = {}
+    prevQuestionNumRef.current = null
+    setQuestions([studyQ])
+    setQuestion(studyQ)
+    setTotalElapsed(0)
+    setQuestionElapsed(0)
+    setPhase('quiz')
+  }, [allQuestions])
 
   const startDailyChallenge = useCallback(async (opts = {}) => {
     const { practice = false } = opts
@@ -1815,9 +1939,18 @@ export default function App() {
                 className="home-header-logo"
               />
               <span className="home-header-title">Trilha Integrar</span>
-              <span className="home-version-pill">V{APP_VERSION}</span>
+              <ChangelogSection />
               <div className="home-header-actions">
                 <span className="home-greeting">Olá, {user?.username}</span>
+                <button
+                  type="button"
+                  className="home-logout-btn"
+                  onClick={handleLogout}
+                  aria-label="Sair"
+                  title="Sair"
+                >
+                  Sair
+                </button>
                 <button
                   type="button"
                   className="theme-toggle home-theme-btn"
@@ -1832,7 +1965,9 @@ export default function App() {
               {[
                 { id: 'estude', label: 'Estude' },
                 { id: 'simule', label: 'Simule' },
+                { id: 'pesquise', label: 'Pesquise' },
                 { id: 'ensine', label: 'Ensine' },
+                ...(user?.role === 'admin' ? [{ id: 'administre', label: 'Administre' }] : []),
               ].map(({ id, label }) => (
                 <button
                   key={id}
@@ -1848,7 +1983,7 @@ export default function App() {
             </nav>
           </header>
 
-          <div className={`home-card${ensineTool ? ' home-card--wide' : ''}`}>
+          <div className="home-card home-card--wide">
             {activeTab === 'estude' && (
               <div className="home-tab-content">
                 {dailyChallengeResult ? (
@@ -2222,12 +2357,35 @@ export default function App() {
               </div>
             )}
 
+            {activeTab === 'pesquise' && (
+              <div className="home-tab-content">
+                <Suspense fallback={<p className="qe-loading">Carregando…</p>}>
+                  <EnemPicker
+                    actionLabel={null}
+                    allQuestions={allQuestions}
+                    contexts={contexts}
+                    onSelect={(q) => startSingleQuestionStudy(q)}
+                  />
+                </Suspense>
+              </div>
+            )}
+
             {activeTab === 'ensine' && (
               <div className="home-tab-content">
                 {(user?.role === 'prof' || user?.role === 'admin') ? (
                   ensineTool === 'criar-lista' ? (
                     <Suspense fallback={<p className="qe-loading">Carregando…</p>}>
                       <QuestionEditor embedded onClose={() => setEnsineTool(null)} />
+                    </Suspense>
+                  ) : ensineTool === 'explicar' ? (
+                    <Suspense fallback={<p className="qe-loading">Carregando…</p>}>
+                      <ExplanationsEditor
+                        allQuestions={allQuestions}
+                        explanationOverrides={explanationOverrides}
+                        setExplanationOverrides={setExplanationOverrides}
+                        token={token}
+                        onClose={() => setEnsineTool(null)}
+                      />
                     </Suspense>
                   ) : (
                     <>
@@ -2238,17 +2396,13 @@ export default function App() {
                       >
                         Criar lista
                       </button>
-                      {user?.role === 'admin' && (
-                        <button
-                          type="button"
-                          className="btn--ghost"
-                          onClick={openAdminPanel}
-                          disabled={adminLoading}
-                        >
-                          {adminLoading ? 'Carregando…' : 'Painel Admin'}
-                        </button>
-                      )}
-                      {adminError && <p className="auth-error" style={{ margin: 0 }}>{adminError}</p>}
+                      <button
+                        type="button"
+                        className="home-start-btn"
+                        onClick={() => setEnsineTool('explicar')}
+                      >
+                        Explicar
+                      </button>
                     </>
                   )
                 ) : (
@@ -2259,18 +2413,27 @@ export default function App() {
               </div>
             )}
 
-            <button
-              type="button"
-              className="btn--ghost"
-              onClick={handleLogout}
-            >
-              Sair
-            </button>
+            {activeTab === 'administre' && user?.role === 'admin' && (
+              <div className="home-tab-content">
+                {adminError && <p className="auth-error" style={{ margin: 0 }}>{adminError}</p>}
+                {!adminStats && <p className="qe-loading">{adminLoading ? 'Carregando…' : 'Aguardando…'}</p>}
+                {adminStats && (
+                  <AdminPanel
+                    embedded
+                    stats={adminStats}
+                    dark={dark}
+                    setDark={setDark}
+                    token={token}
+                    explanationOverrides={explanationOverrides}
+                    questionsCount={new Set(allQuestions.map((q) => `${q.area}:${q.year}:${q.test}:${q.number}`)).size}
+                    onExplanationsCleared={() => setExplanationOverrides({})}
+                  />
+                )}
+              </div>
+            )}
+
           </div>
 
-          <div className="home-footer">
-            <ChangelogSection />
-          </div>
         </div>
 
         {/* ── Gear options FAB ── */}
@@ -2385,10 +2548,6 @@ export default function App() {
         </div>
       </div>
     )
-  }
-
-  if (phase === 'admin' && adminStats) {
-    return <AdminPanel stats={adminStats} onBack={() => setPhase('home')} dark={dark} setDark={setDark} token={token} />
   }
 
   if (phase === 'login') {
@@ -3174,6 +3333,33 @@ export default function App() {
                       </div>
                     )
                   })()}
+
+                  {showAnswer && attempt && (() => {
+                    const expKey = `${question.area}:${question.year}:${question.test}:${question.number}`
+                    const currentText = explanationOverrides[expKey] ?? question.explanation ?? ''
+                    const canEdit = user?.role === 'prof' || user?.role === 'admin'
+                    return (
+                      <ExplanationBlock
+                        text={currentText}
+                        canEdit={canEdit}
+                        onSave={async (newText) => {
+                          const res = await fetch('/api/explanations', {
+                            method: 'POST',
+                            headers: { 'Content-Type': 'application/json', Authorization: `Bearer ${token}` },
+                            body: JSON.stringify({
+                              area: question.area,
+                              year: question.year,
+                              test: question.test,
+                              number: question.number,
+                              explanation: newText,
+                            }),
+                          })
+                          if (!res.ok) throw new Error('Falha ao salvar')
+                          setExplanationOverrides((prev) => ({ ...prev, [expKey]: newText }))
+                        }}
+                      />
+                    )
+                  })()}
                 </div>
 
                 <div className="tags">
@@ -3371,11 +3557,16 @@ export default function App() {
   )
 }
 
-function AdminPanel({ stats, onBack, dark, setDark, token }) {
+function AdminPanel({ stats, onBack, dark, setDark, token, embedded = false, explanationOverrides = {}, questionsCount = 0, onExplanationsCleared }) {
   const { users, testResults, dailyResults, feedback, questionSets: initialQuestionSets = [] } = stats
   const [tab, setTab] = useState('students')
+  const [clearingExp, setClearingExp] = useState(false)
+  const [freezingExp, setFreezingExp] = useState(false)
+  const [freezeResult, setFreezeResult] = useState('')
 
+  // Title + favicon overrides are full-screen-only; the home header owns those when embedded.
   useEffect(() => {
+    if (embedded) return
     const prevTitle = document.title
     document.title = 'Admin'
     const links = Array.from(document.querySelectorAll("link[rel*='icon']"))
@@ -3385,7 +3576,7 @@ function AdminPanel({ stats, onBack, dark, setDark, token }) {
       document.title = prevTitle
       links.forEach((l, i) => { l.href = prevHrefs[i] })
     }
-  }, [])
+  }, [embedded])
   const [deleteTarget, setDeleteTarget] = useState(null) // { id, username }
   const [deleteLoading, setDeleteLoading] = useState(false)
   const [deleteError, setDeleteError] = useState('')
@@ -3490,9 +3681,9 @@ function AdminPanel({ stats, onBack, dark, setDark, token }) {
 
   const sortedUsers = Object.values(userMap).sort((a, b) => new Date(b.created_at) - new Date(a.created_at))
 
-  return (
-    <div className="app-shell">
-      <div className="admin-panel">
+  const panelInner = (
+    <div className={`admin-panel${embedded ? ' admin-panel--embedded' : ''}`}>
+      {!embedded && (
         <div className="admin-header">
           <button type="button" className="btn--ghost" onClick={onBack}>← Voltar</button>
           <h1 className="admin-title">Admin</h1>
@@ -3505,8 +3696,9 @@ function AdminPanel({ stats, onBack, dark, setDark, token }) {
             {dark ? <SunIcon /> : <MoonIcon />}
           </button>
         </div>
+      )}
 
-        <div className="admin-summary-cards">
+      <div className="admin-summary-cards">
           <div className="admin-card">
             <span className="admin-card-value">{users.length}</span>
             <span className="admin-card-label">Alunos</span>
@@ -3523,6 +3715,14 @@ function AdminPanel({ stats, onBack, dark, setDark, token }) {
             <span className="admin-card-value">{feedback.length}</span>
             <span className="admin-card-label">Feedbacks</span>
           </div>
+          <div className="admin-card">
+            <span className="admin-card-value">{questionsCount}</span>
+            <span className="admin-card-label">Questões</span>
+          </div>
+          <div className="admin-card">
+            <span className="admin-card-value">{Object.keys(explanationOverrides).length}</span>
+            <span className="admin-card-label">Explicações no banco</span>
+          </div>
         </div>
 
         <div className="admin-tabs">
@@ -3532,6 +3732,7 @@ function AdminPanel({ stats, onBack, dark, setDark, token }) {
             { key: 'daily', label: 'Desafios Diários' },
             { key: 'feedback', label: 'Feedbacks' },
             { key: 'lists', label: 'Listas' },
+            { key: 'explanations', label: 'Explicações' },
           ].map(({ key, label }) => (
             <button
               key={key}
@@ -3728,10 +3929,80 @@ function AdminPanel({ stats, onBack, dark, setDark, token }) {
               </tbody>
             </table>
           )}
-        </div>
-      </div>
 
-      {/* Delete list warning modal */}
+          {tab === 'explanations' && (
+            <div className="admin-explanations">
+              <div className="admin-explanations-step">
+                <h3 className="admin-explanations-step-title">1. Congelar para os arquivos JSON</h3>
+                <p className="admin-explanations-hint">
+                  Lê as <strong>{Object.keys(explanationOverrides).length}</strong> explicação(ões) do banco
+                  e escreve em <code>public/*_enem_*.json</code> localmente. Em produção este passo só roda
+                  via <code>npm run dev</code>. Depois, revise com <code>git diff</code> e comite.
+                </p>
+                <button
+                  type="button"
+                  className="admin-explanations-btn"
+                  disabled={freezingExp || Object.keys(explanationOverrides).length === 0}
+                  onClick={async () => {
+                    setFreezingExp(true); setFreezeResult('')
+                    try {
+                      const res = await fetch('/api/explanations/freeze', {
+                        method: 'POST',
+                        headers: { Authorization: `Bearer ${token}` },
+                      })
+                      const data = await res.json().catch(() => ({}))
+                      if (!res.ok) throw new Error(data.error ?? 'Falha')
+                      setFreezeResult(`Congeladas ${data.totalUpdated} questão(ões) em ${data.filesTouched} arquivo(s).`)
+                    } catch (err) {
+                      setFreezeResult(`Erro: ${err.message ?? 'falha'}`)
+                    } finally {
+                      setFreezingExp(false)
+                    }
+                  }}
+                >
+                  {freezingExp ? 'Congelando…' : 'Rodar freeze script'}
+                </button>
+                {freezeResult && <p className="admin-explanations-result">{freezeResult}</p>}
+              </div>
+
+              <div className="admin-explanations-step">
+                <h3 className="admin-explanations-step-title">2. Limpar banco</h3>
+                <p className="admin-explanations-hint">
+                  Use apenas <strong>depois</strong> de congelar e comitar os JSONs atualizados.
+                </p>
+                <button
+                  type="button"
+                  className="admin-delete-btn"
+                  disabled={clearingExp || Object.keys(explanationOverrides).length === 0}
+                  onClick={async () => {
+                    const count = Object.keys(explanationOverrides).length
+                    if (count === 0) return
+                    if (!window.confirm(`Limpar ${count} explicação(ões) do banco?`)) return
+                    setClearingExp(true)
+                    try {
+                      const res = await fetch('/api/explanations', {
+                        method: 'DELETE',
+                        headers: { Authorization: `Bearer ${token}` },
+                      })
+                      if (!res.ok) throw new Error('falha')
+                      const data = await res.json().catch(() => ({}))
+                      onExplanationsCleared?.()
+                      alert(`${data.deleted ?? count} explicação(ões) removida(s) do banco.`)
+                    } catch {
+                      alert('Falha ao limpar o banco.')
+                    } finally {
+                      setClearingExp(false)
+                    }
+                  }}
+                >
+                  {clearingExp ? 'Limpando…' : 'Limpar banco de explicações'}
+                </button>
+              </div>
+            </div>
+          )}
+        </div>
+
+      {/* Delete list warning modal — fixed-positioned overlay, inside admin-panel after embed refactor */}
       {deleteListTarget && (
         <div className="admin-modal-overlay" onClick={() => !deleteListLoading && setDeleteListTarget(null)}>
           <div className="admin-modal" onClick={e => e.stopPropagation()}>
@@ -3807,6 +4078,8 @@ function AdminPanel({ stats, onBack, dark, setDark, token }) {
       )}
     </div>
   )
+
+  return embedded ? panelInner : <div className="app-shell">{panelInner}</div>
 }
 
 function FeedbackModal({ questionInfo, token, onClose }) {

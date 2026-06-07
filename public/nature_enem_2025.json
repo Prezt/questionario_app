@@ -22,7 +22,8 @@
     "difficulty": 2,
     "disciplinas": [
       "quimica"
-    ]
+    ],
+    "explanation": "Sem explicação ainda."
   },
   {
     "number": 92,
@@ -50,7 +51,8 @@
     ],
     "disciplinas": [
       "biologia"
-    ]
+    ],
+    "explanation": "Sem explicação ainda."
   },
   {
     "number": 93,
@@ -74,7 +76,8 @@
     "difficulty": 4,
     "disciplinas": [
       "biologia"
-    ]
+    ],
+    "explanation": "Sem explicação ainda."
   },
   {
     "number": 94,
@@ -99,7 +102,8 @@
     "difficulty": 5,
     "disciplinas": [
       "fisica"
-    ]
+    ],
+    "explanation": "Sem explicação ainda."
   },
   {
     "number": 95,
@@ -127,7 +131,8 @@
     ],
     "disciplinas": [
       "fisica"
-    ]
+    ],
+    "explanation": "Sem explicação ainda."
   },
   {
     "number": 96,
@@ -154,7 +159,8 @@
     ],
     "disciplinas": [
       "biologia"
-    ]
+    ],
+    "explanation": "Sem explicação ainda."
   },
   {
     "number": 97,
@@ -180,7 +186,8 @@
     "difficulty": 3,
     "disciplinas": [
       "biologia"
-    ]
+    ],
+    "explanation": "Sem explicação ainda."
   },
   {
     "number": 98,
@@ -207,7 +214,8 @@
     ],
     "disciplinas": [
       "biologia"
-    ]
+    ],
+    "explanation": "Sem explicação ainda."
   },
   {
     "number": 99,
@@ -234,7 +242,8 @@
     ],
     "disciplinas": [
       "biologia"
-    ]
+    ],
+    "explanation": "Sem explicação ainda."
   },
   {
     "number": 100,
@@ -258,7 +267,8 @@
     "difficulty": 1,
     "disciplinas": [
       "quimica"
-    ]
+    ],
+    "explanation": "Sem explicação ainda."
   },
   {
     "number": 101,
@@ -286,7 +296,8 @@
     "disciplinas": [
       "biologia",
       "fisica"
-    ]
+    ],
+    "explanation": "Sem explicação ainda."
   },
   {
     "number": 102,
@@ -310,7 +321,8 @@
     "difficulty": 3,
     "disciplinas": [
       "biologia"
-    ]
+    ],
+    "explanation": "Sem explicação ainda."
   },
   {
     "number": 103,
@@ -336,7 +348,8 @@
     ],
     "disciplinas": [
       "biologia"
-    ]
+    ],
+    "explanation": "Sem explicação ainda."
   },
   {
     "number": 104,
@@ -363,7 +376,8 @@
     ],
     "disciplinas": [
       "biologia"
-    ]
+    ],
+    "explanation": "Sem explicação ainda."
   },
   {
     "number": 105,
@@ -394,7 +408,8 @@
     "disciplinas": [
       "fisica",
       "quimica"
-    ]
+    ],
+    "explanation": "Sem explicação ainda."
   },
   {
     "number": 106,
@@ -420,7 +435,8 @@
     ],
     "disciplinas": [
       "quimica"
-    ]
+    ],
+    "explanation": "Sem explicação ainda."
   },
   {
     "number": 107,
@@ -450,7 +466,8 @@
     "difficulty": 6,
     "disciplinas": [
       "biologia"
-    ]
+    ],
+    "explanation": "Sem explicação ainda."
   },
   {
     "number": 108,
@@ -479,7 +496,8 @@
     "difficulty": 6,
     "disciplinas": [
       "fisica"
-    ]
+    ],
+    "explanation": "Sem explicação ainda."
   },
   {
     "number": 109,
@@ -506,7 +524,8 @@
     ],
     "disciplinas": [
       "quimica"
-    ]
+    ],
+    "explanation": "Sem explicação ainda."
   },
   {
     "number": 110,
@@ -531,7 +550,8 @@
     "disciplinas": [
       "fisica",
       "quimica"
-    ]
+    ],
+    "explanation": "Sem explicação ainda."
   },
   {
     "number": 111,
@@ -557,7 +577,8 @@
     "difficulty": 4,
     "disciplinas": [
       "biologia"
-    ]
+    ],
+    "explanation": "Sem explicação ainda."
   },
   {
     "number": 112,
@@ -584,7 +605,8 @@
     ],
     "disciplinas": [
       "biologia"
-    ]
+    ],
+    "explanation": "Sem explicação ainda."
   },
   {
     "number": 113,
@@ -610,7 +632,8 @@
     "difficulty": 6,
     "disciplinas": [
       "fisica"
-    ]
+    ],
+    "explanation": "Sem explicação ainda."
   },
   {
     "number": 114,
@@ -635,7 +658,8 @@
     "difficulty": 3,
     "disciplinas": [
       "fisica"
-    ]
+    ],
+    "explanation": "Sem explicação ainda."
   },
   {
     "number": 115,
@@ -662,7 +686,8 @@
     ],
     "disciplinas": [
       "quimica"
-    ]
+    ],
+    "explanation": "Sem explicação ainda."
   },
   {
     "number": 116,
@@ -689,7 +714,8 @@
     ],
     "disciplinas": [
       "biologia"
-    ]
+    ],
+    "explanation": "Sem explicação ainda."
   },
   {
     "number": 117,
@@ -713,7 +739,8 @@
     "difficulty": 5,
     "disciplinas": [
       "quimica"
-    ]
+    ],
+    "explanation": "Sem explicação ainda."
   },
   {
     "number": 118,
@@ -736,7 +763,8 @@
     "difficulty": 3,
     "disciplinas": [
       "fisica"
-    ]
+    ],
+    "explanation": "Sem explicação ainda."
   },
   {
     "number": 119,
@@ -766,7 +794,8 @@
     "difficulty": 8,
     "disciplinas": [
       "fisica"
-    ]
+    ],
+    "explanation": "Sem explicação ainda."
   },
   {
     "number": 120,
@@ -791,7 +820,8 @@
     "difficulty": 5,
     "disciplinas": [
       "fisica"
-    ]
+    ],
+    "explanation": "Sem explicação ainda."
   },
   {
     "number": 121,
@@ -814,7 +844,8 @@
     "difficulty": 4,
     "disciplinas": [
       "quimica"
-    ]
+    ],
+    "explanation": "Sem explicação ainda."
   },
   {
     "number": 122,
@@ -839,7 +870,8 @@
     "difficulty": 5,
     "disciplinas": [
       "fisica"
-    ]
+    ],
+    "explanation": "Sem explicação ainda."
   },
   {
     "number": 123,
@@ -866,7 +898,8 @@
     ],
     "disciplinas": [
       "biologia"
-    ]
+    ],
+    "explanation": "Sem explicação ainda."
   },
   {
     "number": 124,
@@ -893,7 +926,8 @@
     ],
     "disciplinas": [
       "quimica"
-    ]
+    ],
+    "explanation": "Sem explicação ainda."
   },
   {
     "number": 125,
@@ -919,7 +953,8 @@
     "disciplinas": [
       "fisica",
       "quimica"
-    ]
+    ],
+    "explanation": "Sem explicação ainda."
   },
   {
     "number": 126,
@@ -944,7 +979,8 @@
     "difficulty": 7,
     "disciplinas": [
       "fisica"
-    ]
+    ],
+    "explanation": "Sem explicação ainda."
   },
   {
     "number": 127,
@@ -976,7 +1012,8 @@
     "disciplinas": [
       "biologia",
       "quimica"
-    ]
+    ],
+    "explanation": "Sem explicação ainda."
   },
   {
     "number": 128,
@@ -1002,7 +1039,8 @@
     "difficulty": 7,
     "disciplinas": [
       "fisica"
-    ]
+    ],
+    "explanation": "Sem explicação ainda."
   },
   {
     "number": 129,
@@ -1025,7 +1063,8 @@
     "difficulty": 4,
     "disciplinas": [
       "biologia"
-    ]
+    ],
+    "explanation": "Sem explicação ainda."
   },
   {
     "number": 130,
@@ -1054,7 +1093,8 @@
     "difficulty": 5,
     "disciplinas": [
       "fisica"
-    ]
+    ],
+    "explanation": "Sem explicação ainda."
   },
   {
     "number": 131,
@@ -1081,7 +1121,8 @@
     ],
     "disciplinas": [
       "quimica"
-    ]
+    ],
+    "explanation": "Sem explicação ainda."
   },
   {
     "number": 132,
@@ -1104,7 +1145,8 @@
     "difficulty": 5,
     "disciplinas": [
       "fisica"
-    ]
+    ],
+    "explanation": "Sem explicação ainda."
   },
   {
     "number": 133,
@@ -1129,7 +1171,8 @@
     "difficulty": 6,
     "disciplinas": [
       "quimica"
-    ]
+    ],
+    "explanation": "Sem explicação ainda."
   },
   {
     "number": 134,
@@ -1155,7 +1198,8 @@
     "difficulty": 7,
     "disciplinas": [
       "quimica"
-    ]
+    ],
+    "explanation": "Sem explicação ainda."
   },
   {
     "number": 135,
@@ -1186,6 +1230,7 @@
     "difficulty": 7,
     "disciplinas": [
       "fisica"
-    ]
+    ],
+    "explanation": "Sem explicação ainda."
   }
 ]

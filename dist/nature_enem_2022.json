@@ -23,7 +23,8 @@
     "disciplinas": [
       "biologia",
       "quimica"
-    ]
+    ],
+    "explanation": "Sem explicação ainda."
   },
   {
     "number": 92,
@@ -46,7 +47,8 @@
     "difficulty": 2,
     "disciplinas": [
       "biologia"
-    ]
+    ],
+    "explanation": "Sem explicação ainda."
   },
   {
     "number": 93,
@@ -70,7 +72,8 @@
     "contextId": "enem_2022_nature_q93_ctx1",
     "disciplinas": [
       "biologia"
-    ]
+    ],
+    "explanation": "Sem explicação ainda."
   },
   {
     "number": 94,
@@ -94,7 +97,8 @@
     "contextId": "enem_2022_nature_q94_ctx1",
     "disciplinas": [
       "quimica"
-    ]
+    ],
+    "explanation": "Sem explicação ainda."
   },
   {
     "number": 95,
@@ -124,7 +128,8 @@
     "contextId": "enem_2022_nature_q95_ctx1",
     "disciplinas": [
       "fisica"
-    ]
+    ],
+    "explanation": "Sem explicação ainda."
   },
   {
     "number": 96,
@@ -154,7 +159,8 @@
     "contextId": "enem_2022_nature_q96_ctx1",
     "disciplinas": [
       "fisica"
-    ]
+    ],
+    "explanation": "Sem explicação ainda."
   },
   {
     "number": 97,
@@ -180,7 +186,8 @@
     "disciplinas": [
       "fisica",
       "quimica"
-    ]
+    ],
+    "explanation": "Sem explicação ainda."
   },
   {
     "number": 98,
@@ -205,7 +212,8 @@
     "contextId": "enem_2022_nature_q98_ctx1",
     "disciplinas": [
       "biologia"
-    ]
+    ],
+    "explanation": "Sem explicação ainda."
   },
   {
     "number": 99,
@@ -229,7 +237,8 @@
     "contextId": "enem_2022_nature_q99_ctx1",
     "disciplinas": [
       "biologia"
-    ]
+    ],
+    "explanation": "Sem explicação ainda."
   },
   {
     "number": 100,
@@ -252,7 +261,8 @@
     "difficulty": 6,
     "disciplinas": [
       "fisica"
-    ]
+    ],
+    "explanation": "Sem explicação ainda."
   },
   {
     "number": 101,
@@ -276,7 +286,8 @@
     "contextId": "enem_2022_nature_q101_ctx1",
     "disciplinas": [
       "biologia"
-    ]
+    ],
+    "explanation": "Sem explicação ainda."
   },
   {
     "number": 102,
@@ -299,7 +310,8 @@
     "difficulty": 6,
     "disciplinas": [
       "biologia"
-    ]
+    ],
+    "explanation": "Sem explicação ainda."
   },
   {
     "number": 103,
@@ -329,7 +341,8 @@
     "difficulty": 5,
     "disciplinas": [
       "fisica"
-    ]
+    ],
+    "explanation": "Sem explicação ainda."
   },
   {
     "number": 104,
@@ -352,7 +365,8 @@
     "difficulty": 3,
     "disciplinas": [
       "biologia"
-    ]
+    ],
+    "explanation": "Sem explicação ainda."
   },
   {
     "number": 105,
@@ -375,7 +389,8 @@
     "difficulty": 6,
     "disciplinas": [
       "fisica"
-    ]
+    ],
+    "explanation": "Sem explicação ainda."
   },
   {
     "number": 106,
@@ -407,7 +422,8 @@
     "disciplinas": [
       "biologia",
       "quimica"
-    ]
+    ],
+    "explanation": "Sem explicação ainda."
   },
   {
     "number": 107,
@@ -436,7 +452,8 @@
     "disciplinas": [
       "biologia",
       "quimica"
-    ]
+    ],
+    "explanation": "Sem explicação ainda."
   },
   {
     "number": 108,
@@ -463,7 +480,8 @@
     "contextId": "enem_2022_nature_q108_ctx1",
     "disciplinas": [
       "quimica"
-    ]
+    ],
+    "explanation": "Sem explicação ainda."
   },
   {
     "number": 109,
@@ -488,7 +506,8 @@
     "disciplinas": [
       "fisica",
       "quimica"
-    ]
+    ],
+    "explanation": "Sem explicação ainda."
   },
   {
     "number": 110,
@@ -514,7 +533,8 @@
     "contextId": "enem_2022_nature_q110_ctx1",
     "disciplinas": [
       "biologia"
-    ]
+    ],
+    "explanation": "Sem explicação ainda."
   },
   {
     "number": 111,
@@ -541,7 +561,8 @@
     "contextId": "enem_2022_nature_q111_ctx1",
     "disciplinas": [
       "biologia"
-    ]
+    ],
+    "explanation": "Sem explicação ainda."
   },
   {
     "number": 112,
@@ -564,7 +585,8 @@
     "difficulty": 5,
     "disciplinas": [
       "fisica"
-    ]
+    ],
+    "explanation": "Sem explicação ainda."
   },
   {
     "number": 113,
@@ -590,7 +612,8 @@
     "disciplinas": [
       "biologia",
       "quimica"
-    ]
+    ],
+    "explanation": "Sem explicação ainda."
   },
   {
     "number": 114,
@@ -613,7 +636,8 @@
     "difficulty": 4,
     "disciplinas": [
       "biologia"
-    ]
+    ],
+    "explanation": "Sem explicação ainda."
   },
   {
     "number": 115,
@@ -637,7 +661,8 @@
     "contextId": "enem_2022_nature_q115_ctx1",
     "disciplinas": [
       "biologia"
-    ]
+    ],
+    "explanation": "Sem explicação ainda."
   },
   {
     "number": 116,
@@ -660,7 +685,8 @@
     "difficulty": 6,
     "disciplinas": [
       "fisica"
-    ]
+    ],
+    "explanation": "Sem explicação ainda."
   },
   {
     "number": 117,
@@ -685,7 +711,8 @@
     "difficulty": 2,
     "disciplinas": [
       "quimica"
-    ]
+    ],
+    "explanation": "Sem explicação ainda."
   },
   {
     "number": 118,
@@ -711,7 +738,8 @@
     "contextId": "enem_2022_nature_q118_ctx1",
     "disciplinas": [
       "biologia"
-    ]
+    ],
+    "explanation": "Sem explicação ainda."
   },
   {
     "number": 119,
@@ -734,7 +762,8 @@
     "difficulty": 5,
     "disciplinas": [
       "fisica"
-    ]
+    ],
+    "explanation": "Sem explicação ainda."
   },
   {
     "number": 120,
@@ -757,7 +786,8 @@
     "difficulty": 3,
     "disciplinas": [
       "biologia"
-    ]
+    ],
+    "explanation": "Sem explicação ainda."
   },
   {
     "number": 121,
@@ -781,7 +811,8 @@
     "contextId": "enem_2022_nature_q121_ctx1",
     "disciplinas": [
       "biologia"
-    ]
+    ],
+    "explanation": "Sem explicação ainda."
   },
   {
     "number": 122,
@@ -805,7 +836,8 @@
     "contextId": "enem_2022_nature_q122_ctx1",
     "disciplinas": [
       "biologia"
-    ]
+    ],
+    "explanation": "Sem explicação ainda."
   },
   {
     "number": 123,
@@ -829,7 +861,8 @@
     "contextId": "enem_2022_nature_q123_ctx1",
     "disciplinas": [
       "fisica"
-    ]
+    ],
+    "explanation": "Sem explicação ainda."
   },
   {
     "number": 124,
@@ -855,7 +888,8 @@
     "disciplinas": [
       "biologia",
       "quimica"
-    ]
+    ],
+    "explanation": "Sem explicação ainda."
   },
   {
     "number": 125,
@@ -879,7 +913,8 @@
     "contextId": "enem_2022_nature_q125_ctx1",
     "disciplinas": [
       "biologia"
-    ]
+    ],
+    "explanation": "Sem explicação ainda."
   },
   {
     "number": 126,
@@ -905,7 +940,8 @@
     "disciplinas": [
       "biologia",
       "quimica"
-    ]
+    ],
+    "explanation": "Sem explicação ainda."
   },
   {
     "number": 127,
@@ -929,7 +965,8 @@
     "contextId": "enem_2022_nature_q127_ctx1",
     "disciplinas": [
       "biologia"
-    ]
+    ],
+    "explanation": "Sem explicação ainda."
   },
   {
     "number": 128,
@@ -953,7 +990,8 @@
     "difficulty": 5,
     "disciplinas": [
       "fisica"
-    ]
+    ],
+    "explanation": "Sem explicação ainda."
   },
   {
     "number": 129,
@@ -977,7 +1015,8 @@
     "contextId": "enem_2022_nature_q129_ctx1",
     "disciplinas": [
       "biologia"
-    ]
+    ],
+    "explanation": "Sem explicação ainda."
   },
   {
     "number": 130,
@@ -1001,7 +1040,8 @@
     "contextId": "enem_2022_nature_q130_ctx1",
     "disciplinas": [
       "fisica"
-    ]
+    ],
+    "explanation": "Sem explicação ainda."
   },
   {
     "number": 131,
@@ -1025,7 +1065,8 @@
     "contextId": "enem_2022_nature_q131_ctx1",
     "disciplinas": [
       "quimica"
-    ]
+    ],
+    "explanation": "Sem explicação ainda."
   },
   {
     "number": 132,
@@ -1049,7 +1090,8 @@
     "contextId": "enem_2022_nature_q132_ctx1",
     "disciplinas": [
       "biologia"
-    ]
+    ],
+    "explanation": "Sem explicação ainda."
   },
   {
     "number": 133,
@@ -1073,7 +1115,8 @@
     "contextId": "enem_2022_nature_q133_ctx1",
     "disciplinas": [
       "biologia"
-    ]
+    ],
+    "explanation": "Sem explicação ainda."
   },
   {
     "number": 134,
@@ -1097,7 +1140,8 @@
     "contextId": "enem_2022_nature_q134_ctx1",
     "disciplinas": [
       "fisica"
-    ]
+    ],
+    "explanation": "Sem explicação ainda."
   },
   {
     "number": 135,
@@ -1121,6 +1165,7 @@
     "contextId": "enem_2022_nature_q135_ctx1",
     "disciplinas": [
       "fisica"
-    ]
+    ],
+    "explanation": "Sem explicação ainda."
   }
 ]

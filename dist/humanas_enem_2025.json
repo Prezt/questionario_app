@@ -26,7 +26,8 @@
     "disciplinas": [
       "geografia",
       "historia"
-    ]
+    ],
+    "explanation": "Sem explicação ainda."
   },
   {
     "number": 47,
@@ -53,7 +54,8 @@
     "difficulty": 5,
     "disciplinas": [
       "geografia"
-    ]
+    ],
+    "explanation": "Sem explicação ainda."
   },
   {
     "number": 48,
@@ -80,7 +82,8 @@
     ],
     "disciplinas": [
       "filosofia"
-    ]
+    ],
+    "explanation": "Sem explicação ainda."
   },
   {
     "number": 49,
@@ -110,7 +113,8 @@
     "disciplinas": [
       "filosofia",
       "historia"
-    ]
+    ],
+    "explanation": "Sem explicação ainda."
   },
   {
     "number": 50,
@@ -137,7 +141,8 @@
     ],
     "disciplinas": [
       "filosofia"
-    ]
+    ],
+    "explanation": "Sem explicação ainda."
   },
   {
     "number": 51,
@@ -166,7 +171,8 @@
     "disciplinas": [
       "filosofia",
       "sociologia"
-    ]
+    ],
+    "explanation": "Sem explicação ainda."
   },
   {
     "number": 52,
@@ -194,7 +200,8 @@
     "disciplinas": [
       "filosofia",
       "historia"
-    ]
+    ],
+    "explanation": "Sem explicação ainda."
   },
   {
     "number": 53,
@@ -223,7 +230,8 @@
     "disciplinas": [
       "historia",
       "sociologia"
-    ]
+    ],
+    "explanation": "Sem explicação ainda."
   },
   {
     "number": 54,
@@ -249,7 +257,8 @@
     ],
     "disciplinas": [
       "geografia"
-    ]
+    ],
+    "explanation": "Sem explicação ainda."
   },
   {
     "number": 55,
@@ -278,7 +287,8 @@
     "disciplinas": [
       "filosofia",
       "sociologia"
-    ]
+    ],
+    "explanation": "Sem explicação ainda."
   },
   {
     "number": 56,
@@ -306,7 +316,8 @@
     ],
     "disciplinas": [
       "geografia"
-    ]
+    ],
+    "explanation": "Sem explicação ainda."
   },
   {
     "number": 57,
@@ -336,7 +347,8 @@
       "geografia",
       "historia",
       "sociologia"
-    ]
+    ],
+    "explanation": "Sem explicação ainda."
   },
   {
     "number": 58,
@@ -364,7 +376,8 @@
     "disciplinas": [
       "historia",
       "sociologia"
-    ]
+    ],
+    "explanation": "Sem explicação ainda."
   },
   {
     "number": 59,
@@ -390,7 +403,8 @@
     ],
     "disciplinas": [
       "geografia"
-    ]
+    ],
+    "explanation": "Sem explicação ainda."
   },
   {
     "number": 60,
@@ -420,7 +434,8 @@
       "filosofia",
       "historia",
       "sociologia"
-    ]
+    ],
+    "explanation": "Sem explicação ainda."
   },
   {
     "number": 61,
@@ -447,7 +462,8 @@
     ],
     "disciplinas": [
       "filosofia"
-    ]
+    ],
+    "explanation": "Sem explicação ainda."
   },
   {
     "number": 62,
@@ -475,7 +491,8 @@
     "disciplinas": [
       "filosofia",
       "sociologia"
-    ]
+    ],
+    "explanation": "Sem explicação ainda."
   },
   {
     "number": 63,
@@ -501,7 +518,8 @@
     "difficulty": 5,
     "disciplinas": [
       "geografia"
-    ]
+    ],
+    "explanation": "Sem explicação ainda."
   },
   {
     "number": 64,
@@ -527,7 +545,8 @@
     ],
     "disciplinas": [
       "historia"
-    ]
+    ],
+    "explanation": "Sem explicação ainda."
   },
   {
     "number": 65,
@@ -554,7 +573,8 @@
     ],
     "disciplinas": [
       "filosofia"
-    ]
+    ],
+    "explanation": "Sem explicação ainda."
   },
   {
     "number": 66,
@@ -582,7 +602,8 @@
     "disciplinas": [
       "filosofia",
       "sociologia"
-    ]
+    ],
+    "explanation": "Sem explicação ainda."
   },
   {
     "number": 67,
@@ -610,7 +631,8 @@
     "disciplinas": [
       "geografia",
       "sociologia"
-    ]
+    ],
+    "explanation": "Sem explicação ainda."
   },
   {
     "number": 68,
@@ -638,7 +660,8 @@
     "disciplinas": [
       "geografia",
       "sociologia"
-    ]
+    ],
+    "explanation": "Sem explicação ainda."
   },
   {
     "number": 69,
@@ -667,7 +690,8 @@
     "disciplinas": [
       "historia",
       "sociologia"
-    ]
+    ],
+    "explanation": "Sem explicação ainda."
   },
   {
     "number": 70,
@@ -693,7 +717,8 @@
     ],
     "disciplinas": [
       "geografia"
-    ]
+    ],
+    "explanation": "Sem explicação ainda."
   },
   {
     "number": 71,
@@ -720,7 +745,8 @@
     ],
     "disciplinas": [
       "historia"
-    ]
+    ],
+    "explanation": "Sem explicação ainda."
   },
   {
     "number": 72,
@@ -748,7 +774,8 @@
     ],
     "disciplinas": [
       "filosofia"
-    ]
+    ],
+    "explanation": "Sem explicação ainda."
   },
   {
     "number": 73,
@@ -778,7 +805,8 @@
       "geografia",
       "historia",
       "sociologia"
-    ]
+    ],
+    "explanation": "Sem explicação ainda."
   },
   {
     "number": 74,
@@ -807,7 +835,8 @@
     "disciplinas": [
       "historia",
       "sociologia"
-    ]
+    ],
+    "explanation": "Sem explicação ainda."
   },
   {
     "number": 75,
@@ -833,7 +862,8 @@
     ],
     "disciplinas": [
       "geografia"
-    ]
+    ],
+    "explanation": "Sem explicação ainda."
   },
   {
     "number": 76,
@@ -862,7 +892,8 @@
     "disciplinas": [
       "filosofia",
       "sociologia"
-    ]
+    ],
+    "explanation": "Sem explicação ainda."
   },
   {
     "number": 77,
@@ -888,7 +919,8 @@
     ],
     "disciplinas": [
       "geografia"
-    ]
+    ],
+    "explanation": "Sem explicação ainda."
   },
   {
     "number": 78,
@@ -918,7 +950,8 @@
     "disciplinas": [
       "historia",
       "sociologia"
-    ]
+    ],
+    "explanation": "Sem explicação ainda."
   },
   {
     "number": 79,
@@ -944,7 +977,8 @@
     ],
     "disciplinas": [
       "filosofia"
-    ]
+    ],
+    "explanation": "Sem explicação ainda."
   },
   {
     "number": 80,
@@ -971,7 +1005,8 @@
     ],
     "disciplinas": [
       "geografia"
-    ]
+    ],
+    "explanation": "Sem explicação ainda."
   },
   {
     "number": 81,
@@ -999,7 +1034,8 @@
     ],
     "disciplinas": [
       "sociologia"
-    ]
+    ],
+    "explanation": "Sem explicação ainda."
   },
   {
     "number": 82,
@@ -1028,7 +1064,8 @@
     "disciplinas": [
       "filosofia",
       "historia"
-    ]
+    ],
+    "explanation": "Sem explicação ainda."
   },
   {
     "number": 83,
@@ -1054,7 +1091,8 @@
     ],
     "disciplinas": [
       "historia"
-    ]
+    ],
+    "explanation": "Sem explicação ainda."
   },
   {
     "number": 84,
@@ -1080,7 +1118,8 @@
     ],
     "disciplinas": [
       "geografia"
-    ]
+    ],
+    "explanation": "Sem explicação ainda."
   },
   {
     "number": 85,
@@ -1110,7 +1149,8 @@
     "disciplinas": [
       "historia",
       "sociologia"
-    ]
+    ],
+    "explanation": "Sem explicação ainda."
   },
   {
     "number": 86,
@@ -1136,7 +1176,8 @@
     ],
     "disciplinas": [
       "geografia"
-    ]
+    ],
+    "explanation": "Sem explicação ainda."
   },
   {
     "number": 87,
@@ -1163,7 +1204,8 @@
     ],
     "disciplinas": [
       "historia"
-    ]
+    ],
+    "explanation": "Sem explicação ainda."
   },
   {
     "number": 88,
@@ -1192,7 +1234,8 @@
     "disciplinas": [
       "geografia",
       "sociologia"
-    ]
+    ],
+    "explanation": "Sem explicação ainda."
   },
   {
     "number": 89,
@@ -1222,7 +1265,8 @@
     "disciplinas": [
       "historia",
       "sociologia"
-    ]
+    ],
+    "explanation": "Sem explicação ainda."
   },
   {
     "number": 90,
@@ -1251,6 +1295,7 @@
     "disciplinas": [
       "geografia",
       "historia"
-    ]
+    ],
+    "explanation": "Sem explicação ainda."
   }
 ]

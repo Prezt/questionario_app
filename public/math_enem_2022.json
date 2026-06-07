@@ -22,7 +22,8 @@
     "difficulty": 6,
     "disciplinas": [
       "matematica"
-    ]
+    ],
+    "explanation": "Sem explicação ainda."
   },
   {
     "number": 137,
@@ -47,7 +48,8 @@
     "difficulty": 8,
     "disciplinas": [
       "matematica"
-    ]
+    ],
+    "explanation": "Sem explicação ainda."
   },
   {
     "number": 138,
@@ -73,7 +75,8 @@
     "difficulty": 6,
     "disciplinas": [
       "matematica"
-    ]
+    ],
+    "explanation": "Sem explicação ainda."
   },
   {
     "number": 139,
@@ -99,7 +102,8 @@
     "difficulty": 4,
     "disciplinas": [
       "matematica"
-    ]
+    ],
+    "explanation": "Sem explicação ainda."
   },
   {
     "number": 140,
@@ -123,7 +127,8 @@
     "difficulty": 7,
     "disciplinas": [
       "matematica"
-    ]
+    ],
+    "explanation": "Sem explicação ainda."
   },
   {
     "number": 141,
@@ -151,7 +156,8 @@
     "contextId": null,
     "disciplinas": [
       "matematica"
-    ]
+    ],
+    "explanation": "Sem explicação ainda."
   },
   {
     "number": 142,
@@ -175,7 +181,8 @@
     "difficulty": 6,
     "disciplinas": [
       "matematica"
-    ]
+    ],
+    "explanation": "Sem explicação ainda."
   },
   {
     "number": 143,
@@ -209,7 +216,8 @@
     "contextId": null,
     "disciplinas": [
       "matematica"
-    ]
+    ],
+    "explanation": "Sem explicação ainda."
   },
   {
     "number": 144,
@@ -236,7 +244,8 @@
     "difficulty": 5,
     "disciplinas": [
       "matematica"
-    ]
+    ],
+    "explanation": "Sem explicação ainda."
   },
   {
     "number": 145,
@@ -261,7 +270,8 @@
     "difficulty": 4,
     "disciplinas": [
       "matematica"
-    ]
+    ],
+    "explanation": "Sem explicação ainda."
   },
   {
     "number": 146,
@@ -284,7 +294,8 @@
     "difficulty": 6,
     "disciplinas": [
       "matematica"
-    ]
+    ],
+    "explanation": "Sem explicação ainda."
   },
   {
     "number": 147,
@@ -310,7 +321,8 @@
     "difficulty": 7,
     "disciplinas": [
       "matematica"
-    ]
+    ],
+    "explanation": "Sem explicação ainda."
   },
   {
     "number": 148,
@@ -337,7 +349,8 @@
     "contextId": "enem_2022_math_q148_ctx1",
     "disciplinas": [
       "matematica"
-    ]
+    ],
+    "explanation": "Sem explicação ainda."
   },
   {
     "number": 149,
@@ -360,7 +373,8 @@
     "difficulty": 5,
     "disciplinas": [
       "matematica"
-    ]
+    ],
+    "explanation": "Sem explicação ainda."
   },
   {
     "number": 150,
@@ -388,7 +402,8 @@
     "contextId": null,
     "disciplinas": [
       "matematica"
-    ]
+    ],
+    "explanation": "Sem explicação ainda."
   },
   {
     "number": 151,
@@ -414,7 +429,8 @@
     "contextIds": [],
     "disciplinas": [
       "matematica"
-    ]
+    ],
+    "explanation": "Sem explicação ainda."
   },
   {
     "number": 152,
@@ -442,7 +458,8 @@
     "contextId": "enem_2022_math_q152_ctx1",
     "disciplinas": [
       "matematica"
-    ]
+    ],
+    "explanation": "Sem explicação ainda."
   },
   {
     "number": 153,
@@ -469,7 +486,8 @@
     "difficulty": 6,
     "disciplinas": [
       "matematica"
-    ]
+    ],
+    "explanation": "Sem explicação ainda."
   },
   {
     "number": 154,
@@ -494,7 +512,8 @@
     "contextId": "enem_2022_math_q154_ctx1",
     "disciplinas": [
       "matematica"
-    ]
+    ],
+    "explanation": "Sem explicação ainda."
   },
   {
     "number": 155,
@@ -519,7 +538,8 @@
     "difficulty": 7,
     "disciplinas": [
       "matematica"
-    ]
+    ],
+    "explanation": "Sem explicação ainda."
   },
   {
     "number": 156,
@@ -553,7 +573,8 @@
     "contextId": null,
     "disciplinas": [
       "matematica"
-    ]
+    ],
+    "explanation": "Sem explicação ainda."
   },
   {
     "number": 157,
@@ -577,7 +598,8 @@
     "difficulty": 7,
     "disciplinas": [
       "matematica"
-    ]
+    ],
+    "explanation": "Sem explicação ainda."
   },
   {
     "number": 158,
@@ -602,7 +624,8 @@
     "contextId": null,
     "disciplinas": [
       "matematica"
-    ]
+    ],
+    "explanation": "Sem explicação ainda."
   },
   {
     "number": 159,
@@ -627,7 +650,8 @@
     "contextId": null,
     "disciplinas": [
       "matematica"
-    ]
+    ],
+    "explanation": "Sem explicação ainda."
   },
   {
     "number": 160,
@@ -659,7 +683,8 @@
     "contextId": null,
     "disciplinas": [
       "matematica"
-    ]
+    ],
+    "explanation": "Sem explicação ainda."
   },
   {
     "number": 161,
@@ -688,7 +713,8 @@
     "contextId": null,
     "disciplinas": [
       "matematica"
-    ]
+    ],
+    "explanation": "Sem explicação ainda."
   },
   {
     "number": 162,
@@ -715,7 +741,8 @@
     "contextId": null,
     "disciplinas": [
       "matematica"
-    ]
+    ],
+    "explanation": "Sem explicação ainda."
   },
   {
     "number": 163,
@@ -740,7 +767,8 @@
     "contextId": null,
     "disciplinas": [
       "matematica"
-    ]
+    ],
+    "explanation": "Sem explicação ainda."
   },
   {
     "number": 164,
@@ -764,7 +792,8 @@
     "difficulty": 4,
     "disciplinas": [
       "matematica"
-    ]
+    ],
+    "explanation": "Sem explicação ainda."
   },
   {
     "number": 165,
@@ -787,7 +816,8 @@
     "difficulty": 5,
     "disciplinas": [
       "matematica"
-    ]
+    ],
+    "explanation": "Sem explicação ainda."
   },
   {
     "number": 166,
@@ -813,7 +843,8 @@
     "difficulty": 5,
     "disciplinas": [
       "matematica"
-    ]
+    ],
+    "explanation": "Sem explicação ainda."
   },
   {
     "number": 167,
@@ -838,7 +869,8 @@
     "difficulty": 5,
     "disciplinas": [
       "matematica"
-    ]
+    ],
+    "explanation": "Sem explicação ainda."
   },
   {
     "number": 168,
@@ -864,7 +896,8 @@
     "difficulty": 7,
     "disciplinas": [
       "matematica"
-    ]
+    ],
+    "explanation": "Sem explicação ainda."
   },
   {
     "number": 169,
@@ -890,7 +923,8 @@
     "difficulty": 6,
     "disciplinas": [
       "matematica"
-    ]
+    ],
+    "explanation": "Sem explicação ainda."
   },
   {
     "number": 170,
@@ -917,7 +951,8 @@
     "difficulty": 5,
     "disciplinas": [
       "matematica"
-    ]
+    ],
+    "explanation": "Sem explicação ainda."
   },
   {
     "number": 171,
@@ -941,7 +976,8 @@
     "difficulty": 5,
     "disciplinas": [
       "matematica"
-    ]
+    ],
+    "explanation": "Sem explicação ainda."
   },
   {
     "number": 172,
@@ -965,7 +1001,8 @@
     "difficulty": 7,
     "disciplinas": [
       "matematica"
-    ]
+    ],
+    "explanation": "Sem explicação ainda."
   },
   {
     "number": 173,
@@ -988,7 +1025,8 @@
     "difficulty": 5,
     "disciplinas": [
       "matematica"
-    ]
+    ],
+    "explanation": "Sem explicação ainda."
   },
   {
     "number": 174,
@@ -1012,7 +1050,8 @@
     "difficulty": 5,
     "disciplinas": [
       "matematica"
-    ]
+    ],
+    "explanation": "Sem explicação ainda."
   },
   {
     "number": 175,
@@ -1035,7 +1074,8 @@
     "difficulty": 1,
     "disciplinas": [
       "matematica"
-    ]
+    ],
+    "explanation": "Sem explicação ainda."
   },
   {
     "number": 176,
@@ -1061,7 +1101,8 @@
     "difficulty": 8,
     "disciplinas": [
       "matematica"
-    ]
+    ],
+    "explanation": "Sem explicação ainda."
   },
   {
     "number": 177,
@@ -1085,7 +1126,8 @@
     "difficulty": 4,
     "disciplinas": [
       "matematica"
-    ]
+    ],
+    "explanation": "Sem explicação ainda."
   },
   {
     "number": 178,
@@ -1109,7 +1151,8 @@
     "difficulty": 7,
     "disciplinas": [
       "matematica"
-    ]
+    ],
+    "explanation": "Sem explicação ainda."
   },
   {
     "number": 179,
@@ -1133,7 +1176,8 @@
     "contextId": "enem_2022_math_q179_ctx1",
     "disciplinas": [
       "matematica"
-    ]
+    ],
+    "explanation": "Sem explicação ainda."
   },
   {
     "number": 180,
@@ -1164,6 +1208,7 @@
     "difficulty": 9,
     "disciplinas": [
       "matematica"
-    ]
+    ],
+    "explanation": "Sem explicação ainda."
   }
 ]

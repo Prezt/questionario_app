@@ -23,7 +23,9 @@
     "language": "en",
     "disciplinas": [
       "ingles"
-    ]
+    ],
+    "explanation": "Sem explicação ainda.",
+    "review": true
   },
   {
     "number": 2,
@@ -50,7 +52,9 @@
     "language": "en",
     "disciplinas": [
       "ingles"
-    ]
+    ],
+    "explanation": "Sem explicação ainda.",
+    "review": true
   },
   {
     "number": 3,
@@ -76,7 +80,9 @@
     "language": "en",
     "disciplinas": [
       "ingles"
-    ]
+    ],
+    "explanation": "Sem explicação ainda.",
+    "review": true
   },
   {
     "number": 4,
@@ -101,7 +107,9 @@
     "language": "en",
     "disciplinas": [
       "ingles"
-    ]
+    ],
+    "explanation": "Sem explicação ainda.",
+    "review": true
   },
   {
     "number": 5,
@@ -130,7 +138,9 @@
     "language": "es",
     "disciplinas": [
       "espanhol"
-    ]
+    ],
+    "explanation": "Sem explicação ainda.",
+    "review": true
   },
   {
     "number": 1,
@@ -158,7 +168,9 @@
     "disciplinas": [
       "espanhol",
       "literatura"
-    ]
+    ],
+    "explanation": "Sem explicação ainda.",
+    "review": true
   },
   {
     "number": 2,
@@ -184,7 +196,9 @@
     "language": "es",
     "disciplinas": [
       "espanhol"
-    ]
+    ],
+    "explanation": "Sem explicação ainda.",
+    "review": true
   },
   {
     "number": 3,
@@ -210,7 +224,9 @@
     "language": "es",
     "disciplinas": [
       "espanhol"
-    ]
+    ],
+    "explanation": "Sem explicação ainda.",
+    "review": true
   },
   {
     "number": 4,
@@ -237,7 +253,9 @@
     "disciplinas": [
       "espanhol",
       "literatura"
-    ]
+    ],
+    "explanation": "Sem explicação ainda.",
+    "review": true
   },
   {
     "number": 5,
@@ -263,7 +281,9 @@
     "language": "es",
     "disciplinas": [
       "espanhol"
-    ]
+    ],
+    "explanation": "Sem explicação ainda.",
+    "review": true
   },
   {
     "number": 6,
@@ -289,7 +309,9 @@
     "contextId": "enem_2019_linguagens_q6_ctx1",
     "disciplinas": [
       "interpretacao"
-    ]
+    ],
+    "explanation": "Sem explicação ainda.",
+    "review": true
   },
   {
     "number": 7,
@@ -315,7 +337,9 @@
     "contextId": "enem_2019_linguagens_q7_ctx1",
     "disciplinas": [
       "interpretacao"
-    ]
+    ],
+    "explanation": "Sem explicação ainda.",
+    "review": true
   },
   {
     "number": 8,
@@ -339,7 +363,9 @@
     "answer": "b",
     "disciplinas": [
       "interpretacao"
-    ]
+    ],
+    "explanation": "Sem explicação ainda.",
+    "review": true
   },
   {
     "number": 9,
@@ -363,7 +389,9 @@
     "answer": "a",
     "disciplinas": [
       "interpretacao"
-    ]
+    ],
+    "explanation": "Sem explicação ainda.",
+    "review": true
   },
   {
     "number": 10,
@@ -387,7 +415,10 @@
     "answer": "a",
     "disciplinas": [
       "interpretacao"
-    ]
+    ],
+    "explanation": "Sem explicação ainda.",
+    "contextId": "enem_2019_linguagens_q10_ctx1",
+    "review": true
   },
   {
     "number": 11,
@@ -412,7 +443,9 @@
     "answer": "d",
     "disciplinas": [
       "interpretacao"
-    ]
+    ],
+    "explanation": "Sem explicação ainda.",
+    "review": true
   },
   {
     "number": 12,
@@ -438,7 +471,12 @@
     "disciplinas": [
       "interpretacao"
     ],
-    "contextId": "enem_2019_linguagens_q12_q36_ctx1"
+    "explanation": "Sem explicação ainda.",
+    "contextIds": [
+      "enem_2019_linguagens_q12_ctx1",
+      "enem_2019_linguagens_q12_q36_ctx1"
+    ],
+    "review": true
   },
   {
     "number": 13,
@@ -464,7 +502,9 @@
     "disciplinas": [
       "interpretacao",
       "literatura"
-    ]
+    ],
+    "explanation": "Sem explicação ainda.",
+    "review": true
   },
   {
     "number": 14,
@@ -490,7 +530,9 @@
     "disciplinas": [
       "interpretacao",
       "literatura"
-    ]
+    ],
+    "explanation": "Sem explicação ainda.",
+    "review": true
   },
   {
     "number": 15,
@@ -516,7 +558,9 @@
     "contextId": "enem_2019_linguagens_q15_ctx1",
     "disciplinas": [
       "interpretacao"
-    ]
+    ],
+    "explanation": "Sem explicação ainda.",
+    "review": true
   },
   {
     "number": 16,
@@ -541,7 +585,9 @@
     "contextId": "enem_2019_linguagens_q16_ctx1",
     "disciplinas": [
       "interpretacao"
-    ]
+    ],
+    "explanation": "Sem explicação ainda.",
+    "review": true
   },
   {
     "number": 17,
@@ -565,7 +611,10 @@
     "answer": "a",
     "disciplinas": [
       "interpretacao"
-    ]
+    ],
+    "explanation": "Sem explicação ainda.",
+    "contextId": "enem_2019_linguagens_q17_ctx1",
+    "review": true
   },
   {
     "number": 18,
@@ -589,7 +638,9 @@
     "answer": "a",
     "disciplinas": [
       "interpretacao"
-    ]
+    ],
+    "explanation": "Sem explicação ainda.",
+    "review": true
   },
   {
     "number": 19,
@@ -614,7 +665,9 @@
     "contextId": "enem_2019_linguagens_q19_ctx1",
     "disciplinas": [
       "interpretacao"
-    ]
+    ],
+    "explanation": "Sem explicação ainda.",
+    "review": true
   },
   {
     "number": 20,
@@ -639,7 +692,9 @@
     "contextId": "enem_2019_linguagens_q20_ctx1",
     "disciplinas": [
       "interpretacao"
-    ]
+    ],
+    "explanation": "Sem explicação ainda.",
+    "review": true
   },
   {
     "number": 21,
@@ -664,7 +719,9 @@
     "disciplinas": [
       "interpretacao",
       "literatura"
-    ]
+    ],
+    "explanation": "Sem explicação ainda.",
+    "review": true
   },
   {
     "number": 22,
@@ -690,7 +747,9 @@
     "disciplinas": [
       "interpretacao",
       "literatura"
-    ]
+    ],
+    "explanation": "Sem explicação ainda.",
+    "review": true
   },
   {
     "number": 23,
@@ -717,7 +776,9 @@
     "disciplinas": [
       "artes",
       "interpretacao"
-    ]
+    ],
+    "explanation": "Sem explicação ainda.",
+    "review": true
   },
   {
     "number": 24,
@@ -744,7 +805,9 @@
     "disciplinas": [
       "interpretacao",
       "linguistica"
-    ]
+    ],
+    "explanation": "Sem explicação ainda.",
+    "review": true
   },
   {
     "number": 25,
@@ -770,7 +833,9 @@
     "disciplinas": [
       "interpretacao",
       "literatura"
-    ]
+    ],
+    "explanation": "Sem explicação ainda.",
+    "review": true
   },
   {
     "number": 26,
@@ -794,7 +859,13 @@
     "answer": "e",
     "disciplinas": [
       "interpretacao"
-    ]
+    ],
+    "explanation": "Sem explicação ainda.",
+    "contextIds": [
+      "enem_2019_linguagens_q26_ctx1",
+      "enem_2019_linguagens_q26_ctx2"
+    ],
+    "review": true
   },
   {
     "number": 27,
@@ -818,7 +889,9 @@
     "answer": "c",
     "disciplinas": [
       "interpretacao"
-    ]
+    ],
+    "explanation": "Sem explicação ainda.",
+    "review": true
   },
   {
     "number": 28,
@@ -844,7 +917,9 @@
     "disciplinas": [
       "interpretacao",
       "literatura"
-    ]
+    ],
+    "explanation": "Sem explicação ainda.",
+    "review": true
   },
   {
     "number": 29,
@@ -868,7 +943,9 @@
     "answer": "c",
     "disciplinas": [
       "interpretacao"
-    ]
+    ],
+    "explanation": "Sem explicação ainda.",
+    "review": true
   },
   {
     "number": 30,
@@ -899,7 +976,9 @@
       "interpretacao",
       "linguistica",
       "literatura"
-    ]
+    ],
+    "explanation": "Sem explicação ainda.",
+    "review": true
   },
   {
     "number": 31,
@@ -911,9 +990,7 @@
       "d": "mudança da funcionalidade pela integração dos objetos.",
       "e": "fragmentação da imagem no uso de elemento diversificados."
     },
-    "images": [
-      "figuras/q031_2019_fig1.png"
-    ],
+    "images": [],
     "tags": [
       "artes visuais",
       "interpretação de texto"
@@ -927,7 +1004,9 @@
       "artes",
       "interpretacao"
     ],
-    "contextId": "enem_2019_linguagens_q31_ctx1"
+    "contextId": "enem_2019_linguagens_q31_ctx1",
+    "explanation": "Sem explicação ainda.",
+    "review": true
   },
   {
     "number": 32,
@@ -952,7 +1031,9 @@
     "contextId": "enem_2019_linguagens_q32_ctx1",
     "disciplinas": [
       "interpretacao"
-    ]
+    ],
+    "explanation": "Sem explicação ainda.",
+    "review": true
   },
   {
     "number": 33,
@@ -977,7 +1058,9 @@
     "disciplinas": [
       "interpretacao",
       "literatura"
-    ]
+    ],
+    "explanation": "Sem explicação ainda.",
+    "review": true
   },
   {
     "number": 34,
@@ -1001,7 +1084,9 @@
     "answer": "a",
     "disciplinas": [
       "linguistica"
-    ]
+    ],
+    "explanation": "Sem explicação ainda.",
+    "review": true
   },
   {
     "number": 35,
@@ -1025,7 +1110,9 @@
     "answer": "a",
     "disciplinas": [
       "interpretacao"
-    ]
+    ],
+    "explanation": "Sem explicação ainda.",
+    "review": true
   },
   {
     "number": 36,
@@ -1051,7 +1138,13 @@
     "disciplinas": [
       "artes",
       "interpretacao"
-    ]
+    ],
+    "explanation": "Sem explicação ainda.",
+    "contextIds": [
+      "enem_2019_linguagens_q36_ctx1",
+      "enem_2019_linguagens_q36_ctx2"
+    ],
+    "review": true
   },
   {
     "number": 37,
@@ -1078,7 +1171,9 @@
     "disciplinas": [
       "interpretacao",
       "linguistica"
-    ]
+    ],
+    "explanation": "Sem explicação ainda.",
+    "review": true
   },
   {
     "number": 38,
@@ -1103,7 +1198,9 @@
     "contextId": "enem_2019_linguagens_q38_ctx1",
     "disciplinas": [
       "interpretacao"
-    ]
+    ],
+    "explanation": "Sem explicação ainda.",
+    "review": true
   },
   {
     "number": 39,
@@ -1128,7 +1225,9 @@
     "disciplinas": [
       "interpretacao",
       "literatura"
-    ]
+    ],
+    "explanation": "Sem explicação ainda.",
+    "review": true
   },
   {
     "number": 40,
@@ -1154,7 +1253,9 @@
     "disciplinas": [
       "interpretacao",
       "literatura"
-    ]
+    ],
+    "explanation": "Sem explicação ainda.",
+    "review": true
   },
   {
     "number": 41,
@@ -1180,7 +1281,9 @@
     "disciplinas": [
       "interpretacao",
       "literatura"
-    ]
+    ],
+    "explanation": "Sem explicação ainda.",
+    "review": true
   },
   {
     "number": 42,
@@ -1206,7 +1309,9 @@
     "contextId": "enem_2019_linguagens_q42_ctx1",
     "disciplinas": [
       "interpretacao"
-    ]
+    ],
+    "explanation": "Sem explicação ainda.",
+    "review": true
   },
   {
     "number": 43,
@@ -1230,7 +1335,10 @@
     "answer": "c",
     "disciplinas": [
       "interpretacao"
-    ]
+    ],
+    "explanation": "Sem explicação ainda.",
+    "contextId": "enem_2019_linguagens_q43_ctx1",
+    "review": true
   },
   {
     "number": 44,
@@ -1258,7 +1366,9 @@
       "interpretacao",
       "linguistica",
       "literatura"
-    ]
+    ],
+    "explanation": "Sem explicação ainda.",
+    "review": true
   },
   {
     "number": 45,
@@ -1287,6 +1397,8 @@
       "interpretacao",
       "linguistica",
       "literatura"
-    ]
+    ],
+    "explanation": "Sem explicação ainda.",
+    "review": true
   }
 ]

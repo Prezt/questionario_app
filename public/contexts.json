@@ -1113,17 +1113,21 @@
   },
   "enem_2019_math_q143_ctx1": {
     "title": null,
-    "subtitle": null,
-    "text": "Gráfico com cinco linhas (I, II, III, IV, V) mostrando calorias gastas (kcal) no eixo y (de 0 a 140) em função do tempo em minutos no eixo x (de 0 a 30). As linhas representam diferentes atividades físicas com diferentes inclinações.",
-    "images": [],
-    "reference": null
+    "subtitle": "",
+    "text": "[Image: figuras/q143_2019_fig1.png]",
+    "images": [
+      "figuras/q143_2019_fig1.png"
+    ],
+    "reference": ""
   },
   "enem_2019_math_q169_ctx1": {
-    "title": "Gráfico",
-    "subtitle": null,
-    "text": "y (km)\n8\nQ R 7\nIV I\n6\nIII II 5\nV 4\nS 3\n2\n1\nP\n0 1 2 3 4 5 6 7 x (km)",
-    "images": [],
-    "reference": null
+    "title": null,
+    "subtitle": "",
+    "text": "[Image: figuras/q169_2019_fig1.png]",
+    "images": [
+      "figuras/q169_2019_fig1.png"
+    ],
+    "reference": ""
   },
   "enem_2019_nature_q101_ctx1": {
     "title": null,
@@ -1133,18 +1137,22 @@
     "reference": "MARTELLI, A. Eritropoetina: síntese e liberação fisiológica e o uso de sua forma recombinante no esporte. Perspectivas Online: biológicas & saúde, v. 10, n. 3, 2013 (adaptado)"
   },
   "enem_2019_nature_q125_ctx1": {
-    "title": "Figura",
-    "subtitle": null,
-    "text": "ALGA VERDE → ANCESTRAL → 1 → 2 → 3 → 4 → 5\n(com timeline: 500 450 400 350 300 50 Milhões de anos)\n\nLegenda:\n  - 1. Embriões protegidos no gametófito.\n  - 2. Tecidos condutores verdadeiros.\n  - 3. Formação de tubo polínico.\n  - 4. Polinização pelo vento.\n  - 5. Produção de frutos.\n\nGrupos mostrados:\n  - Briófitas\n  - Pteridófitas (samambaias, avencas, Psilotum)\n  - Gimnospermas\n  - Angiospermas",
-    "images": [],
-    "reference": "CAMPBELL, N. et al. Biologia. São Paulo: Artmed, 2010 (adaptado)."
+    "title": null,
+    "subtitle": "",
+    "text": "[Image: figuras/q125_2019_fig1.png]",
+    "images": [
+      "figuras/q125_2019_fig1.png"
+    ],
+    "reference": "CAMPBELL, N. et al. <b>Biologia</b>. São Paulo: Artmed, 2010 (adaptado)."
   },
   "enem_2019_nature_q118_ctx1": {
     "title": null,
-    "subtitle": null,
-    "text": "LI, Y.; DAI, H. Recent Advances in Zinc–Air Batteries. Chemical Society Reviews, v. 43, n. 15, 2014 (adaptado).",
-    "images": [],
-    "reference": "LI, Y.; DAI, H. Recent Advances in Zinc–Air Batteries. Chemical Society Reviews, v. 43, n. 15, 2014"
+    "subtitle": "",
+    "text": "[Image: figuras/q118_2019_fig1.png]",
+    "images": [
+      "figuras/q118_2019_fig1.png"
+    ],
+    "reference": "LI, Y.; DAI, H. Recent Advances in Zinc–Air Batteries. <b>Chemical Society Reviews</b>, v. 43, n. 15, 2014 (adaptado)."
   },
   "enem_2019_nature_q123_ctx1": {
     "title": "Texto",
@@ -1260,10 +1268,39 @@
   },
   "enem_2019_humanas_q47_ctx1": {
     "title": null,
-    "subtitle": null,
-    "text": "Atmosfera Sol\nSatélite\nEnergia solar incidente\nEnergia solar refletida\nRio Pastagens Rodovia Floresta",
-    "images": [],
-    "reference": "www.ibge.gov.br. Acesso em: 11 dez. 2018 (adaptado)"
+    "subtitle": "",
+    "text": "[Image: figuras/q047_2019_fig1.png]",
+    "images": [
+      "figuras/q047_2019_fig1.png"
+    ],
+    "reference": "Disponível em: www.ibge.gov.br. Acesso em: 11 dez. 2018 (adaptado)."
+  },
+  "enem_2019_humanas_q59_ctx1": {
+    "title": null,
+    "subtitle": "",
+    "text": "[Image: figuras/q059_2019_fig1.png]",
+    "images": [
+      "figuras/q059_2019_fig1.png"
+    ],
+    "reference": ""
+  },
+  "enem_2019_humanas_q77_ctx1": {
+    "title": null,
+    "subtitle": "",
+    "text": "Fala-se aqui de uma arte criada nas ruas e para as ruas, marcadas antes de tudo pela vida cotidiana, seus conflitos e suas possibilidades, que poderiam envolver técnicas, agentes e temas que não fossem encontrados nas instituições mais tradicionais e formais.\n\n[Image: figuras/q077_2019_fig1.png]",
+    "images": [
+      "figuras/q077_2019_fig1.png"
+    ],
+    "reference": ""
+  },
+  "enem_2019_humanas_q85_ctx1": {
+    "title": null,
+    "subtitle": "",
+    "text": "[Image: figuras/q085_2019_fig1.png]",
+    "images": [
+      "figuras/q085_2019_fig1.png"
+    ],
+    "reference": ""
   },
   "enem_2019_humanas_q73_ctx1": {
     "title": null,
@@ -1287,11 +1324,13 @@
     "reference": "GOMES, L. 1822. Rio de Janeiro: Nova Fronteira, 2010"
   },
   "enem_2019_humanas_q57_ctx1": {
-    "title": "Regiões áridas e semiáridas do mundo",
-    "subtitle": null,
-    "text": "[Mapa - Regiões áridas e semiáridas do mundo com latitudes marcadas: 30° N (Trópico de Câncer), 0° (Equador), 30° S (Trópico de Capricórnio), mostrando áreas de deserto (árido) e semiárido]\n\nSALGADO-LABOURIAL, M. L. História ecológica da Terra. São Paulo: Edgard Blucher, 1994 (adaptado).",
-    "images": [],
-    "reference": "SALGADO-LABOURIAL, M. L. História ecológica da Terra. São Paulo: Edgard Blucher, 1994 (adaptado)."
+    "title": null,
+    "subtitle": "<center><b>Regiões áridas e semiáridas do mundo</b></center>",
+    "text": "[Image: figuras/q057_2019_fig1.png]",
+    "images": [
+      "figuras/q057_2019_fig1.png"
+    ],
+    "reference": "SALGADO-LABOURIAL, M. L. <b>História ecológica da Terra</b>. São Paulo: Edgard Blucher, 1994 (adaptado)."
   },
   "enem_2019_humanas_q65_ctx1": {
     "title": null,
@@ -1358,8 +1397,8 @@
   },
   "enem_2019_linguagens_q31_ctx1": {
     "title": null,
-    "subtitle": null,
-    "text": "",
+    "subtitle": "",
+    "text": "[Image: figuras/q031_2019_fig1.png | <center>PICASSO, P. <b>Cabeça de touro</b>. Selim e guidão de bicicleta, 33,5 × 43,5 × 19 cm. 1942.</center>]",
     "images": [
       "figuras/q031_2019_fig1.png"
     ],
@@ -1464,9 +1503,9 @@
     "reference": "The Washington Times, June 25, 2013"
   },
   "enem_2019_linguagens_q1_q5_ctx1": {
-    "title": "",
+    "title": null,
     "subtitle": "",
-    "text": "",
+    "text": "[Image: figuras/q005_2019_fig1.png]",
     "images": [
       "figuras/q005_2019_fig1.png"
     ],
@@ -1500,13 +1539,13 @@
     "reference": "OTONI, A. C. O Globo, 31 mar. 2015"
   },
   "enem_2019_linguagens_q23_ctx1": {
-    "title": "Cartaz",
-    "subtitle": null,
-    "text": "[Figura: cartaz sobre refugiados com imagem de calçado]",
+    "title": null,
+    "subtitle": "",
+    "text": "[Image: figuras/q023_2019_fig1.png]",
     "images": [
       "figuras/q023_2019_fig1.png"
     ],
-    "reference": "www.acnur.org. Acesso em: 11 dez. 2018"
+    "reference": "Disponível em: www.acnur.org. Acesso em: 11 dez. 2018."
   },
   "enem_2019_linguagens_q42_ctx1": {
     "title": null,
@@ -1516,11 +1555,83 @@
     "reference": "Disponível em: http://cienciahoje.org.br. Acesso em: 11 dez. 2018 (adaptado)."
   },
   "enem_2019_linguagens_q6_ctx1": {
-    "title": "Campanha Publicitária",
-    "subtitle": null,
-    "text": "PALAVRAS\nTÊM PODER\n\nPalavras informam, libertam, destroem preconceitos.\nPalavras desinformam, aprisionam e criam preconceitos.\nLiberdade de expressão. A escolha é sua.\nA responsabilidade, também.\n\nA liberdade de expressão é uma conquista inquestionável. O que todos precisam saber é que liberdade traz responsabilidades. Publicar informações e mensagens sensacionalistas, explorar imagens mórbidas, desrespeitar os Direitos Humanos e estimular o preconceito e a violência são atos de desrespeito à lei.\n\nPara promover a liberdade de expressão com responsabilidade, o Ministério Público de Pernambuco se une a vários parceiros nesta ação educativa. Colabore. Caso veja alguma mensagem que desrespeite os seus direitos, denuncie.\n\n0800 281 9455 - Ministério Público de Pernambuco",
+    "title": null,
+    "subtitle": "",
+    "text": "[Image: figuras/q006_2019_fig1.png]",
+    "images": [
+      "figuras/q006_2019_fig1.png"
+    ],
+    "reference": "Disponível em: http://palavrastempoder.org. Acesso em: 20 abr. 2015."
+  },
+  "enem_2019_linguagens_q10_ctx1": {
+    "title": null,
+    "subtitle": "",
+    "text": "[Image: figuras/q010_2019_fig1.png]",
+    "images": [
+      "figuras/q010_2019_fig1.png"
+    ],
+    "reference": "Disponível em: www.essl.pt. Acesso em: 9 maio 2019 (adaptado)."
+  },
+  "enem_2019_linguagens_q12_ctx1": {
+    "title": "TEXTO I",
+    "subtitle": "<center><b>A promessa da felicidade</b></center>",
+    "text": "[Image: figuras/q012_2019_fig1.png | <center>JU LOYOLA. <b>The promise of happiness</b>.</center>]",
+    "images": [
+      "figuras/q012_2019_fig1.png"
+    ],
+    "reference": "LOYOLA, J. Disponível em: http://ladyscomics.com.br. Acesso em: 8 dez. 2018 (adaptado)."
+  },
+  "enem_2019_linguagens_q17_ctx1": {
+    "title": null,
+    "subtitle": "",
+    "text": "[Image: figuras/q017_2019_fig1.png]",
+    "images": [
+      "figuras/q017_2019_fig1.png"
+    ],
+    "reference": "Disponível em: http://epoca.globo.com. Acesso em: 20 mar. 2014."
+  },
+  "enem_2019_linguagens_q26_ctx1": {
+    "title": "TEXTO I",
+    "subtitle": "",
+    "text": "    O Estatuto do Idoso completou 15 anos em 2018 e só no primeiro semestre o Disque 100 recebeu 16 mil denúncias de violação de direitos dos idosos em todo o País.\n    Para especialistas da área, o aumento no número de denúncias pode ser consequência do encorajamento dos mais velhos na busca pelos direitos. Mas também pode refletir uma onda crescente de violência na sociedade e dentro das próprias famílias.\n    Políticas públicas mais eficazes no atendimento ao idoso são o mínimo que um país deve estabelecer. O Brasil está ficando para trás e é preciso levar em consideração que o País envelhece (tendência mundial) sem estar preparado para arcar com os desafios, como criar uma rede de proteção, preparar os serviços de saúde pública e dar suporte às famílias que precisam cuidar de seus idosos dependentes.",
     "images": [],
-    "reference": "Disponível em: http://palavrastempoder.org. Acesso em: 20 abr. 2015"
+    "reference": "Disponível em: www.folhadelondrina.com.br. Acesso em: 9 dez. 2018 (adaptado)."
+  },
+  "enem_2019_linguagens_q26_ctx2": {
+    "title": "TEXTO II",
+    "subtitle": "",
+    "text": "[Image: figuras/q026_2019_fig1.png]",
+    "images": [
+      "figuras/q026_2019_fig1.png"
+    ],
+    "reference": "Disponível em: www.brasil.gov.br. Acesso em: 9 dez. 2018."
+  },
+  "enem_2019_linguagens_q36_ctx1": {
+    "title": "TEXTO I",
+    "subtitle": "",
+    "text": "[Image: figuras/q036_2019_fig1.png | <center>Fotografia de Jackson Pollock pintando em seu ateliê, realizada por Hans Namuth em 1951.</center>]",
+    "images": [
+      "figuras/q036_2019_fig1.png"
+    ],
+    "reference": "CHIPP, H. <b>Teorias da arte moderna</b>. São Paulo: Martins Fontes, 1988."
+  },
+  "enem_2019_linguagens_q36_ctx2": {
+    "title": "TEXTO II",
+    "subtitle": "",
+    "text": "[Image: figuras/q036_2019_fig2.png | <center>MUNIZ, V. <b>Action Photo</b> (segundo Hans Namuth em Pictures in Chocolate). Impressão fotográfica, 152,4 cm × 121,92 cm, The Museum of Modern Art, Nova Iorque, 1977.</center>]",
+    "images": [
+      "figuras/q036_2019_fig2.png"
+    ],
+    "reference": "NEVES, A. <b>História da arte 4</b>. Vitória: Ufes – Nead, 2011."
+  },
+  "enem_2019_linguagens_q43_ctx1": {
+    "title": null,
+    "subtitle": "",
+    "text": "[Image: figuras/q043_2019_fig1.png]",
+    "images": [
+      "figuras/q043_2019_fig1.png"
+    ],
+    "reference": "Disponível em: www.tecmundo.com.br. Acesso em: 10 dez. 2018 (adaptado)."
   },
   "enem_2018_nature_q105_ctx1": {
     "title": "",
