@@ -37,9 +37,9 @@ describe('DISCIPLINAS_BY_AREA', () => {
 })
 
 describe('ALL_DISCIPLINAS', () => {
-  it('is the flat 13-entry slug list', () => {
+  it('is the flat 13-entry slug list with no duplicates', () => {
     expect(ALL_DISCIPLINAS).toHaveLength(13)
-    expect(new Set(ALL_DISCIPLINAS).size).toBe(13)
+    expect(new Set(ALL_DISCIPLINAS).size).toBe(ALL_DISCIPLINAS.length)
   })
 })
 
@@ -66,6 +66,12 @@ describe('DISCIPLINA_AREA reverse lookup', () => {
     expect(DISCIPLINA_AREA.portugues).toBe('linguagens')
     expect(DISCIPLINA_AREA.matematica).toBe('math')
   })
+
+  it('covers every disciplina', () => {
+    for (const slug of ALL_DISCIPLINAS) {
+      expect(DISCIPLINA_AREA[slug]).toBeTypeOf('string')
+    }
+  })
 })
 
 describe('helpers', () => {
@@ -75,8 +81,10 @@ describe('helpers', () => {
     expect(disciplinaLabel(null)).toBe(null)
   })
 
-  it('areaForDisciplina returns the area', () => {
+  it('areaForDisciplina returns the area or null', () => {
     expect(areaForDisciplina('biologia')).toBe('nature')
     expect(areaForDisciplina('zzz')).toBe(null)
+    expect(areaForDisciplina(null)).toBe(null)
+    expect(areaForDisciplina(undefined)).toBe(null)
   })
 })
