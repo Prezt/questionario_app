@@ -120,12 +120,16 @@ const CHANGELOG = [
     version: '1.16.0',
     date: '07/06/2026',
     items: [
-      'Nova taxonomia de disciplinas (Química, Física, Biologia, História, etc.) derivada das tags existentes',
-      'Picker da tela inicial reorganizado por disciplina com filtro "Multidisciplinar" para questões que cruzam mais de uma disciplina',
-      'Tela de resumo agora mostra desempenho agrupado por disciplina antes do agrupamento por assunto',
-      'Língua Estrangeira separada em Inglês e Espanhol como disciplinas independentes',
-      'Educação Física removida da taxonomia (poucas questões; questões realocadas para Interpretação de Texto)',
-      'Português dividido em Interpretação de Texto e Gramática; questões em inglês/espanhol agora classificam apenas como Inglês ou Espanhol',
+      'Nova taxonomia de 13 disciplinas',
+      'Português, Língua Estrangeira e Educação Física reorganizadas',
+      'Estude dividido em sub-abas ENEM e Listas',
+      'Novo picker de disciplina com subtemas e quantidade',
+      'Resumo agrupado por disciplina antes dos assuntos',
+      'Novos subtemas de Gramática detectados por enunciado',
+      'Subtemas de Matemática: frações, proporção, regra de três',
+      'Mudanças significativas no visual da página',
+      'Criar lista abre na mesma página',
+      'ENEM 2019 Linguagens Q30: contextos reais criados',
     ],
   },
   {
@@ -134,13 +138,13 @@ const CHANGELOG = [
     items: [
       'Projeto renomeado para Trilha Integrar',
       'Nova navegação por abas: Estude, Simule e Ensine',
-      'Estude reúne Desafio Diário, estudo por área e listas Integrar',
-      'Simule concentra a prova completa (Prova / Ano / Dia)',
-      'Ensine (professores) traz "Criar lista" e o Painel Admin, antes escondidos no menu de opções',
-      'Cor própria por aba: Estude em vermelho, Simule em âmbar, Ensine em azul (botão "Iniciar" acompanha)',
-      'Histórico de versões movido para um rodapé discreto abaixo do card, acessível em todas as abas',
-      '2019 linguagens revisada — textos faltantes adicionados, OCR corrigido (Q1 inglês), contextos remapeados (Q3/Q8/Q9/Q14/Q17/Q18/Q21/Q29/Q31/Q33/Q34/Q39 e Q1-Q5 espanhol)',
-      '2019 humanas revisada — 26 contextos criados/renomeados (Q46-Q88), textos embutidos extraídos (Q49/Q52/Q54/Q56/Q66/Q69/Q81/Q83/Q87/Q88), pares de textos remapeados (Q61/Q67/Q75/Q78), Q72 corrigido (Constituição de 1824)',
+      'Estude reúne Desafio, áreas e listas Integrar',
+      'Simule concentra a prova completa',
+      'Ensine reúne Criar lista e Painel Admin',
+      'Cores próprias por aba: vermelho, âmbar, azul',
+      'Histórico de versões movido para rodapé discreto',
+      'ENEM 2019 Linguagens revisada com correções',
+      'ENEM 2019 Humanas revisada com novos contextos',
     ],
   },
   {
@@ -161,7 +165,7 @@ const CHANGELOG = [
       '2021 humanas revisada',
       '2021 matemática revisada',
       '2021 ciências da natureza revisada',
-      'Figuras refeitas (corte limpo, sem texto sangrando): Q161 (alt C) 2021, Q168 2020, Q168 2021, Q170 2021, Q171 2019',
+      'Figuras refeitas em cinco questões',
     ],
   },
   {
@@ -169,9 +173,9 @@ const CHANGELOG = [
     date: '04/06/2026',
     items: [
       '2022 matemática revisada',
-      'Resumo: cor âmbar distingue questões em branco das erradas',
+      'Resumo: cor âmbar para questões em branco',
       'Resumo: placar mostra corretas/respondidas/total',
-      'Alterações apenas visuais — dados continuam armazenados como antes',
+      'Alterações apenas visuais; dados preservados',
     ],
   },
   {
@@ -193,24 +197,24 @@ const CHANGELOG = [
     version: '1.14.0',
     date: '02/06/2026',
     items: [
-      'Frações no novo formato KaTeX em todas as questões de Matemática 2022–2025',
-      'Fração em log(I/I₀) em Ciências da Natureza 2025 q132',
+      'Frações KaTeX em Matemática 2022–2025',
+      'Fração corrigida em Ciências 2025 Q132',
     ],
   },
   {
     version: '1.13.0',
     date: '02/06/2026',
     items: [
-      'Botão "Sair" no resultado do simulado (antes "Reiniciar")',
-      'Percentual de acerto na seleção de ano da prova',
-      'Botão de cabeçalho alterna entre "Sair" e "Finalizar" conforme você responde as questões',
+      'Botão Sair no resultado do simulado',
+      'Percentual de acerto na seleção de ano',
+      'Botão alterna entre Sair e Finalizar',
     ],
   },
   {
     version: '1.12.0',
     date: '02/06/2026',
     items: [
-      'Frações e expressões matemáticas agora aparecem formatadas nas questões',
+      'Frações e expressões matemáticas formatadas',
       'Botão de fração na barra de formatação',
     ],
   },
@@ -222,7 +226,7 @@ const CHANGELOG = [
   {
     version: '1.11.1',
     date: '31/05/2026',
-    items: ['Painel de bugs mostra ano, prova e área da questão', 'Seção de versão e histórico na tela inicial'],
+    items: ['Painel de bugs mostra ano, prova e área', 'Seção de versão e histórico na tela inicial'],
   },
   {
     version: '1.11.0',
@@ -560,10 +564,17 @@ function ChangelogSection() {
 
 export default function App() {
   if (window.location.pathname === '/review') return <Suspense fallback={null}><ReviewPage /></Suspense>
-  if (window.location.pathname === '/editor') return <Suspense fallback={null}><QuestionEditor /></Suspense>
 
 
   const [user, setUser] = useState(null)
+  const [editorOpen, setEditorOpen] = useState(() =>
+    typeof window !== 'undefined' && window.location.pathname === '/editor'
+  )
+  useEffect(() => {
+    if (window.location.pathname === '/editor') {
+      window.history.replaceState(null, '', '/')
+    }
+  }, [])
   // All questions loaded from manifest
   const [allQuestions, setAllQuestions] = useState([])
   const [contexts, setContexts] = useState({}) // { [contextId]: { title, subtitle, text, reference } }
@@ -612,8 +623,10 @@ export default function App() {
   const [dailyChallengeResult, setDailyChallengeResult] = useState(null) // {score, total} if already done today
   const [selectedArea, setSelectedArea] = useState(null) // 'math' | 'nature' | 'linguagens' | 'humanas'
   const [selectedTag, setSelectedTag] = useState(null)   // unified tag string | null
-  const [selectedDisciplinas, setSelectedDisciplinas] = useState([])
-  const [multidisciplinarOnly, setMultidisciplinarOnly] = useState(false)
+  const [selectedDisciplina, setSelectedDisciplina] = useState(null)
+  const [allowMultidisciplinar, setAllowMultidisciplinar] = useState(true)
+  const [selectedSubtags, setSelectedSubtags] = useState([])
+  const [disciplinaQuizLength, setDisciplinaQuizLength] = useState(10)
   const [expandedArea, setExpandedArea] = useState(null) // area panel open on home screen
   const [optionsOpen, setOptionsOpen] = useState(false)
   const [headerMenuOpen, setHeaderMenuOpen] = useState(false)
@@ -623,6 +636,12 @@ export default function App() {
       return (stored === 'estude' || stored === 'simule' || stored === 'ensine') ? stored : 'estude'
     } catch { return 'estude' }
   })
+  const [estudeSubTab, setEstudeSubTab] = useState(() => {
+    try {
+      const stored = localStorage.getItem('trilha-integrar-estude-subtab')
+      return (stored === 'enem' || stored === 'listas') ? stored : 'enem'
+    } catch { return 'enem' }
+  })
   const switchTab = (tab) => {
     setActiveTab(tab)
     try { localStorage.setItem('trilha-integrar-active-tab', tab) } catch {}
@@ -631,6 +650,14 @@ export default function App() {
     setSelectedIntegrarYear(null)
     setSelectedTest(tab === 'simule' ? 'ENEM' : null)
   }
+  useEffect(() => {
+    const FAVICON_COLOR_BY_TAB = { estude: 'red', simule: 'amber', ensine: 'blue' }
+    const color = FAVICON_COLOR_BY_TAB[activeTab] ?? 'red'
+    const ico = document.querySelector('link[rel="icon"][type="image/x-icon"]')
+    const png = document.querySelector('link[rel="icon"][type="image/png"]')
+    if (ico) ico.href = `/favicon-${color}.ico`
+    if (png) png.href = `/favicon-${color}-32.png`
+  }, [activeTab])
   const [finishConfirmOpen, setFinishConfirmOpen] = useState(false)
   const [timerDrawerOpen, setTimerDrawerOpen] = useState(false)
 
@@ -1466,14 +1493,15 @@ export default function App() {
     setPhase('quiz')
   }, [allQuestions, foreignLang])
 
-  const startDisciplinaQuiz = useCallback((disciplinas, opts = {}) => {
-    const { multidisciplinarOnly: multi = false, tag = null } = opts
-    const wanted = new Set(disciplinas)
+  const startDisciplinaQuiz = useCallback((disciplina, opts = {}) => {
+    const { allowMultidisciplinar: allowMulti = true, tags = [], length = 10 } = opts
+    if (!disciplina) return
+    const wantedTags = new Set(tags)
     const pool = allQuestions.filter((q) => {
       const qDisc = q.disciplinas ?? []
-      if (multi && qDisc.length < 2) return false
-      if (wanted.size > 0 && !qDisc.some((d) => wanted.has(d))) return false
-      if (tag !== null && !q.tags?.includes(tag)) return false
+      if (!qDisc.includes(disciplina)) return false
+      if (!allowMulti && qDisc.length > 1) return false
+      if (wantedTags.size > 0 && !(q.tags ?? []).some((t) => wantedTags.has(t))) return false
       return true
     })
     if (pool.length === 0) return
@@ -1493,14 +1521,13 @@ export default function App() {
       const j = Math.floor(Math.random() * (i + 1))
       ;[shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]]
     }
-    const picked = shuffled.slice(0, 10)
+    const picked = length === 'all' ? shuffled : shuffled.slice(0, length)
 
     clearPausedSession()
     setAttempts({})
     saveAttemptsToSession({})
-    const areas = new Set(disciplinas.map((d) => DISCIPLINA_AREA[d]).filter(Boolean))
-    setSelectedArea(areas.size === 1 ? [...areas][0] : null)
-    setSelectedTag(tag)
+    setSelectedArea(DISCIPLINA_AREA[disciplina] ?? null)
+    setSelectedTag(tags.length === 1 ? tags[0] : null)
     setExpandedArea(null)
     setIsDailyChallenge(false)
     const now = Date.now()
@@ -1524,6 +1551,34 @@ export default function App() {
     setQuestions((prev) => prev.map((q) => q.number === variant.number ? variant : q))
     setPendingSelection(null)
   }, [question, foreignLang])
+
+  const disciplinaMatchingQuestions = useMemo(() => {
+    if (!selectedDisciplina) return []
+    return allQuestions.filter((q) => {
+      if (q.language && q.language !== foreignLang) return false
+      const qd = q.disciplinas ?? []
+      if (!qd.includes(selectedDisciplina)) return false
+      if (!allowMultidisciplinar && qd.length > 1) return false
+      return true
+    })
+  }, [allQuestions, selectedDisciplina, allowMultidisciplinar, foreignLang])
+
+  const availableSubtags = useMemo(() => {
+    const set = new Set()
+    for (const q of disciplinaMatchingQuestions) {
+      for (const t of q.tags ?? []) set.add(t)
+    }
+    return [...set].sort((a, b) => a.localeCompare(b, 'pt-BR'))
+  }, [disciplinaMatchingQuestions])
+
+  const disciplinaPoolSize = useMemo(() => {
+    if (disciplinaMatchingQuestions.length === 0) return 0
+    if (selectedSubtags.length === 0) return disciplinaMatchingQuestions.length
+    const wantedTags = new Set(selectedSubtags)
+    return disciplinaMatchingQuestions.filter(
+      (q) => (q.tags ?? []).some((t) => wantedTags.has(t))
+    ).length
+  }, [disciplinaMatchingQuestions, selectedSubtags])
 
   const finishQuiz = useCallback(() => {
     if (questionStartRef.current && question) {
@@ -1618,6 +1673,9 @@ export default function App() {
 
   // ── Loading ───────────────────────────────────────────────────────────────
   if (loading) return <div className="center">Carregando...</div>
+
+  // ── Editor (inline, no URL change) ───────────────────────────────────────
+  if (editorOpen) return <Suspense fallback={null}><QuestionEditor onClose={() => setEditorOpen(false)} /></Suspense>
 
   // ── Homepage ──────────────────────────────────────────────────────────────
   if (phase === 'home') {
@@ -1752,6 +1810,7 @@ export default function App() {
           <header className="home-header">
             <div className="home-header-row">
               <span className="home-header-title">Trilha Integrar</span>
+              <span className="home-version-pill">V{APP_VERSION}</span>
               <div className="home-header-actions">
                 <span className="home-greeting">Olá, {user?.username}</span>
                 <button
@@ -1816,60 +1875,161 @@ export default function App() {
 
                 <div className="home-divider" />
 
+                {/* ── Sub-tab toggle: ENEM / Listas ── */}
+                {allIntegrarQs.length > 0 && (
+                  <div className="home-test-seg" style={{ marginBottom: '0.4rem' }}>
+                    {['enem', 'listas'].map((sub) => (
+                      <button
+                        key={sub}
+                        type="button"
+                        className={`home-test-seg-btn${estudeSubTab === sub ? ' active' : ''}`}
+                        onClick={() => {
+                          setEstudeSubTab(sub)
+                          try { localStorage.setItem('trilha-integrar-estude-subtab', sub) } catch {}
+                        }}
+                      >
+                        {sub === 'enem' ? 'ENEM' : 'Listas'}
+                      </button>
+                    ))}
+                  </div>
+                )}
+
+                {estudeSubTab === 'enem' && (
                 <div className="home-area-section">
                   <span className="home-filter-label">Estudar por disciplina</span>
-                  {(['linguagens', 'humanas', 'nature', 'math']).map((area) => (
-                    <div key={area} className="home-area-day-group">
-                      <span className="home-area-day-label">{AREA_LABELS[area]}</span>
-                      <div className="home-area-grid">
-                        {DISCIPLINAS_BY_AREA[area].map((slug) => {
-                          const active = selectedDisciplinas.includes(slug)
-                          return (
-                            <button
-                              key={slug}
-                              type="button"
-                              className={`home-area-pill${active ? ' home-area-pill--active' : ''}`}
-                              onClick={() => {
-                                setSelectedDisciplinas((prev) =>
-                                  prev.includes(slug)
-                                    ? prev.filter((s) => s !== slug)
-                                    : [...prev, slug]
-                                )
-                              }}
-                            >
-                              {DISCIPLINA_LABELS[slug]}
-                            </button>
-                          )
-                        })}
+
+                  {/* ── Disciplina dropdown (single-select) ── */}
+                  <details className="home-dropdown">
+                    <summary className="home-dropdown-summary">
+                      <span className="home-dropdown-label">Disciplina</span>
+                      <span className={`home-dropdown-value${selectedDisciplina ? ' home-dropdown-value--filled' : ''}`}>
+                        {selectedDisciplina
+                          ? DISCIPLINA_LABELS[selectedDisciplina]
+                          : 'Selecionar…'}
+                      </span>
+                    </summary>
+                    <div className="home-dropdown-panel">
+                      {(['linguagens', 'humanas', 'nature', 'math']).map((area) => (
+                        <div key={area} className="home-dropdown-group">
+                          <span className="home-dropdown-group-label">{AREA_LABELS[area]}</span>
+                          {DISCIPLINAS_BY_AREA[area].map((slug) => (
+                            <label key={slug} className="home-dropdown-option">
+                              <input
+                                type="radio"
+                                name="disciplina"
+                                checked={selectedDisciplina === slug}
+                                onChange={(e) => {
+                                  setSelectedDisciplina(slug)
+                                  setSelectedSubtags([])
+                                  e.currentTarget.closest('details')?.removeAttribute('open')
+                                }}
+                              />
+                              <span>{DISCIPLINA_LABELS[slug]}</span>
+                            </label>
+                          ))}
+                        </div>
+                      ))}
+                    </div>
+                  </details>
+
+                  {/* ── Always-visible multidisciplinar toggle ── */}
+                  <label className="home-toggle-row">
+                    <input
+                      type="checkbox"
+                      checked={allowMultidisciplinar}
+                      onChange={() => {
+                        setSelectedSubtags([])
+                        setAllowMultidisciplinar((v) => !v)
+                      }}
+                    />
+                    <span>Incluir questões multidisciplinares</span>
+                  </label>
+
+                  {/* ── Subtag dropdown (only when disciplina chosen) ── */}
+                  {selectedDisciplina && availableSubtags.length > 0 && (
+                    <details className="home-dropdown">
+                      <summary className="home-dropdown-summary">
+                        <span className="home-dropdown-label">Subtemas</span>
+                        <span className="home-dropdown-value">
+                          {selectedSubtags.length === 0
+                            ? `Todos (${availableSubtags.length})`
+                            : selectedSubtags.length <= 2
+                              ? selectedSubtags.join(', ')
+                              : `${selectedSubtags.length} selecionados`}
+                        </span>
+                      </summary>
+                      <div className="home-dropdown-panel">
+                        <div className="home-dropdown-group home-dropdown-group--cols-2">
+                          {availableSubtags.map((tag) => (
+                            <label key={tag} className="home-dropdown-option">
+                              <input
+                                type="checkbox"
+                                checked={selectedSubtags.includes(tag)}
+                                onChange={() =>
+                                  setSelectedSubtags((prev) =>
+                                    prev.includes(tag)
+                                      ? prev.filter((t) => t !== tag)
+                                      : [...prev, tag]
+                                  )
+                                }
+                              />
+                              <span>{tag}</span>
+                            </label>
+                          ))}
+                        </div>
+                      </div>
+                    </details>
+                  )}
+
+                  {/* ── Quantidade ── */}
+                  {selectedDisciplina && (
+                    <div className="home-area-day-group">
+                      <span className="home-area-day-label">
+                        Quantidade <span style={{ fontWeight: 400, opacity: 0.6 }}>({disciplinaPoolSize} disponíveis)</span>
+                      </span>
+                      <div className="home-test-seg">
+                        {[10, 20, 45, 'all'].map((n) => (
+                          <button
+                            key={n}
+                            type="button"
+                            className={`home-test-seg-btn${disciplinaQuizLength === n ? ' active' : ''}`}
+                            onClick={() => setDisciplinaQuizLength(n)}
+                          >
+                            {n === 'all' ? 'Todas' : n}
+                          </button>
+                        ))}
                       </div>
                     </div>
-                  ))}
-                  <div className="home-area-day-group">
-                    <span className="home-area-day-label">Outros</span>
-                    <div className="home-area-grid">
+                  )}
+
+                  {/* ── Começar button ── */}
+                  {(() => {
+                    const effective = disciplinaQuizLength === 'all'
+                      ? disciplinaPoolSize
+                      : Math.min(disciplinaQuizLength, disciplinaPoolSize)
+                    const label = effective === 0
+                      ? 'Começar simulado'
+                      : `Começar simulado · ${effective} ${effective === 1 ? 'questão' : 'questões'}`
+                    return (
                       <button
                         type="button"
-                        className={`home-area-pill${multidisciplinarOnly ? ' home-area-pill--active' : ''}`}
-                        onClick={() => setMultidisciplinarOnly((v) => !v)}
+                        className="home-area-pill home-area-pill--primary"
+                        disabled={effective === 0}
+                        onClick={() => startDisciplinaQuiz(selectedDisciplina, {
+                          allowMultidisciplinar,
+                          tags: selectedSubtags,
+                          length: disciplinaQuizLength,
+                        })}
                       >
-                        Multidisciplinar
+                        {label}
                       </button>
-                    </div>
-                  </div>
-                  <button
-                    type="button"
-                    className="home-area-pill home-area-pill--primary"
-                    disabled={selectedDisciplinas.length === 0 && !multidisciplinarOnly}
-                    onClick={() => startDisciplinaQuiz(selectedDisciplinas, { multidisciplinarOnly })}
-                  >
-                    Começar simulado
-                  </button>
+                    )
+                  })()}
                 </div>
+                )}
 
-                {allIntegrarQs.length > 0 && (
+                {estudeSubTab === 'listas' && allIntegrarQs.length > 0 && (
                   <>
-                    <div className="home-divider" />
-
                     <div className="home-filters">
                       <div className="home-filter-group">
                         <span className="home-filter-label">Listas Integrar</span>
@@ -2063,7 +2223,7 @@ export default function App() {
                     <button
                       type="button"
                       className="home-start-btn"
-                      onClick={() => { window.location.href = '/editor' }}
+                      onClick={() => setEditorOpen(true)}
                     >
                       Criar lista
                     </button>

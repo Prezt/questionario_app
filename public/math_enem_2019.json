@@ -62,7 +62,9 @@
     "images": [],
     "tags": [
       "aritmética e números",
-      "matemática financeira"
+      "matemática financeira",
+      "frações",
+      "proporção"
     ],
     "difficulty": 5,
     "year": 2019,
@@ -92,7 +94,10 @@
     ],
     "tags": [
       "matemática financeira",
-      "funções"
+      "funções",
+      "operações básicas",
+      "proporção",
+      "regra de três"
     ],
     "difficulty": 5,
     "year": 2019,
@@ -139,7 +144,10 @@
     "images": [],
     "tags": [
       "álgebra",
-      "aritmética e números"
+      "aritmética e números",
+      "proporção",
+      "operações básicas",
+      "regra de três"
     ],
     "difficulty": 6,
     "year": 2019,
@@ -187,7 +195,8 @@
     "images": [],
     "tags": [
       "álgebra",
-      "análise combinatória"
+      "análise combinatória",
+      "proporção"
     ],
     "difficulty": 4,
     "year": 2019,
@@ -236,7 +245,8 @@
     "images": [],
     "tags": [
       "aritmética e números",
-      "geometria plana"
+      "geometria plana",
+      "proporção"
     ],
     "difficulty": 6,
     "year": 2019,
@@ -260,7 +270,8 @@
     "images": [],
     "tags": [
       "estatística",
-      "análise de dados"
+      "análise de dados",
+      "proporção"
     ],
     "difficulty": 6,
     "year": 2019,
@@ -284,7 +295,8 @@
     "images": [],
     "tags": [
       "geometria plana",
-      "aritmética e números"
+      "aritmética e números",
+      "operações básicas"
     ],
     "difficulty": 5,
     "year": 2019,
@@ -308,7 +320,8 @@
     "images": [],
     "tags": [
       "aritmética e números",
-      "matemática financeira"
+      "matemática financeira",
+      "proporção"
     ],
     "difficulty": 4,
     "year": 2019,
@@ -356,7 +369,8 @@
     "images": [],
     "tags": [
       "matemática financeira",
-      "álgebra"
+      "álgebra",
+      "proporção"
     ],
     "difficulty": 6,
     "year": 2019,
@@ -381,7 +395,9 @@
     "tags": [
       "aritmética e números",
       "matemática financeira",
-      "análise combinatória"
+      "análise combinatória",
+      "proporção",
+      "frações"
     ],
     "difficulty": 6,
     "year": 2019,
@@ -405,7 +421,9 @@
     "images": [],
     "tags": [
       "matemática financeira",
-      "álgebra"
+      "álgebra",
+      "proporção",
+      "regra de três"
     ],
     "difficulty": 5,
     "year": 2019,
@@ -429,7 +447,8 @@
     "images": [],
     "tags": [
       "aritmética e números",
-      "matemática financeira"
+      "matemática financeira",
+      "proporção"
     ],
     "difficulty": 3,
     "year": 2019,
@@ -453,7 +472,9 @@
     "images": [],
     "tags": [
       "matemática financeira",
-      "aritmética e números"
+      "aritmética e números",
+      "proporção",
+      "regra de três"
     ],
     "difficulty": 6,
     "year": 2019,
@@ -524,7 +545,8 @@
     "images": [],
     "tags": [
       "geometria espacial",
-      "análise combinatória"
+      "análise combinatória",
+      "frações"
     ],
     "difficulty": 7,
     "year": 2019,
@@ -548,7 +570,9 @@
     "images": [],
     "tags": [
       "aritmética e números",
-      "matemática financeira"
+      "matemática financeira",
+      "proporção",
+      "regra de três"
     ],
     "difficulty": 6,
     "year": 2019,
@@ -596,7 +620,8 @@
     "images": [],
     "tags": [
       "aritmética e números",
-      "estatística"
+      "estatística",
+      "proporção"
     ],
     "difficulty": 4,
     "year": 2019,
@@ -668,7 +693,8 @@
     "images": [],
     "tags": [
       "aritmética e números",
-      "probabilidade"
+      "probabilidade",
+      "frações"
     ],
     "difficulty": 6,
     "year": 2019,
@@ -716,7 +742,8 @@
     "images": [],
     "tags": [
       "aritmética e números",
-      "matemática financeira"
+      "matemática financeira",
+      "proporção"
     ],
     "difficulty": 4,
     "year": 2019,
@@ -740,7 +767,8 @@
     "images": [],
     "tags": [
       "geometria plana",
-      "análise combinatória"
+      "análise combinatória",
+      "proporção"
     ],
     "difficulty": 6,
     "year": 2019,
@@ -885,7 +913,8 @@
     "images": [],
     "tags": [
       "estatística",
-      "análise combinatória"
+      "análise combinatória",
+      "operações básicas"
     ],
     "difficulty": 6,
     "year": 2019,
@@ -909,7 +938,8 @@
     "images": [],
     "tags": [
       "probabilidade",
-      "análise combinatória"
+      "análise combinatória",
+      "proporção"
     ],
     "difficulty": 6,
     "year": 2019,
@@ -935,7 +965,9 @@
     ],
     "tags": [
       "aritmética e números",
-      "estatística"
+      "estatística",
+      "proporção",
+      "operações básicas"
     ],
     "difficulty": 4,
     "year": 2019,
@@ -983,7 +1015,8 @@
     "images": [],
     "tags": [
       "aritmética e números",
-      "matemática financeira"
+      "matemática financeira",
+      "proporção"
     ],
     "difficulty": 6,
     "year": 2019,
@@ -1007,7 +1040,8 @@
     "images": [],
     "tags": [
       "funções",
-      "trigonometria"
+      "trigonometria",
+      "regra de três"
     ],
     "difficulty": 7,
     "year": 2019,
@@ -1033,7 +1067,8 @@
     ],
     "tags": [
       "aritmética e números",
-      "análise combinatória"
+      "análise combinatória",
+      "operações básicas"
     ],
     "difficulty": 5,
     "year": 2019,
@@ -1081,7 +1116,8 @@
     "images": [],
     "tags": [
       "matemática financeira",
-      "aritmética e números"
+      "aritmética e números",
+      "proporção"
     ],
     "difficulty": 3,
     "year": 2019,

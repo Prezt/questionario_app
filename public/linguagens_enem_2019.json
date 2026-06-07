@@ -909,8 +909,8 @@
     "area": "linguagens",
     "answer": "c",
     "contextIds": [
-      "enem_2019_linguagens_q1_q39_ctx1",
-      "enem_2019_linguagens_q12_q36_ctx1"
+      "enem_2019_linguagens_q30_ctx1",
+      "enem_2019_linguagens_q30_ctx2"
     ],
     "disciplinas": [
       "gramatica",
@@ -1296,7 +1296,8 @@
     "tags": [
       "interpretação de texto",
       "linguística e variação linguística",
-      "literatura brasileira"
+      "literatura brasileira",
+      "variação linguística"
     ],
     "difficulty": 6,
     "year": 2019,

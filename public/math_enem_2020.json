@@ -40,7 +40,9 @@
       "figuras/q137_2020_fig1.png"
     ],
     "tags": [
-      "aritmética e números"
+      "aritmética e números",
+      "frações",
+      "proporção"
     ],
     "difficulty": 2,
     "year": 2020,
@@ -64,7 +66,9 @@
     "images": [],
     "tags": [
       "geometria espacial",
-      "aritmética e números"
+      "aritmética e números",
+      "proporção",
+      "regra de três"
     ],
     "difficulty": 5,
     "year": 2020,
@@ -90,7 +94,8 @@
     ],
     "tags": [
       "aritmética e números",
-      "estatística"
+      "estatística",
+      "proporção"
     ],
     "difficulty": 4,
     "year": 2020,
@@ -114,7 +119,8 @@
     "images": [],
     "tags": [
       "geometria plana",
-      "matemática financeira"
+      "matemática financeira",
+      "proporção"
     ],
     "difficulty": 6,
     "year": 2020,
@@ -161,7 +167,8 @@
     },
     "images": [],
     "tags": [
-      "probabilidade"
+      "probabilidade",
+      "frações"
     ],
     "difficulty": 5,
     "year": 2020,
@@ -185,7 +192,8 @@
     "images": [],
     "tags": [
       "sequências e progressões",
-      "aritmética e números"
+      "aritmética e números",
+      "proporção"
     ],
     "difficulty": 5,
     "year": 2020,
@@ -211,7 +219,8 @@
     },
     "images": [],
     "tags": [
-      "aritmética e números"
+      "aritmética e números",
+      "proporção"
     ],
     "difficulty": 5,
     "year": 2020,
@@ -237,7 +246,9 @@
     ],
     "tags": [
       "geometria espacial",
-      "geometria plana"
+      "geometria plana",
+      "proporção",
+      "regra de três"
     ],
     "difficulty": 6,
     "year": 2020,
@@ -286,7 +297,8 @@
     "images": [],
     "tags": [
       "álgebra",
-      "aritmética e números"
+      "aritmética e números",
+      "frações"
     ],
     "difficulty": 4,
     "year": 2020,
@@ -337,7 +349,8 @@
     "images": [],
     "tags": [
       "funções",
-      "logaritmos"
+      "logaritmos",
+      "frações"
     ],
     "difficulty": 6,
     "year": 2020,
@@ -364,7 +377,8 @@
     "images": [],
     "tags": [
       "funções",
-      "logaritmos"
+      "logaritmos",
+      "frações"
     ],
     "difficulty": 6,
     "year": 2020,
@@ -414,7 +428,8 @@
     ],
     "tags": [
       "geometria espacial",
-      "álgebra"
+      "álgebra",
+      "proporção"
     ],
     "difficulty": 6,
     "year": 2020,
@@ -487,7 +502,8 @@
       "figuras/q155_2020_fig1.png"
     ],
     "tags": [
-      "sequências e progressões"
+      "sequências e progressões",
+      "frações"
     ],
     "difficulty": 5,
     "year": 2020,
@@ -513,7 +529,8 @@
     ],
     "tags": [
       "matemática financeira",
-      "estatística"
+      "estatística",
+      "proporção"
     ],
     "difficulty": 5,
     "year": 2020,
@@ -536,7 +553,8 @@
     },
     "images": [],
     "tags": [
-      "probabilidade"
+      "probabilidade",
+      "frações"
     ],
     "difficulty": 6,
     "year": 2020,
@@ -608,7 +626,8 @@
     },
     "images": [],
     "tags": [
-      "aritmética e números"
+      "aritmética e números",
+      "regra de três"
     ],
     "difficulty": 6,
     "year": 2020,
@@ -632,7 +651,9 @@
     "images": [],
     "tags": [
       "geometria espacial",
-      "álgebra"
+      "álgebra",
+      "frações",
+      "proporção"
     ],
     "difficulty": 5,
     "year": 2020,
@@ -658,7 +679,9 @@
     ],
     "tags": [
       "geometria plana",
-      "aritmética e números"
+      "aritmética e números",
+      "proporção",
+      "regra de três"
     ],
     "difficulty": 6,
     "year": 2020,
@@ -681,7 +704,8 @@
     },
     "images": [],
     "tags": [
-      "análise combinatória"
+      "análise combinatória",
+      "frações"
     ],
     "difficulty": 6,
     "year": 2020,
@@ -786,7 +810,8 @@
     "images": [],
     "tags": [
       "aritmética e números",
-      "matemática financeira"
+      "matemática financeira",
+      "proporção"
     ],
     "difficulty": 4,
     "year": 2020,
@@ -862,7 +887,9 @@
     "images": [],
     "tags": [
       "aritmética e números",
-      "álgebra"
+      "álgebra",
+      "frações",
+      "proporção"
     ],
     "difficulty": 6,
     "year": 2020,
@@ -941,7 +968,8 @@
     ],
     "tags": [
       "trigonometria",
-      "geometria plana"
+      "geometria plana",
+      "frações"
     ],
     "difficulty": 7,
     "year": 2020,
@@ -967,7 +995,9 @@
     ],
     "tags": [
       "aritmética e números",
-      "análise combinatória"
+      "análise combinatória",
+      "proporção",
+      "regra de três"
     ],
     "difficulty": 6,
     "year": 2020,
@@ -1084,7 +1114,9 @@
     "images": [],
     "tags": [
       "probabilidade",
-      "análise combinatória"
+      "análise combinatória",
+      "operações básicas",
+      "proporção"
     ],
     "difficulty": 5,
     "year": 2020,
@@ -1108,7 +1140,8 @@
     "images": [],
     "tags": [
       "aritmética e números",
-      "matemática financeira"
+      "matemática financeira",
+      "proporção"
     ],
     "difficulty": 4,
     "year": 2020,

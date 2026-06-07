@@ -38,7 +38,9 @@
     "images": [],
     "tags": [
       "matemática financeira",
-      "álgebra"
+      "álgebra",
+      "frações",
+      "proporção"
     ],
     "difficulty": 7,
     "year": 2018,
@@ -162,7 +164,9 @@
     "images": [],
     "tags": [
       "matemática financeira",
-      "funções"
+      "funções",
+      "proporção",
+      "regra de três"
     ],
     "difficulty": 6,
     "year": 2018,
@@ -257,7 +261,8 @@
     "images": [],
     "tags": [
       "aritmética e números",
-      "matemática financeira"
+      "matemática financeira",
+      "regra de três"
     ],
     "difficulty": 3,
     "year": 2018,
@@ -281,7 +286,8 @@
     "images": [],
     "tags": [
       "aritmética e números",
-      "matemática financeira"
+      "matemática financeira",
+      "proporção"
     ],
     "difficulty": 3,
     "year": 2018,
@@ -305,7 +311,10 @@
     "images": [],
     "tags": [
       "aritmética e números",
-      "álgebra"
+      "álgebra",
+      "frações",
+      "proporção",
+      "regra de três"
     ],
     "difficulty": 5,
     "year": 2018,
@@ -332,7 +341,8 @@
     ],
     "tags": [
       "geometria plana",
-      "matemática financeira"
+      "matemática financeira",
+      "proporção"
     ],
     "difficulty": 6,
     "year": 2018,
@@ -382,7 +392,9 @@
     ],
     "tags": [
       "geometria plana",
-      "álgebra"
+      "álgebra",
+      "frações",
+      "proporção"
     ],
     "difficulty": 6,
     "year": 2018,
@@ -510,7 +522,8 @@
     "images": [],
     "tags": [
       "probabilidade",
-      "estatística"
+      "estatística",
+      "frações"
     ],
     "difficulty": 6,
     "year": 2018,
@@ -536,7 +549,9 @@
     ],
     "tags": [
       "matemática financeira",
-      "geometria analítica"
+      "geometria analítica",
+      "proporção",
+      "regra de três"
     ],
     "difficulty": 3,
     "year": 2018,
@@ -560,7 +575,8 @@
     "images": [],
     "tags": [
       "matemática financeira",
-      "aritmética e números"
+      "aritmética e números",
+      "proporção"
     ],
     "difficulty": 6,
     "year": 2018,
@@ -591,7 +607,9 @@
     ],
     "tags": [
       "geometria espacial",
-      "análise combinatória"
+      "análise combinatória",
+      "proporção",
+      "regra de três"
     ],
     "difficulty": 6,
     "year": 2018,
@@ -641,7 +659,8 @@
     "images": [],
     "tags": [
       "geometria analítica",
-      "geometria plana"
+      "geometria plana",
+      "proporção"
     ],
     "difficulty": 7,
     "year": 2018,
@@ -689,7 +708,8 @@
     "images": [],
     "tags": [
       "aritmética e números",
-      "matemática financeira"
+      "matemática financeira",
+      "frações"
     ],
     "difficulty": 5,
     "year": 2018,
@@ -713,7 +733,8 @@
     "images": [],
     "tags": [
       "aritmética e números",
-      "álgebra"
+      "álgebra",
+      "frações"
     ],
     "difficulty": 5,
     "year": 2018,
@@ -764,7 +785,8 @@
     "images": [],
     "tags": [
       "estatística",
-      "matemática financeira"
+      "matemática financeira",
+      "proporção"
     ],
     "difficulty": 4,
     "year": 2018,
@@ -788,7 +810,8 @@
     "images": [],
     "tags": [
       "probabilidade",
-      "aritmética e números"
+      "aritmética e números",
+      "proporção"
     ],
     "difficulty": 5,
     "year": 2018,
@@ -814,7 +837,8 @@
     ],
     "tags": [
       "aritmética e números",
-      "análise combinatória"
+      "análise combinatória",
+      "proporção"
     ],
     "difficulty": 4,
     "year": 2018,
@@ -838,7 +862,9 @@
     "images": [],
     "tags": [
       "geometria plana",
-      "matemática financeira"
+      "matemática financeira",
+      "proporção",
+      "regra de três"
     ],
     "difficulty": 6,
     "year": 2018,
@@ -1021,7 +1047,9 @@
     "images": [],
     "tags": [
       "probabilidade",
-      "matemática financeira"
+      "matemática financeira",
+      "operações básicas",
+      "proporção"
     ],
     "difficulty": 6,
     "year": 2018,
@@ -1045,7 +1073,8 @@
     "images": [],
     "tags": [
       "aritmética e números",
-      "estatística"
+      "estatística",
+      "proporção"
     ],
     "difficulty": 4,
     "year": 2018,
@@ -1069,7 +1098,8 @@
     "images": [],
     "tags": [
       "aritmética e números",
-      "álgebra"
+      "álgebra",
+      "proporção"
     ],
     "difficulty": 6,
     "year": 2018,

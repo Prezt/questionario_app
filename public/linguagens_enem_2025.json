@@ -219,7 +219,8 @@
       "gêneros textuais",
       "linguística e variação linguística",
       "literatura brasileira",
-      "língua espanhola"
+      "língua espanhola",
+      "morfologia"
     ],
     "year": 2025,
     "area": "linguagens",
@@ -251,7 +252,9 @@
     "tags": [
       "gêneros textuais",
       "linguística e variação linguística",
-      "língua espanhola"
+      "língua espanhola",
+      "variação linguística",
+      "morfologia"
     ],
     "year": 2025,
     "area": "linguagens",
@@ -686,7 +689,8 @@
     "images": [],
     "tags": [
       "cultura e identidade",
-      "linguística e variação linguística"
+      "linguística e variação linguística",
+      "semântica"
     ],
     "year": 2025,
     "area": "linguagens",
@@ -857,7 +861,8 @@
     "tags": [
       "cultura e identidade",
       "linguística e variação linguística",
-      "literatura brasileira"
+      "literatura brasileira",
+      "variação linguística"
     ],
     "year": 2025,
     "area": "linguagens",
@@ -1079,7 +1084,8 @@
     "tags": [
       "gêneros textuais",
       "linguística e variação linguística",
-      "literatura brasileira"
+      "literatura brasileira",
+      "funções da linguagem"
     ],
     "year": 2025,
     "area": "linguagens",
@@ -1133,7 +1139,8 @@
     "images": [],
     "tags": [
       "interpretação de texto",
-      "linguística e variação linguística"
+      "linguística e variação linguística",
+      "variação linguística"
     ],
     "year": 2025,
     "area": "linguagens",
@@ -1305,7 +1312,8 @@
     },
     "images": [],
     "tags": [
-      "linguística e variação linguística"
+      "linguística e variação linguística",
+      "figuras de linguagem"
     ],
     "year": 2025,
     "area": "linguagens",

@@ -1466,14 +1466,14 @@
   background-size: 85px 85px, 135px 135px;
   background-position: 0 0, 42px 55px;
   background-repeat: repeat;
-  opacity: 0.7;
+  opacity: 0.1;
 }
 
 .dark .home-screen::before {
   background-image:
     url('/figuras/logos/integrar-logo-dark.png'),
     url('/figuras/logos/integrar-logo-dark.png');
-  opacity: 0.5;
+  opacity: 0.07;
 }
 
 .home-topbar {
@@ -1645,13 +1645,13 @@
 }
 
 .home-filter-pill:hover {
-  border-color: var(--accent);
-  color: var(--accent);
+  border-color: var(--tab-accent, var(--accent));
+  color: var(--tab-accent, var(--accent));
 }
 
 .home-filter-pill.active {
-  background: var(--accent);
-  border-color: var(--accent);
+  background: var(--tab-accent, var(--accent));
+  border-color: var(--tab-accent, var(--accent));
   color: #fff;
 }
 
@@ -1664,7 +1664,7 @@
 }
 
 .home-year-pill.done {
-  border-color: var(--accent);
+  border-color: var(--tab-accent, var(--accent));
 }
 
 .home-year-pill.active .home-year-check {
@@ -1673,7 +1673,7 @@
 
 .home-year-check {
   font-size: 0.84rem;
-  color: var(--accent);
+  color: var(--tab-accent, var(--accent));
   line-height: 1;
 }
 
@@ -1824,7 +1824,7 @@
 }
 
 .home-test-seg-btn.active {
-  background: var(--accent);
+  background: var(--tab-accent, var(--accent));
   color: #fff;
 }
 
@@ -1884,6 +1884,18 @@
   font-weight: 800;
   letter-spacing: -0.01em;
   color: var(--text);
+}
+
+.home-version-pill {
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: var(--tab-accent, var(--accent));
+  background: color-mix(in srgb, var(--tab-accent, var(--accent)) 12%, transparent);
+  border: 1.5px solid var(--tab-accent, var(--accent));
+  border-radius: 999px;
+  padding: 0.2rem 0.65rem;
+  margin-right: auto;
 }
 
 .home-header-actions {
@@ -2208,8 +2220,7 @@
   padding: 0.5rem 0.25rem;
   font-size: 0.78rem;
   color: var(--text-soft);
-  opacity: 0.7;
-  transition: opacity 0.15s;
+  opacity: 1;
 }
 
 .home-footer .changelog-trigger:hover {
@@ -2422,12 +2433,195 @@
 }
 
 .home-area-pill:hover {
-  border-color: var(--accent);
-  color: var(--accent);
+  border-color: var(--tab-accent, var(--accent));
+  color: var(--tab-accent, var(--accent));
 }
 
 .home-area-pill:active {
   transform: scale(0.97);
+}
+
+.home-area-pill.home-area-pill--active {
+  background: var(--tab-accent, var(--accent));
+  border-color: var(--tab-accent, var(--accent));
+  color: #fff;
+}
+
+.home-area-pill.home-area-pill--primary {
+  background: var(--tab-accent, var(--accent));
+  border-color: var(--tab-accent, var(--accent));
+  color: #fff;
+  font-weight: 700;
+  margin-top: 0.5rem;
+  box-shadow: 0 4px 16px var(--tab-accent-shadow, rgba(204, 34, 34, 0.4));
+}
+
+.home-area-pill.home-area-pill--primary:hover:not(:disabled) {
+  background: var(--tab-accent-dark, var(--accent-dark));
+  border-color: var(--tab-accent-dark, var(--accent-dark));
+  color: #fff;
+  box-shadow: 0 4px 20px var(--tab-accent-shadow-strong, rgba(204, 34, 34, 0.5));
+}
+
+.home-area-pill.home-area-pill--primary:disabled {
+  opacity: 0.38;
+  box-shadow: none;
+  cursor: not-allowed;
+}
+
+/* Wider home card on desktop + tighter pill grid */
+@media (min-width: 768px) {
+  .home-card,
+  .home-header,
+  .home-footer {
+    max-width: 760px;
+  }
+  .home-area-grid {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+/* ── Dropdown (details/summary) for disciplina & subtag selection ── */
+.home-dropdown {
+  width: 100%;
+  border: 1.5px solid var(--border);
+  border-radius: 0.65rem;
+  background: var(--card-bg);
+  overflow: hidden;
+}
+
+.home-dropdown[open] {
+  border-color: var(--tab-accent, var(--accent));
+}
+
+.home-dropdown-summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  height: 2.75rem;
+  padding: 0 0.9rem;
+  cursor: pointer;
+  list-style: none;
+  font-size: 0.85rem;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.home-dropdown-summary::-webkit-details-marker { display: none; }
+.home-dropdown-summary::marker { content: ''; }
+
+.home-dropdown-summary::after {
+  content: '▾';
+  display: inline-block;
+  margin-left: 0.4rem;
+  font-size: 0.75rem;
+  color: var(--text-soft);
+  transition: transform 0.15s;
+}
+
+.home-dropdown[open] .home-dropdown-summary::after {
+  transform: rotate(180deg);
+}
+
+.home-dropdown-label {
+  font-weight: 700;
+  color: var(--text);
+}
+
+.home-dropdown-value {
+  flex: 1;
+  text-align: right;
+  color: var(--text-soft);
+  font-weight: 500;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.home-dropdown[open] .home-dropdown-value {
+  color: var(--tab-accent, var(--accent));
+}
+
+.home-dropdown-value--filled {
+  color: var(--tab-accent, var(--accent));
+  font-weight: 700;
+}
+
+.home-dropdown-panel {
+  border-top: 1.5px solid var(--border);
+  padding: 0.5rem;
+  max-height: 18rem;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.home-dropdown-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
+.home-dropdown-group--cols-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.15rem 0.4rem;
+}
+
+.home-dropdown-group-label {
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--text-soft);
+  padding: 0 0.3rem 0.15rem;
+}
+
+.home-dropdown-option {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  padding: 0.4rem 0.5rem;
+  border-radius: 0.4rem;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: background 0.1s;
+}
+
+.home-dropdown-option:hover {
+  background: color-mix(in srgb, var(--tab-accent, var(--accent)) 8%, transparent);
+}
+
+.home-dropdown-option input[type="checkbox"],
+.home-dropdown-option input[type="radio"] {
+  width: 1rem;
+  height: 1rem;
+  accent-color: var(--tab-accent, var(--accent));
+  cursor: pointer;
+  margin: 0;
+}
+
+/* Inline toggle row (Incluir multidisciplinares) */
+.home-toggle-row {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  padding: 0.5rem 0.9rem;
+  font-size: 0.85rem;
+  color: var(--text);
+  cursor: pointer;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.home-toggle-row input[type="checkbox"] {
+  width: 1rem;
+  height: 1rem;
+  accent-color: var(--tab-accent, var(--accent));
+  cursor: pointer;
+  margin: 0;
 }
 
 .home-area-day-group {

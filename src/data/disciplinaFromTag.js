@@ -80,7 +80,20 @@ for (const t of [
 ]) add('linguagens', t, 'interpretacao')
 
 // ── Linguagens → Gramática ───────────────────────────────────────────────────
-add('linguagens', 'linguística e variação linguística', 'gramatica')
+for (const t of [
+  'linguística e variação linguística',
+  'variação linguística',
+  'figuras de linguagem',
+  'funções da linguagem',
+  'semântica',
+  'colocação pronominal',
+  'coesão e coerência',
+  'concordância',
+  'regência',
+  'crase',
+  'pontuação',
+  'morfologia',
+]) add('linguagens', t, 'gramatica')
 
 // ── Linguagens → Literatura ──────────────────────────────────────────────────
 for (const t of [
