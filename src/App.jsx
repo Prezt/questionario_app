@@ -101,7 +101,7 @@ function formatTime(seconds) {
   return `${m}:${String(s).padStart(2, '0')}`
 }
 
-const APP_VERSION = '1.15.0'
+const APP_VERSION = '1.16.0'
 const APP_VERSION_DATE = '07/06/2026'
 
 const REVIEW_STATUS = [
@@ -116,6 +116,15 @@ const REVIEW_STATUS = [
 ]
 
 const CHANGELOG = [
+  {
+    version: '1.16.0',
+    date: '07/06/2026',
+    items: [
+      'Nova taxonomia de disciplinas (Química, Física, Biologia, História, etc.) derivada das tags existentes',
+      'Picker da tela inicial reorganizado por disciplina com filtro "Multidisciplinar" para questões que cruzam mais de uma disciplina',
+      'Tela de resumo agora mostra desempenho agrupado por disciplina antes do agrupamento por assunto',
+    ],
+  },
   {
     version: '1.15.0',
     date: '07/06/2026',
