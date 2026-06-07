@@ -21,6 +21,9 @@
     "answer": "d",
     "contextIds": [
       "enem_2020_math_q136_ctx1"
+    ],
+    "disciplinas": [
+      "matematica"
     ]
   },
   {
@@ -43,7 +46,10 @@
     "year": 2020,
     "test": "ENEM",
     "area": "math",
-    "answer": "a"
+    "answer": "a",
+    "disciplinas": [
+      "matematica"
+    ]
   },
   {
     "number": 138,
@@ -64,7 +70,10 @@
     "year": 2020,
     "test": "ENEM",
     "area": "math",
-    "answer": "b"
+    "answer": "b",
+    "disciplinas": [
+      "matematica"
+    ]
   },
   {
     "number": 139,
@@ -87,7 +96,10 @@
     "year": 2020,
     "test": "ENEM",
     "area": "math",
-    "answer": "c"
+    "answer": "c",
+    "disciplinas": [
+      "matematica"
+    ]
   },
   {
     "number": 140,
@@ -108,7 +120,10 @@
     "year": 2020,
     "test": "ENEM",
     "area": "math",
-    "answer": "c"
+    "answer": "c",
+    "disciplinas": [
+      "matematica"
+    ]
   },
   {
     "number": 141,
@@ -129,7 +144,10 @@
     "year": 2020,
     "test": "ENEM",
     "area": "math",
-    "answer": "a"
+    "answer": "a",
+    "disciplinas": [
+      "matematica"
+    ]
   },
   {
     "number": 142,
@@ -149,7 +167,10 @@
     "year": 2020,
     "test": "ENEM",
     "area": "math",
-    "answer": "e"
+    "answer": "e",
+    "disciplinas": [
+      "matematica"
+    ]
   },
   {
     "number": 143,
@@ -173,6 +194,9 @@
     "answer": "d",
     "contextIds": [
       "enem_2020_math_q143_ctx1"
+    ],
+    "disciplinas": [
+      "matematica"
     ]
   },
   {
@@ -193,7 +217,10 @@
     "year": 2020,
     "test": "ENEM",
     "area": "math",
-    "answer": "b"
+    "answer": "b",
+    "disciplinas": [
+      "matematica"
+    ]
   },
   {
     "number": 145,
@@ -216,7 +243,10 @@
     "year": 2020,
     "test": "ENEM",
     "area": "math",
-    "answer": "b"
+    "answer": "b",
+    "disciplinas": [
+      "matematica"
+    ]
   },
   {
     "number": 146,
@@ -238,7 +268,10 @@
     "year": 2020,
     "test": "ENEM",
     "area": "math",
-    "answer": "c"
+    "answer": "c",
+    "disciplinas": [
+      "matematica"
+    ]
   },
   {
     "number": 147,
@@ -259,7 +292,10 @@
     "year": 2020,
     "test": "ENEM",
     "area": "math",
-    "answer": "c"
+    "answer": "c",
+    "disciplinas": [
+      "matematica"
+    ]
   },
   {
     "number": 148,
@@ -283,6 +319,9 @@
     "answer": "c",
     "contextIds": [
       "enem_2020_math_q148_ctx1"
+    ],
+    "disciplinas": [
+      "matematica"
     ]
   },
   {
@@ -307,6 +346,9 @@
     "answer": "a",
     "contextIds": [
       "enem_2020_math_q149_ctx1"
+    ],
+    "disciplinas": [
+      "matematica"
     ]
   },
   {
@@ -328,7 +370,10 @@
     "year": 2020,
     "test": "ENEM",
     "area": "math",
-    "answer": "b"
+    "answer": "b",
+    "disciplinas": [
+      "matematica"
+    ]
   },
   {
     "number": 151,
@@ -349,7 +394,10 @@
     "year": 2020,
     "test": "ENEM",
     "area": "math",
-    "answer": "c"
+    "answer": "c",
+    "disciplinas": [
+      "matematica"
+    ]
   },
   {
     "number": 152,
@@ -372,7 +420,10 @@
     "year": 2020,
     "test": "ENEM",
     "area": "math",
-    "answer": "a"
+    "answer": "a",
+    "disciplinas": [
+      "matematica"
+    ]
   },
   {
     "number": 153,
@@ -392,7 +443,10 @@
     "year": 2020,
     "test": "ENEM",
     "area": "math",
-    "answer": "c"
+    "answer": "c",
+    "disciplinas": [
+      "matematica"
+    ]
   },
   {
     "number": 154,
@@ -414,7 +468,10 @@
     "year": 2020,
     "test": "ENEM",
     "area": "math",
-    "answer": "c"
+    "answer": "c",
+    "disciplinas": [
+      "matematica"
+    ]
   },
   {
     "number": 155,
@@ -436,7 +493,10 @@
     "year": 2020,
     "test": "ENEM",
     "area": "math",
-    "answer": "b"
+    "answer": "b",
+    "disciplinas": [
+      "matematica"
+    ]
   },
   {
     "number": 156,
@@ -459,7 +519,10 @@
     "year": 2020,
     "test": "ENEM",
     "area": "math",
-    "answer": "d"
+    "answer": "d",
+    "disciplinas": [
+      "matematica"
+    ]
   },
   {
     "number": 157,
@@ -479,7 +542,10 @@
     "year": 2020,
     "test": "ENEM",
     "area": "math",
-    "answer": "annulled"
+    "answer": "annulled",
+    "disciplinas": [
+      "matematica"
+    ]
   },
   {
     "number": 158,
@@ -501,7 +567,10 @@
     "year": 2020,
     "test": "ENEM",
     "area": "math",
-    "answer": "c"
+    "answer": "c",
+    "disciplinas": [
+      "matematica"
+    ]
   },
   {
     "number": 159,
@@ -522,7 +591,10 @@
     "year": 2020,
     "test": "ENEM",
     "area": "math",
-    "answer": "c"
+    "answer": "c",
+    "disciplinas": [
+      "matematica"
+    ]
   },
   {
     "number": 160,
@@ -542,7 +614,10 @@
     "year": 2020,
     "test": "ENEM",
     "area": "math",
-    "answer": "c"
+    "answer": "c",
+    "disciplinas": [
+      "matematica"
+    ]
   },
   {
     "number": 161,
@@ -563,7 +638,10 @@
     "year": 2020,
     "test": "ENEM",
     "area": "math",
-    "answer": "b"
+    "answer": "b",
+    "disciplinas": [
+      "matematica"
+    ]
   },
   {
     "number": 162,
@@ -586,7 +664,10 @@
     "year": 2020,
     "test": "ENEM",
     "area": "math",
-    "answer": "e"
+    "answer": "e",
+    "disciplinas": [
+      "matematica"
+    ]
   },
   {
     "number": 163,
@@ -606,7 +687,10 @@
     "year": 2020,
     "test": "ENEM",
     "area": "math",
-    "answer": "e"
+    "answer": "e",
+    "disciplinas": [
+      "matematica"
+    ]
   },
   {
     "number": 164,
@@ -629,6 +713,9 @@
     "answer": "e",
     "contextIds": [
       "enem_2020_math_q164_ctx1"
+    ],
+    "disciplinas": [
+      "matematica"
     ]
   },
   {
@@ -650,7 +737,10 @@
     "year": 2020,
     "test": "ENEM",
     "area": "math",
-    "answer": "d"
+    "answer": "d",
+    "disciplinas": [
+      "matematica"
+    ]
   },
   {
     "number": 166,
@@ -678,7 +768,10 @@
     "year": 2020,
     "test": "ENEM",
     "area": "math",
-    "answer": "b"
+    "answer": "b",
+    "disciplinas": [
+      "matematica"
+    ]
   },
   {
     "number": 167,
@@ -699,7 +792,10 @@
     "year": 2020,
     "test": "ENEM",
     "area": "math",
-    "answer": "b"
+    "answer": "b",
+    "disciplinas": [
+      "matematica"
+    ]
   },
   {
     "number": 168,
@@ -721,7 +817,10 @@
     "year": 2020,
     "test": "ENEM",
     "area": "math",
-    "answer": "a"
+    "answer": "a",
+    "disciplinas": [
+      "matematica"
+    ]
   },
   {
     "number": 169,
@@ -745,6 +844,9 @@
     "answer": "c",
     "contextIds": [
       "enem_2020_math_q169_ctx1"
+    ],
+    "disciplinas": [
+      "matematica"
     ]
   },
   {
@@ -766,7 +868,10 @@
     "year": 2020,
     "test": "ENEM",
     "area": "math",
-    "answer": "c"
+    "answer": "c",
+    "disciplinas": [
+      "matematica"
+    ]
   },
   {
     "number": 171,
@@ -789,7 +894,10 @@
     "year": 2020,
     "test": "ENEM",
     "area": "math",
-    "answer": "d"
+    "answer": "d",
+    "disciplinas": [
+      "matematica"
+    ]
   },
   {
     "number": 172,
@@ -813,7 +921,10 @@
     "year": 2020,
     "test": "ENEM",
     "area": "math",
-    "answer": "a"
+    "answer": "a",
+    "disciplinas": [
+      "matematica"
+    ]
   },
   {
     "number": 173,
@@ -836,7 +947,10 @@
     "year": 2020,
     "test": "ENEM",
     "area": "math",
-    "answer": "c"
+    "answer": "c",
+    "disciplinas": [
+      "matematica"
+    ]
   },
   {
     "number": 174,
@@ -859,7 +973,10 @@
     "year": 2020,
     "test": "ENEM",
     "area": "math",
-    "answer": "b"
+    "answer": "b",
+    "disciplinas": [
+      "matematica"
+    ]
   },
   {
     "number": 175,
@@ -887,7 +1004,10 @@
     "year": 2020,
     "test": "ENEM",
     "area": "math",
-    "answer": "a"
+    "answer": "a",
+    "disciplinas": [
+      "matematica"
+    ]
   },
   {
     "number": 176,
@@ -915,7 +1035,10 @@
     "year": 2020,
     "test": "ENEM",
     "area": "math",
-    "answer": "e"
+    "answer": "e",
+    "disciplinas": [
+      "matematica"
+    ]
   },
   {
     "number": 177,
@@ -943,7 +1066,10 @@
     "year": 2020,
     "test": "ENEM",
     "area": "math",
-    "answer": "b"
+    "answer": "b",
+    "disciplinas": [
+      "matematica"
+    ]
   },
   {
     "number": 178,
@@ -964,7 +1090,10 @@
     "year": 2020,
     "test": "ENEM",
     "area": "math",
-    "answer": "a"
+    "answer": "a",
+    "disciplinas": [
+      "matematica"
+    ]
   },
   {
     "number": 179,
@@ -986,7 +1115,10 @@
     "test": "ENEM",
     "area": "math",
     "answer": "e",
-    "contextId": "enem_2020_math_q179_ctx1"
+    "contextId": "enem_2020_math_q179_ctx1",
+    "disciplinas": [
+      "matematica"
+    ]
   },
   {
     "number": 180,
@@ -1007,6 +1139,9 @@
     "year": 2020,
     "test": "ENEM",
     "area": "math",
-    "answer": "c"
+    "answer": "c",
+    "disciplinas": [
+      "matematica"
+    ]
   }
 ]

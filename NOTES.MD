@@ -24,6 +24,8 @@ MODOS DE USO
 [x] Selecao de AREA
 [x] Selecao de MULTIPLOS ASSUNTOS
 [x] Selecao de PROVA COMPLETA (com timer)
+[x] Selecao por DISCIPLINA (Quimica, Fisica, Biologia, Historia, etc.)
+[x] Filtro de questoes MULTIDISCIPLINARES
 
 ENRIQUECIMENTO DE DADOS
 [x] Nivel da dificuldade da questao
@@ -71,8 +73,8 @@ REVISAO:
     [x] ciencias
     [x] matematica
  [] ENEM 2019
-    [] linguagens
-    [] humanas
+    [x] linguagens
+    [x] humanas
     [] ciencias
     [] matematica
  [x] ENEM 2018

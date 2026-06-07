@@ -20,7 +20,11 @@
     "year": 2018,
     "test": "ENEM",
     "area": "nature",
-    "answer": "b"
+    "answer": "b",
+    "disciplinas": [
+      "fisica",
+      "quimica"
+    ]
   },
   {
     "number": 92,
@@ -41,7 +45,10 @@
     "year": 2018,
     "test": "ENEM",
     "area": "nature",
-    "answer": "d"
+    "answer": "d",
+    "disciplinas": [
+      "quimica"
+    ]
   },
   {
     "number": 93,
@@ -64,7 +71,10 @@
     "year": 2018,
     "test": "ENEM",
     "area": "nature",
-    "answer": "d"
+    "answer": "d",
+    "disciplinas": [
+      "quimica"
+    ]
   },
   {
     "number": 94,
@@ -85,7 +95,10 @@
     "year": 2018,
     "test": "ENEM",
     "area": "nature",
-    "answer": "e"
+    "answer": "e",
+    "disciplinas": [
+      "biologia"
+    ]
   },
   {
     "number": 95,
@@ -113,7 +126,10 @@
     "year": 2018,
     "test": "ENEM",
     "area": "nature",
-    "answer": "d"
+    "answer": "d",
+    "disciplinas": [
+      "quimica"
+    ]
   },
   {
     "number": 96,
@@ -134,7 +150,11 @@
     "year": 2018,
     "test": "ENEM",
     "area": "nature",
-    "answer": "b"
+    "answer": "b",
+    "disciplinas": [
+      "biologia",
+      "quimica"
+    ]
   },
   {
     "number": 97,
@@ -159,6 +179,9 @@
     "contextId": "enem_2018_nature_q97_ctx1",
     "contextIds": [
       "enem_2018_nature_q97_ctx1"
+    ],
+    "disciplinas": [
+      "fisica"
     ]
   },
   {
@@ -184,6 +207,9 @@
     "answer": "a",
     "contextIds": [
       "enem_2018_nature_q98_ctx1"
+    ],
+    "disciplinas": [
+      "biologia"
     ]
   },
   {
@@ -208,6 +234,9 @@
     "answer": "c",
     "contextIds": [
       "enem_2018_nature_q99_ctx1"
+    ],
+    "disciplinas": [
+      "quimica"
     ]
   },
   {
@@ -232,6 +261,9 @@
     "answer": "e",
     "contextIds": [
       "enem_2018_nature_q100_ctx1"
+    ],
+    "disciplinas": [
+      "biologia"
     ]
   },
   {
@@ -253,7 +285,10 @@
     "year": 2018,
     "test": "ENEM",
     "area": "nature",
-    "answer": "b"
+    "answer": "b",
+    "disciplinas": [
+      "biologia"
+    ]
   },
   {
     "number": 102,
@@ -277,6 +312,9 @@
     "answer": "c",
     "contextIds": [
       "enem_2018_nature_q102_ctx1"
+    ],
+    "disciplinas": [
+      "quimica"
     ]
   },
   {
@@ -301,6 +339,9 @@
     "answer": "c",
     "contextIds": [
       "enem_2018_nature_q103_ctx1"
+    ],
+    "disciplinas": [
+      "fisica"
     ]
   },
   {
@@ -323,7 +364,10 @@
     "year": 2018,
     "test": "ENEM",
     "area": "nature",
-    "answer": "a"
+    "answer": "a",
+    "disciplinas": [
+      "fisica"
+    ]
   },
   {
     "number": 105,
@@ -347,6 +391,9 @@
     "contextId": "enem_2018_nature_q105_ctx1",
     "contextIds": [
       "enem_2018_nature_q105_ctx1"
+    ],
+    "disciplinas": [
+      "quimica"
     ]
   },
   {
@@ -373,6 +420,9 @@
     "answer": "d",
     "contextIds": [
       "enem_2018_nature_q106_ctx1"
+    ],
+    "disciplinas": [
+      "biologia"
     ]
   },
   {
@@ -394,7 +444,10 @@
     "year": 2018,
     "test": "ENEM",
     "area": "nature",
-    "answer": "c"
+    "answer": "c",
+    "disciplinas": [
+      "biologia"
+    ]
   },
   {
     "number": 108,
@@ -423,7 +476,10 @@
     "year": 2018,
     "test": "ENEM",
     "area": "nature",
-    "answer": "d"
+    "answer": "d",
+    "disciplinas": [
+      "fisica"
+    ]
   },
   {
     "number": 109,
@@ -447,7 +503,10 @@
     "year": 2018,
     "test": "ENEM",
     "area": "nature",
-    "answer": "d"
+    "answer": "d",
+    "disciplinas": [
+      "quimica"
+    ]
   },
   {
     "number": 110,
@@ -468,7 +527,10 @@
     "year": 2018,
     "test": "ENEM",
     "area": "nature",
-    "answer": "a"
+    "answer": "a",
+    "disciplinas": [
+      "biologia"
+    ]
   },
   {
     "number": 111,
@@ -489,7 +551,10 @@
     "year": 2018,
     "test": "ENEM",
     "area": "nature",
-    "answer": "e"
+    "answer": "e",
+    "disciplinas": [
+      "biologia"
+    ]
   },
   {
     "number": 112,
@@ -511,7 +576,10 @@
     "year": 2018,
     "test": "ENEM",
     "area": "nature",
-    "answer": "c"
+    "answer": "c",
+    "disciplinas": [
+      "fisica"
+    ]
   },
   {
     "number": 113,
@@ -535,6 +603,9 @@
     "answer": "a",
     "contextIds": [
       "enem_2018_nature_q113_ctx1"
+    ],
+    "disciplinas": [
+      "biologia"
     ]
   },
   {
@@ -559,6 +630,9 @@
     "answer": "a",
     "contextIds": [
       "enem_2018_nature_q114_ctx1"
+    ],
+    "disciplinas": [
+      "quimica"
     ]
   },
   {
@@ -580,7 +654,10 @@
     "year": 2018,
     "test": "ENEM",
     "area": "nature",
-    "answer": "d"
+    "answer": "d",
+    "disciplinas": [
+      "fisica"
+    ]
   },
   {
     "number": 116,
@@ -603,7 +680,10 @@
     "year": 2018,
     "test": "ENEM",
     "area": "nature",
-    "answer": "b"
+    "answer": "b",
+    "disciplinas": [
+      "quimica"
+    ]
   },
   {
     "number": 117,
@@ -627,7 +707,10 @@
     "year": 2018,
     "test": "ENEM",
     "area": "nature",
-    "answer": "d"
+    "answer": "d",
+    "disciplinas": [
+      "biologia"
+    ]
   },
   {
     "number": 118,
@@ -650,7 +733,10 @@
     "year": 2018,
     "test": "ENEM",
     "area": "nature",
-    "answer": "b"
+    "answer": "b",
+    "disciplinas": [
+      "quimica"
+    ]
   },
   {
     "number": 119,
@@ -671,7 +757,10 @@
     "year": 2018,
     "test": "ENEM",
     "area": "nature",
-    "answer": "c"
+    "answer": "c",
+    "disciplinas": [
+      "biologia"
+    ]
   },
   {
     "number": 120,
@@ -694,7 +783,10 @@
     "year": 2018,
     "test": "ENEM",
     "area": "nature",
-    "answer": "e"
+    "answer": "e",
+    "disciplinas": [
+      "fisica"
+    ]
   },
   {
     "number": 121,
@@ -718,6 +810,10 @@
     "answer": "e",
     "contextIds": [
       "enem_2018_nature_q121_ctx1"
+    ],
+    "disciplinas": [
+      "biologia",
+      "quimica"
     ]
   },
   {
@@ -738,7 +834,10 @@
     "year": 2018,
     "test": "ENEM",
     "area": "nature",
-    "answer": "a"
+    "answer": "a",
+    "disciplinas": [
+      "fisica"
+    ]
   },
   {
     "number": 123,
@@ -761,7 +860,11 @@
     "year": 2018,
     "test": "ENEM",
     "area": "nature",
-    "answer": "e"
+    "answer": "e",
+    "disciplinas": [
+      "biologia",
+      "quimica"
+    ]
   },
   {
     "number": 124,
@@ -782,7 +885,10 @@
     "year": 2018,
     "test": "ENEM",
     "area": "nature",
-    "answer": "a"
+    "answer": "a",
+    "disciplinas": [
+      "quimica"
+    ]
   },
   {
     "number": 125,
@@ -805,7 +911,10 @@
     "year": 2018,
     "test": "ENEM",
     "area": "nature",
-    "answer": "a"
+    "answer": "a",
+    "disciplinas": [
+      "fisica"
+    ]
   },
   {
     "number": 126,
@@ -836,6 +945,10 @@
     "answer": "b",
     "contextIds": [
       "enem_2018_nature_q126_ctx1"
+    ],
+    "disciplinas": [
+      "biologia",
+      "quimica"
     ]
   },
   {
@@ -860,7 +973,10 @@
     "test": "ENEM",
     "area": "nature",
     "answer": "e",
-    "contextIds": []
+    "contextIds": [],
+    "disciplinas": [
+      "biologia"
+    ]
   },
   {
     "number": 128,
@@ -882,7 +998,10 @@
     "year": 2018,
     "test": "ENEM",
     "area": "nature",
-    "answer": "b"
+    "answer": "b",
+    "disciplinas": [
+      "fisica"
+    ]
   },
   {
     "number": 129,
@@ -905,7 +1024,11 @@
     "year": 2018,
     "test": "ENEM",
     "area": "nature",
-    "answer": "e"
+    "answer": "e",
+    "disciplinas": [
+      "biologia",
+      "fisica"
+    ]
   },
   {
     "number": 130,
@@ -928,7 +1051,10 @@
     "year": 2018,
     "test": "ENEM",
     "area": "nature",
-    "answer": "b"
+    "answer": "b",
+    "disciplinas": [
+      "quimica"
+    ]
   },
   {
     "number": 131,
@@ -951,7 +1077,10 @@
     "year": 2018,
     "test": "ENEM",
     "area": "nature",
-    "answer": "b"
+    "answer": "b",
+    "disciplinas": [
+      "fisica"
+    ]
   },
   {
     "number": 132,
@@ -975,6 +1104,9 @@
     "answer": "a",
     "contextIds": [
       "enem_2018_nature_q132_ctx1"
+    ],
+    "disciplinas": [
+      "quimica"
     ]
   },
   {
@@ -996,7 +1128,10 @@
     "year": 2018,
     "test": "ENEM",
     "area": "nature",
-    "answer": "c"
+    "answer": "c",
+    "disciplinas": [
+      "biologia"
+    ]
   },
   {
     "number": 134,
@@ -1017,7 +1152,10 @@
     "year": 2018,
     "test": "ENEM",
     "area": "nature",
-    "answer": "e"
+    "answer": "e",
+    "disciplinas": [
+      "fisica"
+    ]
   },
   {
     "number": 135,
@@ -1042,6 +1180,10 @@
     "contextId": "enem_2018_nature_q135_ctx1",
     "contextIds": [
       "enem_2018_nature_q135_ctx1"
+    ],
+    "disciplinas": [
+      "biologia",
+      "quimica"
     ]
   }
 ]

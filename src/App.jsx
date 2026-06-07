@@ -36,11 +36,18 @@ import {
 import { calcTriScores } from './triScoring.js'
 import { richHtml, richHtmlBr } from './richHtml.js'
 import { subscribeToKatexReady } from './renderMath.js'
+import {
+  DISCIPLINAS_BY_AREA,
+  ALL_DISCIPLINAS,
+  DISCIPLINA_LABELS,
+  DISCIPLINA_AREA,
+  disciplinaLabel,
+} from './data/disciplinas.js'
 const ReviewPage  = lazy(() => import('./ReviewPage.jsx'))
 const QuestionEditor = lazy(() => import('./QuestionEditor.jsx'))
 
-const ATTEMPTS_SESSION_KEY = 'questionario-tentativas'
-const PAUSED_SESSION_KEY   = 'questionario-sessao'
+const ATTEMPTS_SESSION_KEY = 'trilha-integrar-tentativas'
+const PAUSED_SESSION_KEY   = 'trilha-integrar-sessao'
 
 function readPausedSession() {
   try {
@@ -94,8 +101,8 @@ function formatTime(seconds) {
   return `${m}:${String(s).padStart(2, '0')}`
 }
 
-const APP_VERSION = '1.14.5'
-const APP_VERSION_DATE = '05/06/2026'
+const APP_VERSION = '1.16.0'
+const APP_VERSION_DATE = '07/06/2026'
 
 const REVIEW_STATUS = [
   { year: 2025, linguagens: true, humanas: true, natureza: true, matematica: true },
@@ -104,11 +111,35 @@ const REVIEW_STATUS = [
   { year: 2022, linguagens: true, humanas: true, natureza: true, matematica: true },
   { year: 2021, linguagens: true, humanas: true, natureza: true, matematica: true },
   { year: 2020, linguagens: true, humanas: true, natureza: true, matematica: true },
-  { year: 2019, linguagens: false, humanas: false, natureza: false, matematica: false },
+  { year: 2019, linguagens: true, humanas: true, natureza: false, matematica: false },
   { year: 2018, linguagens: true, humanas: true, natureza: true, matematica: true },
 ]
 
 const CHANGELOG = [
+  {
+    version: '1.16.0',
+    date: '07/06/2026',
+    items: [
+      'Nova taxonomia de disciplinas (Química, Física, Biologia, História, etc.) derivada das tags existentes',
+      'Picker da tela inicial reorganizado por disciplina com filtro "Multidisciplinar" para questões que cruzam mais de uma disciplina',
+      'Tela de resumo agora mostra desempenho agrupado por disciplina antes do agrupamento por assunto',
+    ],
+  },
+  {
+    version: '1.15.0',
+    date: '07/06/2026',
+    items: [
+      'Projeto renomeado para Trilha Integrar',
+      'Nova navegação por abas: Estude, Simule e Ensine',
+      'Estude reúne Desafio Diário, estudo por área e listas Integrar',
+      'Simule concentra a prova completa (Prova / Ano / Dia)',
+      'Ensine (professores) traz "Criar lista" e o Painel Admin, antes escondidos no menu de opções',
+      'Cor própria por aba: Estude em vermelho, Simule em âmbar, Ensine em azul (botão "Iniciar" acompanha)',
+      'Histórico de versões movido para um rodapé discreto abaixo do card, acessível em todas as abas',
+      '2019 linguagens revisada — textos faltantes adicionados, OCR corrigido (Q1 inglês), contextos remapeados (Q3/Q8/Q9/Q14/Q17/Q18/Q21/Q29/Q31/Q33/Q34/Q39 e Q1-Q5 espanhol)',
+      '2019 humanas revisada — 26 contextos criados/renomeados (Q46-Q88), textos embutidos extraídos (Q49/Q52/Q54/Q56/Q66/Q69/Q81/Q83/Q87/Q88), pares de textos remapeados (Q61/Q67/Q75/Q78), Q72 corrigido (Constituição de 1824)',
+    ],
+  },
   {
     version: '1.14.5',
     date: '05/06/2026',
@@ -422,7 +453,7 @@ function LogoutIcon() {
   )
 }
 
-const SESSION_NOTES_KEY = 'questionario-caderno'
+const SESSION_NOTES_KEY = 'trilha-integrar-caderno'
 
 function readNotesFromSession() {
   if (typeof sessionStorage === 'undefined') return ''
@@ -457,6 +488,7 @@ function ChangelogSection() {
       >
         <span className="changelog-version">v{APP_VERSION}</span>
         <span className="changelog-date">{APP_VERSION_DATE}</span>
+        <span className="changelog-label">Histórico</span>
         <span className="changelog-chevron">{open ? '▲' : '▼'}</span>
       </button>
 
@@ -577,9 +609,25 @@ export default function App() {
   const [dailyChallengeResult, setDailyChallengeResult] = useState(null) // {score, total} if already done today
   const [selectedArea, setSelectedArea] = useState(null) // 'math' | 'nature' | 'linguagens' | 'humanas'
   const [selectedTag, setSelectedTag] = useState(null)   // unified tag string | null
+  const [selectedDisciplinas, setSelectedDisciplinas] = useState([])
+  const [multidisciplinarOnly, setMultidisciplinarOnly] = useState(false)
   const [expandedArea, setExpandedArea] = useState(null) // area panel open on home screen
   const [optionsOpen, setOptionsOpen] = useState(false)
   const [headerMenuOpen, setHeaderMenuOpen] = useState(false)
+  const [activeTab, setActiveTab] = useState(() => {
+    try {
+      const stored = localStorage.getItem('trilha-integrar-active-tab')
+      return (stored === 'estude' || stored === 'simule' || stored === 'ensine') ? stored : 'estude'
+    } catch { return 'estude' }
+  })
+  const switchTab = (tab) => {
+    setActiveTab(tab)
+    try { localStorage.setItem('trilha-integrar-active-tab', tab) } catch {}
+    setSelectedYear(null)
+    setSelectedDay(null)
+    setSelectedIntegrarYear(null)
+    setSelectedTest(tab === 'simule' ? 'ENEM' : null)
+  }
   const [finishConfirmOpen, setFinishConfirmOpen] = useState(false)
   const [timerDrawerOpen, setTimerDrawerOpen] = useState(false)
 
@@ -678,7 +726,7 @@ export default function App() {
               accQuestionTimesRef.current = { ...(saved.questionTimes ?? {}) }
               const now = Date.now()
               startTimeRef.current     = now - (saved.totalElapsed ?? 0) * 1000
-              const savedQStart = Number(localStorage.getItem('questionario-question-start'))
+              const savedQStart = Number(localStorage.getItem('trilha-integrar-question-start'))
               questionStartRef.current = savedQStart && savedQStart < now ? savedQStart : now
               prevQuestionNumRef.current = null
               setIsDailyChallenge(true)
@@ -720,7 +768,7 @@ export default function App() {
                 accQuestionTimesRef.current = { ...(saved.questionTimes ?? {}) }
                 const now = Date.now()
                 startTimeRef.current   = now - (saved.totalElapsed ?? 0) * 1000
-                const savedQStart = Number(localStorage.getItem('questionario-question-start'))
+                const savedQStart = Number(localStorage.getItem('trilha-integrar-question-start'))
                 questionStartRef.current = savedQStart && savedQStart < now ? savedQStart : now
                 prevQuestionNumRef.current = null
                 setPhase('quiz')
@@ -894,7 +942,7 @@ export default function App() {
         (accQuestionTimesRef.current[prevNum] || 0) +
         Math.floor((Date.now() - questionStartRef.current) / 1000)
       questionStartRef.current = Date.now()
-      try { localStorage.setItem('questionario-question-start', String(questionStartRef.current)) } catch {}
+      try { localStorage.setItem('trilha-integrar-question-start', String(questionStartRef.current)) } catch {}
       setQuestionElapsed(0)
     }
     prevQuestionNumRef.current = question.number
@@ -907,7 +955,7 @@ export default function App() {
       if (startTimeRef.current) setTotalElapsed(Math.floor((Date.now() - startTimeRef.current) / 1000))
       if (questionStartRef.current) {
         setQuestionElapsed(Math.floor((Date.now() - questionStartRef.current) / 1000))
-        try { localStorage.setItem('questionario-question-start', String(questionStartRef.current)) } catch {}
+        try { localStorage.setItem('trilha-integrar-question-start', String(questionStartRef.current)) } catch {}
       }
     }, 1000)
     return () => clearInterval(id)
@@ -1113,7 +1161,7 @@ export default function App() {
     })
     startTimeRef.current   = null
     questionStartRef.current = null
-    try { localStorage.removeItem('questionario-question-start') } catch {}
+    try { localStorage.removeItem('trilha-integrar-question-start') } catch {}
     setPhase('home')
   }, [question, totalElapsed, attempts, selectedTest, selectedYear, selectedDay, selectedArea, selectedTag, foreignLang])
 
@@ -1415,6 +1463,55 @@ export default function App() {
     setPhase('quiz')
   }, [allQuestions, foreignLang])
 
+  const startDisciplinaQuiz = useCallback((disciplinas, opts = {}) => {
+    const { multidisciplinarOnly: multi = false, tag = null } = opts
+    const wanted = new Set(disciplinas)
+    const pool = allQuestions.filter((q) => {
+      const qDisc = q.disciplinas ?? []
+      if (multi && qDisc.length < 2) return false
+      if (wanted.size > 0 && !qDisc.some((d) => wanted.has(d))) return false
+      if (tag !== null && !q.tags?.includes(tag)) return false
+      return true
+    })
+    if (pool.length === 0) return
+
+    const variants = {}
+    pool.forEach((q) => {
+      if (q.language) {
+        if (!variants[q.number]) variants[q.number] = {}
+        variants[q.number][q.language] = q
+      }
+    })
+    langVariantsRef.current = variants
+
+    const deduped = pool.filter((q) => !q.language || q.language === foreignLang)
+    const shuffled = [...deduped]
+    for (let i = shuffled.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1))
+      ;[shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]]
+    }
+    const picked = shuffled.slice(0, 10)
+
+    clearPausedSession()
+    setAttempts({})
+    saveAttemptsToSession({})
+    const areas = new Set(disciplinas.map((d) => DISCIPLINA_AREA[d]).filter(Boolean))
+    setSelectedArea(areas.size === 1 ? [...areas][0] : null)
+    setSelectedTag(tag)
+    setExpandedArea(null)
+    setIsDailyChallenge(false)
+    const now = Date.now()
+    startTimeRef.current = now
+    questionStartRef.current = now
+    accQuestionTimesRef.current = {}
+    prevQuestionNumRef.current = null
+    setQuestions(picked)
+    setQuestion(picked[0])
+    setTotalElapsed(0)
+    setQuestionElapsed(0)
+    setPhase('quiz')
+  }, [allQuestions, foreignLang])
+
   const switchLang = useCallback((lang) => {
     if (!question?.language || lang === foreignLang) return
     const variant = langVariantsRef.current[question.number]?.[lang]
@@ -1438,7 +1535,7 @@ export default function App() {
     setQuestionTimes({ ...accQuestionTimesRef.current })
     startTimeRef.current = null
     questionStartRef.current = null
-    try { localStorage.removeItem('questionario-question-start') } catch {}
+    try { localStorage.removeItem('trilha-integrar-question-start') } catch {}
     clearPausedSession()
 
     setTriScores(calcTriScores(questions, attempts))
@@ -1563,7 +1660,9 @@ export default function App() {
       )
     }
 
-    const availableTests = [...new Set(['ENEM', 'UFSC', ...allQuestions.map((q) => q.test).filter(Boolean)])]
+    const allTests = [...new Set(['ENEM', 'UFSC', ...allQuestions.map((q) => q.test).filter(Boolean)])]
+    // Simule never offers Integrar (Integrar lives in Estude)
+    const simuleAvailableTests = allTests.filter(t => t !== 'Integrar')
     const isIntegrar = selectedTest === 'Integrar'
 
     const availableYears = [...new Set(
@@ -1572,24 +1671,19 @@ export default function App() {
         .map((q) => q.year)
     )].sort((a, b) => b - a)
 
-    // For Integrar: build unique {day, teacher, year} entries
-    const integrarQs = isIntegrar ? allQuestions.filter(q => q.test === 'Integrar') : []
-    const integrarYears = isIntegrar
-      ? [...new Set(integrarQs.map(q => q.year).filter(Boolean))].sort((a, b) => b - a)
-      : []
-    // Unique sets filtered by optional year selection
-    const integrarSetsFiltered = isIntegrar
-      ? (() => {
-          const seen = new Set()
-          return integrarQs
-            .filter(q => !selectedIntegrarYear || q.year === selectedIntegrarYear)
-            .reduce((acc, q) => {
-              const key = `${q.teacher}::${q.day}`
-              if (!seen.has(key)) { seen.add(key); acc.push({ name: q.day, teacher: q.teacher, year: q.year }) }
-              return acc
-            }, [])
-        })()
-      : []
+    // Integrar lists are available regardless of selectedTest (rendered inside Estude tab)
+    const allIntegrarQs = allQuestions.filter(q => q.test === 'Integrar')
+    const integrarYears = [...new Set(allIntegrarQs.map(q => q.year).filter(Boolean))].sort((a, b) => b - a)
+    const integrarSetsFiltered = (() => {
+      const seen = new Set()
+      return allIntegrarQs
+        .filter(q => !selectedIntegrarYear || q.year === selectedIntegrarYear)
+        .reduce((acc, q) => {
+          const key = `${q.teacher}::${q.day}`
+          if (!seen.has(key)) { seen.add(key); acc.push({ name: q.day, teacher: q.teacher, year: q.year }) }
+          return acc
+        }, [])
+    })()
 
     const canStart = selectedTest && (
       isIntegrar
@@ -1651,18 +1745,41 @@ export default function App() {
 
     return (
       <div className="app-shell">
-        <div className="home-screen">
-          <div className="home-topbar">
-            <span className="home-greeting">Olá, {user?.username}</span>
-            <button
-              type="button"
-              className="theme-toggle home-theme-btn"
-              onClick={() => setDark((d) => !d)}
-              aria-label="Alternar tema"
-            >
-              {dark ? <SunIcon /> : <MoonIcon />}
-            </button>
-          </div>
+        <div className={`home-screen home-screen--${activeTab}`}>
+          <header className="home-header">
+            <div className="home-header-row">
+              <span className="home-header-title">Trilha Integrar</span>
+              <div className="home-header-actions">
+                <span className="home-greeting">Olá, {user?.username}</span>
+                <button
+                  type="button"
+                  className="theme-toggle home-theme-btn"
+                  onClick={() => setDark((d) => !d)}
+                  aria-label="Alternar tema"
+                >
+                  {dark ? <SunIcon /> : <MoonIcon />}
+                </button>
+              </div>
+            </div>
+            <nav className="home-tab-strip" role="tablist" aria-label="Modo">
+              {[
+                { id: 'estude', label: 'Estude' },
+                { id: 'simule', label: 'Simule' },
+                { id: 'ensine', label: 'Ensine' },
+              ].map(({ id, label }) => (
+                <button
+                  key={id}
+                  type="button"
+                  role="tab"
+                  aria-selected={activeTab === id}
+                  className={`home-tab-btn${activeTab === id ? ' active' : ''}`}
+                  onClick={() => switchTab(id)}
+                >
+                  {label}
+                </button>
+              ))}
+            </nav>
+          </header>
 
           <div className="home-card">
             <div className="home-logo-wrap">
@@ -1672,177 +1789,9 @@ export default function App() {
                 className="home-logo"
               />
             </div>
-            <h1 className="home-title">Questionário</h1>
 
-            <div className="home-filters">
-              {/* Step 1 — Prova */}
-              <div className="home-filter-group">
-                <span className="home-filter-label">Prova</span>
-                <div className="home-test-seg">
-                  {availableTests.map((t) => (
-                    <button
-                      key={t}
-                      type="button"
-                      className={`home-test-seg-btn${selectedTest === t ? ' active' : ''}`}
-                      onClick={() => {
-                        setSelectedTest(t)
-                        setSelectedYear(null)
-                        setSelectedDay(null)
-                        setSelectedIntegrarYear(null)
-                      }}
-                    >
-                      {t}
-                    </button>
-                  ))}
-                </div>
-              </div>
-
-              {/* Step 2 — Integrar: optional year filter */}
-              {isIntegrar && integrarYears.length > 0 && (
-                <div className="home-filter-group">
-                  <span className="home-filter-label">Ano <span style={{ fontWeight: 400, opacity: 0.6 }}>(opcional)</span></span>
-                  <div className="home-filter-pills home-year-grid">
-                    {integrarYears.map((y) => (
-                      <button
-                        key={y}
-                        type="button"
-                        className={`home-filter-pill home-year-pill ${selectedIntegrarYear === y ? 'active' : ''}`}
-                        onClick={() => {
-                          setSelectedIntegrarYear(prev => prev === y ? null : y)
-                          setSelectedDay(null)
-                        }}
-                      >
-                        <span>{y}</span>
-                      </button>
-                    ))}
-                  </div>
-                </div>
-              )}
-
-              {/* Step 3 — Integrar: choose list */}
-              {isIntegrar && (
-                <div className="home-filter-group">
-                  <span className="home-filter-label">Lista</span>
-                  <div className="home-filter-pills">
-                    {integrarSetsFiltered.length === 0 && (
-                      <span style={{ fontSize: '0.85rem', color: 'var(--text-soft)' }}>Nenhuma lista disponível</span>
-                    )}
-                    {integrarSetsFiltered.map(({ name, teacher, year }) => {
-                      const setKey = `${teacher}::${name}`
-                      const isActive = selectedDay === setKey
-                      return (
-                        <button
-                          key={setKey}
-                          type="button"
-                          className={`home-filter-pill home-filter-pill--wide home-day-pill ${isActive ? 'active' : ''}`}
-                          onClick={() => { setSelectedYear(year ?? null); setSelectedDay(setKey) }}
-                        >
-                          <span className="home-day-label-text">
-                            {name}
-                            {year ? <span style={{ opacity: 0.6 }}> · {year}</span> : ''}
-                          </span>
-                          <span style={{ fontSize: '0.75rem', opacity: 0.6 }}>{teacher}</span>
-                        </button>
-                      )
-                    })}
-                  </div>
-                </div>
-              )}
-
-              {/* Step 2 — Ano (non-Integrar tests) */}
-              {!isIntegrar && (
-              <div className="home-filter-group">
-                <span className="home-filter-label">Ano</span>
-                <div className="home-filter-pills home-year-grid">
-                  {availableYears.map((y) => {
-                    const tier = yearTier(y)
-                    const pct = yearPercent(y)
-                    return (
-                      <button
-                        key={y}
-                        type="button"
-                        className={`home-filter-pill home-year-pill ${selectedYear === y ? 'active' : ''} ${tier ?? ''}`}
-                        onClick={() => {
-                          setSelectedYear(y)
-                          setSelectedDay(null)
-                        }}
-                      >
-                        <span className="home-year-label">
-                          <span>{y}</span>
-                          {tier === 'perfect' && <span className="home-year-star">★</span>}
-                          {tier === 'great'   && <span className="home-year-star">✓</span>}
-                          {tier === 'done'    && <span className="home-year-check">●</span>}
-                        </span>
-                        {pct != null && <span className="home-year-pct">{pct}%</span>}
-                      </button>
-                    )
-                  })}
-                </div>
-              </div>
-              )}
-
-              {/* Step 3 — Dia (ENEM only) */}
-              {selectedTest === 'ENEM' && selectedYear && (
-                <div className="home-filter-group">
-                  <span className="home-filter-label">Dia</span>
-                  <div className="home-filter-pills">
-                    {[1, 2].map((day) => {
-                      const label = day === 1
-                        ? 'Dia 1 · Linguagens e Ciências Humanas'
-                        : 'Dia 2 · Matemática e Ciências da Natureza'
-                      const r = getResult(selectedTest, selectedYear, day)
-                      const tier = r ? resultTier(r.score, r.total) : null
-                      return (
-                        <button
-                          key={day}
-                          type="button"
-                          className={`home-filter-pill home-filter-pill--wide home-day-pill ${selectedDay === day ? 'active' : ''} ${tier ?? ''}`}
-                          onClick={() => setSelectedDay(day)}
-                        >
-                          <span className="home-day-label-text">
-                            {tier === 'perfect' && <span className="home-day-tier-icon">★ </span>}
-                            {tier === 'great'   && <span className="home-day-tier-icon">✓ </span>}
-                            {label}
-                          </span>
-                          {r && (
-                            <span className="home-day-result">
-                              {r.score}/{r.total} · {Math.round(r.score / r.total * 100)}%
-                            </span>
-                          )}
-                        </button>
-                      )
-                    })}
-                  </div>
-                </div>
-              )}
-              {selectedTest === 'ENEM' && !selectedYear && (
-                <div className="home-filter-group">
-                  <span className="home-filter-label">Dia</span>
-                  <div className="home-filter-pills">
-                    <button type="button" className="home-filter-pill home-filter-pill--wide" disabled>
-                      Dia 1 · Linguagens e Ciências Humanas
-                    </button>
-                    <button type="button" className="home-filter-pill home-filter-pill--wide" disabled>
-                      Dia 2 · Matemática e Ciências da Natureza
-                    </button>
-                  </div>
-                </div>
-              )}
-            </div>
-
-            <button
-              type="button"
-              className="home-start-btn"
-              onClick={startQuiz}
-              disabled={!canStart}
-            >
-              Iniciar
-            </button>
-
-            {selectedTest === 'ENEM' && (
-              <>
-                <div className="home-divider" />
-
+            {activeTab === 'estude' && (
+              <div className="home-tab-content">
                 {dailyChallengeResult ? (
                   <div className="daily-done-banner">
                     <span className="daily-done-icon">★</span>
@@ -1865,39 +1814,274 @@ export default function App() {
                 <div className="home-divider" />
 
                 <div className="home-area-section">
-                  <span className="home-filter-label">Estudar por área</span>
+                  <span className="home-filter-label">Estudar por disciplina</span>
+                  {(['linguagens', 'humanas', 'nature', 'math']).map((area) => (
+                    <div key={area} className="home-area-day-group">
+                      <span className="home-area-day-label">{AREA_LABELS[area]}</span>
+                      <div className="home-area-grid">
+                        {DISCIPLINAS_BY_AREA[area].map((slug) => {
+                          const active = selectedDisciplinas.includes(slug)
+                          return (
+                            <button
+                              key={slug}
+                              type="button"
+                              className={`home-area-pill${active ? ' home-area-pill--active' : ''}`}
+                              onClick={() => {
+                                setSelectedDisciplinas((prev) =>
+                                  prev.includes(slug)
+                                    ? prev.filter((s) => s !== slug)
+                                    : [...prev, slug]
+                                )
+                              }}
+                            >
+                              {DISCIPLINA_LABELS[slug]}
+                            </button>
+                          )
+                        })}
+                      </div>
+                    </div>
+                  ))}
                   <div className="home-area-day-group">
-                    <span className="home-area-day-label">Dia 1</span>
+                    <span className="home-area-day-label">Outros</span>
                     <div className="home-area-grid">
-                      {(['linguagens', 'humanas']).map((area) => (
-                        <button
-                          key={area}
-                          type="button"
-                          className="home-area-pill"
-                          onClick={() => startAreaQuiz(area)}
-                        >
-                          {areaLabel(area)}
-                        </button>
-                      ))}
+                      <button
+                        type="button"
+                        className={`home-area-pill${multidisciplinarOnly ? ' home-area-pill--active' : ''}`}
+                        onClick={() => setMultidisciplinarOnly((v) => !v)}
+                      >
+                        Multidisciplinar
+                      </button>
                     </div>
                   </div>
-                  <div className="home-area-day-group">
-                    <span className="home-area-day-label">Dia 2</span>
-                    <div className="home-area-grid">
-                      {(['math', 'nature']).map((area) => (
-                        <button
-                          key={area}
-                          type="button"
-                          className="home-area-pill"
-                          onClick={() => startAreaQuiz(area)}
-                        >
-                          {areaLabel(area)}
-                        </button>
-                      ))}
-                    </div>
-                  </div>
+                  <button
+                    type="button"
+                    className="home-area-pill home-area-pill--primary"
+                    disabled={selectedDisciplinas.length === 0 && !multidisciplinarOnly}
+                    onClick={() => startDisciplinaQuiz(selectedDisciplinas, { multidisciplinarOnly })}
+                  >
+                    Começar simulado
+                  </button>
                 </div>
-              </>
+
+                {allIntegrarQs.length > 0 && (
+                  <>
+                    <div className="home-divider" />
+
+                    <div className="home-filters">
+                      <div className="home-filter-group">
+                        <span className="home-filter-label">Listas Integrar</span>
+                      </div>
+
+                      {integrarYears.length > 0 && (
+                        <div className="home-filter-group">
+                          <span className="home-filter-label">Ano <span style={{ fontWeight: 400, opacity: 0.6 }}>(opcional)</span></span>
+                          <div className="home-filter-pills home-year-grid">
+                            {integrarYears.map((y) => (
+                              <button
+                                key={y}
+                                type="button"
+                                className={`home-filter-pill home-year-pill ${selectedIntegrarYear === y ? 'active' : ''}`}
+                                onClick={() => {
+                                  setSelectedIntegrarYear(prev => prev === y ? null : y)
+                                  setSelectedDay(null)
+                                }}
+                              >
+                                <span>{y}</span>
+                              </button>
+                            ))}
+                          </div>
+                        </div>
+                      )}
+
+                      <div className="home-filter-group">
+                        <span className="home-filter-label">Lista</span>
+                        <div className="home-filter-pills">
+                          {integrarSetsFiltered.length === 0 && (
+                            <span style={{ fontSize: '0.85rem', color: 'var(--text-soft)' }}>Nenhuma lista disponível</span>
+                          )}
+                          {integrarSetsFiltered.map(({ name, teacher, year }) => {
+                            const setKey = `${teacher}::${name}`
+                            const isActive = isIntegrar && selectedDay === setKey
+                            return (
+                              <button
+                                key={setKey}
+                                type="button"
+                                className={`home-filter-pill home-filter-pill--wide home-day-pill ${isActive ? 'active' : ''}`}
+                                onClick={() => {
+                                  setSelectedTest('Integrar')
+                                  setSelectedYear(year ?? null)
+                                  setSelectedDay(setKey)
+                                }}
+                              >
+                                <span className="home-day-label-text">
+                                  {name}
+                                  {year ? <span style={{ opacity: 0.6 }}> · {year}</span> : ''}
+                                </span>
+                                <span style={{ fontSize: '0.75rem', opacity: 0.6 }}>{teacher}</span>
+                              </button>
+                            )
+                          })}
+                        </div>
+                      </div>
+                    </div>
+
+                    {isIntegrar && !!selectedDay && (
+                      <button
+                        type="button"
+                        className="home-start-btn"
+                        onClick={startQuiz}
+                      >
+                        Iniciar lista
+                      </button>
+                    )}
+                  </>
+                )}
+              </div>
+            )}
+
+            {activeTab === 'simule' && (
+              <div className="home-tab-content">
+                <div className="home-filters">
+                  {/* Step 1 — Prova */}
+                  <div className="home-filter-group">
+                    <span className="home-filter-label">Prova</span>
+                    <div className="home-test-seg">
+                      {simuleAvailableTests.map((t) => (
+                        <button
+                          key={t}
+                          type="button"
+                          className={`home-test-seg-btn${selectedTest === t ? ' active' : ''}`}
+                          onClick={() => {
+                            setSelectedTest(t)
+                            setSelectedYear(null)
+                            setSelectedDay(null)
+                          }}
+                        >
+                          {t}
+                        </button>
+                      ))}
+                    </div>
+                  </div>
+
+                  {/* Step 2 — Ano */}
+                  <div className="home-filter-group">
+                    <span className="home-filter-label">Ano</span>
+                    <div className="home-filter-pills home-year-grid">
+                      {availableYears.map((y) => {
+                        const tier = yearTier(y)
+                        const pct = yearPercent(y)
+                        return (
+                          <button
+                            key={y}
+                            type="button"
+                            className={`home-filter-pill home-year-pill ${selectedYear === y ? 'active' : ''} ${tier ?? ''}`}
+                            onClick={() => {
+                              setSelectedYear(y)
+                              setSelectedDay(null)
+                            }}
+                          >
+                            <span className="home-year-label">
+                              <span>{y}</span>
+                              {tier === 'perfect' && <span className="home-year-star">★</span>}
+                              {tier === 'great'   && <span className="home-year-star">✓</span>}
+                              {tier === 'done'    && <span className="home-year-check">●</span>}
+                            </span>
+                            {pct != null && <span className="home-year-pct">{pct}%</span>}
+                          </button>
+                        )
+                      })}
+                    </div>
+                  </div>
+
+                  {/* Step 3 — Dia (ENEM only) */}
+                  {selectedTest === 'ENEM' && selectedYear && (
+                    <div className="home-filter-group">
+                      <span className="home-filter-label">Dia</span>
+                      <div className="home-filter-pills">
+                        {[1, 2].map((day) => {
+                          const label = day === 1
+                            ? 'Dia 1 · Linguagens e Ciências Humanas'
+                            : 'Dia 2 · Matemática e Ciências da Natureza'
+                          const r = getResult(selectedTest, selectedYear, day)
+                          const tier = r ? resultTier(r.score, r.total) : null
+                          return (
+                            <button
+                              key={day}
+                              type="button"
+                              className={`home-filter-pill home-filter-pill--wide home-day-pill ${selectedDay === day ? 'active' : ''} ${tier ?? ''}`}
+                              onClick={() => setSelectedDay(day)}
+                            >
+                              <span className="home-day-label-text">
+                                {tier === 'perfect' && <span className="home-day-tier-icon">★ </span>}
+                                {tier === 'great'   && <span className="home-day-tier-icon">✓ </span>}
+                                {label}
+                              </span>
+                              {r && (
+                                <span className="home-day-result">
+                                  {r.score}/{r.total} · {Math.round(r.score / r.total * 100)}%
+                                </span>
+                              )}
+                            </button>
+                          )
+                        })}
+                      </div>
+                    </div>
+                  )}
+                  {selectedTest === 'ENEM' && !selectedYear && (
+                    <div className="home-filter-group">
+                      <span className="home-filter-label">Dia</span>
+                      <div className="home-filter-pills">
+                        <button type="button" className="home-filter-pill home-filter-pill--wide" disabled>
+                          Dia 1 · Linguagens e Ciências Humanas
+                        </button>
+                        <button type="button" className="home-filter-pill home-filter-pill--wide" disabled>
+                          Dia 2 · Matemática e Ciências da Natureza
+                        </button>
+                      </div>
+                    </div>
+                  )}
+                </div>
+
+                <button
+                  type="button"
+                  className="home-start-btn"
+                  onClick={startQuiz}
+                  disabled={!canStart}
+                >
+                  Iniciar
+                </button>
+              </div>
+            )}
+
+            {activeTab === 'ensine' && (
+              <div className="home-tab-content">
+                {(user?.role === 'prof' || user?.role === 'admin') ? (
+                  <>
+                    <button
+                      type="button"
+                      className="home-start-btn"
+                      onClick={() => { window.location.href = '/editor' }}
+                    >
+                      Criar lista
+                    </button>
+                    {user?.role === 'admin' && (
+                      <button
+                        type="button"
+                        className="btn--ghost"
+                        onClick={openAdminPanel}
+                        disabled={adminLoading}
+                      >
+                        {adminLoading ? 'Carregando…' : 'Painel Admin'}
+                      </button>
+                    )}
+                    {adminError && <p className="auth-error" style={{ margin: 0 }}>{adminError}</p>}
+                  </>
+                ) : (
+                  <p className="home-ensine-message">
+                    Esta área é para professores. Fale com seu professor se você acredita que deveria ter acesso.
+                  </p>
+                )}
+              </div>
             )}
 
             <button
@@ -1907,7 +2091,9 @@ export default function App() {
             >
               Sair
             </button>
+          </div>
 
+          <div className="home-footer">
             <ChangelogSection />
           </div>
         </div>
@@ -1962,26 +2148,6 @@ export default function App() {
                   <span className="options-toggle-thumb" />
                 </span>
               </label>
-              {(user?.role === 'prof' || user?.role === 'admin') && (
-                <button
-                  type="button"
-                  className="options-admin-btn"
-                  onClick={() => { window.location.href = '/editor' }}
-                >
-                  Criar
-                </button>
-              )}
-              {user?.role === 'admin' && (
-                <button
-                  type="button"
-                  className="options-admin-btn"
-                  onClick={() => { setOptionsOpen(false); openAdminPanel() }}
-                  disabled={adminLoading}
-                >
-                  {adminLoading ? 'Carregando…' : 'Painel Admin'}
-                </button>
-              )}
-              {adminError && <p className="auth-error" style={{ margin: 0 }}>{adminError}</p>}
               <div className="options-divider" />
               <label className="options-toggle-row">
                 <span className="options-toggle-label" style={{ display: 'flex', alignItems: 'center', gap: '0.4rem' }}>{soundMuted ? <SoundOffIcon /> : <SoundOnIcon />} Som</span>
@@ -2145,6 +2311,36 @@ export default function App() {
       .filter(([, s]) => s.answered >= 1)
       .map(([tag, s]) => ({
         tag,
+        total: s.total,
+        answered: s.answered,
+        correct: s.correct,
+        time: s.time,
+        hitRate: Math.round((s.correct / s.answered) * 100),
+        avgTime: Math.round(s.time / s.answered),
+      }))
+      .sort((a, b) => a.hitRate - b.hitRate)
+
+    // ── Disciplina breakdown ──────────────────────────────────────────────
+    const discStats = {}
+    scorableQuestions.forEach((q) => {
+      const att = attempts[q.number]
+      const t = questionTimes[q.number] || 0
+      ;(q.disciplinas || []).forEach((slug) => {
+        if (!discStats[slug]) discStats[slug] = { total: 0, answered: 0, correct: 0, time: 0 }
+        discStats[slug].total++
+        if (att) {
+          discStats[slug].answered++
+          if (att.correct) discStats[slug].correct++
+          discStats[slug].time += t
+        }
+      })
+    })
+
+    const discList = Object.entries(discStats)
+      .filter(([, s]) => s.answered >= 1)
+      .map(([slug, s]) => ({
+        slug,
+        label: DISCIPLINA_LABELS[slug] ?? slug,
         total: s.total,
         answered: s.answered,
         correct: s.correct,
@@ -2406,6 +2602,44 @@ export default function App() {
                 {diagnosis.mastery.length === 0 && diagnosis.slow.length === 0 && diagnosis.weak.length === 0 && (
                   <p className="diag-empty">Responda mais questões para ver seu diagnóstico.</p>
                 )}
+              </div>
+            )}
+
+            {discList.length > 0 && (
+              <div className="summary-subjects-wrap">
+                <h2 className="summary-section-title">Desempenho por disciplina</h2>
+                <div className="summary-subjects">
+                  {discList.map(({ slug, label, answered, correct, hitRate, avgTime: at }) => (
+                    <div
+                      key={slug}
+                      className={`summary-subject-card ${hitRate < 50 ? 'summary-subject-card--weak' : hitRate >= 80 ? 'summary-subject-card--strong' : ''}`}
+                    >
+                      <div className="summary-subject-header">
+                        <span className="summary-subject-name">{label}</span>
+                        <span className={`summary-subject-rate ${hitRate < 50 ? 'rate--bad' : hitRate >= 80 ? 'rate--ok' : 'rate--mid'}`}>
+                          {hitRate}%
+                        </span>
+                      </div>
+                      <div className="summary-subject-bar">
+                        <div
+                          className="summary-subject-bar-fill"
+                          style={{
+                            width: `${hitRate}%`,
+                            background: hitRate < 50
+                              ? 'var(--rail-bad)'
+                              : hitRate >= 80
+                                ? 'var(--rail-ok)'
+                                : 'var(--accent)',
+                          }}
+                        />
+                      </div>
+                      <div className="summary-subject-meta">
+                        <span>{correct}/{answered} corretas</span>
+                        {at > 0 && <span>~{formatTime(at)}/questão</span>}
+                      </div>
+                    </div>
+                  ))}
+                </div>
               </div>
             )}
 

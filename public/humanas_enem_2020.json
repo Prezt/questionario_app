@@ -21,6 +21,9 @@
     "answer": "d",
     "contextIds": [
       "enem_2020_humanas_q46_ctx1"
+    ],
+    "disciplinas": [
+      "geografia"
     ]
   },
   {
@@ -43,7 +46,11 @@
     "test": "ENEM",
     "area": "humanas",
     "answer": "a",
-    "contextId": "enem_2020_humanas_q47_ctx2"
+    "contextId": "enem_2020_humanas_q47_ctx2",
+    "disciplinas": [
+      "geografia",
+      "sociologia"
+    ]
   },
   {
     "number": 48,
@@ -66,7 +73,10 @@
     "test": "ENEM",
     "area": "humanas",
     "answer": "b",
-    "contextId": "enem_2020_humanas_q48_ctx2"
+    "contextId": "enem_2020_humanas_q48_ctx2",
+    "disciplinas": [
+      "sociologia"
+    ]
   },
   {
     "number": 49,
@@ -88,7 +98,11 @@
     "test": "ENEM",
     "area": "humanas",
     "answer": "c",
-    "contextId": "enem_2020_humanas_q49_ctx1"
+    "contextId": "enem_2020_humanas_q49_ctx1",
+    "disciplinas": [
+      "historia",
+      "sociologia"
+    ]
   },
   {
     "number": 50,
@@ -110,7 +124,10 @@
     "test": "ENEM",
     "area": "humanas",
     "answer": "b",
-    "contextId": "enem_2020_humanas_q50_ctx1"
+    "contextId": "enem_2020_humanas_q50_ctx1",
+    "disciplinas": [
+      "geografia"
+    ]
   },
   {
     "number": 51,
@@ -132,7 +149,10 @@
     "test": "ENEM",
     "area": "humanas",
     "answer": "d",
-    "contextId": "enem_2020_humanas_q51_ctx1"
+    "contextId": "enem_2020_humanas_q51_ctx1",
+    "disciplinas": [
+      "geografia"
+    ]
   },
   {
     "number": 52,
@@ -154,7 +174,11 @@
     "test": "ENEM",
     "area": "humanas",
     "answer": "d",
-    "contextId": "enem_2020_humanas_q52_ctx1"
+    "contextId": "enem_2020_humanas_q52_ctx1",
+    "disciplinas": [
+      "filosofia",
+      "historia"
+    ]
   },
   {
     "number": 53,
@@ -176,7 +200,10 @@
     "test": "ENEM",
     "area": "humanas",
     "answer": "d",
-    "contextId": "enem_2020_humanas_q53_ctx1"
+    "contextId": "enem_2020_humanas_q53_ctx1",
+    "disciplinas": [
+      "geografia"
+    ]
   },
   {
     "number": 54,
@@ -198,7 +225,11 @@
     "test": "ENEM",
     "area": "humanas",
     "answer": "a",
-    "contextId": "enem_2020_humanas_q54_ctx1"
+    "contextId": "enem_2020_humanas_q54_ctx1",
+    "disciplinas": [
+      "filosofia",
+      "historia"
+    ]
   },
   {
     "number": 55,
@@ -220,7 +251,10 @@
     "test": "ENEM",
     "area": "humanas",
     "answer": "e",
-    "contextId": "enem_2020_humanas_q55_ctx2"
+    "contextId": "enem_2020_humanas_q55_ctx2",
+    "disciplinas": [
+      "filosofia"
+    ]
   },
   {
     "number": 56,
@@ -244,6 +278,9 @@
     "answer": "d",
     "contextIds": [
       "enem_2020_humanas_q56_ctx1"
+    ],
+    "disciplinas": [
+      "geografia"
     ]
   },
   {
@@ -266,7 +303,11 @@
     "test": "ENEM",
     "area": "humanas",
     "answer": "b",
-    "contextId": "enem_2020_humanas_q57_ctx1"
+    "contextId": "enem_2020_humanas_q57_ctx1",
+    "disciplinas": [
+      "geografia",
+      "historia"
+    ]
   },
   {
     "number": 58,
@@ -288,7 +329,11 @@
     "test": "ENEM",
     "area": "humanas",
     "answer": "e",
-    "contextId": "enem_2020_humanas_q58_ctx1"
+    "contextId": "enem_2020_humanas_q58_ctx1",
+    "disciplinas": [
+      "filosofia",
+      "geografia"
+    ]
   },
   {
     "number": 59,
@@ -310,7 +355,10 @@
     "test": "ENEM",
     "area": "humanas",
     "answer": "c",
-    "contextId": "enem_2020_humanas_q59_ctx1"
+    "contextId": "enem_2020_humanas_q59_ctx1",
+    "disciplinas": [
+      "geografia"
+    ]
   },
   {
     "number": 60,
@@ -332,7 +380,10 @@
     "test": "ENEM",
     "area": "humanas",
     "answer": "e",
-    "contextId": "enem_2020_humanas_q60_ctx1"
+    "contextId": "enem_2020_humanas_q60_ctx1",
+    "disciplinas": [
+      "filosofia"
+    ]
   },
   {
     "number": 61,
@@ -354,7 +405,11 @@
     "test": "ENEM",
     "area": "humanas",
     "answer": "c",
-    "contextId": "enem_2020_humanas_q61_ctx1"
+    "contextId": "enem_2020_humanas_q61_ctx1",
+    "disciplinas": [
+      "geografia",
+      "historia"
+    ]
   },
   {
     "number": 62,
@@ -376,7 +431,11 @@
     "test": "ENEM",
     "area": "humanas",
     "answer": "b",
-    "contextId": "enem_2020_humanas_q62_ctx1"
+    "contextId": "enem_2020_humanas_q62_ctx1",
+    "disciplinas": [
+      "historia",
+      "sociologia"
+    ]
   },
   {
     "number": 63,
@@ -399,7 +458,12 @@
     "test": "ENEM",
     "area": "humanas",
     "answer": "b",
-    "contextId": "enem_2020_humanas_q63_ctx2"
+    "contextId": "enem_2020_humanas_q63_ctx2",
+    "disciplinas": [
+      "filosofia",
+      "historia",
+      "sociologia"
+    ]
   },
   {
     "number": 64,
@@ -424,6 +488,11 @@
     "answer": "e",
     "contextIds": [
       "enem_2020_humanas_q64_ctx1"
+    ],
+    "disciplinas": [
+      "filosofia",
+      "geografia",
+      "historia"
     ]
   },
   {
@@ -446,7 +515,10 @@
     "test": "ENEM",
     "area": "humanas",
     "answer": "d",
-    "contextId": "enem_2020_humanas_q65_ctx1"
+    "contextId": "enem_2020_humanas_q65_ctx1",
+    "disciplinas": [
+      "geografia"
+    ]
   },
   {
     "number": 66,
@@ -468,7 +540,11 @@
     "test": "ENEM",
     "area": "humanas",
     "answer": "e",
-    "contextId": "enem_2020_humanas_q66_ctx1"
+    "contextId": "enem_2020_humanas_q66_ctx1",
+    "disciplinas": [
+      "historia",
+      "sociologia"
+    ]
   },
   {
     "number": 67,
@@ -491,7 +567,10 @@
     "year": 2020,
     "test": "ENEM",
     "area": "humanas",
-    "answer": "b"
+    "answer": "b",
+    "disciplinas": [
+      "geografia"
+    ]
   },
   {
     "number": 68,
@@ -514,7 +593,11 @@
     "test": "ENEM",
     "area": "humanas",
     "answer": "d",
-    "contextId": "enem_2020_humanas_q68_ctx2"
+    "contextId": "enem_2020_humanas_q68_ctx2",
+    "disciplinas": [
+      "filosofia",
+      "historia"
+    ]
   },
   {
     "number": 69,
@@ -537,7 +620,11 @@
     "test": "ENEM",
     "area": "humanas",
     "answer": "e",
-    "contextId": "enem_2020_humanas_q69_ctx1"
+    "contextId": "enem_2020_humanas_q69_ctx1",
+    "disciplinas": [
+      "filosofia",
+      "sociologia"
+    ]
   },
   {
     "number": 70,
@@ -559,7 +646,10 @@
     "test": "ENEM",
     "area": "humanas",
     "answer": "e",
-    "contextId": "enem_2020_humanas_q70_ctx1"
+    "contextId": "enem_2020_humanas_q70_ctx1",
+    "disciplinas": [
+      "historia"
+    ]
   },
   {
     "number": 71,
@@ -581,7 +671,10 @@
     "test": "ENEM",
     "area": "humanas",
     "answer": "c",
-    "contextId": "enem_2020_humanas_q71_ctx1"
+    "contextId": "enem_2020_humanas_q71_ctx1",
+    "disciplinas": [
+      "sociologia"
+    ]
   },
   {
     "number": 72,
@@ -603,7 +696,10 @@
     "test": "ENEM",
     "area": "humanas",
     "answer": "b",
-    "contextId": "enem_2020_humanas_q72_ctx1"
+    "contextId": "enem_2020_humanas_q72_ctx1",
+    "disciplinas": [
+      "filosofia"
+    ]
   },
   {
     "number": 73,
@@ -625,7 +721,10 @@
     "test": "ENEM",
     "area": "humanas",
     "answer": "c",
-    "contextId": "enem_2020_humanas_q73_ctx2"
+    "contextId": "enem_2020_humanas_q73_ctx2",
+    "disciplinas": [
+      "sociologia"
+    ]
   },
   {
     "number": 74,
@@ -650,6 +749,9 @@
     "contextIds": [
       "enem_2020_humanas_q74_ctx1",
       "enem_2020_humanas_q74_ctx2"
+    ],
+    "disciplinas": [
+      "filosofia"
     ]
   },
   {
@@ -673,7 +775,11 @@
     "test": "ENEM",
     "area": "humanas",
     "answer": "c",
-    "contextId": "enem_2020_humanas_q75_ctx1"
+    "contextId": "enem_2020_humanas_q75_ctx1",
+    "disciplinas": [
+      "geografia",
+      "historia"
+    ]
   },
   {
     "number": 76,
@@ -695,7 +801,11 @@
     "test": "ENEM",
     "area": "humanas",
     "answer": "b",
-    "contextId": "enem_2020_humanas_q76_ctx2"
+    "contextId": "enem_2020_humanas_q76_ctx2",
+    "disciplinas": [
+      "filosofia",
+      "historia"
+    ]
   },
   {
     "number": 77,
@@ -717,7 +827,10 @@
     "test": "ENEM",
     "area": "humanas",
     "answer": "a",
-    "contextId": "enem_2020_humanas_q77_ctx2"
+    "contextId": "enem_2020_humanas_q77_ctx2",
+    "disciplinas": [
+      "filosofia"
+    ]
   },
   {
     "number": 78,
@@ -741,6 +854,10 @@
     "answer": "c",
     "contextIds": [
       "enem_2020_humanas_q78_ctx1"
+    ],
+    "disciplinas": [
+      "historia",
+      "sociologia"
     ]
   },
   {
@@ -764,7 +881,11 @@
     "test": "ENEM",
     "area": "humanas",
     "answer": "d",
-    "contextId": "enem_2020_humanas_q79_ctx1"
+    "contextId": "enem_2020_humanas_q79_ctx1",
+    "disciplinas": [
+      "geografia",
+      "historia"
+    ]
   },
   {
     "number": 80,
@@ -787,7 +908,11 @@
     "test": "ENEM",
     "area": "humanas",
     "answer": "c",
-    "contextId": "enem_2020_humanas_q80_ctx1"
+    "contextId": "enem_2020_humanas_q80_ctx1",
+    "disciplinas": [
+      "historia",
+      "sociologia"
+    ]
   },
   {
     "number": 81,
@@ -809,7 +934,11 @@
     "test": "ENEM",
     "area": "humanas",
     "answer": "c",
-    "contextId": "enem_2020_humanas_q81_ctx2"
+    "contextId": "enem_2020_humanas_q81_ctx2",
+    "disciplinas": [
+      "filosofia",
+      "historia"
+    ]
   },
   {
     "number": 82,
@@ -833,6 +962,9 @@
     "answer": "a",
     "contextIds": [
       "enem_2020_humanas_q82_ctx1"
+    ],
+    "disciplinas": [
+      "geografia"
     ]
   },
   {
@@ -855,7 +987,10 @@
     "test": "ENEM",
     "area": "humanas",
     "answer": "d",
-    "contextId": "enem_2020_humanas_q83_ctx2"
+    "contextId": "enem_2020_humanas_q83_ctx2",
+    "disciplinas": [
+      "historia"
+    ]
   },
   {
     "number": 84,
@@ -877,7 +1012,10 @@
     "test": "ENEM",
     "area": "humanas",
     "answer": "e",
-    "contextId": "enem_2020_humanas_q84_ctx1"
+    "contextId": "enem_2020_humanas_q84_ctx1",
+    "disciplinas": [
+      "geografia"
+    ]
   },
   {
     "number": 85,
@@ -899,7 +1037,11 @@
     "test": "ENEM",
     "area": "humanas",
     "answer": "b",
-    "contextId": "enem_2020_humanas_q85_ctx1"
+    "contextId": "enem_2020_humanas_q85_ctx1",
+    "disciplinas": [
+      "geografia",
+      "historia"
+    ]
   },
   {
     "number": 86,
@@ -921,7 +1063,11 @@
     "test": "ENEM",
     "area": "humanas",
     "answer": "d",
-    "contextId": "enem_2020_humanas_q86_ctx2"
+    "contextId": "enem_2020_humanas_q86_ctx2",
+    "disciplinas": [
+      "historia",
+      "sociologia"
+    ]
   },
   {
     "number": 87,
@@ -943,7 +1089,11 @@
     "test": "ENEM",
     "area": "humanas",
     "answer": "e",
-    "contextId": "enem_2020_humanas_q87_ctx1"
+    "contextId": "enem_2020_humanas_q87_ctx1",
+    "disciplinas": [
+      "filosofia",
+      "historia"
+    ]
   },
   {
     "number": 88,
@@ -968,6 +1118,9 @@
     "contextIds": [
       "enem_2020_humanas_q88_ctx1",
       "enem_2020_humanas_q88_ctx2"
+    ],
+    "disciplinas": [
+      "geografia"
     ]
   },
   {
@@ -990,7 +1143,10 @@
     "test": "ENEM",
     "area": "humanas",
     "answer": "d",
-    "contextId": "enem_2020_humanas_q89_ctx1"
+    "contextId": "enem_2020_humanas_q89_ctx1",
+    "disciplinas": [
+      "filosofia"
+    ]
   },
   {
     "number": 90,
@@ -1015,6 +1171,9 @@
     "contextIds": [
       "enem_2020_humanas_q90_ctx1",
       "enem_2020_humanas_q90_ctx2"
+    ],
+    "disciplinas": [
+      "geografia"
     ]
   }
 ]

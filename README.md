@@ -1,6 +1,6 @@
-# Questionário ENEM
+# Trilha Integrar
 
-Aplicação em React + Vite com questões do ENEM (2022–2025) das quatro áreas de conhecimento — Matemática, Ciências da Natureza, Linguagens e Ciências Humanas — ordenadas pelo **número da questão**, com **barra vertical à esquerda** para saltar entre elas, feedback de acerto/erro, caderno de anotações e alternância de tema claro/escuro.
+Plataforma de estudos do colégio Integrar — questões do ENEM (2018–2025) das quatro áreas de conhecimento (Matemática, Ciências da Natureza, Linguagens e Ciências Humanas) e listas próprias dos professores, ordenadas pelo **número da questão**, com **barra vertical à esquerda** para saltar entre elas, feedback de acerto/erro, caderno de anotações e alternância de tema claro/escuro. Aplicação em React + Vite.
 
 ## Como rodar
 
@@ -16,13 +16,13 @@ No componente principal, todos os Hooks do React (incluindo `useMemo` para o enu
 - **Centro:** enunciado, alternativas, tags e botão **Próxima questão** (avança na ordem do JSON e volta ao início depois da última).
 - **Topo do centro:** indicador **posição / total** (ex.: `5 / 45`), tipo de prova (`test`, se existir) e ano.
 
-As respostas são guardadas na sessão (`sessionStorage`, chave `questionario-tentativas`) para manter o estado ao recarregar a página na mesma aba.
+As respostas são guardadas na sessão (`sessionStorage`, chave `trilha-integrar-tentativas`) para manter o estado ao recarregar a página na mesma aba.
 
 ## Caderno (bloco de notas)
 
 No canto superior direito há o botão **Caderno**, que desliza um painel pela direita. **Não há bloqueio do restante da página**: dá para continuar a ler a questão, marcar alternativas e usar os botões enquanto o caderno está aberto (só a faixa ocupada pelo painel fica reservada ao caderno).
 
-O conteúdo é um editor **rich text** (HTML) com barra **Negrito**, **Itálico** e **Sublinhado**; a seleção de texto recebe a formatação ao clicar nos botões. Tudo é salvo automaticamente em **`sessionStorage`** (chave `questionario-caderno`). Texto antigo só em texto puro é convertido na primeira carga. As notas duram enquanto a **aba** estiver aberta; ao **fechar a aba ou o navegador**, são apagadas. **Esc** ou **×** fecham o painel (sem escurecer o fundo).
+O conteúdo é um editor **rich text** (HTML) com barra **Negrito**, **Itálico** e **Sublinhado**; a seleção de texto recebe a formatação ao clicar nos botões. Tudo é salvo automaticamente em **`sessionStorage`** (chave `trilha-integrar-caderno`). Texto antigo só em texto puro é convertido na primeira carga. As notas duram enquanto a **aba** estiver aberta; ao **fechar a aba ou o navegador**, são apagadas. **Esc** ou **×** fecham o painel (sem escurecer o fundo).
 
 ## Figuras das questões
 

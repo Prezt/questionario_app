@@ -22,6 +22,10 @@
     "language": "en",
     "contextIds": [
       "enem_2018_linguagens_q1_ctx1_en"
+    ],
+    "disciplinas": [
+      "lingua_estrangeira",
+      "portugues"
     ]
   },
   {
@@ -47,7 +51,11 @@
     "contextIds": [
       "enem_2018_linguagens_q2_ctx1_en"
     ],
-    "language": "en"
+    "language": "en",
+    "disciplinas": [
+      "lingua_estrangeira",
+      "portugues"
+    ]
   },
   {
     "number": 3,
@@ -73,7 +81,11 @@
     "contextIds": [
       "enem_2018_linguagens_q3_ctx1_en"
     ],
-    "language": "en"
+    "language": "en",
+    "disciplinas": [
+      "lingua_estrangeira",
+      "portugues"
+    ]
   },
   {
     "number": 4,
@@ -100,7 +112,11 @@
       "enem_2018_linguagens_q4_ctx1_en",
       "enem_2018_linguagens_q4_ctx2_en"
     ],
-    "language": "en"
+    "language": "en",
+    "disciplinas": [
+      "lingua_estrangeira",
+      "portugues"
+    ]
   },
   {
     "number": 5,
@@ -125,7 +141,12 @@
     "contextIds": [
       "enem_2018_linguagens_q5_ctx1_en"
     ],
-    "language": "en"
+    "language": "en",
+    "disciplinas": [
+      "lingua_estrangeira",
+      "literatura",
+      "portugues"
+    ]
   },
   {
     "number": 1,
@@ -150,7 +171,12 @@
     "contextIds": [
       "enem_2018_linguagens_q1_ctx1_es"
     ],
-    "language": "es"
+    "language": "es",
+    "disciplinas": [
+      "lingua_estrangeira",
+      "literatura",
+      "portugues"
+    ]
   },
   {
     "number": 2,
@@ -175,6 +201,10 @@
     "language": "es",
     "contextIds": [
       "enem_2018_linguagens_q2_ctx1_es"
+    ],
+    "disciplinas": [
+      "lingua_estrangeira",
+      "portugues"
     ]
   },
   {
@@ -201,6 +231,10 @@
     "language": "es",
     "contextIds": [
       "enem_2018_linguagens_q3_ctx1_es"
+    ],
+    "disciplinas": [
+      "lingua_estrangeira",
+      "portugues"
     ]
   },
   {
@@ -228,6 +262,10 @@
     "language": "es",
     "contextIds": [
       "enem_2018_linguagens_q4_ctx1_es"
+    ],
+    "disciplinas": [
+      "lingua_estrangeira",
+      "portugues"
     ]
   },
   {
@@ -253,7 +291,11 @@
     "contextIds": [
       "enem_2018_linguagens_q5_ctx1_es"
     ],
-    "language": "es"
+    "language": "es",
+    "disciplinas": [
+      "lingua_estrangeira",
+      "portugues"
+    ]
   },
   {
     "number": 6,
@@ -278,6 +320,9 @@
     "contextId": "enem_2018_linguagens_q6_ctx1",
     "contextIds": [
       "enem_2018_linguagens_q6_ctx1"
+    ],
+    "disciplinas": [
+      "portugues"
     ]
   },
   {
@@ -302,6 +347,9 @@
     "answer": "e",
     "contextIds": [
       "enem_2018_linguagens_q7_ctx1"
+    ],
+    "disciplinas": [
+      "portugues"
     ]
   },
   {
@@ -328,6 +376,10 @@
     "contextId": "enem_2018_linguagens_q8_ctx1",
     "contextIds": [
       "enem_2018_linguagens_q8_ctx1"
+    ],
+    "disciplinas": [
+      "literatura",
+      "portugues"
     ]
   },
   {
@@ -352,6 +404,9 @@
     "answer": "b",
     "contextIds": [
       "enem_2018_linguagens_q9_ctx1"
+    ],
+    "disciplinas": [
+      "portugues"
     ]
   },
   {
@@ -377,6 +432,10 @@
     "contextId": "enem_2018_linguagens_q10_ctx1",
     "contextIds": [
       "enem_2018_linguagens_q10_ctx1"
+    ],
+    "disciplinas": [
+      "literatura",
+      "portugues"
     ]
   },
   {
@@ -402,6 +461,10 @@
     "contextIds": [
       "enem_2018_linguagens_q11_ctx1_1",
       "enem_2018_linguagens_q11_ctx1_2"
+    ],
+    "disciplinas": [
+      "artes",
+      "portugues"
     ]
   },
   {
@@ -428,6 +491,9 @@
     "contextId": "enem_2018_linguagens_q12_ctx1",
     "contextIds": [
       "enem_2018_linguagens_q12_ctx1"
+    ],
+    "disciplinas": [
+      "portugues"
     ]
   },
   {
@@ -453,6 +519,9 @@
     "contextIds": [
       "enem_2018_linguagens_q13_ctx1_1",
       "enem_2018_linguagens_q13_ctx1_2"
+    ],
+    "disciplinas": [
+      "portugues"
     ]
   },
   {
@@ -478,6 +547,9 @@
     "contextId": "enem_2018_linguagens_q14_ctx1",
     "contextIds": [
       "enem_2018_linguagens_q14_ctx1"
+    ],
+    "disciplinas": [
+      "portugues"
     ]
   },
   {
@@ -503,6 +575,10 @@
     "contextId": "enem_2018_linguagens_q15_ctx1",
     "contextIds": [
       "enem_2018_linguagens_q15_ctx1"
+    ],
+    "disciplinas": [
+      "literatura",
+      "portugues"
     ]
   },
   {
@@ -527,6 +603,10 @@
     "answer": "a",
     "contextIds": [
       "enem_2018_lang_q16_ctx1"
+    ],
+    "disciplinas": [
+      "literatura",
+      "portugues"
     ]
   },
   {
@@ -553,6 +633,10 @@
     "contextId": "enem_2018_linguagens_q17_ctx1",
     "contextIds": [
       "enem_2018_linguagens_q17_ctx1"
+    ],
+    "disciplinas": [
+      "literatura",
+      "portugues"
     ]
   },
   {
@@ -579,6 +663,9 @@
     "contextId": "enem_2018_linguagens_q18_ctx1",
     "contextIds": [
       "enem_2018_linguagens_q18_ctx1"
+    ],
+    "disciplinas": [
+      "portugues"
     ]
   },
   {
@@ -603,6 +690,9 @@
     "answer": "d",
     "contextIds": [
       "enem_2018_lang_q19_ctx1"
+    ],
+    "disciplinas": [
+      "portugues"
     ]
   },
   {
@@ -628,6 +718,10 @@
     "answer": "b",
     "contextIds": [
       "enem_2018_lang_q20_ctx1"
+    ],
+    "disciplinas": [
+      "literatura",
+      "portugues"
     ]
   },
   {
@@ -653,6 +747,9 @@
     "contextId": "enem_2018_linguagens_q21_ctx1",
     "contextIds": [
       "enem_2018_linguagens_q21_ctx1"
+    ],
+    "disciplinas": [
+      "portugues"
     ]
   },
   {
@@ -676,7 +773,10 @@
     "year": 2018,
     "test": "ENEM",
     "area": "linguagens",
-    "answer": "b"
+    "answer": "b",
+    "disciplinas": [
+      "portugues"
+    ]
   },
   {
     "number": 23,
@@ -700,6 +800,10 @@
     "answer": "e",
     "contextIds": [
       "enem_2018_lang_q23_ctx1"
+    ],
+    "disciplinas": [
+      "literatura",
+      "portugues"
     ]
   },
   {
@@ -725,6 +829,9 @@
     "answer": "a",
     "contextIds": [
       "enem_2018_lang_q24_ctx1"
+    ],
+    "disciplinas": [
+      "portugues"
     ]
   },
   {
@@ -749,7 +856,11 @@
     "year": 2018,
     "test": "ENEM",
     "area": "linguagens",
-    "answer": "d"
+    "answer": "d",
+    "disciplinas": [
+      "artes",
+      "portugues"
+    ]
   },
   {
     "number": 26,
@@ -773,6 +884,10 @@
     "answer": "e",
     "contextIds": [
       "enem_2018_lang_q26_ctx1"
+    ],
+    "disciplinas": [
+      "educacao_fisica",
+      "portugues"
     ]
   },
   {
@@ -799,6 +914,9 @@
     "contextId": "enem_2018_linguagens_q27_ctx1",
     "contextIds": [
       "enem_2018_linguagens_q27_ctx1"
+    ],
+    "disciplinas": [
+      "portugues"
     ]
   },
   {
@@ -823,6 +941,9 @@
     "answer": "a",
     "contextIds": [
       "enem_2018_lang_q28_ctx1"
+    ],
+    "disciplinas": [
+      "portugues"
     ]
   },
   {
@@ -848,6 +969,10 @@
     "contextIds": [
       "enem_2018_lang_q29_ctx1",
       "enem_2018_lang_q29_ctx2"
+    ],
+    "disciplinas": [
+      "artes",
+      "portugues"
     ]
   },
   {
@@ -873,6 +998,10 @@
     "contextId": "enem_2018_linguagens_q30_ctx1",
     "contextIds": [
       "enem_2018_linguagens_q30_ctx1"
+    ],
+    "disciplinas": [
+      "literatura",
+      "portugues"
     ]
   },
   {
@@ -898,6 +1027,9 @@
     "contextId": "enem_2018_linguagens_q31_ctx1",
     "contextIds": [
       "enem_2018_linguagens_q31_ctx1"
+    ],
+    "disciplinas": [
+      "portugues"
     ]
   },
   {
@@ -922,7 +1054,11 @@
     "year": 2018,
     "test": "ENEM",
     "area": "linguagens",
-    "answer": "b"
+    "answer": "b",
+    "disciplinas": [
+      "artes",
+      "portugues"
+    ]
   },
   {
     "number": 33,
@@ -947,6 +1083,9 @@
     "contextId": "enem_2018_linguagens_q33_ctx1",
     "contextIds": [
       "enem_2018_linguagens_q33_ctx1"
+    ],
+    "disciplinas": [
+      "portugues"
     ]
   },
   {
@@ -972,6 +1111,10 @@
     "contextIds": [
       "enem_2018_linguagens_q34_ctx1",
       "enem_2018_linguagens_q34_ctx2"
+    ],
+    "disciplinas": [
+      "artes",
+      "portugues"
     ]
   },
   {
@@ -997,6 +1140,10 @@
     "contextId": "enem_2018_linguagens_q35_ctx1",
     "contextIds": [
       "enem_2018_linguagens_q35_ctx1"
+    ],
+    "disciplinas": [
+      "literatura",
+      "portugues"
     ]
   },
   {
@@ -1022,6 +1169,10 @@
     "answer": "b",
     "contextIds": [
       "enem_2018_linguagens_q36_ctx1"
+    ],
+    "disciplinas": [
+      "literatura",
+      "portugues"
     ]
   },
   {
@@ -1047,6 +1198,9 @@
     "answer": "c",
     "contextIds": [
       "enem_2018_linguagens_q37_ctx1"
+    ],
+    "disciplinas": [
+      "portugues"
     ]
   },
   {
@@ -1073,6 +1227,9 @@
     "contextId": "enem_2018_linguagens_q38_ctx1",
     "contextIds": [
       "enem_2018_linguagens_q38_ctx1"
+    ],
+    "disciplinas": [
+      "portugues"
     ]
   },
   {
@@ -1098,6 +1255,9 @@
     "contextId": "enem_2018_linguagens_q39_ctx1",
     "contextIds": [
       "enem_2018_linguagens_q39_ctx1"
+    ],
+    "disciplinas": [
+      "portugues"
     ]
   },
   {
@@ -1122,6 +1282,9 @@
     "answer": "a",
     "contextIds": [
       "enem_2018_linguagens_q40_ctx1"
+    ],
+    "disciplinas": [
+      "portugues"
     ]
   },
   {
@@ -1148,6 +1311,9 @@
     "contextId": "enem_2018_linguagens_q41_ctx1",
     "contextIds": [
       "enem_2018_linguagens_q41_ctx1"
+    ],
+    "disciplinas": [
+      "portugues"
     ]
   },
   {
@@ -1173,6 +1339,10 @@
     "answer": "c",
     "contextIds": [
       "enem_2018_linguagens_q42_ctx1"
+    ],
+    "disciplinas": [
+      "literatura",
+      "portugues"
     ]
   },
   {
@@ -1197,6 +1367,9 @@
     "answer": "a",
     "contextIds": [
       "enem_2018_linguagens_q43_ctx1"
+    ],
+    "disciplinas": [
+      "portugues"
     ]
   },
   {
@@ -1222,6 +1395,9 @@
     "contextId": "enem_2018_linguagens_q44_ctx1",
     "contextIds": [
       "enem_2018_linguagens_q44_ctx1"
+    ],
+    "disciplinas": [
+      "portugues"
     ]
   },
   {
@@ -1247,6 +1423,9 @@
     "contextIds": [
       "enem_2018_linguagens_q45_ctx1",
       "enem_2018_linguagens_q45_ctx2"
+    ],
+    "disciplinas": [
+      "portugues"
     ]
   }
 ]
