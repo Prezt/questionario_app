@@ -2311,6 +2311,36 @@ export default function App() {
       }))
       .sort((a, b) => a.hitRate - b.hitRate)
 
+    // ── Disciplina breakdown ──────────────────────────────────────────────
+    const discStats = {}
+    scorableQuestions.forEach((q) => {
+      const att = attempts[q.number]
+      const t = questionTimes[q.number] || 0
+      ;(q.disciplinas || []).forEach((slug) => {
+        if (!discStats[slug]) discStats[slug] = { total: 0, answered: 0, correct: 0, time: 0 }
+        discStats[slug].total++
+        if (att) {
+          discStats[slug].answered++
+          if (att.correct) discStats[slug].correct++
+          discStats[slug].time += t
+        }
+      })
+    })
+
+    const discList = Object.entries(discStats)
+      .filter(([, s]) => s.answered >= 1)
+      .map(([slug, s]) => ({
+        slug,
+        label: DISCIPLINA_LABELS[slug] ?? slug,
+        total: s.total,
+        answered: s.answered,
+        correct: s.correct,
+        time: s.time,
+        hitRate: Math.round((s.correct / s.answered) * 100),
+        avgTime: Math.round(s.time / s.answered),
+      }))
+      .sort((a, b) => a.hitRate - b.hitRate)
+
     const weakTags = tagList.filter((t) => t.hitRate < 60)
 
     // ── Subject diagnosis ────────────────────────────────────────────────────
@@ -2563,6 +2593,44 @@ export default function App() {
                 {diagnosis.mastery.length === 0 && diagnosis.slow.length === 0 && diagnosis.weak.length === 0 && (
                   <p className="diag-empty">Responda mais questões para ver seu diagnóstico.</p>
                 )}
+              </div>
+            )}
+
+            {discList.length > 0 && (
+              <div className="summary-subjects-wrap">
+                <h2 className="summary-section-title">Desempenho por disciplina</h2>
+                <div className="summary-subjects">
+                  {discList.map(({ slug, label, answered, correct, hitRate, avgTime: at }) => (
+                    <div
+                      key={slug}
+                      className={`summary-subject-card ${hitRate < 50 ? 'summary-subject-card--weak' : hitRate >= 80 ? 'summary-subject-card--strong' : ''}`}
+                    >
+                      <div className="summary-subject-header">
+                        <span className="summary-subject-name">{label}</span>
+                        <span className={`summary-subject-rate ${hitRate < 50 ? 'rate--bad' : hitRate >= 80 ? 'rate--ok' : 'rate--mid'}`}>
+                          {hitRate}%
+                        </span>
+                      </div>
+                      <div className="summary-subject-bar">
+                        <div
+                          className="summary-subject-bar-fill"
+                          style={{
+                            width: `${hitRate}%`,
+                            background: hitRate < 50
+                              ? 'var(--rail-bad)'
+                              : hitRate >= 80
+                                ? 'var(--rail-ok)'
+                                : 'var(--accent)',
+                          }}
+                        />
+                      </div>
+                      <div className="summary-subject-meta">
+                        <span>{correct}/{answered} corretas</span>
+                        {at > 0 && <span>~{formatTime(at)}/questão</span>}
+                      </div>
+                    </div>
+                  ))}
+                </div>
               </div>
             )}
 
