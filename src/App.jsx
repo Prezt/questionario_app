@@ -36,6 +36,13 @@ import {
 import { calcTriScores } from './triScoring.js'
 import { richHtml, richHtmlBr } from './richHtml.js'
 import { subscribeToKatexReady } from './renderMath.js'
+import {
+  DISCIPLINAS_BY_AREA,
+  ALL_DISCIPLINAS,
+  DISCIPLINA_LABELS,
+  DISCIPLINA_AREA,
+  disciplinaLabel,
+} from './data/disciplinas.js'
 const ReviewPage  = lazy(() => import('./ReviewPage.jsx'))
 const QuestionEditor = lazy(() => import('./QuestionEditor.jsx'))
 
@@ -593,6 +600,8 @@ export default function App() {
   const [dailyChallengeResult, setDailyChallengeResult] = useState(null) // {score, total} if already done today
   const [selectedArea, setSelectedArea] = useState(null) // 'math' | 'nature' | 'linguagens' | 'humanas'
   const [selectedTag, setSelectedTag] = useState(null)   // unified tag string | null
+  const [selectedDisciplinas, setSelectedDisciplinas] = useState([])
+  const [multidisciplinarOnly, setMultidisciplinarOnly] = useState(false)
   const [expandedArea, setExpandedArea] = useState(null) // area panel open on home screen
   const [optionsOpen, setOptionsOpen] = useState(false)
   const [headerMenuOpen, setHeaderMenuOpen] = useState(false)
@@ -1430,6 +1439,55 @@ export default function App() {
     setAttempts({})
     saveAttemptsToSession({})
     setSelectedArea(area)
+    setSelectedTag(tag)
+    setExpandedArea(null)
+    setIsDailyChallenge(false)
+    const now = Date.now()
+    startTimeRef.current = now
+    questionStartRef.current = now
+    accQuestionTimesRef.current = {}
+    prevQuestionNumRef.current = null
+    setQuestions(picked)
+    setQuestion(picked[0])
+    setTotalElapsed(0)
+    setQuestionElapsed(0)
+    setPhase('quiz')
+  }, [allQuestions, foreignLang])
+
+  const startDisciplinaQuiz = useCallback((disciplinas, opts = {}) => {
+    const { multidisciplinarOnly: multi = false, tag = null } = opts
+    const wanted = new Set(disciplinas)
+    const pool = allQuestions.filter((q) => {
+      const qDisc = q.disciplinas ?? []
+      if (multi && qDisc.length < 2) return false
+      if (wanted.size > 0 && !qDisc.some((d) => wanted.has(d))) return false
+      if (tag !== null && !q.tags?.includes(tag)) return false
+      return true
+    })
+    if (pool.length === 0) return
+
+    const variants = {}
+    pool.forEach((q) => {
+      if (q.language) {
+        if (!variants[q.number]) variants[q.number] = {}
+        variants[q.number][q.language] = q
+      }
+    })
+    langVariantsRef.current = variants
+
+    const deduped = pool.filter((q) => !q.language || q.language === foreignLang)
+    const shuffled = [...deduped]
+    for (let i = shuffled.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1))
+      ;[shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]]
+    }
+    const picked = shuffled.slice(0, 10)
+
+    clearPausedSession()
+    setAttempts({})
+    saveAttemptsToSession({})
+    const areas = new Set(disciplinas.map((d) => DISCIPLINA_AREA[d]).filter(Boolean))
+    setSelectedArea(areas.size === 1 ? [...areas][0] : null)
     setSelectedTag(tag)
     setExpandedArea(null)
     setIsDailyChallenge(false)
