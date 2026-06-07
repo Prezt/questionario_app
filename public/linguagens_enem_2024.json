@@ -24,7 +24,7 @@
     "answer": "c",
     "difficulty": 3,
     "disciplinas": [
-      "lingua_estrangeira",
+      "ingles",
       "portugues"
     ]
   },
@@ -54,7 +54,7 @@
       "enem_2024_linguagens_q2_ctx1"
     ],
     "disciplinas": [
-      "lingua_estrangeira",
+      "ingles",
       "portugues"
     ]
   },
@@ -83,7 +83,7 @@
     "answer": "a",
     "difficulty": 4,
     "disciplinas": [
-      "lingua_estrangeira",
+      "ingles",
       "portugues"
     ]
   },
@@ -112,7 +112,7 @@
       "enem_2024_linguagens_q4_ctx1"
     ],
     "disciplinas": [
-      "lingua_estrangeira"
+      "ingles"
     ]
   },
   {
@@ -139,7 +139,7 @@
     "answer": "e",
     "difficulty": 3,
     "disciplinas": [
-      "lingua_estrangeira",
+      "ingles",
       "portugues"
     ]
   },
@@ -169,7 +169,7 @@
       "enem_2024_linguagens_q1_ctx1"
     ],
     "disciplinas": [
-      "lingua_estrangeira",
+      "espanhol",
       "portugues"
     ]
   },
@@ -198,7 +198,7 @@
       "enem_2024_linguagens_q2_ctx2"
     ],
     "disciplinas": [
-      "lingua_estrangeira"
+      "espanhol"
     ]
   },
   {
@@ -227,7 +227,7 @@
       "enem_2024_linguagens_q3_ctx1"
     ],
     "disciplinas": [
-      "lingua_estrangeira",
+      "espanhol",
       "literatura",
       "portugues"
     ]
@@ -258,7 +258,7 @@
       "enem_2024_linguagens_q4_ctx2"
     ],
     "disciplinas": [
-      "lingua_estrangeira",
+      "espanhol",
       "portugues"
     ]
   },
@@ -288,7 +288,7 @@
       "enem_2024_linguagens_q5_ctx1"
     ],
     "disciplinas": [
-      "lingua_estrangeira",
+      "espanhol",
       "literatura"
     ]
   },

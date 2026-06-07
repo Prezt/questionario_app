@@ -22,7 +22,7 @@
     "contextId": "enem_2019_linguagens_q1_q39_ctx1",
     "language": "en",
     "disciplinas": [
-      "lingua_estrangeira",
+      "ingles",
       "portugues"
     ]
   },
@@ -50,7 +50,7 @@
     "contextId": "enem_2019_linguagens_q2_q4_ctx1",
     "language": "en",
     "disciplinas": [
-      "lingua_estrangeira",
+      "ingles",
       "portugues"
     ]
   },
@@ -78,7 +78,7 @@
     "contextId": "enem_2019_linguagens_q1_q39_ctx1",
     "language": "en",
     "disciplinas": [
-      "lingua_estrangeira",
+      "ingles",
       "portugues"
     ]
   },
@@ -105,7 +105,7 @@
     "contextId": "enem_2019_linguagens_q2_q4_ctx1",
     "language": "en",
     "disciplinas": [
-      "lingua_estrangeira",
+      "ingles",
       "portugues"
     ]
   },
@@ -135,7 +135,7 @@
     ],
     "language": "es",
     "disciplinas": [
-      "lingua_estrangeira",
+      "espanhol",
       "portugues"
     ]
   },
@@ -163,7 +163,7 @@
     "contextId": "enem_2019_linguagens_q1_q5_ctx1",
     "language": "es",
     "disciplinas": [
-      "lingua_estrangeira",
+      "espanhol",
       "literatura",
       "portugues"
     ]
@@ -191,7 +191,7 @@
     "contextId": "enem_2019_linguagens_q1_q5_ctx1",
     "language": "es",
     "disciplinas": [
-      "lingua_estrangeira",
+      "espanhol",
       "portugues"
     ]
   },
@@ -218,7 +218,7 @@
     "contextId": "enem_2019_linguagens_q1_q5_ctx1",
     "language": "es",
     "disciplinas": [
-      "lingua_estrangeira",
+      "espanhol",
       "portugues"
     ]
   },
@@ -246,7 +246,7 @@
     "contextId": "enem_2019_linguagens_q1_q39_ctx1",
     "language": "es",
     "disciplinas": [
-      "lingua_estrangeira",
+      "espanhol",
       "literatura",
       "portugues"
     ]
@@ -274,7 +274,7 @@
     "contextId": "enem_2019_linguagens_q1_q5_ctx1",
     "language": "es",
     "disciplinas": [
-      "lingua_estrangeira",
+      "espanhol",
       "portugues"
     ]
   },

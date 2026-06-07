@@ -15,9 +15,9 @@ describe('DISCIPLINAS_BY_AREA', () => {
     )
   })
 
-  it('linguagens has five disciplinas (Português, Literatura, Língua Estrangeira, Artes, Educação Física)', () => {
+  it('linguagens has six disciplinas (Português, Literatura, Inglês, Espanhol, Artes, Educação Física)', () => {
     expect(DISCIPLINAS_BY_AREA.linguagens).toEqual([
-      'portugues', 'literatura', 'lingua_estrangeira', 'artes', 'educacao_fisica',
+      'portugues', 'literatura', 'ingles', 'espanhol', 'artes', 'educacao_fisica',
     ])
   })
 
@@ -37,8 +37,8 @@ describe('DISCIPLINAS_BY_AREA', () => {
 })
 
 describe('ALL_DISCIPLINAS', () => {
-  it('is the flat 13-entry slug list with no duplicates', () => {
-    expect(ALL_DISCIPLINAS).toHaveLength(13)
+  it('is the flat 14-entry slug list with no duplicates', () => {
+    expect(ALL_DISCIPLINAS).toHaveLength(14)
     expect(new Set(ALL_DISCIPLINAS).size).toBe(ALL_DISCIPLINAS.length)
   })
 })
@@ -55,7 +55,8 @@ describe('DISCIPLINA_LABELS', () => {
     expect(DISCIPLINA_LABELS.portugues).toBe('Português')
     expect(DISCIPLINA_LABELS.matematica).toBe('Matemática')
     expect(DISCIPLINA_LABELS.educacao_fisica).toBe('Educação Física')
-    expect(DISCIPLINA_LABELS.lingua_estrangeira).toBe('Língua Estrangeira')
+    expect(DISCIPLINA_LABELS.ingles).toBe('Inglês')
+    expect(DISCIPLINA_LABELS.espanhol).toBe('Espanhol')
   })
 })
 

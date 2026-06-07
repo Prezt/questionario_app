@@ -25,7 +25,7 @@
       "enem_2025_linguagens_q1_ctx1"
     ],
     "disciplinas": [
-      "lingua_estrangeira",
+      "ingles",
       "portugues"
     ]
   },
@@ -55,7 +55,7 @@
       "enem_2025_linguagens_q2_ctx1"
     ],
     "disciplinas": [
-      "lingua_estrangeira",
+      "ingles",
       "portugues"
     ]
   },
@@ -86,7 +86,7 @@
       "enem_2025_linguagens_q3_ctx1"
     ],
     "disciplinas": [
-      "lingua_estrangeira",
+      "ingles",
       "literatura",
       "portugues"
     ]
@@ -117,7 +117,7 @@
       "enem_2025_linguagens_q4_ctx1"
     ],
     "disciplinas": [
-      "lingua_estrangeira",
+      "ingles",
       "portugues"
     ]
   },
@@ -146,7 +146,7 @@
     "answer": "a",
     "difficulty": 3,
     "disciplinas": [
-      "lingua_estrangeira",
+      "ingles",
       "portugues"
     ]
   },
@@ -176,7 +176,7 @@
       "enem_2025_linguagens_q1_ctx2"
     ],
     "disciplinas": [
-      "lingua_estrangeira",
+      "espanhol",
       "portugues"
     ]
   },
@@ -206,7 +206,7 @@
       "enem_2025_linguagens_q2_ctx2"
     ],
     "disciplinas": [
-      "lingua_estrangeira",
+      "espanhol",
       "portugues"
     ]
   },
@@ -237,7 +237,7 @@
       "enem_2025_linguagens_q3_ctx2"
     ],
     "disciplinas": [
-      "lingua_estrangeira",
+      "espanhol",
       "literatura",
       "portugues"
     ]
@@ -267,7 +267,7 @@
     "answer": "d",
     "difficulty": 5,
     "disciplinas": [
-      "lingua_estrangeira",
+      "espanhol",
       "portugues"
     ]
   },
@@ -298,7 +298,7 @@
       "enem_2025_linguagens_q5_ctx1"
     ],
     "disciplinas": [
-      "lingua_estrangeira"
+      "espanhol"
     ]
   },
   {

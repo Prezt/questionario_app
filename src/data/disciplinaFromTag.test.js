@@ -21,7 +21,8 @@ describe('disciplinasForTag', () => {
   it('maps unambiguous linguagens tags', () => {
     expect(disciplinasForTag('linguagens', 'interpretação de texto')).toEqual(['portugues'])
     expect(disciplinasForTag('linguagens', 'literatura brasileira')).toEqual(['literatura'])
-    expect(disciplinasForTag('linguagens', 'língua inglesa')).toEqual(['lingua_estrangeira'])
+    expect(disciplinasForTag('linguagens', 'língua inglesa')).toEqual(['ingles'])
+    expect(disciplinasForTag('linguagens', 'língua espanhola')).toEqual(['espanhol'])
     expect(disciplinasForTag('linguagens', 'artes visuais')).toEqual(['artes'])
   })
 
@@ -70,17 +71,22 @@ describe('disciplinasForQuestion', () => {
     })).toEqual(['biologia'])
   })
 
-  it('adds lingua_estrangeira when language is en or es', () => {
+  it('adds ingles when language is en, espanhol when language is es', () => {
     expect(disciplinasForQuestion({
       area: 'linguagens',
       tags: [],
       language: 'en',
-    })).toEqual(['lingua_estrangeira'])
+    })).toEqual(['ingles'])
+    expect(disciplinasForQuestion({
+      area: 'linguagens',
+      tags: [],
+      language: 'es',
+    })).toEqual(['espanhol'])
     expect(disciplinasForQuestion({
       area: 'linguagens',
       tags: ['interpretação de texto'],
       language: 'es',
-    })).toEqual(['lingua_estrangeira', 'portugues'])
+    })).toEqual(['espanhol', 'portugues'])
   })
 
   it('returns [] when no tag maps and no language hint', () => {

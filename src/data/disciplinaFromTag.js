@@ -85,10 +85,11 @@ for (const t of [
   'literatura brasileira', 'literatura mundial',
 ]) add('linguagens', t, 'literatura')
 
-// ── Linguagens → Língua Estrangeira ──────────────────────────────────────────
-for (const t of [
-  'língua espanhola', 'língua inglesa',
-]) add('linguagens', t, 'lingua_estrangeira')
+// ── Linguagens → Inglês ──────────────────────────────────────────────────────
+add('linguagens', 'língua inglesa', 'ingles')
+
+// ── Linguagens → Espanhol ────────────────────────────────────────────────────
+add('linguagens', 'língua espanhola', 'espanhol')
 
 // ── Linguagens → Artes ───────────────────────────────────────────────────────
 for (const t of [
@@ -111,9 +112,9 @@ export function disciplinasForQuestion(question) {
     const slug = M[`${question.area}::${tag}`] ?? M[`${question.area}::${tag.toLowerCase()}`]
     if (slug) set.add(slug)
   }
-  if (question.area === 'linguagens' &&
-      (question.language === 'en' || question.language === 'es')) {
-    set.add('lingua_estrangeira')
+  if (question.area === 'linguagens') {
+    if (question.language === 'en') set.add('ingles')
+    else if (question.language === 'es') set.add('espanhol')
   }
   return [...set].sort()
 }

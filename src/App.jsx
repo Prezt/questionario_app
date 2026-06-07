@@ -123,6 +123,7 @@ const CHANGELOG = [
       'Nova taxonomia de disciplinas (Química, Física, Biologia, História, etc.) derivada das tags existentes',
       'Picker da tela inicial reorganizado por disciplina com filtro "Multidisciplinar" para questões que cruzam mais de uma disciplina',
       'Tela de resumo agora mostra desempenho agrupado por disciplina antes do agrupamento por assunto',
+      'Língua Estrangeira separada em Inglês e Espanhol como disciplinas independentes',
     ],
   },
   {

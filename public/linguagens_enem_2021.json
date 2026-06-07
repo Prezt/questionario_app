@@ -23,7 +23,7 @@
     ],
     "language": "en",
     "disciplinas": [
-      "lingua_estrangeira",
+      "ingles",
       "portugues"
     ]
   },
@@ -51,7 +51,7 @@
     ],
     "language": "en",
     "disciplinas": [
-      "lingua_estrangeira",
+      "ingles",
       "portugues"
     ]
   },
@@ -79,7 +79,7 @@
       "enem_2021_lang_q3_ctx1"
     ],
     "disciplinas": [
-      "lingua_estrangeira",
+      "ingles",
       "portugues"
     ]
   },
@@ -105,7 +105,7 @@
     ],
     "language": "en",
     "disciplinas": [
-      "lingua_estrangeira"
+      "ingles"
     ]
   },
   {
@@ -132,7 +132,7 @@
       "enem_2021_lang_q5_ctx1"
     ],
     "disciplinas": [
-      "lingua_estrangeira",
+      "ingles",
       "portugues"
     ]
   },
@@ -160,7 +160,7 @@
       "enem_2021_lang_es_q1_ctx1"
     ],
     "disciplinas": [
-      "lingua_estrangeira",
+      "espanhol",
       "portugues"
     ]
   },
@@ -189,7 +189,7 @@
       "enem_2021_lang_es_q2_ctx1"
     ],
     "disciplinas": [
-      "lingua_estrangeira",
+      "espanhol",
       "portugues"
     ]
   },
@@ -218,7 +218,7 @@
       "enem_2021_lang_es_q3_ctx1"
     ],
     "disciplinas": [
-      "lingua_estrangeira",
+      "espanhol",
       "portugues"
     ]
   },
@@ -247,7 +247,7 @@
       "enem_2021_lang_es_q4_ctx1"
     ],
     "disciplinas": [
-      "lingua_estrangeira",
+      "espanhol",
       "portugues"
     ]
   },
@@ -278,7 +278,7 @@
       "enem_2021_lang_es_q5_ctx1"
     ],
     "disciplinas": [
-      "lingua_estrangeira",
+      "espanhol",
       "portugues"
     ]
   },

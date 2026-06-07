@@ -21,7 +21,7 @@
     "language": "en",
     "contextId": "enem_2022_linguagens_q1en_ctx1",
     "disciplinas": [
-      "lingua_estrangeira",
+      "ingles",
       "literatura"
     ]
   },
@@ -48,7 +48,7 @@
     "language": "es",
     "contextId": "enem_2022_linguagens_q1es_ctx1",
     "disciplinas": [
-      "lingua_estrangeira",
+      "espanhol",
       "portugues"
     ]
   },
@@ -75,7 +75,7 @@
     "language": "en",
     "contextId": "enem_2022_linguagens_q2en_ctx1",
     "disciplinas": [
-      "lingua_estrangeira",
+      "ingles",
       "portugues"
     ]
   },
@@ -102,7 +102,7 @@
     "language": "es",
     "contextId": "enem_2022_linguagens_q2es_ctx1",
     "disciplinas": [
-      "lingua_estrangeira"
+      "espanhol"
     ]
   },
   {
@@ -128,7 +128,7 @@
     "language": "en",
     "contextId": "enem_2022_linguagens_q3en_ctx1",
     "disciplinas": [
-      "lingua_estrangeira",
+      "ingles",
       "portugues"
     ]
   },
@@ -154,7 +154,7 @@
     "language": "es",
     "contextId": "enem_2022_linguagens_q3es_ctx1",
     "disciplinas": [
-      "lingua_estrangeira"
+      "espanhol"
     ]
   },
   {
@@ -180,7 +180,7 @@
     "language": "en",
     "contextId": "enem_2022_linguagens_q4en_ctx1",
     "disciplinas": [
-      "lingua_estrangeira",
+      "ingles",
       "portugues"
     ]
   },
@@ -207,7 +207,7 @@
     "language": "es",
     "contextId": "enem_2022_linguagens_q4es_ctx1",
     "disciplinas": [
-      "lingua_estrangeira",
+      "espanhol",
       "literatura",
       "portugues"
     ]
@@ -235,7 +235,7 @@
     "language": "en",
     "contextId": "enem_2022_linguagens_q5en_ctx1",
     "disciplinas": [
-      "lingua_estrangeira",
+      "ingles",
       "portugues"
     ]
   },
@@ -261,7 +261,7 @@
     "language": "es",
     "contextId": "enem_2022_linguagens_q5es_ctx1",
     "disciplinas": [
-      "lingua_estrangeira"
+      "espanhol"
     ]
   },
   {

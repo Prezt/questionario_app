@@ -22,7 +22,7 @@
     "contextId": "enem_2020_linguagens_q1_ctx1",
     "language": "en",
     "disciplinas": [
-      "lingua_estrangeira",
+      "ingles",
       "portugues"
     ]
   },
@@ -49,7 +49,7 @@
     "contextId": "enem_2020_linguagens_q2_en_ctx1",
     "language": "en",
     "disciplinas": [
-      "lingua_estrangeira",
+      "ingles",
       "portugues"
     ]
   },
@@ -77,7 +77,7 @@
     "contextId": "enem_2020_linguagens_q3_en_ctx1",
     "language": "en",
     "disciplinas": [
-      "lingua_estrangeira",
+      "ingles",
       "literatura",
       "portugues"
     ]
@@ -106,7 +106,7 @@
     "contextId": "enem_2020_linguagens_q4_en_ctx1",
     "language": "en",
     "disciplinas": [
-      "lingua_estrangeira",
+      "ingles",
       "literatura",
       "portugues"
     ]
@@ -134,7 +134,7 @@
     "contextId": "enem_2020_linguagens_q5_en_ctx1",
     "language": "en",
     "disciplinas": [
-      "lingua_estrangeira",
+      "ingles",
       "literatura",
       "portugues"
     ]
@@ -162,7 +162,7 @@
     "contextId": "enem_2020_linguagens_q1_es_ctx1",
     "language": "es",
     "disciplinas": [
-      "lingua_estrangeira",
+      "espanhol",
       "literatura",
       "portugues"
     ]
@@ -190,7 +190,7 @@
     "contextId": "enem_2020_linguagens_q2_es_ctx1",
     "language": "es",
     "disciplinas": [
-      "lingua_estrangeira",
+      "espanhol",
       "portugues"
     ]
   },
@@ -217,7 +217,7 @@
     "contextId": "enem_2020_linguagens_q3_ctx1",
     "language": "es",
     "disciplinas": [
-      "lingua_estrangeira",
+      "espanhol",
       "portugues"
     ]
   },
@@ -244,7 +244,7 @@
     "contextId": "enem_2020_linguagens_q4_es_ctx1",
     "language": "es",
     "disciplinas": [
-      "lingua_estrangeira",
+      "espanhol",
       "literatura",
       "portugues"
     ]
@@ -272,7 +272,7 @@
     "contextId": "enem_2020_linguagens_q5_ctx1",
     "language": "es",
     "disciplinas": [
-      "lingua_estrangeira",
+      "espanhol",
       "portugues"
     ]
   },
