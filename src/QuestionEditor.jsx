@@ -439,7 +439,7 @@ function QuestionForm({ question, onSave, onCancel, saving }) {
   )
 }
 
-export default function QuestionEditor({ onClose }) {
+export default function QuestionEditor({ onClose, embedded = false }) {
   const token = localStorage.getItem('token')
   const user  = (() => { try { return JSON.parse(localStorage.getItem('user')) } catch { return null } })()
 
@@ -468,8 +468,9 @@ export default function QuestionEditor({ onClose }) {
     localStorage.setItem('dark', dark)
   }, [dark])
 
-  // Page title + blue favicon
+  // Page title + blue favicon (full-screen mode only — embedded mode lets the host page own these)
   useEffect(() => {
+    if (embedded) return
     const prevTitle = document.title
     document.title = 'Criar'
     const links = Array.from(document.querySelectorAll("link[rel*='icon']"))
@@ -481,10 +482,11 @@ export default function QuestionEditor({ onClose }) {
       document.title = prevTitle
       links.forEach((l, i) => { l.href = prevHrefs[i] })
     }
-  }, [])
+  }, [embedded])
 
-  // Fix scroll — index.css sets overflow:hidden on both html and body
+  // Fix scroll — index.css sets overflow:hidden on both html and body (full-screen mode only)
   useEffect(() => {
+    if (embedded) return
     const el = document.documentElement
     const bd = document.body
     const prevElOverflow = el.style.overflow
@@ -501,7 +503,7 @@ export default function QuestionEditor({ onClose }) {
       bd.style.overflow = prevBdOverflow
       bd.style.height   = prevBdHeight
     }
-  }, [])
+  }, [embedded])
 
   useEffect(() => {
     if (!token || (user?.role !== 'prof' && user?.role !== 'admin')) {
@@ -650,18 +652,22 @@ export default function QuestionEditor({ onClose }) {
     } catch { setError('Erro de rede') }
   }, [set, token, userIdParam])
 
-  if (loading) return <div className="qe-shell"><p className="qe-loading">Carregando…</p></div>
+  const shellClass = `qe-shell${embedded ? ' qe-shell--embedded' : ''}`
+
+  if (loading) return <div className={shellClass}><p className="qe-loading">Carregando…</p></div>
 
   const questions = set?.questions ?? []
 
   return (
-    <div className="qe-shell">
+    <div className={shellClass}>
       <div className="qe-header">
         <button type="button" className="qe-back-btn" onClick={() => onClose?.()}>← Voltar</button>
-        <h1 className="qe-title">Criar</h1>
-        <button type="button" className="qe-theme-btn" onClick={() => setDark(d => !d)} aria-label="Alternar tema">
-          {dark ? <SunIcon /> : <MoonIcon />}
-        </button>
+        {!embedded && <h1 className="qe-title">Criar</h1>}
+        {!embedded && (
+          <button type="button" className="qe-theme-btn" onClick={() => setDark(d => !d)} aria-label="Alternar tema">
+            {dark ? <SunIcon /> : <MoonIcon />}
+          </button>
+        )}
       </div>
 
       {error && <p className="qe-error">{error}</p>}

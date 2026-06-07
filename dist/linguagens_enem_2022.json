@@ -280,7 +280,7 @@
     "difficulty": 7,
     "contextId": "enem_2022_linguagens_q6_ctx1",
     "disciplinas": [
-      "gramatica"
+      "linguistica"
     ]
   },
   {
@@ -432,7 +432,7 @@
     "difficulty": 6,
     "contextId": "enem_2022_linguagens_q12_ctx1",
     "disciplinas": [
-      "gramatica",
+      "linguistica",
       "literatura"
     ]
   },
@@ -484,7 +484,7 @@
       "enem_2022_linguagens_q14_ctx2"
     ],
     "disciplinas": [
-      "gramatica"
+      "linguistica"
     ]
   },
   {
@@ -560,8 +560,8 @@
     "contextId": "enem_2022_linguagens_q17_ctx1",
     "difficulty": 7,
     "disciplinas": [
-      "gramatica",
-      "interpretacao"
+      "interpretacao",
+      "linguistica"
     ]
   },
   {
@@ -741,8 +741,8 @@
     "difficulty": 4,
     "contextId": "enem_2022_linguagens_q24_ctx1",
     "disciplinas": [
-      "gramatica",
-      "interpretacao"
+      "interpretacao",
+      "linguistica"
     ]
   },
   {
@@ -842,7 +842,7 @@
     "difficulty": 5,
     "contextId": "enem_2022_linguagens_q28_ctx1",
     "disciplinas": [
-      "gramatica"
+      "linguistica"
     ]
   },
   {
@@ -969,7 +969,7 @@
     "difficulty": 7,
     "contextId": "enem_2022_linguagens_q33_ctx1",
     "disciplinas": [
-      "gramatica",
+      "linguistica",
       "literatura"
     ]
   },

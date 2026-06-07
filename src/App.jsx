@@ -125,11 +125,15 @@ const CHANGELOG = [
       'Estude dividido em sub-abas ENEM e Listas',
       'Novo picker de disciplina com subtemas e quantidade',
       'Resumo agrupado por disciplina antes dos assuntos',
-      'Novos subtemas de Gramática detectados por enunciado',
+      'Novos subtemas de Linguística detectados por enunciado',
       'Subtemas de Matemática: frações, proporção, regra de três',
       'Mudanças significativas no visual da página',
       'Criar lista abre na mesma página',
       'ENEM 2019 Linguagens Q30: contextos reais criados',
+      'ENEM 2019 Linguagens Q31: criado contexto próprio com a escultura "Cabeça de touro" (atribuição pendente)',
+      'ENEM 2019 Linguagens Q32: título e subtítulo extraídos da reportagem ("Emagrecer sem exercício?" / "Hormônio aumenta…")',
+      'ENEM 2019 Linguagens: removidas 15 referências a contextos compartilhados errados (texto inglês de pets, sugar letter, comic artist) que apareciam em questões portuguesas de tema totalmente diferente; questões afetadas agora ficam sem contexto até receberem a fonte real',
+      'Logo do Integrar movido para o cabeçalho (ao lado de "Trilha Integrar" e do botão sol/lua), liberando espaço no card',
     ],
   },
   {
@@ -567,9 +571,8 @@ export default function App() {
 
 
   const [user, setUser] = useState(null)
-  const [editorOpen, setEditorOpen] = useState(() =>
-    typeof window !== 'undefined' && window.location.pathname === '/editor'
-  )
+  // Active tool inside the Ensine tab: null = tool launcher, otherwise the tool id.
+  const [ensineTool, setEnsineTool] = useState(null)
   useEffect(() => {
     if (window.location.pathname === '/editor') {
       window.history.replaceState(null, '', '/')
@@ -621,12 +624,42 @@ export default function App() {
   const [isDailyChallenge, setIsDailyChallenge] = useState(false)
   const [dailyChallengeLoading, setDailyChallengeLoading] = useState(false)
   const [dailyChallengeResult, setDailyChallengeResult] = useState(null) // {score, total} if already done today
+  const [dailyChallengePractice, setDailyChallengePractice] = useState(false) // true = retake, do not post result
   const [selectedArea, setSelectedArea] = useState(null) // 'math' | 'nature' | 'linguagens' | 'humanas'
   const [selectedTag, setSelectedTag] = useState(null)   // unified tag string | null
-  const [selectedDisciplina, setSelectedDisciplina] = useState(null)
-  const [allowMultidisciplinar, setAllowMultidisciplinar] = useState(true)
-  const [selectedSubtags, setSelectedSubtags] = useState([])
-  const [disciplinaQuizLength, setDisciplinaQuizLength] = useState(10)
+  const [selectedDisciplina, setSelectedDisciplina] = useState(() => {
+    try { return localStorage.getItem('trilha-integrar-picker-disc') || null } catch { return null }
+  })
+  const [allowMultidisciplinar, setAllowMultidisciplinar] = useState(() => {
+    try { return localStorage.getItem('trilha-integrar-picker-allowmulti') !== '0' } catch { return true }
+  })
+  const [selectedSubtags, setSelectedSubtags] = useState(() => {
+    try {
+      const raw = localStorage.getItem('trilha-integrar-picker-subtags')
+      return raw ? JSON.parse(raw) : []
+    } catch { return [] }
+  })
+  const [disciplinaQuizLength, setDisciplinaQuizLength] = useState(() => {
+    try {
+      const raw = localStorage.getItem('trilha-integrar-picker-length')
+      if (raw === 'all') return 'all'
+      const n = parseInt(raw, 10)
+      return [10, 20, 45].includes(n) ? n : 10
+    } catch { return 10 }
+  })
+
+  useEffect(() => {
+    try { localStorage.setItem('trilha-integrar-picker-disc', selectedDisciplina || '') } catch {}
+  }, [selectedDisciplina])
+  useEffect(() => {
+    try { localStorage.setItem('trilha-integrar-picker-allowmulti', allowMultidisciplinar ? '1' : '0') } catch {}
+  }, [allowMultidisciplinar])
+  useEffect(() => {
+    try { localStorage.setItem('trilha-integrar-picker-subtags', JSON.stringify(selectedSubtags)) } catch {}
+  }, [selectedSubtags])
+  useEffect(() => {
+    try { localStorage.setItem('trilha-integrar-picker-length', String(disciplinaQuizLength)) } catch {}
+  }, [disciplinaQuizLength])
   const [expandedArea, setExpandedArea] = useState(null) // area panel open on home screen
   const [optionsOpen, setOptionsOpen] = useState(false)
   const [headerMenuOpen, setHeaderMenuOpen] = useState(false)
@@ -649,6 +682,7 @@ export default function App() {
     setSelectedDay(null)
     setSelectedIntegrarYear(null)
     setSelectedTest(tab === 'simule' ? 'ENEM' : null)
+    if (tab !== 'ensine') setEnsineTool(null)
   }
   useEffect(() => {
     const FAVICON_COLOR_BY_TAB = { estude: 'red', simule: 'amber', ensine: 'blue' }
@@ -760,6 +794,7 @@ export default function App() {
               questionStartRef.current = savedQStart && savedQStart < now ? savedQStart : now
               prevQuestionNumRef.current = null
               setIsDailyChallenge(true)
+              if (saved.dailyChallengePractice) setDailyChallengePractice(true)
               setPhase('quiz')
             }
           } else {
@@ -1097,10 +1132,11 @@ export default function App() {
     const sessionData = isDailyChallenge
       ? {
           isDailyChallenge: true,
+          dailyChallengePractice,
           dailyQuestionRefs: questions.map((q) => ({ area: q.area, year: q.year, test: q.test, number: q.number })),
         }
       : selectedArea
-        ? { isAreaMode: true, selectedArea, selectedTag, areaQuestionRefs: questions.map((q) => ({ area: q.area, year: q.year, test: q.test, number: q.number })) }
+        ? { isAreaMode: true, selectedArea, selectedTag, selectedDisciplina, areaQuestionRefs: questions.map((q) => ({ area: q.area, year: q.year, test: q.test, number: q.number })) }
         : { selectedTest, selectedYear, selectedDay }
     savePausedSession({
       ...sessionData,
@@ -1176,10 +1212,11 @@ export default function App() {
     const sessionData = isDailyChallenge
       ? {
           isDailyChallenge: true,
+          dailyChallengePractice,
           dailyQuestionRefs: questions.map((q) => ({ area: q.area, year: q.year, test: q.test, number: q.number })),
         }
       : selectedArea
-        ? { isAreaMode: true, selectedArea, selectedTag, areaQuestionRefs: questions.map((q) => ({ area: q.area, year: q.year, test: q.test, number: q.number })) }
+        ? { isAreaMode: true, selectedArea, selectedTag, selectedDisciplina, areaQuestionRefs: questions.map((q) => ({ area: q.area, year: q.year, test: q.test, number: q.number })) }
         : { selectedTest, selectedYear, selectedDay }
     savePausedSession({
       ...sessionData,
@@ -1292,6 +1329,10 @@ export default function App() {
     questionStartRef.current       = now
     prevQuestionNumRef.current     = null
     if (saved.isDailyChallenge) setIsDailyChallenge(true)
+    if (saved.dailyChallengePractice) setDailyChallengePractice(true)
+    if (saved.selectedDisciplina) setSelectedDisciplina(saved.selectedDisciplina)
+    if (saved.selectedArea) setSelectedArea(saved.selectedArea)
+    if (saved.selectedTag !== undefined) setSelectedTag(saved.selectedTag)
     setPhase('quiz')
   }, [allQuestions])
 
@@ -1362,9 +1403,10 @@ export default function App() {
     setPhase('quiz')
   }, [allQuestions, selectedTest, selectedYear, selectedDay, foreignLang])
 
-  const startDailyChallenge = useCallback(async () => {
+  const startDailyChallenge = useCallback(async (opts = {}) => {
+    const { practice = false } = opts
     setDailyChallengeLoading(true)
-    setDailyChallengeResult(null)
+    if (!practice) setDailyChallengeResult(null)
     try {
       // Check if today's challenge exists and if user already completed it
       const res = await fetch('/api/daily-challenge', {
@@ -1372,7 +1414,7 @@ export default function App() {
       })
       const data = await res.json()
 
-      if (data.completed) {
+      if (data.completed && !practice) {
         setDailyChallengeResult({ score: data.completed.score, total: data.completed.total })
         return
       }
@@ -1398,7 +1440,7 @@ export default function App() {
         })
         const postData = await postRes.json()
 
-        if (postData.completed) {
+        if (postData.completed && !practice) {
           setDailyChallengeResult({ score: postData.completed.score, total: postData.completed.total })
           return
         }
@@ -1437,6 +1479,7 @@ export default function App() {
       accQuestionTimesRef.current = {}
       prevQuestionNumRef.current = null
       setIsDailyChallenge(true)
+      setDailyChallengePractice(practice)
       setQuestions(sorted)
       setQuestion(sorted[0])
       setTotalElapsed(0)
@@ -1448,50 +1491,6 @@ export default function App() {
       setDailyChallengeLoading(false)
     }
   }, [allQuestions, token, foreignLang])
-
-  const startAreaQuiz = useCallback((area, tag = null) => {
-    const pool = allQuestions.filter((q) =>
-      q.area === area &&
-      (tag === null || q.tags?.includes(tag))
-    )
-    if (pool.length === 0) return
-
-    // Build language variant lookup
-    const variants = {}
-    pool.forEach((q) => {
-      if (q.language) {
-        if (!variants[q.number]) variants[q.number] = {}
-        variants[q.number][q.language] = q
-      }
-    })
-    langVariantsRef.current = variants
-
-    const deduped = pool.filter((q) => !q.language || q.language === foreignLang)
-    const shuffled = [...deduped]
-    for (let i = shuffled.length - 1; i > 0; i--) {
-      const j = Math.floor(Math.random() * (i + 1))
-      ;[shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]]
-    }
-    const picked = shuffled.slice(0, 10)
-
-    clearPausedSession()
-    setAttempts({})
-    saveAttemptsToSession({})
-    setSelectedArea(area)
-    setSelectedTag(tag)
-    setExpandedArea(null)
-    setIsDailyChallenge(false)
-    const now = Date.now()
-    startTimeRef.current = now
-    questionStartRef.current = now
-    accQuestionTimesRef.current = {}
-    prevQuestionNumRef.current = null
-    setQuestions(picked)
-    setQuestion(picked[0])
-    setTotalElapsed(0)
-    setQuestionElapsed(0)
-    setPhase('quiz')
-  }, [allQuestions, foreignLang])
 
   const startDisciplinaQuiz = useCallback((disciplina, opts = {}) => {
     const { allowMultidisciplinar: allowMulti = true, tags = [], length = 10 } = opts
@@ -1602,7 +1601,7 @@ export default function App() {
     if (token) {
       const score = Object.values(attempts).filter((a) => a.correct).length
       const scorableTotal = questions.filter((q) => q.answer !== 'annulled').length
-      if (isDailyChallenge) {
+      if (isDailyChallenge && !dailyChallengePractice) {
         fetch('/api/daily-challenge/result', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json', Authorization: `Bearer ${token}` },
@@ -1612,7 +1611,7 @@ export default function App() {
             elapsed_secs: finalTotal,
           }),
         }).catch(() => {})
-      } else if (!selectedArea && selectedTest !== 'Integrar') {
+      } else if (!isDailyChallenge && !selectedArea && selectedTest !== 'Integrar') {
         // Integrar results are not yet persisted (day column is INTEGER in DB;
         // Integrar uses set name strings — migration needed before tracking)
         fetch('/api/results', {
@@ -1631,7 +1630,7 @@ export default function App() {
     }
 
     setPhase('summary')
-  }, [question, totalElapsed, token, attempts, questions, selectedTest, selectedYear, selectedDay, selectedArea])
+  }, [question, totalElapsed, token, attempts, questions, selectedTest, selectedYear, selectedDay, selectedArea, isDailyChallenge, dailyChallengePractice])
 
   const stemSegments = useMemo(() => {
     if (!question) return []
@@ -1674,9 +1673,6 @@ export default function App() {
   // ── Loading ───────────────────────────────────────────────────────────────
   if (loading) return <div className="center">Carregando...</div>
 
-  // ── Editor (inline, no URL change) ───────────────────────────────────────
-  if (editorOpen) return <Suspense fallback={null}><QuestionEditor onClose={() => setEditorOpen(false)} /></Suspense>
-
   // ── Homepage ──────────────────────────────────────────────────────────────
   if (phase === 'home') {
     const pausedSession = readPausedSession()
@@ -1700,7 +1696,11 @@ export default function App() {
               <h1 className="home-title">Prova em andamento</h1>
               <div className="paused-info">
                 <p className="paused-info-line">
-                  <strong>{pausedSession.isAreaMode ? areaLabel(pausedSession.selectedArea) : `${pausedSession.selectedTest} ${pausedSession.selectedYear}`}</strong>
+                  <strong>{pausedSession.isAreaMode
+                    ? (pausedSession.selectedDisciplina
+                        ? disciplinaLabel(pausedSession.selectedDisciplina)
+                        : areaLabel(pausedSession.selectedArea))
+                    : `${pausedSession.selectedTest} ${pausedSession.selectedYear}`}</strong>
                   {pausedSession.isAreaMode && pausedSession.selectedTag && <>{' '}— {pausedSession.selectedTag}</>}
                   {!pausedSession.isAreaMode && <>{' '}— Dia {pausedSession.selectedDay}</>}
                 </p>
@@ -1809,6 +1809,11 @@ export default function App() {
         <div className={`home-screen home-screen--${activeTab}`}>
           <header className="home-header">
             <div className="home-header-row">
+              <img
+                src="/figuras/logos/integrar-logo-transparent.png"
+                alt="Integrar"
+                className="home-header-logo"
+              />
               <span className="home-header-title">Trilha Integrar</span>
               <span className="home-version-pill">V{APP_VERSION}</span>
               <div className="home-header-actions">
@@ -1843,30 +1848,31 @@ export default function App() {
             </nav>
           </header>
 
-          <div className="home-card">
-            <div className="home-logo-wrap">
-              <img
-                src="/figuras/logos/integrar-logo-transparent.png"
-                alt="Integrar"
-                className="home-logo"
-              />
-            </div>
-
+          <div className={`home-card${ensineTool ? ' home-card--wide' : ''}`}>
             {activeTab === 'estude' && (
               <div className="home-tab-content">
                 {dailyChallengeResult ? (
                   <div className="daily-done-banner">
                     <span className="daily-done-icon">★</span>
-                    <span>
+                    <span className="daily-done-text">
                       Desafio de hoje concluído!{' '}
                       <strong>{dailyChallengeResult.score}/{dailyChallengeResult.total}</strong> corretas
                     </span>
+                    <button
+                      type="button"
+                      className="daily-done-redo"
+                      onClick={() => startDailyChallenge({ practice: true })}
+                      disabled={dailyChallengeLoading}
+                      title="Refazer apenas para treino — não conta no histórico"
+                    >
+                      {dailyChallengeLoading ? '…' : 'Refazer'}
+                    </button>
                   </div>
                 ) : (
                   <button
                     type="button"
                     className="home-daily-btn"
-                    onClick={startDailyChallenge}
+                    onClick={() => startDailyChallenge()}
                     disabled={dailyChallengeLoading}
                   >
                     {dailyChallengeLoading ? 'Carregando…' : '★ Desafio Diário'}
@@ -2219,26 +2225,32 @@ export default function App() {
             {activeTab === 'ensine' && (
               <div className="home-tab-content">
                 {(user?.role === 'prof' || user?.role === 'admin') ? (
-                  <>
-                    <button
-                      type="button"
-                      className="home-start-btn"
-                      onClick={() => setEditorOpen(true)}
-                    >
-                      Criar lista
-                    </button>
-                    {user?.role === 'admin' && (
+                  ensineTool === 'criar-lista' ? (
+                    <Suspense fallback={<p className="qe-loading">Carregando…</p>}>
+                      <QuestionEditor embedded onClose={() => setEnsineTool(null)} />
+                    </Suspense>
+                  ) : (
+                    <>
                       <button
                         type="button"
-                        className="btn--ghost"
-                        onClick={openAdminPanel}
-                        disabled={adminLoading}
+                        className="home-start-btn"
+                        onClick={() => setEnsineTool('criar-lista')}
                       >
-                        {adminLoading ? 'Carregando…' : 'Painel Admin'}
+                        Criar lista
                       </button>
-                    )}
-                    {adminError && <p className="auth-error" style={{ margin: 0 }}>{adminError}</p>}
-                  </>
+                      {user?.role === 'admin' && (
+                        <button
+                          type="button"
+                          className="btn--ghost"
+                          onClick={openAdminPanel}
+                          disabled={adminLoading}
+                        >
+                          {adminLoading ? 'Carregando…' : 'Painel Admin'}
+                        </button>
+                      )}
+                      {adminError && <p className="auth-error" style={{ margin: 0 }}>{adminError}</p>}
+                    </>
+                  )
                 ) : (
                   <p className="home-ensine-message">
                     Esta área é para professores. Fale com seu professor se você acredita que deveria ter acesso.
@@ -2592,9 +2604,12 @@ export default function App() {
                 setTriScores(null)
                 if (isDailyChallenge) {
                   setIsDailyChallenge(false)
-                  // Show the completed banner on home
-                  const score = Object.values(attempts).filter((a) => a.correct).length
-                  setDailyChallengeResult({ score, total: sortedQuestions.length })
+                  // Practice retake: keep original score banner intact
+                  if (!dailyChallengePractice) {
+                    const score = Object.values(attempts).filter((a) => a.correct).length
+                    setDailyChallengeResult({ score, total: sortedQuestions.length })
+                  }
+                  setDailyChallengePractice(false)
                 }
                 setPhase('home')
               }}
@@ -2893,13 +2908,19 @@ export default function App() {
     <div className="app-shell">
       <header className="app-header">
         <div className="app-header-left">
-          <span className="app-header-title">
+          <button
+            type="button"
+            className="app-header-title app-header-title--btn"
+            onClick={pauseQuiz}
+            aria-label="Voltar ao início"
+            title="Voltar ao início"
+          >
             <img
               src="/figuras/logos/integrar-logo-transparent.png"
               alt="Integrar"
               className="app-header-logo"
             />
-          </span>
+          </button>
           <button
             type="button"
             className={`header-icon-btn${timerDrawerOpen ? ' active' : ''}`}

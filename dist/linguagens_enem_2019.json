@@ -73,7 +73,6 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "a",
-    "contextId": "enem_2019_linguagens_q1_q39_ctx1",
     "language": "en",
     "disciplinas": [
       "ingles"
@@ -99,7 +98,6 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "b",
-    "contextId": "enem_2019_linguagens_q2_q4_ctx1",
     "language": "en",
     "disciplinas": [
       "ingles"
@@ -235,7 +233,6 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "b",
-    "contextId": "enem_2019_linguagens_q1_q39_ctx1",
     "language": "es",
     "disciplinas": [
       "espanhol",
@@ -340,7 +337,6 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "b",
-    "contextId": "enem_2019_linguagens_q1_q39_ctx1",
     "disciplinas": [
       "interpretacao"
     ]
@@ -365,7 +361,6 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "a",
-    "contextId": "enem_2019_linguagens_q1_q39_ctx1",
     "disciplinas": [
       "interpretacao"
     ]
@@ -440,13 +435,10 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "d",
-    "contextIds": [
-      "enem_2019_linguagens_q1_q39_ctx1",
-      "enem_2019_linguagens_q12_q36_ctx1"
-    ],
     "disciplinas": [
       "interpretacao"
-    ]
+    ],
+    "contextId": "enem_2019_linguagens_q12_q36_ctx1"
   },
   {
     "number": 13,
@@ -495,7 +487,6 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "e",
-    "contextId": "enem_2019_linguagens_q1_q39_ctx1",
     "disciplinas": [
       "interpretacao",
       "literatura"
@@ -572,7 +563,6 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "a",
-    "contextId": "enem_2019_linguagens_q1_q39_ctx1",
     "disciplinas": [
       "interpretacao"
     ]
@@ -597,7 +587,6 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "a",
-    "contextId": "enem_2019_linguagens_q1_q39_ctx1",
     "disciplinas": [
       "interpretacao"
     ]
@@ -672,7 +661,6 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "d",
-    "contextId": "enem_2019_linguagens_q1_q39_ctx1",
     "disciplinas": [
       "interpretacao",
       "literatura"
@@ -754,8 +742,8 @@
     "answer": "c",
     "contextId": "enem_2019_linguagens_q24_ctx1",
     "disciplinas": [
-      "gramatica",
-      "interpretacao"
+      "interpretacao",
+      "linguistica"
     ]
   },
   {
@@ -804,10 +792,6 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "e",
-    "contextIds": [
-      "enem_2019_linguagens_q1_q39_ctx1",
-      "enem_2019_linguagens_q12_q36_ctx1"
-    ],
     "disciplinas": [
       "interpretacao"
     ]
@@ -882,7 +866,6 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "c",
-    "contextId": "enem_2019_linguagens_q1_q39_ctx1",
     "disciplinas": [
       "interpretacao"
     ]
@@ -913,8 +896,8 @@
       "enem_2019_linguagens_q30_ctx2"
     ],
     "disciplinas": [
-      "gramatica",
       "interpretacao",
+      "linguistica",
       "literatura"
     ]
   },
@@ -928,7 +911,9 @@
       "d": "mudança da funcionalidade pela integração dos objetos.",
       "e": "fragmentação da imagem no uso de elemento diversificados."
     },
-    "images": [],
+    "images": [
+      "figuras/q031_2019_fig1.png"
+    ],
     "tags": [
       "artes visuais",
       "interpretação de texto"
@@ -938,11 +923,11 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "d",
-    "contextId": "enem_2019_linguagens_q1_q39_ctx1",
     "disciplinas": [
       "artes",
       "interpretacao"
-    ]
+    ],
+    "contextId": "enem_2019_linguagens_q31_ctx1"
   },
   {
     "number": 32,
@@ -989,7 +974,6 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "e",
-    "contextId": "enem_2019_linguagens_q1_q39_ctx1",
     "disciplinas": [
       "interpretacao",
       "literatura"
@@ -1015,9 +999,8 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "a",
-    "contextId": "enem_2019_linguagens_q1_q39_ctx1",
     "disciplinas": [
-      "gramatica"
+      "linguistica"
     ]
   },
   {
@@ -1065,10 +1048,6 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "a",
-    "contextIds": [
-      "enem_2019_linguagens_q1_q39_ctx1",
-      "enem_2019_linguagens_q12_q36_ctx1"
-    ],
     "disciplinas": [
       "artes",
       "interpretacao"
@@ -1097,8 +1076,8 @@
     "answer": "d",
     "contextId": "enem_2019_linguagens_q37_ctx1",
     "disciplinas": [
-      "gramatica",
-      "interpretacao"
+      "interpretacao",
+      "linguistica"
     ]
   },
   {
@@ -1146,7 +1125,6 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "b",
-    "contextId": "enem_2019_linguagens_q1_q39_ctx1",
     "disciplinas": [
       "interpretacao",
       "literatura"
@@ -1277,8 +1255,8 @@
     "answer": "e",
     "contextId": "enem_2019_linguagens_q44_ctx1",
     "disciplinas": [
-      "gramatica",
       "interpretacao",
+      "linguistica",
       "literatura"
     ]
   },
@@ -1306,8 +1284,8 @@
     "answer": "b",
     "contextId": "enem_2019_linguagens_q45_ctx1",
     "disciplinas": [
-      "gramatica",
       "interpretacao",
+      "linguistica",
       "literatura"
     ]
   }

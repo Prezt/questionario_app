@@ -290,8 +290,8 @@
     "answer": "c",
     "contextId": "enem_2020_linguagens_q6_ctx1",
     "disciplinas": [
-      "gramatica",
-      "interpretacao"
+      "interpretacao",
+      "linguistica"
     ]
   },
   {
@@ -317,8 +317,8 @@
     "answer": "e",
     "contextId": "enem_2020_linguagens_q7_ctx1",
     "disciplinas": [
-      "gramatica",
-      "interpretacao"
+      "interpretacao",
+      "linguistica"
     ]
   },
   {
@@ -344,8 +344,8 @@
     "answer": "a",
     "contextId": "enem_2020_linguagens_q8_ctx1",
     "disciplinas": [
-      "gramatica",
       "interpretacao",
+      "linguistica",
       "literatura"
     ]
   },
@@ -372,8 +372,8 @@
     "answer": "a",
     "contextId": "enem_2020_linguagens_q9_ctx1",
     "disciplinas": [
-      "gramatica",
       "interpretacao",
+      "linguistica",
       "literatura"
     ]
   },
@@ -663,8 +663,8 @@
     "answer": "d",
     "contextId": "enem_2020_linguagens_q20_ctx2",
     "disciplinas": [
-      "gramatica",
-      "interpretacao"
+      "interpretacao",
+      "linguistica"
     ]
   },
   {
@@ -742,8 +742,8 @@
     "answer": "a",
     "contextId": "enem_2020_linguagens_q23_ctx1",
     "disciplinas": [
-      "gramatica",
-      "interpretacao"
+      "interpretacao",
+      "linguistica"
     ]
   },
   {
@@ -768,8 +768,8 @@
     "answer": "d",
     "contextId": "enem_2020_linguagens_q24_ctx1",
     "disciplinas": [
-      "gramatica",
-      "interpretacao"
+      "interpretacao",
+      "linguistica"
     ]
   },
   {
@@ -1083,8 +1083,8 @@
     "answer": "d",
     "contextId": "enem_2020_linguagens_q36_ctx1",
     "disciplinas": [
-      "gramatica",
-      "interpretacao"
+      "interpretacao",
+      "linguistica"
     ]
   },
   {
@@ -1213,8 +1213,8 @@
     "answer": "a",
     "contextId": "enem_2020_linguagens_q41_ctx1",
     "disciplinas": [
-      "gramatica",
       "interpretacao",
+      "linguistica",
       "literatura"
     ]
   },

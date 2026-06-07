@@ -1344,22 +1344,31 @@
   },
   "enem_2019_linguagens_q30_ctx1": {
     "title": "TEXTO I",
-    "subtitle": null,
-    "text": "Na passagem de uma língua para outra, algo sempre permanece, mesmo que não haja ninguém para se lembrar desse algo. Pois um idioma retém em si mais memórias que os seus falantes e, como uma chapa mineral marcada por camadas de uma história mais antiga do que aquela dos seres viventes, inevitavelmente carrega em si a impressão das eras pelas quais passou.",
+    "subtitle": "",
+    "text": "Na passagem de uma língua para outra, algo sempre permanece, mesmo que não haja ninguém para se lembrar desse algo. Pois um idioma retém em si mais memórias que os seus falantes e, como uma chapa mineral marcada por camadas de uma história mais antiga do que aquela dos seres viventes, inevitavelmente carrega em si a impressão das eras pelas quais passou. Se as \"línguas são arquivos da história\" , elas carecem de livros de registro e catálogos.\nAquilo que contêm pode apenas ser consultado em parte, fornecendo ao pesquisador menos os elementos de uma biografia do que um estudo geológico de uma sedimentação realizada em um período sem começo ou sem fim definido.",
     "images": [],
     "reference": "HELLER-ROAZEN, D. Ecolalias: sobre o esquecimento das línguas. Campinas: Unicamp, 2010."
   },
   "enem_2019_linguagens_q30_ctx2": {
     "title": "TEXTO II",
-    "subtitle": null,
-    "text": "Na reflexão gramatical dos séculos XVI e XVII, a influência árabe aparece pontualmente, e se reveste sobretudo de item bélico fundamental na atribuição de rudeza aos idiomas português e castelhano por seus respectivos detratores.",
+    "subtitle": "",
+    "text": "Na reflexão gramatical dos séculos XVI e XVII, a influência árabe aparece pontualmente, e se reveste sobretudo de item bélico fundamental na atribuição de rudeza aos idiomas português e castelhano por seus respectivos detratores. Parecer com o árabe, assim, é uma acusação de dessemelhança com o latim.",
     "images": [],
     "reference": "SOUZA, M. P. Linguística histórica. Campinas: Unicamp, 2006."
   },
-  "enem_2019_linguagens_q32_ctx1": {
+  "enem_2019_linguagens_q31_ctx1": {
     "title": null,
     "subtitle": null,
-    "text": "Emagrecer sem exercício?\nHormônio aumenta a esperança de perder gordura sem sair do sofá. A solução viria em cápsulas.\nO sonho dos sedentários ganhou novo aliado\nUm estudo publicado na revista científica Nature, em janeiro, sugere que é possível modificar a gordura corporal sem fazer exercício. Pesquisadores do Dana-Farber Cancer Institute e da Escola de Medicina de Harvard nos EUA, isolaram em laboratório a irisina, hormônio naturalmente produzido pelas células musculares durante os exercícios aeróbicos, como caminhada, corrida ou pedalada. A substância foi aplicada em ratos e agiu como se eles tivessem se exercitado, inclusive com efeito protetor contra o diabetes.\nO segredo foi a conversão de gordura branca — aquela que estoca energia inerte e estraga nossa silhueta — em marrom. Mais comum em bebês, e praticamente inexistente em adultos, esse tipo de gordura serve para nos aquecer. E, nesse processo, gasta uma energia tremenda. Como efeito colateral, afinaria nossa silhueta.\nA expectativa é que, se o hormônio funcionar da mesma forma em humanos, surja em breve um novo medicamento para emagrecer. Mas ele estaria longe de substituir por completo os benefícios da atividade física. \"Possivelmente existem muitos outros hormônios musculares liberados durante o exercício e ainda não descobertos\", diz o fisiologista Paul Coen, professor assistente da Universidade de Pittsburgh, nos EUA. A irisina não fortalece os músculos, por exemplo. E para ficar com aquele tríceps de fazer inveja só o levantamento de controle remoto não daria conta.",
+    "text": "",
+    "images": [
+      "figuras/q031_2019_fig1.png"
+    ],
+    "reference": ""
+  },
+  "enem_2019_linguagens_q32_ctx1": {
+    "title": "Emagrecer sem exercício?",
+    "subtitle": "Hormônio aumenta a esperança de perder gordura sem sair do sofá. A solução viria em cápsulas.",
+    "text": "O sonho dos sedentários ganhou novo aliado\nUm estudo publicado na revista científica Nature, em janeiro, sugere que é possível modificar a gordura corporal sem fazer exercício. Pesquisadores do Dana-Farber Cancer Institute e da Escola de Medicina de Harvard nos EUA, isolaram em laboratório a irisina, hormônio naturalmente produzido pelas células musculares durante os exercícios aeróbicos, como caminhada, corrida ou pedalada. A substância foi aplicada em ratos e agiu como se eles tivessem se exercitado, inclusive com efeito protetor contra o diabetes.\nO segredo foi a conversão de gordura branca — aquela que estoca energia inerte e estraga nossa silhueta — em marrom. Mais comum em bebês, e praticamente inexistente em adultos, esse tipo de gordura serve para nos aquecer. E, nesse processo, gasta uma energia tremenda. Como efeito colateral, afinaria nossa silhueta.\nA expectativa é que, se o hormônio funcionar da mesma forma em humanos, surja em breve um novo medicamento para emagrecer. Mas ele estaria longe de substituir por completo os benefícios da atividade física. \"Possivelmente existem muitos outros hormônios musculares liberados durante o exercício e ainda não descobertos\", diz o fisiologista Paul Coen, professor assistente da Universidade de Pittsburgh, nos EUA. A irisina não fortalece os músculos, por exemplo. E para ficar com aquele tríceps de fazer inveja só o levantamento de controle remoto não daria conta.",
     "images": [],
     "reference": "LIMA, F. Galileu. São Paulo, n. 248, mar. 2012."
   },

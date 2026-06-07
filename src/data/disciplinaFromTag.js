@@ -79,7 +79,7 @@ for (const t of [
   'interpretação de texto', 'gêneros textuais', 'comunicação e mídia',
 ]) add('linguagens', t, 'interpretacao')
 
-// ── Linguagens → Gramática ───────────────────────────────────────────────────
+// ── Linguagens → Linguística ─────────────────────────────────────────────────
 for (const t of [
   'linguística e variação linguística',
   'variação linguística',
@@ -93,7 +93,7 @@ for (const t of [
   'crase',
   'pontuação',
   'morfologia',
-]) add('linguagens', t, 'gramatica')
+]) add('linguagens', t, 'linguistica')
 
 // ── Linguagens → Literatura ──────────────────────────────────────────────────
 for (const t of [

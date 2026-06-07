@@ -21,7 +21,7 @@ describe('disciplinasForTag', () => {
   it('maps unambiguous linguagens tags', () => {
     expect(disciplinasForTag('linguagens', 'interpretação de texto')).toEqual(['interpretacao'])
     expect(disciplinasForTag('linguagens', 'gêneros textuais')).toEqual(['interpretacao'])
-    expect(disciplinasForTag('linguagens', 'linguística e variação linguística')).toEqual(['gramatica'])
+    expect(disciplinasForTag('linguagens', 'linguística e variação linguística')).toEqual(['linguistica'])
     expect(disciplinasForTag('linguagens', 'literatura brasileira')).toEqual(['literatura'])
     expect(disciplinasForTag('linguagens', 'língua inglesa')).toEqual(['ingles'])
     expect(disciplinasForTag('linguagens', 'língua espanhola')).toEqual(['espanhol'])

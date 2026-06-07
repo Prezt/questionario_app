@@ -7,6 +7,15 @@
   color: var(--text);
 }
 
+/* Embedded inside the home Ensine tab — host page owns the outer header, padding, and width. */
+.qe-shell--embedded {
+  max-width: none;
+  padding: 0;
+  width: 100%;
+  text-align: left;
+}
+.qe-shell--embedded .qe-header { margin-bottom: 1rem; }
+
 /* ── Header ── */
 .qe-header {
   display: flex;

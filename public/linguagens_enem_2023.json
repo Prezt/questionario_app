@@ -360,7 +360,7 @@
       "enem_2023_linguagens_q8_ctx1"
     ],
     "disciplinas": [
-      "gramatica",
+      "linguistica",
       "literatura"
     ]
   },
@@ -550,8 +550,8 @@
     ],
     "disciplinas": [
       "artes",
-      "gramatica",
-      "interpretacao"
+      "interpretacao",
+      "linguistica"
     ]
   },
   {
@@ -579,7 +579,7 @@
       "enem_2023_linguagens_q16_ctx1"
     ],
     "disciplinas": [
-      "gramatica",
+      "linguistica",
       "literatura"
     ]
   },
@@ -690,7 +690,7 @@
       "enem_2023_linguagens_q20_ctx1"
     ],
     "disciplinas": [
-      "gramatica"
+      "linguistica"
     ]
   },
   {
@@ -717,8 +717,8 @@
       "enem_2023_linguagens_q21_ctx1"
     ],
     "disciplinas": [
-      "gramatica",
-      "interpretacao"
+      "interpretacao",
+      "linguistica"
     ]
   },
   {
@@ -880,7 +880,7 @@
       "enem_2023_linguagens_q27_ctx1"
     ],
     "disciplinas": [
-      "gramatica",
+      "linguistica",
       "literatura"
     ]
   },
@@ -1206,7 +1206,7 @@
       "enem_2023_linguagens_q39_ctx1"
     ],
     "disciplinas": [
-      "gramatica"
+      "linguistica"
     ]
   },
   {

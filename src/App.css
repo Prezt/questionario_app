@@ -133,6 +133,20 @@
   display: block;
 }
 
+.app-header-title--btn {
+  background: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  color: inherit;
+  font: inherit;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.app-header-title--btn:hover .app-header-logo {
+  opacity: 0.75;
+}
+
 .app-header-left {
   display: flex;
   align-items: center;
@@ -1555,6 +1569,12 @@
   margin: auto;
 }
 
+/* Widened mode: used when an Ensine tool (e.g. the question editor) is embedded inside the card. */
+.home-card--wide {
+  max-width: 760px;
+  padding: 2rem 1.5rem 2.5rem;
+}
+
 .home-logo-wrap {
   width: 80px;
   height: 80px;
@@ -1896,6 +1916,13 @@
   border-radius: 999px;
   padding: 0.2rem 0.65rem;
   margin-right: auto;
+}
+
+.home-header-logo {
+  width: 2.2rem;
+  height: 2.2rem;
+  object-fit: contain;
+  flex-shrink: 0;
 }
 
 .home-header-actions {
@@ -2410,12 +2437,6 @@
   width: 100%;
 }
 
-.home-area-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 0.4rem;
-}
-
 .home-area-pill {
   height: 2.5rem;
   padding: 0 0.85rem;
@@ -2441,12 +2462,6 @@
   transform: scale(0.97);
 }
 
-.home-area-pill.home-area-pill--active {
-  background: var(--tab-accent, var(--accent));
-  border-color: var(--tab-accent, var(--accent));
-  color: #fff;
-}
-
 .home-area-pill.home-area-pill--primary {
   background: var(--tab-accent, var(--accent));
   border-color: var(--tab-accent, var(--accent));
@@ -2469,15 +2484,12 @@
   cursor: not-allowed;
 }
 
-/* Wider home card on desktop + tighter pill grid */
+/* Wider home card on desktop */
 @media (min-width: 768px) {
   .home-card,
   .home-header,
   .home-footer {
     max-width: 760px;
-  }
-  .home-area-grid {
-    grid-template-columns: 1fr 1fr 1fr;
   }
 }
 
@@ -2692,6 +2704,39 @@
 
 .daily-done-icon {
   font-size: 1.1rem;
+}
+
+.daily-done-text {
+  flex: 1;
+  min-width: 0;
+}
+
+.daily-done-redo {
+  flex-shrink: 0;
+  height: 1.85rem;
+  padding: 0 0.7rem;
+  border: 1.5px solid currentColor;
+  border-radius: 999px;
+  background: transparent;
+  color: inherit;
+  font-size: 0.78rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.daily-done-redo:hover:not(:disabled) {
+  background: currentColor;
+}
+
+.daily-done-redo:hover:not(:disabled) {
+  color: #fff;
+}
+
+.daily-done-redo:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
 }
 
 /* ── Header timers ── */

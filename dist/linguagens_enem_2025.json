@@ -317,8 +317,8 @@
     "contextId": "enem_2025_linguagens_q6_q10_ctx1",
     "difficulty": 5,
     "disciplinas": [
-      "gramatica",
-      "interpretacao"
+      "interpretacao",
+      "linguistica"
     ]
   },
   {
@@ -368,8 +368,8 @@
     "contextId": "enem_2025_linguagens_q6_q10_ctx1",
     "difficulty": 4,
     "disciplinas": [
-      "gramatica",
-      "interpretacao"
+      "interpretacao",
+      "linguistica"
     ]
   },
   {
@@ -395,8 +395,8 @@
     "contextId": "enem_2025_linguagens_q6_q10_ctx1",
     "difficulty": 4,
     "disciplinas": [
-      "gramatica",
-      "interpretacao"
+      "interpretacao",
+      "linguistica"
     ]
   },
   {
@@ -422,8 +422,8 @@
     "contextId": "enem_2025_linguagens_q6_q10_ctx1",
     "difficulty": 7,
     "disciplinas": [
-      "gramatica",
-      "interpretacao"
+      "interpretacao",
+      "linguistica"
     ]
   },
   {
@@ -504,8 +504,8 @@
       "enem_2025_linguagens_q13_ctx1"
     ],
     "disciplinas": [
-      "gramatica",
-      "interpretacao"
+      "interpretacao",
+      "linguistica"
     ]
   },
   {
@@ -701,7 +701,7 @@
       "enem_2025_linguagens_q20_ctx1"
     ],
     "disciplinas": [
-      "gramatica"
+      "linguistica"
     ]
   },
   {
@@ -840,8 +840,8 @@
       "enem_2025_linguagens_q25_ctx1"
     ],
     "disciplinas": [
-      "gramatica",
       "interpretacao",
+      "linguistica",
       "literatura"
     ]
   },
@@ -870,7 +870,7 @@
     "answer": "b",
     "difficulty": 3,
     "disciplinas": [
-      "gramatica",
+      "linguistica",
       "literatura"
     ]
   },
@@ -982,8 +982,8 @@
       "enem_2025_linguagens_q30_ctx1"
     ],
     "disciplinas": [
-      "gramatica",
-      "interpretacao"
+      "interpretacao",
+      "linguistica"
     ]
   },
   {
@@ -1010,8 +1010,8 @@
     "answer": "d",
     "difficulty": 6,
     "disciplinas": [
-      "gramatica",
       "interpretacao",
+      "linguistica",
       "literatura"
     ]
   },
@@ -1093,8 +1093,8 @@
     "answer": "c",
     "difficulty": 6,
     "disciplinas": [
-      "gramatica",
       "interpretacao",
+      "linguistica",
       "literatura"
     ]
   },
@@ -1151,8 +1151,8 @@
       "enem_2025_linguagens_q36_ctx1"
     ],
     "disciplinas": [
-      "gramatica",
-      "interpretacao"
+      "interpretacao",
+      "linguistica"
     ]
   },
   {
@@ -1297,7 +1297,7 @@
     ],
     "disciplinas": [
       "artes",
-      "gramatica"
+      "linguistica"
     ]
   },
   {
@@ -1324,7 +1324,7 @@
       "enem_2025_linguagens_q42_ctx1"
     ],
     "disciplinas": [
-      "gramatica"
+      "linguistica"
     ]
   },
   {
@@ -1408,8 +1408,8 @@
     ],
     "disciplinas": [
       "artes",
-      "gramatica",
-      "interpretacao"
+      "interpretacao",
+      "linguistica"
     ]
   }
 ]

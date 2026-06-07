@@ -325,7 +325,7 @@
       "enem_2021_linguagens_q7_ctx1"
     ],
     "disciplinas": [
-      "gramatica",
+      "linguistica",
       "literatura"
     ]
   },
@@ -380,7 +380,7 @@
       "enem_2021_linguagens_q9_ctx1"
     ],
     "disciplinas": [
-      "gramatica",
+      "linguistica",
       "literatura"
     ]
   },
@@ -603,8 +603,8 @@
       "enem_2021_linguagens_q17_ctx1"
     ],
     "disciplinas": [
-      "gramatica",
-      "interpretacao"
+      "interpretacao",
+      "linguistica"
     ]
   },
   {
@@ -742,8 +742,8 @@
       "enem_2021_linguagens_q22_ctx1"
     ],
     "disciplinas": [
-      "gramatica",
-      "interpretacao"
+      "interpretacao",
+      "linguistica"
     ]
   },
   {
@@ -899,8 +899,8 @@
     "answer": "b",
     "contextId": "enem_2021_linguagens_q28_ctx1",
     "disciplinas": [
-      "gramatica",
-      "interpretacao"
+      "interpretacao",
+      "linguistica"
     ]
   },
   {
@@ -1284,8 +1284,8 @@
     "answer": "d",
     "contextId": "enem_2021_linguagens_q43_ctx1",
     "disciplinas": [
-      "gramatica",
       "interpretacao",
+      "linguistica",
       "literatura"
     ]
   },

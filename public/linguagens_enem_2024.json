@@ -309,7 +309,7 @@
       "enem_2024_linguagens_q6_ctx1"
     ],
     "disciplinas": [
-      "gramatica"
+      "linguistica"
     ]
   },
   {
@@ -444,7 +444,7 @@
     "answer": "e",
     "difficulty": 5,
     "disciplinas": [
-      "gramatica"
+      "linguistica"
     ]
   },
   {
@@ -499,7 +499,7 @@
     "answer": "d",
     "difficulty": 3,
     "disciplinas": [
-      "gramatica"
+      "linguistica"
     ]
   },
   {
@@ -525,7 +525,7 @@
     "answer": "c",
     "difficulty": 3,
     "disciplinas": [
-      "gramatica"
+      "linguistica"
     ]
   },
   {
@@ -774,8 +774,8 @@
     "answer": "b",
     "difficulty": 5,
     "disciplinas": [
-      "gramatica",
-      "interpretacao"
+      "interpretacao",
+      "linguistica"
     ]
   },
   {
@@ -803,7 +803,7 @@
       "enem_2024_linguagens_q24_ctx1"
     ],
     "disciplinas": [
-      "gramatica",
+      "linguistica",
       "literatura"
     ]
   },
@@ -1161,8 +1161,8 @@
       "enem_2024_linguagens_q37_ctx1"
     ],
     "disciplinas": [
-      "gramatica",
-      "interpretacao"
+      "interpretacao",
+      "linguistica"
     ]
   },
   {
@@ -1215,7 +1215,7 @@
       "enem_2024_linguagens_q39_ctx1"
     ],
     "disciplinas": [
-      "gramatica"
+      "linguistica"
     ]
   },
   {
@@ -1296,8 +1296,8 @@
       "enem_2024_linguagens_q42_ctx1"
     ],
     "disciplinas": [
-      "gramatica",
-      "interpretacao"
+      "interpretacao",
+      "linguistica"
     ]
   },
   {
@@ -1379,8 +1379,8 @@
       "enem_2024_linguagens_q45_ctx1"
     ],
     "disciplinas": [
-      "gramatica",
-      "interpretacao"
+      "interpretacao",
+      "linguistica"
     ]
   }
 ]
