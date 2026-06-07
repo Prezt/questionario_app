@@ -362,7 +362,9 @@
     "answer": "a",
     "difficulty": 5,
     "contextId": "enem_2022_linguagens_q9_ctx1",
-    "disciplinas": []
+    "disciplinas": [
+      "portugues"
+    ]
   },
   {
     "number": 10,
@@ -459,7 +461,9 @@
     "answer": "b",
     "difficulty": 5,
     "contextId": "enem_2022_linguagens_q13_ctx1",
-    "disciplinas": []
+    "disciplinas": [
+      "portugues"
+    ]
   },
   {
     "number": 14,
@@ -509,7 +513,9 @@
     "answer": "b",
     "difficulty": 5,
     "contextId": "enem_2022_linguagens_q15_ctx1",
-    "disciplinas": []
+    "disciplinas": [
+      "portugues"
+    ]
   },
   {
     "number": 16,
@@ -684,7 +690,9 @@
       "enem_2022_linguagens_q22_ctx1",
       "enem_2022_linguagens_q22_ctx2"
     ],
-    "disciplinas": []
+    "disciplinas": [
+      "portugues"
+    ]
   },
   {
     "number": 23,
@@ -808,7 +816,9 @@
     "answer": "b",
     "difficulty": 5,
     "contextId": "enem_2022_linguagens_q27_ctx1",
-    "disciplinas": []
+    "disciplinas": [
+      "portugues"
+    ]
   },
   {
     "number": 28,
@@ -982,7 +992,10 @@
     "images": [],
     "difficulty": 3,
     "contextId": "enem_2022_linguagens_q34_ctx1",
-    "disciplinas": []
+    "disciplinas": [
+      "educacao_fisica",
+      "portugues"
+    ]
   },
   {
     "number": 35,
@@ -1056,7 +1069,9 @@
     "answer": "a",
     "difficulty": 5,
     "contextId": "enem_2022_linguagens_q37_ctx1",
-    "disciplinas": []
+    "disciplinas": [
+      "portugues"
+    ]
   },
   {
     "number": 38,

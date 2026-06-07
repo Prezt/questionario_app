@@ -896,7 +896,9 @@
     "test": "ENEM",
     "answer": "a",
     "difficulty": 4,
-    "disciplinas": []
+    "disciplinas": [
+      "educacao_fisica"
+    ]
   },
   {
     "number": 28,

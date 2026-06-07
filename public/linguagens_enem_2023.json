@@ -314,7 +314,9 @@
     "contextIds": [
       "enem_2023_linguagens_q6_ctx1"
     ],
-    "disciplinas": []
+    "disciplinas": [
+      "educacao_fisica"
+    ]
   },
   {
     "number": 7,
@@ -393,7 +395,9 @@
     "contextIds": [
       "enem_2023_linguagens_q9_ctx1"
     ],
-    "disciplinas": []
+    "disciplinas": [
+      "portugues"
+    ]
   },
   {
     "number": 10,
@@ -417,7 +421,9 @@
     "contextIds": [
       "enem_2023_linguagens_q10_ctx1"
     ],
-    "disciplinas": []
+    "disciplinas": [
+      "portugues"
+    ]
   },
   {
     "number": 11,
@@ -1124,7 +1130,9 @@
     "contextIds": [
       "enem_2023_linguagens_q36_ctx1"
     ],
-    "disciplinas": []
+    "disciplinas": [
+      "artes"
+    ]
   },
   {
     "number": 37,

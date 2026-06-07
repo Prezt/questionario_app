@@ -888,7 +888,9 @@
     "area": "nature",
     "answer": "b",
     "contextIds": [],
-    "disciplinas": []
+    "disciplinas": [
+      "quimica"
+    ]
   },
   {
     "number": 126,

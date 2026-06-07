@@ -368,7 +368,9 @@
     "contextIds": [
       "enem_2024_linguagens_q8_ctx1"
     ],
-    "disciplinas": []
+    "disciplinas": [
+      "artes"
+    ]
   },
   {
     "number": 9,
@@ -553,7 +555,9 @@
     "area": "linguagens",
     "answer": "b",
     "difficulty": 4,
-    "disciplinas": []
+    "disciplinas": [
+      "portugues"
+    ]
   },
   {
     "number": 16,
@@ -604,7 +608,9 @@
     "area": "linguagens",
     "answer": "e",
     "difficulty": 3,
-    "disciplinas": []
+    "disciplinas": [
+      "portugues"
+    ]
   },
   {
     "number": 18,
@@ -1071,7 +1077,9 @@
     "contextIds": [
       "enem_2024_linguagens_q34_ctx1"
     ],
-    "disciplinas": []
+    "disciplinas": [
+      "portugues"
+    ]
   },
   {
     "number": 35,
@@ -1342,7 +1350,9 @@
     "contextIds": [
       "enem_2024_linguagens_q44_ctx1"
     ],
-    "disciplinas": []
+    "disciplinas": [
+      "educacao_fisica"
+    ]
   },
   {
     "number": 45,

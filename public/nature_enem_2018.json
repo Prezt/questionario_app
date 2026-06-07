@@ -46,7 +46,9 @@
     "test": "ENEM",
     "area": "nature",
     "answer": "d",
-    "disciplinas": []
+    "disciplinas": [
+      "quimica"
+    ]
   },
   {
     "number": 93,

@@ -1133,6 +1133,8 @@
     "area": "nature",
     "answer": "d",
     "difficulty": 7,
-    "disciplinas": []
+    "disciplinas": [
+      "fisica"
+    ]
   }
 ]

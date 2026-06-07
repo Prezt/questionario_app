@@ -37,8 +37,12 @@ describe('disciplinasForTag', () => {
   })
 
   it('returns [] for unmapped tags', () => {
-    expect(disciplinasForTag('linguagens', 'comunicação e mídia')).toEqual([])
+    expect(disciplinasForTag('linguagens', 'totally-made-up')).toEqual([])
     expect(disciplinasForTag('humanas', 'totally-made-up')).toEqual([])
+  })
+
+  it('maps linguagens::comunicação e mídia to portugues', () => {
+    expect(disciplinasForTag('linguagens', 'comunicação e mídia')).toEqual(['portugues'])
   })
 })
 
@@ -89,5 +93,16 @@ describe('disciplinasForQuestion', () => {
   it('tolerates missing tags field', () => {
     expect(disciplinasForQuestion({ area: 'math' })).toEqual(['matematica'])
     expect(disciplinasForQuestion({ area: 'linguagens' })).toEqual([])
+  })
+
+  it('handles Title-Case tags via case-insensitive fallback', () => {
+    expect(disciplinasForQuestion({
+      area: 'nature',
+      tags: ['Química geral e inorgânica', 'Eletroquímica'],
+    })).toEqual(['quimica'])
+    expect(disciplinasForQuestion({
+      area: 'humanas',
+      tags: ['Geografia física e geologia', 'Meio ambiente e sustentabilidade'],
+    })).toEqual(['geografia'])
   })
 })

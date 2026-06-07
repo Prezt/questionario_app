@@ -77,7 +77,7 @@ for (const t of [
 // ── Linguagens → Português ───────────────────────────────────────────────────
 for (const t of [
   'interpretação de texto', 'linguística e variação linguística',
-  'gêneros textuais',
+  'gêneros textuais', 'comunicação e mídia',
 ]) add('linguagens', t, 'portugues')
 
 // ── Linguagens → Literatura ──────────────────────────────────────────────────
@@ -108,7 +108,7 @@ export function disciplinasForQuestion(question) {
 
   const set = new Set()
   for (const tag of question.tags ?? []) {
-    const slug = M[`${question.area}::${tag}`]
+    const slug = M[`${question.area}::${tag}`] ?? M[`${question.area}::${tag.toLowerCase()}`]
     if (slug) set.add(slug)
   }
   if (question.area === 'linguagens' &&

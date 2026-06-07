@@ -20,7 +20,9 @@
     "area": "humanas",
     "answer": "b",
     "contextId": "enem_2019_humanas_q46_q78_ctx1",
-    "disciplinas": []
+    "disciplinas": [
+      "geografia"
+    ]
   },
   {
     "number": 47,

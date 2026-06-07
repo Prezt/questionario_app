@@ -852,7 +852,9 @@
     "area": "linguagens",
     "answer": "d",
     "contextId": "enem_2021_linguagens_q26_ctx1",
-    "disciplinas": []
+    "disciplinas": [
+      "portugues"
+    ]
   },
   {
     "number": 27,
@@ -1104,7 +1106,9 @@
     "area": "linguagens",
     "answer": "b",
     "contextId": "enem_2021_linguagens_q36_ctx1",
-    "disciplinas": []
+    "disciplinas": [
+      "artes"
+    ]
   },
   {
     "number": 37,

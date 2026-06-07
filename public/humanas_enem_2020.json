@@ -47,7 +47,10 @@
     "area": "humanas",
     "answer": "a",
     "contextId": "enem_2020_humanas_q47_ctx2",
-    "disciplinas": []
+    "disciplinas": [
+      "geografia",
+      "sociologia"
+    ]
   },
   {
     "number": 48,
@@ -198,7 +201,9 @@
     "area": "humanas",
     "answer": "d",
     "contextId": "enem_2020_humanas_q53_ctx1",
-    "disciplinas": []
+    "disciplinas": [
+      "geografia"
+    ]
   },
   {
     "number": 54,
@@ -511,7 +516,9 @@
     "area": "humanas",
     "answer": "d",
     "contextId": "enem_2020_humanas_q65_ctx1",
-    "disciplinas": []
+    "disciplinas": [
+      "geografia"
+    ]
   },
   {
     "number": 66,
