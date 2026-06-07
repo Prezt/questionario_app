@@ -22,7 +22,10 @@
     "test": "ENEM",
     "area": "humanas",
     "answer": "c",
-    "difficulty": 6
+    "difficulty": 6,
+    "disciplinas": [
+      "geografia"
+    ]
   },
   {
     "number": 47,
@@ -46,7 +49,11 @@
     "test": "ENEM",
     "area": "humanas",
     "answer": "e",
-    "difficulty": 5
+    "difficulty": 5,
+    "disciplinas": [
+      "historia",
+      "sociologia"
+    ]
   },
   {
     "number": 48,
@@ -70,7 +77,10 @@
     "test": "ENEM",
     "area": "humanas",
     "answer": "c",
-    "difficulty": 4
+    "difficulty": 4,
+    "disciplinas": [
+      "geografia"
+    ]
   },
   {
     "number": 49,
@@ -94,7 +104,11 @@
     "test": "ENEM",
     "area": "humanas",
     "answer": "e",
-    "difficulty": 6
+    "difficulty": 6,
+    "disciplinas": [
+      "historia",
+      "sociologia"
+    ]
   },
   {
     "number": 50,
@@ -118,7 +132,11 @@
     "test": "ENEM",
     "area": "humanas",
     "answer": "b",
-    "difficulty": 5
+    "difficulty": 5,
+    "disciplinas": [
+      "geografia",
+      "historia"
+    ]
   },
   {
     "number": 51,
@@ -142,7 +160,10 @@
     "test": "ENEM",
     "area": "humanas",
     "answer": "e",
-    "difficulty": 5
+    "difficulty": 5,
+    "disciplinas": [
+      "historia"
+    ]
   },
   {
     "number": 52,
@@ -167,7 +188,11 @@
     "test": "ENEM",
     "area": "humanas",
     "answer": "b",
-    "difficulty": 6
+    "difficulty": 6,
+    "disciplinas": [
+      "historia",
+      "sociologia"
+    ]
   },
   {
     "number": 53,
@@ -190,7 +215,10 @@
     "test": "ENEM",
     "area": "humanas",
     "answer": "c",
-    "difficulty": 5
+    "difficulty": 5,
+    "disciplinas": [
+      "geografia"
+    ]
   },
   {
     "number": 54,
@@ -215,7 +243,11 @@
     "test": "ENEM",
     "area": "humanas",
     "answer": "d",
-    "difficulty": 7
+    "difficulty": 7,
+    "disciplinas": [
+      "filosofia",
+      "sociologia"
+    ]
   },
   {
     "number": 55,
@@ -239,7 +271,10 @@
     "test": "ENEM",
     "area": "humanas",
     "answer": "b",
-    "difficulty": 7
+    "difficulty": 7,
+    "disciplinas": [
+      "filosofia"
+    ]
   },
   {
     "number": 56,
@@ -262,7 +297,10 @@
     "test": "ENEM",
     "area": "humanas",
     "answer": "a",
-    "difficulty": 5
+    "difficulty": 5,
+    "disciplinas": [
+      "historia"
+    ]
   },
   {
     "number": 57,
@@ -286,7 +324,11 @@
     "test": "ENEM",
     "area": "humanas",
     "answer": "d",
-    "difficulty": 4
+    "difficulty": 4,
+    "disciplinas": [
+      "filosofia",
+      "geografia"
+    ]
   },
   {
     "number": 58,
@@ -311,7 +353,10 @@
     "test": "ENEM",
     "area": "humanas",
     "answer": "d",
-    "difficulty": 7
+    "difficulty": 7,
+    "disciplinas": [
+      "filosofia"
+    ]
   },
   {
     "number": 59,
@@ -334,7 +379,10 @@
     "test": "ENEM",
     "area": "humanas",
     "answer": "e",
-    "difficulty": 5
+    "difficulty": 5,
+    "disciplinas": [
+      "historia"
+    ]
   },
   {
     "number": 60,
@@ -357,7 +405,10 @@
     "test": "ENEM",
     "area": "humanas",
     "answer": "b",
-    "difficulty": 5
+    "difficulty": 5,
+    "disciplinas": [
+      "geografia"
+    ]
   },
   {
     "number": 61,
@@ -380,7 +431,10 @@
     "test": "ENEM",
     "area": "humanas",
     "answer": "b",
-    "difficulty": 7
+    "difficulty": 7,
+    "disciplinas": [
+      "filosofia"
+    ]
   },
   {
     "number": 62,
@@ -405,7 +459,10 @@
     "test": "ENEM",
     "area": "humanas",
     "answer": "a",
-    "difficulty": 9
+    "difficulty": 9,
+    "disciplinas": [
+      "filosofia"
+    ]
   },
   {
     "number": 63,
@@ -429,7 +486,11 @@
     "test": "ENEM",
     "area": "humanas",
     "answer": "b",
-    "difficulty": 7
+    "difficulty": 7,
+    "disciplinas": [
+      "filosofia",
+      "sociologia"
+    ]
   },
   {
     "number": 64,
@@ -455,7 +516,11 @@
     "test": "ENEM",
     "area": "humanas",
     "answer": "c",
-    "difficulty": 3
+    "difficulty": 3,
+    "disciplinas": [
+      "historia",
+      "sociologia"
+    ]
   },
   {
     "number": 65,
@@ -480,7 +545,12 @@
     "test": "ENEM",
     "area": "humanas",
     "answer": "d",
-    "difficulty": 7
+    "difficulty": 7,
+    "disciplinas": [
+      "filosofia",
+      "geografia",
+      "sociologia"
+    ]
   },
   {
     "number": 66,
@@ -505,7 +575,11 @@
     "test": "ENEM",
     "area": "humanas",
     "answer": "c",
-    "difficulty": 5
+    "difficulty": 5,
+    "disciplinas": [
+      "geografia",
+      "sociologia"
+    ]
   },
   {
     "number": 67,
@@ -529,7 +603,11 @@
     "test": "ENEM",
     "area": "humanas",
     "answer": "a",
-    "difficulty": 3
+    "difficulty": 3,
+    "disciplinas": [
+      "geografia",
+      "sociologia"
+    ]
   },
   {
     "number": 68,
@@ -554,7 +632,10 @@
     "test": "ENEM",
     "area": "humanas",
     "answer": "e",
-    "difficulty": 5
+    "difficulty": 5,
+    "disciplinas": [
+      "geografia"
+    ]
   },
   {
     "number": 69,
@@ -579,7 +660,12 @@
     "test": "ENEM",
     "area": "humanas",
     "answer": "c",
-    "difficulty": 6
+    "difficulty": 6,
+    "disciplinas": [
+      "filosofia",
+      "historia",
+      "sociologia"
+    ]
   },
   {
     "number": 70,
@@ -603,7 +689,11 @@
     "test": "ENEM",
     "area": "humanas",
     "answer": "e",
-    "difficulty": 5
+    "difficulty": 5,
+    "disciplinas": [
+      "geografia",
+      "sociologia"
+    ]
   },
   {
     "number": 71,
@@ -627,7 +717,11 @@
     "test": "ENEM",
     "area": "humanas",
     "answer": "d",
-    "difficulty": 3
+    "difficulty": 3,
+    "disciplinas": [
+      "filosofia",
+      "geografia"
+    ]
   },
   {
     "number": 72,
@@ -652,7 +746,11 @@
     "test": "ENEM",
     "area": "humanas",
     "answer": "a",
-    "difficulty": 5
+    "difficulty": 5,
+    "disciplinas": [
+      "filosofia",
+      "sociologia"
+    ]
   },
   {
     "number": 73,
@@ -675,7 +773,10 @@
     "test": "ENEM",
     "area": "humanas",
     "answer": "d",
-    "difficulty": 5
+    "difficulty": 5,
+    "disciplinas": [
+      "historia"
+    ]
   },
   {
     "number": 74,
@@ -698,7 +799,10 @@
     "test": "ENEM",
     "area": "humanas",
     "answer": "b",
-    "difficulty": 5
+    "difficulty": 5,
+    "disciplinas": [
+      "historia"
+    ]
   },
   {
     "number": 75,
@@ -723,7 +827,11 @@
     "test": "ENEM",
     "area": "humanas",
     "answer": "a",
-    "difficulty": 7
+    "difficulty": 7,
+    "disciplinas": [
+      "filosofia",
+      "historia"
+    ]
   },
   {
     "number": 76,
@@ -746,7 +854,10 @@
     "test": "ENEM",
     "area": "humanas",
     "answer": "e",
-    "difficulty": 8
+    "difficulty": 8,
+    "disciplinas": [
+      "filosofia"
+    ]
   },
   {
     "number": 77,
@@ -768,7 +879,10 @@
     "test": "ENEM",
     "area": "humanas",
     "answer": "a",
-    "difficulty": 5
+    "difficulty": 5,
+    "disciplinas": [
+      "historia"
+    ]
   },
   {
     "number": 78,
@@ -792,7 +906,10 @@
     "test": "ENEM",
     "area": "humanas",
     "answer": "b",
-    "difficulty": 7
+    "difficulty": 7,
+    "disciplinas": [
+      "filosofia"
+    ]
   },
   {
     "number": 79,
@@ -817,7 +934,11 @@
     "test": "ENEM",
     "area": "humanas",
     "answer": "e",
-    "difficulty": 3
+    "difficulty": 3,
+    "disciplinas": [
+      "geografia",
+      "sociologia"
+    ]
   },
   {
     "number": 80,
@@ -842,7 +963,11 @@
     "test": "ENEM",
     "area": "humanas",
     "answer": "a",
-    "difficulty": 3
+    "difficulty": 3,
+    "disciplinas": [
+      "geografia",
+      "historia"
+    ]
   },
   {
     "number": 81,
@@ -866,7 +991,11 @@
     "test": "ENEM",
     "area": "humanas",
     "answer": "d",
-    "difficulty": 3
+    "difficulty": 3,
+    "disciplinas": [
+      "geografia",
+      "sociologia"
+    ]
   },
   {
     "number": 82,
@@ -890,7 +1019,10 @@
     "test": "ENEM",
     "area": "humanas",
     "answer": "c",
-    "difficulty": 8
+    "difficulty": 8,
+    "disciplinas": [
+      "filosofia"
+    ]
   },
   {
     "number": 83,
@@ -914,7 +1046,11 @@
     "test": "ENEM",
     "area": "humanas",
     "answer": "e",
-    "difficulty": 5
+    "difficulty": 5,
+    "disciplinas": [
+      "filosofia",
+      "geografia"
+    ]
   },
   {
     "number": 84,
@@ -940,7 +1076,10 @@
     "test": "ENEM",
     "area": "humanas",
     "answer": "d",
-    "difficulty": 5
+    "difficulty": 5,
+    "disciplinas": [
+      "geografia"
+    ]
   },
   {
     "number": 85,
@@ -965,7 +1104,12 @@
     "test": "ENEM",
     "area": "humanas",
     "answer": "a",
-    "difficulty": 3
+    "difficulty": 3,
+    "disciplinas": [
+      "geografia",
+      "historia",
+      "sociologia"
+    ]
   },
   {
     "number": 86,
@@ -988,7 +1132,10 @@
     "test": "ENEM",
     "area": "humanas",
     "answer": "d",
-    "difficulty": 3
+    "difficulty": 3,
+    "disciplinas": [
+      "geografia"
+    ]
   },
   {
     "number": 87,
@@ -1011,7 +1158,10 @@
     "test": "ENEM",
     "area": "humanas",
     "answer": "a",
-    "difficulty": 5
+    "difficulty": 5,
+    "disciplinas": [
+      "filosofia"
+    ]
   },
   {
     "number": 88,
@@ -1035,7 +1185,10 @@
     "test": "ENEM",
     "area": "humanas",
     "answer": "c",
-    "difficulty": 3
+    "difficulty": 3,
+    "disciplinas": [
+      "geografia"
+    ]
   },
   {
     "number": 89,
@@ -1058,7 +1211,10 @@
     "test": "ENEM",
     "area": "humanas",
     "answer": "b",
-    "difficulty": 5
+    "difficulty": 5,
+    "disciplinas": [
+      "geografia"
+    ]
   },
   {
     "number": 90,
@@ -1083,6 +1239,10 @@
     "test": "ENEM",
     "area": "humanas",
     "answer": "c",
-    "difficulty": 7
+    "difficulty": 7,
+    "disciplinas": [
+      "filosofia",
+      "sociologia"
+    ]
   }
 ]

@@ -19,7 +19,11 @@
     "area": "humanas",
     "answer": "d",
     "difficulty": 5,
-    "contextId": "enem_2022_humanas_q46_ctx1"
+    "contextId": "enem_2022_humanas_q46_ctx1",
+    "disciplinas": [
+      "historia",
+      "sociologia"
+    ]
   },
   {
     "number": 47,
@@ -40,7 +44,10 @@
     "area": "humanas",
     "answer": "e",
     "difficulty": 5,
-    "contextId": "enem_2022_humanas_q47_ctx1"
+    "contextId": "enem_2022_humanas_q47_ctx1",
+    "disciplinas": [
+      "sociologia"
+    ]
   },
   {
     "number": 48,
@@ -61,7 +68,10 @@
     "area": "humanas",
     "answer": "a",
     "difficulty": 4,
-    "contextId": "enem_2022_humanas_q48_ctx1"
+    "contextId": "enem_2022_humanas_q48_ctx1",
+    "disciplinas": [
+      "sociologia"
+    ]
   },
   {
     "number": 49,
@@ -88,7 +98,10 @@
     "area": "humanas",
     "answer": "b",
     "difficulty": 5,
-    "contextId": "enem_2022_humanas_q49_ctx1"
+    "contextId": "enem_2022_humanas_q49_ctx1",
+    "disciplinas": [
+      "geografia"
+    ]
   },
   {
     "number": 50,
@@ -109,7 +122,10 @@
     "area": "humanas",
     "answer": "e",
     "difficulty": 6,
-    "contextId": "enem_2022_humanas_q50_ctx1"
+    "contextId": "enem_2022_humanas_q50_ctx1",
+    "disciplinas": [
+      "sociologia"
+    ]
   },
   {
     "number": 51,
@@ -130,7 +146,10 @@
     "area": "humanas",
     "answer": "e",
     "difficulty": 5,
-    "contextId": "enem_2022_humanas_q51_ctx1"
+    "contextId": "enem_2022_humanas_q51_ctx1",
+    "disciplinas": [
+      "sociologia"
+    ]
   },
   {
     "number": 52,
@@ -151,7 +170,10 @@
     "area": "humanas",
     "answer": "d",
     "difficulty": 5,
-    "contextId": "enem_2022_humanas_q52_ctx1"
+    "contextId": "enem_2022_humanas_q52_ctx1",
+    "disciplinas": [
+      "sociologia"
+    ]
   },
   {
     "number": 53,
@@ -172,7 +194,10 @@
     "area": "humanas",
     "images": [],
     "contextId": "enem_2022_humanas_q53_ctx1",
-    "difficulty": 6
+    "difficulty": 6,
+    "disciplinas": [
+      "sociologia"
+    ]
   },
   {
     "number": 54,
@@ -195,6 +220,9 @@
     "difficulty": 6,
     "contextIds": [
       "enem_2022_humanas_q54_ctx1"
+    ],
+    "disciplinas": [
+      "historia"
     ]
   },
   {
@@ -216,7 +244,10 @@
     "area": "humanas",
     "answer": "b",
     "difficulty": 5,
-    "contextId": "enem_2022_humanas_q55_ctx1"
+    "contextId": "enem_2022_humanas_q55_ctx1",
+    "disciplinas": [
+      "geografia"
+    ]
   },
   {
     "number": 56,
@@ -240,6 +271,9 @@
     "contextIds": [
       "enem_2022_humanas_q56_ctx1",
       "enem_2022_humanas_q56_ctx2"
+    ],
+    "disciplinas": [
+      "sociologia"
     ]
   },
   {
@@ -261,7 +295,10 @@
     "area": "humanas",
     "answer": "a",
     "difficulty": 8,
-    "contextId": "enem_2022_humanas_q57_ctx1"
+    "contextId": "enem_2022_humanas_q57_ctx1",
+    "disciplinas": [
+      "sociologia"
+    ]
   },
   {
     "number": 58,
@@ -285,6 +322,9 @@
     "contextIds": [
       "enem_2022_humanas_q58_ctx1",
       "enem_2022_humanas_q58_ctx2"
+    ],
+    "disciplinas": [
+      "historia"
     ]
   },
   {
@@ -307,7 +347,11 @@
     "area": "humanas",
     "answer": "c",
     "difficulty": 4,
-    "contextId": "enem_2022_humanas_q59_ctx1"
+    "contextId": "enem_2022_humanas_q59_ctx1",
+    "disciplinas": [
+      "geografia",
+      "sociologia"
+    ]
   },
   {
     "number": 60,
@@ -328,7 +372,10 @@
     "area": "humanas",
     "answer": "b",
     "difficulty": 5,
-    "contextId": "enem_2022_humanas_q60_ctx1"
+    "contextId": "enem_2022_humanas_q60_ctx1",
+    "disciplinas": [
+      "sociologia"
+    ]
   },
   {
     "number": 61,
@@ -349,7 +396,10 @@
     "area": "humanas",
     "answer": "e",
     "difficulty": 5,
-    "contextId": "enem_2022_humanas_q61_ctx1"
+    "contextId": "enem_2022_humanas_q61_ctx1",
+    "disciplinas": [
+      "sociologia"
+    ]
   },
   {
     "number": 62,
@@ -371,7 +421,11 @@
     "area": "humanas",
     "answer": "c",
     "difficulty": 6,
-    "contextId": "enem_2022_humanas_q62_ctx1"
+    "contextId": "enem_2022_humanas_q62_ctx1",
+    "disciplinas": [
+      "geografia",
+      "sociologia"
+    ]
   },
   {
     "number": 63,
@@ -392,7 +446,10 @@
     "area": "humanas",
     "answer": "b",
     "difficulty": 7,
-    "contextId": "enem_2022_humanas_q63_ctx1"
+    "contextId": "enem_2022_humanas_q63_ctx1",
+    "disciplinas": [
+      "historia"
+    ]
   },
   {
     "number": 64,
@@ -413,7 +470,10 @@
     "area": "humanas",
     "answer": "a",
     "difficulty": 6,
-    "contextId": "enem_2022_humanas_q64_ctx1"
+    "contextId": "enem_2022_humanas_q64_ctx1",
+    "disciplinas": [
+      "sociologia"
+    ]
   },
   {
     "number": 65,
@@ -439,7 +499,10 @@
     "area": "humanas",
     "answer": "b",
     "difficulty": 5,
-    "contextId": "enem_2022_humanas_q65_ctx1"
+    "contextId": "enem_2022_humanas_q65_ctx1",
+    "disciplinas": [
+      "filosofia"
+    ]
   },
   {
     "number": 66,
@@ -463,6 +526,9 @@
     "contextIds": [
       "enem_2022_humanas_q66_ctx1",
       "enem_2022_humanas_q66_ctx2"
+    ],
+    "disciplinas": [
+      "sociologia"
     ]
   },
   {
@@ -485,7 +551,10 @@
     "area": "humanas",
     "answer": "d",
     "difficulty": 5,
-    "contextId": "enem_2022_humanas_q67_ctx1"
+    "contextId": "enem_2022_humanas_q67_ctx1",
+    "disciplinas": [
+      "sociologia"
+    ]
   },
   {
     "number": 68,
@@ -510,6 +579,9 @@
     "contextIds": [
       "enem_2022_humanas_q68_ctx1",
       "enem_2022_humanas_q68_ctx2"
+    ],
+    "disciplinas": [
+      "geografia"
     ]
   },
   {
@@ -531,7 +603,10 @@
     "area": "humanas",
     "answer": "a",
     "difficulty": 7,
-    "contextId": "enem_2022_humanas_q69_ctx1"
+    "contextId": "enem_2022_humanas_q69_ctx1",
+    "disciplinas": [
+      "geografia"
+    ]
   },
   {
     "number": 70,
@@ -560,6 +635,9 @@
     "contextIds": [
       "enem_2022_humanas_q70_ctx1",
       "enem_2022_humanas_q70_ctx2"
+    ],
+    "disciplinas": [
+      "sociologia"
     ]
   },
   {
@@ -581,7 +659,10 @@
     "area": "humanas",
     "answer": "a",
     "difficulty": 5,
-    "contextId": "enem_2022_humanas_q71_ctx1"
+    "contextId": "enem_2022_humanas_q71_ctx1",
+    "disciplinas": [
+      "filosofia"
+    ]
   },
   {
     "number": 72,
@@ -602,7 +683,10 @@
     "area": "humanas",
     "images": [],
     "contextId": "enem_2022_humanas_q72_ctx1",
-    "difficulty": 5
+    "difficulty": 5,
+    "disciplinas": [
+      "geografia"
+    ]
   },
   {
     "number": 73,
@@ -623,7 +707,10 @@
     "area": "humanas",
     "answer": "b",
     "difficulty": 6,
-    "contextId": "enem_2022_humanas_q73_ctx1"
+    "contextId": "enem_2022_humanas_q73_ctx1",
+    "disciplinas": [
+      "sociologia"
+    ]
   },
   {
     "number": 74,
@@ -649,7 +736,10 @@
     "area": "humanas",
     "answer": "c",
     "difficulty": 5,
-    "contextId": "enem_2022_humanas_q74_ctx1"
+    "contextId": "enem_2022_humanas_q74_ctx1",
+    "disciplinas": [
+      "geografia"
+    ]
   },
   {
     "number": 75,
@@ -670,7 +760,10 @@
     "area": "humanas",
     "answer": "e",
     "difficulty": 3,
-    "contextId": "enem_2022_humanas_q75_ctx1"
+    "contextId": "enem_2022_humanas_q75_ctx1",
+    "disciplinas": [
+      "sociologia"
+    ]
   },
   {
     "number": 76,
@@ -693,6 +786,9 @@
     "difficulty": 4,
     "contextIds": [
       "enem_2022_humanas_q76_ctx1"
+    ],
+    "disciplinas": [
+      "sociologia"
     ]
   },
   {
@@ -714,7 +810,10 @@
     "area": "humanas",
     "answer": "a",
     "difficulty": 7,
-    "contextId": "enem_2022_humanas_q77_ctx1"
+    "contextId": "enem_2022_humanas_q77_ctx1",
+    "disciplinas": [
+      "sociologia"
+    ]
   },
   {
     "number": 78,
@@ -737,6 +836,9 @@
     "difficulty": 5,
     "contextIds": [
       "enem_2022_humanas_q78_ctx1"
+    ],
+    "disciplinas": [
+      "sociologia"
     ]
   },
   {
@@ -758,7 +860,10 @@
     "area": "humanas",
     "answer": "a",
     "difficulty": 5,
-    "contextId": "enem_2022_humanas_q79_ctx1"
+    "contextId": "enem_2022_humanas_q79_ctx1",
+    "disciplinas": [
+      "historia"
+    ]
   },
   {
     "number": 80,
@@ -781,6 +886,9 @@
     "difficulty": 7,
     "contextIds": [
       "enem_2022_humanas_q80_ctx1"
+    ],
+    "disciplinas": [
+      "filosofia"
     ]
   },
   {
@@ -802,7 +910,10 @@
     "area": "humanas",
     "answer": "d",
     "difficulty": 6,
-    "contextId": "enem_2022_humanas_q81_ctx1"
+    "contextId": "enem_2022_humanas_q81_ctx1",
+    "disciplinas": [
+      "filosofia"
+    ]
   },
   {
     "number": 82,
@@ -825,6 +936,9 @@
     "difficulty": 7,
     "contextIds": [
       "enem_2022_humanas_q82_ctx1"
+    ],
+    "disciplinas": [
+      "geografia"
     ]
   },
   {
@@ -847,7 +961,11 @@
     "area": "humanas",
     "answer": "b",
     "difficulty": 4,
-    "contextId": "enem_2022_humanas_q83_ctx1"
+    "contextId": "enem_2022_humanas_q83_ctx1",
+    "disciplinas": [
+      "filosofia",
+      "sociologia"
+    ]
   },
   {
     "number": 84,
@@ -871,6 +989,9 @@
     "contextIds": [
       "enem_2022_humanas_q84_ctx1",
       "enem_2022_humanas_q84_ctx2"
+    ],
+    "disciplinas": [
+      "historia"
     ]
   },
   {
@@ -896,6 +1017,9 @@
     "contextIds": [
       "enem_2022_humanas_q85_ctx1",
       "enem_2022_humanas_q85_ctx2"
+    ],
+    "disciplinas": [
+      "historia"
     ]
   },
   {
@@ -917,7 +1041,10 @@
     "area": "humanas",
     "answer": "c",
     "difficulty": 7,
-    "contextId": "enem_2022_humanas_q86_ctx1"
+    "contextId": "enem_2022_humanas_q86_ctx1",
+    "disciplinas": [
+      "filosofia"
+    ]
   },
   {
     "number": 87,
@@ -938,7 +1065,10 @@
     "area": "humanas",
     "answer": "b",
     "difficulty": 3,
-    "contextId": "enem_2022_humanas_q87_ctx1"
+    "contextId": "enem_2022_humanas_q87_ctx1",
+    "disciplinas": [
+      "geografia"
+    ]
   },
   {
     "number": 88,
@@ -959,7 +1089,10 @@
     "area": "humanas",
     "answer": "e",
     "difficulty": 5,
-    "contextId": "enem_2022_humanas_q88_ctx1"
+    "contextId": "enem_2022_humanas_q88_ctx1",
+    "disciplinas": [
+      "filosofia"
+    ]
   },
   {
     "number": 89,
@@ -980,7 +1113,10 @@
     "area": "humanas",
     "answer": "c",
     "difficulty": 3,
-    "contextId": "enem_2022_humanas_q89_ctx1"
+    "contextId": "enem_2022_humanas_q89_ctx1",
+    "disciplinas": [
+      "sociologia"
+    ]
   },
   {
     "number": 90,
@@ -1002,6 +1138,10 @@
     "area": "humanas",
     "answer": "a",
     "difficulty": 3,
-    "contextId": "enem_2022_humanas_q90_ctx1"
+    "contextId": "enem_2022_humanas_q90_ctx1",
+    "disciplinas": [
+      "historia",
+      "sociologia"
+    ]
   }
 ]
