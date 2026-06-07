@@ -1805,37 +1805,53 @@ export default function App() {
                 <div className="home-divider" />
 
                 <div className="home-area-section">
-                  <span className="home-filter-label">Estudar por área</span>
+                  <span className="home-filter-label">Estudar por disciplina</span>
+                  {(['linguagens', 'humanas', 'nature', 'math']).map((area) => (
+                    <div key={area} className="home-area-day-group">
+                      <span className="home-area-day-label">{AREA_LABELS[area]}</span>
+                      <div className="home-area-grid">
+                        {DISCIPLINAS_BY_AREA[area].map((slug) => {
+                          const active = selectedDisciplinas.includes(slug)
+                          return (
+                            <button
+                              key={slug}
+                              type="button"
+                              className={`home-area-pill${active ? ' home-area-pill--active' : ''}`}
+                              onClick={() => {
+                                setSelectedDisciplinas((prev) =>
+                                  prev.includes(slug)
+                                    ? prev.filter((s) => s !== slug)
+                                    : [...prev, slug]
+                                )
+                              }}
+                            >
+                              {DISCIPLINA_LABELS[slug]}
+                            </button>
+                          )
+                        })}
+                      </div>
+                    </div>
+                  ))}
                   <div className="home-area-day-group">
-                    <span className="home-area-day-label">Dia 1</span>
+                    <span className="home-area-day-label">Outros</span>
                     <div className="home-area-grid">
-                      {(['linguagens', 'humanas']).map((area) => (
-                        <button
-                          key={area}
-                          type="button"
-                          className="home-area-pill"
-                          onClick={() => startAreaQuiz(area)}
-                        >
-                          {areaLabel(area)}
-                        </button>
-                      ))}
+                      <button
+                        type="button"
+                        className={`home-area-pill${multidisciplinarOnly ? ' home-area-pill--active' : ''}`}
+                        onClick={() => setMultidisciplinarOnly((v) => !v)}
+                      >
+                        Multidisciplinar
+                      </button>
                     </div>
                   </div>
-                  <div className="home-area-day-group">
-                    <span className="home-area-day-label">Dia 2</span>
-                    <div className="home-area-grid">
-                      {(['math', 'nature']).map((area) => (
-                        <button
-                          key={area}
-                          type="button"
-                          className="home-area-pill"
-                          onClick={() => startAreaQuiz(area)}
-                        >
-                          {areaLabel(area)}
-                        </button>
-                      ))}
-                    </div>
-                  </div>
+                  <button
+                    type="button"
+                    className="home-area-pill home-area-pill--primary"
+                    disabled={selectedDisciplinas.length === 0 && !multidisciplinarOnly}
+                    onClick={() => startDisciplinaQuiz(selectedDisciplinas, { multidisciplinarOnly })}
+                  >
+                    Começar simulado
+                  </button>
                 </div>
 
                 {allIntegrarQs.length > 0 && (
