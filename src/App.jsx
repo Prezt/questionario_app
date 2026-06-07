@@ -3950,6 +3950,9 @@ function AdminPanel({ stats, onBack, dark, setDark, token, embedded = false, exp
                         method: 'POST',
                         headers: { Authorization: `Bearer ${token}` },
                       })
+                      if (res.status === 404) {
+                        throw new Error('Freeze só roda localmente. Use npm run dev e clique de novo, ou rode node scripts/freeze-explanations.js no terminal.')
+                      }
                       const data = await res.json().catch(() => ({}))
                       if (!res.ok) throw new Error(data.error ?? 'Falha')
                       setFreezeResult(`Congeladas ${data.totalUpdated} questão(ões) em ${data.filesTouched} arquivo(s).`)
