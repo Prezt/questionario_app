@@ -103,8 +103,8 @@ function formatTime(seconds) {
   return `${m}:${String(s).padStart(2, '0')}`
 }
 
-const APP_VERSION = '2.0.0'
-const APP_VERSION_DATE = '07/06/2026'
+const APP_VERSION = '2.0.1'
+const APP_VERSION_DATE = '08/06/2026'
 
 const REVIEW_STATUS = [
   { year: 2025, linguagens: true, humanas: true, natureza: true, matematica: true },
@@ -118,6 +118,13 @@ const REVIEW_STATUS = [
 ]
 
 const CHANGELOG = [
+  {
+    version: '2.0.1',
+    date: '08/06/2026',
+    items: [
+      'Filtros do Explicar como nas outras páginas',
+    ],
+  },
   {
     version: '2.0.0',
     date: '07/06/2026',
