@@ -1,0 +1,177 @@
+<h2>Sutil & acolhedor — qual atmosfera combina?</h2>
+<p class="subtitle">Três paletas com a mesma intenção: <b>educacional, lúdico, menos ameaçador</b>. Todas têm tipografia amigável, cantos arredondados e tons quentes. A diferença é a personalidade. Cada cartão mostra os mesmos elementos (cabeçalho, menu, alternativa, botão, feedback de erro suave). Use o toggle pra ver no escuro. Clique no que mais te chama.</p>
+
+<div class="mode-toggle">
+  <button id="modeLight" class="mode-btn active" onclick="setMode('light')">☀ Claro</button>
+  <button id="modeDark" class="mode-btn" onclick="setMode('dark')">🌙 Escuro</button>
+</div>
+
+<style>
+  .mode-toggle { display: inline-flex; gap: 0.4rem; background: #eef2f7; padding: 0.3rem; border-radius: 999px; margin: 0.6rem 0 1rem; }
+  .mode-btn { border: none; background: transparent; padding: 0.45rem 1rem; border-radius: 999px; font-weight: 600; font-size: 0.9rem; cursor: pointer; color: #4b5563; transition: background 0.15s, color 0.15s; }
+  .mode-btn.active { background: #fff; color: #111827; box-shadow: 0 1px 3px rgba(0,0,0,0.08); }
+
+  .vibe-grid { display: grid; grid-template-columns: 1fr; gap: 1.25rem; margin-top: 0.5rem; }
+  @media (min-width: 980px) { .vibe-grid { grid-template-columns: 1fr 1fr 1fr; gap: 1rem; } }
+  .vibe-card { cursor: pointer; border: 2px solid transparent; border-radius: 1.25rem; padding: 0; overflow: hidden; transition: transform 0.15s, border-color 0.15s, box-shadow 0.15s; background: #fff; }
+  .vibe-card.selected { border-color: #2563eb; box-shadow: 0 8px 24px rgba(37, 99, 235, 0.18); }
+  .vibe-card:hover { transform: translateY(-2px); box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08); }
+  .vibe-stage { padding: 1.15rem; display: flex; flex-direction: column; gap: 0.75rem; min-height: 360px; transition: background 0.2s, color 0.2s; }
+  .vibe-footer { padding: 0.85rem 1.1rem; border-top: 1.5px dashed rgba(0, 0, 0, 0.08); display: flex; align-items: flex-start; gap: 0.6rem; }
+  .vibe-letter { width: 1.85rem; height: 1.85rem; border-radius: 50%; background: #2563eb; color: #fff; font-weight: 800; display: inline-flex; align-items: center; justify-content: center; font-size: 0.95rem; flex-shrink: 0; }
+  .vibe-title { font-size: 1rem; font-weight: 800; margin: 0; }
+  .vibe-desc { font-size: 0.82rem; color: #4b5563; margin: 0.15rem 0 0; line-height: 1.4; }
+  .feedback-hint { font-size: 0.78rem; padding: 0.5rem 0.7rem; border-radius: 0.7rem; display: flex; align-items: center; gap: 0.4rem; margin-top: auto; }
+
+  /* ====================================================== */
+  /* A — PERGAMINHO: papel-pão, dourado quente, serifa amigável */
+  /* ====================================================== */
+  .vibe-a .vibe-stage { background: #faf4e6; font-family: 'Iowan Old Style', 'Georgia', serif; color: #3a2f1f; }
+  .vibe-a .header { font-size: 1.1rem; font-weight: 700; color: #6b4a18; display: flex; justify-content: space-between; align-items: center; }
+  .vibe-a .badge { background: #e9c987; color: #4a3608; padding: 0.15rem 0.55rem; border-radius: 999px; font-size: 0.72rem; font-weight: 700; font-family: 'Inter', sans-serif; }
+  .vibe-a .menu-item { background: #fff9eb; border: 1.5px solid #e3c98e; border-radius: 0.9rem; padding: 0.7rem 0.9rem; font-weight: 600; display: flex; justify-content: space-between; align-items: center; color: #5a4317; }
+  .vibe-a .menu-item:nth-child(3) { background: #fff; border-color: #c19b4b; box-shadow: 0 2px 0 #c19b4b; }
+  .vibe-a .alt { background: #fff; border: 1.5px solid #e3c98e; border-radius: 0.9rem; padding: 0.7rem 0.85rem; display: flex; align-items: center; gap: 0.65rem; font-family: 'Inter', system-ui, sans-serif; }
+  .vibe-a .alt-letter { width: 1.65rem; height: 1.65rem; border-radius: 50%; background: #c19b4b; color: #fff; display: inline-flex; align-items: center; justify-content: center; font-weight: 800; font-size: 0.8rem; flex-shrink: 0; }
+  .vibe-a .alt-text { font-size: 0.86rem; color: #3a2f1f; }
+  .vibe-a .btn { align-self: flex-start; background: #6b4a18; color: #fdf8ee; border: none; border-radius: 999px; padding: 0.55rem 1.1rem; font-weight: 700; font-family: inherit; }
+  .vibe-a .feedback-hint { background: #fbe7c8; color: #7a4f10; font-family: 'Inter', sans-serif; }
+
+  body.dark-preview .vibe-a .vibe-stage { background: #221a10; color: #f3e7c8; }
+  body.dark-preview .vibe-a .header { color: #f3c465; }
+  body.dark-preview .vibe-a .badge { background: #5a4108; color: #f3d77f; }
+  body.dark-preview .vibe-a .menu-item { background: #2d2317; border-color: #5a4317; color: #ead7a8; }
+  body.dark-preview .vibe-a .menu-item:nth-child(3) { background: #3a2c1a; border-color: #c19b4b; box-shadow: 0 2px 0 #6b4a18; }
+  body.dark-preview .vibe-a .alt { background: #2d2317; border-color: #5a4317; }
+  body.dark-preview .vibe-a .alt-letter { background: #f3c465; color: #221a10; }
+  body.dark-preview .vibe-a .alt-text { color: #f3e7c8; }
+  body.dark-preview .vibe-a .btn { background: #f3c465; color: #221a10; }
+  body.dark-preview .vibe-a .feedback-hint { background: #3a2c1a; color: #f3c465; }
+
+  /* ====================================================== */
+  /* B — JARDIM: salva, terracota, calmo, vibe wellness    */
+  /* ====================================================== */
+  .vibe-b .vibe-stage { background: #f1ede0; font-family: 'Inter', system-ui, sans-serif; color: #2d3a2f; }
+  .vibe-b .header { font-size: 1.05rem; font-weight: 700; color: #2d4a32; display: flex; justify-content: space-between; align-items: center; }
+  .vibe-b .badge { background: #d4e4d4; color: #2d4a32; padding: 0.15rem 0.55rem; border-radius: 999px; font-size: 0.72rem; font-weight: 700; }
+  .vibe-b .menu-item { background: #fff; border: 1.5px solid #d4e0d4; border-radius: 1rem; padding: 0.75rem 0.95rem; font-weight: 600; display: flex; justify-content: space-between; align-items: center; color: #2d3a2f; }
+  .vibe-b .menu-item:nth-child(3) { background: #e8f0e2; border-color: #88a888; color: #2d4a32; }
+  .vibe-b .alt { background: #fff; border: 1.5px solid #d4e0d4; border-radius: 1rem; padding: 0.75rem 0.9rem; display: flex; align-items: center; gap: 0.7rem; }
+  .vibe-b .alt-letter { width: 1.65rem; height: 1.65rem; border-radius: 50%; background: #6b8e5a; color: #fff; display: inline-flex; align-items: center; justify-content: center; font-weight: 800; font-size: 0.82rem; flex-shrink: 0; }
+  .vibe-b .alt-text { font-size: 0.88rem; color: #2d3a2f; }
+  .vibe-b .btn { align-self: flex-start; background: #6b8e5a; color: #fff; border: none; border-radius: 0.85rem; padding: 0.6rem 1.15rem; font-weight: 700; }
+  .vibe-b .feedback-hint { background: #f4e0d4; color: #8a4a2a; }
+
+  body.dark-preview .vibe-b .vibe-stage { background: #1a201c; color: #e0e8de; }
+  body.dark-preview .vibe-b .header { color: #a8c898; }
+  body.dark-preview .vibe-b .badge { background: #2d4a32; color: #c8e0b8; }
+  body.dark-preview .vibe-b .menu-item { background: #232b25; border-color: #354238; color: #e0e8de; }
+  body.dark-preview .vibe-b .menu-item:nth-child(3) { background: #2d3a30; border-color: #6b8e5a; color: #c8e0b8; }
+  body.dark-preview .vibe-b .alt { background: #232b25; border-color: #354238; }
+  body.dark-preview .vibe-b .alt-letter { background: #a8c898; color: #1a201c; }
+  body.dark-preview .vibe-b .alt-text { color: #e0e8de; }
+  body.dark-preview .vibe-b .btn { background: #a8c898; color: #1a201c; }
+  body.dark-preview .vibe-b .feedback-hint { background: #3a2820; color: #f0b890; }
+
+  /* ====================================================== */
+  /* C — MOCHILA: creme manteiga, primárias soft, escolar  */
+  /* ====================================================== */
+  .vibe-c .vibe-stage { background: #fdf6e3; font-family: 'Nunito', 'Quicksand', system-ui, sans-serif; color: #2b2236; }
+  .vibe-c .header { font-size: 1.1rem; font-weight: 800; color: #6b3aa6; display: flex; justify-content: space-between; align-items: center; }
+  .vibe-c .badge { background: #ffd6e8; color: #a6326b; padding: 0.15rem 0.55rem; border-radius: 999px; font-size: 0.72rem; font-weight: 700; }
+  .vibe-c .menu-item { background: #fff; border: 2px solid #ead8a8; border-radius: 1.15rem; padding: 0.75rem 0.95rem; font-weight: 700; display: flex; justify-content: space-between; align-items: center; color: #5a4317; }
+  .vibe-c .menu-item:nth-child(3) { background: #d6e8f5; border-color: #6ba5d5; color: #2a5a8a; }
+  .vibe-c .alt { background: #fff; border: 2px solid #c8e8d0; border-radius: 1.15rem; padding: 0.75rem 0.9rem; display: flex; align-items: center; gap: 0.7rem; }
+  .vibe-c .alt-letter { width: 1.7rem; height: 1.7rem; border-radius: 0.6rem; background: #7ac08a; color: #fff; display: inline-flex; align-items: center; justify-content: center; font-weight: 800; font-size: 0.85rem; flex-shrink: 0; }
+  .vibe-c .alt-text { font-size: 0.9rem; color: #2b2236; font-weight: 600; }
+  .vibe-c .btn { align-self: flex-start; background: #7ac08a; color: #fff; border: none; border-radius: 1rem; padding: 0.6rem 1.2rem; font-weight: 800; }
+  .vibe-c .feedback-hint { background: #ffe4d6; color: #a65a26; }
+
+  body.dark-preview .vibe-c .vibe-stage { background: #1f1c2c; color: #f0e8f8; }
+  body.dark-preview .vibe-c .header { color: #d4a8f0; }
+  body.dark-preview .vibe-c .badge { background: #5a2a4a; color: #ffc8e0; }
+  body.dark-preview .vibe-c .menu-item { background: #2a263a; border-color: #5a4a2a; color: #f0e0a8; }
+  body.dark-preview .vibe-c .menu-item:nth-child(3) { background: #2a3a4a; border-color: #6ba5d5; color: #a8d4f0; }
+  body.dark-preview .vibe-c .alt { background: #2a263a; border-color: #3a5a3a; }
+  body.dark-preview .vibe-c .alt-letter { background: #7ac08a; color: #1f1c2c; }
+  body.dark-preview .vibe-c .alt-text { color: #f0e8f8; }
+  body.dark-preview .vibe-c .btn { background: #7ac08a; color: #1f1c2c; }
+  body.dark-preview .vibe-c .feedback-hint { background: #3a2a26; color: #f0a878; }
+
+  body.dark-preview .mode-toggle { background: #2a263a; }
+  body.dark-preview .mode-btn { color: #cbd5e1; }
+  body.dark-preview .mode-btn.active { background: #1f1c2c; color: #f0e8f8; }
+</style>
+
+<div class="vibe-grid">
+  <div class="option vibe-card vibe-a" data-choice="pergaminho" onclick="toggleSelect(this)">
+    <div class="vibe-stage">
+      <div class="header"><span>Trilha Integrar</span><span class="badge">ENEM</span></div>
+      <div class="menu-item"><span>Linguagens</span><span style="opacity:0.5;">›</span></div>
+      <div class="menu-item"><span>Matemática</span><span style="opacity:0.5;">›</span></div>
+      <div class="alt">
+        <span class="alt-letter">A</span>
+        <span class="alt-text">a energia cinética se conserva quando…</span>
+      </div>
+      <button class="btn">Responder</button>
+      <div class="feedback-hint">💡 Quase! Releia o item III com calma.</div>
+    </div>
+    <div class="vibe-footer">
+      <div class="vibe-letter">A</div>
+      <div>
+        <p class="vibe-title">Pergaminho</p>
+        <p class="vibe-desc">Papel-pão, dourado quente, serifa amigável no título + sans no corpo. Sensação de caderno de estudo bem cuidado. Escuro: leitura à luz de candeeiro.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="option vibe-card vibe-b" data-choice="jardim" onclick="toggleSelect(this)">
+    <div class="vibe-stage">
+      <div class="header"><span>Trilha Integrar</span><span class="badge">ENEM</span></div>
+      <div class="menu-item"><span>Linguagens</span><span style="opacity:0.5;">›</span></div>
+      <div class="menu-item"><span>Matemática</span><span style="opacity:0.5;">›</span></div>
+      <div class="alt">
+        <span class="alt-letter">A</span>
+        <span class="alt-text">a energia cinética se conserva quando…</span>
+      </div>
+      <button class="btn">Responder</button>
+      <div class="feedback-hint">🌱 Quase! Releia o item III com calma.</div>
+    </div>
+    <div class="vibe-footer">
+      <div class="vibe-letter">B</div>
+      <div>
+        <p class="vibe-title">Jardim</p>
+        <p class="vibe-desc">Salva, terracota, creme. Vibe calma de wellness/estudo concentrado. Erro vira terracota — corrige sem alarmar. Escuro: floresta tranquila à noite.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="option vibe-card vibe-c" data-choice="mochila" onclick="toggleSelect(this)">
+    <div class="vibe-stage">
+      <div class="header"><span>Trilha Integrar</span><span class="badge">ENEM</span></div>
+      <div class="menu-item"><span>Linguagens</span><span style="opacity:0.5;">›</span></div>
+      <div class="menu-item"><span>Matemática</span><span style="opacity:0.5;">›</span></div>
+      <div class="alt">
+        <span class="alt-letter">A</span>
+        <span class="alt-text">a energia cinética se conserva quando…</span>
+      </div>
+      <button class="btn">Responder</button>
+      <div class="feedback-hint">✏️ Quase! Releia o item III com calma.</div>
+    </div>
+    <div class="vibe-footer">
+      <div class="vibe-letter">C</div>
+      <div>
+        <p class="vibe-title">Mochila</p>
+        <p class="vibe-desc">Creme manteiga + primárias soft (verde, azul, lilás, pêssego). Tipo material escolar bem organizado. Cantos generosos, sans arredondada. Escuro: índigo profundo, mesmo brinquedo.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  function setMode(mode) {
+    document.body.classList.toggle('dark-preview', mode === 'dark');
+    document.getElementById('modeLight').classList.toggle('active', mode === 'light');
+    document.getElementById('modeDark').classList.toggle('active', mode === 'dark');
+  }
+</script>

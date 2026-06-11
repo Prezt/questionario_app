@@ -66,10 +66,12 @@ describe('calcTriScores', () => {
     number, area, difficulty, answer,
     text: '', alternatives: {}, images: [], tags: [], year: 2023, test: 'ENEM',
   })
+  const keyOf = (q) => `${q.area}:${q.year}:${q.test ?? ''}:${q.number}`
 
   it('returns null for areas with no questions', () => {
-    const questions = [makeQuestion(1, 'math', 5, 'a')]
-    const attempts = { 1: { selected: 'a', correct: true } }
+    const q = makeQuestion(1, 'math', 5, 'a')
+    const questions = [q]
+    const attempts = { [keyOf(q)]: { selected: 'a', correct: true } }
     const scores = calcTriScores(questions, attempts)
     expect(scores.nature).toBeNull()
     expect(scores.linguagens).toBeNull()
@@ -77,42 +79,39 @@ describe('calcTriScores', () => {
   })
 
   it('excludes annulled questions from TRI', () => {
-    const questions = [
-      makeQuestion(1, 'math', 5, 'a'),
-      makeQuestion(2, 'math', 5, 'annulled'),
-    ]
+    const q1 = makeQuestion(1, 'math', 5, 'a')
+    const q2 = makeQuestion(2, 'math', 5, 'annulled')
+    const questions = [q1, q2]
     const attempts = {
-      1: { selected: 'a', correct: true },
-      2: { selected: 'b', correct: false },
+      [keyOf(q1)]: { selected: 'a', correct: true },
+      [keyOf(q2)]: { selected: 'b', correct: false },
     }
     const scoresWithAnnulled = calcTriScores(questions, attempts)
-    const questionsNoAnnulled = [makeQuestion(1, 'math', 5, 'a')]
-    const scoresWithout = calcTriScores(questionsNoAnnulled, { 1: { selected: 'a', correct: true } })
+    const questionsNoAnnulled = [q1]
+    const scoresWithout = calcTriScores(questionsNoAnnulled, { [keyOf(q1)]: { selected: 'a', correct: true } })
     expect(scoresWithAnnulled.math).toBe(scoresWithout.math)
   })
 
   it('treats unanswered questions as wrong', () => {
-    const questions = [
-      makeQuestion(1, 'math', 5, 'a'),
-      makeQuestion(2, 'math', 5, 'a'),
-    ]
-    const attemptsPartial = { 1: { selected: 'a', correct: true } }
+    const q1 = makeQuestion(1, 'math', 5, 'a')
+    const q2 = makeQuestion(2, 'math', 5, 'a')
+    const questions = [q1, q2]
+    const attemptsPartial = { [keyOf(q1)]: { selected: 'a', correct: true } }
     const attemptsBothWrong = {
-      1: { selected: 'a', correct: true },
-      2: { selected: 'b', correct: false },
+      [keyOf(q1)]: { selected: 'a', correct: true },
+      [keyOf(q2)]: { selected: 'b', correct: false },
     }
     expect(calcTriScores(questions, attemptsPartial).math)
       .toBe(calcTriScores(questions, attemptsBothWrong).math)
   })
 
   it('geral is average of non-null area scores', () => {
-    const questions = [
-      makeQuestion(1, 'math', 5, 'a'),
-      makeQuestion(2, 'nature', 5, 'a'),
-    ]
+    const q1 = makeQuestion(1, 'math', 5, 'a')
+    const q2 = makeQuestion(2, 'nature', 5, 'a')
+    const questions = [q1, q2]
     const attempts = {
-      1: { selected: 'a', correct: true },
-      2: { selected: 'a', correct: true },
+      [keyOf(q1)]: { selected: 'a', correct: true },
+      [keyOf(q2)]: { selected: 'a', correct: true },
     }
     const scores = calcTriScores(questions, attempts)
     expect(scores.geral).toBe(Math.round((scores.math + scores.nature) / 2))
@@ -123,7 +122,7 @@ describe('calcTriScores', () => {
       makeQuestion(i + 1, 'math', i + 1, 'a')
     )
     const attempts = Object.fromEntries(
-      questions.map((q) => [q.number, { selected: 'a', correct: true }])
+      questions.map((q) => [keyOf(q), { selected: 'a', correct: true }])
     )
     expect(calcTriScores(questions, attempts).math).toBe(1000)
   })
@@ -133,8 +132,25 @@ describe('calcTriScores', () => {
       makeQuestion(i + 1, 'math', i + 1, 'a')
     )
     const attempts = Object.fromEntries(
-      questions.map((q) => [q.number, { selected: 'b', correct: false }])
+      questions.map((q) => [keyOf(q), { selected: 'b', correct: false }])
     )
     expect(calcTriScores(questions, attempts).math).toBe(100)
+  })
+
+  it('distinguishes questions with same number across years (no collision)', () => {
+    // Regression: previously attempts were keyed by q.number alone, so two
+    // questions with the same number (e.g., from different years) collided.
+    const qa = { ...makeQuestion(1, 'math', 5, 'a'), year: 2020 }
+    const qb = { ...makeQuestion(1, 'math', 5, 'a'), year: 2021 }
+    const questions = [qa, qb]
+    const attempts = {
+      [keyOf(qa)]: { selected: 'a', correct: true },
+      [keyOf(qb)]: { selected: 'b', correct: false },
+    }
+    // With the old number-only key, both would be counted as correct.
+    // With the composite key, exactly one is correct.
+    const scores = calcTriScores(questions, attempts)
+    // The "all correct" case scores 1000; a mixed case should be lower.
+    expect(scores.math).toBeLessThan(1000)
   })
 })

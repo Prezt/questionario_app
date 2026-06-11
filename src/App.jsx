@@ -66,6 +66,44 @@ function savePausedSession(data) {
   try { localStorage.setItem(PAUSED_SESSION_KEY, JSON.stringify(data)) } catch {}
 }
 
+// Stable per-question identifier — questions across years/tests can share the
+// same `number`, so attempts/times must be keyed by the full tuple.
+function attemptKey(q) {
+  return `${q.area}:${q.year}:${q.test ?? ''}:${q.number}`
+}
+
+// Pause/resume is only supported for a full ENEM/UFSC exam (year + numeric day).
+// Games, Estude por disciplina, Daily Challenge and Listas exit straight to the
+// matching home tab without leaving a "Retomar prova" entry behind.
+function isFullExamSession(saved) {
+  if (!saved) return false
+  if (saved.isAreaMode) return false
+  if (saved.isDailyChallenge) return false
+  if (saved.gameMode) return false
+  if (!saved.selectedTest || saved.selectedTest === 'Integrar') return false
+  if (saved.selectedYear == null) return false
+  if (typeof saved.selectedDay !== 'number') return false
+  return true
+}
+
+// Best-effort migration from the pre-2.0.4 numeric-keyed format. Used when
+// restoring paused sessions saved before the composite-key change.
+function migrateNumericKeyedMap(map, questions) {
+  if (!map || typeof map !== 'object') return {}
+  const out = {}
+  for (const [k, v] of Object.entries(map)) {
+    if (typeof k === 'string' && k.includes(':')) {
+      out[k] = v
+      continue
+    }
+    const num = Number(k)
+    if (Number.isNaN(num)) continue
+    const match = questions.find((q) => q.number === num)
+    if (match) out[attemptKey(match)] = v
+  }
+  return out
+}
+
 function loadAttemptsFromSession() {
   if (typeof sessionStorage === 'undefined') return {}
   try {
@@ -75,8 +113,9 @@ function loadAttemptsFromSession() {
     if (typeof o !== 'object' || o === null) return {}
     const out = {}
     for (const [k, v] of Object.entries(o)) {
-      const n = Number(k)
-      if (!Number.isNaN(n) && v && typeof v === 'object') out[n] = v
+      // Accept only the new composite-key format ("area:year:test:number").
+      // Legacy numeric keys from older sessions are silently dropped.
+      if (typeof k === 'string' && k.includes(':') && v && typeof v === 'object') out[k] = v
     }
     return out
   } catch {
@@ -103,8 +142,8 @@ function formatTime(seconds) {
   return `${m}:${String(s).padStart(2, '0')}`
 }
 
-const APP_VERSION = '2.0.1'
-const APP_VERSION_DATE = '08/06/2026'
+const APP_VERSION = '2.1.0'
+const APP_VERSION_DATE = '11/06/2026'
 
 const REVIEW_STATUS = [
   { year: 2025, linguagens: true, humanas: true, natureza: true, matematica: true },
@@ -118,6 +157,54 @@ const REVIEW_STATUS = [
 ]
 
 const CHANGELOG = [
+  {
+    version: '2.1.0',
+    date: '11/06/2026',
+    items: [
+      'Nova aba Jogos no menu lateral',
+      'Modo Streak: questões até errar uma',
+      'Modo Blitz: 5 minutos com 3 vidas',
+      'Cards de Jogos em 2×2 no celular',
+      'Cards de Jogos com contorno colorido',
+      'Picker de tema dos Jogos em chips',
+      'Simulado só de Inglês ou Espanhol',
+      'Escolha do idioma no Simule Dia 1',
+      'Quantidade customizada no Estude',
+      'Lupa para ampliar imagens das questões',
+      'Imagens das alternativas com altura limitada',
+      'Pausar restrito a Provas Completas',
+      'Erros do Desafio Diário visíveis no card',
+    ],
+  },
+  {
+    version: '2.0.3',
+    date: '11/06/2026',
+    items: [
+      'Novo estilo Mochila: lúdico e acolhedor',
+      'Highlights de aba unificados em lilás',
+      'Modo escuro vira índigo profundo',
+      'Tipografia Nunito arredondada',
+      'Desafio Diário em destaque no menu',
+      'Corrige círculos marcados em outras questões',
+      'Opções e Sair migram para o menu lateral',
+      'Desafio Diário removido da Estude',
+      'Abas com novos nomes mais descritivos',
+      'Listas viram aba separada de Simulados',
+      'Menu lateral reagrupado com Jogos em destaque',
+      'Criar Material visível só para professores',
+      'Opções no menu lateral viram recolhíveis',
+      'Aba Listas vira Listas de Exercícios',
+      'Botão Explicar vira Explicar Questão do Enem',
+      'Botão Criar lista vira Criar Lista de Questões',
+    ],
+  },
+  {
+    version: '2.0.2',
+    date: '10/06/2026',
+    items: [
+      'Tabs movidas para menu lateral',
+    ],
+  },
   {
     version: '2.0.1',
     date: '08/06/2026',
@@ -344,6 +431,16 @@ function MoonIcon() {
   )
 }
 
+function MenuIcon() {
+  return (
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
+      <line x1="3" y1="6" x2="21" y2="6" />
+      <line x1="3" y1="12" x2="21" y2="12" />
+      <line x1="3" y1="18" x2="21" y2="18" />
+    </svg>
+  )
+}
+
 function NotebookIcon() {
   return (
     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
@@ -442,6 +539,17 @@ function NumberedListIcon() {
     </svg>
   )
 }
+function ZoomInIcon() {
+  return (
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+      <circle cx="11" cy="11" r="7" />
+      <line x1="20" y1="20" x2="16" y2="16" />
+      <line x1="8" y1="11" x2="14" y2="11" />
+      <line x1="11" y1="8" x2="11" y2="14" />
+    </svg>
+  )
+}
+
 function ClockIcon() {
   return (
     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -719,6 +827,23 @@ export default function App() {
   const [dailyChallengeLoading, setDailyChallengeLoading] = useState(false)
   const [dailyChallengeResult, setDailyChallengeResult] = useState(null) // {score, total} if already done today
   const [dailyChallengePractice, setDailyChallengePractice] = useState(false) // true = retake, do not post result
+  const [dailyChallengeError, setDailyChallengeError] = useState(null)
+
+  // ── Jogos (Streak / Blitz) — null when not playing a game ───────────────────
+  const [gameMode, setGameMode] = useState(null) // 'streak' | 'blitz' | null
+  const [gameStreak, setGameStreak] = useState(0)
+  const [gameCorrect, setGameCorrect] = useState(0)
+  const [gameWrongs, setGameWrongs] = useState(0)
+  const [gameTimeLeft, setGameTimeLeft] = useState(0) // seconds — blitz only
+  const [gameDisciplina, setGameDisciplina] = useState(null)
+  const [gameFinalStats, setGameFinalStats] = useState(null) // {mode, streak, correct, wrongs, durationSecs, disciplina}
+  const [gameConfigOpen, setGameConfigOpen] = useState(null) // 'streak' | 'blitz' | null — which card is being configured
+  const gameQueueRef = useRef([]) // shuffled question pool
+  const gameQueueIndexRef = useRef(0)
+  const gameStartTsRef = useRef(null)
+  const gameAdvanceTimerRef = useRef(null)
+  const gameLastProcessedKeyRef = useRef(null)
+
   const [selectedArea, setSelectedArea] = useState(null) // 'math' | 'nature' | 'linguagens' | 'humanas'
   const [selectedTag, setSelectedTag] = useState(null)   // unified tag string | null
   const [selectedDisciplina, setSelectedDisciplina] = useState(() => {
@@ -738,7 +863,7 @@ export default function App() {
       const raw = localStorage.getItem('trilha-integrar-picker-length')
       if (raw === 'all') return 'all'
       const n = parseInt(raw, 10)
-      return [10, 20, 45].includes(n) ? n : 10
+      return Number.isFinite(n) && n > 0 ? n : 10
     } catch { return 10 }
   })
 
@@ -757,8 +882,9 @@ export default function App() {
   const [expandedArea, setExpandedArea] = useState(null) // area panel open on home screen
   const [optionsOpen, setOptionsOpen] = useState(false)
   const [headerMenuOpen, setHeaderMenuOpen] = useState(false)
+  const [sideMenuOpen, setSideMenuOpen] = useState(false)
   const [activeTab, setActiveTab] = useState(() => {
-    const VALID = ['estude', 'simule', 'pesquise', 'ensine', 'administre']
+    const VALID = ['estude', 'listas', 'simule', 'jogos', 'pesquise', 'ensine', 'administre']
     // Deep-link via path (e.g. /ensine). URL is rewritten back to / by the effect above for cleanliness.
     if (typeof window !== 'undefined') {
       const p = window.location.pathname.replace(/^\/+|\/+$/g, '')
@@ -768,12 +894,6 @@ export default function App() {
       const stored = localStorage.getItem('trilha-integrar-active-tab')
       return VALID.includes(stored) ? stored : 'estude'
     } catch { return 'estude' }
-  })
-  const [estudeSubTab, setEstudeSubTab] = useState(() => {
-    try {
-      const stored = localStorage.getItem('trilha-integrar-estude-subtab')
-      return (stored === 'enem' || stored === 'listas') ? stored : 'enem'
-    } catch { return 'enem' }
   })
   const switchTab = (tab) => {
     setActiveTab(tab)
@@ -785,15 +905,31 @@ export default function App() {
     if (tab !== 'ensine') setEnsineTool(null)
   }
   useEffect(() => {
-    const FAVICON_COLOR_BY_TAB = { estude: 'red', simule: 'amber', pesquise: 'green', ensine: 'blue', administre: 'purple' }
+    const FAVICON_COLOR_BY_TAB = { estude: 'red', listas: 'red', simule: 'amber', jogos: 'amber', pesquise: 'green', ensine: 'blue', administre: 'purple' }
     const color = FAVICON_COLOR_BY_TAB[activeTab] ?? 'red'
     const ico = document.querySelector('link[rel="icon"][type="image/x-icon"]')
     const png = document.querySelector('link[rel="icon"][type="image/png"]')
     if (ico) ico.href = `/favicon-${color}.ico`
     if (png) png.href = `/favicon-${color}-32.png`
   }, [activeTab])
+
+  useEffect(() => {
+    if (!sideMenuOpen) return
+    const onKey = (e) => { if (e.key === 'Escape') setSideMenuOpen(false) }
+    document.addEventListener('keydown', onKey)
+    return () => document.removeEventListener('keydown', onKey)
+  }, [sideMenuOpen])
   const [finishConfirmOpen, setFinishConfirmOpen] = useState(false)
   const [timerDrawerOpen, setTimerDrawerOpen] = useState(false)
+  const [lightboxImage, setLightboxImage] = useState(null) // { src, caption } | null
+
+  // Close lightbox on ESC
+  useEffect(() => {
+    if (!lightboxImage) return
+    const onKey = (e) => { if (e.key === 'Escape') setLightboxImage(null) }
+    document.addEventListener('keydown', onKey)
+    return () => document.removeEventListener('keydown', onKey)
+  }, [lightboxImage])
 
   // Force re-render once KaTeX finishes loading (math switches from raw \(latex\) to rendered HTML)
   const [, forceMathRerender] = useState(0)
@@ -854,52 +990,17 @@ export default function App() {
         setContexts(ctxMap)
         setExplanationOverrides(explanationMap)
 
-        // Auto-restore a paused session if the user is logged in
+        // Auto-restore a paused session if the user is logged in.
+        // Pause now only persists for a full ENEM/UFSC exam — anything else
+        // (legacy daily-challenge / area-mode sessions) is wiped on load.
         const savedUser  = localStorage.getItem('user')
         const savedToken = localStorage.getItem('token')
         const saved      = readPausedSession()
-        if (savedUser && savedToken && saved) {
-          if (saved.isDailyChallenge && saved.dailyQuestionRefs) {
-            // Restore a paused daily challenge session
-            const lang = saved.foreignLang ?? 'en'
-            const resolved = []
-            const variants = {}
-            for (const qRef of saved.dailyQuestionRefs) {
-              const matches = all.filter(
-                (q) => q.area === qRef.area && q.year === qRef.year &&
-                        q.test === qRef.test && q.number === qRef.number
-              )
-              for (const q of matches) {
-                if (q.language) {
-                  if (!variants[q.number]) variants[q.number] = {}
-                  variants[q.number][q.language] = q
-                }
-                resolved.push(q)
-              }
-            }
-            langVariantsRef.current = variants
-            const deduped  = resolved.filter((q) => !q.language || q.language === lang)
-            const currentQ = deduped.find((q) => q.number === saved.currentNumber) ?? deduped[0]
-            if (deduped.length > 0 && currentQ) {
-              const restoredAttempts = saved.attempts ?? {}
-              setForeignLang(lang)
-              setQuestions(deduped)
-              setQuestion(currentQ)
-              setAttempts(restoredAttempts)
-              saveAttemptsToSession(restoredAttempts)
-              setTotalElapsed(saved.totalElapsed ?? 0)
-              setQuestionTimes(saved.questionTimes ?? {})
-              accQuestionTimesRef.current = { ...(saved.questionTimes ?? {}) }
-              const now = Date.now()
-              startTimeRef.current     = now - (saved.totalElapsed ?? 0) * 1000
-              const savedQStart = Number(localStorage.getItem('trilha-integrar-question-start'))
-              questionStartRef.current = savedQStart && savedQStart < now ? savedQStart : now
-              prevQuestionNumRef.current = null
-              setIsDailyChallenge(true)
-              if (saved.dailyChallengePractice) setDailyChallengePractice(true)
-              setPhase('quiz')
-            }
-          } else {
+        if (saved && !isFullExamSession(saved)) {
+          clearPausedSession()
+        }
+        if (savedUser && savedToken && saved && isFullExamSession(saved)) {
+          {
             const DAY_AREAS_MAP = { 1: ['linguagens', 'humanas'], 2: ['math', 'nature'] }
             const areas = DAY_AREAS_MAP[saved.selectedDay]
             if (areas) {
@@ -919,9 +1020,12 @@ export default function App() {
               langVariantsRef.current = variants
               const deduped  = filtered.filter((q) => !q.language || q.language === lang)
               const sorted   = [...deduped].sort((a, b) => a.number - b.number)
-              const currentQ = sorted.find((q) => q.number === saved.currentNumber) ?? sorted[0]
+              const currentQ = (saved.currentKey && sorted.find((q) => attemptKey(q) === saved.currentKey))
+                ?? sorted.find((q) => q.number === saved.currentNumber)
+                ?? sorted[0]
               if (sorted.length > 0 && currentQ) {
-                const restoredAttempts = saved.attempts ?? {}
+                const restoredAttempts = migrateNumericKeyedMap(saved.attempts, sorted)
+                const restoredTimes = migrateNumericKeyedMap(saved.questionTimes, sorted)
                 setSelectedTest(saved.selectedTest)
                 setSelectedYear(saved.selectedYear)
                 setSelectedDay(saved.selectedDay)
@@ -931,8 +1035,8 @@ export default function App() {
                 setAttempts(restoredAttempts)
                 saveAttemptsToSession(restoredAttempts)
                 setTotalElapsed(saved.totalElapsed ?? 0)
-                setQuestionTimes(saved.questionTimes ?? {})
-                accQuestionTimesRef.current = { ...(saved.questionTimes ?? {}) }
+                setQuestionTimes(restoredTimes)
+                accQuestionTimesRef.current = { ...restoredTimes }
                 const now = Date.now()
                 startTimeRef.current   = now - (saved.totalElapsed ?? 0) * 1000
                 const savedQStart = Number(localStorage.getItem('trilha-integrar-question-start'))
@@ -1103,16 +1207,17 @@ export default function App() {
       })
     }
     prevContextIdRef.current = cids
-    const prevNum = prevQuestionNumRef.current
-    if (prevNum !== null && prevNum !== question.number && questionStartRef.current) {
-      accQuestionTimesRef.current[prevNum] =
-        (accQuestionTimesRef.current[prevNum] || 0) +
+    const prevKey = prevQuestionNumRef.current
+    const currentKey = attemptKey(question)
+    if (prevKey !== null && prevKey !== currentKey && questionStartRef.current) {
+      accQuestionTimesRef.current[prevKey] =
+        (accQuestionTimesRef.current[prevKey] || 0) +
         Math.floor((Date.now() - questionStartRef.current) / 1000)
       questionStartRef.current = Date.now()
       try { localStorage.setItem('trilha-integrar-question-start', String(questionStartRef.current)) } catch {}
       setQuestionElapsed(0)
     }
-    prevQuestionNumRef.current = question.number
+    prevQuestionNumRef.current = currentKey
   }, [question, phase])
 
   // Timer tick
@@ -1210,11 +1315,12 @@ export default function App() {
 
   const pickAlternative = useCallback((letter) => {
     if (!question) return
+    const qKey = attemptKey(question)
     setAttempts((a) => {
-      if (a[question.number]) return a
+      if (a[qKey]) return a
       const isAnnulled = question.answer === 'annulled'
       const correct = !isAnnulled && letter === question.answer
-      const next = { ...a, [question.number]: { selected: letter, correct, annulled: isAnnulled } }
+      const next = { ...a, [qKey]: { selected: letter, correct, annulled: isAnnulled } }
       saveAttemptsToSession(next)
       return next
     })
@@ -1244,6 +1350,7 @@ export default function App() {
       ...sessionData,
       foreignLang,
       currentNumber: question.number,
+      currentKey: attemptKey(question),
       attempts,
       totalElapsed,
       questionTimes,
@@ -1309,6 +1416,22 @@ export default function App() {
   }, [activeTab, user?.role, adminStats, adminLoading, loadAdminStats])
 
   const pauseQuiz = useCallback(() => {
+    // Pause only persists for a full ENEM/UFSC exam. Other modes exit cleanly
+    // to home and never leave a "Retomar prova" stub.
+    const pausable = !gameMode
+      && !isDailyChallenge
+      && !selectedArea
+      && selectedTest && selectedTest !== 'Integrar'
+      && selectedYear != null
+      && typeof selectedDay === 'number'
+    if (!pausable) {
+      clearPausedSession()
+      startTimeRef.current = null
+      questionStartRef.current = null
+      try { localStorage.removeItem('trilha-integrar-question-start') } catch {}
+      setPhase('home')
+      return
+    }
     // Snapshot times before leaving
     if (questionStartRef.current && question) {
       accQuestionTimesRef.current[question.number] =
@@ -1318,19 +1441,13 @@ export default function App() {
     const currentTotal = startTimeRef.current
       ? Math.floor((Date.now() - startTimeRef.current) / 1000)
       : totalElapsed
-    const sessionData = isDailyChallenge
-      ? {
-          isDailyChallenge: true,
-          dailyChallengePractice,
-          dailyQuestionRefs: questions.map((q) => ({ area: q.area, year: q.year, test: q.test, number: q.number })),
-        }
-      : selectedArea
-        ? { isAreaMode: true, selectedArea, selectedTag, selectedDisciplina, areaQuestionRefs: questions.map((q) => ({ area: q.area, year: q.year, test: q.test, number: q.number })) }
-        : { selectedTest, selectedYear, selectedDay }
     savePausedSession({
-      ...sessionData,
+      selectedTest,
+      selectedYear,
+      selectedDay,
       foreignLang,
       currentNumber: question?.number,
+      currentKey: question ? attemptKey(question) : null,
       attempts,
       totalElapsed: currentTotal,
       questionTimes: { ...accQuestionTimesRef.current },
@@ -1339,7 +1456,7 @@ export default function App() {
     questionStartRef.current = null
     try { localStorage.removeItem('trilha-integrar-question-start') } catch {}
     setPhase('home')
-  }, [question, totalElapsed, attempts, selectedTest, selectedYear, selectedDay, selectedArea, selectedTag, foreignLang])
+  }, [question, totalElapsed, attempts, selectedTest, selectedYear, selectedDay, selectedArea, foreignLang, gameMode, isDailyChallenge])
 
   const resumeQuiz = useCallback(() => {
     const saved = readPausedSession()
@@ -1416,9 +1533,12 @@ export default function App() {
     }
 
     langVariantsRef.current = variants
-    const currentQ = sorted.find((q) => q.number === saved.currentNumber) ?? sorted[0]
+    const currentQ = (saved.currentKey && sorted.find((q) => attemptKey(q) === saved.currentKey))
+      ?? sorted.find((q) => q.number === saved.currentNumber)
+      ?? sorted[0]
     if (!currentQ) return
-    const restoredAttempts = saved.attempts ?? {}
+    const restoredAttempts = migrateNumericKeyedMap(saved.attempts, sorted)
+    const restoredTimes = migrateNumericKeyedMap(saved.questionTimes, sorted)
 
     if (!saved.isDailyChallenge && !saved.isAreaMode) {
       setSelectedTest(saved.selectedTest)
@@ -1431,8 +1551,8 @@ export default function App() {
     setAttempts(restoredAttempts)
     saveAttemptsToSession(restoredAttempts)
     setTotalElapsed(saved.totalElapsed ?? 0)
-    setQuestionTimes(saved.questionTimes ?? {})
-    accQuestionTimesRef.current    = { ...(saved.questionTimes ?? {}) }
+    setQuestionTimes(restoredTimes)
+    accQuestionTimesRef.current    = { ...restoredTimes }
     const now = Date.now()
     startTimeRef.current           = now - (saved.totalElapsed ?? 0) * 1000
     questionStartRef.current       = now
@@ -1537,13 +1657,15 @@ export default function App() {
   const startDailyChallenge = useCallback(async (opts = {}) => {
     const { practice = false } = opts
     setDailyChallengeLoading(true)
+    setDailyChallengeError(null)
     if (!practice) setDailyChallengeResult(null)
     try {
       // Check if today's challenge exists and if user already completed it
       const res = await fetch('/api/daily-challenge', {
         headers: { Authorization: `Bearer ${token}` },
       })
-      const data = await res.json()
+      const data = await res.json().catch(() => ({}))
+      if (!res.ok) throw new Error(data.error || `Falha ao buscar desafio (HTTP ${res.status})`)
 
       if (data.completed && !practice) {
         setDailyChallengeResult({ score: data.completed.score, total: data.completed.total })
@@ -1554,6 +1676,7 @@ export default function App() {
 
       if (!questionRefs) {
         // First access today — send candidates so server can create the challenge
+        if (allQuestions.length === 0) throw new Error('Questões ainda carregando, tente em instantes')
         const seen = new Set()
         const candidates = allQuestions
           .filter((q) => {
@@ -1569,7 +1692,8 @@ export default function App() {
           headers: { 'Content-Type': 'application/json', Authorization: `Bearer ${token}` },
           body: JSON.stringify({ candidates }),
         })
-        const postData = await postRes.json()
+        const postData = await postRes.json().catch(() => ({}))
+        if (!postRes.ok) throw new Error(postData.error || `Falha ao criar desafio (HTTP ${postRes.status})`)
 
         if (postData.completed && !practice) {
           setDailyChallengeResult({ score: postData.completed.score, total: postData.completed.total })
@@ -1578,7 +1702,7 @@ export default function App() {
         questionRefs = postData.questions
       }
 
-      if (!questionRefs?.length) return
+      if (!questionRefs?.length) throw new Error('Nenhuma questão disponível para o desafio')
 
       // Resolve question objects from the local question pool
       const resolved = []
@@ -1599,7 +1723,7 @@ export default function App() {
 
       langVariantsRef.current = variants
       const sorted = resolved.filter((q) => !q.language || q.language === foreignLang)
-      if (sorted.length === 0) return
+      if (sorted.length === 0) throw new Error('Não foi possível montar o desafio (questões não encontradas localmente)')
 
       clearPausedSession()
       setAttempts({})
@@ -1618,6 +1742,7 @@ export default function App() {
       setPhase('quiz')
     } catch (err) {
       console.error('Erro ao carregar desafio diário:', err)
+      setDailyChallengeError(err?.message || 'Erro desconhecido ao carregar o desafio')
     } finally {
       setDailyChallengeLoading(false)
     }
@@ -1626,6 +1751,11 @@ export default function App() {
   const startDisciplinaQuiz = useCallback((disciplina, opts = {}) => {
     const { allowMultidisciplinar: allowMulti = true, tags = [], length = 10 } = opts
     if (!disciplina) return
+    // "Inglês"/"Espanhol" pin the variant — picking one must show that language's
+    // questions even if the global lang toggle is currently on the other side.
+    const langForDisciplina = disciplina === 'ingles' ? 'en'
+      : disciplina === 'espanhol' ? 'es'
+      : foreignLang
     const wantedTags = new Set(tags)
     const pool = allQuestions.filter((q) => {
       const qDisc = q.disciplinas ?? []
@@ -1644,8 +1774,9 @@ export default function App() {
       }
     })
     langVariantsRef.current = variants
+    if (langForDisciplina !== foreignLang) setForeignLang(langForDisciplina)
 
-    const deduped = pool.filter((q) => !q.language || q.language === foreignLang)
+    const deduped = pool.filter((q) => !q.language || q.language === langForDisciplina)
     const shuffled = [...deduped]
     for (let i = shuffled.length - 1; i > 0; i--) {
       const j = Math.floor(Math.random() * (i + 1))
@@ -1682,10 +1813,239 @@ export default function App() {
     setPendingSelection(null)
   }, [question, foreignLang])
 
+  // ── Jogos: pool builder + start/advance/end helpers ────────────────────────
+  const buildGamePool = useCallback((disciplina) => {
+    const effectiveLang = disciplina === 'ingles' ? 'en'
+      : disciplina === 'espanhol' ? 'es'
+      : foreignLang
+    const pool = allQuestions.filter((q) => {
+      if (q.test !== 'ENEM') return false  // Games draw from ENEM bank only
+      if (q.answer === 'annulled') return false
+      if (q.language && q.language !== effectiveLang) return false
+      if (disciplina && !(q.disciplinas ?? []).includes(disciplina)) return false
+      return true
+    })
+    const shuffled = [...pool]
+    for (let i = shuffled.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1))
+      ;[shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]]
+    }
+    return shuffled
+  }, [allQuestions, foreignLang])
+
+  const advanceGameQuestion = useCallback(() => {
+    gameQueueIndexRef.current += 1
+    let next = gameQueueRef.current[gameQueueIndexRef.current]
+    if (!next) {
+      // Pool exhausted — reshuffle and continue
+      const reshuffled = [...gameQueueRef.current]
+      for (let i = reshuffled.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1))
+        ;[reshuffled[i], reshuffled[j]] = [reshuffled[j], reshuffled[i]]
+      }
+      gameQueueRef.current = reshuffled
+      gameQueueIndexRef.current = 0
+      next = reshuffled[0]
+    }
+    if (!next) return
+    setQuestion(next)
+    setQuestions((prev) => [...prev, next])
+    setPendingSelection(null)
+    questionStartRef.current = Date.now()
+  }, [])
+
+  const endGame = useCallback(() => {
+    if (gameAdvanceTimerRef.current) {
+      clearTimeout(gameAdvanceTimerRef.current)
+      gameAdvanceTimerRef.current = null
+    }
+    const durationSecs = gameStartTsRef.current
+      ? Math.floor((Date.now() - gameStartTsRef.current) / 1000)
+      : 0
+    setGameFinalStats({
+      mode: gameMode,
+      streak: gameStreak,
+      correct: gameMode === 'streak' ? gameStreak : gameCorrect,
+      wrongs: gameWrongs,
+      durationSecs,
+      disciplina: gameDisciplina,
+    })
+    setPhase('game-over')
+  }, [gameMode, gameStreak, gameCorrect, gameWrongs, gameDisciplina])
+
+  const startGame = useCallback((mode, disciplina) => {
+    const pool = buildGamePool(disciplina)
+    if (pool.length === 0) return
+    gameQueueRef.current = pool
+    gameQueueIndexRef.current = 0
+    gameLastProcessedKeyRef.current = null
+    if (gameAdvanceTimerRef.current) {
+      clearTimeout(gameAdvanceTimerRef.current)
+      gameAdvanceTimerRef.current = null
+    }
+    clearPausedSession()
+    setAttempts({})
+    saveAttemptsToSession({})
+    setQuestionTimes({})
+    accQuestionTimesRef.current = {}
+    setPendingSelection(null)
+    setIsDailyChallenge(false)
+    setDailyChallengePractice(false)
+    setSelectedArea(null)
+    setSelectedTag(null)
+    setSelectedTest(null)
+    setSelectedYear(null)
+    setSelectedDay(null)
+    setGameMode(mode)
+    setGameDisciplina(disciplina)
+    setGameStreak(0)
+    setGameCorrect(0)
+    setGameWrongs(0)
+    setGameFinalStats(null)
+    setGameTimeLeft(mode === 'blitz' ? 5 * 60 : 0)
+    const now = Date.now()
+    gameStartTsRef.current = now
+    startTimeRef.current = now
+    questionStartRef.current = now
+    setQuestions([pool[0]])
+    setQuestion(pool[0])
+    setTotalElapsed(0)
+    setQuestionElapsed(0)
+    setGameConfigOpen(null)
+    setPhase('quiz')
+  }, [buildGamePool])
+
+  const commitGameAnswer = useCallback((letter) => {
+    if (!question) return
+    if (gameMode == null) return
+    const qKey = attemptKey(question)
+    if (attempts[qKey]) return
+    if (gameLastProcessedKeyRef.current === qKey) return
+    gameLastProcessedKeyRef.current = qKey
+    const isAnnulled = question.answer === 'annulled'
+    const correct = !isAnnulled && letter === question.answer
+    const next = { ...attempts, [qKey]: { selected: letter, correct, annulled: isAnnulled } }
+    setAttempts(next)
+    saveAttemptsToSession(next)
+    playFeedbackSound(correct, soundMuted || !showAnswer)
+
+    if (gameMode === 'streak') {
+      if (correct) {
+        setGameStreak((s) => s + 1)
+        gameAdvanceTimerRef.current = setTimeout(() => {
+          gameAdvanceTimerRef.current = null
+          advanceGameQuestion()
+        }, 900)
+      } else {
+        // End the streak — give the user time to see the right answer
+        gameAdvanceTimerRef.current = setTimeout(() => {
+          gameAdvanceTimerRef.current = null
+          setGameFinalStats({
+            mode: 'streak',
+            streak: gameStreak,
+            correct: gameStreak,
+            wrongs: 1,
+            durationSecs: gameStartTsRef.current
+              ? Math.floor((Date.now() - gameStartTsRef.current) / 1000)
+              : 0,
+            disciplina: gameDisciplina,
+          })
+          setPhase('game-over')
+        }, 1800)
+      }
+    } else if (gameMode === 'blitz') {
+      if (correct) {
+        setGameCorrect((c) => c + 1)
+        gameAdvanceTimerRef.current = setTimeout(() => {
+          gameAdvanceTimerRef.current = null
+          advanceGameQuestion()
+        }, 600)
+      } else {
+        const nextWrongs = gameWrongs + 1
+        setGameWrongs(nextWrongs)
+        gameAdvanceTimerRef.current = setTimeout(() => {
+          gameAdvanceTimerRef.current = null
+          if (nextWrongs >= 3) {
+            setGameFinalStats({
+              mode: 'blitz',
+              streak: gameStreak,
+              correct: gameCorrect,
+              wrongs: nextWrongs,
+              durationSecs: gameStartTsRef.current
+                ? Math.floor((Date.now() - gameStartTsRef.current) / 1000)
+                : 0,
+              disciplina: gameDisciplina,
+            })
+            setPhase('game-over')
+          } else {
+            advanceGameQuestion()
+          }
+        }, 900)
+      }
+    }
+  }, [
+    question, gameMode, attempts, advanceGameQuestion, soundMuted, showAnswer,
+    gameStreak, gameCorrect, gameWrongs, gameDisciplina,
+  ])
+
+  const exitGame = useCallback(() => {
+    if (gameAdvanceTimerRef.current) {
+      clearTimeout(gameAdvanceTimerRef.current)
+      gameAdvanceTimerRef.current = null
+    }
+    setGameMode(null)
+    setGameDisciplina(null)
+    setGameFinalStats(null)
+    setGameStreak(0)
+    setGameCorrect(0)
+    setGameWrongs(0)
+    setGameTimeLeft(0)
+    gameLastProcessedKeyRef.current = null
+    gameQueueRef.current = []
+    gameQueueIndexRef.current = 0
+    gameStartTsRef.current = null
+    setQuestions([])
+    setQuestion(null)
+    setAttempts({})
+    saveAttemptsToSession({})
+    setPendingSelection(null)
+    setPhase('home')
+  }, [])
+
+  // Blitz timer: count down, end on zero
+  useEffect(() => {
+    if (gameMode !== 'blitz' || phase !== 'quiz' || !gameStartTsRef.current) return
+    const id = setInterval(() => {
+      const elapsed = (Date.now() - gameStartTsRef.current) / 1000
+      const left = Math.max(0, 5 * 60 - elapsed)
+      setGameTimeLeft(Math.ceil(left))
+      if (left <= 0) {
+        clearInterval(id)
+        if (gameAdvanceTimerRef.current) {
+          clearTimeout(gameAdvanceTimerRef.current)
+          gameAdvanceTimerRef.current = null
+        }
+        setGameFinalStats({
+          mode: 'blitz',
+          streak: gameStreak,
+          correct: gameCorrect,
+          wrongs: gameWrongs,
+          durationSecs: 5 * 60,
+          disciplina: gameDisciplina,
+        })
+        setPhase('game-over')
+      }
+    }, 250)
+    return () => clearInterval(id)
+  }, [gameMode, phase, gameStreak, gameCorrect, gameWrongs, gameDisciplina])
+
   const disciplinaMatchingQuestions = useMemo(() => {
     if (!selectedDisciplina) return []
+    const effectiveLang = selectedDisciplina === 'ingles' ? 'en'
+      : selectedDisciplina === 'espanhol' ? 'es'
+      : foreignLang
     return allQuestions.filter((q) => {
-      if (q.language && q.language !== foreignLang) return false
+      if (q.language && q.language !== effectiveLang) return false
       const qd = q.disciplinas ?? []
       if (!qd.includes(selectedDisciplina)) return false
       if (!allowMultidisciplinar && qd.length > 1) return false
@@ -1712,8 +2072,9 @@ export default function App() {
 
   const finishQuiz = useCallback(() => {
     if (questionStartRef.current && question) {
-      accQuestionTimesRef.current[question.number] =
-        (accQuestionTimesRef.current[question.number] || 0) +
+      const qKey = attemptKey(question)
+      accQuestionTimesRef.current[qKey] =
+        (accQuestionTimesRef.current[qKey] || 0) +
         Math.floor((Date.now() - questionStartRef.current) / 1000)
     }
     const finalTotal = startTimeRef.current
@@ -1806,7 +2167,11 @@ export default function App() {
 
   // ── Homepage ──────────────────────────────────────────────────────────────
   if (phase === 'home') {
-    const pausedSession = readPausedSession()
+    const rawPaused = readPausedSession()
+    // Only a paused full ENEM/UFSC exam takes over the home screen with a
+    // Retomar/Abandonar choice. Stale non-exam sessions are ignored here and
+    // cleared on app load.
+    const pausedSession = isFullExamSession(rawPaused) ? rawPaused : null
 
     if (pausedSession) {
       const answeredCount = Object.keys(pausedSession.attempts ?? {}).length
@@ -1827,13 +2192,8 @@ export default function App() {
               <h1 className="home-title">Prova em andamento</h1>
               <div className="paused-info">
                 <p className="paused-info-line">
-                  <strong>{pausedSession.isAreaMode
-                    ? (pausedSession.selectedDisciplina
-                        ? disciplinaLabel(pausedSession.selectedDisciplina)
-                        : areaLabel(pausedSession.selectedArea))
-                    : `${pausedSession.selectedTest} ${pausedSession.selectedYear}`}</strong>
-                  {pausedSession.isAreaMode && pausedSession.selectedTag && <>{' '}— {pausedSession.selectedTag}</>}
-                  {!pausedSession.isAreaMode && <>{' '}— Dia {pausedSession.selectedDay}</>}
+                  <strong>{`${pausedSession.selectedTest} ${pausedSession.selectedYear}`}</strong>
+                  {' '}— Dia {pausedSession.selectedDay}
                 </p>
                 <p className="paused-info-line paused-info-sub">
                   {answeredCount} {answeredCount === 1 ? 'questão respondida' : 'questões respondidas'}
@@ -1844,7 +2204,7 @@ export default function App() {
                 Retomar prova
               </button>
               <button type="button" className="btn--ghost" onClick={abandonQuiz}>
-                Abandonar simulado
+                Abandonar prova
               </button>
             </div>
           </div>
@@ -1940,6 +2300,15 @@ export default function App() {
         <div className={`home-screen home-screen--${activeTab}`}>
           <header className="home-header">
             <div className="home-header-row">
+              <button
+                type="button"
+                className="home-menu-btn"
+                onClick={() => setSideMenuOpen(true)}
+                aria-label="Abrir menu"
+                aria-expanded={sideMenuOpen}
+              >
+                <MenuIcon />
+              </button>
               <img
                 src="/figuras/logos/integrar-logo-transparent.png"
                 alt="Integrar"
@@ -1948,16 +2317,6 @@ export default function App() {
               <span className="home-header-title">Trilha Integrar</span>
               <ChangelogSection />
               <div className="home-header-actions">
-                <span className="home-greeting">Olá, {user?.username}</span>
-                <button
-                  type="button"
-                  className="home-logout-btn"
-                  onClick={handleLogout}
-                  aria-label="Sair"
-                  title="Sair"
-                >
-                  Sair
-                </button>
                 <button
                   type="button"
                   className="theme-toggle home-theme-btn"
@@ -1968,81 +2327,205 @@ export default function App() {
                 </button>
               </div>
             </div>
-            <nav className="home-tab-strip" role="tablist" aria-label="Modo">
-              {[
-                { id: 'estude', label: 'Estude' },
-                { id: 'simule', label: 'Simule' },
-                { id: 'pesquise', label: 'Pesquise' },
-                { id: 'ensine', label: 'Ensine' },
-                ...(user?.role === 'admin' ? [{ id: 'administre', label: 'Administre' }] : []),
-              ].map(({ id, label }) => (
-                <button
-                  key={id}
-                  type="button"
-                  role="tab"
-                  aria-selected={activeTab === id}
-                  className={`home-tab-btn${activeTab === id ? ' active' : ''}`}
-                  onClick={() => switchTab(id)}
-                >
-                  {label}
-                </button>
-              ))}
-            </nav>
           </header>
+
+          {sideMenuOpen && (
+            <>
+              <div
+                className="home-side-backdrop"
+                onClick={() => setSideMenuOpen(false)}
+                aria-hidden
+              />
+              <aside
+                className="home-side-menu"
+                role="dialog"
+                aria-label="Menu de navegação"
+              >
+                <div className="home-side-menu-header">
+                  <span className="home-side-menu-greeting">
+                    Olá, <strong>{user?.username}</strong>
+                  </span>
+                  <button
+                    type="button"
+                    className="home-side-menu-close"
+                    onClick={() => setSideMenuOpen(false)}
+                    aria-label="Fechar menu"
+                  >
+                    ×
+                  </button>
+                </div>
+                <div className="home-side-menu-body">
+                  <nav className="home-side-menu-nav" role="tablist" aria-label="Modo">
+                    <button
+                      type="button"
+                      role="tab"
+                      aria-selected={activeTab === 'jogos'}
+                      className={`home-side-menu-item home-side-menu-item--jogos${activeTab === 'jogos' ? ' active' : ''}`}
+                      onClick={() => { switchTab('jogos'); setSideMenuOpen(false) }}
+                    >
+                      Jogos
+                    </button>
+
+                    <details className="home-side-menu-group">
+                      <summary className="home-side-menu-item home-side-menu-group-header">
+                        <span>ENEM</span>
+                      </summary>
+                      <div className="home-side-menu-group-items">
+                        {[
+                          { id: 'simule', label: 'Provas Completas' },
+                          { id: 'estude', label: 'Por Matéria' },
+                          { id: 'pesquise', label: 'Pesquisar' },
+                        ].map(({ id, label }) => (
+                          <button
+                            key={id}
+                            type="button"
+                            role="tab"
+                            aria-selected={activeTab === id}
+                            className={`home-side-menu-item home-side-menu-item--sub home-side-menu-item--${id}${activeTab === id ? ' active' : ''}`}
+                            onClick={() => { switchTab(id); setSideMenuOpen(false) }}
+                          >
+                            {label}
+                          </button>
+                        ))}
+                      </div>
+                    </details>
+
+                    {[
+                      { id: 'listas', label: 'Listas de Exercícios', show: true },
+                      { id: 'ensine', label: 'Criar Material', show: user?.role === 'prof' || user?.role === 'admin' },
+                      { id: 'administre', label: 'Administrar', show: user?.role === 'admin' },
+                    ].filter((t) => t.show).map(({ id, label }) => (
+                      <button
+                        key={id}
+                        type="button"
+                        role="tab"
+                        aria-selected={activeTab === id}
+                        className={`home-side-menu-item home-side-menu-item--${id}${activeTab === id ? ' active' : ''}`}
+                        onClick={() => { switchTab(id); setSideMenuOpen(false) }}
+                      >
+                        {label}
+                      </button>
+                    ))}
+                  </nav>
+
+                  <details className="home-side-menu-section home-side-menu-section--collapsible">
+                    <summary className="home-side-menu-section-label home-side-menu-section-summary">Opções</summary>
+                    <label className="home-side-toggle-row">
+                      <span className="home-side-toggle-label">Embaralhar alternativas</span>
+                      <span className={`options-toggle-switch${randomizeAlts ? ' on' : ''}`}>
+                        <input
+                          type="checkbox"
+                          checked={randomizeAlts}
+                          onChange={(e) => {
+                            setRandomizeAlts(e.target.checked)
+                            localStorage.setItem('randomize-alts', e.target.checked)
+                          }}
+                        />
+                        <span className="options-toggle-thumb" />
+                      </span>
+                    </label>
+                    <label className="home-side-toggle-row">
+                      <span className="home-side-toggle-label">Mostrar resposta</span>
+                      <span className={`options-toggle-switch${showAnswer ? ' on' : ''}`}>
+                        <input
+                          type="checkbox"
+                          checked={showAnswer}
+                          onChange={(e) => {
+                            setShowAnswer(e.target.checked)
+                            localStorage.setItem('show-answer', e.target.checked)
+                            if (!e.target.checked) { setSoundMuted(true); localStorage.setItem('sound-muted', true) }
+                          }}
+                        />
+                        <span className="options-toggle-thumb" />
+                      </span>
+                    </label>
+                    <label className="home-side-toggle-row">
+                      <span className="home-side-toggle-label">Mostrar dificuldade</span>
+                      <span className={`options-toggle-switch${showDifficulty ? ' on' : ''}`}>
+                        <input
+                          type="checkbox"
+                          checked={showDifficulty}
+                          onChange={(e) => {
+                            setShowDifficulty(e.target.checked)
+                            localStorage.setItem('show-difficulty', e.target.checked)
+                          }}
+                        />
+                        <span className="options-toggle-thumb" />
+                      </span>
+                    </label>
+                    <label className="home-side-toggle-row">
+                      <span className="home-side-toggle-label">
+                        {soundMuted ? <SoundOffIcon /> : <SoundOnIcon />} Som
+                      </span>
+                      <span className={`options-toggle-switch${!soundMuted ? ' on' : ''}`}>
+                        <input
+                          type="checkbox"
+                          checked={!soundMuted}
+                          onChange={(e) => {
+                            setSoundMuted(!e.target.checked)
+                            localStorage.setItem('sound-muted', !e.target.checked)
+                            if (e.target.checked && !showAnswer) { setShowAnswer(true); localStorage.setItem('show-answer', true) }
+                          }}
+                        />
+                        <span className="options-toggle-thumb" />
+                      </span>
+                    </label>
+                    <label className="home-side-toggle-row">
+                      <span className="home-side-toggle-label">
+                        {dark ? <MoonIcon /> : <SunIcon />} {dark ? 'Modo escuro' : 'Modo claro'}
+                      </span>
+                      <span className={`options-toggle-switch options-toggle-switch--theme${dark ? ' on' : ''}`}>
+                        <input type="checkbox" checked={dark} onChange={(e) => setDark(e.target.checked)} />
+                        <span className="options-toggle-thumb" />
+                      </span>
+                    </label>
+                    {clearHistoryConfirm ? (
+                      <div className="home-side-confirm-row">
+                        <span className="home-side-confirm-label">Tem certeza?</span>
+                        <button
+                          type="button"
+                          className="options-confirm-btn options-confirm-btn--danger"
+                          onClick={handleClearHistory}
+                          disabled={clearHistoryLoading}
+                        >
+                          {clearHistoryLoading ? 'Limpando…' : 'Confirmar'}
+                        </button>
+                        <button
+                          type="button"
+                          className="options-confirm-btn"
+                          onClick={() => setClearHistoryConfirm(false)}
+                          disabled={clearHistoryLoading}
+                        >
+                          Cancelar
+                        </button>
+                      </div>
+                    ) : (
+                      <button
+                        type="button"
+                        className="home-side-clear-btn"
+                        onClick={() => setClearHistoryConfirm(true)}
+                      >
+                        Limpar histórico
+                      </button>
+                    )}
+                  </details>
+                </div>
+                <div className="home-side-menu-footer">
+                  <button
+                    type="button"
+                    className="home-side-logout-btn"
+                    onClick={() => { setSideMenuOpen(false); handleLogout() }}
+                  >
+                    Sair
+                  </button>
+                </div>
+              </aside>
+            </>
+          )}
 
           <div className="home-card home-card--wide">
             {activeTab === 'estude' && (
               <div className="home-tab-content">
-                {dailyChallengeResult ? (
-                  <div className="daily-done-banner">
-                    <span className="daily-done-icon">★</span>
-                    <span className="daily-done-text">
-                      Desafio de hoje concluído!{' '}
-                      <strong>{dailyChallengeResult.score}/{dailyChallengeResult.total}</strong> corretas
-                    </span>
-                    <button
-                      type="button"
-                      className="daily-done-redo"
-                      onClick={() => startDailyChallenge({ practice: true })}
-                      disabled={dailyChallengeLoading}
-                      title="Refazer apenas para treino — não conta no histórico"
-                    >
-                      {dailyChallengeLoading ? '…' : 'Refazer'}
-                    </button>
-                  </div>
-                ) : (
-                  <button
-                    type="button"
-                    className="home-daily-btn"
-                    onClick={() => startDailyChallenge()}
-                    disabled={dailyChallengeLoading}
-                  >
-                    {dailyChallengeLoading ? 'Carregando…' : '★ Desafio Diário'}
-                  </button>
-                )}
-
-                <div className="home-divider" />
-
-                {/* ── Sub-tab toggle: ENEM / Listas ── */}
-                {allIntegrarQs.length > 0 && (
-                  <div className="home-test-seg" style={{ marginBottom: '0.4rem' }}>
-                    {['enem', 'listas'].map((sub) => (
-                      <button
-                        key={sub}
-                        type="button"
-                        className={`home-test-seg-btn${estudeSubTab === sub ? ' active' : ''}`}
-                        onClick={() => {
-                          setEstudeSubTab(sub)
-                          try { localStorage.setItem('trilha-integrar-estude-subtab', sub) } catch {}
-                        }}
-                      >
-                        {sub === 'enem' ? 'ENEM' : 'Listas'}
-                      </button>
-                    ))}
-                  </div>
-                )}
-
-                {estudeSubTab === 'enem' && (
                 <div className="home-area-section">
                   <span className="home-filter-label">Estudar por disciplina</span>
 
@@ -2147,6 +2630,26 @@ export default function App() {
                           </button>
                         ))}
                       </div>
+                      <label className="home-area-custom-qty">
+                        <span>Outra quantidade:</span>
+                        <input
+                          type="number"
+                          min={1}
+                          max={disciplinaPoolSize || undefined}
+                          inputMode="numeric"
+                          value={typeof disciplinaQuizLength === 'number' && ![10, 20, 45].includes(disciplinaQuizLength)
+                            ? disciplinaQuizLength
+                            : ''}
+                          placeholder="qualquer número"
+                          onChange={(e) => {
+                            const raw = e.target.value
+                            if (raw === '') return
+                            const v = parseInt(raw, 10)
+                            if (Number.isFinite(v) && v > 0) setDisciplinaQuizLength(v)
+                          }}
+                          onFocus={(e) => e.target.select()}
+                        />
+                      </label>
                     </div>
                   )}
 
@@ -2174,9 +2677,17 @@ export default function App() {
                     )
                   })()}
                 </div>
-                )}
 
-                {estudeSubTab === 'listas' && allIntegrarQs.length > 0 && (
+              </div>
+            )}
+
+            {activeTab === 'listas' && (
+              <div className="home-tab-content">
+                {allIntegrarQs.length === 0 ? (
+                  <p className="home-ensine-message">
+                    Nenhuma lista disponível ainda.
+                  </p>
+                ) : (
                   <>
                     <div className="home-filters">
                       <div className="home-filter-group">
@@ -2351,6 +2862,29 @@ export default function App() {
                       </div>
                     </div>
                   )}
+
+                  {/* Step 4 — Língua estrangeira (Dia 1 ENEM only) */}
+                  {selectedTest === 'ENEM' && selectedYear && selectedDay === 1 && (
+                    <div className="home-filter-group">
+                      <span className="home-filter-label">Língua estrangeira</span>
+                      <div className="home-test-seg">
+                        <button
+                          type="button"
+                          className={`home-test-seg-btn${foreignLang === 'en' ? ' active' : ''}`}
+                          onClick={() => setForeignLang('en')}
+                        >
+                          🇺🇸 Inglês
+                        </button>
+                        <button
+                          type="button"
+                          className={`home-test-seg-btn${foreignLang === 'es' ? ' active' : ''}`}
+                          onClick={() => setForeignLang('es')}
+                        >
+                          🇪🇸 Espanhol
+                        </button>
+                      </div>
+                    </div>
+                  )}
                 </div>
 
                 <button
@@ -2361,6 +2895,123 @@ export default function App() {
                 >
                   Iniciar
                 </button>
+              </div>
+            )}
+
+            {activeTab === 'jogos' && (
+              <div className="home-tab-content">
+                <div className="jogos-grid">
+                  {[
+                    {
+                      id: 'streak',
+                      title: 'Streak',
+                      tagline: 'Quantas seguidas você acerta?',
+                      iconClass: 'jogo-card-icon--streak',
+                      icon: '🔥',
+                      rule: 'Responda até errar uma. Sem tempo, só foco.',
+                    },
+                    {
+                      id: 'blitz',
+                      title: 'Blitz',
+                      tagline: '5 minutos. 3 vidas.',
+                      iconClass: 'jogo-card-icon--blitz',
+                      icon: '⚡',
+                      rule: 'Acerte o máximo antes de errar 3 ou acabar o tempo.',
+                    },
+                    {
+                      id: 'daily',
+                      title: 'Desafio Diário',
+                      tagline: 'Uma rodada por dia',
+                      iconClass: 'jogo-card-icon--daily',
+                      icon: '★',
+                      rule: dailyChallengeError
+                        ? `⚠ ${dailyChallengeError}`
+                        : dailyChallengeLoading
+                          ? 'Carregando…'
+                          : dailyChallengeResult
+                            ? `Feito hoje · ${dailyChallengeResult.score}/${dailyChallengeResult.total}`
+                            : 'Questões selecionadas todo dia para todos.',
+                    },
+                  ].map(({ id, title, tagline, iconClass, icon, rule }) => {
+                    const isOpen = gameConfigOpen === id
+                    const isDaily = id === 'daily'
+                    return (
+                      <button
+                        key={id}
+                        type="button"
+                        className={`jogo-card jogo-card--${id}${isOpen ? ' jogo-card--open' : ''}`}
+                        onClick={() => {
+                          if (isDaily) {
+                            startDailyChallenge({ practice: !!dailyChallengeResult })
+                            return
+                          }
+                          setGameConfigOpen((prev) => prev === id ? null : id)
+                        }}
+                        disabled={isDaily && dailyChallengeLoading}
+                      >
+                        <span className={`jogo-card-icon ${iconClass}`}>{icon}</span>
+                        <span className="jogo-card-title">{title}</span>
+                        <span className="jogo-card-tagline">{tagline}</span>
+                        <span className="jogo-card-rule">{rule}</span>
+                      </button>
+                    )
+                  })}
+                </div>
+
+                {gameConfigOpen && gameConfigOpen !== 'daily' && (
+                  <div className={`jogo-config jogo-config--${gameConfigOpen}`}>
+                    <details className="home-dropdown">
+                      <summary className="home-dropdown-summary">
+                        <span className="home-dropdown-label">Disciplina</span>
+                        <span className={`home-dropdown-value${gameDisciplina ? ' home-dropdown-value--filled' : ''}`}>
+                          {gameDisciplina ? DISCIPLINA_LABELS[gameDisciplina] : 'Qualquer'}
+                        </span>
+                      </summary>
+                      <div className="home-dropdown-panel">
+                        <label className="home-dropdown-option">
+                          <input
+                            type="radio"
+                            name="jogo-disciplina"
+                            checked={gameDisciplina === null}
+                            onChange={(e) => {
+                              setGameDisciplina(null)
+                              e.currentTarget.closest('details')?.removeAttribute('open')
+                            }}
+                          />
+                          <span>Qualquer disciplina</span>
+                        </label>
+                        {(['linguagens', 'humanas', 'nature', 'math']).map((area) => (
+                          <div key={area} className="home-dropdown-group">
+                            <span className="home-dropdown-group-label">{AREA_LABELS[area]}</span>
+                            {DISCIPLINAS_BY_AREA[area].map((slug) => (
+                              <label key={slug} className="home-dropdown-option">
+                                <input
+                                  type="radio"
+                                  name="jogo-disciplina"
+                                  checked={gameDisciplina === slug}
+                                  onChange={(e) => {
+                                    setGameDisciplina(slug)
+                                    e.currentTarget.closest('details')?.removeAttribute('open')
+                                  }}
+                                />
+                                <span>{DISCIPLINA_LABELS[slug]}</span>
+                              </label>
+                            ))}
+                          </div>
+                        ))}
+                      </div>
+                    </details>
+
+                    <button
+                      type="button"
+                      className={`jogo-start-btn jogo-start-btn--${gameConfigOpen}`}
+                      onClick={() => startGame(gameConfigOpen, gameDisciplina)}
+                    >
+                      <span className="jogo-start-icon">{gameConfigOpen === 'streak' ? '🔥' : '⚡'}</span>
+                      Começar {gameConfigOpen === 'streak' ? 'Streak' : 'Blitz'}
+                    </button>
+                  </div>
+                )}
               </div>
             )}
 
@@ -2406,21 +3057,21 @@ export default function App() {
                         className="home-start-btn"
                         onClick={() => setEnsineTool('criar-lista')}
                       >
-                        Criar lista
+                        Criar Lista de Questões
                       </button>
                       <button
                         type="button"
                         className="home-start-btn"
                         onClick={() => setEnsineTool('criar-questao')}
                       >
-                        Criar questão
+                        Criar Questão
                       </button>
                       <button
                         type="button"
                         className="home-start-btn"
                         onClick={() => setEnsineTool('explicar')}
                       >
-                        Explicar
+                        Explicar Questão do Enem
                       </button>
                     </>
                   )
@@ -2455,116 +3106,6 @@ export default function App() {
 
         </div>
 
-        {/* ── Gear options FAB ── */}
-        {optionsOpen && (
-          <div className="options-overlay" onClick={() => setOptionsOpen(false)} />
-        )}
-        <div className="options-fab-wrap">
-          {optionsOpen && (
-            <div className="options-popover">
-              <label className="options-toggle-row">
-                <span className="options-toggle-label">Embaralhar alternativas</span>
-                <span className={`options-toggle-switch${randomizeAlts ? ' on' : ''}`}>
-                  <input
-                    type="checkbox"
-                    checked={randomizeAlts}
-                    onChange={(e) => {
-                      setRandomizeAlts(e.target.checked)
-                      localStorage.setItem('randomize-alts', e.target.checked)
-                    }}
-                  />
-                  <span className="options-toggle-thumb" />
-                </span>
-              </label>
-              <label className="options-toggle-row">
-                <span className="options-toggle-label">Mostrar resposta</span>
-                <span className={`options-toggle-switch${showAnswer ? ' on' : ''}`}>
-                  <input
-                    type="checkbox"
-                    checked={showAnswer}
-                    onChange={(e) => {
-                      setShowAnswer(e.target.checked)
-                      localStorage.setItem('show-answer', e.target.checked)
-                      if (!e.target.checked) { setSoundMuted(true); localStorage.setItem('sound-muted', true) }
-                    }}
-                  />
-                  <span className="options-toggle-thumb" />
-                </span>
-              </label>
-              <label className="options-toggle-row">
-                <span className="options-toggle-label">Mostrar dificuldade</span>
-                <span className={`options-toggle-switch${showDifficulty ? ' on' : ''}`}>
-                  <input
-                    type="checkbox"
-                    checked={showDifficulty}
-                    onChange={(e) => {
-                      setShowDifficulty(e.target.checked)
-                      localStorage.setItem('show-difficulty', e.target.checked)
-                    }}
-                  />
-                  <span className="options-toggle-thumb" />
-                </span>
-              </label>
-              <div className="options-divider" />
-              <label className="options-toggle-row">
-                <span className="options-toggle-label" style={{ display: 'flex', alignItems: 'center', gap: '0.4rem' }}>{soundMuted ? <SoundOffIcon /> : <SoundOnIcon />} Som</span>
-                <span className={`options-toggle-switch${!soundMuted ? ' on' : ''}`}>
-                  <input type="checkbox" checked={!soundMuted} onChange={(e) => {
-                    setSoundMuted(!e.target.checked)
-                    localStorage.setItem('sound-muted', !e.target.checked)
-                    if (e.target.checked && !showAnswer) { setShowAnswer(true); localStorage.setItem('show-answer', true) }
-                  }} />
-                  <span className="options-toggle-thumb" />
-                </span>
-              </label>
-              <label className="options-toggle-row">
-                <span className="options-toggle-label" style={{ display: 'flex', alignItems: 'center', gap: '0.4rem' }}>{dark ? <MoonIcon /> : <SunIcon />} {dark ? 'Modo escuro' : 'Modo claro'}</span>
-                <span className={`options-toggle-switch options-toggle-switch--theme${dark ? ' on' : ''}`}>
-                  <input type="checkbox" checked={dark} onChange={(e) => setDark(e.target.checked)} />
-                  <span className="options-toggle-thumb" />
-                </span>
-              </label>
-              <div className="options-divider" />
-              {clearHistoryConfirm ? (
-                <div className="options-confirm-row">
-                  <span className="options-confirm-label">Tem certeza?</span>
-                  <button
-                    type="button"
-                    className="options-confirm-btn options-confirm-btn--danger"
-                    onClick={handleClearHistory}
-                    disabled={clearHistoryLoading}
-                  >
-                    {clearHistoryLoading ? 'Limpando…' : 'Confirmar'}
-                  </button>
-                  <button
-                    type="button"
-                    className="options-confirm-btn"
-                    onClick={() => setClearHistoryConfirm(false)}
-                    disabled={clearHistoryLoading}
-                  >
-                    Cancelar
-                  </button>
-                </div>
-              ) : (
-                <button
-                  type="button"
-                  className="options-admin-btn options-admin-btn--danger"
-                  onClick={() => setClearHistoryConfirm(true)}
-                >
-                  Limpar histórico
-                </button>
-              )}
-            </div>
-          )}
-          <button
-            type="button"
-            className={`options-fab${optionsOpen ? ' active' : ''}`}
-            onClick={() => setOptionsOpen((o) => !o)}
-            aria-label="Opções"
-          >
-            <GearIcon />
-          </button>
-        </div>
       </div>
     )
   }
@@ -2620,7 +3161,82 @@ export default function App() {
     )
   }
 
+  // ── Game over (Streak / Blitz) ────────────────────────────────────────────
+  if (phase === 'game-over' && gameFinalStats) {
+    const stats = gameFinalStats
+    const minutes = Math.floor(stats.durationSecs / 60)
+    const seconds = stats.durationSecs % 60
+    const durationLabel = `${minutes}:${String(seconds).padStart(2, '0')}`
+    const disciplinaLabel = stats.disciplina ? DISCIPLINA_LABELS[stats.disciplina] : 'Todas as disciplinas'
+    const isStreak = stats.mode === 'streak'
+    return (
+      <div className="app-shell">
+        <div className="game-over-screen">
+          <div className="game-over-card">
+            <span className={`game-over-icon game-over-icon--${stats.mode}`}>
+              {isStreak ? '🔥' : '⚡'}
+            </span>
+            <h1 className="game-over-title">
+              {isStreak ? 'Streak encerrado' : 'Blitz finalizado'}
+            </h1>
+            <div className="game-over-stats">
+              {isStreak ? (
+                <div className="game-over-stat-row">
+                  <span className="game-over-stat-label">Acertos seguidos</span>
+                  <span className="game-over-stat-value">{stats.streak}</span>
+                </div>
+              ) : (
+                <>
+                  <div className="game-over-stat-row">
+                    <span className="game-over-stat-label">Acertos</span>
+                    <span className="game-over-stat-value">{stats.correct}</span>
+                  </div>
+                  <div className="game-over-stat-row">
+                    <span className="game-over-stat-label">Erros</span>
+                    <span className="game-over-stat-value">{stats.wrongs}</span>
+                  </div>
+                </>
+              )}
+              <div className="game-over-stat-row">
+                <span className="game-over-stat-label">Tempo</span>
+                <span className="game-over-stat-value">{durationLabel}</span>
+              </div>
+              <div className="game-over-stat-row">
+                <span className="game-over-stat-label">Tema</span>
+                <span className="game-over-stat-value game-over-stat-value--small">{disciplinaLabel}</span>
+              </div>
+            </div>
+            <div className="game-over-actions">
+              <button
+                type="button"
+                className="home-area-pill home-area-pill--primary"
+                onClick={() => startGame(stats.mode, stats.disciplina)}
+              >
+                Jogar de novo
+              </button>
+              <button
+                type="button"
+                className="home-area-pill"
+                onClick={exitGame}
+              >
+                Voltar
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    )
+  }
+
   if (!question) return <div className="center">Carregando...</div>
+
+  // Pause/resume only makes sense for a full ENEM/UFSC exam.
+  const isFullExamMode = !gameMode
+    && !isDailyChallenge
+    && !selectedArea
+    && !!selectedTest && selectedTest !== 'Integrar'
+    && selectedYear != null
+    && typeof selectedDay === 'number'
 
   const letters = Object.keys(question.alternatives)
   const images = question.images ?? []
@@ -2629,14 +3245,14 @@ export default function App() {
   const isPrevDisabled = questionIndex <= 0
   const isNextDisabled = questionIndex >= sortedQuestions.length - 1
   const altImageFor = (index) => hasStemImg ? images[index + 1] : altImgsOnly ? images[index] : null
-  const attempt = attempts[question.number]
+  const attempt = attempts[attemptKey(question)]
   const selected = attempt?.selected ?? null
 
   // ── Summary ───────────────────────────────────────────────────────────────
   if (phase === 'summary') {
-    const annulledNumbers = new Set(sortedQuestions.filter((q) => q.answer === 'annulled').map((q) => q.number))
-    const scorableQuestions = sortedQuestions.filter((q) => !annulledNumbers.has(q.number))
-    const answeredCount = Object.entries(attempts).filter(([num]) => !annulledNumbers.has(Number(num))).length
+    const annulledKeys = new Set(sortedQuestions.filter((q) => q.answer === 'annulled').map(attemptKey))
+    const scorableQuestions = sortedQuestions.filter((q) => !annulledKeys.has(attemptKey(q)))
+    const answeredCount = Object.entries(attempts).filter(([k]) => !annulledKeys.has(k)).length
     const correctCount = Object.values(attempts).filter((a) => a.correct).length
     const wrongCount = answeredCount - correctCount
     const unansweredCount = scorableQuestions.length - answeredCount
@@ -2647,8 +3263,9 @@ export default function App() {
     // ── Subject breakdown ────────────────────────────────────────────────
     const tagStats = {}
     scorableQuestions.forEach((q) => {
-      const att = attempts[q.number]
-      const t = questionTimes[q.number] || 0
+      const qk = attemptKey(q)
+      const att = attempts[qk]
+      const t = questionTimes[qk] || 0
       ;(q.tags || []).forEach((tag) => {
         if (!tagStats[tag]) tagStats[tag] = { total: 0, answered: 0, correct: 0, time: 0 }
         tagStats[tag].total++
@@ -2676,8 +3293,9 @@ export default function App() {
     // ── Disciplina breakdown ──────────────────────────────────────────────
     const discStats = {}
     scorableQuestions.forEach((q) => {
-      const att = attempts[q.number]
-      const t = questionTimes[q.number] || 0
+      const qk = attemptKey(q)
+      const att = attempts[qk]
+      const t = questionTimes[qk] || 0
       ;(q.disciplinas || []).forEach((slug) => {
         if (!discStats[slug]) discStats[slug] = { total: 0, answered: 0, correct: 0, time: 0 }
         discStats[slug].total++
@@ -3051,11 +3669,12 @@ export default function App() {
                 </thead>
                 <tbody>
                   {sortedQuestions.map((q) => {
-                    const att = attempts[q.number]
-                    const t = questionTimes[q.number]
+                    const qk = attemptKey(q)
+                    const att = attempts[qk]
+                    const t = questionTimes[qk]
                     const rowClass = att ? (att.correct ? 'summary-row--ok' : 'summary-row--bad') : 'summary-row--skip'
                     return (
-                      <tr key={q.number} className={rowClass}>
+                      <tr key={qk} className={rowClass}>
                         <td className="summary-td-num">{q.number}</td>
                         <td>{att?.selected?.toUpperCase() ?? <span className="summary-dash summary-dash--skip">—</span>}</td>
                         <td>{q.answer.toUpperCase()}</td>
@@ -3121,11 +3740,18 @@ export default function App() {
 
           {/* Desktop: icon-only buttons */}
           <div className="app-header-actions app-header-actions--desktop">
-            <button type="button" className="header-icon-btn" onClick={pauseQuiz} aria-label="Pausar">
-              <PauseIcon />
-            </button>
-            <button type="button" className="header-finish-btn" onClick={() => setFinishConfirmOpen(true)} aria-label={allAnswered ? 'Finalizar' : 'Sair'}>
-              {allAnswered ? <FinishIcon /> : <ExitIcon />}
+            {isFullExamMode && (
+              <button type="button" className="header-icon-btn" onClick={pauseQuiz} aria-label="Pausar">
+                <PauseIcon />
+              </button>
+            )}
+            <button
+              type="button"
+              className="header-finish-btn"
+              onClick={() => gameMode ? endGame() : setFinishConfirmOpen(true)}
+              aria-label={gameMode ? 'Desistir' : (allAnswered ? 'Finalizar' : 'Sair')}
+            >
+              {gameMode ? <ExitIcon /> : (allAnswered ? <FinishIcon /> : <ExitIcon />)}
             </button>
             <button
               type="button"
@@ -3156,12 +3782,22 @@ export default function App() {
                 <WarnIcon /> <span>Reportar problema</span>
               </button>
               <div className="header-menu-divider" />
-              <button type="button" className="header-menu-item" onClick={() => { setHeaderMenuOpen(false); pauseQuiz() }}>
-                <PauseIcon /> <span>Pausar</span>
-              </button>
-              <button type="button" className="header-menu-item header-menu-item--finish" onClick={() => { setHeaderMenuOpen(false); setFinishConfirmOpen(true) }}>
-                {allAnswered ? <FinishIcon /> : <ExitIcon />} <span>{allAnswered ? 'Finalizar' : 'Sair'}</span>
-              </button>
+              {gameMode ? (
+                <button type="button" className="header-menu-item header-menu-item--finish" onClick={() => { setHeaderMenuOpen(false); endGame() }}>
+                  <ExitIcon /> <span>Desistir</span>
+                </button>
+              ) : (
+                <>
+                  {isFullExamMode && (
+                    <button type="button" className="header-menu-item" onClick={() => { setHeaderMenuOpen(false); pauseQuiz() }}>
+                      <PauseIcon /> <span>Pausar</span>
+                    </button>
+                  )}
+                  <button type="button" className="header-menu-item header-menu-item--finish" onClick={() => { setHeaderMenuOpen(false); setFinishConfirmOpen(true) }}>
+                    {allAnswered ? <FinishIcon /> : <ExitIcon />} <span>{allAnswered ? 'Finalizar' : 'Sair'}</span>
+                  </button>
+                </>
+              )}
             </div>
           )}
         </div>
@@ -3175,10 +3811,24 @@ export default function App() {
               <div className="container">
                 <header className="header">
                   <div className="badges">
-                    <span className="badge badge-progress">
-                      {questionIndex + 1} / {sortedQuestions.length}
-                    </span>
-                    {(isDailyChallenge || selectedArea) && (
+                    {gameMode === 'streak' && (
+                      <span className="badge badge-game-streak">🔥 Streak {gameStreak}</span>
+                    )}
+                    {gameMode === 'blitz' && (
+                      <>
+                        <span className="badge badge-game-blitz">
+                          ⏱ {Math.floor(gameTimeLeft / 60)}:{String(gameTimeLeft % 60).padStart(2, '0')}
+                        </span>
+                        <span className="badge badge-game-score">✓ {gameCorrect}</span>
+                        <span className="badge badge-game-lives">❤ {3 - gameWrongs}</span>
+                      </>
+                    )}
+                    {!gameMode && (
+                      <span className="badge badge-progress">
+                        {questionIndex + 1} / {sortedQuestions.length}
+                      </span>
+                    )}
+                    {(isDailyChallenge || selectedArea || gameMode) && (
                       <span className="badge badge-qnum">Q{question.number}</span>
                     )}
                     {question.test != null && String(question.test).trim() !== '' && (
@@ -3201,28 +3851,36 @@ export default function App() {
                       return <span className={`badge badge-difficulty badge-difficulty--${cls}`}>{label}</span>
                     })()}
                   </div>
-                  {question.language && langVariantsRef.current[question.number] && (
-                    <div className="lang-toggle" aria-label="Escolha o idioma">
-                      <button
-                        type="button"
-                        className={`lang-toggle-btn ${foreignLang === 'en' ? 'active' : ''}`}
-                        onClick={() => switchLang('en')}
-                        disabled={!!attempts[question.number]}
-                        title="Inglês"
-                      >
-                        🇺🇸
-                      </button>
-                      <button
-                        type="button"
-                        className={`lang-toggle-btn ${foreignLang === 'es' ? 'active' : ''}`}
-                        onClick={() => switchLang('es')}
-                        disabled={!!attempts[question.number]}
-                        title="Espanhol"
-                      >
-                        🇪🇸
-                      </button>
-                    </div>
-                  )}
+                  {(() => {
+                    if (!question.language) return null
+                    const variants = langVariantsRef.current[question.number]
+                    // Only show the toggle when BOTH language variants are present in
+                    // the current quiz pool — single-language sessions (e.g. the
+                    // "Inglês"/"Espanhol" disciplina quiz) shouldn't expose a dead button.
+                    if (!variants?.en || !variants?.es) return null
+                    return (
+                      <div className="lang-toggle" aria-label="Escolha o idioma">
+                        <button
+                          type="button"
+                          className={`lang-toggle-btn ${foreignLang === 'en' ? 'active' : ''}`}
+                          onClick={() => switchLang('en')}
+                          disabled={!!attempts[attemptKey(question)]}
+                          title="Inglês"
+                        >
+                          🇺🇸
+                        </button>
+                        <button
+                          type="button"
+                          className={`lang-toggle-btn ${foreignLang === 'es' ? 'active' : ''}`}
+                          onClick={() => switchLang('es')}
+                          disabled={!!attempts[attemptKey(question)]}
+                          title="Espanhol"
+                        >
+                          🇪🇸
+                        </button>
+                      </div>
+                    )
+                  })()}
                 </header>
 
                 {getContextIds(question).map((cid) => {
@@ -3256,6 +3914,14 @@ export default function App() {
                                   loading="lazy"
                                   decoding="async"
                                 />
+                                <button
+                                  type="button"
+                                  className="figure-zoom-btn"
+                                  aria-label="Ampliar imagem"
+                                  onClick={() => setLightboxImage({ src: publicImageSrc(seg.src), caption: seg.caption || '' })}
+                                >
+                                  <ZoomInIcon />
+                                </button>
                                 {seg.caption != null && seg.caption !== '' && (
                                   <figcaption className="q-figure-caption" dangerouslySetInnerHTML={{ __html: richHtmlBr(seg.caption) }} />
                                 )}
@@ -3282,6 +3948,14 @@ export default function App() {
                             loading="lazy"
                             decoding="async"
                           />
+                          <button
+                            type="button"
+                            className="figure-zoom-btn"
+                            aria-label="Ampliar imagem"
+                            onClick={() => setLightboxImage({ src: publicImageSrc(seg.src), caption: seg.caption || '' })}
+                          >
+                            <ZoomInIcon />
+                          </button>
                           {seg.caption != null && seg.caption !== '' && (
                             <figcaption className="q-figure-caption" dangerouslySetInnerHTML={{ __html: richHtmlBr(seg.caption) }} />
                           )}
@@ -3303,7 +3977,11 @@ export default function App() {
                           <button
                             type="button"
                             className={`alt-btn ${isConfirmedCorrect ? 'alt-btn--confirmed-correct' : ''} ${isConfirmedWrong ? 'alt-btn--confirmed-wrong' : ''} ${isPending ? 'alt-btn--pending' : ''} ${stacked ? 'alt-btn--stack' : ''}`}
-                            onClick={() => !selected && setPendingSelection(origLetter)}
+                            onClick={() => {
+                              if (selected) return
+                              if (gameMode) commitGameAnswer(origLetter)
+                              else setPendingSelection(origLetter)
+                            }}
                             disabled={selected !== null}
                           >
                             <div className="alt-row">
@@ -3319,6 +3997,27 @@ export default function App() {
                                   loading="lazy"
                                   decoding="async"
                                 />
+                                {/* span+role to avoid invalid nested <button> */}
+                                <span
+                                  role="button"
+                                  tabIndex={0}
+                                  className="figure-zoom-btn"
+                                  aria-label="Ampliar imagem"
+                                  onClick={(e) => {
+                                    e.stopPropagation()
+                                    e.preventDefault()
+                                    setLightboxImage({ src: publicImageSrc(altImg), caption: altCaption || '' })
+                                  }}
+                                  onKeyDown={(e) => {
+                                    if (e.key === 'Enter' || e.key === ' ') {
+                                      e.stopPropagation()
+                                      e.preventDefault()
+                                      setLightboxImage({ src: publicImageSrc(altImg), caption: altCaption || '' })
+                                    }
+                                  }}
+                                >
+                                  <ZoomInIcon />
+                                </span>
                                 {altCaption && (
                                   <figcaption className="alt-figure-caption" dangerouslySetInnerHTML={{ __html: richHtmlBr(altCaption) }} />
                                 )}
@@ -3425,14 +4124,15 @@ export default function App() {
           <button type="button" className="rail-arrow-btn" onClick={() => scrollRail(-1)} aria-label="Rolar para cima">↑</button>
           <div className="question-rail-scroll" ref={railInnerRef}>
             {sortedQuestions.map((q, idx) => {
-              const att = attempts[q.number]
-              const isCurrent = q.number === question.number
+              const qk = attemptKey(q)
+              const att = attempts[qk]
+              const isCurrent = qk === attemptKey(question)
               let stateClass = 'question-rail-btn--idle'
               if (att && showAnswer) stateClass = att.correct ? 'question-rail-btn--ok' : 'question-rail-btn--bad'
               else if (att) stateClass = 'question-rail-btn--answered'
               return (
                 <button
-                  key={q.number}
+                  key={qk}
                   type="button"
                   data-qnum={q.number}
                   className={`question-rail-btn ${stateClass} ${isCurrent ? 'question-rail-btn--current' : ''}`}
@@ -3458,8 +4158,25 @@ export default function App() {
         >
           <GearIcon />
         </button>
-        <button type="button" className="footer-nav-btn" onClick={prev} disabled={isPrevDisabled} aria-label="Questão anterior">←</button>
-        {selected ? (
+        <button type="button" className="footer-nav-btn" onClick={prev} disabled={isPrevDisabled || !!gameMode} aria-label="Questão anterior">←</button>
+        {gameMode ? (
+          <div className="footer-game-hud" aria-live="polite">
+            {gameMode === 'streak' && (
+              <span className="footer-game-hud-streak">🔥 {gameStreak}</span>
+            )}
+            {gameMode === 'blitz' && (
+              <>
+                <span className="footer-game-hud-timer">
+                  ⏱ {Math.floor(gameTimeLeft / 60)}:{String(gameTimeLeft % 60).padStart(2, '0')}
+                </span>
+                <span className="footer-game-hud-score">✓ {gameCorrect}</span>
+                <span className="footer-game-hud-lives">
+                  {['❤️', '❤️', '❤️'].map((h, i) => i < 3 - gameWrongs ? h : '🖤').join('')}
+                </span>
+              </>
+            )}
+          </div>
+        ) : selected ? (
           <button type="button" className="footer-responder-btn footer-responder-btn--next" onClick={next} disabled={isNextDisabled}>
             Próxima →
           </button>
@@ -3468,7 +4185,7 @@ export default function App() {
             Responder
           </button>
         )}
-        <button type="button" className="footer-nav-btn" onClick={next} disabled={isNextDisabled} aria-label="Próxima questão">→</button>
+        <button type="button" className="footer-nav-btn" onClick={next} disabled={isNextDisabled || !!gameMode} aria-label="Próxima questão">→</button>
         <button
           type="button"
           className={`footer-nav-btn footer-rail-toggle ${railOpen ? 'active' : ''}`}
@@ -3486,6 +4203,30 @@ export default function App() {
           token={token}
           onClose={() => setFeedbackOpen(false)}
         />
+      )}
+
+      {lightboxImage && (
+        <div className="lightbox-overlay" role="dialog" aria-modal="true" onClick={() => setLightboxImage(null)}>
+          <button
+            type="button"
+            className="lightbox-close"
+            onClick={(e) => { e.stopPropagation(); setLightboxImage(null) }}
+            aria-label="Fechar"
+          >×</button>
+          <img
+            src={lightboxImage.src}
+            alt={lightboxImage.caption || 'Imagem ampliada'}
+            className="lightbox-image"
+            onClick={(e) => e.stopPropagation()}
+          />
+          {lightboxImage.caption && (
+            <div
+              className="lightbox-caption"
+              onClick={(e) => e.stopPropagation()}
+              dangerouslySetInnerHTML={{ __html: richHtmlBr(lightboxImage.caption) }}
+            />
+          )}
+        </div>
       )}
 
       {finishConfirmOpen && (() => {

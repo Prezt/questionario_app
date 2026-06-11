@@ -61,7 +61,7 @@ export function calcTriScores(questions, attempts) {
       a: A,
       b: difficultyToB(q.difficulty ?? 5),
       c: C,
-      correct: attempts[q.number]?.correct ?? false,
+      correct: attempts[`${q.area}:${q.year}:${q.test ?? ''}:${q.number}`]?.correct ?? false,
     }))
 
     scores[area] = thetaToScore(estimateTheta(items))
