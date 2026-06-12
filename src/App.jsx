@@ -2281,11 +2281,15 @@ export default function App() {
         if (available.length === 0) break
         const min = Math.min(...available)
         const max = Math.max(...available)
-        // Map slot index onto the 0..1 ramp using only the 15 "real" levels —
-        // buffer slots (>=15) keep targeting the hardest end.
+        // Map slot index onto the 0..1 ramp using only os 17 níveis "reais" —
+        // buffer slots (>=17) keep targeting the hardest end.
         const idx = Math.min(i, MILIONARIO_TOTAL_LEVELS - 1)
         const t = MILIONARIO_TOTAL_LEVELS === 1 ? 0 : idx / (MILIONARIO_TOTAL_LEVELS - 1)
-        const target = min + t * (max - min)
+        // Variabilidade nos primeiros níveis: 20% de chance de subir o alvo
+        // em 1–2 buckets, evitando que toda a fase inicial venha do mesmo
+        // bucket (ex: tudo dificuldade 1). Cap em `max` pra não estourar.
+        let target = min + t * (max - min)
+        if (Math.random() < 0.20) target = Math.min(max, target + 1 + Math.random())
         let best = available[0]
         let bestDist = Math.abs(available[0] - target)
         for (const d of available) {
