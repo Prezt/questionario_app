@@ -66,6 +66,80 @@ function savePausedSession(data) {
   try { localStorage.setItem(PAUSED_SESSION_KEY, JSON.stringify(data)) } catch {}
 }
 
+// ── Scoreboards (personal, localStorage) ──────────────────────────────────
+// Schema: { v, streak: [[score, ts, disc], ...],
+//          blitz: { '5': [...], '10': [...] },
+//          milionario: [[level, ts, disc], ...] }
+// ts = seconds since epoch; disc = disciplina slug or null. Top 5 per bucket.
+const SCOREBOARDS_KEY = 'scoreboards'
+const SCOREBOARDS_VERSION = 1
+const SCOREBOARD_LIMIT = 5
+
+function loadScoreboards() {
+  try {
+    const raw = localStorage.getItem(SCOREBOARDS_KEY)
+    if (!raw) return { v: SCOREBOARDS_VERSION }
+    const data = JSON.parse(raw)
+    if (!data || data.v !== SCOREBOARDS_VERSION) return { v: SCOREBOARDS_VERSION }
+    return data
+  } catch { return { v: SCOREBOARDS_VERSION } }
+}
+
+function saveScoreboards(data) {
+  try { localStorage.setItem(SCOREBOARDS_KEY, JSON.stringify(data)) } catch {}
+}
+
+function getScoreboardBucket(data, mode, blitzMinutes) {
+  if (mode === 'streak') return data?.streak || []
+  if (mode === 'milionario') return data?.milionario || []
+  if (mode === 'blitz') {
+    const k = String(blitzMinutes || 5)
+    return (data?.blitz && data.blitz[k]) || []
+  }
+  return []
+}
+
+function bestScoreFor(data, mode, blitzMinutes) {
+  const bucket = getScoreboardBucket(data, mode, blitzMinutes)
+  return bucket.length > 0 ? bucket[0][0] : 0
+}
+
+function recordGameScore({ mode, score, disc, blitzMinutes }) {
+  if (!Number.isFinite(score) || score <= 0) return null
+  const data = loadScoreboards()
+  const prevBest = bestScoreFor(data, mode, blitzMinutes)
+  const ts = Math.floor(Date.now() / 1000)
+  const entry = [score, ts, disc || null]
+  let bucket
+  if (mode === 'streak') {
+    data.streak = data.streak || []
+    bucket = data.streak
+  } else if (mode === 'milionario') {
+    data.milionario = data.milionario || []
+    bucket = data.milionario
+  } else if (mode === 'blitz') {
+    data.blitz = data.blitz || {}
+    const k = String(blitzMinutes || 5)
+    data.blitz[k] = data.blitz[k] || []
+    bucket = data.blitz[k]
+  } else {
+    return null
+  }
+  bucket.push(entry)
+  bucket.sort((a, b) => b[0] - a[0] || a[1] - b[1])
+  if (bucket.length > SCOREBOARD_LIMIT) bucket.length = SCOREBOARD_LIMIT
+  saveScoreboards(data)
+  const idx = bucket.findIndex(e => e[1] === ts && e[0] === score)
+  const rank = idx >= 0 ? idx + 1 : null
+  return {
+    rank,
+    prevBest,
+    newBest: bestScoreFor(data, mode, blitzMinutes),
+    isNewRecord: rank === 1 && score > prevBest,
+    scoreboards: data,
+  }
+}
+
 // Stable per-question identifier — questions across years/tests can share the
 // same `number`, so attempts/times must be keyed by the full tuple.
 function attemptKey(q) {
@@ -312,6 +386,10 @@ const CHANGELOG = [
       'Pool de universitários cresce para 12 (3 por área)',
       'Botão Parar leva o que já confirmou',
       'Patamares no 5º e 10º níveis travam prêmio mínimo',
+      'Recorde pessoal por modo de jogo',
+      'Destaque de novo recorde no fim do jogo',
+      'Card de cada jogo mostra recorde pessoal',
+      'Jogos abrem sem login; cadastro pede ao fim',
     ],
   },
   {
@@ -1042,12 +1120,48 @@ export default function App() {
   const [milPlacasVotes, setMilPlacasVotes] = useState(null) // { letter: percent }
   const [gameFinalStats, setGameFinalStats] = useState(null) // {mode, streak, correct, wrongs, durationSecs, disciplina}
   const [gameConfigOpen, setGameConfigOpen] = useState(null) // 'streak' | 'blitz' | 'milionario' | null
+  const [scoreboards, setScoreboards] = useState(() => loadScoreboards())
+  const [personalBestInfo, setPersonalBestInfo] = useState(null) // {rank, prevBest, newBest, isNewRecord}
+  const recordedGameRef = useRef(null)
   const gameQueueRef = useRef([]) // shuffled question pool
   const gameQueueIndexRef = useRef(0)
   const gameStartTsRef = useRef(null)
   const gameBlitzSecsRef = useRef(0) // total seconds for this blitz run
   const gameAdvanceTimerRef = useRef(null)
   const gameLastProcessedKeyRef = useRef(null)
+  // Guest fluxo: marca que após o próximo login bem-sucedido o app deve voltar
+  // pra phase 'game-over' (em vez de ir pra 'home'), preservando gameFinalStats.
+  const pendingResultSaveRef = useRef(false)
+
+  useLayoutEffect(() => {
+    if (!gameFinalStats) {
+      recordedGameRef.current = null
+      setPersonalBestInfo(null)
+      return
+    }
+    if (recordedGameRef.current === gameFinalStats) return
+    recordedGameRef.current = gameFinalStats
+    const s = gameFinalStats
+    let score
+    if (s.mode === 'streak') score = s.streak
+    else if (s.mode === 'blitz') score = s.correct
+    else if (s.mode === 'milionario') score = s.milLevelReached ?? 0
+    else return
+    const result = recordGameScore({
+      mode: s.mode,
+      score,
+      disc: s.disciplina,
+      blitzMinutes: s.blitzMinutes,
+    })
+    if (result) {
+      setPersonalBestInfo(result)
+      setScoreboards(result.scoreboards)
+    } else {
+      const fresh = loadScoreboards()
+      const best = bestScoreFor(fresh, s.mode, s.blitzMinutes)
+      setPersonalBestInfo({ rank: null, prevBest: best, newBest: best, isNewRecord: false })
+    }
+  }, [gameFinalStats])
 
   const [selectedArea, setSelectedArea] = useState(null) // 'math' | 'nature' | 'linguagens' | 'humanas'
   const [selectedTag, setSelectedTag] = useState(null)   // unified tag string | null
@@ -1090,6 +1204,9 @@ export default function App() {
   const [sideMenuOpen, setSideMenuOpen] = useState(false)
   const [activeTab, setActiveTab] = useState(() => {
     const VALID = ['estude', 'listas', 'simule', 'jogos', 'pesquise', 'ensine', 'administre']
+    // Guest (sem token) só pode estar na aba Jogos.
+    const hasToken = typeof window !== 'undefined' && !!localStorage.getItem('token')
+    if (!hasToken) return 'jogos'
     // Deep-link via path (e.g. /ensine). URL is rewritten back to / by the effect above for cleanliness.
     if (typeof window !== 'undefined') {
       const p = window.location.pathname.replace(/^\/+|\/+$/g, '')
@@ -1103,6 +1220,11 @@ export default function App() {
     } catch { return 'estude' }
   })
   const switchTab = (tab) => {
+    // Guest só pode ficar na aba Jogos; outras opções abrem a tela de login.
+    if (!token && tab !== 'jogos') {
+      setPhase('login')
+      return
+    }
     setActiveTab(tab)
     try { localStorage.setItem('trilha-integrar-active-tab', tab) } catch {}
     setSelectedYear(null)
@@ -1336,13 +1458,19 @@ export default function App() {
       setToken(data.token)
       localStorage.setItem('user', JSON.stringify(data.user))
       localStorage.setItem('token', data.token)
-      setPhase('home')
+      // Guest → game-over → login: volta pra tela de resultado autenticado.
+      if (pendingResultSaveRef.current && gameFinalStats) {
+        pendingResultSaveRef.current = false
+        setPhase('game-over')
+      } else {
+        setPhase('home')
+      }
     } catch {
       setAuthError('Erro de conexão')
     } finally {
       setAuthLoading(false)
     }
-  }, [])
+  }, [gameFinalStats])
 
   const handleRegister = useCallback(async (username, password) => {
     setAuthLoading(true)
@@ -1359,13 +1487,18 @@ export default function App() {
       setToken(data.token)
       localStorage.setItem('user', JSON.stringify(data.user))
       localStorage.setItem('token', data.token)
-      setPhase('home')
+      if (pendingResultSaveRef.current && gameFinalStats) {
+        pendingResultSaveRef.current = false
+        setPhase('game-over')
+      } else {
+        setPhase('home')
+      }
     } catch {
       setAuthError('Erro de conexão')
     } finally {
       setAuthLoading(false)
     }
-  }, [])
+  }, [gameFinalStats])
 
   useEffect(() => {
     if (notebookOpen && notebookEditorRef.current) {
@@ -1449,6 +1582,15 @@ export default function App() {
       setUser(JSON.parse(saved))
       setToken(savedToken)
       setPhase('home')
+      return
+    }
+    // Guest mode: deeplink de jogo (/milhao, /jogos, /jogos/milhao) entra direto
+    // na Home com a aba Jogos visível, sem passar pela tela de login.
+    if (typeof window !== 'undefined') {
+      const p = window.location.pathname.replace(/^\/+|\/+$/g, '')
+      if (pendingGameMode || p === 'jogos' || p === 'jogos/milhao' || p === 'milhao') {
+        setPhase('home')
+      }
     }
   }, [])
 
@@ -2734,6 +2876,20 @@ export default function App() {
     return (
       <div className="app-shell">
         <div className={`home-screen home-screen--${activeTab}`}>
+          {!token && (
+            <div className="home-guest-banner" role="status">
+              <span className="home-guest-banner-text">
+                Faça login pra acessar simulados, listas e estatísticas
+              </span>
+              <button
+                type="button"
+                className="home-guest-banner-btn"
+                onClick={() => setPhase('login')}
+              >
+                Fazer login
+              </button>
+            </div>
+          )}
           <header className="home-header">
             <div className="home-header-row">
               <button
@@ -2802,46 +2958,59 @@ export default function App() {
                       Jogos
                     </button>
 
-                    <details className="home-side-menu-group">
-                      <summary className="home-side-menu-item home-side-menu-group-header">
-                        <span>ENEM</span>
-                      </summary>
-                      <div className="home-side-menu-group-items">
+                    {token && (
+                      <>
+                        <details className="home-side-menu-group">
+                          <summary className="home-side-menu-item home-side-menu-group-header">
+                            <span>ENEM</span>
+                          </summary>
+                          <div className="home-side-menu-group-items">
+                            {[
+                              { id: 'simule', label: 'Provas Completas' },
+                              { id: 'estude', label: 'Por Matéria' },
+                              { id: 'pesquise', label: 'Pesquisar' },
+                            ].map(({ id, label }) => (
+                              <button
+                                key={id}
+                                type="button"
+                                role="tab"
+                                aria-selected={activeTab === id}
+                                className={`home-side-menu-item home-side-menu-item--sub home-side-menu-item--${id}${activeTab === id ? ' active' : ''}`}
+                                onClick={() => { switchTab(id); setSideMenuOpen(false) }}
+                              >
+                                {label}
+                              </button>
+                            ))}
+                          </div>
+                        </details>
+
                         {[
-                          { id: 'simule', label: 'Provas Completas' },
-                          { id: 'estude', label: 'Por Matéria' },
-                          { id: 'pesquise', label: 'Pesquisar' },
-                        ].map(({ id, label }) => (
+                          { id: 'listas', label: 'Listas de Exercícios', show: true },
+                          { id: 'ensine', label: 'Criar Material', show: user?.role === 'prof' || user?.role === 'admin' },
+                          { id: 'administre', label: 'Administrar', show: user?.role === 'admin' },
+                        ].filter((t) => t.show).map(({ id, label }) => (
                           <button
                             key={id}
                             type="button"
                             role="tab"
                             aria-selected={activeTab === id}
-                            className={`home-side-menu-item home-side-menu-item--sub home-side-menu-item--${id}${activeTab === id ? ' active' : ''}`}
+                            className={`home-side-menu-item home-side-menu-item--${id}${activeTab === id ? ' active' : ''}`}
                             onClick={() => { switchTab(id); setSideMenuOpen(false) }}
                           >
                             {label}
                           </button>
                         ))}
-                      </div>
-                    </details>
-
-                    {[
-                      { id: 'listas', label: 'Listas de Exercícios', show: true },
-                      { id: 'ensine', label: 'Criar Material', show: user?.role === 'prof' || user?.role === 'admin' },
-                      { id: 'administre', label: 'Administrar', show: user?.role === 'admin' },
-                    ].filter((t) => t.show).map(({ id, label }) => (
+                      </>
+                    )}
+                    {!token && (
                       <button
-                        key={id}
                         type="button"
-                        role="tab"
-                        aria-selected={activeTab === id}
-                        className={`home-side-menu-item home-side-menu-item--${id}${activeTab === id ? ' active' : ''}`}
-                        onClick={() => { switchTab(id); setSideMenuOpen(false) }}
+                        className="home-side-menu-item home-side-menu-item--login"
+                        onClick={() => { setSideMenuOpen(false); setPhase('login') }}
                       >
-                        {label}
+                        Fazer login
                       </button>
-                    ))}
+                    )}
                   </nav>
 
                   <details className="home-side-menu-section home-side-menu-section--collapsible">
@@ -3379,6 +3548,13 @@ export default function App() {
                   ].map(({ id, title, tagline, iconClass, icon, rule }) => {
                     const isOpen = gameConfigOpen === id
                     const isDaily = id === 'daily'
+                    const best = isDaily ? 0 : bestScoreFor(scoreboards, id, blitzMinutes)
+                    let bestLabel = null
+                    if (best > 0) {
+                      if (id === 'streak') bestLabel = `Recorde: ${best} 🔥`
+                      else if (id === 'blitz') bestLabel = `Recorde (${blitzMinutes} min): ${best}`
+                      else if (id === 'milionario') bestLabel = `Nível recorde: ${best}/${MILIONARIO_TOTAL_LEVELS}`
+                    }
                     return (
                       <button
                         key={id}
@@ -3397,6 +3573,7 @@ export default function App() {
                         <span className="jogo-card-title">{title}</span>
                         <span className="jogo-card-tagline">{tagline}</span>
                         <span className="jogo-card-rule">{rule}</span>
+                        {bestLabel && <span className="jogo-card-best">{bestLabel}</span>}
                       </button>
                     )
                   })}
@@ -3732,6 +3909,14 @@ export default function App() {
                   <span className="game-over-stat-label">Tema</span>
                   <span className="game-over-stat-value game-over-stat-value--small">{disciplinaLabel}</span>
                 </div>
+                {personalBestInfo && personalBestInfo.newBest > 0 && (
+                  <div className={`game-over-stat-row${personalBestInfo.isNewRecord ? ' game-over-stat-row--record' : ''}`}>
+                    <span className="game-over-stat-label">
+                      {personalBestInfo.isNewRecord ? '🏆 Novo recorde' : 'Seu recorde'}
+                    </span>
+                    <span className="game-over-stat-value">{personalBestInfo.newBest}</span>
+                  </div>
+                )}
               </div>
               <div className="game-over-actions">
                 <button
@@ -3749,6 +3934,38 @@ export default function App() {
                   Voltar
                 </button>
               </div>
+              {!token && (
+                <div className="game-over-guest-cta">
+                  <p className="game-over-guest-cta-text">
+                    <span className="game-over-guest-cta-badge">✨</span>
+                    Crie sua conta pra salvar o resultado e acessar a plataforma
+                  </p>
+                  <div className="game-over-guest-cta-actions">
+                    <button
+                      type="button"
+                      className="home-area-pill home-area-pill--primary"
+                      onClick={() => {
+                        setAuthMode('register')
+                        pendingResultSaveRef.current = true
+                        setPhase('login')
+                      }}
+                    >
+                      Criar conta
+                    </button>
+                    <button
+                      type="button"
+                      className="home-area-pill"
+                      onClick={() => {
+                        setAuthMode('login')
+                        pendingResultSaveRef.current = true
+                        setPhase('login')
+                      }}
+                    >
+                      Já tenho conta
+                    </button>
+                  </div>
+                </div>
+              )}
             </div>
           </div>
         </div>
@@ -3791,6 +4008,16 @@ export default function App() {
                 <span className="game-over-stat-label">Tema</span>
                 <span className="game-over-stat-value game-over-stat-value--small">{disciplinaLabel}</span>
               </div>
+              {personalBestInfo && personalBestInfo.newBest > 0 && (
+                <div className={`game-over-stat-row${personalBestInfo.isNewRecord ? ' game-over-stat-row--record' : ''}`}>
+                  <span className="game-over-stat-label">
+                    {personalBestInfo.isNewRecord
+                      ? '🏆 Novo recorde'
+                      : isStreak ? 'Seu recorde' : `Recorde · ${stats.blitzMinutes ?? blitzMinutes} min`}
+                  </span>
+                  <span className="game-over-stat-value">{personalBestInfo.newBest}</span>
+                </div>
+              )}
             </div>
             <div className="game-over-actions">
               <button
@@ -3808,6 +4035,38 @@ export default function App() {
                 Voltar
               </button>
             </div>
+            {!token && (
+              <div className="game-over-guest-cta">
+                <p className="game-over-guest-cta-text">
+                  <span className="game-over-guest-cta-badge">✨</span>
+                  Crie sua conta pra salvar o resultado e acessar a plataforma
+                </p>
+                <div className="game-over-guest-cta-actions">
+                  <button
+                    type="button"
+                    className="home-area-pill home-area-pill--primary"
+                    onClick={() => {
+                      setAuthMode('register')
+                      pendingResultSaveRef.current = true
+                      setPhase('login')
+                    }}
+                  >
+                    Criar conta
+                  </button>
+                  <button
+                    type="button"
+                    className="home-area-pill"
+                    onClick={() => {
+                      setAuthMode('login')
+                      pendingResultSaveRef.current = true
+                      setPhase('login')
+                    }}
+                  >
+                    Já tenho conta
+                  </button>
+                </div>
+              </div>
+            )}
           </div>
         </div>
       </div>

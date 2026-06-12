@@ -2,6 +2,7 @@
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
+import { DISCIPLINA_AREA } from '../src/data/disciplinas.js';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.resolve(__dirname, '..');
@@ -33,8 +34,15 @@ function getImageFilesOnDisk() {
   return new Set(fs.readdirSync(FIGURAS_DIR).map(f => `figuras/${f}`));
 }
 
+function loadOptionalJson(p) {
+  try { return JSON.parse(fs.readFileSync(p, 'utf8')); }
+  catch { return null; }
+}
+
 const datasets = loadDatasets();
 const diskImages = getImageFilesOnDisk();
+const contexts = loadOptionalJson(path.join(PUBLIC_DIR, 'contexts.json')) || {};
+const officialGabarito = loadOptionalJson(path.join(PUBLIC_DIR, 'gabarito-oficial.json')) || {};
 
 console.log(`Loaded ${datasets.length} datasets, ${datasets.reduce((s, d) => s + d.questions.length, 0)} total questions`);
 console.log(`Found ${diskImages.size} image files on disk`);
@@ -111,6 +119,292 @@ function checkRequiredFields(q) {
     }
   });
   return issues;
+}
+
+// ── Layer A extensions: semantic / cross-field checks ─────────────
+
+function normalizeText(s) {
+  return (s || '').toLowerCase()
+    .replace(/[""'']/g, '"')
+    .replace(/\s+/g, ' ')
+    .trim();
+}
+
+function getContextIds(q) {
+  if (Array.isArray(q.contextIds) && q.contextIds.length) return q.contextIds;
+  if (q.contextId) return [q.contextId];
+  return [];
+}
+
+function checkAnswerInAlternatives(q) {
+  const issues = [];
+  if (!q.answer || q.answer === 'annulled') return issues;
+  const altKeys = Object.keys(q.alternatives || {});
+  if (altKeys.length === 0) return issues;
+  if (!altKeys.includes(q.answer)) {
+    issues.push({
+      type: 'ANSWER_NOT_IN_ALTERNATIVES',
+      detail: `answer="${q.answer}" not among alternative keys [${altKeys.join(',')}]`,
+    });
+  }
+  return issues;
+}
+
+function checkDisciplinaArea(q) {
+  const issues = [];
+  for (const slug of (q.disciplinas || [])) {
+    const expectedArea = DISCIPLINA_AREA[slug];
+    if (!expectedArea) {
+      issues.push({ type: 'UNKNOWN_DISCIPLINA',
+        detail: `disciplina "${slug}" not in taxonomy` });
+      continue;
+    }
+    if (expectedArea !== q.area) {
+      issues.push({
+        type: 'DISCIPLINA_AREA_MISMATCH',
+        detail: `disciplina "${slug}" belongs to "${expectedArea}" but question.area="${q.area}"`,
+      });
+    }
+  }
+  return issues;
+}
+
+function checkLanguageTagConsistency(q) {
+  // Foreign-language questions only exist in linguagens at numbers 1-5.
+  // Everything else must NOT carry a language tag.
+  const issues = [];
+  const shouldHaveLang = q.area === 'linguagens' && q.number >= 1 && q.number <= 5;
+  if (shouldHaveLang && !q.language) {
+    issues.push({ type: 'MISSING_LANGUAGE_TAG',
+      detail: `linguagens Q${q.number} must carry a language ("en" or "es")` });
+  }
+  if (!shouldHaveLang && q.language) {
+    issues.push({ type: 'UNEXPECTED_LANGUAGE_TAG',
+      detail: `language="${q.language}" set outside the q1-5 foreign-language band` });
+  }
+  if (q.language && q.language !== 'en' && q.language !== 'es') {
+    issues.push({ type: 'INVALID_LANGUAGE_TAG',
+      detail: `language="${q.language}" — expected "en" or "es"` });
+  }
+  return issues;
+}
+
+function checkContextRefs(q) {
+  const issues = [];
+  for (const cid of getContextIds(q)) {
+    if (!Object.prototype.hasOwnProperty.call(contexts, cid)) {
+      issues.push({ type: 'MISSING_CONTEXT', detail: `contextId "${cid}" not found in contexts.json` });
+    }
+  }
+  return issues;
+}
+
+function checkDuplicateAlternatives(q) {
+  const issues = [];
+  const alts = q.alternatives || {};
+  const seen = new Map(); // normalized text → letter
+  for (const [letter, raw] of Object.entries(alts)) {
+    const norm = normalizeText(raw);
+    if (norm.length < 5) continue; // skip near-empty alternatives
+    if (seen.has(norm)) {
+      issues.push({
+        type: 'DUPLICATE_ALTERNATIVES',
+        detail: `alternatives (${seen.get(norm)}) and (${letter}) have identical text`,
+      });
+    } else {
+      seen.set(norm, letter);
+    }
+  }
+  return issues;
+}
+
+function checkBracketBalance(q) {
+  const issues = [];
+  const fields = [
+    ['text', q.text || ''],
+    ...Object.entries(q.alternatives || {}).map(([l, v]) => [`alt(${l})`, v || '']),
+  ];
+  for (const [name, s] of fields) {
+    // LaTeX math delimiters
+    const open  = (s.match(/\\\(/g) || []).length;
+    const close = (s.match(/\\\)/g) || []).length;
+    if (open !== close) {
+      issues.push({ type: 'UNBALANCED_MATH',
+        detail: `${name}: ${open} \\( vs ${close} \\)` });
+    }
+    // Curly braces (LaTeX commands) — count outside of math-only contexts is noisy,
+    // but a stark imbalance is still a smoke signal.
+    const ob = (s.match(/\{/g) || []).length;
+    const cb = (s.match(/\}/g) || []).length;
+    if (Math.abs(ob - cb) >= 2) {
+      issues.push({ type: 'UNBALANCED_BRACES',
+        detail: `${name}: ${ob} { vs ${cb} }` });
+    }
+  }
+  return issues;
+}
+
+const OCR_GARBAGE_RX = /(Ã[-ÿ]|â€™|â€œ|â€|ï¬|�)/;
+const LIGATURE_RX = /[ﬁﬂﬀﬃﬄ]/;
+
+function checkOcrGarbage(q) {
+  const issues = [];
+  const fields = [['text', q.text || ''], ...Object.entries(q.alternatives || {}).map(([l, v]) => [`alt(${l})`, v || ''])];
+  for (const [name, s] of fields) {
+    if (OCR_GARBAGE_RX.test(s)) {
+      issues.push({ type: 'OCR_MOJIBAKE', detail: `${name} contains mojibake characters` });
+    } else if (LIGATURE_RX.test(s)) {
+      issues.push({ type: 'OCR_LIGATURE', detail: `${name} contains unconverted ligature (ﬁ ﬂ ...)` });
+    }
+  }
+  return issues;
+}
+
+function checkAltLengthOutlier(q) {
+  const issues = [];
+  const alts = q.alternatives || {};
+  const entries = Object.entries(alts).map(([k, v]) => [k, normalizeText(v).length]);
+  if (entries.length < 3) return issues;
+  const lens = entries.map(([, n]) => n);
+  const mean = lens.reduce((a, b) => a + b, 0) / lens.length;
+  const variance = lens.reduce((s, n) => s + (n - mean) ** 2, 0) / lens.length;
+  const std = Math.sqrt(variance);
+  if (std === 0 || mean < 20) return issues;
+  for (const [letter, len] of entries) {
+    const z = Math.abs(len - mean) / std;
+    if (z > 2.5 && (len < mean * 0.35 || len > mean * 2.5)) {
+      issues.push({
+        type: 'ALT_LENGTH_OUTLIER',
+        detail: `alt(${letter}) is ${len} chars vs mean ${mean.toFixed(0)} (z=${z.toFixed(1)})`,
+      });
+    }
+  }
+  return issues;
+}
+
+const TRUNCATION_RX = /[a-záéíóúâêôãõç]-\s*$|[a-záéíóúâêôãõç]{4,}…\s*$|…\s*$|[a-záéíóúâêôãõç]{6,}\s*$/i;
+const END_PUNCT_RX = /[.?!:)"'\]…]\s*$/;
+
+function checkTruncatedText(q) {
+  const issues = [];
+  const text = (q.text || '').trim();
+  if (text.length < 30) return issues;
+  // ENEM often ends stems mid-sentence on purpose (the alternatives complete
+  // the phrase), so absence of terminal punctuation is NOT a smell. We only
+  // flag the unambiguous mid-word hyphen case.
+  if (text.endsWith('-') && TRUNCATION_RX.test(text)) {
+    issues.push({ type: 'STEM_HYPHEN_TRUNCATED',
+      detail: `text ends mid-word with hyphen: "${text.slice(-40)}"` });
+  }
+  // Alternatives ending with a hyphen are almost certainly truncated.
+  for (const [letter, raw] of Object.entries(q.alternatives || {})) {
+    const s = (raw || '').trim();
+    if (s.endsWith('-') && s.length > 4) {
+      issues.push({ type: 'ALT_HYPHEN_TRUNCATED',
+        detail: `alt(${letter}) ends with hyphen: "${s.slice(-30)}"` });
+    }
+  }
+  return issues;
+}
+
+// Context ↔ stem bleed detection -------------------------------------------------
+
+const REFERENCE_RX = [
+  /Dispon[íi]vel em\s*:/i,
+  /Acesso em\s*:/i,
+  /Fonte\s*:/i,
+  /Adaptado de/i,
+  /https?:\/\/|www\./i,
+];
+
+function ngrams(text, n = 8) {
+  const words = normalizeText(text).split(' ').filter(Boolean);
+  const set = new Set();
+  for (let i = 0; i + n <= words.length; i++) set.add(words.slice(i, i + n).join(' '));
+  return set;
+}
+
+function checkContextBleed(q) {
+  const issues = [];
+  const qText = normalizeText(q.text);
+  if (!qText) return issues;
+  for (const cid of getContextIds(q)) {
+    const ctx = contexts[cid];
+    if (!ctx || typeof ctx !== 'object') continue;
+    const cText = normalizeText(ctx.text || '');
+    const cRef  = normalizeText(ctx.reference || '');
+
+    if (cText.length > 60) {
+      const probe = cText.slice(0, Math.min(180, cText.length));
+      if (qText.includes(probe)) {
+        issues.push({ type: 'CTX_TEXT_IN_STEM',
+          detail: `context "${cid}" text appears verbatim inside question.text` });
+      }
+    }
+    if (qText.length > 60) {
+      const probe = qText.slice(0, Math.min(180, qText.length));
+      if (cText.includes(probe)) {
+        issues.push({ type: 'STEM_IN_CTX_TEXT',
+          detail: `question.text appears verbatim inside context "${cid}"` });
+      }
+    }
+    if (cRef.length > 30 && qText.includes(cRef.slice(0, 100))) {
+      issues.push({ type: 'CTX_REF_IN_STEM',
+        detail: `context "${cid}" reference appears inside question.text` });
+    }
+
+    const qGrams = ngrams(q.text || '', 8);
+    if (qGrams.size > 0) {
+      const ctxGrams = ngrams(ctx.text || '', 8);
+      const shared = [];
+      for (const g of qGrams) if (ctxGrams.has(g)) shared.push(g);
+      if (shared.length >= 1) {
+        issues.push({
+          type: 'CTX_STEM_SHARED_PHRASE',
+          detail: `8-word phrase shared with context "${cid}": "${shared[0].slice(0, 80)}"`,
+        });
+      }
+    }
+
+    for (const rx of REFERENCE_RX) {
+      if (rx.test(ctx.text || '')) {
+        issues.push({
+          type: 'REFERENCE_IN_CTX_TEXT',
+          detail: `context "${cid}".text matches "${rx.source}" — likely belongs in .reference`,
+        });
+        break;
+      }
+    }
+  }
+  for (const rx of REFERENCE_RX) {
+    if (rx.test(q.text || '')) {
+      issues.push({ type: 'REFERENCE_PATTERN_IN_STEM',
+        detail: `question.text contains "${rx.source}" — citation may have leaked in` });
+      break;
+    }
+  }
+  return issues;
+}
+
+// ── Layer B: cross-check against the official INEP gabarito ───────
+
+function officialAnswerFor(q) {
+  const key = q.language ? `${q.year}:${q.number}:${q.language}` : `${q.year}:${q.number}`;
+  return officialGabarito[key] ?? null;
+}
+
+function checkOfficialGabarito(q) {
+  if (!officialGabarito || Object.keys(officialGabarito).length === 0) return [];
+  const expected = officialAnswerFor(q);
+  if (expected == null) return []; // gabarito doesn't cover this question
+  if (!q.answer) return [];
+  if (expected !== q.answer) {
+    return [{
+      type: 'ANSWER_MISMATCH_VS_OFFICIAL',
+      detail: `JSON=${q.answer}, INEP=${expected}`,
+    }];
+  }
+  return [];
 }
 
 // ── Dataset-level checks ──────────────────────────────────────────
@@ -203,8 +497,19 @@ function runAudit() {
         ...checkEmptyText(q),
         ...checkAlternatives(q),
         ...checkAnswer(q),
+        ...checkAnswerInAlternatives(q),
         ...checkMissingImages(q),
         ...checkMarkerImageMismatch(q),
+        ...checkDisciplinaArea(q),
+        ...checkLanguageTagConsistency(q),
+        ...checkContextRefs(q),
+        ...checkDuplicateAlternatives(q),
+        ...checkBracketBalance(q),
+        ...checkOcrGarbage(q),
+        ...checkAltLengthOutlier(q),
+        ...checkTruncatedText(q),
+        ...checkContextBleed(q),
+        ...checkOfficialGabarito(q),
       ];
       if (qIssues.length > 0) {
         fileReport.questionIssues.push({ number: q.number, issues: qIssues });
@@ -229,10 +534,28 @@ function runAudit() {
 // ── Output ────────────────────────────────────────────────────────
 
 const ISSUE_ORDER = [
+  // Cross-source / highest-value
+  'ANSWER_MISMATCH_VS_OFFICIAL',
+  // Structural
   'WRONG_QUESTION_COUNT', 'MISSING_QUESTION_NUMBER', 'DUPLICATE_QUESTION_NUMBER',
   'OUT_OF_RANGE_NUMBER', 'MISSING_FIELD', 'EMPTY_TEXT', 'SHORT_TEXT',
   'EMPTY_ALTERNATIVE', 'MISSING_ALTERNATIVE', 'INVALID_ANSWER',
+  'ANSWER_NOT_IN_ALTERNATIVES',
+  // Image / figure
   'MISSING_IMAGE_FILE', 'MARKER_WITHOUT_IMAGE',
+  // Taxonomy
+  'UNKNOWN_DISCIPLINA', 'DISCIPLINA_AREA_MISMATCH',
+  'MISSING_LANGUAGE_TAG', 'UNEXPECTED_LANGUAGE_TAG', 'INVALID_LANGUAGE_TAG',
+  'MISSING_CONTEXT',
+  // Content quality
+  'DUPLICATE_ALTERNATIVES', 'UNBALANCED_MATH', 'UNBALANCED_BRACES',
+  'OCR_MOJIBAKE', 'OCR_LIGATURE',
+  'ALT_LENGTH_OUTLIER',
+  'STEM_HYPHEN_TRUNCATED', 'ALT_HYPHEN_TRUNCATED',
+  // Context bleed
+  'CTX_TEXT_IN_STEM', 'STEM_IN_CTX_TEXT', 'CTX_REF_IN_STEM',
+  'CTX_STEM_SHARED_PHRASE', 'REFERENCE_IN_CTX_TEXT',
+  'REFERENCE_PATTERN_IN_STEM',
 ];
 
 const report = runAudit();

@@ -13,7 +13,8 @@
     "preview": "vite preview",
     "test": "vitest run",
     "test:watch": "vitest",
-    "audit": "node scripts/audit-questions.js && cp scripts/audit-report.json public/audit-report.json",
+    "audit": "node scripts/extract-gabarito.js && node scripts/audit-questions.js && cp scripts/audit-report.json public/audit-report.json",
+    "audit:gabarito": "node scripts/extract-gabarito.js",
     "build-page-map": "cd ../enem-parser && .venv/bin/python ../questionario_app/scripts/build-page-map.py --data-dir data --output ../questionario_app/public/question-pages.json"
   },
   "dependencies": {

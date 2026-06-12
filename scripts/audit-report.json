@@ -1,18 +1,73 @@
 {
   "summary": {
-    "totalQuestions": 1479,
-    "totalIssues": 81,
-    "filesWithIssues": 13,
-    "orphanedImages": 96
+    "totalQuestions": 1480,
+    "totalIssues": 130,
+    "filesWithIssues": 27,
+    "orphanedImages": 225
   },
   "byFile": {
     "humanas_enem_2018.json": {
       "datasetIssues": [],
-      "questionIssues": []
+      "questionIssues": [
+        {
+          "number": 63,
+          "issues": [
+            {
+              "type": "REFERENCE_PATTERN_IN_STEM",
+              "detail": "question.text contains \"Dispon[íi]vel em\\s*:\" — citation may have leaked in"
+            }
+          ]
+        },
+        {
+          "number": 74,
+          "issues": [
+            {
+              "type": "REFERENCE_PATTERN_IN_STEM",
+              "detail": "question.text contains \"Dispon[íi]vel em\\s*:\" — citation may have leaked in"
+            }
+          ]
+        }
+      ]
     },
     "humanas_enem_2019.json": {
       "datasetIssues": [],
-      "questionIssues": []
+      "questionIssues": [
+        {
+          "number": 71,
+          "issues": [
+            {
+              "type": "CTX_TEXT_IN_STEM",
+              "detail": "context \"enem_2019_humanas_q71_ctx1\" text appears verbatim inside question.text"
+            },
+            {
+              "type": "STEM_IN_CTX_TEXT",
+              "detail": "question.text appears verbatim inside context \"enem_2019_humanas_q71_ctx1\""
+            },
+            {
+              "type": "CTX_STEM_SHARED_PHRASE",
+              "detail": "8-word phrase shared with context \"enem_2019_humanas_q71_ctx1\": \"no sistema capitalista, as muitas manifestações e crises\""
+            }
+          ]
+        },
+        {
+          "number": 82,
+          "issues": [
+            {
+              "type": "REFERENCE_IN_CTX_TEXT",
+              "detail": "context \"enem_2019_humanas_q82_ctx1\".text matches \"Dispon[íi]vel em\\s*:\" — likely belongs in .reference"
+            }
+          ]
+        },
+        {
+          "number": 90,
+          "issues": [
+            {
+              "type": "CTX_STEM_SHARED_PHRASE",
+              "detail": "8-word phrase shared with context \"enem_2019_humanas_q90_ctx1\": \"a fome não é um problema técnico, pois\""
+            }
+          ]
+        }
+      ]
     },
     "humanas_enem_2020.json": {
       "datasetIssues": [],
@@ -20,15 +75,120 @@
     },
     "humanas_enem_2021.json": {
       "datasetIssues": [],
-      "questionIssues": []
+      "questionIssues": [
+        {
+          "number": 56,
+          "issues": [
+            {
+              "type": "ANSWER_MISMATCH_VS_OFFICIAL",
+              "detail": "JSON=c, INEP=d"
+            }
+          ]
+        },
+        {
+          "number": 85,
+          "issues": [
+            {
+              "type": "ANSWER_MISMATCH_VS_OFFICIAL",
+              "detail": "JSON=c, INEP=a"
+            }
+          ]
+        }
+      ]
     },
     "humanas_enem_2022.json": {
       "datasetIssues": [],
-      "questionIssues": []
+      "questionIssues": [
+        {
+          "number": 49,
+          "issues": [
+            {
+              "type": "MISSING_IMAGE_FILE",
+              "detail": "[object Object] not found on disk"
+            }
+          ]
+        },
+        {
+          "number": 65,
+          "issues": [
+            {
+              "type": "MISSING_IMAGE_FILE",
+              "detail": "[object Object] not found on disk"
+            }
+          ]
+        },
+        {
+          "number": 70,
+          "issues": [
+            {
+              "type": "MISSING_IMAGE_FILE",
+              "detail": "[object Object] not found on disk"
+            }
+          ]
+        },
+        {
+          "number": 74,
+          "issues": [
+            {
+              "type": "MISSING_IMAGE_FILE",
+              "detail": "[object Object] not found on disk"
+            }
+          ]
+        }
+      ]
     },
     "humanas_enem_2023.json": {
       "datasetIssues": [],
-      "questionIssues": []
+      "questionIssues": [
+        {
+          "number": 51,
+          "issues": [
+            {
+              "type": "STEM_IN_CTX_TEXT",
+              "detail": "question.text appears verbatim inside context \"enem_2023_humanas_q51_ctx1\""
+            },
+            {
+              "type": "CTX_STEM_SHARED_PHRASE",
+              "detail": "8-word phrase shared with context \"enem_2023_humanas_q51_ctx1\": \"a análise do resultado do processo em questão\""
+            }
+          ]
+        },
+        {
+          "number": 53,
+          "issues": [
+            {
+              "type": "STEM_IN_CTX_TEXT",
+              "detail": "question.text appears verbatim inside context \"enem_2023_humanas_q53_ctx1\""
+            },
+            {
+              "type": "CTX_STEM_SHARED_PHRASE",
+              "detail": "8-word phrase shared with context \"enem_2023_humanas_q53_ctx1\": \"qual dinâmica natural é responsável pelo fenômeno apresentado?\""
+            },
+            {
+              "type": "REFERENCE_IN_CTX_TEXT",
+              "detail": "context \"enem_2023_humanas_q53_ctx1\".text matches \"Dispon[íi]vel em\\s*:\" — likely belongs in .reference"
+            }
+          ]
+        },
+        {
+          "number": 60,
+          "issues": [
+            {
+              "type": "CTX_STEM_SHARED_PHRASE",
+              "detail": "8-word phrase shared with context \"enem_2023_humanas_q60_ctx1\": \"o texto apresenta tipos de conduta sujeitos a\""
+            }
+          ]
+        },
+        {
+          "number": 61,
+          "issues": [
+            {
+              "type": "CTX_STEM_SHARED_PHRASE",
+              "detail": "8-word phrase shared with context \"enem_2023_humanas_q61_ctx1\": \"o texto critica a mudança tecnológica em razão\""
+            }
+          ]
+        }
+      ]
     },
     "humanas_enem_2024.json": {
       "datasetIssues": [],
@@ -36,145 +196,209 @@
     },
     "humanas_enem_2025.json": {
       "datasetIssues": [],
-      "questionIssues": []
+      "questionIssues": [
+        {
+          "number": 47,
+          "issues": [
+            {
+              "type": "REFERENCE_PATTERN_IN_STEM",
+              "detail": "question.text contains \"Dispon[íi]vel em\\s*:\" — citation may have leaked in"
+            }
+          ]
+        },
+        {
+          "number": 56,
+          "issues": [
+            {
+              "type": "ANSWER_MISMATCH_VS_OFFICIAL",
+              "detail": "JSON=a, INEP=c"
+            }
+          ]
+        },
+        {
+          "number": 63,
+          "issues": [
+            {
+              "type": "REFERENCE_PATTERN_IN_STEM",
+              "detail": "question.text contains \"Dispon[íi]vel em\\s*:\" — citation may have leaked in"
+            }
+          ]
+        },
+        {
+          "number": 68,
+          "issues": [
+            {
+              "type": "REFERENCE_PATTERN_IN_STEM",
+              "detail": "question.text contains \"Dispon[íi]vel em\\s*:\" — citation may have leaked in"
+            }
+          ]
+        }
+      ]
     },
     "linguagens_enem_2018.json": {
       "datasetIssues": [],
-      "questionIssues": []
+      "questionIssues": [
+        {
+          "number": 3,
+          "issues": [
+            {
+              "type": "ANSWER_MISMATCH_VS_OFFICIAL",
+              "detail": "JSON=d, INEP=c"
+            }
+          ]
+        },
+        {
+          "number": 4,
+          "issues": [
+            {
+              "type": "ANSWER_MISMATCH_VS_OFFICIAL",
+              "detail": "JSON=e, INEP=d"
+            }
+          ]
+        },
+        {
+          "number": 5,
+          "issues": [
+            {
+              "type": "ANSWER_MISMATCH_VS_OFFICIAL",
+              "detail": "JSON=c, INEP=b"
+            }
+          ]
+        },
+        {
+          "number": 6,
+          "issues": [
+            {
+              "type": "CTX_STEM_SHARED_PHRASE",
+              "detail": "8-word phrase shared with context \"enem_2018_linguagens_q6_ctx1\": \"direitos humanos devem ser o alicerce para todo\""
+            }
+          ]
+        },
+        {
+          "number": 32,
+          "issues": [
+            {
+              "type": "REFERENCE_PATTERN_IN_STEM",
+              "detail": "question.text contains \"Dispon[íi]vel em\\s*:\" — citation may have leaked in"
+            }
+          ]
+        }
+      ]
     },
     "linguagens_enem_2019.json": {
       "datasetIssues": [],
-      "questionIssues": []
-    },
-    "linguagens_enem_2020.json": {
-      "datasetIssues": [],
-      "questionIssues": []
-    },
-    "linguagens_enem_2021.json": {
-      "datasetIssues": [
-        {
-          "type": "WRONG_QUESTION_COUNT",
-          "detail": "Expected 50, found 49 (missing 1)"
-        }
-      ],
       "questionIssues": [
         {
           "number": 5,
           "issues": [
             {
-              "type": "EMPTY_ALTERNATIVE",
-              "detail": "Alternative (a) is empty"
-            },
-            {
-              "type": "EMPTY_ALTERNATIVE",
-              "detail": "Alternative (b) is empty"
-            },
-            {
-              "type": "EMPTY_ALTERNATIVE",
-              "detail": "Alternative (c) is empty"
-            },
-            {
-              "type": "EMPTY_ALTERNATIVE",
-              "detail": "Alternative (d) is empty"
-            },
-            {
-              "type": "EMPTY_ALTERNATIVE",
-              "detail": "Alternative (e) is empty"
+              "type": "ANSWER_MISMATCH_VS_OFFICIAL",
+              "detail": "JSON=e, INEP=d"
             }
           ]
         },
         {
-          "number": 14,
+          "number": 1,
           "issues": [
             {
-              "type": "MISSING_IMAGE_FILE",
-              "detail": "figuras/q014_2021_fig2.png not found on disk"
-            },
-            {
-              "type": "MISSING_IMAGE_FILE",
-              "detail": "figuras/q014_2021_fig3.png not found on disk"
+              "type": "ANSWER_MISMATCH_VS_OFFICIAL",
+              "detail": "JSON=b, INEP=a"
             }
           ]
         },
         {
-          "number": 18,
+          "number": 2,
           "issues": [
             {
-              "type": "MISSING_IMAGE_FILE",
-              "detail": "figuras/q018_2021_fig1.png not found on disk"
+              "type": "ANSWER_MISMATCH_VS_OFFICIAL",
+              "detail": "JSON=d, INEP=b"
             }
           ]
         },
         {
-          "number": 20,
+          "number": 3,
           "issues": [
             {
-              "type": "MARKER_WITHOUT_IMAGE",
-              "detail": "Text has [image marker] but images array is empty"
+              "type": "ANSWER_MISMATCH_VS_OFFICIAL",
+              "detail": "JSON=a, INEP=c"
             }
           ]
         },
         {
-          "number": 24,
+          "number": 4,
           "issues": [
             {
-              "type": "EMPTY_ALTERNATIVE",
-              "detail": "Alternative (a) is empty"
-            },
-            {
-              "type": "EMPTY_ALTERNATIVE",
-              "detail": "Alternative (b) is empty"
-            },
-            {
-              "type": "EMPTY_ALTERNATIVE",
-              "detail": "Alternative (c) is empty"
-            },
-            {
-              "type": "EMPTY_ALTERNATIVE",
-              "detail": "Alternative (d) is empty"
-            },
-            {
-              "type": "EMPTY_ALTERNATIVE",
-              "detail": "Alternative (e) is empty"
+              "type": "ANSWER_MISMATCH_VS_OFFICIAL",
+              "detail": "JSON=b, INEP=a"
             }
           ]
         },
         {
-          "number": 26,
+          "number": 5,
           "issues": [
             {
-              "type": "EMPTY_ALTERNATIVE",
-              "detail": "Alternative (a) is empty"
-            },
-            {
-              "type": "EMPTY_ALTERNATIVE",
-              "detail": "Alternative (b) is empty"
-            },
-            {
-              "type": "EMPTY_ALTERNATIVE",
-              "detail": "Alternative (c) is empty"
-            },
-            {
-              "type": "EMPTY_ALTERNATIVE",
-              "detail": "Alternative (d) is empty"
-            },
-            {
-              "type": "EMPTY_ALTERNATIVE",
-              "detail": "Alternative (e) is empty"
+              "type": "ANSWER_MISMATCH_VS_OFFICIAL",
+              "detail": "JSON=e, INEP=d"
             }
           ]
-        },
+        }
+      ]
+    },
+    "linguagens_enem_2020.json": {
+      "datasetIssues": [],
+      "questionIssues": [
         {
-          "number": 27,
+          "number": 2,
           "issues": [
             {
-              "type": "MARKER_WITHOUT_IMAGE",
-              "detail": "Text has [image marker] but images array is empty"
+              "type": "ANSWER_MISMATCH_VS_OFFICIAL",
+              "detail": "JSON=a, INEP=c"
             }
           ]
         },
         {
-          "number": 28,
+          "number": 4,
+          "issues": [
+            {
+              "type": "ANSWER_MISMATCH_VS_OFFICIAL",
+              "detail": "JSON=d, INEP=e"
+            }
+          ]
+        },
+        {
+          "number": 5,
+          "issues": [
+            {
+              "type": "ANSWER_MISMATCH_VS_OFFICIAL",
+              "detail": "JSON=c, INEP=e"
+            }
+          ]
+        },
+        {
+          "number": 25,
+          "issues": [
+            {
+              "type": "CTX_STEM_SHARED_PHRASE",
+              "detail": "8-word phrase shared with context \"enem_2020_linguagens_q25_ctx1\": \"por uma fotografia de cadeira, uma cadeira exposta\""
+            }
+          ]
+        }
+      ]
+    },
+    "linguagens_enem_2021.json": {
+      "datasetIssues": [],
+      "questionIssues": [
+        {
+          "number": 8,
+          "issues": [
+            {
+              "type": "CTX_STEM_SHARED_PHRASE",
+              "detail": "8-word phrase shared with context \"enem_2021_linguagens_q8_ctx1\": \"o único trabalho produzido por equipes fora do\""
+            }
+          ]
+        },
+        {
+          "number": 13,
           "issues": [
             {
               "type": "MARKER_WITHOUT_IMAGE",
@@ -183,20 +407,11 @@
           ]
         },
         {
-          "number": 42,
+          "number": 36,
           "issues": [
             {
-              "type": "MISSING_IMAGE_FILE",
-              "detail": "figuras/q042_2021_fig1.png not found on disk"
-            }
-          ]
-        },
-        {
-          "number": 43,
-          "issues": [
-            {
-              "type": "MISSING_IMAGE_FILE",
-              "detail": "figuras/q043_2021_fig2.png not found on disk"
+              "type": "REFERENCE_IN_CTX_TEXT",
+              "detail": "context \"enem_2021_linguagens_q36_ctx1\".text matches \"Dispon[íi]vel em\\s*:\" — likely belongs in .reference"
             }
           ]
         }
@@ -222,73 +437,6 @@
               "detail": "Text is only 39 chars: \"No texto, o autor faz uma crítica ao(à)\""
             }
           ]
-        },
-        {
-          "number": 8,
-          "issues": [
-            {
-              "type": "MISSING_IMAGE_FILE",
-              "detail": "figuras/q008_2022_fig1.png not found on disk"
-            }
-          ]
-        },
-        {
-          "number": 13,
-          "issues": [
-            {
-              "type": "MISSING_IMAGE_FILE",
-              "detail": "figuras/q013_2022_fig1.png not found on disk"
-            }
-          ]
-        },
-        {
-          "number": 15,
-          "issues": [
-            {
-              "type": "MISSING_IMAGE_FILE",
-              "detail": "figuras/q015_2022_fig1.png not found on disk"
-            }
-          ]
-        },
-        {
-          "number": 28,
-          "issues": [
-            {
-              "type": "MISSING_IMAGE_FILE",
-              "detail": "figuras/q028_2022_fig1.png not found on disk"
-            }
-          ]
-        },
-        {
-          "number": 37,
-          "issues": [
-            {
-              "type": "MISSING_IMAGE_FILE",
-              "detail": "figuras/q037_2022_fig1.png not found on disk"
-            }
-          ]
-        },
-        {
-          "number": 39,
-          "issues": [
-            {
-              "type": "MISSING_IMAGE_FILE",
-              "detail": "figuras/q039_2022_fig1.png not found on disk"
-            },
-            {
-              "type": "MISSING_IMAGE_FILE",
-              "detail": "figuras/q039_2022_fig2.png not found on disk"
-            }
-          ]
-        },
-        {
-          "number": 45,
-          "issues": [
-            {
-              "type": "MISSING_IMAGE_FILE",
-              "detail": "figuras/q045_2022_fig1.png not found on disk"
-            }
-          ]
         }
       ]
     },
@@ -296,20 +444,20 @@
       "datasetIssues": [],
       "questionIssues": [
         {
-          "number": 3,
+          "number": 1,
           "issues": [
             {
-              "type": "SHORT_TEXT",
-              "detail": "Text is only 36 chars: \"Nesse poema, o eu poético enaltece a\""
+              "type": "MARKER_WITHOUT_IMAGE",
+              "detail": "Text has [image marker] but images array is empty"
             }
           ]
         },
         {
-          "number": 3,
+          "number": 45,
           "issues": [
             {
-              "type": "SHORT_TEXT",
-              "detail": "Text is only 36 chars: \"Nesse poema, o eu poético enaltece a\""
+              "type": "MARKER_WITHOUT_IMAGE",
+              "detail": "Text has [image marker] but images array is empty"
             }
           ]
         }
@@ -317,11 +465,67 @@
     },
     "linguagens_enem_2024.json": {
       "datasetIssues": [],
-      "questionIssues": []
+      "questionIssues": [
+        {
+          "number": 3,
+          "issues": [
+            {
+              "type": "REFERENCE_PATTERN_IN_STEM",
+              "detail": "question.text contains \"Dispon[íi]vel em\\s*:\" — citation may have leaked in"
+            }
+          ]
+        },
+        {
+          "number": 25,
+          "issues": [
+            {
+              "type": "REFERENCE_PATTERN_IN_STEM",
+              "detail": "question.text contains \"Dispon[íi]vel em\\s*:\" — citation may have leaked in"
+            }
+          ]
+        },
+        {
+          "number": 33,
+          "issues": [
+            {
+              "type": "REFERENCE_PATTERN_IN_STEM",
+              "detail": "question.text contains \"Dispon[íi]vel em\\s*:\" — citation may have leaked in"
+            }
+          ]
+        }
+      ]
     },
     "linguagens_enem_2025.json": {
       "datasetIssues": [],
-      "questionIssues": []
+      "questionIssues": [
+        {
+          "number": 4,
+          "issues": [
+            {
+              "type": "REFERENCE_PATTERN_IN_STEM",
+              "detail": "question.text contains \"Dispon[íi]vel em\\s*:\" — citation may have leaked in"
+            }
+          ]
+        },
+        {
+          "number": 24,
+          "issues": [
+            {
+              "type": "REFERENCE_PATTERN_IN_STEM",
+              "detail": "question.text contains \"Dispon[íi]vel em\\s*:\" — citation may have leaked in"
+            }
+          ]
+        },
+        {
+          "number": 34,
+          "issues": [
+            {
+              "type": "REFERENCE_PATTERN_IN_STEM",
+              "detail": "question.text contains \"Acesso em\\s*:\" — citation may have leaked in"
+            }
+          ]
+        }
+      ]
     },
     "math_enem_2018.json": {
       "datasetIssues": [],
@@ -334,22 +538,79 @@
               "detail": "Text has [image marker] but images array is empty"
             }
           ]
+        },
+        {
+          "number": 170,
+          "issues": [
+            {
+              "type": "REFERENCE_PATTERN_IN_STEM",
+              "detail": "question.text contains \"Dispon[íi]vel em\\s*:\" — citation may have leaked in"
+            }
+          ]
         }
       ]
     },
     "math_enem_2019.json": {
       "datasetIssues": [],
-      "questionIssues": []
+      "questionIssues": [
+        {
+          "number": 165,
+          "issues": [
+            {
+              "type": "DUPLICATE_ALTERNATIVES",
+              "detail": "alternatives (a) and (b) have identical text"
+            },
+            {
+              "type": "DUPLICATE_ALTERNATIVES",
+              "detail": "alternatives (c) and (d) have identical text"
+            },
+            {
+              "type": "DUPLICATE_ALTERNATIVES",
+              "detail": "alternatives (c) and (e) have identical text"
+            }
+          ]
+        }
+      ]
     },
     "math_enem_2020.json": {
       "datasetIssues": [],
       "questionIssues": [
         {
-          "number": 145,
+          "number": 143,
           "issues": [
             {
-              "type": "MARKER_WITHOUT_IMAGE",
-              "detail": "Text has [image marker] but images array is empty"
+              "type": "CTX_STEM_SHARED_PHRASE",
+              "detail": "8-word phrase shared with context \"enem_2020_math_q143_ctx1\": \"que o tempo médio de estudo de pessoas\""
+            }
+          ]
+        },
+        {
+          "number": 157,
+          "issues": [
+            {
+              "type": "ANSWER_MISMATCH_VS_OFFICIAL",
+              "detail": "JSON=annulled, INEP=a"
+            }
+          ]
+        },
+        {
+          "number": 176,
+          "issues": [
+            {
+              "type": "DUPLICATE_ALTERNATIVES",
+              "detail": "alternatives (a) and (b) have identical text"
+            },
+            {
+              "type": "DUPLICATE_ALTERNATIVES",
+              "detail": "alternatives (a) and (c) have identical text"
+            },
+            {
+              "type": "DUPLICATE_ALTERNATIVES",
+              "detail": "alternatives (a) and (d) have identical text"
+            },
+            {
+              "type": "DUPLICATE_ALTERNATIVES",
+              "detail": "alternatives (a) and (e) have identical text"
             }
           ]
         }
@@ -359,46 +620,20 @@
       "datasetIssues": [],
       "questionIssues": [
         {
-          "number": 136,
+          "number": 148,
           "issues": [
             {
-              "type": "MARKER_WITHOUT_IMAGE",
-              "detail": "Text has [image marker] but images array is empty"
+              "type": "CTX_STEM_SHARED_PHRASE",
+              "detail": "8-word phrase shared with context \"enem_2021_math_q148_ctx1\": \"de terremotos de magnitude maior ou igual a\""
             }
           ]
         },
         {
-          "number": 153,
+          "number": 179,
           "issues": [
             {
-              "type": "MISSING_IMAGE_FILE",
-              "detail": "figuras/q153_2021_fig1.png not found on disk"
-            }
-          ]
-        },
-        {
-          "number": 161,
-          "issues": [
-            {
-              "type": "MISSING_IMAGE_FILE",
-              "detail": "figuras/q161_2021_fig1.png not found on disk"
-            },
-            {
-              "type": "MISSING_IMAGE_FILE",
-              "detail": "figuras/q161_2021_fig2.png not found on disk"
-            },
-            {
-              "type": "MISSING_IMAGE_FILE",
-              "detail": "figuras/q161_2021_fig3.png not found on disk"
-            }
-          ]
-        },
-        {
-          "number": 162,
-          "issues": [
-            {
-              "type": "MARKER_WITHOUT_IMAGE",
-              "detail": "Text has [image marker] but images array is empty"
+              "type": "ANSWER_MISMATCH_VS_OFFICIAL",
+              "detail": "JSON=b, INEP=a"
             }
           ]
         }
@@ -408,20 +643,32 @@
       "datasetIssues": [],
       "questionIssues": [
         {
-          "number": 141,
+          "number": 143,
           "issues": [
             {
-              "type": "MARKER_WITHOUT_IMAGE",
-              "detail": "Text has [image marker] but images array is empty"
+              "type": "DUPLICATE_ALTERNATIVES",
+              "detail": "alternatives (a) and (b) have identical text"
+            },
+            {
+              "type": "DUPLICATE_ALTERNATIVES",
+              "detail": "alternatives (a) and (c) have identical text"
+            },
+            {
+              "type": "DUPLICATE_ALTERNATIVES",
+              "detail": "alternatives (a) and (d) have identical text"
+            },
+            {
+              "type": "DUPLICATE_ALTERNATIVES",
+              "detail": "alternatives (a) and (e) have identical text"
             }
           ]
         },
         {
-          "number": 143,
+          "number": 154,
           "issues": [
             {
-              "type": "MARKER_WITHOUT_IMAGE",
-              "detail": "Text has [image marker] but images array is empty"
+              "type": "CTX_STEM_SHARED_PHRASE",
+              "detail": "8-word phrase shared with context \"enem_2022_math_q154_ctx1\": \"o número de vagas criadas em janeiro de\""
             }
           ]
         },
@@ -429,8 +676,20 @@
           "number": 156,
           "issues": [
             {
-              "type": "MARKER_WITHOUT_IMAGE",
-              "detail": "Text has [image marker] but images array is empty"
+              "type": "DUPLICATE_ALTERNATIVES",
+              "detail": "alternatives (a) and (b) have identical text"
+            },
+            {
+              "type": "DUPLICATE_ALTERNATIVES",
+              "detail": "alternatives (a) and (c) have identical text"
+            },
+            {
+              "type": "DUPLICATE_ALTERNATIVES",
+              "detail": "alternatives (a) and (d) have identical text"
+            },
+            {
+              "type": "DUPLICATE_ALTERNATIVES",
+              "detail": "alternatives (a) and (e) have identical text"
             }
           ]
         },
@@ -438,24 +697,20 @@
           "number": 160,
           "issues": [
             {
-              "type": "EMPTY_ALTERNATIVE",
-              "detail": "Alternative (a) is empty"
+              "type": "DUPLICATE_ALTERNATIVES",
+              "detail": "alternatives (a) and (b) have identical text"
             },
             {
-              "type": "EMPTY_ALTERNATIVE",
-              "detail": "Alternative (b) is empty"
+              "type": "DUPLICATE_ALTERNATIVES",
+              "detail": "alternatives (a) and (c) have identical text"
             },
             {
-              "type": "EMPTY_ALTERNATIVE",
-              "detail": "Alternative (c) is empty"
+              "type": "DUPLICATE_ALTERNATIVES",
+              "detail": "alternatives (a) and (d) have identical text"
             },
             {
-              "type": "EMPTY_ALTERNATIVE",
-              "detail": "Alternative (d) is empty"
-            },
-            {
-              "type": "EMPTY_ALTERNATIVE",
-              "detail": "Alternative (e) is empty"
+              "type": "DUPLICATE_ALTERNATIVES",
+              "detail": "alternatives (a) and (e) have identical text"
             }
           ]
         },
@@ -463,24 +718,20 @@
           "number": 180,
           "issues": [
             {
-              "type": "EMPTY_ALTERNATIVE",
-              "detail": "Alternative (a) is empty"
+              "type": "DUPLICATE_ALTERNATIVES",
+              "detail": "alternatives (a) and (b) have identical text"
             },
             {
-              "type": "EMPTY_ALTERNATIVE",
-              "detail": "Alternative (b) is empty"
+              "type": "DUPLICATE_ALTERNATIVES",
+              "detail": "alternatives (a) and (c) have identical text"
             },
             {
-              "type": "EMPTY_ALTERNATIVE",
-              "detail": "Alternative (c) is empty"
+              "type": "DUPLICATE_ALTERNATIVES",
+              "detail": "alternatives (a) and (d) have identical text"
             },
             {
-              "type": "EMPTY_ALTERNATIVE",
-              "detail": "Alternative (d) is empty"
-            },
-            {
-              "type": "EMPTY_ALTERNATIVE",
-              "detail": "Alternative (e) is empty"
+              "type": "DUPLICATE_ALTERNATIVES",
+              "detail": "alternatives (a) and (e) have identical text"
             }
           ]
         }
@@ -490,11 +741,53 @@
       "datasetIssues": [],
       "questionIssues": [
         {
-          "number": 172,
+          "number": 144,
           "issues": [
             {
-              "type": "MARKER_WITHOUT_IMAGE",
-              "detail": "Text has [image marker] but images array is empty"
+              "type": "REFERENCE_PATTERN_IN_STEM",
+              "detail": "question.text contains \"Dispon[íi]vel em\\s*:\" — citation may have leaked in"
+            }
+          ]
+        },
+        {
+          "number": 177,
+          "issues": [
+            {
+              "type": "DUPLICATE_ALTERNATIVES",
+              "detail": "alternatives (a) and (b) have identical text"
+            },
+            {
+              "type": "DUPLICATE_ALTERNATIVES",
+              "detail": "alternatives (a) and (c) have identical text"
+            },
+            {
+              "type": "DUPLICATE_ALTERNATIVES",
+              "detail": "alternatives (a) and (d) have identical text"
+            },
+            {
+              "type": "DUPLICATE_ALTERNATIVES",
+              "detail": "alternatives (a) and (e) have identical text"
+            }
+          ]
+        },
+        {
+          "number": 178,
+          "issues": [
+            {
+              "type": "DUPLICATE_ALTERNATIVES",
+              "detail": "alternatives (a) and (b) have identical text"
+            },
+            {
+              "type": "DUPLICATE_ALTERNATIVES",
+              "detail": "alternatives (a) and (c) have identical text"
+            },
+            {
+              "type": "DUPLICATE_ALTERNATIVES",
+              "detail": "alternatives (a) and (d) have identical text"
+            },
+            {
+              "type": "DUPLICATE_ALTERNATIVES",
+              "detail": "alternatives (a) and (e) have identical text"
             }
           ]
         }
@@ -504,47 +797,11 @@
       "datasetIssues": [],
       "questionIssues": [
         {
-          "number": 149,
+          "number": 166,
           "issues": [
             {
-              "type": "MARKER_WITHOUT_IMAGE",
-              "detail": "Text has [image marker] but images array is empty"
-            }
-          ]
-        },
-        {
-          "number": 160,
-          "issues": [
-            {
-              "type": "MARKER_WITHOUT_IMAGE",
-              "detail": "Text has [image marker] but images array is empty"
-            }
-          ]
-        },
-        {
-          "number": 162,
-          "issues": [
-            {
-              "type": "MARKER_WITHOUT_IMAGE",
-              "detail": "Text has [image marker] but images array is empty"
-            }
-          ]
-        },
-        {
-          "number": 169,
-          "issues": [
-            {
-              "type": "MARKER_WITHOUT_IMAGE",
-              "detail": "Text has [image marker] but images array is empty"
-            }
-          ]
-        },
-        {
-          "number": 173,
-          "issues": [
-            {
-              "type": "MARKER_WITHOUT_IMAGE",
-              "detail": "Text has [image marker] but images array is empty"
+              "type": "ANSWER_MISMATCH_VS_OFFICIAL",
+              "detail": "JSON=c, INEP=e"
             }
           ]
         }
@@ -569,6 +826,28 @@
               "detail": "Text has [image marker] but images array is empty"
             }
           ]
+        },
+        {
+          "number": 113,
+          "issues": [
+            {
+              "type": "DUPLICATE_ALTERNATIVES",
+              "detail": "alternatives (b) and (d) have identical text"
+            },
+            {
+              "type": "DUPLICATE_ALTERNATIVES",
+              "detail": "alternatives (c) and (e) have identical text"
+            }
+          ]
+        },
+        {
+          "number": 118,
+          "issues": [
+            {
+              "type": "MARKER_WITHOUT_IMAGE",
+              "detail": "Text has [image marker] but images array is empty"
+            }
+          ]
         }
       ]
     },
@@ -576,20 +855,32 @@
       "datasetIssues": [],
       "questionIssues": [
         {
-          "number": 99,
+          "number": 113,
           "issues": [
             {
-              "type": "MARKER_WITHOUT_IMAGE",
-              "detail": "Text has [image marker] but images array is empty"
+              "type": "DUPLICATE_ALTERNATIVES",
+              "detail": "alternatives (a) and (b) have identical text"
+            },
+            {
+              "type": "DUPLICATE_ALTERNATIVES",
+              "detail": "alternatives (a) and (c) have identical text"
+            },
+            {
+              "type": "DUPLICATE_ALTERNATIVES",
+              "detail": "alternatives (a) and (d) have identical text"
+            },
+            {
+              "type": "DUPLICATE_ALTERNATIVES",
+              "detail": "alternatives (a) and (e) have identical text"
             }
           ]
         },
         {
-          "number": 134,
+          "number": 135,
           "issues": [
             {
-              "type": "MARKER_WITHOUT_IMAGE",
-              "detail": "Text has [image marker] but images array is empty"
+              "type": "ANSWER_MISMATCH_VS_OFFICIAL",
+              "detail": "JSON=annulled, INEP=a"
             }
           ]
         }
@@ -599,36 +890,53 @@
       "datasetIssues": [],
       "questionIssues": [
         {
-          "number": 113,
+          "number": 105,
           "issues": [
             {
-              "type": "EMPTY_ALTERNATIVE",
-              "detail": "Alternative (a) is empty"
+              "type": "DUPLICATE_ALTERNATIVES",
+              "detail": "alternatives (a) and (b) have identical text"
             },
             {
-              "type": "EMPTY_ALTERNATIVE",
-              "detail": "Alternative (b) is empty"
+              "type": "DUPLICATE_ALTERNATIVES",
+              "detail": "alternatives (a) and (c) have identical text"
             },
             {
-              "type": "EMPTY_ALTERNATIVE",
-              "detail": "Alternative (c) is empty"
+              "type": "DUPLICATE_ALTERNATIVES",
+              "detail": "alternatives (a) and (d) have identical text"
             },
             {
-              "type": "EMPTY_ALTERNATIVE",
-              "detail": "Alternative (d) is empty"
-            },
-            {
-              "type": "EMPTY_ALTERNATIVE",
-              "detail": "Alternative (e) is empty"
+              "type": "DUPLICATE_ALTERNATIVES",
+              "detail": "alternatives (a) and (e) have identical text"
             }
           ]
         },
         {
-          "number": 126,
+          "number": 125,
           "issues": [
             {
-              "type": "MISSING_IMAGE_FILE",
-              "detail": "figuras/q126_2021_fig2.png not found on disk"
+              "type": "REFERENCE_PATTERN_IN_STEM",
+              "detail": "question.text contains \"Dispon[íi]vel em\\s*:\" — citation may have leaked in"
+            }
+          ]
+        },
+        {
+          "number": 135,
+          "issues": [
+            {
+              "type": "DUPLICATE_ALTERNATIVES",
+              "detail": "alternatives (a) and (b) have identical text"
+            },
+            {
+              "type": "DUPLICATE_ALTERNATIVES",
+              "detail": "alternatives (a) and (c) have identical text"
+            },
+            {
+              "type": "DUPLICATE_ALTERNATIVES",
+              "detail": "alternatives (a) and (d) have identical text"
+            },
+            {
+              "type": "DUPLICATE_ALTERNATIVES",
+              "detail": "alternatives (a) and (e) have identical text"
             }
           ]
         }
@@ -641,12 +949,83 @@
           "number": 95,
           "issues": [
             {
-              "type": "EMPTY_ALTERNATIVE",
-              "detail": "Alternative (d) is empty"
+              "type": "DUPLICATE_ALTERNATIVES",
+              "detail": "alternatives (a) and (b) have identical text"
             },
             {
-              "type": "EMPTY_ALTERNATIVE",
-              "detail": "Alternative (e) is empty"
+              "type": "DUPLICATE_ALTERNATIVES",
+              "detail": "alternatives (a) and (c) have identical text"
+            },
+            {
+              "type": "DUPLICATE_ALTERNATIVES",
+              "detail": "alternatives (a) and (d) have identical text"
+            },
+            {
+              "type": "DUPLICATE_ALTERNATIVES",
+              "detail": "alternatives (a) and (e) have identical text"
+            }
+          ]
+        },
+        {
+          "number": 96,
+          "issues": [
+            {
+              "type": "DUPLICATE_ALTERNATIVES",
+              "detail": "alternatives (a) and (b) have identical text"
+            },
+            {
+              "type": "DUPLICATE_ALTERNATIVES",
+              "detail": "alternatives (a) and (c) have identical text"
+            },
+            {
+              "type": "DUPLICATE_ALTERNATIVES",
+              "detail": "alternatives (a) and (d) have identical text"
+            },
+            {
+              "type": "DUPLICATE_ALTERNATIVES",
+              "detail": "alternatives (a) and (e) have identical text"
+            }
+          ]
+        },
+        {
+          "number": 103,
+          "issues": [
+            {
+              "type": "DUPLICATE_ALTERNATIVES",
+              "detail": "alternatives (a) and (b) have identical text"
+            },
+            {
+              "type": "DUPLICATE_ALTERNATIVES",
+              "detail": "alternatives (a) and (c) have identical text"
+            },
+            {
+              "type": "DUPLICATE_ALTERNATIVES",
+              "detail": "alternatives (a) and (d) have identical text"
+            },
+            {
+              "type": "DUPLICATE_ALTERNATIVES",
+              "detail": "alternatives (a) and (e) have identical text"
+            }
+          ]
+        },
+        {
+          "number": 106,
+          "issues": [
+            {
+              "type": "DUPLICATE_ALTERNATIVES",
+              "detail": "alternatives (a) and (b) have identical text"
+            },
+            {
+              "type": "DUPLICATE_ALTERNATIVES",
+              "detail": "alternatives (a) and (c) have identical text"
+            },
+            {
+              "type": "DUPLICATE_ALTERNATIVES",
+              "detail": "alternatives (a) and (d) have identical text"
+            },
+            {
+              "type": "DUPLICATE_ALTERNATIVES",
+              "detail": "alternatives (a) and (e) have identical text"
             }
           ]
         },
@@ -658,60 +1037,6 @@
               "detail": "Text is only 35 chars: \"Os padrões descritos evidenciam que\""
             }
           ]
-        },
-        {
-          "number": 125,
-          "issues": [
-            {
-              "type": "MISSING_IMAGE_FILE",
-              "detail": "figuras/q125_2022_fig1.png not found on disk"
-            }
-          ]
-        },
-        {
-          "number": 126,
-          "issues": [
-            {
-              "type": "MISSING_IMAGE_FILE",
-              "detail": "figuras/q126_2022_fig1.png not found on disk"
-            }
-          ]
-        },
-        {
-          "number": 127,
-          "issues": [
-            {
-              "type": "MISSING_IMAGE_FILE",
-              "detail": "figuras/q127_2022_fig1.png not found on disk"
-            }
-          ]
-        },
-        {
-          "number": 129,
-          "issues": [
-            {
-              "type": "MISSING_IMAGE_FILE",
-              "detail": "figuras/q129_2022_fig1.png not found on disk"
-            }
-          ]
-        },
-        {
-          "number": 133,
-          "issues": [
-            {
-              "type": "MISSING_IMAGE_FILE",
-              "detail": "figuras/q133_2022_fig1.png not found on disk"
-            }
-          ]
-        },
-        {
-          "number": 135,
-          "issues": [
-            {
-              "type": "MISSING_IMAGE_FILE",
-              "detail": "figuras/q135_2022_fig1.png not found on disk"
-            }
-          ]
         }
       ]
     },
@@ -721,108 +1046,266 @@
     },
     "nature_enem_2024.json": {
       "datasetIssues": [],
-      "questionIssues": []
+      "questionIssues": [
+        {
+          "number": 125,
+          "issues": [
+            {
+              "type": "ANSWER_MISMATCH_VS_OFFICIAL",
+              "detail": "JSON=a, INEP=c"
+            }
+          ]
+        }
+      ]
     },
     "nature_enem_2025.json": {
       "datasetIssues": [],
-      "questionIssues": []
+      "questionIssues": [
+        {
+          "number": 95,
+          "issues": [
+            {
+              "type": "ANSWER_MISMATCH_VS_OFFICIAL",
+              "detail": "JSON=b, INEP=c"
+            }
+          ]
+        },
+        {
+          "number": 114,
+          "issues": [
+            {
+              "type": "REFERENCE_PATTERN_IN_STEM",
+              "detail": "question.text contains \"Dispon[íi]vel em\\s*:\" — citation may have leaked in"
+            }
+          ]
+        }
+      ]
     }
   },
   "orphanedImages": [
     "figuras/.DS_Store",
     "figuras/logos",
     "figuras/q001_2020_fig1.png",
+    "figuras/q001_2022_fig1_es.png",
+    "figuras/q001_2023_fig1.png",
+    "figuras/q001_2023_fig2.png",
     "figuras/q002_2018_fig1.png",
     "figuras/q002_2020_fig1.png",
-    "figuras/q002_2021_fig1.png",
+    "figuras/q003_2022_fig1_en.png",
     "figuras/q004_2021_fig1.png",
     "figuras/q005_2019_fig1.png",
+    "figuras/q005_2022_fig1_es.png",
+    "figuras/q005_2023_fig1.png",
+    "figuras/q006_2019_fig1.png",
     "figuras/q007_2018_fig1.png",
-    "figuras/q009_2021_fig1.png",
+    "figuras/q007_2020_fig1.png",
+    "figuras/q007_2022_fig1.png",
+    "figuras/q007_2023_fig1.png",
+    "figuras/q009_2022_fig1.png",
+    "figuras/q010_2019_fig1.png",
     "figuras/q011_2018_fig1.png",
     "figuras/q012_2019_fig1.png",
     "figuras/q012_2021_fig1.png",
     "figuras/q013_2018_fig1.png",
+    "figuras/q013_2021_fig1.png",
+    "figuras/q014_2020_fig1.png",
+    "figuras/q014_2021_fig1.png",
+    "figuras/q015_2020_fig1.png",
+    "figuras/q015_2022_fig1.png",
     "figuras/q017_2019_fig1.png",
+    "figuras/q018_2021_fig1.png",
     "figuras/q019_2018_fig1.png",
+    "figuras/q020_2021_fig1.png",
     "figuras/q022_2020_fig1.png",
+    "figuras/q022_2023_fig1.png",
+    "figuras/q022_2025_fig1.png",
     "figuras/q023_2019_fig1.png",
+    "figuras/q023_2025_fig1.png",
+    "figuras/q024_2023_fig1.png",
+    "figuras/q025_2020_fig1.png",
+    "figuras/q026_2019_fig1.png",
+    "figuras/q027_2021_fig1.png",
+    "figuras/q027_2022_fig1.png",
     "figuras/q028_2018_fig1.png",
-    "figuras/q028_2021_fig1.png",
     "figuras/q029_2018_fig1.png",
+    "figuras/q031_2019_fig1.png",
+    "figuras/q032_2022_fig1.png",
+    "figuras/q033_2020_fig1.png",
+    "figuras/q033_2021_fig1.png",
+    "figuras/q033_2023_fig1.png",
     "figuras/q034_2018_fig1.png",
     "figuras/q034_2018_fig2.png",
+    "figuras/q034_2021_fig1.png",
+    "figuras/q034_2023_fig1.png",
+    "figuras/q034_2023_fig2.png",
+    "figuras/q034_2023_fig3.png",
     "figuras/q036_2019_fig1.png",
     "figuras/q036_2019_fig2.png",
+    "figuras/q036_2021_fig1.png",
+    "figuras/q038_2022_fig1.png",
     "figuras/q039_2018_fig1.png",
+    "figuras/q039_2022_fig1.png",
     "figuras/q041_2018_fig1.png",
     "figuras/q041_2025_fig1.png",
+    "figuras/q042_2021_fig1.png",
+    "figuras/q043_2019_fig1.png",
+    "figuras/q043_2021_fig1.png",
     "figuras/q044_2020_fig1.png",
+    "figuras/q044_2022_fig1.png",
     "figuras/q045_2018_fig1.png",
+    "figuras/q045_2023_fig1.png",
     "figuras/q045_2025_fig1.png",
+    "figuras/q046_2023_fig1.png",
+    "figuras/q046_2023_fig2.png",
+    "figuras/q047_2019_fig1.png",
+    "figuras/q048_2023_fig1.png",
+    "figuras/q049_2022_fig1.png",
     "figuras/q049_2025_fig1.png",
     "figuras/q050_2018_fig1.png",
     "figuras/q050_2018_fig2.png",
+    "figuras/q051_2020_fig1.png",
     "figuras/q056_2022_fig1.png",
+    "figuras/q056_2023_fig1.png",
+    "figuras/q056_2023_fig2.png",
+    "figuras/q057_2019_fig1.png",
+    "figuras/q059_2019_fig1.png",
+    "figuras/q062_2023_fig1.png",
+    "figuras/q065_2020_fig1.png",
+    "figuras/q065_2022_fig1.png",
+    "figuras/q065_2023_fig1.png",
+    "figuras/q065_2023_fig2.png",
     "figuras/q067_2018_fig1.png",
     "figuras/q068_2022_fig1.png",
+    "figuras/q070_2022_fig1.png",
+    "figuras/q070_2023_fig1.png",
+    "figuras/q072_2023_fig1.png",
+    "figuras/q072_2023_fig2.png",
+    "figuras/q074_2022_fig1.png",
     "figuras/q076_2022_fig1.png",
+    "figuras/q076_2023_fig1.png",
+    "figuras/q077_2019_fig1.png",
     "figuras/q077_2025_fig1.png",
     "figuras/q078_2022_fig1.png",
     "figuras/q082_2018_fig1.png",
     "figuras/q082_2022_fig1.png",
+    "figuras/q085_2019_fig1.png",
+    "figuras/q085_2021_fig1.png",
     "figuras/q087_2018_fig1.png",
     "figuras/q088_2018_fig1.png",
     "figuras/q088_2020_fig1.png",
+    "figuras/q089_2021_fig1.png",
+    "figuras/q089_2023_fig1.png",
+    "figuras/q089_2023_fig2.png",
+    "figuras/q090_2021_fig1.png",
+    "figuras/q091_2020_fig1.png",
+    "figuras/q091_2022_fig1.png",
     "figuras/q091_2024_fig3.png",
     "figuras/q092_2024_fig3.png",
+    "figuras/q094_2022_fig1.png",
     "figuras/q094_2024_fig1.png",
+    "figuras/q095_2022_fig1.png",
+    "figuras/q098_2019_fig1.png",
     "figuras/q098_2024_fig1.png",
     "figuras/q099_2018_fig1.png",
     "figuras/q100_2024_fig1.png",
     "figuras/q101_2024_fig1.png",
+    "figuras/q103_2019_fig1.png",
     "figuras/q103_2024_fig1.png",
     "figuras/q104_2024_fig2.png",
+    "figuras/q106_2019_fig1.png",
+    "figuras/q106_2021_fig1.png",
     "figuras/q106_2025_fig2.png",
+    "figuras/q109_2019_fig1.png",
     "figuras/q109_2025_fig2.png",
+    "figuras/q110_2023_fig1.png",
     "figuras/q112_2024_fig1.png",
     "figuras/q113_2024_fig2.png",
     "figuras/q113_2024_fig3.png",
     "figuras/q115_2025_fig2.png",
+    "figuras/q118_2019_fig1.png",
     "figuras/q118_2024_fig2.png",
+    "figuras/q119_2020_fig1.png",
+    "figuras/q120_2021_fig1.png",
+    "figuras/q121_2019_fig1.png",
+    "figuras/q122_2019_fig1.png",
+    "figuras/q122_2021_fig1.png",
+    "figuras/q124_2019_fig1.png",
+    "figuras/q125_2019_fig1.png",
+    "figuras/q125_2022_fig1.png",
     "figuras/q125_2024_fig5.png",
     "figuras/q126_2018_fig1.png",
+    "figuras/q126_2019_fig1.png",
+    "figuras/q127_2023_fig1.png",
+    "figuras/q129_2022_fig1.png",
     "figuras/q130_2024_fig3.png",
+    "figuras/q131_2019_fig1.png",
+    "figuras/q131_2022_fig1.png",
+    "figuras/q133_2023_fig1.png",
+    "figuras/q133_2023_fig2.png",
+    "figuras/q134_2019_fig1.png",
+    "figuras/q134_2022_fig1.png",
+    "figuras/q134_2022_fig2.png",
     "figuras/q134_2024_fig2.png",
+    "figuras/q135_2022_fig1.png",
+    "figuras/q135_2023_fig1.png",
+    "figuras/q135_2023_fig2.png",
     "figuras/q136_2020_fig1.png",
+    "figuras/q137_2021_fig1.png",
+    "figuras/q138_2021_fig1.png",
+    "figuras/q138_2024_fig1.png",
     "figuras/q138_2025_fig1.png",
     "figuras/q138_2025_fig2.png",
     "figuras/q138_2025_fig3.png",
     "figuras/q138_2025_fig4.png",
     "figuras/q138_2025_fig5.png",
     "figuras/q138_2025_fig6.png",
+    "figuras/q139_2024_fig1.png",
     "figuras/q139_2025_fig1.png",
+    "figuras/q142_2024_fig1.png",
+    "figuras/q143_2019_fig1.png",
     "figuras/q143_2025_fig1.png",
+    "figuras/q145_2019_fig1.png",
+    "figuras/q146_2019_fig1.png",
+    "figuras/q146_2023_fig1.png",
+    "figuras/q146_2024_fig1.png",
+    "figuras/q147_2019_fig1.png",
+    "figuras/q147_2021_fig1.png",
+    "figuras/q148_2020_fig1.png",
     "figuras/q148_2025_fig1.png",
     "figuras/q149_2024_fig1.png",
     "figuras/q149_2025_fig1.png",
+    "figuras/q150_2024_fig2.png",
+    "figuras/q152_2021_fig1.png",
+    "figuras/q152_2024_fig1.png",
+    "figuras/q152_2024_fig2.png",
     "figuras/q153_2025_fig1.png",
+    "figuras/q157_2019_fig1.png",
     "figuras/q160_2024_fig1.png",
     "figuras/q160_2025_fig1.png",
     "figuras/q161_2025_fig1.png",
     "figuras/q162_2024_fig1.png",
     "figuras/q163_2025_fig1.png",
+    "figuras/q164_2019_fig1.png",
+    "figuras/q164_2020_fig1.png",
     "figuras/q164_2025_fig1.png",
     "figuras/q165_2024_fig1.png",
+    "figuras/q166_2019_fig1.png",
     "figuras/q166_2025_fig1.png",
     "figuras/q167_2025_fig1.png",
+    "figuras/q169_2019_fig1.png",
     "figuras/q169_2025_fig1.png",
     "figuras/q170_2025_fig1.png",
+    "figuras/q171_2019_fig1.png",
+    "figuras/q172_2019_fig1.png",
     "figuras/q173_2025_fig1.png",
+    "figuras/q174_2024_fig1.png",
+    "figuras/q175_2019_fig1.png",
+    "figuras/q177_2019_fig1.png",
     "figuras/q177_2025_fig1.png",
+    "figuras/q179_2019_fig1.png",
+    "figuras/q179_2019_fig2.png",
+    "figuras/q179_2022_fig1.png",
     "figuras/q180_2025_fig1.png",
-    "figuras/q22_bailarino.png",
-    "figuras/q23_varejao_azulejaria.png",
     "figuras/redacao_texto2_60mais.png",
     "figuras/redacao_texto4_idosos.png"
   ]
