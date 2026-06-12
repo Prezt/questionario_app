@@ -1,33 +1,14 @@
 {
   "summary": {
     "totalQuestions": 1480,
-    "totalIssues": 130,
-    "filesWithIssues": 27,
-    "orphanedImages": 225
+    "totalIssues": 57,
+    "filesWithIssues": 22,
+    "orphanedImages": 221
   },
   "byFile": {
     "humanas_enem_2018.json": {
       "datasetIssues": [],
-      "questionIssues": [
-        {
-          "number": 63,
-          "issues": [
-            {
-              "type": "REFERENCE_PATTERN_IN_STEM",
-              "detail": "question.text contains \"Dispon[íi]vel em\\s*:\" — citation may have leaked in"
-            }
-          ]
-        },
-        {
-          "number": 74,
-          "issues": [
-            {
-              "type": "REFERENCE_PATTERN_IN_STEM",
-              "detail": "question.text contains \"Dispon[íi]vel em\\s*:\" — citation may have leaked in"
-            }
-          ]
-        }
-      ]
+      "questionIssues": []
     },
     "humanas_enem_2019.json": {
       "datasetIssues": [],
@@ -98,44 +79,7 @@
     },
     "humanas_enem_2022.json": {
       "datasetIssues": [],
-      "questionIssues": [
-        {
-          "number": 49,
-          "issues": [
-            {
-              "type": "MISSING_IMAGE_FILE",
-              "detail": "[object Object] not found on disk"
-            }
-          ]
-        },
-        {
-          "number": 65,
-          "issues": [
-            {
-              "type": "MISSING_IMAGE_FILE",
-              "detail": "[object Object] not found on disk"
-            }
-          ]
-        },
-        {
-          "number": 70,
-          "issues": [
-            {
-              "type": "MISSING_IMAGE_FILE",
-              "detail": "[object Object] not found on disk"
-            }
-          ]
-        },
-        {
-          "number": 74,
-          "issues": [
-            {
-              "type": "MISSING_IMAGE_FILE",
-              "detail": "[object Object] not found on disk"
-            }
-          ]
-        }
-      ]
+      "questionIssues": []
     },
     "humanas_enem_2023.json": {
       "datasetIssues": [],
@@ -198,38 +142,11 @@
       "datasetIssues": [],
       "questionIssues": [
         {
-          "number": 47,
-          "issues": [
-            {
-              "type": "REFERENCE_PATTERN_IN_STEM",
-              "detail": "question.text contains \"Dispon[íi]vel em\\s*:\" — citation may have leaked in"
-            }
-          ]
-        },
-        {
           "number": 56,
           "issues": [
             {
               "type": "ANSWER_MISMATCH_VS_OFFICIAL",
               "detail": "JSON=a, INEP=c"
-            }
-          ]
-        },
-        {
-          "number": 63,
-          "issues": [
-            {
-              "type": "REFERENCE_PATTERN_IN_STEM",
-              "detail": "question.text contains \"Dispon[íi]vel em\\s*:\" — citation may have leaked in"
-            }
-          ]
-        },
-        {
-          "number": 68,
-          "issues": [
-            {
-              "type": "REFERENCE_PATTERN_IN_STEM",
-              "detail": "question.text contains \"Dispon[íi]vel em\\s*:\" — citation may have leaked in"
             }
           ]
         }
@@ -271,15 +188,6 @@
             {
               "type": "CTX_STEM_SHARED_PHRASE",
               "detail": "8-word phrase shared with context \"enem_2018_linguagens_q6_ctx1\": \"direitos humanos devem ser o alicerce para todo\""
-            }
-          ]
-        },
-        {
-          "number": 32,
-          "issues": [
-            {
-              "type": "REFERENCE_PATTERN_IN_STEM",
-              "detail": "question.text contains \"Dispon[íi]vel em\\s*:\" — citation may have leaked in"
             }
           ]
         }
@@ -471,7 +379,7 @@
           "issues": [
             {
               "type": "REFERENCE_PATTERN_IN_STEM",
-              "detail": "question.text contains \"Dispon[íi]vel em\\s*:\" — citation may have leaked in"
+              "detail": "question.text contains \"Dispon[íi]vel em\\s*:\" outside any [Figura: …] marker"
             }
           ]
         },
@@ -480,7 +388,7 @@
           "issues": [
             {
               "type": "REFERENCE_PATTERN_IN_STEM",
-              "detail": "question.text contains \"Dispon[íi]vel em\\s*:\" — citation may have leaked in"
+              "detail": "question.text contains \"Dispon[íi]vel em\\s*:\" outside any [Figura: …] marker"
             }
           ]
         },
@@ -489,7 +397,7 @@
           "issues": [
             {
               "type": "REFERENCE_PATTERN_IN_STEM",
-              "detail": "question.text contains \"Dispon[íi]vel em\\s*:\" — citation may have leaked in"
+              "detail": "question.text contains \"Dispon[íi]vel em\\s*:\" outside any [Figura: …] marker"
             }
           ]
         }
@@ -497,35 +405,7 @@
     },
     "linguagens_enem_2025.json": {
       "datasetIssues": [],
-      "questionIssues": [
-        {
-          "number": 4,
-          "issues": [
-            {
-              "type": "REFERENCE_PATTERN_IN_STEM",
-              "detail": "question.text contains \"Dispon[íi]vel em\\s*:\" — citation may have leaked in"
-            }
-          ]
-        },
-        {
-          "number": 24,
-          "issues": [
-            {
-              "type": "REFERENCE_PATTERN_IN_STEM",
-              "detail": "question.text contains \"Dispon[íi]vel em\\s*:\" — citation may have leaked in"
-            }
-          ]
-        },
-        {
-          "number": 34,
-          "issues": [
-            {
-              "type": "REFERENCE_PATTERN_IN_STEM",
-              "detail": "question.text contains \"Acesso em\\s*:\" — citation may have leaked in"
-            }
-          ]
-        }
-      ]
+      "questionIssues": []
     },
     "math_enem_2018.json": {
       "datasetIssues": [],
@@ -536,15 +416,6 @@
             {
               "type": "MARKER_WITHOUT_IMAGE",
               "detail": "Text has [image marker] but images array is empty"
-            }
-          ]
-        },
-        {
-          "number": 170,
-          "issues": [
-            {
-              "type": "REFERENCE_PATTERN_IN_STEM",
-              "detail": "question.text contains \"Dispon[íi]vel em\\s*:\" — citation may have leaked in"
             }
           ]
         }
@@ -592,27 +463,6 @@
               "detail": "JSON=annulled, INEP=a"
             }
           ]
-        },
-        {
-          "number": 176,
-          "issues": [
-            {
-              "type": "DUPLICATE_ALTERNATIVES",
-              "detail": "alternatives (a) and (b) have identical text"
-            },
-            {
-              "type": "DUPLICATE_ALTERNATIVES",
-              "detail": "alternatives (a) and (c) have identical text"
-            },
-            {
-              "type": "DUPLICATE_ALTERNATIVES",
-              "detail": "alternatives (a) and (d) have identical text"
-            },
-            {
-              "type": "DUPLICATE_ALTERNATIVES",
-              "detail": "alternatives (a) and (e) have identical text"
-            }
-          ]
         }
       ]
     },
@@ -643,27 +493,6 @@
       "datasetIssues": [],
       "questionIssues": [
         {
-          "number": 143,
-          "issues": [
-            {
-              "type": "DUPLICATE_ALTERNATIVES",
-              "detail": "alternatives (a) and (b) have identical text"
-            },
-            {
-              "type": "DUPLICATE_ALTERNATIVES",
-              "detail": "alternatives (a) and (c) have identical text"
-            },
-            {
-              "type": "DUPLICATE_ALTERNATIVES",
-              "detail": "alternatives (a) and (d) have identical text"
-            },
-            {
-              "type": "DUPLICATE_ALTERNATIVES",
-              "detail": "alternatives (a) and (e) have identical text"
-            }
-          ]
-        },
-        {
           "number": 154,
           "issues": [
             {
@@ -671,127 +500,12 @@
               "detail": "8-word phrase shared with context \"enem_2022_math_q154_ctx1\": \"o número de vagas criadas em janeiro de\""
             }
           ]
-        },
-        {
-          "number": 156,
-          "issues": [
-            {
-              "type": "DUPLICATE_ALTERNATIVES",
-              "detail": "alternatives (a) and (b) have identical text"
-            },
-            {
-              "type": "DUPLICATE_ALTERNATIVES",
-              "detail": "alternatives (a) and (c) have identical text"
-            },
-            {
-              "type": "DUPLICATE_ALTERNATIVES",
-              "detail": "alternatives (a) and (d) have identical text"
-            },
-            {
-              "type": "DUPLICATE_ALTERNATIVES",
-              "detail": "alternatives (a) and (e) have identical text"
-            }
-          ]
-        },
-        {
-          "number": 160,
-          "issues": [
-            {
-              "type": "DUPLICATE_ALTERNATIVES",
-              "detail": "alternatives (a) and (b) have identical text"
-            },
-            {
-              "type": "DUPLICATE_ALTERNATIVES",
-              "detail": "alternatives (a) and (c) have identical text"
-            },
-            {
-              "type": "DUPLICATE_ALTERNATIVES",
-              "detail": "alternatives (a) and (d) have identical text"
-            },
-            {
-              "type": "DUPLICATE_ALTERNATIVES",
-              "detail": "alternatives (a) and (e) have identical text"
-            }
-          ]
-        },
-        {
-          "number": 180,
-          "issues": [
-            {
-              "type": "DUPLICATE_ALTERNATIVES",
-              "detail": "alternatives (a) and (b) have identical text"
-            },
-            {
-              "type": "DUPLICATE_ALTERNATIVES",
-              "detail": "alternatives (a) and (c) have identical text"
-            },
-            {
-              "type": "DUPLICATE_ALTERNATIVES",
-              "detail": "alternatives (a) and (d) have identical text"
-            },
-            {
-              "type": "DUPLICATE_ALTERNATIVES",
-              "detail": "alternatives (a) and (e) have identical text"
-            }
-          ]
         }
       ]
     },
     "math_enem_2023.json": {
       "datasetIssues": [],
-      "questionIssues": [
-        {
-          "number": 144,
-          "issues": [
-            {
-              "type": "REFERENCE_PATTERN_IN_STEM",
-              "detail": "question.text contains \"Dispon[íi]vel em\\s*:\" — citation may have leaked in"
-            }
-          ]
-        },
-        {
-          "number": 177,
-          "issues": [
-            {
-              "type": "DUPLICATE_ALTERNATIVES",
-              "detail": "alternatives (a) and (b) have identical text"
-            },
-            {
-              "type": "DUPLICATE_ALTERNATIVES",
-              "detail": "alternatives (a) and (c) have identical text"
-            },
-            {
-              "type": "DUPLICATE_ALTERNATIVES",
-              "detail": "alternatives (a) and (d) have identical text"
-            },
-            {
-              "type": "DUPLICATE_ALTERNATIVES",
-              "detail": "alternatives (a) and (e) have identical text"
-            }
-          ]
-        },
-        {
-          "number": 178,
-          "issues": [
-            {
-              "type": "DUPLICATE_ALTERNATIVES",
-              "detail": "alternatives (a) and (b) have identical text"
-            },
-            {
-              "type": "DUPLICATE_ALTERNATIVES",
-              "detail": "alternatives (a) and (c) have identical text"
-            },
-            {
-              "type": "DUPLICATE_ALTERNATIVES",
-              "detail": "alternatives (a) and (d) have identical text"
-            },
-            {
-              "type": "DUPLICATE_ALTERNATIVES",
-              "detail": "alternatives (a) and (e) have identical text"
-            }
-          ]
-        }
-      ]
+      "questionIssues": []
     },
     "math_enem_2024.json": {
       "datasetIssues": [],
@@ -855,27 +569,6 @@
       "datasetIssues": [],
       "questionIssues": [
         {
-          "number": 113,
-          "issues": [
-            {
-              "type": "DUPLICATE_ALTERNATIVES",
-              "detail": "alternatives (a) and (b) have identical text"
-            },
-            {
-              "type": "DUPLICATE_ALTERNATIVES",
-              "detail": "alternatives (a) and (c) have identical text"
-            },
-            {
-              "type": "DUPLICATE_ALTERNATIVES",
-              "detail": "alternatives (a) and (d) have identical text"
-            },
-            {
-              "type": "DUPLICATE_ALTERNATIVES",
-              "detail": "alternatives (a) and (e) have identical text"
-            }
-          ]
-        },
-        {
           "number": 135,
           "issues": [
             {
@@ -888,147 +581,11 @@
     },
     "nature_enem_2021.json": {
       "datasetIssues": [],
-      "questionIssues": [
-        {
-          "number": 105,
-          "issues": [
-            {
-              "type": "DUPLICATE_ALTERNATIVES",
-              "detail": "alternatives (a) and (b) have identical text"
-            },
-            {
-              "type": "DUPLICATE_ALTERNATIVES",
-              "detail": "alternatives (a) and (c) have identical text"
-            },
-            {
-              "type": "DUPLICATE_ALTERNATIVES",
-              "detail": "alternatives (a) and (d) have identical text"
-            },
-            {
-              "type": "DUPLICATE_ALTERNATIVES",
-              "detail": "alternatives (a) and (e) have identical text"
-            }
-          ]
-        },
-        {
-          "number": 125,
-          "issues": [
-            {
-              "type": "REFERENCE_PATTERN_IN_STEM",
-              "detail": "question.text contains \"Dispon[íi]vel em\\s*:\" — citation may have leaked in"
-            }
-          ]
-        },
-        {
-          "number": 135,
-          "issues": [
-            {
-              "type": "DUPLICATE_ALTERNATIVES",
-              "detail": "alternatives (a) and (b) have identical text"
-            },
-            {
-              "type": "DUPLICATE_ALTERNATIVES",
-              "detail": "alternatives (a) and (c) have identical text"
-            },
-            {
-              "type": "DUPLICATE_ALTERNATIVES",
-              "detail": "alternatives (a) and (d) have identical text"
-            },
-            {
-              "type": "DUPLICATE_ALTERNATIVES",
-              "detail": "alternatives (a) and (e) have identical text"
-            }
-          ]
-        }
-      ]
+      "questionIssues": []
     },
     "nature_enem_2022.json": {
       "datasetIssues": [],
       "questionIssues": [
-        {
-          "number": 95,
-          "issues": [
-            {
-              "type": "DUPLICATE_ALTERNATIVES",
-              "detail": "alternatives (a) and (b) have identical text"
-            },
-            {
-              "type": "DUPLICATE_ALTERNATIVES",
-              "detail": "alternatives (a) and (c) have identical text"
-            },
-            {
-              "type": "DUPLICATE_ALTERNATIVES",
-              "detail": "alternatives (a) and (d) have identical text"
-            },
-            {
-              "type": "DUPLICATE_ALTERNATIVES",
-              "detail": "alternatives (a) and (e) have identical text"
-            }
-          ]
-        },
-        {
-          "number": 96,
-          "issues": [
-            {
-              "type": "DUPLICATE_ALTERNATIVES",
-              "detail": "alternatives (a) and (b) have identical text"
-            },
-            {
-              "type": "DUPLICATE_ALTERNATIVES",
-              "detail": "alternatives (a) and (c) have identical text"
-            },
-            {
-              "type": "DUPLICATE_ALTERNATIVES",
-              "detail": "alternatives (a) and (d) have identical text"
-            },
-            {
-              "type": "DUPLICATE_ALTERNATIVES",
-              "detail": "alternatives (a) and (e) have identical text"
-            }
-          ]
-        },
-        {
-          "number": 103,
-          "issues": [
-            {
-              "type": "DUPLICATE_ALTERNATIVES",
-              "detail": "alternatives (a) and (b) have identical text"
-            },
-            {
-              "type": "DUPLICATE_ALTERNATIVES",
-              "detail": "alternatives (a) and (c) have identical text"
-            },
-            {
-              "type": "DUPLICATE_ALTERNATIVES",
-              "detail": "alternatives (a) and (d) have identical text"
-            },
-            {
-              "type": "DUPLICATE_ALTERNATIVES",
-              "detail": "alternatives (a) and (e) have identical text"
-            }
-          ]
-        },
-        {
-          "number": 106,
-          "issues": [
-            {
-              "type": "DUPLICATE_ALTERNATIVES",
-              "detail": "alternatives (a) and (b) have identical text"
-            },
-            {
-              "type": "DUPLICATE_ALTERNATIVES",
-              "detail": "alternatives (a) and (c) have identical text"
-            },
-            {
-              "type": "DUPLICATE_ALTERNATIVES",
-              "detail": "alternatives (a) and (d) have identical text"
-            },
-            {
-              "type": "DUPLICATE_ALTERNATIVES",
-              "detail": "alternatives (a) and (e) have identical text"
-            }
-          ]
-        },
         {
           "number": 110,
           "issues": [
@@ -1067,15 +624,6 @@
             {
               "type": "ANSWER_MISMATCH_VS_OFFICIAL",
               "detail": "JSON=b, INEP=c"
-            }
-          ]
-        },
-        {
-          "number": 114,
-          "issues": [
-            {
-              "type": "REFERENCE_PATTERN_IN_STEM",
-              "detail": "question.text contains \"Dispon[íi]vel em\\s*:\" — citation may have leaked in"
             }
           ]
         }
@@ -1159,7 +707,6 @@
     "figuras/q046_2023_fig2.png",
     "figuras/q047_2019_fig1.png",
     "figuras/q048_2023_fig1.png",
-    "figuras/q049_2022_fig1.png",
     "figuras/q049_2025_fig1.png",
     "figuras/q050_2018_fig1.png",
     "figuras/q050_2018_fig2.png",
@@ -1171,16 +718,13 @@
     "figuras/q059_2019_fig1.png",
     "figuras/q062_2023_fig1.png",
     "figuras/q065_2020_fig1.png",
-    "figuras/q065_2022_fig1.png",
     "figuras/q065_2023_fig1.png",
     "figuras/q065_2023_fig2.png",
     "figuras/q067_2018_fig1.png",
     "figuras/q068_2022_fig1.png",
-    "figuras/q070_2022_fig1.png",
     "figuras/q070_2023_fig1.png",
     "figuras/q072_2023_fig1.png",
     "figuras/q072_2023_fig2.png",
-    "figuras/q074_2022_fig1.png",
     "figuras/q076_2022_fig1.png",
     "figuras/q076_2023_fig1.png",
     "figuras/q077_2019_fig1.png",

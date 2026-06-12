@@ -199,11 +199,16 @@ function checkContextRefs(q) {
   return issues;
 }
 
+// Alternativas só-imagem têm texto literal "[Figura]" (ou similar) idêntico
+// nas 5 — a diferença real está no q.images. Pular esse padrão.
+const ALT_IS_BARE_MARKER_RX = /^\s*\[(figura|imagem|infogr[aá]fico|gr[aá]fico|esquema|tabela|mapa|quadro|foto)\s*\d*\]\s*$/i;
+
 function checkDuplicateAlternatives(q) {
   const issues = [];
   const alts = q.alternatives || {};
   const seen = new Map(); // normalized text → letter
   for (const [letter, raw] of Object.entries(alts)) {
+    if (ALT_IS_BARE_MARKER_RX.test(raw || '')) continue;
     const norm = normalizeText(raw);
     if (norm.length < 5) continue; // skip near-empty alternatives
     if (seen.has(norm)) {
@@ -376,10 +381,15 @@ function checkContextBleed(q) {
       }
     }
   }
+  // ENEM legitimately includes citation inside figure markers like
+  // "[Figura: descrição. Disponível em: URL]". Strip those before testing —
+  // we only want to catch a citation that leaked into the bare stem.
+  const STEM_MARKER_STRIP_RX = /\[(?:Figura|Imagem|Infogr[aá]fico|Gr[aá]fico|Esquema|Tabela|Mapa|Quadro|Foto|Cartaz|Charge|Tirinha|Capa)[^\]]*\]/gi;
+  const strippedStem = (q.text || '').replace(STEM_MARKER_STRIP_RX, '');
   for (const rx of REFERENCE_RX) {
-    if (rx.test(q.text || '')) {
+    if (rx.test(strippedStem)) {
       issues.push({ type: 'REFERENCE_PATTERN_IN_STEM',
-        detail: `question.text contains "${rx.source}" — citation may have leaked in` });
+        detail: `question.text contains "${rx.source}" outside any [Figura: …] marker` });
       break;
     }
   }

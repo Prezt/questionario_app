@@ -10,6 +10,74 @@ import {
 } from 'react'
 import './App.css'
 
+// Voiceover do Show do Milhão. Arquivos em public/audio/voiceover/.
+// Se um arquivo não existir, falha silenciosa (jogo não quebra).
+const VOICEOVER_PATHS = {
+  inicio:         '/audio/voiceover/mil-inicio.mp3',
+  acerto:         '/audio/voiceover/mil-acerto.mp3',
+  muitoBoa:       '/audio/voiceover/mil-muito-boa.mp3',
+  erro:           '/audio/voiceover/mil-erro.mp3',
+  parou:          '/audio/voiceover/mil-parou.mp3',
+  cartas:         '/audio/voiceover/mil-cartas.mp3',
+  universitarios: '/audio/voiceover/mil-universitarios.mp3',
+  plateia:        '/audio/voiceover/mil-plateia.mp3',
+  milhao:         '/audio/voiceover/mil-milhao.mp3',
+  pulo:           '/audio/voiceover/mil-pulo.mp3',
+  proximaPergunta:'/audio/voiceover/mil-proxima-pergunta.mp3',
+}
+// Pool aleatório: sorteia uma das alternativas equivalentes do VO.
+const VOICEOVER_POOLS = {
+  acerto: ['acerto', 'muitoBoa'],
+  pulo:   ['pulo', 'proximaPergunta'],
+}
+function pickVoiceoverKey(poolName) {
+  const opts = VOICEOVER_POOLS[poolName]
+  if (!opts || opts.length === 0) return poolName
+  return opts[Math.floor(Math.random() * opts.length)]
+}
+// Áudio específico da pergunta do nível N (0-indexed). Mapeia pro prêmio
+// correspondente: mil-pergunta-1000.mp3, mil-pergunta-2000.mp3, etc.
+function perguntaPath(levelIdx) {
+  const prize = MILIONARIO_PRIZES?.[levelIdx]
+  if (prize == null) return null
+  return `/audio/voiceover/mil-pergunta-${prize}.mp3`
+}
+let __voCurrentAudio = null
+function playVoiceover(keyOrPath, muted = false, onEnded = null) {
+  if (muted) {
+    if (onEnded) onEnded()
+    return
+  }
+  if (!keyOrPath) {
+    if (onEnded) onEnded()
+    return
+  }
+  const path = typeof keyOrPath === 'string' && keyOrPath.startsWith('/')
+    ? keyOrPath
+    : VOICEOVER_PATHS[keyOrPath]
+  if (!path) {
+    if (onEnded) onEnded()
+    return
+  }
+  try {
+    if (__voCurrentAudio) {
+      __voCurrentAudio.pause()
+      __voCurrentAudio = null
+    }
+    const audio = new Audio(path)
+    audio.volume = 0.85
+    if (onEnded) {
+      audio.addEventListener('ended', onEnded, { once: true })
+      audio.addEventListener('error', onEnded, { once: true })
+    }
+    audio.play().catch(() => {
+      // arquivo ausente ou browser bloqueou — segue o fluxo
+      if (onEnded) onEnded()
+    })
+    __voCurrentAudio = audio
+  } catch { /* no-op */ }
+}
+
 function playFeedbackSound(correct, muted = false) {
   if (muted) return
   try {
@@ -390,6 +458,7 @@ const CHANGELOG = [
       'Destaque de novo recorde no fim do jogo',
       'Card de cada jogo mostra recorde pessoal',
       'Jogos abrem sem login; cadastro pede ao fim',
+      'Voiceover no Show do Milhão (mute respeitado)',
     ],
   },
   {
@@ -2338,18 +2407,25 @@ export default function App() {
     setTotalElapsed(0)
     setQuestionElapsed(0)
     setGameConfigOpen(null)
+    if (mode === 'milionario') {
+      // O 'inicio' já foi disparado no clique do card (com tempo de respiro
+      // pra rolar enquanto o usuário escolhe disciplina). Aqui só anuncia a
+      // primeira pergunta — substitui o áudio anterior se ainda estava tocando.
+      playVoiceover(perguntaPath(0), soundMuted)
+    }
     setPhase('quiz')
-  }, [buildGamePool, blitzMinutes])
+  }, [buildGamePool, blitzMinutes, soundMuted])
 
-  // Auto-start a deeplinked game once user is logged in and questions are loaded.
+  // Auto-start a deeplinked game assim que as questões carregarem.
+  // Guest pode auto-iniciar via deeplink (sem token); o save de resultado
+  // só acontece se o usuário se cadastrar ao fim.
   useEffect(() => {
     if (!pendingGameMode) return
-    if (!user || !token) return
     if (!allQuestions.length) return
     if (phase === 'login') return
     startGame(pendingGameMode, null)
     setPendingGameMode(null)
-  }, [pendingGameMode, user, token, allQuestions.length, phase, startGame])
+  }, [pendingGameMode, allQuestions.length, phase, startGame])
 
   const commitGameAnswer = useCallback((letter) => {
     if (!question) return
@@ -2425,10 +2501,11 @@ export default function App() {
         const nextLevel = milLevel + 1
         setMilLevel(nextLevel)
         setGameCorrect((c) => c + 1)
+        playVoiceover(pickVoiceoverKey('acerto'), soundMuted)
         gameAdvanceTimerRef.current = setTimeout(() => {
           gameAdvanceTimerRef.current = null
           if (nextLevel >= MILIONARIO_TOTAL_LEVELS) {
-            // Won the milhão
+            playVoiceover('milhao', soundMuted)
             setGameFinalStats({
               mode: 'milionario',
               streak: nextLevel,
@@ -2448,10 +2525,12 @@ export default function App() {
             setPhase('game-over')
           } else {
             advanceGameQuestion()
+            setTimeout(() => playVoiceover(perguntaPath(nextLevel), soundMuted), 400)
           }
         }, 900)
       } else {
         // Errou — game over. Prêmio = último patamar (cofre) confirmado.
+        playVoiceover('erro', soundMuted)
         const reachedLevel = milLevel
         const prize = getMilLossPrize(reachedLevel)
         gameAdvanceTimerRef.current = setTimeout(() => {
@@ -2491,9 +2570,10 @@ export default function App() {
       gameAdvanceTimerRef.current = null
     }
     setMilSkipsLeft((n) => n - 1)
+    playVoiceover(pickVoiceoverKey('pulo'), soundMuted)
     // Skip without crediting/penalizing — advance to next question
     advanceGameQuestion()
-  }, [gameMode, milSkipsLeft, advanceGameQuestion])
+  }, [gameMode, milSkipsLeft, advanceGameQuestion, soundMuted])
 
   // Milhão: ativar uma ajuda (cartas, universitários, placas)
   const milUseHelp = useCallback((kind) => {
@@ -2508,18 +2588,21 @@ export default function App() {
       setMilEliminatedLetters([])
       setMilCardsLeft(0)
       setMilActiveHelp('cartas')
+      playVoiceover('cartas', soundMuted)
     } else if (kind === 'univ') {
       if (milUnivLeft <= 0) return
       setMilUnivVotes(makeMilUnivVotes(question))
       setMilUnivLeft(0)
       setMilActiveHelp('univ')
+      playVoiceover('universitarios', soundMuted)
     } else if (kind === 'placas') {
       if (milPlacasLeft <= 0) return
       setMilPlacasVotes(makeMilPlacasVotes(question))
       setMilPlacasLeft(0)
       setMilActiveHelp('placas')
+      playVoiceover('plateia', soundMuted)
     }
-  }, [gameMode, question, milCardsLeft, milUnivLeft, milPlacasLeft])
+  }, [gameMode, question, milCardsLeft, milUnivLeft, milPlacasLeft, soundMuted])
 
   // Milhão Cartas: jogador escolhe UMA carta do baralho (5 cartas: A/2/3/4/K).
   // O valor da carta define quantas erradas saem (A=1, 2-4, K=0).
@@ -2542,6 +2625,7 @@ export default function App() {
       clearTimeout(gameAdvanceTimerRef.current)
       gameAdvanceTimerRef.current = null
     }
+    playVoiceover('parou', soundMuted)
     const durationSecs = gameStartTsRef.current
       ? Math.floor((Date.now() - gameStartTsRef.current) / 1000)
       : 0
@@ -2561,7 +2645,7 @@ export default function App() {
       milHelpsUsed: (1 - milCardsLeft) + (1 - milUnivLeft) + (1 - milPlacasLeft),
     })
     setPhase('game-over')
-  }, [gameMode, milLevel, gameDisciplina, milSkipsLeft, milCardsLeft, milUnivLeft, milPlacasLeft])
+  }, [gameMode, milLevel, gameDisciplina, milSkipsLeft, milCardsLeft, milUnivLeft, milPlacasLeft, soundMuted])
 
   const exitGame = useCallback(() => {
     if (gameAdvanceTimerRef.current) {
@@ -3564,6 +3648,11 @@ export default function App() {
                           if (isDaily) {
                             startDailyChallenge({ practice: !!dailyChallengeResult })
                             return
+                          }
+                          // VO do Milhão começa ao clicar no card — assim o
+                          // "Bem vindos ao Show" toca enquanto o usuário escolhe disciplina.
+                          if (id === 'milionario' && gameConfigOpen !== id) {
+                            playVoiceover('inicio', soundMuted)
                           }
                           setGameConfigOpen((prev) => prev === id ? null : id)
                         }}
@@ -4991,20 +5080,20 @@ export default function App() {
                         className={`mil-life-btn mil-life-btn--placas${milPlacasLeft <= 0 ? ' is-used' : ''}`}
                         onClick={() => milUseHelp('placas')}
                         disabled={milPlacasLeft <= 0 || !!selected}
-                        title="Plateia vota por placas"
+                        title="Placas — votação por letra"
                       >
                         <span className="mil-life-icon">🪧</span>
-                        <span className="mil-life-label">Plateia</span>
+                        <span className="mil-life-label">Placas</span>
                       </button>
                       <button
                         type="button"
                         className={`mil-life-btn mil-life-btn--skip${milSkipsLeft <= 0 ? ' is-used' : ''}`}
                         onClick={milSkipQuestion}
                         disabled={milSkipsLeft <= 0 || !!selected}
-                        title="Pular esta questão"
+                        title="Pulo Integrar — pular esta questão"
                       >
                         <span className="mil-life-icon">⏭</span>
-                        <span className="mil-life-label">Pular ({milSkipsLeft})</span>
+                        <span className="mil-life-label">Pulo Integrar ({milSkipsLeft})</span>
                       </button>
                     </div>
                   )}
@@ -5446,7 +5535,7 @@ export default function App() {
                 <>
                   <div className="mil-help-head">
                     <span className="mil-help-icon">🪧</span>
-                    <h2 className="mil-help-title">Ajuda da Plateia</h2>
+                    <h2 className="mil-help-title">Ajuda das Placas</h2>
                     <p className="mil-help-sub">{audience} pessoas levantaram suas placas</p>
                   </div>
                   <ul className="mil-help-placas-list">
