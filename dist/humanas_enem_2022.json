@@ -87,10 +87,7 @@
       "e": "estrutura das rochas."
     },
     "images": [
-      {
-        "file": "figuras/q049_2022_fig1.png",
-        "description": "Esquema mostrando a intensificação da ocupação urbana e seus efeitos na impermeabilização do solo"
-      }
+      "figuras/q049_2022_fig1.png"
     ],
     "tags": [
       "geografia física e geologia",
@@ -505,10 +502,7 @@
       "e": "defesa da honra."
     },
     "images": [
-      {
-        "file": "figuras/q065_2022_fig1.png",
-        "description": "Esquema espiral mostrando o ciclo da violência doméstica: tensão, agressão e lua de mel, escalando até a morte"
-      }
+      "figuras/q065_2022_fig1.png"
     ],
     "tags": [
       "ética e política"
@@ -643,10 +637,7 @@
       "e": "Escolaridade e fecundidade."
     },
     "images": [
-      {
-        "file": "figuras/q070_2022_fig1.png",
-        "description": "Gráfico de barras mostrando proporção de pessoas abaixo da linha de pobreza por arranjo domiciliar no Brasil em 2017"
-      }
+      "figuras/q070_2022_fig1.png"
     ],
     "tags": [
       "sociologia e estrutura social"
@@ -751,10 +742,7 @@
       "e": "influência da continentalidade."
     },
     "images": [
-      {
-        "file": "figuras/q074_2022_fig1.png",
-        "description": "Mapa do Brasil mostrando radiação solar global horizontal média anual"
-      }
+      "figuras/q074_2022_fig1.png"
     ],
     "tags": [
       "meio ambiente e sustentabilidade"

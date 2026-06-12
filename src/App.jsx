@@ -24,6 +24,14 @@ const VOICEOVER_PATHS = {
   milhao:         '/audio/voiceover/mil-milhao.mp3',
   pulo:           '/audio/voiceover/mil-pulo.mp3',
   proximaPergunta:'/audio/voiceover/mil-proxima-pergunta.mp3',
+  jingle:         '/audio/voiceover/mil-jingle.mp3',
+  musica:         '/audio/voiceover/mil-musica.mp3',
+}
+// Toca o anúncio do prêmio da próxima pergunta e, ao terminar, emenda o jingle.
+function playPerguntaThenJingle(levelIdx, muted) {
+  playVoiceover(perguntaPath(levelIdx), muted, () => {
+    playVoiceover('jingle', muted)
+  })
 }
 // Pool aleatório: sorteia uma das alternativas equivalentes do VO.
 const VOICEOVER_POOLS = {
@@ -2348,8 +2356,9 @@ export default function App() {
       milHelpsUsed: isMil ? (1 - milCardsLeft) + (1 - milUnivLeft) + (1 - milPlacasLeft) : null,
       milGaveUp: isMil,
     })
+    playVoiceover('musica', soundMuted)
     setPhase('game-over')
-  }, [gameMode, gameStreak, gameCorrect, gameWrongs, gameDisciplina,
+  }, [gameMode, gameStreak, gameCorrect, gameWrongs, gameDisciplina, soundMuted,
       milLevel, milSkipsLeft, milCardsLeft, milUnivLeft, milPlacasLeft])
 
   const startGame = useCallback((mode, disciplina, opts = {}) => {
@@ -2409,9 +2418,9 @@ export default function App() {
     setGameConfigOpen(null)
     if (mode === 'milionario') {
       // O 'inicio' já foi disparado no clique do card (com tempo de respiro
-      // pra rolar enquanto o usuário escolhe disciplina). Aqui só anuncia a
-      // primeira pergunta — substitui o áudio anterior se ainda estava tocando.
-      playVoiceover(perguntaPath(0), soundMuted)
+      // pra rolar enquanto o usuário escolhe disciplina). Aqui anuncia a
+      // primeira pergunta e emenda o jingle.
+      playPerguntaThenJingle(0, soundMuted)
     }
     setPhase('quiz')
   }, [buildGamePool, blitzMinutes, soundMuted])
@@ -2463,6 +2472,7 @@ export default function App() {
             disciplina: gameDisciplina,
             blitzMinutes: null,
           })
+          playVoiceover('musica', soundMuted)
           setPhase('game-over')
         }, 1800)
       }
@@ -2490,6 +2500,7 @@ export default function App() {
               disciplina: gameDisciplina,
               blitzMinutes: gameBlitzSecsRef.current > 0 ? Math.round(gameBlitzSecsRef.current / 60) : null,
             })
+            playVoiceover('musica', soundMuted)
             setPhase('game-over')
           } else {
             advanceGameQuestion()
@@ -2505,7 +2516,7 @@ export default function App() {
         gameAdvanceTimerRef.current = setTimeout(() => {
           gameAdvanceTimerRef.current = null
           if (nextLevel >= MILIONARIO_TOTAL_LEVELS) {
-            playVoiceover('milhao', soundMuted)
+            playVoiceover('milhao', soundMuted, () => playVoiceover('musica', soundMuted))
             setGameFinalStats({
               mode: 'milionario',
               streak: nextLevel,
@@ -2525,12 +2536,12 @@ export default function App() {
             setPhase('game-over')
           } else {
             advanceGameQuestion()
-            setTimeout(() => playVoiceover(perguntaPath(nextLevel), soundMuted), 400)
+            setTimeout(() => playPerguntaThenJingle(nextLevel, soundMuted), 400)
           }
         }, 900)
       } else {
         // Errou — game over. Prêmio = último patamar (cofre) confirmado.
-        playVoiceover('erro', soundMuted)
+        playVoiceover('erro', soundMuted, () => playVoiceover('musica', soundMuted))
         const reachedLevel = milLevel
         const prize = getMilLossPrize(reachedLevel)
         gameAdvanceTimerRef.current = setTimeout(() => {
@@ -2625,7 +2636,7 @@ export default function App() {
       clearTimeout(gameAdvanceTimerRef.current)
       gameAdvanceTimerRef.current = null
     }
-    playVoiceover('parou', soundMuted)
+    playVoiceover('parou', soundMuted, () => playVoiceover('musica', soundMuted))
     const durationSecs = gameStartTsRef.current
       ? Math.floor((Date.now() - gameStartTsRef.current) / 1000)
       : 0
@@ -2694,6 +2705,7 @@ export default function App() {
           disciplina: gameDisciplina,
           blitzMinutes: Math.round(totalSecs / 60),
         })
+        playVoiceover('musica', soundMuted)
         setPhase('game-over')
       }
     }, 250)
