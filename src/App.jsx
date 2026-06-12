@@ -72,6 +72,94 @@ function attemptKey(q) {
   return `${q.area}:${q.year}:${q.test ?? ''}:${q.number}`
 }
 
+// ── Modo Milhão: 17-step prize ladder + lifeline helpers ───────────────────
+const MILIONARIO_PRIZES = [
+  1000, 2000, 3000, 5000, 10000, 15000, 20000, 30000, 50000,
+  75000, 100000, 150000, 200000, 300000, 500000, 750000, 1000000,
+]
+const MILIONARIO_TOTAL_LEVELS = MILIONARIO_PRIZES.length
+
+function formatMilPrize(n) {
+  return `R$ ${Number(n).toLocaleString('pt-BR')}`
+}
+
+function normalizeDifficulty(d) {
+  if (typeof d === 'number') return d
+  if (d === 'easy')   return 3
+  if (d === 'medium') return 5
+  if (d === 'hard')   return 7
+  return 5
+}
+
+// Three rotating "universitários" — fictional students, varied courses
+const MIL_UNIV_PEOPLE = [
+  { name: 'Bia',     course: 'Eng. Mecatrônica',    emoji: '⚙️' },
+  { name: 'Téo',     course: 'Medicina USP',        emoji: '🩺' },
+  { name: 'Nina',    course: 'Letras UFSC',         emoji: '📜' },
+  { name: 'Rafa',    course: 'Direito FGV',         emoji: '⚖️' },
+  { name: 'Léo',     course: 'Eng. Aeroespacial',   emoji: '🚀' },
+  { name: 'Júlia',   course: 'Biomedicina UFMG',    emoji: '🧬' },
+  { name: 'Caio',    course: 'História UFRJ',       emoji: '🏛️' },
+  { name: 'Sofia',   course: 'Astrofísica IFUSP',   emoji: '🔭' },
+]
+
+function pickRandomUniversitarios() {
+  const pool = [...MIL_UNIV_PEOPLE]
+  for (let i = pool.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1))
+    ;[pool[i], pool[j]] = [pool[j], pool[i]]
+  }
+  return pool.slice(0, 3)
+}
+
+function makeMilUnivVotes(question) {
+  // Easier question → more students hit the right answer.
+  const diff = normalizeDifficulty(question.difficulty)
+  const pCorrect = Math.max(0.32, 0.96 - (diff - 1) * 0.085) // 1→0.96 … 9→0.28
+  const letters = Object.keys(question.alternatives)
+  const wrongs  = letters.filter((l) => l !== question.answer)
+  const trio = pickRandomUniversitarios()
+  return trio.map((p) => {
+    const hit = Math.random() < pCorrect
+    return {
+      ...p,
+      answer:   hit ? question.answer : wrongs[Math.floor(Math.random() * wrongs.length)],
+      sureness: hit ? 0.7 + Math.random() * 0.3 : 0.4 + Math.random() * 0.4,
+    }
+  })
+}
+
+function makeMilPlacasVotes(question) {
+  const diff = normalizeDifficulty(question.difficulty)
+  // Audience leans on correct: 86% easy → ~32% hard
+  const correctBias = Math.max(28, 90 - (diff - 1) * 7)
+  const letters = Object.keys(question.alternatives)
+  const correct = question.answer
+  const votes = {}
+  letters.forEach((l) => { votes[l] = 0 })
+  votes[correct] = correctBias
+  let remaining = 100 - correctBias
+  const others = letters.filter((l) => l !== correct)
+  for (let i = 0; i < others.length - 1; i++) {
+    const slice = Math.floor(Math.random() * (remaining + 1))
+    votes[others[i]] = slice
+    remaining -= slice
+  }
+  votes[others[others.length - 1]] = remaining
+  return votes
+}
+
+function pickMilCartasEliminated(question) {
+  // Knock out 2 wrong alternatives at random.
+  const letters = Object.keys(question.alternatives)
+  const wrongs = letters.filter((l) => l !== question.answer)
+  for (let i = wrongs.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1))
+    ;[wrongs[i], wrongs[j]] = [wrongs[j], wrongs[i]]
+  }
+  return wrongs.slice(0, 2)
+}
+
 // Pause/resume is only supported for a full ENEM/UFSC exam (year + numeric day).
 // Games, Estude por disciplina, Daily Challenge and Listas exit straight to the
 // matching home tab without leaving a "Retomar prova" entry behind.
@@ -142,8 +230,8 @@ function formatTime(seconds) {
   return `${m}:${String(s).padStart(2, '0')}`
 }
 
-const APP_VERSION = '2.1.0'
-const APP_VERSION_DATE = '11/06/2026'
+const APP_VERSION = '2.1.1'
+const APP_VERSION_DATE = '12/06/2026'
 
 const REVIEW_STATUS = [
   { year: 2025, linguagens: true, humanas: true, natureza: true, matematica: true },
@@ -158,12 +246,30 @@ const REVIEW_STATUS = [
 
 const CHANGELOG = [
   {
+    version: '2.1.1',
+    date: '12/06/2026',
+    items: [
+      'Prêmio do Milhão em banner dedicado',
+      'Banner mostra valor garantido se errar',
+      'Tela final destaca quanto o jogador ganhou',
+      'Prêmios escritos por extenso em reais',
+      'Deeplink /milhao inicia o jogo direto',
+      'Milhão agora tem 17 níveis como no Show',
+      'Card do Milhão com tagline icônica',
+      'Escada do Milhão ajustada nos múltiplos de 25',
+    ],
+  },
+  {
     version: '2.1.0',
     date: '11/06/2026',
     items: [
       'Nova aba Jogos no menu lateral',
       'Modo Streak: questões até errar uma',
-      'Modo Blitz: 5 minutos com 3 vidas',
+      'Modo Blitz: duração de 5 a 30 min',
+      'Modo Milhão estilo Show do Milhão',
+      'Cartas, Universitários, Plateia e 3 pulos',
+      'Perguntas com dificuldade crescente',
+      'Chuva de moedas ao ganhar o milhão',
       'Cards de Jogos em 2×2 no celular',
       'Cards de Jogos com contorno colorido',
       'Picker de tema dos Jogos em chips',
@@ -775,10 +881,22 @@ export default function App() {
   const [ensineTool, setEnsineTool] = useState(null)
   useEffect(() => {
     const p = window.location.pathname
-    if (p === '/editor' || ['/estude', '/simule', '/pesquise', '/ensine', '/administre'].includes(p)) {
+    if (
+      p === '/editor' ||
+      ['/estude', '/simule', '/pesquise', '/ensine', '/administre', '/milhao', '/jogos/milhao'].includes(p)
+    ) {
       window.history.replaceState(null, '', '/')
     }
   }, [])
+
+  // Deeplink "/milhao" (e alias "/jogos/milhao") agenda o auto-start do Milhão
+  // assim que as questões carregarem e o usuário estiver logado.
+  const [pendingGameMode, setPendingGameMode] = useState(() => {
+    if (typeof window === 'undefined') return null
+    const p = window.location.pathname.replace(/^\/+|\/+$/g, '')
+    if (p === 'milhao' || p === 'jogos/milhao') return 'milionario'
+    return null
+  })
   // All questions loaded from manifest
   const [allQuestions, setAllQuestions] = useState([])
   const [contexts, setContexts] = useState({}) // { [contextId]: { title, subtitle, text, reference } }
@@ -829,18 +947,30 @@ export default function App() {
   const [dailyChallengePractice, setDailyChallengePractice] = useState(false) // true = retake, do not post result
   const [dailyChallengeError, setDailyChallengeError] = useState(null)
 
-  // ── Jogos (Streak / Blitz) — null when not playing a game ───────────────────
-  const [gameMode, setGameMode] = useState(null) // 'streak' | 'blitz' | null
+  // ── Jogos (Streak / Blitz / Milhão) — null when not playing a game ─────────
+  const [gameMode, setGameMode] = useState(null) // 'streak' | 'blitz' | 'milionario' | null
   const [gameStreak, setGameStreak] = useState(0)
   const [gameCorrect, setGameCorrect] = useState(0)
   const [gameWrongs, setGameWrongs] = useState(0)
   const [gameTimeLeft, setGameTimeLeft] = useState(0) // seconds — blitz only
   const [gameDisciplina, setGameDisciplina] = useState(null)
+  const [blitzMinutes, setBlitzMinutes] = useState(5) // 5 | 10 | 15 | 20 | 30
+  // Milhão state
+  const [milLevel, setMilLevel] = useState(0) // 0..14 (index into MILIONARIO_PRIZES)
+  const [milSkipsLeft, setMilSkipsLeft] = useState(3)
+  const [milCardsLeft, setMilCardsLeft] = useState(1)
+  const [milUnivLeft, setMilUnivLeft] = useState(1)
+  const [milPlacasLeft, setMilPlacasLeft] = useState(1)
+  const [milActiveHelp, setMilActiveHelp] = useState(null) // 'cartas'|'univ'|'placas'|null
+  const [milEliminatedLetters, setMilEliminatedLetters] = useState([]) // letters knocked out by Cartas for current question
+  const [milUnivVotes, setMilUnivVotes] = useState(null) // [{name, course, answer, confidence}]
+  const [milPlacasVotes, setMilPlacasVotes] = useState(null) // { letter: percent }
   const [gameFinalStats, setGameFinalStats] = useState(null) // {mode, streak, correct, wrongs, durationSecs, disciplina}
-  const [gameConfigOpen, setGameConfigOpen] = useState(null) // 'streak' | 'blitz' | null — which card is being configured
+  const [gameConfigOpen, setGameConfigOpen] = useState(null) // 'streak' | 'blitz' | 'milionario' | null
   const gameQueueRef = useRef([]) // shuffled question pool
   const gameQueueIndexRef = useRef(0)
   const gameStartTsRef = useRef(null)
+  const gameBlitzSecsRef = useRef(0) // total seconds for this blitz run
   const gameAdvanceTimerRef = useRef(null)
   const gameLastProcessedKeyRef = useRef(null)
 
@@ -889,6 +1019,8 @@ export default function App() {
     if (typeof window !== 'undefined') {
       const p = window.location.pathname.replace(/^\/+|\/+$/g, '')
       if (VALID.includes(p)) return p
+      // Mode-specific deeplinks land on the Jogos tab.
+      if (p === 'milhao' || p === 'jogos/milhao') return 'jogos'
     }
     try {
       const stored = localStorage.getItem('trilha-integrar-active-tab')
@@ -1814,7 +1946,7 @@ export default function App() {
   }, [question, foreignLang])
 
   // ── Jogos: pool builder + start/advance/end helpers ────────────────────────
-  const buildGamePool = useCallback((disciplina) => {
+  const buildGamePool = useCallback((disciplina, mode = 'streak') => {
     const effectiveLang = disciplina === 'ingles' ? 'en'
       : disciplina === 'espanhol' ? 'es'
       : foreignLang
@@ -1825,6 +1957,50 @@ export default function App() {
       if (disciplina && !(q.disciplinas ?? []).includes(disciplina)) return false
       return true
     })
+    if (mode === 'milionario') {
+      // Build a deliberate difficulty ramp: pick exactly MILIONARIO_TOTAL_LEVELS
+      // questions, level i targeting interpolated difficulty between the easiest
+      // and hardest available. Bucket by difficulty, shuffle within each bucket,
+      // then for each level grab from the bucket closest to the target.
+      const buckets = {}
+      for (const q of pool) {
+        const d = normalizeDifficulty(q.difficulty)
+        if (!buckets[d]) buckets[d] = []
+        buckets[d].push(q)
+      }
+      for (const k of Object.keys(buckets)) {
+        const arr = buckets[k]
+        for (let i = arr.length - 1; i > 0; i--) {
+          const j = Math.floor(Math.random() * (i + 1))
+          ;[arr[i], arr[j]] = [arr[j], arr[i]]
+        }
+      }
+      // Pool size: 15 niveis + 3 buffer para pulos. Resta um pequeno extra
+      // caso o jogador acerte e queira reshuffle (raro — encerra em 15 acertos).
+      const queueSize = MILIONARIO_TOTAL_LEVELS + 3
+      const picked = []
+      for (let i = 0; i < queueSize; i++) {
+        const available = Object.keys(buckets)
+          .map(Number)
+          .filter((d) => buckets[d].length > 0)
+        if (available.length === 0) break
+        const min = Math.min(...available)
+        const max = Math.max(...available)
+        // Map slot index onto the 0..1 ramp using only the 15 "real" levels —
+        // buffer slots (>=15) keep targeting the hardest end.
+        const idx = Math.min(i, MILIONARIO_TOTAL_LEVELS - 1)
+        const t = MILIONARIO_TOTAL_LEVELS === 1 ? 0 : idx / (MILIONARIO_TOTAL_LEVELS - 1)
+        const target = min + t * (max - min)
+        let best = available[0]
+        let bestDist = Math.abs(available[0] - target)
+        for (const d of available) {
+          const dist = Math.abs(d - target)
+          if (dist < bestDist) { bestDist = dist; best = d }
+        }
+        picked.push(buckets[best].pop())
+      }
+      return picked
+    }
     const shuffled = [...pool]
     for (let i = shuffled.length - 1; i > 0; i--) {
       const j = Math.floor(Math.random() * (i + 1))
@@ -1851,6 +2027,11 @@ export default function App() {
     setQuestion(next)
     setQuestions((prev) => [...prev, next])
     setPendingSelection(null)
+    // Reset per-question Milhão help state
+    setMilEliminatedLetters([])
+    setMilUnivVotes(null)
+    setMilPlacasVotes(null)
+    setMilActiveHelp(null)
     questionStartRef.current = Date.now()
   }, [])
 
@@ -1862,19 +2043,28 @@ export default function App() {
     const durationSecs = gameStartTsRef.current
       ? Math.floor((Date.now() - gameStartTsRef.current) / 1000)
       : 0
+    const isMil = gameMode === 'milionario'
     setGameFinalStats({
       mode: gameMode,
       streak: gameStreak,
-      correct: gameMode === 'streak' ? gameStreak : gameCorrect,
+      correct: isMil ? milLevel : (gameMode === 'streak' ? gameStreak : gameCorrect),
       wrongs: gameWrongs,
       durationSecs,
       disciplina: gameDisciplina,
+      blitzMinutes: gameBlitzSecsRef.current > 0 ? Math.round(gameBlitzSecsRef.current / 60) : null,
+      milWon: isMil && milLevel >= MILIONARIO_TOTAL_LEVELS,
+      milPrize: isMil ? (milLevel > 0 ? MILIONARIO_PRIZES[milLevel - 1] : 0) : null,
+      milLevelReached: isMil ? milLevel : null,
+      milSkipsUsed: isMil ? 3 - milSkipsLeft : null,
+      milHelpsUsed: isMil ? (1 - milCardsLeft) + (1 - milUnivLeft) + (1 - milPlacasLeft) : null,
+      milGaveUp: isMil,
     })
     setPhase('game-over')
-  }, [gameMode, gameStreak, gameCorrect, gameWrongs, gameDisciplina])
+  }, [gameMode, gameStreak, gameCorrect, gameWrongs, gameDisciplina,
+      milLevel, milSkipsLeft, milCardsLeft, milUnivLeft, milPlacasLeft])
 
-  const startGame = useCallback((mode, disciplina) => {
-    const pool = buildGamePool(disciplina)
+  const startGame = useCallback((mode, disciplina, opts = {}) => {
+    const pool = buildGamePool(disciplina, mode)
     if (pool.length === 0) return
     gameQueueRef.current = pool
     gameQueueIndexRef.current = 0
@@ -1902,7 +2092,21 @@ export default function App() {
     setGameCorrect(0)
     setGameWrongs(0)
     setGameFinalStats(null)
-    setGameTimeLeft(mode === 'blitz' ? 5 * 60 : 0)
+    // Milhão fresh state
+    setMilLevel(0)
+    setMilSkipsLeft(3)
+    setMilCardsLeft(1)
+    setMilUnivLeft(1)
+    setMilPlacasLeft(1)
+    setMilActiveHelp(null)
+    setMilEliminatedLetters([])
+    setMilUnivVotes(null)
+    setMilPlacasVotes(null)
+    // Blitz duration in minutes — caller may override (5/10/15/20/30); default 5.
+    const blitzMin = mode === 'blitz' ? (opts.blitzMinutes ?? blitzMinutes ?? 5) : 0
+    const blitzSecs = blitzMin * 60
+    gameBlitzSecsRef.current = blitzSecs
+    setGameTimeLeft(blitzSecs)
     const now = Date.now()
     gameStartTsRef.current = now
     startTimeRef.current = now
@@ -1913,7 +2117,17 @@ export default function App() {
     setQuestionElapsed(0)
     setGameConfigOpen(null)
     setPhase('quiz')
-  }, [buildGamePool])
+  }, [buildGamePool, blitzMinutes])
+
+  // Auto-start a deeplinked game once user is logged in and questions are loaded.
+  useEffect(() => {
+    if (!pendingGameMode) return
+    if (!user || !token) return
+    if (!allQuestions.length) return
+    if (phase === 'login') return
+    startGame(pendingGameMode, null)
+    setPendingGameMode(null)
+  }, [pendingGameMode, user, token, allQuestions.length, phase, startGame])
 
   const commitGameAnswer = useCallback((letter) => {
     if (!question) return
@@ -1949,6 +2163,7 @@ export default function App() {
               ? Math.floor((Date.now() - gameStartTsRef.current) / 1000)
               : 0,
             disciplina: gameDisciplina,
+            blitzMinutes: null,
           })
           setPhase('game-over')
         }, 1800)
@@ -1975,6 +2190,7 @@ export default function App() {
                 ? Math.floor((Date.now() - gameStartTsRef.current) / 1000)
                 : 0,
               disciplina: gameDisciplina,
+              blitzMinutes: gameBlitzSecsRef.current > 0 ? Math.round(gameBlitzSecsRef.current / 60) : null,
             })
             setPhase('game-over')
           } else {
@@ -1982,11 +2198,100 @@ export default function App() {
           }
         }, 900)
       }
+    } else if (gameMode === 'milionario') {
+      if (correct) {
+        const nextLevel = milLevel + 1
+        setMilLevel(nextLevel)
+        setGameCorrect((c) => c + 1)
+        gameAdvanceTimerRef.current = setTimeout(() => {
+          gameAdvanceTimerRef.current = null
+          if (nextLevel >= MILIONARIO_TOTAL_LEVELS) {
+            // Won the milhão
+            setGameFinalStats({
+              mode: 'milionario',
+              streak: nextLevel,
+              correct: nextLevel,
+              wrongs: 0,
+              durationSecs: gameStartTsRef.current
+                ? Math.floor((Date.now() - gameStartTsRef.current) / 1000)
+                : 0,
+              disciplina: gameDisciplina,
+              blitzMinutes: null,
+              milWon: true,
+              milPrize: MILIONARIO_PRIZES[MILIONARIO_TOTAL_LEVELS - 1],
+              milLevelReached: nextLevel,
+              milSkipsUsed: 3 - milSkipsLeft,
+              milHelpsUsed: (1 - milCardsLeft) + (1 - milUnivLeft) + (1 - milPlacasLeft),
+            })
+            setPhase('game-over')
+          } else {
+            advanceGameQuestion()
+          }
+        }, 900)
+      } else {
+        // Errou — game over. Premio = nivel anterior (que ele tinha confirmado).
+        const reachedLevel = milLevel
+        const prize = reachedLevel > 0 ? MILIONARIO_PRIZES[reachedLevel - 1] : 0
+        gameAdvanceTimerRef.current = setTimeout(() => {
+          gameAdvanceTimerRef.current = null
+          setGameFinalStats({
+            mode: 'milionario',
+            streak: reachedLevel,
+            correct: reachedLevel,
+            wrongs: 1,
+            durationSecs: gameStartTsRef.current
+              ? Math.floor((Date.now() - gameStartTsRef.current) / 1000)
+              : 0,
+            disciplina: gameDisciplina,
+            blitzMinutes: null,
+            milWon: false,
+            milPrize: prize,
+            milLevelReached: reachedLevel,
+            milSkipsUsed: 3 - milSkipsLeft,
+            milHelpsUsed: (1 - milCardsLeft) + (1 - milUnivLeft) + (1 - milPlacasLeft),
+          })
+          setPhase('game-over')
+        }, 1800)
+      }
     }
   }, [
     question, gameMode, attempts, advanceGameQuestion, soundMuted, showAnswer,
     gameStreak, gameCorrect, gameWrongs, gameDisciplina,
+    milLevel, milSkipsLeft, milCardsLeft, milUnivLeft, milPlacasLeft,
   ])
+
+  // Milhão: pular questão (ignora a resposta atual e avança)
+  const milSkipQuestion = useCallback(() => {
+    if (gameMode !== 'milionario' || milSkipsLeft <= 0) return
+    if (gameAdvanceTimerRef.current) {
+      clearTimeout(gameAdvanceTimerRef.current)
+      gameAdvanceTimerRef.current = null
+    }
+    setMilSkipsLeft((n) => n - 1)
+    // Skip without crediting/penalizing — advance to next question
+    advanceGameQuestion()
+  }, [gameMode, milSkipsLeft, advanceGameQuestion])
+
+  // Milhão: ativar uma ajuda (cartas, universitários, placas)
+  const milUseHelp = useCallback((kind) => {
+    if (gameMode !== 'milionario' || !question) return
+    if (kind === 'cartas') {
+      if (milCardsLeft <= 0) return
+      setMilEliminatedLetters(pickMilCartasEliminated(question))
+      setMilCardsLeft(0)
+      setMilActiveHelp('cartas')
+    } else if (kind === 'univ') {
+      if (milUnivLeft <= 0) return
+      setMilUnivVotes(makeMilUnivVotes(question))
+      setMilUnivLeft(0)
+      setMilActiveHelp('univ')
+    } else if (kind === 'placas') {
+      if (milPlacasLeft <= 0) return
+      setMilPlacasVotes(makeMilPlacasVotes(question))
+      setMilPlacasLeft(0)
+      setMilActiveHelp('placas')
+    }
+  }, [gameMode, question, milCardsLeft, milUnivLeft, milPlacasLeft])
 
   const exitGame = useCallback(() => {
     if (gameAdvanceTimerRef.current) {
@@ -2015,9 +2320,10 @@ export default function App() {
   // Blitz timer: count down, end on zero
   useEffect(() => {
     if (gameMode !== 'blitz' || phase !== 'quiz' || !gameStartTsRef.current) return
+    const totalSecs = gameBlitzSecsRef.current || 5 * 60
     const id = setInterval(() => {
       const elapsed = (Date.now() - gameStartTsRef.current) / 1000
-      const left = Math.max(0, 5 * 60 - elapsed)
+      const left = Math.max(0, totalSecs - elapsed)
       setGameTimeLeft(Math.ceil(left))
       if (left <= 0) {
         clearInterval(id)
@@ -2030,8 +2336,9 @@ export default function App() {
           streak: gameStreak,
           correct: gameCorrect,
           wrongs: gameWrongs,
-          durationSecs: 5 * 60,
+          durationSecs: totalSecs,
           disciplina: gameDisciplina,
+          blitzMinutes: Math.round(totalSecs / 60),
         })
         setPhase('game-over')
       }
@@ -2919,6 +3226,14 @@ export default function App() {
                       rule: 'Acerte o máximo antes de errar 3 ou acabar o tempo.',
                     },
                     {
+                      id: 'milionario',
+                      title: 'Milhão',
+                      tagline: 'Quem quer ser um milionário?',
+                      iconClass: 'jogo-card-icon--milionario',
+                      icon: '💰',
+                      rule: 'Suba a escada de prêmios. Use ajudas e pulos.',
+                    },
+                    {
                       id: 'daily',
                       title: 'Desafio Diário',
                       tagline: 'Uma rodada por dia',
@@ -3002,13 +3317,39 @@ export default function App() {
                       </div>
                     </details>
 
+                    {gameConfigOpen === 'blitz' && (
+                      <div className="jogo-blitz-time">
+                        <span className="jogo-blitz-time-label">Duração</span>
+                        <div className="jogo-blitz-time-row">
+                          {[5, 10, 15, 20, 30].map((m) => (
+                            <button
+                              key={m}
+                              type="button"
+                              className={`jogo-blitz-time-chip${blitzMinutes === m ? ' is-active' : ''}`}
+                              onClick={() => setBlitzMinutes(m)}
+                            >
+                              {m} min
+                            </button>
+                          ))}
+                        </div>
+                      </div>
+                    )}
+
                     <button
                       type="button"
                       className={`jogo-start-btn jogo-start-btn--${gameConfigOpen}`}
-                      onClick={() => startGame(gameConfigOpen, gameDisciplina)}
+                      onClick={() => startGame(gameConfigOpen, gameDisciplina, gameConfigOpen === 'blitz' ? { blitzMinutes } : {})}
                     >
-                      <span className="jogo-start-icon">{gameConfigOpen === 'streak' ? '🔥' : '⚡'}</span>
-                      Começar {gameConfigOpen === 'streak' ? 'Streak' : 'Blitz'}
+                      <span className="jogo-start-icon">
+                        {gameConfigOpen === 'streak' ? '🔥' : gameConfigOpen === 'blitz' ? '⚡' : '💰'}
+                      </span>
+                      Começar {
+                        gameConfigOpen === 'streak'
+                          ? 'Streak'
+                          : gameConfigOpen === 'blitz'
+                            ? `Blitz · ${blitzMinutes} min`
+                            : 'Milhão'
+                      }
                     </button>
                   </div>
                 )}
@@ -3169,6 +3510,120 @@ export default function App() {
     const durationLabel = `${minutes}:${String(seconds).padStart(2, '0')}`
     const disciplinaLabel = stats.disciplina ? DISCIPLINA_LABELS[stats.disciplina] : 'Todas as disciplinas'
     const isStreak = stats.mode === 'streak'
+    const isMil = stats.mode === 'milionario'
+    const milWon = isMil && stats.milWon
+
+    if (isMil) {
+      const prize = stats.milPrize ?? 0
+      const levelReached = stats.milLevelReached ?? 0
+      return (
+        <div className="app-shell">
+          <div className={`game-over-screen game-over-screen--mil${milWon ? ' game-over-screen--mil-won' : ''}`}>
+            {milWon && (
+              <>
+                <div className="mil-coin-rain" aria-hidden>
+                  {Array.from({ length: 48 }).map((_, i) => {
+                    const left = Math.random() * 100
+                    const delay = Math.random() * 4
+                    const dur = 3 + Math.random() * 3
+                    const sway = (Math.random() - 0.5) * 40
+                    const size = 22 + Math.random() * 22
+                    return (
+                      <span
+                        key={i}
+                        className="mil-coin"
+                        style={{
+                          left: `${left}%`,
+                          animationDelay: `${delay}s`,
+                          animationDuration: `${dur}s`,
+                          fontSize: `${size}px`,
+                          // sway via CSS custom property
+                          '--sway': `${sway}px`,
+                        }}
+                      >🪙</span>
+                    )
+                  })}
+                </div>
+                <div className="mil-fireworks" aria-hidden>
+                  {Array.from({ length: 6 }).map((_, i) => (
+                    <span
+                      key={i}
+                      className="mil-firework"
+                      style={{
+                        left: `${10 + i * 14}%`,
+                        animationDelay: `${i * 0.3}s`,
+                      }}
+                    >✨</span>
+                  ))}
+                </div>
+              </>
+            )}
+            <div className={`game-over-card game-over-card--mil${milWon ? ' game-over-card--mil-won' : ''}`}>
+              <span className={`game-over-icon ${milWon ? 'game-over-icon--mil-won' : 'game-over-icon--mil'}`}>
+                {milWon ? '🏆' : (levelReached === 0 ? '💸' : '💰')}
+              </span>
+              <h1 className="game-over-title">
+                {milWon
+                  ? 'MILHÃO!'
+                  : levelReached === 0
+                    ? 'Errou na primeira'
+                    : 'Parou aqui'}
+              </h1>
+              {milWon && (
+                <p className="mil-won-sub">Você completou os {MILIONARIO_TOTAL_LEVELS} níveis</p>
+              )}
+              <div className="mil-prize-display">
+                <span className="mil-prize-label">
+                  {milWon ? 'Você levou pra casa' : prize > 0 ? 'Você ganhou' : 'Não ganhou nada'}
+                </span>
+                <span className={`mil-prize-value${milWon ? ' mil-prize-value--won' : ''}`}>
+                  {formatMilPrize(prize)}
+                </span>
+              </div>
+              <div className="game-over-stats">
+                <div className="game-over-stat-row">
+                  <span className="game-over-stat-label">Nível</span>
+                  <span className="game-over-stat-value">{levelReached}/{MILIONARIO_TOTAL_LEVELS}</span>
+                </div>
+                <div className="game-over-stat-row">
+                  <span className="game-over-stat-label">Pulos usados</span>
+                  <span className="game-over-stat-value">{stats.milSkipsUsed ?? 0}/3</span>
+                </div>
+                <div className="game-over-stat-row">
+                  <span className="game-over-stat-label">Ajudas usadas</span>
+                  <span className="game-over-stat-value">{stats.milHelpsUsed ?? 0}/3</span>
+                </div>
+                <div className="game-over-stat-row">
+                  <span className="game-over-stat-label">Tempo</span>
+                  <span className="game-over-stat-value">{durationLabel}</span>
+                </div>
+                <div className="game-over-stat-row">
+                  <span className="game-over-stat-label">Tema</span>
+                  <span className="game-over-stat-value game-over-stat-value--small">{disciplinaLabel}</span>
+                </div>
+              </div>
+              <div className="game-over-actions">
+                <button
+                  type="button"
+                  className="home-area-pill home-area-pill--primary"
+                  onClick={() => startGame('milionario', stats.disciplina)}
+                >
+                  Jogar de novo
+                </button>
+                <button
+                  type="button"
+                  className="home-area-pill"
+                  onClick={exitGame}
+                >
+                  Voltar
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      )
+    }
+
     return (
       <div className="app-shell">
         <div className="game-over-screen">
@@ -3210,7 +3665,7 @@ export default function App() {
               <button
                 type="button"
                 className="home-area-pill home-area-pill--primary"
-                onClick={() => startGame(stats.mode, stats.disciplina)}
+                onClick={() => startGame(stats.mode, stats.disciplina, stats.mode === 'blitz' ? { blitzMinutes: stats.blitzMinutes ?? blitzMinutes } : {})}
               >
                 Jogar de novo
               </button>
@@ -3823,6 +4278,11 @@ export default function App() {
                         <span className="badge badge-game-lives">❤ {3 - gameWrongs}</span>
                       </>
                     )}
+                    {gameMode === 'milionario' && (
+                      <span className="badge badge-game-mil-level">
+                        Nível {Math.min(milLevel + 1, MILIONARIO_TOTAL_LEVELS)}/{MILIONARIO_TOTAL_LEVELS}
+                      </span>
+                    )}
                     {!gameMode && (
                       <span className="badge badge-progress">
                         {questionIndex + 1} / {sortedQuestions.length}
@@ -3882,6 +4342,33 @@ export default function App() {
                     )
                   })()}
                 </header>
+
+                {gameMode === 'milionario' && (() => {
+                  const playingFor = MILIONARIO_PRIZES[Math.min(milLevel, MILIONARIO_TOTAL_LEVELS - 1)]
+                  const floor = milLevel > 0 ? MILIONARIO_PRIZES[milLevel - 1] : 0
+                  const hasNext = milLevel + 1 < MILIONARIO_TOTAL_LEVELS
+                  const nextPrize = hasNext ? MILIONARIO_PRIZES[milLevel + 1] : null
+                  return (
+                    <div className="mil-prize-banner" aria-label="Prêmio em jogo">
+                      <span className="mil-prize-banner-label">Valendo</span>
+                      <span className="mil-prize-banner-value">
+                        {formatMilPrize(playingFor)}
+                      </span>
+                      <div className="mil-prize-banner-row">
+                        <span className="mil-prize-banner-floor">
+                          <span className="mil-prize-banner-tiny">Se errar</span>
+                          {formatMilPrize(floor)}
+                        </span>
+                        <span className="mil-prize-banner-next">
+                          <span className="mil-prize-banner-tiny">
+                            {hasNext ? 'Próximo' : 'Última!'}
+                          </span>
+                          {hasNext ? formatMilPrize(nextPrize) : '🏆'}
+                        </span>
+                      </div>
+                    </div>
+                  )
+                })()}
 
                 {getContextIds(question).map((cid) => {
                   const ctx = contexts[cid]
@@ -3964,11 +4451,57 @@ export default function App() {
                     )}
                   </div>
 
+                  {gameMode === 'milionario' && (
+                    <div className="mil-lifelines" aria-label="Ajudas do Milhão">
+                      <button
+                        type="button"
+                        className={`mil-life-btn mil-life-btn--cartas${milCardsLeft <= 0 ? ' is-used' : ''}`}
+                        onClick={() => milUseHelp('cartas')}
+                        disabled={milCardsLeft <= 0 || !!selected}
+                        title="Elimina 2 alternativas erradas"
+                      >
+                        <span className="mil-life-icon">🃏</span>
+                        <span className="mil-life-label">Cartas</span>
+                      </button>
+                      <button
+                        type="button"
+                        className={`mil-life-btn mil-life-btn--univ${milUnivLeft <= 0 ? ' is-used' : ''}`}
+                        onClick={() => milUseHelp('univ')}
+                        disabled={milUnivLeft <= 0 || !!selected}
+                        title="3 universitários opinam"
+                      >
+                        <span className="mil-life-icon">🎓</span>
+                        <span className="mil-life-label">Universitários</span>
+                      </button>
+                      <button
+                        type="button"
+                        className={`mil-life-btn mil-life-btn--placas${milPlacasLeft <= 0 ? ' is-used' : ''}`}
+                        onClick={() => milUseHelp('placas')}
+                        disabled={milPlacasLeft <= 0 || !!selected}
+                        title="Plateia vota por placas"
+                      >
+                        <span className="mil-life-icon">🪧</span>
+                        <span className="mil-life-label">Plateia</span>
+                      </button>
+                      <button
+                        type="button"
+                        className={`mil-life-btn mil-life-btn--skip${milSkipsLeft <= 0 ? ' is-used' : ''}`}
+                        onClick={milSkipQuestion}
+                        disabled={milSkipsLeft <= 0 || !!selected}
+                        title="Pular esta questão"
+                      >
+                        <span className="mil-life-icon">⏭</span>
+                        <span className="mil-life-label">Pular ({milSkipsLeft})</span>
+                      </button>
+                    </div>
+                  )}
+
                   <ul className="alternatives">
                     {displayAlts.map(({ displayLabel, origLetter, rawContent, altImg }) => {
                       const isPending = !selected && pendingSelection === origLetter
                       const isConfirmedCorrect = showAnswer && selected !== null && question.answer !== 'annulled' && origLetter === question.answer
                       const isConfirmedWrong = showAnswer && selected !== null && question.answer !== 'annulled' && origLetter === selected && !attempt?.correct
+                      const isMilEliminated = gameMode === 'milionario' && milEliminatedLetters.includes(origLetter)
                       const stacked = Boolean(altImg)
                       const altCaption = stacked ? captionFromBracketText(rawContent) : ''
                       const altLabel = alternativeLabelForDisplay(rawContent, stacked)
@@ -3976,13 +4509,14 @@ export default function App() {
                         <li key={origLetter}>
                           <button
                             type="button"
-                            className={`alt-btn ${isConfirmedCorrect ? 'alt-btn--confirmed-correct' : ''} ${isConfirmedWrong ? 'alt-btn--confirmed-wrong' : ''} ${isPending ? 'alt-btn--pending' : ''} ${stacked ? 'alt-btn--stack' : ''}`}
+                            className={`alt-btn ${isConfirmedCorrect ? 'alt-btn--confirmed-correct' : ''} ${isConfirmedWrong ? 'alt-btn--confirmed-wrong' : ''} ${isPending ? 'alt-btn--pending' : ''} ${stacked ? 'alt-btn--stack' : ''}${isMilEliminated ? ' alt-btn--mil-out' : ''}`}
                             onClick={() => {
                               if (selected) return
+                              if (isMilEliminated) return
                               if (gameMode) commitGameAnswer(origLetter)
                               else setPendingSelection(origLetter)
                             }}
-                            disabled={selected !== null}
+                            disabled={selected !== null || isMilEliminated}
                           >
                             <div className="alt-row">
                               <span className="alt-letter">{displayLabel.toUpperCase()}</span>
@@ -4226,6 +4760,107 @@ export default function App() {
               dangerouslySetInnerHTML={{ __html: richHtmlBr(lightboxImage.caption) }}
             />
           )}
+        </div>
+      )}
+
+      {milActiveHelp && question && (
+        <div className="mil-help-overlay" role="dialog" aria-modal="true" onClick={() => setMilActiveHelp(null)}>
+          <div className="mil-help-modal" onClick={(e) => e.stopPropagation()}>
+            <button
+              type="button"
+              className="mil-help-close"
+              onClick={() => setMilActiveHelp(null)}
+              aria-label="Fechar"
+            >×</button>
+
+            {milActiveHelp === 'cartas' && (
+              <>
+                <div className="mil-help-head">
+                  <span className="mil-help-icon">🃏</span>
+                  <h2 className="mil-help-title">Ajuda das Cartas</h2>
+                  <p className="mil-help-sub">2 alternativas erradas eliminadas</p>
+                </div>
+                <ul className="mil-help-cartas-list">
+                  {milEliminatedLetters.map((l) => (
+                    <li key={l} className="mil-help-cartas-item">
+                      <span className="mil-help-cartas-letter">{l.toUpperCase()}</span>
+                      <span>Foi descartada</span>
+                    </li>
+                  ))}
+                </ul>
+              </>
+            )}
+
+            {milActiveHelp === 'univ' && milUnivVotes && (
+              <>
+                <div className="mil-help-head">
+                  <span className="mil-help-icon">🎓</span>
+                  <h2 className="mil-help-title">Ajuda dos Universitários</h2>
+                  <p className="mil-help-sub">3 alunos comentaram</p>
+                </div>
+                <ul className="mil-help-univ-list">
+                  {milUnivVotes.map((u, i) => (
+                    <li key={i} className="mil-help-univ-item">
+                      <span className="mil-help-univ-emoji">{u.emoji}</span>
+                      <div className="mil-help-univ-info">
+                        <span className="mil-help-univ-name">{u.name}</span>
+                        <span className="mil-help-univ-course">{u.course}</span>
+                      </div>
+                      <div className="mil-help-univ-vote">
+                        <span className="mil-help-univ-letter">{u.answer.toUpperCase()}</span>
+                        <span className="mil-help-univ-sure">
+                          {u.sureness >= 0.8 ? 'tenho certeza'
+                            : u.sureness >= 0.6 ? 'eu acho'
+                            : 'chuto isso'}
+                        </span>
+                      </div>
+                    </li>
+                  ))}
+                </ul>
+              </>
+            )}
+
+            {milActiveHelp === 'placas' && milPlacasVotes && (() => {
+              const entries = Object.entries(milPlacasVotes)
+              const total = entries.reduce((s, [, v]) => s + v, 0) || 1
+              const audience = 100 + Math.floor(Math.random() * 200)
+              const sorted = [...entries].sort(([a], [b]) => a.localeCompare(b))
+              return (
+                <>
+                  <div className="mil-help-head">
+                    <span className="mil-help-icon">🪧</span>
+                    <h2 className="mil-help-title">Ajuda da Plateia</h2>
+                    <p className="mil-help-sub">{audience} pessoas levantaram suas placas</p>
+                  </div>
+                  <ul className="mil-help-placas-list">
+                    {sorted.map(([letter, pct]) => {
+                      const widthPct = Math.round((pct / total) * 100)
+                      return (
+                        <li key={letter} className="mil-help-placas-item">
+                          <span className="mil-help-placas-letter">{letter.toUpperCase()}</span>
+                          <div className="mil-help-placas-bar">
+                            <div
+                              className="mil-help-placas-fill"
+                              style={{ width: `${widthPct}%` }}
+                            />
+                          </div>
+                          <span className="mil-help-placas-pct">{widthPct}%</span>
+                        </li>
+                      )
+                    })}
+                  </ul>
+                </>
+              )
+            })()}
+
+            <button
+              type="button"
+              className="mil-help-confirm"
+              onClick={() => setMilActiveHelp(null)}
+            >
+              Entendi
+            </button>
+          </div>
         </div>
       )}
 

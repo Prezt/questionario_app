@@ -5506,6 +5506,10 @@ body {
   --jogo-accent: #b27cff;
   --jogo-accent-glow: rgba(178, 124, 255, 0.22);
 }
+.jogo-card--milionario {
+  --jogo-accent: #0a7bbd;
+  --jogo-accent-glow: rgba(10, 123, 189, 0.24);
+}
 
 .dark .jogo-card {
   /* Darken the surface a touch so the colored border pops harder */
@@ -5561,6 +5565,7 @@ body {
 .jogo-card-icon--streak { color: #e25a1c; }
 .jogo-card-icon--blitz  { color: #d59f00; }
 .jogo-card-icon--daily  { color: #b27cff; }
+.jogo-card-icon--milionario { color: #0a7bbd; }
 
 .jogo-card-title {
   font-size: 0.92rem;
@@ -5620,6 +5625,7 @@ body {
 
 .jogo-config--streak { --config-accent: #e25a1c; }
 .jogo-config--blitz  { --config-accent: #d59f00; }
+.jogo-config--milionario { --config-accent: #0a7bbd; }
 
 .jogo-config-head {
   display: flex;
@@ -5706,6 +5712,58 @@ body {
 .jogo-chip--nature     { --chip-accent: #2f9a4a; }
 .jogo-chip--math       { --chip-accent: #2f6cc8; }
 
+.jogo-blitz-time {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  margin-top: 0.3rem;
+}
+
+.jogo-blitz-time-label {
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #d59f00;
+}
+
+.jogo-blitz-time-row {
+  display: flex;
+  gap: 0.35rem;
+  flex-wrap: wrap;
+}
+
+.jogo-blitz-time-chip {
+  flex: 1 1 auto;
+  min-width: 3.4rem;
+  padding: 0.45rem 0.7rem;
+  font-size: 0.85rem;
+  font-weight: 700;
+  border-radius: 999px;
+  border: 1.5px solid rgba(213, 159, 0, 0.45);
+  background: transparent;
+  color: var(--text);
+  cursor: pointer;
+  transition: background 0.12s, border-color 0.12s, color 0.12s, transform 0.08s;
+  -webkit-tap-highlight-color: transparent;
+  font-variant-numeric: tabular-nums;
+}
+
+.jogo-blitz-time-chip:hover {
+  border-color: #d59f00;
+  background: rgba(213, 159, 0, 0.1);
+}
+
+.jogo-blitz-time-chip:active {
+  transform: scale(0.97);
+}
+
+.jogo-blitz-time-chip.is-active {
+  background: #d59f00;
+  border-color: #d59f00;
+  color: #fff;
+}
+
 .jogo-start-btn {
   --btn-accent: #555;
   margin-top: 0.4rem;
@@ -5732,6 +5790,7 @@ body {
 
 .jogo-start-btn--streak { --btn-accent: #e25a1c; }
 .jogo-start-btn--blitz  { --btn-accent: #d59f00; }
+.jogo-start-btn--milionario { --btn-accent: #0a7bbd; }
 
 .jogo-start-icon {
   font-size: 1.15rem;
@@ -5861,3 +5920,457 @@ body {
   flex-direction: column;
   gap: 0.5rem;
 }
+
+
+/* ── Modo Milhão ───────────────────────────────────────────────────────── */
+
+/* Lifeline strip (Cartas / Universitários / Plateia / Pular) */
+.mil-lifelines {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.4rem;
+  margin: 0.4rem 0 0.85rem;
+}
+
+.mil-life-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.18rem;
+  padding: 0.5rem 0.3rem;
+  border: 1.5px solid rgba(10, 123, 189, 0.4);
+  border-radius: 0.65rem;
+  background: var(--alt-bg);
+  color: var(--text);
+  font-weight: 700;
+  font-size: 0.72rem;
+  letter-spacing: 0.02em;
+  cursor: pointer;
+  transition: background 0.12s, border-color 0.12s, transform 0.08s, opacity 0.12s;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.mil-life-btn:hover:not(:disabled) {
+  background: rgba(10, 123, 189, 0.08);
+  border-color: #0a7bbd;
+}
+
+.mil-life-btn:active:not(:disabled) { transform: scale(0.96); }
+
+.mil-life-btn:disabled,
+.mil-life-btn.is-used {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.mil-life-btn.is-used { text-decoration: line-through; }
+
+.mil-life-icon { font-size: 1.4rem; line-height: 1; }
+.mil-life-label { line-height: 1.05; text-align: center; }
+
+/* Alternative dimmed by Cartas */
+.alt-btn--mil-out {
+  opacity: 0.22;
+  filter: grayscale(0.85);
+  pointer-events: none;
+}
+
+/* In-quiz header badges for Milhão */
+.badge.badge-game-mil-level {
+  background: rgba(10, 123, 189, 0.15);
+  color: #0a7bbd;
+  border-color: rgba(10, 123, 189, 0.4);
+  font-weight: 800;
+}
+/* Banner abaixo dos badges com o valor em destaque, estilo placar de TV. */
+.mil-prize-banner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.15rem;
+  margin: 0.5rem 0 0.85rem;
+  padding: 0.55rem 0.95rem 0.5rem;
+  border-radius: 0.85rem;
+  background: linear-gradient(135deg, #f6d04a 0%, #e8a627 55%, #b97500 100%);
+  color: #2a1700;
+  border: 2px solid #b97500;
+  box-shadow: 0 0 0 3px rgba(240, 196, 25, 0.28),
+              inset 0 1px 0 rgba(255, 255, 255, 0.55);
+  font-variant-numeric: tabular-nums;
+}
+
+.mil-prize-banner-label {
+  font-size: 0.68rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  opacity: 0.78;
+}
+
+.mil-prize-banner-value {
+  font-size: 1.7rem;
+  font-weight: 900;
+  letter-spacing: 0.02em;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+  text-align: center;
+  line-height: 1.02;
+}
+
+.mil-prize-banner-row {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 0.3rem;
+  padding-top: 0.35rem;
+  border-top: 1px dashed rgba(74, 46, 0, 0.32);
+  gap: 0.6rem;
+}
+
+.mil-prize-banner-floor,
+.mil-prize-banner-next {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.85rem;
+  font-weight: 800;
+  line-height: 1.15;
+}
+
+.mil-prize-banner-next { text-align: right; }
+
+.mil-prize-banner-tiny {
+  font-size: 0.62rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  opacity: 0.68;
+}
+
+@media (min-width: 600px) {
+  .mil-prize-banner-value { font-size: 2rem; }
+  .mil-prize-banner-label { font-size: 0.78rem; }
+  .mil-prize-banner-floor,
+  .mil-prize-banner-next { font-size: 0.95rem; }
+  .mil-prize-banner-tiny { font-size: 0.7rem; }
+}
+
+/* ── Help modal ─────────────────────────────────────────────────────────── */
+.mil-help-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.78);
+  z-index: 1100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  animation: lightbox-fade 0.15s ease-out;
+}
+
+.mil-help-modal {
+  position: relative;
+  width: 100%;
+  max-width: 26rem;
+  background: var(--alt-bg);
+  border: 2px solid #0a7bbd;
+  border-radius: 1rem;
+  padding: 1.25rem 1rem 1rem;
+  box-shadow: 0 0 0 6px rgba(10, 123, 189, 0.22);
+}
+
+.mil-help-close {
+  position: absolute;
+  top: 0.4rem;
+  right: 0.55rem;
+  width: 2rem;
+  height: 2rem;
+  border: none;
+  border-radius: 50%;
+  background: transparent;
+  color: var(--text-soft);
+  font-size: 1.4rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.mil-help-close:hover { color: var(--text); background: rgba(0,0,0,0.06); }
+
+.mil-help-head {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 0.15rem;
+  margin-bottom: 0.85rem;
+}
+
+.mil-help-icon { font-size: 2rem; line-height: 1; }
+.mil-help-title { margin: 0; font-size: 1.1rem; font-weight: 800; color: var(--text); }
+.mil-help-sub { margin: 0; font-size: 0.78rem; color: var(--text-soft); }
+
+/* Cartas */
+.mil-help-cartas-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 0.85rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+.mil-help-cartas-item {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  padding: 0.55rem 0.75rem;
+  border: 1.5px solid var(--border);
+  border-radius: 0.6rem;
+  background: var(--bg);
+  text-decoration: line-through;
+  color: var(--text-soft);
+}
+.mil-help-cartas-letter {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  background: #cc2222;
+  color: #fff;
+  font-weight: 800;
+}
+
+/* Universitários */
+.mil-help-univ-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 0.85rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.mil-help-univ-item {
+  display: grid;
+  grid-template-columns: 2.4rem 1fr auto;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.55rem 0.75rem;
+  border: 1.5px solid var(--border);
+  border-radius: 0.65rem;
+  background: var(--bg);
+}
+.mil-help-univ-emoji { font-size: 1.55rem; line-height: 1; }
+.mil-help-univ-info { display: flex; flex-direction: column; min-width: 0; }
+.mil-help-univ-name { font-weight: 800; color: var(--text); }
+.mil-help-univ-course { font-size: 0.75rem; color: var(--text-soft); }
+.mil-help-univ-vote { display: flex; flex-direction: column; align-items: flex-end; gap: 0.1rem; }
+.mil-help-univ-letter {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.85rem;
+  height: 1.85rem;
+  border-radius: 50%;
+  background: #0a7bbd;
+  color: #fff;
+  font-weight: 800;
+}
+.mil-help-univ-sure { font-size: 0.7rem; color: var(--text-soft); font-style: italic; }
+
+/* Plateia (placas) */
+.mil-help-placas-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 0.85rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+.mil-help-placas-item {
+  display: grid;
+  grid-template-columns: 1.8rem 1fr 2.6rem;
+  align-items: center;
+  gap: 0.55rem;
+}
+.mil-help-placas-letter {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.8rem;
+  height: 1.8rem;
+  border-radius: 0.4rem;
+  background: var(--bg);
+  border: 1.5px solid var(--border);
+  font-weight: 800;
+  color: var(--text);
+}
+.mil-help-placas-bar {
+  height: 1.05rem;
+  background: var(--bg);
+  border: 1.5px solid var(--border);
+  border-radius: 999px;
+  overflow: hidden;
+}
+.mil-help-placas-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #0a7bbd 0%, #1ba3e9 100%);
+  transition: width 0.6s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+.mil-help-placas-pct {
+  font-weight: 800;
+  font-size: 0.82rem;
+  color: var(--text);
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+.mil-help-confirm {
+  width: 100%;
+  height: 2.6rem;
+  border: none;
+  border-radius: 999px;
+  background: #0a7bbd;
+  color: #fff;
+  font-weight: 800;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: filter 0.15s, transform 0.08s;
+}
+.mil-help-confirm:hover { filter: brightness(1.1); }
+.mil-help-confirm:active { transform: scale(0.98); }
+
+/* ── Game-over Milhão ────────────────────────────────────────────────── */
+.game-over-screen--mil { position: relative; overflow: hidden; }
+.game-over-screen--mil-won {
+  background: radial-gradient(circle at 50% 30%, #ffd861 0%, #f5a623 35%, #b97500 80%, #2a1700 100%);
+  animation: mil-bg-pulse 2.4s ease-in-out infinite;
+}
+
+@keyframes mil-bg-pulse {
+  0%, 100% { filter: brightness(1) saturate(1); }
+  50%      { filter: brightness(1.12) saturate(1.2); }
+}
+
+.game-over-card--mil {
+  border-color: #0a7bbd;
+}
+.game-over-card--mil-won {
+  border-color: #f0c419;
+  background: linear-gradient(180deg, #fffbe7 0%, #fff2c2 100%);
+  color: #4a2e00;
+  box-shadow: 0 0 0 6px rgba(240, 196, 25, 0.45),
+              0 0 60px rgba(240, 196, 25, 0.6);
+  animation: mil-card-pop 1.2s ease-out;
+}
+
+@keyframes mil-card-pop {
+  0%   { transform: scale(0.6); opacity: 0; }
+  60%  { transform: scale(1.06); opacity: 1; }
+  100% { transform: scale(1); }
+}
+
+.game-over-card--mil-won .game-over-title { color: #b97500; letter-spacing: 0.08em; }
+.game-over-card--mil-won .game-over-stat-row { background: rgba(255, 255, 255, 0.55); border-color: rgba(74, 46, 0, 0.18); }
+.game-over-card--mil-won .game-over-stat-label,
+.game-over-card--mil-won .game-over-stat-value { color: #4a2e00; }
+
+.game-over-icon--mil { color: #0a7bbd; }
+.game-over-icon--mil-won {
+  color: #f0c419;
+  filter: drop-shadow(0 2px 8px rgba(240, 196, 25, 0.8));
+  animation: mil-trophy-bounce 1.5s ease-in-out infinite;
+}
+
+@keyframes mil-trophy-bounce {
+  0%, 100% { transform: translateY(0) rotate(-3deg); }
+  50%      { transform: translateY(-8px) rotate(3deg); }
+}
+
+.mil-won-sub {
+  margin: 0;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #6b4400;
+  letter-spacing: 0.02em;
+}
+
+.mil-prize-display {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.15rem;
+  padding: 0.65rem 1rem;
+  border-radius: 0.85rem;
+  background: rgba(255, 255, 255, 0.5);
+  border: 1.5px dashed currentColor;
+  width: 100%;
+}
+.mil-prize-label {
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  opacity: 0.7;
+}
+.mil-prize-value {
+  font-size: 2rem;
+  font-weight: 900;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0.02em;
+}
+.mil-prize-value--won {
+  color: #b97500;
+  text-shadow: 0 2px 12px rgba(240, 196, 25, 0.7);
+  font-size: 2.4rem;
+}
+
+/* Coin rain — covers the entire screen, falls top-to-bottom */
+.mil-coin-rain {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.mil-coin {
+  --sway: 0px;
+  position: absolute;
+  top: -10vh;
+  animation-name: mil-coin-fall;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+  will-change: transform;
+}
+
+@keyframes mil-coin-fall {
+  0%   { transform: translate3d(0, 0, 0) rotate(0deg); opacity: 0; }
+  10%  { opacity: 1; }
+  100% { transform: translate3d(var(--sway), 110vh, 0) rotate(720deg); opacity: 1; }
+}
+
+/* Fireworks (sparkle bursts) */
+.mil-fireworks {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+}
+.mil-firework {
+  position: absolute;
+  top: 20%;
+  font-size: 3rem;
+  filter: drop-shadow(0 0 12px rgba(255, 220, 80, 0.9));
+  animation: mil-firework-burst 2.5s ease-out infinite;
+  opacity: 0;
+}
+
+@keyframes mil-firework-burst {
+  0%   { transform: scale(0.2); opacity: 0; }
+  30%  { transform: scale(1.4); opacity: 1; }
+  60%  { transform: scale(1.6) rotate(20deg); opacity: 0.9; }
+  100% { transform: scale(0.4) rotate(40deg); opacity: 0; }
+}
+
+.game-over-card--mil { position: relative; z-index: 2; }
+
