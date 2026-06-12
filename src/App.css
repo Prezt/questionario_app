@@ -5921,6 +5921,105 @@ body {
   gap: 0.5rem;
 }
 
+/* ── Result popup (Desafio / Lista / Simulado leve / Integrar / Área) ──── */
+.result-popup-overlay {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  background: color-mix(in srgb, var(--text) 35%, transparent);
+  backdrop-filter: blur(2px);
+  z-index: 100;
+}
+.result-popup-card {
+  width: 100%;
+  max-width: 22rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.85rem;
+  padding: 1.75rem 1.5rem;
+  border: 1.5px solid var(--border);
+  border-radius: 1.25rem;
+  background: var(--alt-bg);
+  text-align: center;
+  box-shadow: var(--shadow);
+}
+.result-popup-icon {
+  font-size: 3rem;
+  line-height: 1;
+}
+.result-popup-title {
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--brand);
+}
+.result-popup-stats {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  margin: 0.3rem 0 0.2rem;
+}
+.result-popup-stat-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 0.45rem 0.7rem;
+  background: var(--bg);
+  border: 1.5px solid var(--border);
+  border-radius: 0.7rem;
+}
+.result-popup-stat-label {
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--text-soft);
+}
+.result-popup-stat-value {
+  font-size: 1.2rem;
+  font-weight: 800;
+  font-variant-numeric: tabular-nums;
+}
+.result-popup-peek {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  margin: 0.2rem 0 0.4rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.result-popup-peek-dot {
+  width: 0.7rem;
+  height: 0.7rem;
+  border-radius: 50%;
+  display: inline-block;
+}
+.result-popup-peek-dot--ok   { background: var(--accent); }
+.result-popup-peek-dot--bad  { background: var(--rail-bad); }
+.result-popup-peek-dot--skip { background: var(--text-soft); opacity: 0.3; }
+.result-popup-peek-more {
+  font-weight: 800;
+  color: var(--text-soft);
+  margin-left: 0.2rem;
+}
+.result-popup-actions {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+  margin-top: 0.4rem;
+}
+.result-popup-btn,
+.result-popup-btn--primary {
+  margin: 0;
+  width: 100%;
+}
+
 
 /* ── Modo Milhão ───────────────────────────────────────────────────────── */
 
@@ -6024,34 +6123,65 @@ body {
   margin-top: 0.3rem;
   padding-top: 0.35rem;
   border-top: 1px dashed rgba(74, 46, 0, 0.32);
-  gap: 0.6rem;
+  gap: 0.45rem;
 }
 
-.mil-prize-banner-floor,
-.mil-prize-banner-next {
+.mil-prize-banner-row--3col {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.mil-prize-banner-cell {
   display: flex;
   flex-direction: column;
-  font-size: 0.85rem;
+  font-size: 0.82rem;
   font-weight: 800;
   line-height: 1.15;
+  font-variant-numeric: tabular-nums;
 }
 
-.mil-prize-banner-next { text-align: right; }
+.mil-prize-banner-cell--left  { text-align: left;   }
+.mil-prize-banner-cell--mid   { text-align: center; align-items: center; }
+.mil-prize-banner-cell--right { text-align: right;  align-items: flex-end; }
 
 .mil-prize-banner-tiny {
-  font-size: 0.62rem;
+  font-size: 0.6rem;
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.1em;
-  opacity: 0.68;
+  letter-spacing: 0.08em;
+  opacity: 0.7;
+}
+
+.mil-stop-btn {
+  margin-top: 0.6rem;
+  width: 100%;
+  border: 2px solid rgba(74, 46, 0, 0.38);
+  border-radius: 999px;
+  padding: 0.5rem 0.9rem;
+  background: rgba(74, 46, 0, 0.12);
+  color: #2a1700;
+  font-weight: 800;
+  font-size: 0.85rem;
+  font-variant-numeric: tabular-nums;
+  cursor: pointer;
+  transition: background 0.15s, transform 0.08s;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.mil-stop-btn:hover {
+  background: rgba(74, 46, 0, 0.22);
+}
+
+.mil-stop-btn:active {
+  transform: scale(0.98);
 }
 
 @media (min-width: 600px) {
   .mil-prize-banner-value { font-size: 2rem; }
   .mil-prize-banner-label { font-size: 0.78rem; }
-  .mil-prize-banner-floor,
-  .mil-prize-banner-next { font-size: 0.95rem; }
+  .mil-prize-banner-cell { font-size: 0.95rem; }
   .mil-prize-banner-tiny { font-size: 0.7rem; }
+  .mil-stop-btn { font-size: 0.95rem; }
 }
 
 /* ── Help modal ─────────────────────────────────────────────────────────── */
@@ -6108,36 +6238,170 @@ body {
 .mil-help-title { margin: 0; font-size: 1.1rem; font-weight: 800; color: var(--text); }
 .mil-help-sub { margin: 0; font-size: 0.78rem; color: var(--text-soft); }
 
-/* Cartas */
-.mil-help-cartas-list {
-  list-style: none;
+/* Cartas — baralho interativo de 5 cartas (CSS puro, flip 3D) */
+.mil-cards-deck {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin: 0.4rem 0 1rem;
+  perspective: 800px;
+}
+
+.mil-card {
+  width: 3.5rem;
+  height: 5rem;
   padding: 0;
-  margin: 0 0 0.85rem;
-  display: flex;
-  flex-direction: column;
-  gap: 0.4rem;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  transition: transform 0.15s;
 }
-.mil-help-cartas-item {
-  display: flex;
-  align-items: center;
-  gap: 0.65rem;
-  padding: 0.55rem 0.75rem;
-  border: 1.5px solid var(--border);
-  border-radius: 0.6rem;
-  background: var(--bg);
-  text-decoration: line-through;
-  color: var(--text-soft);
+
+.mil-card:not(:disabled):hover { transform: translateY(-4px); }
+.mil-card:not(:disabled):active { transform: translateY(-2px) scale(0.97); }
+.mil-card:disabled { cursor: default; }
+
+.mil-card-inner {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.65s cubic-bezier(0.2, 0.8, 0.2, 1);
 }
-.mil-help-cartas-letter {
-  display: inline-flex;
+
+.mil-card--flipped .mil-card-inner { transform: rotateY(180deg); }
+
+.mil-card-face {
+  position: absolute;
+  inset: 0;
+  display: flex;
   align-items: center;
   justify-content: center;
+  border-radius: 0.45rem;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  border: 2px solid;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.mil-card-face--back {
+  background:
+    repeating-linear-gradient(45deg,
+      #0a3a6e 0 6px,
+      #0c4a8a 6px 12px),
+    #0a3a6e;
+  border-color: #f0c419;
+  color: #f0c419;
+}
+
+.mil-card-back-mark {
   width: 2rem;
   height: 2rem;
   border-radius: 50%;
-  background: #cc2222;
-  color: #fff;
-  font-weight: 800;
+  background: rgba(240, 196, 25, 0.18);
+  border: 2px solid #f0c419;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  font-weight: 900;
+  text-shadow: 0 0 6px rgba(240, 196, 25, 0.7);
+}
+
+.mil-card-face--front {
+  background: #fdfdfd;
+  border-color: #1a1a1a;
+  color: #1a1a1a;
+  transform: rotateY(180deg);
+  display: block;
+}
+
+.mil-card-face--front.is-red {
+  color: #cc2222;
+  border-color: #cc2222;
+}
+
+/* Cantos com valor + naipe pequeno (estilo carta de baralho real). */
+.mil-card-corner {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  line-height: 0.95;
+  font-family: Georgia, 'Times New Roman', serif;
+}
+
+.mil-card-corner--tl { top: 3px; left: 4px; }
+.mil-card-corner--br {
+  bottom: 3px; right: 4px;
+  transform: rotate(180deg);
+}
+
+.mil-card-corner-value { font-size: 0.7rem; font-weight: 900; }
+.mil-card-corner-suit  { font-size: 0.62rem; }
+
+/* Área central onde ficam os pips do naipe, com layout por valor. */
+.mil-card-pip-area {
+  position: absolute;
+  inset: 14% 22%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: Georgia, 'Times New Roman', serif;
+  line-height: 1;
+}
+
+.mil-pip { font-size: 0.92rem; line-height: 1; }
+.mil-pip--big { font-size: 2rem; }
+.mil-pip--flip { transform: rotate(180deg); }
+
+.mil-card-pip-area--A { /* default: 1 grande, centralizado */ }
+
+.mil-card-pip-area--2,
+.mil-card-pip-area--3 {
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.mil-card-pip-area--4 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  place-items: center;
+}
+
+.mil-card-pip-area--K {
+  flex-direction: column;
+  gap: 0.05rem;
+  font-family: Georgia, 'Times New Roman', serif;
+}
+
+.mil-king-letter {
+  font-size: 1.5rem;
+  font-weight: 900;
+  font-family: Georgia, 'Times New Roman', serif;
+  line-height: 1;
+}
+
+.mil-king-suit { font-size: 0.72rem; }
+
+.mil-card--dim { opacity: 0.5; }
+
+@media (min-width: 600px) {
+  .mil-card { width: 4rem; height: 5.7rem; }
+  .mil-card-corner-value { font-size: 0.84rem; }
+  .mil-card-corner-suit  { font-size: 0.72rem; }
+  .mil-pip { font-size: 1.05rem; }
+  .mil-pip--big { font-size: 2.3rem; }
+  .mil-king-letter { font-size: 1.8rem; }
+  .mil-king-suit { font-size: 0.82rem; }
+}
+
+.mil-help-confirm:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
 }
 
 /* Universitários */
@@ -6176,6 +6440,27 @@ body {
   font-weight: 800;
 }
 .mil-help-univ-sure { font-size: 0.7rem; color: var(--text-soft); font-style: italic; }
+
+/* Expert: estudante na área da questão recebe selo + destaque sutil */
+.mil-help-univ-item--expert {
+  background: color-mix(in srgb, var(--brand) 8%, var(--bg));
+  border-color: color-mix(in srgb, var(--brand) 40%, var(--border));
+}
+.mil-help-univ-expert {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  margin-top: 0.15rem;
+  padding: 0.1rem 0.45rem;
+  font-size: 0.68rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  background: color-mix(in srgb, var(--brand) 18%, transparent);
+  color: var(--brand);
+  border-radius: 999px;
+  align-self: flex-start;
+}
 
 /* Plateia (placas) */
 .mil-help-placas-list {
