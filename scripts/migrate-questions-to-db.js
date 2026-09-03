@@ -89,11 +89,11 @@ async function main() {
       INSERT INTO multiple_choice_questions
         (source, source_list, area, test, year, number,
          text, alternatives, answer, images, tags, disciplinas,
-         difficulty, context_key, review)
+         difficulty, context_keys, review)
       VALUES
         (${r.source}, ${r.source_list}, ${r.area}, ${r.test}, ${r.year}, ${r.number},
          ${r.text}, ${r.alternatives}, ${r.answer}, ${r.images}, ${r.tags}, ${r.disciplinas},
-         ${r.difficulty}, ${r.context_key}, ${r.review})
+         ${r.difficulty}, ${r.context_keys}, ${r.review})
       ON CONFLICT (source, source_list, area, test, year, number) DO NOTHING
       RETURNING id
     `

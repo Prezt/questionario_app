@@ -84,7 +84,7 @@ CREATE TABLE IF NOT EXISTS multiple_choice_questions (
   tags          TEXT[] DEFAULT '{}',
   disciplinas   TEXT[] DEFAULT '{}',
   difficulty    INTEGER,
-  context_key   TEXT,
+  context_keys  TEXT[] DEFAULT '{}',
 
   review        BOOLEAN DEFAULT FALSE,
 
