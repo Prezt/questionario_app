@@ -85,13 +85,14 @@ CREATE TABLE IF NOT EXISTS multiple_choice_questions (
   disciplinas   TEXT[] DEFAULT '{}',
   difficulty    INTEGER,
   context_keys  TEXT[] DEFAULT '{}',
+  language      TEXT,
 
   review        BOOLEAN DEFAULT FALSE,
 
   created_at    TIMESTAMPTZ DEFAULT NOW(),
   updated_at    TIMESTAMPTZ DEFAULT NOW(),
 
-  UNIQUE (source, source_list, area, test, year, number)
+  UNIQUE NULLS NOT DISTINCT (source, source_list, area, test, year, number, language)
 );
 
 CREATE INDEX IF NOT EXISTS idx_mcq_area        ON multiple_choice_questions(area);

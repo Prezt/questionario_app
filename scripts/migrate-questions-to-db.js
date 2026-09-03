@@ -11,7 +11,7 @@ import { readFileSync, readdirSync } from 'node:fs'
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
 import { neon } from '@neondatabase/serverless'
-import { parseQuestion } from './lib/parse-question-json.js'
+import { parseQuestion, annotateLinguagensLanguage } from './lib/parse-question-json.js'
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
 const PUBLIC_DIR = path.resolve(__dirname, '..', 'public')
@@ -25,7 +25,10 @@ function loadEnemJsons() {
   return files.map((name) => {
     const filePath = path.join(PUBLIC_DIR, name)
     const raw = JSON.parse(readFileSync(filePath, 'utf8'))
-    return { file: name, sourceMeta: { source: 'enem', source_list: null }, questions: raw }
+    // Linguagens 1-5 aparecem duas vezes por ano (ingles + espanhol). Anota
+    // language antes de passar pro parser pra preservar as duas versoes.
+    const questions = name.startsWith('linguagens_') ? annotateLinguagensLanguage(raw) : raw
+    return { file: name, sourceMeta: { source: 'enem', source_list: null }, questions }
   })
 }
 
@@ -89,12 +92,12 @@ async function main() {
       INSERT INTO multiple_choice_questions
         (source, source_list, area, test, year, number,
          text, alternatives, answer, images, tags, disciplinas,
-         difficulty, context_keys, review)
+         difficulty, context_keys, language, review)
       VALUES
         (${r.source}, ${r.source_list}, ${r.area}, ${r.test}, ${r.year}, ${r.number},
          ${r.text}, ${r.alternatives}, ${r.answer}, ${r.images}, ${r.tags}, ${r.disciplinas},
-         ${r.difficulty}, ${r.context_keys}, ${r.review})
-      ON CONFLICT (source, source_list, area, test, year, number) DO NOTHING
+         ${r.difficulty}, ${r.context_keys}, ${r.language}, ${r.review})
+      ON CONFLICT (source, source_list, area, test, year, number, language) DO NOTHING
       RETURNING id
     `
     if (result.length === 1) inserted++
