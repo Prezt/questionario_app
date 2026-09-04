@@ -1,9 +1,12 @@
 -- Run this once in the Vercel/Neon SQL console to initialize the schema.
 
+CREATE TYPE user_role AS ENUM ('user', 'prof', 'admin');
+
 CREATE TABLE IF NOT EXISTS users (
   id            SERIAL PRIMARY KEY,
   username      TEXT UNIQUE NOT NULL,
   password_hash TEXT NOT NULL,
+  role          user_role NOT NULL DEFAULT 'user',
   created_at    TIMESTAMPTZ DEFAULT NOW()
 );
 
