@@ -61,10 +61,10 @@ const styles = StyleSheet.create({
     bottom: 18,
     left: 48,
     right: 48,
-    fontSize: 8,
-    color: '#999',
+    fontSize: 7,
+    color: '#C9C9C9',
     flexDirection: 'row',
-    justifyContent: 'flex-end',
+    justifyContent: 'space-between',
   },
 })
 
@@ -77,9 +77,12 @@ function Header({ title }) {
   )
 }
 
+const CURRENT_YEAR = new Date().getFullYear()
+
 function Footer() {
   return (
     <View style={styles.footer} fixed>
+      <Text>{`Projeto Integrar de Educação Popular · ${CURRENT_YEAR}`}</Text>
       <Text render={({ pageNumber, totalPages }) => `${pageNumber} / ${totalPages}`} />
     </View>
   )

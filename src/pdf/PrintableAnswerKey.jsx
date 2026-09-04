@@ -38,8 +38,10 @@ const styles = StyleSheet.create({
     bottom: 18,
     left: 48,
     right: 48,
-    fontSize: 8,
-    color: '#999',
+    fontSize: 7,
+    color: '#C9C9C9',
+    flexDirection: 'row',
+    justifyContent: 'space-between',
   },
 })
 
@@ -59,7 +61,10 @@ export default function PrintableAnswerKey({ title = 'Lista de Exercícios', que
             </View>
           ))}
         </View>
-        <Text style={styles.footer} fixed render={({ pageNumber, totalPages }) => `${pageNumber} / ${totalPages}`} />
+        <View style={styles.footer} fixed>
+          <Text>{`Projeto Integrar de Educação Popular · ${new Date().getFullYear()}`}</Text>
+          <Text render={({ pageNumber, totalPages }) => `${pageNumber} / ${totalPages}`} />
+        </View>
       </Page>
     </Document>
   )

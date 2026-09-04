@@ -458,6 +458,7 @@ const CHANGELOG = [
       'PDF permite escolher listas ou avulsas',
       'Logo Integrar substitui lápis nos PDFs',
       'PDF sem texto "Trilha Integrar" no cabeçalho',
+      'Rodapé do PDF com marca do Projeto Integrar',
     ],
   },
   {
