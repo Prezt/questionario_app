@@ -74,8 +74,8 @@ async function main() {
      '/api/questions/prova?area=math&year=2018'],
     ['GET /api/questions/prova?area=math&year=9999 (esperado 404)',
      '/api/questions/prova?area=math&year=9999'],
-    ['GET /api/contexts?keys=enem_2021_humanas_q46_ctx1,nonexistent',
-     '/api/contexts?keys=enem_2021_humanas_q46_ctx1,nonexistent'],
+    ['GET /api/questions/contexts?keys=enem_2021_humanas_q46_ctx1,nonexistent',
+     '/api/questions/contexts?keys=enem_2021_humanas_q46_ctx1,nonexistent'],
     ['GET /api/questions/search sem token (esperado 401)',
      '/api/questions/search'],
   ]

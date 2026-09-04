@@ -123,6 +123,7 @@ const ReviewPage  = lazy(() => import('./ReviewPage.jsx'))
 const QuestionEditor = lazy(() => import('./QuestionEditor.jsx'))
 const ExplanationsEditor = lazy(() => import('./ExplanationsEditor.jsx'))
 const EnemPicker = lazy(() => import('./EnemPicker.jsx'))
+const PdfExporter = lazy(() => import('./pdf/PdfExporter.jsx'))
 
 const ATTEMPTS_SESSION_KEY = 'trilha-integrar-tentativas'
 const PAUSED_SESSION_KEY   = 'trilha-integrar-sessao'
@@ -433,8 +434,8 @@ function formatTime(seconds) {
   return `${m}:${String(s).padStart(2, '0')}`
 }
 
-const APP_VERSION = '2.1.2'
-const APP_VERSION_DATE = '12/06/2026'
+const APP_VERSION = '2.2.0'
+const APP_VERSION_DATE = '04/09/2026'
 
 const REVIEW_STATUS = [
   { year: 2025, linguagens: true, humanas: true, natureza: true, matematica: true },
@@ -448,6 +449,13 @@ const REVIEW_STATUS = [
 ]
 
 const CHANGELOG = [
+  {
+    version: '2.2.0',
+    date: '04/09/2026',
+    items: [
+      'Nova ferramenta Gerar Lista para Impressão',
+    ],
+  },
   {
     version: '2.1.2',
     date: '12/06/2026',
@@ -3802,6 +3810,10 @@ export default function App() {
                         onClose={() => setEnsineTool(null)}
                       />
                     </Suspense>
+                  ) : ensineTool === 'gerar-pdf' ? (
+                    <Suspense fallback={<p className="qe-loading">Carregando…</p>}>
+                      <PdfExporter token={token} onClose={() => setEnsineTool(null)} />
+                    </Suspense>
                   ) : (
                     <>
                       <button
@@ -3824,6 +3836,13 @@ export default function App() {
                         onClick={() => setEnsineTool('explicar')}
                       >
                         Explicar Questão do Enem
+                      </button>
+                      <button
+                        type="button"
+                        className="home-start-btn"
+                        onClick={() => setEnsineTool('gerar-pdf')}
+                      >
+                        Gerar Lista para Impressão
                       </button>
                     </>
                   )
