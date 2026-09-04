@@ -62,7 +62,7 @@ export default function PrintableAnswerKey({ title = 'Lista de Exercícios', que
           ))}
         </View>
         <View style={styles.footer} fixed>
-          <Text>{`Projeto Integrar de Educação Popular · ${new Date().getFullYear()}`}</Text>
+          <Text>{`Projeto de Educação Comunitária Integrar · ${new Date().getFullYear()}`}</Text>
           <Text render={({ pageNumber, totalPages }) => `${pageNumber} / ${totalPages}`} />
         </View>
       </Page>

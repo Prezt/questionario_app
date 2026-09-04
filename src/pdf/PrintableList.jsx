@@ -82,7 +82,7 @@ const CURRENT_YEAR = new Date().getFullYear()
 function Footer() {
   return (
     <View style={styles.footer} fixed>
-      <Text>{`Projeto Integrar de Educação Popular · ${CURRENT_YEAR}`}</Text>
+      <Text>{`Projeto de Educação Comunitária Integrar · ${CURRENT_YEAR}`}</Text>
       <Text render={({ pageNumber, totalPages }) => `${pageNumber} / ${totalPages}`} />
     </View>
   )

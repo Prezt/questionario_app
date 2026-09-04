@@ -459,6 +459,7 @@ const CHANGELOG = [
       'Logo Integrar substitui lápis nos PDFs',
       'PDF sem texto "Trilha Integrar" no cabeçalho',
       'Rodapé do PDF com marca do Projeto Integrar',
+      'Corrige nome do Projeto no rodapé do PDF',
     ],
   },
   {
