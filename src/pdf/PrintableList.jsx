@@ -28,7 +28,6 @@ const styles = StyleSheet.create({
     marginBottom: 16,
   },
   logo: { width: 28, height: 28, marginRight: 12 },
-  brand: { fontSize: 12, fontWeight: 'bold' },
   title: { fontSize: 14, fontWeight: 'bold', marginLeft: 'auto' },
   question: { marginBottom: 20 },
   questionHeader: { flexDirection: 'row', marginBottom: 4 },
@@ -65,7 +64,7 @@ const styles = StyleSheet.create({
     fontSize: 8,
     color: '#999',
     flexDirection: 'row',
-    justifyContent: 'space-between',
+    justifyContent: 'flex-end',
   },
 })
 
@@ -73,7 +72,6 @@ function Header({ title }) {
   return (
     <View style={styles.header} fixed>
       <Image src="/figuras/logos/integrar-logo-transparent.png" style={styles.logo} />
-      <Text style={styles.brand}>Trilha Integrar</Text>
       <Text style={styles.title}>{title}</Text>
     </View>
   )
@@ -82,7 +80,6 @@ function Header({ title }) {
 function Footer() {
   return (
     <View style={styles.footer} fixed>
-      <Text>Trilha Integrar · lista de exercícios</Text>
       <Text render={({ pageNumber, totalPages }) => `${pageNumber} / ${totalPages}`} />
     </View>
   )

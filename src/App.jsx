@@ -457,6 +457,7 @@ const CHANGELOG = [
       'Layout do gerador de PDF refeito',
       'PDF permite escolher listas ou avulsas',
       'Logo Integrar substitui lápis nos PDFs',
+      'PDF sem texto "Trilha Integrar" no cabeçalho',
     ],
   },
   {

@@ -22,7 +22,6 @@ const styles = StyleSheet.create({
     marginBottom: 16,
   },
   logo: { width: 28, height: 28, marginRight: 12 },
-  brand: { fontSize: 12, fontWeight: 'bold' },
   title: { fontSize: 14, fontWeight: 'bold', marginLeft: 'auto' },
   grid: { flexDirection: 'row', flexWrap: 'wrap' },
   cell: {
@@ -50,7 +49,6 @@ export default function PrintableAnswerKey({ title = 'Lista de Exercícios', que
       <Page size="A4" style={styles.page}>
         <View style={styles.header} fixed>
           <Image src="/figuras/logos/integrar-logo-transparent.png" style={styles.logo} />
-          <Text style={styles.brand}>Trilha Integrar</Text>
           <Text style={styles.title}>{title} · Gabarito</Text>
         </View>
         <View style={styles.grid}>
@@ -61,7 +59,7 @@ export default function PrintableAnswerKey({ title = 'Lista de Exercícios', que
             </View>
           ))}
         </View>
-        <Text style={styles.footer} fixed>Trilha Integrar · gabarito</Text>
+        <Text style={styles.footer} fixed render={({ pageNumber, totalPages }) => `${pageNumber} / ${totalPages}`} />
       </Page>
     </Document>
   )
