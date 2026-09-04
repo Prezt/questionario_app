@@ -34,6 +34,11 @@ const ROUTES = {
   'DELETE /api/admin/delete-user':  { module: '../api/admin/[action].js', query: { action: 'delete-user' } },
   'DELETE /api/admin/delete-list':  { module: '../api/admin/[action].js', query: { action: 'delete-list' } },
   'PATCH /api/admin/set-role':      { module: '../api/admin/[action].js', query: { action: 'set-role' } },
+  // v3.0.0 — API de leitura do banco unificado (task #3)
+  'GET /api/questions/search':      '../api/questions/search.js',
+  'GET /api/questions/random':      '../api/questions/random.js',
+  'GET /api/questions/prova':       '../api/questions/prova.js',
+  'GET /api/contexts':              '../api/contexts.js',
 }
 
 function makeRes(raw) {
