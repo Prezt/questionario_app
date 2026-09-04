@@ -455,6 +455,8 @@ const CHANGELOG = [
     items: [
       'Nova ferramenta Gerar Lista para Impressão',
       'Layout do gerador de PDF refeito',
+      'PDF permite escolher listas ou avulsas',
+      'Logo Integrar substitui lápis nos PDFs',
     ],
   },
   {

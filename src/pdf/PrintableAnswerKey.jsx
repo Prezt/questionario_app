@@ -49,7 +49,7 @@ export default function PrintableAnswerKey({ title = 'Lista de Exercícios', que
     <Document title={`${title} — Gabarito`} author="Trilha Integrar">
       <Page size="A4" style={styles.page}>
         <View style={styles.header} fixed>
-          <Image src="/logo-192.png" style={styles.logo} />
+          <Image src="/figuras/logos/integrar-logo-transparent.png" style={styles.logo} />
           <Text style={styles.brand}>Trilha Integrar</Text>
           <Text style={styles.title}>{title} · Gabarito</Text>
         </View>
