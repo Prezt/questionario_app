@@ -1,9 +1,12 @@
 -- Run this once in the Vercel/Neon SQL console to initialize the schema.
 
+CREATE TYPE user_role AS ENUM ('user', 'prof', 'admin');
+
 CREATE TABLE IF NOT EXISTS users (
   id            SERIAL PRIMARY KEY,
   username      TEXT UNIQUE NOT NULL,
   password_hash TEXT NOT NULL,
+  role          user_role NOT NULL DEFAULT 'user',
   created_at    TIMESTAMPTZ DEFAULT NOW()
 );
 
@@ -65,3 +68,53 @@ CREATE TABLE IF NOT EXISTS explanations (
 
 -- Indexes
 CREATE INDEX IF NOT EXISTS idx_test_results_user_id ON test_results(user_id);
+
+-- Unified banco de questões de múltipla escolha
+CREATE TABLE IF NOT EXISTS multiple_choice_questions (
+  id            SERIAL PRIMARY KEY,
+
+  source        TEXT NOT NULL,
+  source_list   TEXT,
+  area          TEXT,
+  test          TEXT,
+  year          INTEGER,
+  number        INTEGER NOT NULL,
+
+  text          TEXT NOT NULL,
+  alternatives  JSONB NOT NULL,
+  answer        TEXT NOT NULL,
+  images        TEXT[] DEFAULT '{}',
+  tags          TEXT[] DEFAULT '{}',
+  disciplinas   TEXT[] DEFAULT '{}',
+  difficulty    INTEGER,
+  context_keys  TEXT[] DEFAULT '{}',
+  language      TEXT,
+
+  review        BOOLEAN DEFAULT FALSE,
+
+  created_at    TIMESTAMPTZ DEFAULT NOW(),
+  updated_at    TIMESTAMPTZ DEFAULT NOW(),
+
+  UNIQUE NULLS NOT DISTINCT (source, source_list, area, test, year, number, language)
+);
+
+CREATE INDEX IF NOT EXISTS idx_mcq_area        ON multiple_choice_questions(area);
+CREATE INDEX IF NOT EXISTS idx_mcq_year        ON multiple_choice_questions(year);
+CREATE INDEX IF NOT EXISTS idx_mcq_source      ON multiple_choice_questions(source);
+CREATE INDEX IF NOT EXISTS idx_mcq_tags        ON multiple_choice_questions USING GIN(tags);
+CREATE INDEX IF NOT EXISTS idx_mcq_disciplinas ON multiple_choice_questions USING GIN(disciplinas);
+
+-- Passagens de leitura compartilhadas entre multiplas questoes.
+-- multiple_choice_questions.context_keys aponta pra cada `key` daqui.
+-- text e reference nullable porque contextos so-imagem tem ambos vazios/null.
+CREATE TABLE IF NOT EXISTS contexts (
+  key        TEXT PRIMARY KEY,
+  title      TEXT,
+  subtitle   TEXT,
+  text       TEXT,
+  reference  TEXT,
+  images     TEXT[] DEFAULT '{}',
+
+  created_at TIMESTAMPTZ DEFAULT NOW(),
+  updated_at TIMESTAMPTZ DEFAULT NOW()
+);

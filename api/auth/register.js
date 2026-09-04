@@ -17,8 +17,8 @@ export default async function handler(req, res) {
     const sql = neon(process.env.DATABASE_URL)
     const hash = await bcrypt.hash(password, 10)
     const rows = await sql`
-      INSERT INTO users (username, password_hash)
-      VALUES (${username.toLowerCase().trim()}, ${hash})
+      INSERT INTO users (username, password_hash, role)
+      VALUES (${username.toLowerCase().trim()}, ${hash}, 'user')
       RETURNING id, username, role
     `
     const user = rows[0]

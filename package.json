@@ -15,16 +15,20 @@
     "test:watch": "vitest",
     "audit": "node scripts/extract-gabarito.js && node scripts/audit-questions.js && cp scripts/audit-report.json public/audit-report.json",
     "audit:gabarito": "node scripts/extract-gabarito.js",
+    "migrate:questions": "node --env-file=.env scripts/migrate-questions-to-db.js",
+    "migrate:contexts": "node --env-file=.env scripts/migrate-contexts-to-db.js",
     "build-page-map": "cd ../enem-parser && .venv/bin/python ../questionario_app/scripts/build-page-map.py --data-dir data --output ../questionario_app/public/question-pages.json"
   },
   "dependencies": {
     "@neondatabase/serverless": "^1.1.0",
+    "@react-pdf/renderer": "^4.9.0",
     "@vitejs/plugin-react": "^6.0.1",
     "bcryptjs": "^3.0.3",
     "jsonwebtoken": "^9.0.3",
     "katex": "^0.16.47",
     "react": "^19.2.5",
     "react-dom": "^19.2.5",
+    "tslib": "^2.8.1",
     "vite": "^8.0.8"
   },
   "devDependencies": {

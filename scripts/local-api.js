@@ -12,9 +12,12 @@ const ROUTES = {
   'POST /api/auth/register':        '../api/auth/register.js',
   'GET /api/results':               '../api/results/index.js',
   'POST /api/results':              '../api/results/index.js',
-  'GET /api/daily-challenge':       '../api/daily-challenge/index.js',
-  'POST /api/daily-challenge':      '../api/daily-challenge/index.js',
-  'POST /api/daily-challenge/result': '../api/daily-challenge/result.js',
+  // v3.0.0 — daily-challenge desativado temporariamente para caber no limite de
+  // 12 functions do plano Hobby. Rotas voltarao quando repensarmos a feature.
+  // Arquivos preservados em api/_daily-challenge/ (Vercel ignora prefixo _).
+  // 'GET /api/daily-challenge':       '../api/daily-challenge/index.js',
+  // 'POST /api/daily-challenge':      '../api/daily-challenge/index.js',
+  // 'POST /api/daily-challenge/result': '../api/daily-challenge/result.js',
   'POST /api/feedback':             '../api/feedback/index.js',
   // /api/explanations: locally backed by public/explanations.json so dev runs without Postgres.
   'GET /api/explanations':          './explanations-local.js',
@@ -34,6 +37,12 @@ const ROUTES = {
   'DELETE /api/admin/delete-user':  { module: '../api/admin/[action].js', query: { action: 'delete-user' } },
   'DELETE /api/admin/delete-list':  { module: '../api/admin/[action].js', query: { action: 'delete-list' } },
   'PATCH /api/admin/set-role':      { module: '../api/admin/[action].js', query: { action: 'set-role' } },
+  // v3.0.0 — API de leitura do banco unificado (task #3)
+  // Consolidado em [action].js pra economizar functions no plano Hobby.
+  'GET /api/questions/search':      { module: '../api/questions/[action].js', query: { action: 'search' } },
+  'GET /api/questions/random':      { module: '../api/questions/[action].js', query: { action: 'random' } },
+  'GET /api/questions/prova':       { module: '../api/questions/[action].js', query: { action: 'prova' } },
+  'GET /api/questions/contexts':    { module: '../api/questions/[action].js', query: { action: 'contexts' } },
 }
 
 function makeRes(raw) {
