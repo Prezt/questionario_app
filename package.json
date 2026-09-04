@@ -16,6 +16,7 @@
     "audit": "node scripts/extract-gabarito.js && node scripts/audit-questions.js && cp scripts/audit-report.json public/audit-report.json",
     "audit:gabarito": "node scripts/extract-gabarito.js",
     "migrate:questions": "node --env-file=.env scripts/migrate-questions-to-db.js",
+    "migrate:contexts": "node --env-file=.env scripts/migrate-contexts-to-db.js",
     "build-page-map": "cd ../enem-parser && .venv/bin/python ../questionario_app/scripts/build-page-map.py --data-dir data --output ../questionario_app/public/question-pages.json"
   },
   "dependencies": {

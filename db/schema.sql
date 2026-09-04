@@ -103,3 +103,18 @@ CREATE INDEX IF NOT EXISTS idx_mcq_year        ON multiple_choice_questions(year
 CREATE INDEX IF NOT EXISTS idx_mcq_source      ON multiple_choice_questions(source);
 CREATE INDEX IF NOT EXISTS idx_mcq_tags        ON multiple_choice_questions USING GIN(tags);
 CREATE INDEX IF NOT EXISTS idx_mcq_disciplinas ON multiple_choice_questions USING GIN(disciplinas);
+
+-- Passagens de leitura compartilhadas entre multiplas questoes.
+-- multiple_choice_questions.context_keys aponta pra cada `key` daqui.
+-- text e reference nullable porque contextos so-imagem tem ambos vazios/null.
+CREATE TABLE IF NOT EXISTS contexts (
+  key        TEXT PRIMARY KEY,
+  title      TEXT,
+  subtitle   TEXT,
+  text       TEXT,
+  reference  TEXT,
+  images     TEXT[] DEFAULT '{}',
+
+  created_at TIMESTAMPTZ DEFAULT NOW(),
+  updated_at TIMESTAMPTZ DEFAULT NOW()
+);
