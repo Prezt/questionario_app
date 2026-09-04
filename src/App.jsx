@@ -454,6 +454,7 @@ const CHANGELOG = [
     date: '04/09/2026',
     items: [
       'Nova ferramenta Gerar Lista para Impressão',
+      'Layout do gerador de PDF refeito',
     ],
   },
   {

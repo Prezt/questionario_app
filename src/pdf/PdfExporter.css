@@ -1,0 +1,48 @@
+/* Layout do formulario de gerar PDF. Reusa as classes qe-* do QuestionEditor
+   (shell, section, input, btn) e adiciona apenas o grid dos campos + hint. */
+
+.pdf-exporter-hint {
+  margin: 0 0 1rem;
+  color: var(--text-soft);
+  font-size: 0.9rem;
+  line-height: 1.45;
+}
+
+.pdf-exporter-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.9rem 1rem;
+}
+
+.pdf-exporter-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  font-size: 0.9rem;
+  color: var(--text);
+}
+
+.pdf-exporter-field--full {
+  grid-column: 1 / -1;
+}
+
+.pdf-exporter-field-label {
+  font-weight: 600;
+  color: var(--text-soft);
+  font-size: 0.82rem;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.pdf-exporter-actions {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 1.25rem;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 560px) {
+  .pdf-exporter-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
