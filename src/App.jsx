@@ -434,8 +434,8 @@ function formatTime(seconds) {
   return `${m}:${String(s).padStart(2, '0')}`
 }
 
-const APP_VERSION = '2.2.0'
-const APP_VERSION_DATE = '04/09/2026'
+const APP_VERSION = '3.0.1'
+const APP_VERSION_DATE = '05/09/2026'
 
 const REVIEW_STATUS = [
   { year: 2025, linguagens: true, humanas: true, natureza: true, matematica: true },
@@ -450,10 +450,23 @@ const REVIEW_STATUS = [
 
 const CHANGELOG = [
   {
-    version: '2.2.0',
+    version: '3.0.1',
+    date: '05/09/2026',
+    items: [
+      'Baixar Lista e Gabarito em botões separados',
+    ],
+  },
+  {
+    version: '3.0.0',
     date: '04/09/2026',
     items: [
       'Nova ferramenta Gerar Lista para Impressão',
+      'Layout do gerador de PDF refeito',
+      'PDF permite escolher listas ou avulsas',
+      'Logo Integrar substitui lápis nos PDFs',
+      'PDF sem texto "Trilha Integrar" no cabeçalho',
+      'Rodapé do PDF com marca do Projeto Integrar',
+      'Corrige nome do Projeto no rodapé do PDF',
     ],
   },
   {

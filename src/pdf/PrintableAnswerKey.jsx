@@ -22,7 +22,6 @@ const styles = StyleSheet.create({
     marginBottom: 16,
   },
   logo: { width: 28, height: 28, marginRight: 12 },
-  brand: { fontSize: 12, fontWeight: 'bold' },
   title: { fontSize: 14, fontWeight: 'bold', marginLeft: 'auto' },
   grid: { flexDirection: 'row', flexWrap: 'wrap' },
   cell: {
@@ -39,8 +38,10 @@ const styles = StyleSheet.create({
     bottom: 18,
     left: 48,
     right: 48,
-    fontSize: 8,
-    color: '#999',
+    fontSize: 7,
+    color: '#C9C9C9',
+    flexDirection: 'row',
+    justifyContent: 'space-between',
   },
 })
 
@@ -49,8 +50,7 @@ export default function PrintableAnswerKey({ title = 'Lista de Exercícios', que
     <Document title={`${title} — Gabarito`} author="Trilha Integrar">
       <Page size="A4" style={styles.page}>
         <View style={styles.header} fixed>
-          <Image src="/logo-192.png" style={styles.logo} />
-          <Text style={styles.brand}>Trilha Integrar</Text>
+          <Image src="/figuras/logos/integrar-logo-transparent.png" style={styles.logo} />
           <Text style={styles.title}>{title} · Gabarito</Text>
         </View>
         <View style={styles.grid}>
@@ -61,7 +61,10 @@ export default function PrintableAnswerKey({ title = 'Lista de Exercícios', que
             </View>
           ))}
         </View>
-        <Text style={styles.footer} fixed>Trilha Integrar · gabarito</Text>
+        <View style={styles.footer} fixed>
+          <Text>{`Projeto de Educação Comunitária Integrar · ${new Date().getFullYear()}`}</Text>
+          <Text render={({ pageNumber, totalPages }) => `${pageNumber} / ${totalPages}`} />
+        </View>
       </Page>
     </Document>
   )

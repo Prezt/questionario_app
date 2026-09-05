@@ -28,7 +28,6 @@ const styles = StyleSheet.create({
     marginBottom: 16,
   },
   logo: { width: 28, height: 28, marginRight: 12 },
-  brand: { fontSize: 12, fontWeight: 'bold' },
   title: { fontSize: 14, fontWeight: 'bold', marginLeft: 'auto' },
   question: { marginBottom: 20 },
   questionHeader: { flexDirection: 'row', marginBottom: 4 },
@@ -62,8 +61,8 @@ const styles = StyleSheet.create({
     bottom: 18,
     left: 48,
     right: 48,
-    fontSize: 8,
-    color: '#999',
+    fontSize: 7,
+    color: '#C9C9C9',
     flexDirection: 'row',
     justifyContent: 'space-between',
   },
@@ -72,17 +71,18 @@ const styles = StyleSheet.create({
 function Header({ title }) {
   return (
     <View style={styles.header} fixed>
-      <Image src="/logo-192.png" style={styles.logo} />
-      <Text style={styles.brand}>Trilha Integrar</Text>
+      <Image src="/figuras/logos/integrar-logo-transparent.png" style={styles.logo} />
       <Text style={styles.title}>{title}</Text>
     </View>
   )
 }
 
+const CURRENT_YEAR = new Date().getFullYear()
+
 function Footer() {
   return (
     <View style={styles.footer} fixed>
-      <Text>Trilha Integrar · lista de exercícios</Text>
+      <Text>{`Projeto de Educação Comunitária Integrar · ${CURRENT_YEAR}`}</Text>
       <Text render={({ pageNumber, totalPages }) => `${pageNumber} / ${totalPages}`} />
     </View>
   )
