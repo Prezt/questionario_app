@@ -454,6 +454,8 @@ const CHANGELOG = [
     date: '05/09/2026',
     items: [
       'Baixar Lista e Gabarito em botões separados',
+      'Nova paleta sóbria vermelho/vinho',
+      'Favicons coloridos por aba removidos',
     ],
   },
   {
@@ -1331,14 +1333,8 @@ export default function App() {
     setSelectedTest(tab === 'simule' ? 'ENEM' : null)
     if (tab !== 'ensine') setEnsineTool(null)
   }
-  useEffect(() => {
-    const FAVICON_COLOR_BY_TAB = { estude: 'red', listas: 'red', simule: 'amber', jogos: 'amber', pesquise: 'green', ensine: 'blue', administre: 'purple' }
-    const color = FAVICON_COLOR_BY_TAB[activeTab] ?? 'red'
-    const ico = document.querySelector('link[rel="icon"][type="image/x-icon"]')
-    const png = document.querySelector('link[rel="icon"][type="image/png"]')
-    if (ico) ico.href = `/favicon-${color}.ico`
-    if (png) png.href = `/favicon-${color}-32.png`
-  }, [activeTab])
+  // Favicon estático — a paleta v3 removeu o esquema colorido por aba.
+  // Mantido só o /favicon.ico + /favicon-32.png padrão.
 
   useEffect(() => {
     if (!sideMenuOpen) return

@@ -1,66 +1,72 @@
-/* ── Tokens — paleta Mochila ── */
+/* ── Tokens — paleta Integrar (v3.0.0)
+   Base neutra branco/preto/cinza + accents em vermelho/vinho,
+   inspirados no logo Trilha Integrar. */
 :root {
-  --bg: #fdf6e3;          /* shell — creme manteiga */
-  --surface: #fffbef;     /* painéis */
-  --card-bg: #ffffff;     /* card interno */
-  --text: #2b2236;
-  --text-soft: #6b5a76;
-  --border: rgba(107, 89, 118, 0.10);
-  --alt-bg: #fffbef;
-  --alt-hover-bg: #f2f8f0;
-  --alt-hover-border: #7ac08a;
-  --badge-bg: #6b3aa6;
-  --tag-bg: #ead8a8;
-  --tag-color: #6b4a18;
-  --feedback-bg: #ffe4d6;
-  --feedback-border: #e0a878;
-  --feedback-text: #a65a26;
-  --letter-bg: #ead8a8;
-  --letter-color: #5a4317;
-  --shadow: 0 2px 8px rgba(107, 89, 118, 0.08);
-  --accent: #7ac08a;
-  --accent-dark: #5fa56e;
-  --brand: #6b3aa6;
-  --toggle-bg: #ead8a8;
-  --toggle-color: #5a4317;
-  --figure-border: rgba(107, 89, 118, 0.14);
-  --rail-bg: #fffbef;
-  --rail-border: rgba(107, 89, 118, 0.08);
-  --rail-btn-border: #d4c8b8;
-  --rail-ok: #7ac08a;
-  --rail-bad: #e07c5a;
-  --rail-skip: #e0b768;
+  --bg: #FDFCFA;          /* branco quente sutil */
+  --surface: #FFFFFF;     /* painéis */
+  --card-bg: #FFFFFF;     /* card interno */
+  --text: #1A1A1A;
+  --text-soft: #6B6B68;
+  --border: rgba(0, 0, 0, 0.10);
+  --alt-bg: #F5F4F1;
+  --alt-hover-bg: #EFEDE8;
+  --alt-hover-border: #A31E29;
+  --badge-bg: #A31E29;
+  --tag-bg: #F0EEEA;
+  --tag-color: #4A4A47;
+  --feedback-bg: #FFF3F0;
+  --feedback-border: #E0A090;
+  --feedback-text: #7D3A2E;
+  --letter-bg: #F0EEEA;
+  --letter-color: #1A1A1A;
+  --shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  --accent: #A31E29;      /* vermelho vinho */
+  --accent-dark: #7D1620; /* hover */
+  --accent-soft: #FCE8EA; /* backgrounds leves */
+  --brand: #A31E29;
+  --toggle-bg: #F0EEEA;
+  --toggle-color: #1A1A1A;
+  --figure-border: rgba(0, 0, 0, 0.14);
+  --rail-bg: #FFFFFF;
+  --rail-border: rgba(0, 0, 0, 0.08);
+  --rail-btn-border: rgba(0, 0, 0, 0.15);
+  --rail-ok: #16A34A;
+  --rail-bad: #DC2626;
+  --rail-skip: #D97706;
 }
 
 .dark {
-  --bg: #1f1c2c;          /* shell — índigo profundo */
-  --surface: #2a263a;     /* painéis */
-  --card-bg: #332e48;     /* card interno */
-  --text: #f0e8f8;
-  --text-soft: #b8a8c8;
+  --bg: #171716;          /* neutro escuro quente */
+  --surface: #222220;
+  --card-bg: #262624;
+  --text: #EAEAE8;
+  --text-soft: #A8A8A4;
   --border: rgba(255, 255, 255, 0.08);
-  --alt-bg: #2a263a;
-  --alt-hover-bg: #2a3a30;
-  --alt-hover-border: #7ac08a;
-  --badge-bg: #d4a8f0;
-  --tag-bg: #3a3247;
-  --tag-color: #d4c8e0;
-  --feedback-bg: #3a2a26;
-  --feedback-border: #d49560;
-  --feedback-text: #f0a878;
-  --letter-bg: #3a3247;
-  --letter-color: #f0e0a8;
-  --shadow: 0 2px 12px rgba(0, 0, 0, 0.35);
-  --toggle-bg: #3a3247;
-  --toggle-color: #f0e8f8;
-  --figure-border: rgba(255, 255, 255, 0.18);
-  --rail-bg: #2a263a;
+  --alt-bg: #2A2A28;
+  --alt-hover-bg: #33322F;
+  --alt-hover-border: #C7202A;
+  --badge-bg: #C7202A;
+  --tag-bg: #33322F;
+  --tag-color: #D8D8D5;
+  --feedback-bg: #3A2A26;
+  --feedback-border: #D08070;
+  --feedback-text: #F0BFB0;
+  --letter-bg: #33322F;
+  --letter-color: #EAEAE8;
+  --shadow: 0 2px 12px rgba(0, 0, 0, 0.45);
+  --accent: #C7202A;      /* mais vibrante no escuro pra contrastar */
+  --accent-dark: #E33540;
+  --accent-soft: #3A1A1D;
+  --toggle-bg: #33322F;
+  --toggle-color: #EAEAE8;
+  --figure-border: rgba(255, 255, 255, 0.15);
+  --rail-bg: #222220;
   --rail-border: rgba(255, 255, 255, 0.08);
-  --rail-btn-border: #4a4458;
-  --rail-ok: #a8d4b8;
-  --rail-bad: #f0846e;
-  --rail-skip: #f0c878;
-  --brand: #d4a8f0;
+  --rail-btn-border: #3A3A38;
+  --rail-ok: #4ADE80;
+  --rail-bad: #F87171;
+  --rail-skip: #FBBF24;
+  --brand: #C7202A;
 }
 
 /* ── Tipografia base ── */
