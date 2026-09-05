@@ -457,6 +457,8 @@ const CHANGELOG = [
       'Nova paleta sóbria vermelho/vinho',
       'Favicons coloridos por aba removidos',
       'Nova tela Início com atalhos rápidos',
+      'Painel Admin e abas seguem paleta vermelho',
+      'Cards do Início com ícones SVG',
     ],
   },
   {
@@ -936,6 +938,35 @@ function LogoutIcon() {
       {/* Seta de saída */}
       <path d="M15 12h6" />
       <path d="M18 9l3 3-3 3" />
+    </svg>
+  )
+}
+
+function ClipboardCheckIcon() {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
+      <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2" />
+      <rect x="8" y="2" width="8" height="4" rx="1" />
+      <path d="M9 14l2 2 4-4" />
+    </svg>
+  )
+}
+
+function PenIcon() {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
+      <path d="M12 20h9" />
+      <path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z" />
+    </svg>
+  )
+}
+
+function PrinterIcon() {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
+      <polyline points="6 9 6 2 18 2 18 9" />
+      <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2" />
+      <rect x="6" y="14" width="12" height="8" />
     </svg>
   )
 }
@@ -3261,7 +3292,7 @@ export default function App() {
             {activeTab === 'inicio' && (
               <div className="home-tab-content home-tab-content--inicio">
                 <div className="home-inicio">
-                  <h1 className="home-inicio-title">Bem-vindo à Trilha Integrar</h1>
+                  <h1 className="home-inicio-title">Bem-vindo!</h1>
                   <p className="home-inicio-subtitle">Escolha um caminho para começar</p>
                   <div className="home-inicio-cards">
                     <button
@@ -3269,7 +3300,7 @@ export default function App() {
                       className="home-inicio-card"
                       onClick={() => switchTab('estude')}
                     >
-                      <span className="home-inicio-card-icon" aria-hidden="true">✎</span>
+                      <span className="home-inicio-card-icon"><ClipboardCheckIcon /></span>
                       <span className="home-inicio-card-title">Responder Questões</span>
                       <span className="home-inicio-card-desc">
                         Simulados, listas ou estudo por disciplina
@@ -3281,7 +3312,7 @@ export default function App() {
                         className="home-inicio-card"
                         onClick={() => { switchTab('ensine'); setEnsineTool(null) }}
                       >
-                        <span className="home-inicio-card-icon" aria-hidden="true">✍</span>
+                        <span className="home-inicio-card-icon"><PenIcon /></span>
                         <span className="home-inicio-card-title">Escrever Questões</span>
                         <span className="home-inicio-card-desc">
                           Criar listas, questões ou explicações
@@ -3294,7 +3325,7 @@ export default function App() {
                         className="home-inicio-card"
                         onClick={() => { switchTab('ensine'); setEnsineTool('gerar-pdf') }}
                       >
-                        <span className="home-inicio-card-icon" aria-hidden="true">⎙</span>
+                        <span className="home-inicio-card-icon"><PrinterIcon /></span>
                         <span className="home-inicio-card-title">Gerar Lista para Impressão</span>
                         <span className="home-inicio-card-desc">
                           Baixar PDF de uma lista salva ou avulsas

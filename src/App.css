@@ -2527,7 +2527,7 @@ body {
   color: #fff;
 }
 
-/* ── Tab accent: unified Mochila identity (lilás --brand) ── */
+/* ── Tab accent: unified Integrar identity (vermelho vinho --brand) ── */
 .home-screen--estude,
 .home-screen--listas,
 .home-screen--simule,
@@ -2536,9 +2536,9 @@ body {
 .home-screen--pesquise,
 .home-screen--administre {
   --tab-accent: var(--brand);
-  --tab-accent-dark: #5c2f8c;
-  --tab-accent-shadow: rgba(107, 58, 166, 0.4);
-  --tab-accent-shadow-strong: rgba(107, 58, 166, 0.5);
+  --tab-accent-dark: var(--accent-dark);
+  --tab-accent-shadow: rgba(163, 30, 41, 0.4);
+  --tab-accent-shadow-strong: rgba(163, 30, 41, 0.5);
 }
 .dark .home-screen--estude,
 .dark .home-screen--listas,
@@ -2547,16 +2547,15 @@ body {
 .dark .home-screen--ensine,
 .dark .home-screen--pesquise,
 .dark .home-screen--administre {
-  --tab-accent-dark: #b890e0;
-  --tab-accent-shadow: rgba(212, 168, 240, 0.32);
-  --tab-accent-shadow-strong: rgba(212, 168, 240, 0.42);
+  --tab-accent-dark: var(--accent-dark);
+  --tab-accent-shadow: rgba(199, 32, 42, 0.4);
+  --tab-accent-shadow-strong: rgba(199, 32, 42, 0.5);
 }
 
 .home-screen--pesquise .qe-picker-item--clickable {
   cursor: pointer;
 }
-/* Embedded admin panel inside the Administre tab: drop the full-screen padding/max-width
-   and let the tab's purple accent win over the panel's own hardcoded --accent. */
+/* Embedded admin panel inside the Administre tab: drop the full-screen padding/max-width. */
 .admin-panel--embedded {
   padding: 0;
   max-width: none;
@@ -2564,8 +2563,6 @@ body {
   margin: 0;
   background: transparent;
   box-shadow: none;
-  --accent: var(--tab-accent);
-  --accent-dark: var(--tab-accent-dark);
 }
 /* ── Top-level home header + tab strip ── */
 .home-header {
@@ -3139,10 +3136,14 @@ body {
 }
 .home-inicio-card:active { transform: translateY(0); }
 .home-inicio-card-icon {
-  font-size: 2rem;
-  line-height: 1;
   color: var(--accent);
   margin-bottom: 0.35rem;
+  line-height: 0;
+  display: inline-flex;
+}
+.home-inicio-card-icon svg {
+  width: 32px;
+  height: 32px;
 }
 .home-inicio-card-title {
   font-size: 1.05rem;
@@ -5049,11 +5050,6 @@ body {
   box-sizing: border-box;
   background: var(--bg);
   color: var(--text);
-  /* Purple accent for the admin panel */
-  --accent: #7c3aed;
-}
-.dark .admin-panel {
-  --accent: #a855f7;
 }
 
 .admin-header {
