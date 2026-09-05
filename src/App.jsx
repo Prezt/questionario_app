@@ -454,6 +454,9 @@ const CHANGELOG = [
     date: '05/09/2026',
     items: [
       'Baixar Lista e Gabarito em botões separados',
+      'Nova paleta sóbria vermelho/vinho',
+      'Favicons coloridos por aba removidos',
+      'Nova tela Início com atalhos rápidos',
     ],
   },
   {
@@ -1301,7 +1304,7 @@ export default function App() {
   const [headerMenuOpen, setHeaderMenuOpen] = useState(false)
   const [sideMenuOpen, setSideMenuOpen] = useState(false)
   const [activeTab, setActiveTab] = useState(() => {
-    const VALID = ['estude', 'listas', 'simule', 'jogos', 'pesquise', 'ensine', 'administre']
+    const VALID = ['inicio', 'estude', 'listas', 'simule', 'jogos', 'pesquise', 'ensine', 'administre']
     // Guest (sem token) só pode estar na aba Jogos.
     const hasToken = typeof window !== 'undefined' && !!localStorage.getItem('token')
     if (!hasToken) return 'jogos'
@@ -1314,8 +1317,8 @@ export default function App() {
     }
     try {
       const stored = localStorage.getItem('trilha-integrar-active-tab')
-      return VALID.includes(stored) ? stored : 'estude'
-    } catch { return 'estude' }
+      return VALID.includes(stored) ? stored : 'inicio'
+    } catch { return 'inicio' }
   })
   const switchTab = (tab) => {
     // Guest só pode ficar na aba Jogos; outras opções abrem a tela de login.
@@ -1331,14 +1334,8 @@ export default function App() {
     setSelectedTest(tab === 'simule' ? 'ENEM' : null)
     if (tab !== 'ensine') setEnsineTool(null)
   }
-  useEffect(() => {
-    const FAVICON_COLOR_BY_TAB = { estude: 'red', listas: 'red', simule: 'amber', jogos: 'amber', pesquise: 'green', ensine: 'blue', administre: 'purple' }
-    const color = FAVICON_COLOR_BY_TAB[activeTab] ?? 'red'
-    const ico = document.querySelector('link[rel="icon"][type="image/x-icon"]')
-    const png = document.querySelector('link[rel="icon"][type="image/png"]')
-    if (ico) ico.href = `/favicon-${color}.ico`
-    if (png) png.href = `/favicon-${color}-32.png`
-  }, [activeTab])
+  // Favicon estático — a paleta v3 removeu o esquema colorido por aba.
+  // Mantido só o /favicon.ico + /favicon-32.png padrão.
 
   useEffect(() => {
     if (!sideMenuOpen) return
@@ -3069,6 +3066,17 @@ export default function App() {
                 </div>
                 <div className="home-side-menu-body">
                   <nav className="home-side-menu-nav" role="tablist" aria-label="Modo">
+                    {token && (
+                      <button
+                        type="button"
+                        role="tab"
+                        aria-selected={activeTab === 'inicio'}
+                        className={`home-side-menu-item home-side-menu-item--inicio${activeTab === 'inicio' ? ' active' : ''}`}
+                        onClick={() => { switchTab('inicio'); setSideMenuOpen(false) }}
+                      >
+                        Início
+                      </button>
+                    )}
                     <button
                       type="button"
                       role="tab"
@@ -3250,6 +3258,53 @@ export default function App() {
           )}
 
           <div className="home-card home-card--wide">
+            {activeTab === 'inicio' && (
+              <div className="home-tab-content home-tab-content--inicio">
+                <div className="home-inicio">
+                  <h1 className="home-inicio-title">Bem-vindo à Trilha Integrar</h1>
+                  <p className="home-inicio-subtitle">Escolha um caminho para começar</p>
+                  <div className="home-inicio-cards">
+                    <button
+                      type="button"
+                      className="home-inicio-card"
+                      onClick={() => switchTab('estude')}
+                    >
+                      <span className="home-inicio-card-icon" aria-hidden="true">✎</span>
+                      <span className="home-inicio-card-title">Responder Questões</span>
+                      <span className="home-inicio-card-desc">
+                        Simulados, listas ou estudo por disciplina
+                      </span>
+                    </button>
+                    {(user?.role === 'prof' || user?.role === 'admin') && (
+                      <button
+                        type="button"
+                        className="home-inicio-card"
+                        onClick={() => { switchTab('ensine'); setEnsineTool(null) }}
+                      >
+                        <span className="home-inicio-card-icon" aria-hidden="true">✍</span>
+                        <span className="home-inicio-card-title">Escrever Questões</span>
+                        <span className="home-inicio-card-desc">
+                          Criar listas, questões ou explicações
+                        </span>
+                      </button>
+                    )}
+                    {(user?.role === 'prof' || user?.role === 'admin') && (
+                      <button
+                        type="button"
+                        className="home-inicio-card"
+                        onClick={() => { switchTab('ensine'); setEnsineTool('gerar-pdf') }}
+                      >
+                        <span className="home-inicio-card-icon" aria-hidden="true">⎙</span>
+                        <span className="home-inicio-card-title">Gerar Lista para Impressão</span>
+                        <span className="home-inicio-card-desc">
+                          Baixar PDF de uma lista salva ou avulsas
+                        </span>
+                      </button>
+                    )}
+                  </div>
+                </div>
+              </div>
+            )}
             {activeTab === 'estude' && (
               <div className="home-tab-content">
                 <div className="home-area-section">
