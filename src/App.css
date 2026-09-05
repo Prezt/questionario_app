@@ -3091,6 +3091,75 @@ body {
   gap: 1rem;
 }
 
+/* ── Inicio: 3 CTAs (Responder / Escrever / Imprimir) ── */
+.home-tab-content--inicio {
+  padding: 1rem 0.5rem 2rem;
+}
+.home-inicio {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+.home-inicio-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0.5rem 0 0.35rem;
+  color: var(--text);
+}
+.home-inicio-subtitle {
+  font-size: 0.95rem;
+  color: var(--text-soft);
+  margin: 0 0 2rem;
+}
+.home-inicio-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1rem;
+}
+.home-inicio-card {
+  background: var(--card-bg);
+  border: 1.5px solid var(--border);
+  border-radius: 16px;
+  padding: 1.5rem 1.25rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.6rem;
+  cursor: pointer;
+  transition: transform 0.15s, border-color 0.15s, box-shadow 0.15s;
+  color: var(--text);
+  font-family: inherit;
+  text-align: center;
+}
+.home-inicio-card:hover {
+  border-color: var(--accent);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+}
+.home-inicio-card:active { transform: translateY(0); }
+.home-inicio-card-icon {
+  font-size: 2rem;
+  line-height: 1;
+  color: var(--accent);
+  margin-bottom: 0.35rem;
+}
+.home-inicio-card-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--text);
+}
+.home-inicio-card-desc {
+  font-size: 0.85rem;
+  color: var(--text-soft);
+  line-height: 1.4;
+}
+@media (max-width: 640px) {
+  .home-inicio-title { font-size: 1.25rem; }
+  .home-inicio-cards { gap: 0.75rem; }
+  .home-inicio-card { padding: 1.15rem 1rem; }
+}
+
 .home-ensine-message {
   font-size: 0.92rem;
   color: var(--text-soft);
