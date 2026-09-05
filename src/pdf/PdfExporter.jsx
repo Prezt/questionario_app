@@ -201,23 +201,24 @@ export default function PdfExporter({ token, onClose }) {
     setListName('')
   }
 
-  async function handleGenerate() {
+  async function generatePdf(kind) {
     if (!selected.length) return
     setBusy(true)
     setGenError(null)
     try {
       const title = listName || 'Lista de Exercícios'
       const slug = slugify(listName || title)
-
-      const listBlob = await pdf(
-        <PrintableList title={title} questions={selected} contexts={contextMap} />
-      ).toBlob()
-      downloadBlob(listBlob, `${slug}-questoes.pdf`)
-
-      const keyBlob = await pdf(
-        <PrintableAnswerKey title={title} questions={selected} />
-      ).toBlob()
-      downloadBlob(keyBlob, `${slug}-gabarito.pdf`)
+      if (kind === 'list') {
+        const blob = await pdf(
+          <PrintableList title={title} questions={selected} contexts={contextMap} />
+        ).toBlob()
+        downloadBlob(blob, `${slug}-questoes.pdf`)
+      } else {
+        const blob = await pdf(
+          <PrintableAnswerKey title={title} questions={selected} />
+        ).toBlob()
+        downloadBlob(blob, `${slug}-gabarito.pdf`)
+      }
     } catch (err) {
       setGenError(err.message ?? String(err))
     } finally {
@@ -410,10 +411,18 @@ export default function PdfExporter({ token, onClose }) {
               <button
                 type="button"
                 className="qe-btn qe-btn--primary"
-                onClick={handleGenerate}
+                onClick={() => generatePdf('list')}
                 disabled={busy || !selected.length}
               >
-                {busy ? 'Gerando…' : `Gerar PDFs (${selected.length})`}
+                {busy ? 'Gerando…' : `Baixar Lista (${selected.length})`}
+              </button>
+              <button
+                type="button"
+                className="qe-btn qe-btn--ghost"
+                onClick={() => generatePdf('key')}
+                disabled={busy || !selected.length}
+              >
+                Baixar Gabarito
               </button>
             </div>
           </section>
