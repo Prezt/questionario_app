@@ -2534,6 +2534,9 @@ body {
 .home-screen--jogos,
 .home-screen--ensine,
 .home-screen--pesquise,
+.home-screen--pesquisar,
+.home-screen--responder,
+.home-screen--imprimir,
 .home-screen--administre {
   --tab-accent: var(--brand);
   --tab-accent-dark: var(--accent-dark);
@@ -2546,13 +2549,17 @@ body {
 .dark .home-screen--jogos,
 .dark .home-screen--ensine,
 .dark .home-screen--pesquise,
+.dark .home-screen--pesquisar,
+.dark .home-screen--responder,
+.dark .home-screen--imprimir,
 .dark .home-screen--administre {
   --tab-accent-dark: var(--accent-dark);
   --tab-accent-shadow: rgba(199, 32, 42, 0.4);
   --tab-accent-shadow-strong: rgba(199, 32, 42, 0.5);
 }
 
-.home-screen--pesquise .qe-picker-item--clickable {
+.home-screen--pesquise .qe-picker-item--clickable,
+.home-screen--pesquisar .qe-picker-item--clickable {
   cursor: pointer;
 }
 /* Embedded admin panel inside the Administre tab: drop the full-screen padding/max-width. */
@@ -3719,18 +3726,24 @@ body {
   }
 }
 
-/* Pesquise: same width as every other tab; only padding + child stretching is special. */
-.home-screen--pesquise .home-card.home-card--wide {
+/* Pesquisar: same width as every other tab; only padding + child stretching is special. */
+.home-screen--pesquise .home-card.home-card--wide,
+.home-screen--pesquisar .home-card.home-card--wide {
   padding: 1.5rem 1rem 2rem;
 }
 .home-screen--pesquise .home-tab-content,
 .home-screen--pesquise .qe-picker,
 .home-screen--pesquise .home-test-seg,
-.home-screen--pesquise .home-dropdown {
+.home-screen--pesquise .home-dropdown,
+.home-screen--pesquisar .home-tab-content,
+.home-screen--pesquisar .qe-picker,
+.home-screen--pesquisar .home-test-seg,
+.home-screen--pesquisar .home-dropdown {
   width: 100%;
   align-self: stretch;
 }
-.home-screen--pesquise .home-tab-content {
+.home-screen--pesquise .home-tab-content,
+.home-screen--pesquisar .home-tab-content {
   align-items: stretch;
 }
 

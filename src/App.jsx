@@ -1161,6 +1161,8 @@ export default function App() {
   const [user, setUser] = useState(null)
   // Active tool inside the Ensine tab: null = tool launcher, otherwise the tool id.
   const [ensineTool, setEnsineTool] = useState(null)
+  // v3.0.0: modo ativo da aba Responder Questões ('prova' | 'sorteio' | 'trilha' | null).
+  const [responderMode, setResponderMode] = useState(null)
   useEffect(() => {
     const p = window.location.pathname
     if (
@@ -1334,24 +1336,38 @@ export default function App() {
   const [optionsOpen, setOptionsOpen] = useState(false)
   const [headerMenuOpen, setHeaderMenuOpen] = useState(false)
   const [sideMenuOpen, setSideMenuOpen] = useState(false)
+  // v3.0.0: 4 abas fixas — inicio, jogos, pesquisar, responder, imprimir.
+  // 'ensine' e 'administre' seguem vivos como estados internos durante a Onda 1
+  // (movem pro dropdown do avatar em Onda 4). IDs antigos de aluno viram
+  // 'responder' via LEGACY_TAB_MAP pra preservar deep-links no localStorage.
+  const VALID_TABS = ['inicio', 'jogos', 'pesquisar', 'responder', 'imprimir', 'ensine', 'administre']
+  const LEGACY_TAB_MAP = {
+    pesquise: 'pesquisar',
+    simule: 'responder',
+    estude: 'responder',
+    listas: 'responder',
+  }
+  const normalizeTab = (t) => LEGACY_TAB_MAP[t] || t
   const [activeTab, setActiveTab] = useState(() => {
-    const VALID = ['inicio', 'estude', 'listas', 'simule', 'jogos', 'pesquise', 'ensine', 'administre']
+    const isValid = (t) => VALID_TABS.includes(t)
     // Guest (sem token) só pode estar na aba Jogos.
     const hasToken = typeof window !== 'undefined' && !!localStorage.getItem('token')
     if (!hasToken) return 'jogos'
-    // Deep-link via path (e.g. /ensine). URL is rewritten back to / by the effect above for cleanliness.
+    // Deep-link via path (e.g. /pesquisar). URL is rewritten back to / by the effect above for cleanliness.
     if (typeof window !== 'undefined') {
       const p = window.location.pathname.replace(/^\/+|\/+$/g, '')
-      if (VALID.includes(p)) return p
+      const normalized = normalizeTab(p)
+      if (isValid(normalized)) return normalized
       // Mode-specific deeplinks land on the Jogos tab.
       if (p === 'milhao' || p === 'jogos/milhao') return 'jogos'
     }
     try {
-      const stored = localStorage.getItem('trilha-integrar-active-tab')
-      return VALID.includes(stored) ? stored : 'inicio'
+      const stored = normalizeTab(localStorage.getItem('trilha-integrar-active-tab'))
+      return isValid(stored) ? stored : 'inicio'
     } catch { return 'inicio' }
   })
-  const switchTab = (tab) => {
+  const switchTab = (rawTab) => {
+    const tab = normalizeTab(rawTab)
     // Guest só pode ficar na aba Jogos; outras opções abrem a tela de login.
     if (!token && tab !== 'jogos') {
       setPhase('login')
@@ -1362,8 +1378,9 @@ export default function App() {
     setSelectedYear(null)
     setSelectedDay(null)
     setSelectedIntegrarYear(null)
-    setSelectedTest(tab === 'simule' ? 'ENEM' : null)
-    if (tab !== 'ensine') setEnsineTool(null)
+    setSelectedTest(null)
+    setEnsineTool(null)
+    setResponderMode(null)
   }
   // Favicon estático — a paleta v3 removeu o esquema colorido por aba.
   // Mantido só o /favicon.ico + /favicon-32.png padrão.
@@ -3120,32 +3137,10 @@ export default function App() {
 
                     {token && (
                       <>
-                        <details className="home-side-menu-group">
-                          <summary className="home-side-menu-item home-side-menu-group-header">
-                            <span>ENEM</span>
-                          </summary>
-                          <div className="home-side-menu-group-items">
-                            {[
-                              { id: 'simule', label: 'Provas Completas' },
-                              { id: 'estude', label: 'Por Matéria' },
-                              { id: 'pesquise', label: 'Pesquisar' },
-                            ].map(({ id, label }) => (
-                              <button
-                                key={id}
-                                type="button"
-                                role="tab"
-                                aria-selected={activeTab === id}
-                                className={`home-side-menu-item home-side-menu-item--sub home-side-menu-item--${id}${activeTab === id ? ' active' : ''}`}
-                                onClick={() => { switchTab(id); setSideMenuOpen(false) }}
-                              >
-                                {label}
-                              </button>
-                            ))}
-                          </div>
-                        </details>
-
                         {[
-                          { id: 'listas', label: 'Listas de Exercícios', show: true },
+                          { id: 'pesquisar', label: 'Pesquisar Questões', show: true },
+                          { id: 'responder', label: 'Responder Questões', show: true },
+                          { id: 'imprimir', label: 'Imprimir Lista', show: user?.role === 'prof' || user?.role === 'admin' },
                           { id: 'ensine', label: 'Criar Material', show: user?.role === 'prof' || user?.role === 'admin' },
                           { id: 'administre', label: 'Administrar', show: user?.role === 'admin' },
                         ].filter((t) => t.show).map(({ id, label }) => (
@@ -3298,12 +3293,12 @@ export default function App() {
                     <button
                       type="button"
                       className="home-inicio-card"
-                      onClick={() => switchTab('estude')}
+                      onClick={() => switchTab('responder')}
                     >
                       <span className="home-inicio-card-icon"><ClipboardCheckIcon /></span>
                       <span className="home-inicio-card-title">Responder Questões</span>
                       <span className="home-inicio-card-desc">
-                        Simulados, listas ou estudo por disciplina
+                        Prova completa, sorteio ou trilhas
                       </span>
                     </button>
                     {(user?.role === 'prof' || user?.role === 'admin') && (
@@ -3323,7 +3318,7 @@ export default function App() {
                       <button
                         type="button"
                         className="home-inicio-card"
-                        onClick={() => { switchTab('ensine'); setEnsineTool('gerar-pdf') }}
+                        onClick={() => { switchTab('imprimir'); setEnsineTool('gerar-pdf') }}
                       >
                         <span className="home-inicio-card-icon"><PrinterIcon /></span>
                         <span className="home-inicio-card-title">Gerar Lista para Impressão</span>
@@ -3874,7 +3869,7 @@ export default function App() {
               </div>
             )}
 
-            {activeTab === 'pesquise' && (
+            {activeTab === 'pesquisar' && (
               <div className="home-tab-content">
                 <Suspense fallback={<p className="qe-loading">Carregando…</p>}>
                   <EnemPicker
@@ -3884,6 +3879,67 @@ export default function App() {
                     onSelect={(q) => startSingleQuestionStudy(q)}
                   />
                 </Suspense>
+              </div>
+            )}
+
+            {activeTab === 'responder' && (
+              <div className="home-tab-content home-tab-content--responder">
+                <div className="home-inicio">
+                  <h1 className="home-inicio-title">Responder Questões</h1>
+                  <p className="home-inicio-subtitle">Escolha um modo de estudo</p>
+                  <div className="home-inicio-cards">
+                    <button
+                      type="button"
+                      className="home-inicio-card"
+                      onClick={() => setResponderMode('prova')}
+                    >
+                      <span className="home-inicio-card-icon"><ClipboardCheckIcon /></span>
+                      <span className="home-inicio-card-title">Prova Completa</span>
+                      <span className="home-inicio-card-desc">
+                        Simulado inteiro por área e ano
+                      </span>
+                    </button>
+                    <button
+                      type="button"
+                      className="home-inicio-card"
+                      onClick={() => setResponderMode('sorteio')}
+                    >
+                      <span className="home-inicio-card-icon"><ClipboardCheckIcon /></span>
+                      <span className="home-inicio-card-title">Sorteio</span>
+                      <span className="home-inicio-card-desc">
+                        5, 10 ou 20 questões aleatórias
+                      </span>
+                    </button>
+                    <button
+                      type="button"
+                      className="home-inicio-card"
+                      onClick={() => setResponderMode('trilha')}
+                    >
+                      <span className="home-inicio-card-icon"><ClipboardCheckIcon /></span>
+                      <span className="home-inicio-card-title">Trilhas</span>
+                      <span className="home-inicio-card-desc">
+                        Conjuntos temáticos curados
+                      </span>
+                    </button>
+                  </div>
+                  <p className="home-ensine-message" style={{ marginTop: '1.5rem', opacity: 0.7 }}>
+                    Conteúdo dos modos chega nas próximas etapas da v3.0.0.
+                  </p>
+                </div>
+              </div>
+            )}
+
+            {activeTab === 'imprimir' && (
+              <div className="home-tab-content">
+                {(user?.role === 'prof' || user?.role === 'admin') ? (
+                  <Suspense fallback={<p className="qe-loading">Carregando…</p>}>
+                    <PdfExporter token={token} onClose={() => switchTab('inicio')} />
+                  </Suspense>
+                ) : (
+                  <p className="home-ensine-message">
+                    Esta área é para professores. Fale com seu professor se você acredita que deveria ter acesso.
+                  </p>
+                )}
               </div>
             )}
 
