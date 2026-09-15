@@ -2624,6 +2624,98 @@ body {
   gap: 0.4rem;
 }
 
+/* v3.0.0: brand button (logo + title) — click volta para Início */
+.home-header-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  background: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  color: var(--text);
+  -webkit-tap-highlight-color: transparent;
+  margin-right: auto;
+}
+.home-header-brand:hover .home-header-title {
+  color: var(--tab-accent, var(--accent));
+}
+
+/* v3.0.0: avatar button no header */
+.home-avatar-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.2rem;
+  height: 2.2rem;
+  border: 1.5px solid var(--border);
+  border-radius: 999px;
+  background: var(--card-bg);
+  color: var(--text);
+  cursor: pointer;
+  padding: 0;
+  flex-shrink: 0;
+  font-weight: 800;
+  -webkit-tap-highlight-color: transparent;
+  transition: background 0.15s, border-color 0.15s, color 0.15s;
+}
+.home-avatar-btn:hover,
+.home-avatar-btn.active,
+.home-avatar-btn[aria-expanded="true"] {
+  border-color: var(--tab-accent, var(--accent));
+  color: var(--tab-accent, var(--accent));
+}
+.home-avatar-btn--guest {
+  width: auto;
+  border-radius: 999px;
+  padding: 0 0.85rem;
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+.home-avatar-initial {
+  font-size: 0.95rem;
+  line-height: 1;
+}
+
+/* v3.0.0: barra horizontal de abas fixas */
+.home-tabs {
+  display: flex;
+  align-items: stretch;
+  gap: 0.35rem;
+  width: 100%;
+  padding: 0.25rem;
+  border-radius: 999px;
+  border: 1.5px solid var(--border);
+  background: var(--alt-bg);
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+.home-tabs::-webkit-scrollbar { display: none; }
+
+.home-tab {
+  flex: 1 1 auto;
+  min-height: 2.2rem;
+  padding: 0 0.9rem;
+  border: none;
+  border-radius: 999px;
+  background: transparent;
+  color: var(--text-soft);
+  font-size: 0.88rem;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background 0.15s, color 0.15s;
+  -webkit-tap-highlight-color: transparent;
+}
+.home-tab:hover {
+  color: var(--text);
+}
+.home-tab.active {
+  background: var(--tab-accent, var(--accent));
+  color: #fff;
+}
+
 /* Legacy inline tab strip — replaced by the hamburger + side drawer menu */
 .home-tab-strip {
   display: flex;

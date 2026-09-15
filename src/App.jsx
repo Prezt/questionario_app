@@ -3109,31 +3109,64 @@ export default function App() {
             <div className="home-header-row">
               <button
                 type="button"
-                className="home-menu-btn"
-                onClick={() => setSideMenuOpen(true)}
-                aria-label="Abrir menu"
-                aria-expanded={sideMenuOpen}
+                className="home-header-brand"
+                onClick={() => switchTab('inicio')}
+                aria-label="Ir para Início"
               >
-                <MenuIcon />
+                <img
+                  src="/figuras/logos/integrar-logo-transparent.png"
+                  alt="Integrar"
+                  className="home-header-logo"
+                />
+                <span className="home-header-title">Trilha Integrar</span>
               </button>
-              <img
-                src="/figuras/logos/integrar-logo-transparent.png"
-                alt="Integrar"
-                className="home-header-logo"
-              />
-              <span className="home-header-title">Trilha Integrar</span>
               <ChangelogSection />
               <div className="home-header-actions">
-                <button
-                  type="button"
-                  className="theme-toggle home-theme-btn"
-                  onClick={() => setDark((d) => !d)}
-                  aria-label="Alternar tema"
-                >
-                  {dark ? <SunIcon /> : <MoonIcon />}
-                </button>
+                {token ? (
+                  <button
+                    type="button"
+                    className={`home-avatar-btn${sideMenuOpen ? ' active' : ''}`}
+                    onClick={() => setSideMenuOpen((o) => !o)}
+                    aria-label="Menu do usuário"
+                    aria-expanded={sideMenuOpen}
+                  >
+                    <span className="home-avatar-initial">
+                      {(user?.username ?? '?').charAt(0).toUpperCase()}
+                    </span>
+                  </button>
+                ) : (
+                  <button
+                    type="button"
+                    className="home-avatar-btn home-avatar-btn--guest"
+                    onClick={() => setPhase('login')}
+                    aria-label="Fazer login"
+                  >
+                    Entrar
+                  </button>
+                )}
               </div>
             </div>
+
+            {/* v3.0.0: barra horizontal de abas fixas */}
+            <nav className="home-tabs" role="tablist" aria-label="Navegação">
+              {[
+                { id: 'jogos',     label: 'Jogos',              show: true },
+                { id: 'pesquisar', label: 'Pesquisar Questões', show: !!token },
+                { id: 'responder', label: 'Responder Questões', show: !!token },
+                { id: 'imprimir',  label: 'Imprimir Lista',     show: !!token && (user?.role === 'prof' || user?.role === 'admin') },
+              ].filter((t) => t.show).map(({ id, label }) => (
+                <button
+                  key={id}
+                  type="button"
+                  role="tab"
+                  aria-selected={activeTab === id}
+                  className={`home-tab${activeTab === id ? ' active' : ''}`}
+                  onClick={() => switchTab(id)}
+                >
+                  {label}
+                </button>
+              ))}
+            </nav>
           </header>
 
           {sideMenuOpen && (
@@ -3162,60 +3195,26 @@ export default function App() {
                   </button>
                 </div>
                 <div className="home-side-menu-body">
-                  <nav className="home-side-menu-nav" role="tablist" aria-label="Modo">
-                    {token && (
+                  {(user?.role === 'prof' || user?.role === 'admin') && (
+                    <nav className="home-side-menu-nav" aria-label="Atalhos de professor">
                       <button
                         type="button"
-                        role="tab"
-                        aria-selected={activeTab === 'inicio'}
-                        className={`home-side-menu-item home-side-menu-item--inicio${activeTab === 'inicio' ? ' active' : ''}`}
-                        onClick={() => { switchTab('inicio'); setSideMenuOpen(false) }}
+                        className={`home-side-menu-item home-side-menu-item--ensine${activeTab === 'ensine' ? ' active' : ''}`}
+                        onClick={() => { switchTab('ensine'); setSideMenuOpen(false) }}
                       >
-                        Início
+                        Escrever Questões
                       </button>
-                    )}
-                    <button
-                      type="button"
-                      role="tab"
-                      aria-selected={activeTab === 'jogos'}
-                      className={`home-side-menu-item home-side-menu-item--jogos${activeTab === 'jogos' ? ' active' : ''}`}
-                      onClick={() => { switchTab('jogos'); setSideMenuOpen(false) }}
-                    >
-                      Jogos
-                    </button>
-
-                    {token && (
-                      <>
-                        {[
-                          { id: 'pesquisar', label: 'Pesquisar Questões', show: true },
-                          { id: 'responder', label: 'Responder Questões', show: true },
-                          { id: 'imprimir', label: 'Imprimir Lista', show: user?.role === 'prof' || user?.role === 'admin' },
-                          { id: 'ensine', label: 'Criar Material', show: user?.role === 'prof' || user?.role === 'admin' },
-                          { id: 'administre', label: 'Administrar', show: user?.role === 'admin' },
-                        ].filter((t) => t.show).map(({ id, label }) => (
-                          <button
-                            key={id}
-                            type="button"
-                            role="tab"
-                            aria-selected={activeTab === id}
-                            className={`home-side-menu-item home-side-menu-item--${id}${activeTab === id ? ' active' : ''}`}
-                            onClick={() => { switchTab(id); setSideMenuOpen(false) }}
-                          >
-                            {label}
-                          </button>
-                        ))}
-                      </>
-                    )}
-                    {!token && (
-                      <button
-                        type="button"
-                        className="home-side-menu-item home-side-menu-item--login"
-                        onClick={() => { setSideMenuOpen(false); setPhase('login') }}
-                      >
-                        Fazer login
-                      </button>
-                    )}
-                  </nav>
+                      {user?.role === 'admin' && (
+                        <button
+                          type="button"
+                          className={`home-side-menu-item home-side-menu-item--administre${activeTab === 'administre' ? ' active' : ''}`}
+                          onClick={() => { switchTab('administre'); setSideMenuOpen(false) }}
+                        >
+                          Administrar
+                        </button>
+                      )}
+                    </nav>
+                  )}
 
                   <details className="home-side-menu-section home-side-menu-section--collapsible">
                     <summary className="home-side-menu-section-label home-side-menu-section-summary">Opções</summary>
