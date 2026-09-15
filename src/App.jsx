@@ -1163,6 +1163,10 @@ export default function App() {
   const [ensineTool, setEnsineTool] = useState(null)
   // v3.0.0: modo ativo da aba Responder Questões ('prova' | 'sorteio' | 'trilha' | null).
   const [responderMode, setResponderMode] = useState(null)
+  // v3.0.0: seleções específicas de cada modo em Responder Questões.
+  const [selectedProvaArea, setSelectedProvaArea] = useState(null)  // 'math' | 'nature' | 'linguagens' | 'humanas'
+  const [sorteioSize, setSorteioSize] = useState(10)                // 5 | 10 | 20
+  const [sorteioArea, setSorteioArea] = useState('all')             // 'all' | area
   useEffect(() => {
     const p = window.location.pathname
     if (
@@ -1381,6 +1385,7 @@ export default function App() {
     setSelectedTest(null)
     setEnsineTool(null)
     setResponderMode(null)
+    setSelectedProvaArea(null)
   }
   // Favicon estático — a paleta v3 removeu o esquema colorido por aba.
   // Mantido só o /favicon.ico + /favicon-32.png padrão.
@@ -2078,9 +2083,12 @@ export default function App() {
       if (!selectedDay) return
     } else {
       if (!selectedTest || !selectedYear) return
-      if (selectedTest === 'ENEM' && !selectedDay) return
+      // v3.0.0 Prova Completa: exige área OU (dia ENEM). Restante mantém dia.
+      if (selectedTest === 'ENEM' && !selectedDay && !selectedProvaArea) return
     }
-    const areas = (!isIntegrarStart && selectedDay) ? DAY_AREAS[selectedDay] : null
+    const areas = selectedProvaArea
+      ? [selectedProvaArea]
+      : ((!isIntegrarStart && selectedDay) ? DAY_AREAS[selectedDay] : null)
     // For Integrar, selectedDay is "teacher::setName"
     const [integrarTeacher, integrarSetName] = isIntegrarStart && selectedDay
       ? (() => { const i = selectedDay.indexOf('::'); return [selectedDay.slice(0, i), selectedDay.slice(i + 2)] })()
@@ -2123,7 +2131,48 @@ export default function App() {
     setTotalElapsed(0)
     setQuestionElapsed(0)
     setPhase('quiz')
-  }, [allQuestions, selectedTest, selectedYear, selectedDay, foreignLang])
+  }, [allQuestions, selectedTest, selectedYear, selectedDay, selectedProvaArea, foreignLang])
+
+  const startSorteio = useCallback(() => {
+    if (!sorteioSize) return
+    const pool = allQuestions.filter((q) => q.test === 'ENEM')
+      .filter((q) => sorteioArea === 'all' || q.area === sorteioArea)
+    if (pool.length === 0) return
+
+    const variants = {}
+    pool.forEach((q) => {
+      if (q.language) {
+        if (!variants[q.number]) variants[q.number] = {}
+        variants[q.number][q.language] = q
+      }
+    })
+    langVariantsRef.current = variants
+    const deduped = pool.filter((q) => !q.language || q.language === foreignLang)
+
+    const shuffled = [...deduped]
+    for (let i = shuffled.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1))
+      ;[shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]]
+    }
+    const picked = shuffled.slice(0, sorteioSize)
+    if (picked.length === 0) return
+
+    clearPausedSession()
+    setAttempts({})
+    saveAttemptsToSession({})
+    setSelectedArea(sorteioArea === 'all' ? null : sorteioArea)
+    setIsDailyChallenge(false)
+    const now = Date.now()
+    startTimeRef.current = now
+    questionStartRef.current = now
+    accQuestionTimesRef.current = {}
+    prevQuestionNumRef.current = null
+    setQuestions(picked)
+    setQuestion(picked[0])
+    setTotalElapsed(0)
+    setQuestionElapsed(0)
+    setPhase('quiz')
+  }, [allQuestions, sorteioSize, sorteioArea, foreignLang])
 
   // Open a single ENEM question in study mode (used by the Pesquise tab).
   const startSingleQuestionStudy = useCallback((rawQ) => {
@@ -3882,7 +3931,7 @@ export default function App() {
               </div>
             )}
 
-            {activeTab === 'responder' && (
+            {activeTab === 'responder' && !responderMode && (
               <div className="home-tab-content home-tab-content--responder">
                 <div className="home-inicio">
                   <h1 className="home-inicio-title">Responder Questões</h1>
@@ -3891,7 +3940,7 @@ export default function App() {
                     <button
                       type="button"
                       className="home-inicio-card"
-                      onClick={() => setResponderMode('prova')}
+                      onClick={() => { setResponderMode('prova'); setSelectedTest('ENEM') }}
                     >
                       <span className="home-inicio-card-icon"><ClipboardCheckIcon /></span>
                       <span className="home-inicio-card-title">Prova Completa</span>
@@ -3922,10 +3971,172 @@ export default function App() {
                       </span>
                     </button>
                   </div>
-                  <p className="home-ensine-message" style={{ marginTop: '1.5rem', opacity: 0.7 }}>
-                    Conteúdo dos modos chega nas próximas etapas da v3.0.0.
-                  </p>
                 </div>
+              </div>
+            )}
+
+            {activeTab === 'responder' && responderMode === 'prova' && (
+              <div className="home-tab-content">
+                <button
+                  type="button"
+                  className="btn--ghost"
+                  onClick={() => { setResponderMode(null); setSelectedProvaArea(null); setSelectedYear(null) }}
+                  style={{ alignSelf: 'flex-start' }}
+                >
+                  ← Voltar aos modos
+                </button>
+                <div className="home-filters">
+                  <div className="home-filter-group">
+                    <span className="home-filter-label">Área</span>
+                    <div className="home-filter-pills">
+                      {['math', 'nature', 'linguagens', 'humanas'].map((area) => (
+                        <button
+                          key={area}
+                          type="button"
+                          className={`home-filter-pill${selectedProvaArea === area ? ' active' : ''}`}
+                          onClick={() => setSelectedProvaArea(area)}
+                        >
+                          {AREA_LABELS[area]}
+                        </button>
+                      ))}
+                    </div>
+                  </div>
+
+                  <div className="home-filter-group">
+                    <span className="home-filter-label">Ano</span>
+                    <div className="home-filter-pills home-year-grid">
+                      {availableYears.map((y) => {
+                        const tier = yearTier(y)
+                        const pct = yearPercent(y)
+                        return (
+                          <button
+                            key={y}
+                            type="button"
+                            className={`home-filter-pill home-year-pill ${selectedYear === y ? 'active' : ''} ${tier ?? ''}`}
+                            onClick={() => setSelectedYear(y)}
+                          >
+                            <span className="home-year-label">
+                              <span>{y}</span>
+                              {tier === 'perfect' && <span className="home-year-star">★</span>}
+                              {tier === 'great'   && <span className="home-year-star">✓</span>}
+                              {tier === 'done'    && <span className="home-year-check">●</span>}
+                            </span>
+                            {pct != null && <span className="home-year-pct">{pct}%</span>}
+                          </button>
+                        )
+                      })}
+                    </div>
+                  </div>
+
+                  {selectedProvaArea === 'linguagens' && (
+                    <div className="home-filter-group">
+                      <span className="home-filter-label">Língua estrangeira</span>
+                      <div className="home-test-seg">
+                        <button
+                          type="button"
+                          className={`home-test-seg-btn${foreignLang === 'en' ? ' active' : ''}`}
+                          onClick={() => setForeignLang('en')}
+                        >
+                          🇺🇸 Inglês
+                        </button>
+                        <button
+                          type="button"
+                          className={`home-test-seg-btn${foreignLang === 'es' ? ' active' : ''}`}
+                          onClick={() => setForeignLang('es')}
+                        >
+                          🇪🇸 Espanhol
+                        </button>
+                      </div>
+                    </div>
+                  )}
+                </div>
+
+                <button
+                  type="button"
+                  className="home-start-btn"
+                  onClick={startQuiz}
+                  disabled={!selectedProvaArea || !selectedYear}
+                >
+                  Iniciar
+                </button>
+              </div>
+            )}
+
+            {activeTab === 'responder' && responderMode === 'sorteio' && (
+              <div className="home-tab-content">
+                <button
+                  type="button"
+                  className="btn--ghost"
+                  onClick={() => setResponderMode(null)}
+                  style={{ alignSelf: 'flex-start' }}
+                >
+                  ← Voltar aos modos
+                </button>
+                <div className="home-filters">
+                  <div className="home-filter-group">
+                    <span className="home-filter-label">Quantidade</span>
+                    <div className="home-filter-pills">
+                      {[5, 10, 20].map((n) => (
+                        <button
+                          key={n}
+                          type="button"
+                          className={`home-filter-pill${sorteioSize === n ? ' active' : ''}`}
+                          onClick={() => setSorteioSize(n)}
+                        >
+                          {n} questões
+                        </button>
+                      ))}
+                    </div>
+                  </div>
+
+                  <div className="home-filter-group">
+                    <span className="home-filter-label">Área</span>
+                    <div className="home-filter-pills">
+                      <button
+                        type="button"
+                        className={`home-filter-pill${sorteioArea === 'all' ? ' active' : ''}`}
+                        onClick={() => setSorteioArea('all')}
+                      >
+                        Todas
+                      </button>
+                      {['math', 'nature', 'linguagens', 'humanas'].map((area) => (
+                        <button
+                          key={area}
+                          type="button"
+                          className={`home-filter-pill${sorteioArea === area ? ' active' : ''}`}
+                          onClick={() => setSorteioArea(area)}
+                        >
+                          {AREA_LABELS[area]}
+                        </button>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+
+                <button
+                  type="button"
+                  className="home-start-btn"
+                  onClick={startSorteio}
+                  disabled={!sorteioSize}
+                >
+                  Sortear e iniciar
+                </button>
+              </div>
+            )}
+
+            {activeTab === 'responder' && responderMode === 'trilha' && (
+              <div className="home-tab-content">
+                <button
+                  type="button"
+                  className="btn--ghost"
+                  onClick={() => setResponderMode(null)}
+                  style={{ alignSelf: 'flex-start' }}
+                >
+                  ← Voltar aos modos
+                </button>
+                <p className="home-ensine-message" style={{ marginTop: '1rem' }}>
+                  Trilhas de estudo chegam em breve (fase B da v3.0.0).
+                </p>
               </div>
             )}
 
