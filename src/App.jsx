@@ -434,8 +434,8 @@ function formatTime(seconds) {
   return `${m}:${String(s).padStart(2, '0')}`
 }
 
-const APP_VERSION = '3.0.1'
-const APP_VERSION_DATE = '05/09/2026'
+const APP_VERSION = '3.1.0'
+const APP_VERSION_DATE = '16/09/2026'
 
 const REVIEW_STATUS = [
   { year: 2025, linguagens: true, humanas: true, natureza: true, matematica: true },
@@ -449,6 +449,18 @@ const REVIEW_STATUS = [
 ]
 
 const CHANGELOG = [
+  {
+    version: '3.1.0',
+    date: '16/09/2026',
+    items: [
+      'Navegação por categoria Questões/Provas/Listas/Trilhas',
+      'Menu popover no avatar com accordion',
+      'Nova tela Preferências com toggles de sessão',
+      'Início mostra 4 categorias em coluna',
+      'Barra horizontal de abas removida',
+      'Login obrigatório para toda navegação',
+    ],
+  },
   {
     version: '3.0.1',
     date: '05/09/2026',
@@ -1162,7 +1174,6 @@ export default function App() {
   // Active tool inside the Ensine tab: null = tool launcher, otherwise the tool id.
   const [ensineTool, setEnsineTool] = useState(null)
   // v3.0.0: modo ativo da aba Responder Questões ('prova' | 'sorteio' | 'trilha' | null).
-  const [responderMode, setResponderMode] = useState(null)
   // v3.0.0: seleções específicas de cada modo em Responder Questões.
   const [selectedProvaArea, setSelectedProvaArea] = useState(null)  // 'math' | 'nature' | 'linguagens' | 'humanas'
   const [sorteioSize, setSorteioSize] = useState(10)                // 5 | 10 | 20
@@ -1340,30 +1351,88 @@ export default function App() {
   const [optionsOpen, setOptionsOpen] = useState(false)
   const [headerMenuOpen, setHeaderMenuOpen] = useState(false)
   const [sideMenuOpen, setSideMenuOpen] = useState(false)
-  // v3.0.0: 4 abas fixas — inicio, jogos, pesquisar, responder, imprimir.
-  // 'ensine' e 'administre' seguem vivos como estados internos durante a Onda 1
-  // (movem pro dropdown do avatar em Onda 4). IDs antigos de aluno viram
-  // 'responder' via LEGACY_TAB_MAP pra preservar deep-links no localStorage.
-  const VALID_TABS = ['inicio', 'jogos', 'pesquisar', 'responder', 'imprimir', 'ensine', 'administre']
+  const [openMenuCategory, setOpenMenuCategory] = useState(null)
+  // v3.0.0 (fase A2): IA por categoria de objeto (Questões · Provas · Listas · Trilhas).
+  // IDs no formato 'categoria' (landing) ou 'categoria-acao' (ação).
+  // Ver ADR docs/adr/0001-nav-por-categoria.md e glossário CONTEXT.md.
+  const VALID_TABS = [
+    'inicio', 'preferencias', 'administre',
+    'questoes', 'questoes-aleatoria', 'questoes-sorteio', 'questoes-pesquisar', 'questoes-jogar', 'questoes-imprimir', 'questoes-criar', 'questoes-resolucao',
+    'provas', 'provas-iniciar', 'provas-imprimir',
+    'listas', 'listas-imprimir', 'listas-criar',
+    'trilhas', 'trilhas-fazer', 'trilhas-criar', 'trilhas-aprovar',
+  ]
   const LEGACY_TAB_MAP = {
-    pesquise: 'pesquisar',
-    simule: 'responder',
-    estude: 'responder',
-    listas: 'responder',
+    // IDs de fase A ondas 1-4 (barra horizontal, agora removida)
+    jogos: 'questoes-jogar',
+    pesquisar: 'questoes-pesquisar',
+    pesquise: 'questoes-pesquisar',
+    responder: 'inicio',
+    imprimir: 'listas-imprimir',
+    ensine: 'inicio',
+    // IDs originais v2
+    simule: 'provas-iniciar',
+    estude: 'questoes-sorteio',
+    listas: 'listas',
   }
   const normalizeTab = (t) => LEGACY_TAB_MAP[t] || t
+  const parseView = (v) => {
+    if (!v) return { category: null, action: null }
+    const i = v.indexOf('-')
+    if (i < 0) return { category: v, action: null }
+    return { category: v.slice(0, i), action: v.slice(i + 1) }
+  }
+  const userRole = user?.role || 'user'
+  const roleAllows = (roles) => roles.includes(userRole)
+  const NAV_CATEGORIES = [
+    {
+      id: 'questoes', label: 'Questões',
+      actions: [
+        { id: 'aleatoria', label: 'Aleatória',  desc: 'Uma questão por vez, sem parar', roles: ['user','prof','admin'] },
+        { id: 'sorteio',   label: 'Sorteio',    desc: '5, 10 ou 20 questões aleatórias', roles: ['user','prof','admin'] },
+        { id: 'pesquisar', label: 'Pesquisar',  desc: 'Buscar por tema ou palavra',      roles: ['user','prof','admin'] },
+        { id: 'jogar',     label: 'Jogar',      desc: 'Streak, Blitz, Milhão, Diário',   roles: ['user','prof','admin'] },
+        { id: 'imprimir',  label: 'Imprimir',   desc: 'PDF de questões avulsas',         roles: ['prof','admin'] },
+        { id: 'criar',     label: 'Criar',      desc: 'Editor de questão nova',          roles: ['prof','admin'] },
+        { id: 'resolucao', label: 'Resolução',  desc: 'Escrever explicações',            roles: ['prof','admin'] },
+      ],
+    },
+    {
+      id: 'provas', label: 'Provas',
+      actions: [
+        { id: 'iniciar',  label: 'Iniciar',   desc: 'Simulado inteiro por área e ano', roles: ['user','prof','admin'] },
+        { id: 'imprimir', label: 'Imprimir',  desc: 'PDF da prova completa',           roles: ['prof','admin'] },
+      ],
+    },
+    {
+      id: 'listas', label: 'Listas',
+      actions: [
+        { id: 'imprimir', label: 'Imprimir',  desc: 'PDF de uma lista salva',          roles: ['user','prof','admin'] },
+        { id: 'criar',    label: 'Criar',     desc: 'Editor de listas de questões',    roles: ['prof','admin'] },
+      ],
+    },
+    {
+      id: 'trilhas', label: 'Trilhas',
+      actions: [
+        { id: 'fazer',   label: 'Fazer',    desc: 'Trilhas temáticas curadas',        roles: ['user','prof','admin'] },
+        { id: 'criar',   label: 'Criar',    desc: 'Montar uma nova trilha',           roles: ['prof','admin'] },
+        { id: 'aprovar', label: 'Aprovar',  desc: 'Revisar trilhas pendentes',        roles: ['admin'] },
+      ],
+    },
+  ]
+  const visibleCategories = NAV_CATEGORIES.map((c) => ({
+    ...c,
+    actions: c.actions.filter((a) => roleAllows(a.roles)),
+  })).filter((c) => c.actions.length > 0)
   const [activeTab, setActiveTab] = useState(() => {
     const isValid = (t) => VALID_TABS.includes(t)
-    // Guest (sem token) só pode estar na aba Jogos.
-    const hasToken = typeof window !== 'undefined' && !!localStorage.getItem('token')
-    if (!hasToken) return 'jogos'
-    // Deep-link via path (e.g. /pesquisar). URL is rewritten back to / by the effect above for cleanliness.
+    // v3.0.0 fase A2 (Q30): sem uso guest — home só existe com sessão.
+    // Deep-link via path (e.g. /questoes-sorteio); normalizado contra LEGACY_TAB_MAP.
     if (typeof window !== 'undefined') {
       const p = window.location.pathname.replace(/^\/+|\/+$/g, '')
       const normalized = normalizeTab(p)
       if (isValid(normalized)) return normalized
-      // Mode-specific deeplinks land on the Jogos tab.
-      if (p === 'milhao' || p === 'jogos/milhao') return 'jogos'
+      if (p === 'milhao' || p === 'jogos/milhao') return 'questoes-jogar'
     }
     try {
       const stored = normalizeTab(localStorage.getItem('trilha-integrar-active-tab'))
@@ -1372,8 +1441,8 @@ export default function App() {
   })
   const switchTab = (rawTab) => {
     const tab = normalizeTab(rawTab)
-    // Guest só pode ficar na aba Jogos; outras opções abrem a tela de login.
-    if (!token && tab !== 'jogos') {
+    // Guest cai em login pra qualquer navegação (v3.0.0 fase A2, Q30).
+    if (!token) {
       setPhase('login')
       return
     }
@@ -1382,9 +1451,10 @@ export default function App() {
     setSelectedYear(null)
     setSelectedDay(null)
     setSelectedIntegrarYear(null)
-    setSelectedTest(null)
+    // Fase A2: ações de simulado precisam de test='ENEM' setado
+    // antes do startQuiz filtrar por (q.test === selectedTest).
+    setSelectedTest(tab === 'provas-iniciar' ? 'ENEM' : null)
     setEnsineTool(null)
-    setResponderMode(null)
     setSelectedProvaArea(null)
   }
   // Favicon estático — a paleta v3 removeu o esquema colorido por aba.
@@ -3091,135 +3161,204 @@ export default function App() {
     return (
       <div className="app-shell">
         <div className={`home-screen home-screen--${activeTab}`}>
-          {!token && (
-            <div className="home-guest-banner" role="status">
-              <span className="home-guest-banner-text">
-                Faça login pra acessar simulados, listas e estatísticas
-              </span>
-              <button
-                type="button"
-                className="home-guest-banner-btn"
-                onClick={() => setPhase('login')}
-              >
-                Fazer login
-              </button>
-            </div>
-          )}
           <header className="home-header">
             <div className="home-header-row">
-              <button
-                type="button"
-                className="home-header-brand"
-                onClick={() => switchTab('inicio')}
-                aria-label="Ir para Início"
-              >
-                <img
-                  src="/figuras/logos/integrar-logo-transparent.png"
-                  alt="Integrar"
-                  className="home-header-logo"
-                />
-                <span className="home-header-title">Trilha Integrar</span>
-              </button>
-              <ChangelogSection />
+              <div className="home-header-brand-group">
+                <button
+                  type="button"
+                  className="home-header-brand"
+                  onClick={() => switchTab('inicio')}
+                  aria-label="Ir para Início"
+                >
+                  <img
+                    src="/figuras/logos/integrar-logo-transparent.png"
+                    alt="Integrar"
+                    className="home-header-logo"
+                  />
+                  <span className="home-header-title">Trilha Integrar</span>
+                </button>
+                <ChangelogSection />
+              </div>
               <div className="home-header-actions">
-                {token ? (
-                  <button
-                    type="button"
-                    className={`home-avatar-btn${sideMenuOpen ? ' active' : ''}`}
-                    onClick={() => setSideMenuOpen((o) => !o)}
-                    aria-label="Menu do usuário"
-                    aria-expanded={sideMenuOpen}
-                  >
-                    <span className="home-avatar-initial">
-                      {(user?.username ?? '?').charAt(0).toUpperCase()}
-                    </span>
-                  </button>
-                ) : (
-                  <button
-                    type="button"
-                    className="home-avatar-btn home-avatar-btn--guest"
-                    onClick={() => setPhase('login')}
-                    aria-label="Fazer login"
-                  >
-                    Entrar
-                  </button>
+                {token && (
+                  <div className="avatar-menu-wrap">
+                    <button
+                      type="button"
+                      className={`home-avatar-btn${sideMenuOpen ? ' active' : ''}`}
+                      onClick={() => setSideMenuOpen((o) => !o)}
+                      aria-label="Menu do usuário"
+                      aria-expanded={sideMenuOpen}
+                    >
+                      <span className="home-avatar-initial">
+                        {(user?.username ?? '?').charAt(0).toUpperCase()}
+                      </span>
+                    </button>
+                    {sideMenuOpen && (
+                      <>
+                        <div
+                          className="avatar-menu-backdrop"
+                          onClick={() => { setSideMenuOpen(false); setOpenMenuCategory(null) }}
+                          aria-hidden
+                        />
+                        <div
+                          className="avatar-menu-popover"
+                          role="menu"
+                          aria-label="Menu de navegação"
+                        >
+                          <div className="avatar-menu-greeting">
+                            Olá, <strong>{user?.username}</strong>
+                          </div>
+                          <div className="avatar-menu-sep" />
+                          {visibleCategories.map((cat) => {
+                            const isOpen = openMenuCategory === cat.id
+                            const currentCategory = parseView(activeTab).category
+                            return (
+                              <div key={cat.id} className="avatar-menu-cat-group">
+                                <button
+                                  type="button"
+                                  className={`avatar-menu-cat${isOpen ? ' is-open' : ''}${currentCategory === cat.id ? ' is-current' : ''}`}
+                                  onClick={() => setOpenMenuCategory(isOpen ? null : cat.id)}
+                                  aria-expanded={isOpen}
+                                >
+                                  <span>{cat.label}</span>
+                                  <span className="avatar-menu-cat-chevron" aria-hidden>›</span>
+                                </button>
+                                {isOpen && (
+                                  <div className="avatar-menu-actions">
+                                    {cat.actions.map((a) => {
+                                      const tabId = `${cat.id}-${a.id}`
+                                      return (
+                                        <button
+                                          key={a.id}
+                                          type="button"
+                                          className={`avatar-menu-action${activeTab === tabId ? ' is-active' : ''}`}
+                                          onClick={() => {
+                                            switchTab(tabId)
+                                            setSideMenuOpen(false)
+                                            setOpenMenuCategory(null)
+                                          }}
+                                        >
+                                          {a.label}
+                                        </button>
+                                      )
+                                    })}
+                                  </div>
+                                )}
+                              </div>
+                            )
+                          })}
+                          <div className="avatar-menu-sep" />
+                          <button
+                            type="button"
+                            className={`avatar-menu-utility${activeTab === 'inicio' ? ' is-active' : ''}`}
+                            onClick={() => { switchTab('inicio'); setSideMenuOpen(false); setOpenMenuCategory(null) }}
+                          >
+                            Início
+                          </button>
+                          <button
+                            type="button"
+                            className={`avatar-menu-utility${activeTab === 'preferencias' ? ' is-active' : ''}`}
+                            onClick={() => { switchTab('preferencias'); setSideMenuOpen(false); setOpenMenuCategory(null) }}
+                          >
+                            Preferências
+                          </button>
+                          {user?.role === 'admin' && (
+                            <button
+                              type="button"
+                              className={`avatar-menu-utility${activeTab === 'administre' ? ' is-active' : ''}`}
+                              onClick={() => { switchTab('administre'); setSideMenuOpen(false); setOpenMenuCategory(null) }}
+                            >
+                              Administrar
+                            </button>
+                          )}
+                          <div className="avatar-menu-sep" />
+                          <button
+                            type="button"
+                            className="avatar-menu-utility avatar-menu-logout"
+                            onClick={() => { setSideMenuOpen(false); setOpenMenuCategory(null); handleLogout() }}
+                          >
+                            Sair
+                          </button>
+                        </div>
+                      </>
+                    )}
+                  </div>
                 )}
               </div>
             </div>
-
-            {/* v3.0.0: barra horizontal de abas fixas */}
-            <nav className="home-tabs" role="tablist" aria-label="Navegação">
-              {[
-                { id: 'jogos',     label: 'Jogos',              show: true },
-                { id: 'pesquisar', label: 'Pesquisar Questões', show: !!token },
-                { id: 'responder', label: 'Responder Questões', show: !!token },
-                { id: 'imprimir',  label: 'Imprimir Lista',     show: !!token && (user?.role === 'prof' || user?.role === 'admin') },
-              ].filter((t) => t.show).map(({ id, label }) => (
-                <button
-                  key={id}
-                  type="button"
-                  role="tab"
-                  aria-selected={activeTab === id}
-                  className={`home-tab${activeTab === id ? ' active' : ''}`}
-                  onClick={() => switchTab(id)}
-                >
-                  {label}
-                </button>
-              ))}
-            </nav>
           </header>
 
-          {sideMenuOpen && (
-            <>
-              <div
-                className="home-side-backdrop"
-                onClick={() => setSideMenuOpen(false)}
-                aria-hidden
-              />
-              <aside
-                className="home-side-menu"
-                role="dialog"
-                aria-label="Menu de navegação"
-              >
-                <div className="home-side-menu-header">
-                  <span className="home-side-menu-greeting">
-                    Olá, <strong>{user?.username}</strong>
-                  </span>
-                  <button
-                    type="button"
-                    className="home-side-menu-close"
-                    onClick={() => setSideMenuOpen(false)}
-                    aria-label="Fechar menu"
-                  >
-                    ×
-                  </button>
-                </div>
-                <div className="home-side-menu-body">
-                  {(user?.role === 'prof' || user?.role === 'admin') && (
-                    <nav className="home-side-menu-nav" aria-label="Atalhos de professor">
-                      <button
-                        type="button"
-                        className={`home-side-menu-item home-side-menu-item--ensine${activeTab === 'ensine' ? ' active' : ''}`}
-                        onClick={() => { switchTab('ensine'); setSideMenuOpen(false) }}
-                      >
-                        Escrever Questões
-                      </button>
-                      {user?.role === 'admin' && (
+          <div className="home-card home-card--wide">
+            {activeTab === 'inicio' && (
+              <div className="home-tab-content home-tab-content--inicio">
+                <div className="home-inicio">
+                  <h1 className="home-inicio-title">Bem-vindo!</h1>
+                  <p className="home-inicio-subtitle">Escolha uma categoria para começar</p>
+                  <div className="home-inicio-cards home-inicio-cards--col">
+                    {visibleCategories.map((cat) => {
+                      const icon = cat.id === 'questoes' ? <ClipboardCheckIcon />
+                        : cat.id === 'provas' ? <NotebookIcon />
+                        : cat.id === 'listas' ? <PrinterIcon />
+                        : <PenIcon />
+                      const desc = cat.id === 'questoes' ? 'Responder, jogar, pesquisar ou imprimir'
+                        : cat.id === 'provas' ? 'Simulado completo por ano'
+                        : cat.id === 'listas' ? 'Coleções curadas pelo professor'
+                        : 'Sequências temáticas de estudo'
+                      return (
                         <button
+                          key={cat.id}
                           type="button"
-                          className={`home-side-menu-item home-side-menu-item--administre${activeTab === 'administre' ? ' active' : ''}`}
-                          onClick={() => { switchTab('administre'); setSideMenuOpen(false) }}
+                          className="home-inicio-card"
+                          onClick={() => switchTab(cat.id)}
                         >
-                          Administrar
+                          <span className="home-inicio-card-icon">{icon}</span>
+                          <span className="home-inicio-card-title">{cat.label}</span>
+                          <span className="home-inicio-card-desc">{desc}</span>
                         </button>
-                      )}
-                    </nav>
-                  )}
-
-                  <details className="home-side-menu-section home-side-menu-section--collapsible">
-                    <summary className="home-side-menu-section-label home-side-menu-section-summary">Opções</summary>
-                    <label className="home-side-toggle-row">
-                      <span className="home-side-toggle-label">Embaralhar alternativas</span>
+                      )
+                    })}
+                  </div>
+                </div>
+              </div>
+            )}
+            {(() => {
+              const { category, action } = parseView(activeTab)
+              if (action) return null
+              const cat = visibleCategories.find((c) => c.id === category)
+              if (!cat) return null
+              return (
+                <div className="home-tab-content home-tab-content--category">
+                  <div className="home-inicio">
+                    <h1 className="home-inicio-title">{cat.label}</h1>
+                    <p className="home-inicio-subtitle">Escolha uma ação</p>
+                    <div className="category-actions">
+                      {cat.actions.map((a) => {
+                        const tabId = `${cat.id}-${a.id}`
+                        return (
+                          <button
+                            key={a.id}
+                            type="button"
+                            className="category-action-card"
+                            onClick={() => switchTab(tabId)}
+                          >
+                            <span className="category-action-title">{a.label}</span>
+                            <span className="category-action-desc">{a.desc}</span>
+                          </button>
+                        )
+                      })}
+                    </div>
+                  </div>
+                </div>
+              )
+            })()}
+            {activeTab === 'preferencias' && (
+              <div className="home-tab-content home-tab-content--preferencias">
+                <div className="preferencias-screen">
+                  <h1 className="preferencias-title">Preferências</h1>
+                  <p className="preferencias-subtitle">Ajustes de sessão · aplicam a esse aluno</p>
+                  <div className="preferencias-list">
+                    <label className="preferencias-row">
+                      <span className="preferencias-row-label">Embaralhar alternativas</span>
                       <span className={`options-toggle-switch${randomizeAlts ? ' on' : ''}`}>
                         <input
                           type="checkbox"
@@ -3232,8 +3371,8 @@ export default function App() {
                         <span className="options-toggle-thumb" />
                       </span>
                     </label>
-                    <label className="home-side-toggle-row">
-                      <span className="home-side-toggle-label">Mostrar resposta</span>
+                    <label className="preferencias-row">
+                      <span className="preferencias-row-label">Mostrar resposta</span>
                       <span className={`options-toggle-switch${showAnswer ? ' on' : ''}`}>
                         <input
                           type="checkbox"
@@ -3247,8 +3386,8 @@ export default function App() {
                         <span className="options-toggle-thumb" />
                       </span>
                     </label>
-                    <label className="home-side-toggle-row">
-                      <span className="home-side-toggle-label">Mostrar dificuldade</span>
+                    <label className="preferencias-row">
+                      <span className="preferencias-row-label">Mostrar dificuldade</span>
                       <span className={`options-toggle-switch${showDifficulty ? ' on' : ''}`}>
                         <input
                           type="checkbox"
@@ -3261,8 +3400,8 @@ export default function App() {
                         <span className="options-toggle-thumb" />
                       </span>
                     </label>
-                    <label className="home-side-toggle-row">
-                      <span className="home-side-toggle-label">
+                    <label className="preferencias-row">
+                      <span className="preferencias-row-label">
                         {soundMuted ? <SoundOffIcon /> : <SoundOnIcon />} Som
                       </span>
                       <span className={`options-toggle-switch${!soundMuted ? ' on' : ''}`}>
@@ -3278,8 +3417,8 @@ export default function App() {
                         <span className="options-toggle-thumb" />
                       </span>
                     </label>
-                    <label className="home-side-toggle-row">
-                      <span className="home-side-toggle-label">
+                    <label className="preferencias-row">
+                      <span className="preferencias-row-label">
                         {dark ? <MoonIcon /> : <SunIcon />} {dark ? 'Modo escuro' : 'Modo claro'}
                       </span>
                       <span className={`options-toggle-switch options-toggle-switch--theme${dark ? ' on' : ''}`}>
@@ -3287,99 +3426,42 @@ export default function App() {
                         <span className="options-toggle-thumb" />
                       </span>
                     </label>
-                    {clearHistoryConfirm ? (
-                      <div className="home-side-confirm-row">
-                        <span className="home-side-confirm-label">Tem certeza?</span>
+                    <div className="preferencias-row preferencias-row--danger">
+                      {clearHistoryConfirm ? (
+                        <div className="preferencias-confirm">
+                          <span className="preferencias-confirm-label">Tem certeza?</span>
+                          <button
+                            type="button"
+                            className="options-confirm-btn options-confirm-btn--danger"
+                            onClick={handleClearHistory}
+                            disabled={clearHistoryLoading}
+                          >
+                            {clearHistoryLoading ? 'Limpando…' : 'Confirmar'}
+                          </button>
+                          <button
+                            type="button"
+                            className="options-confirm-btn"
+                            onClick={() => setClearHistoryConfirm(false)}
+                            disabled={clearHistoryLoading}
+                          >
+                            Cancelar
+                          </button>
+                        </div>
+                      ) : (
                         <button
                           type="button"
-                          className="options-confirm-btn options-confirm-btn--danger"
-                          onClick={handleClearHistory}
-                          disabled={clearHistoryLoading}
+                          className="preferencias-clear-btn"
+                          onClick={() => setClearHistoryConfirm(true)}
                         >
-                          {clearHistoryLoading ? 'Limpando…' : 'Confirmar'}
+                          Limpar histórico
                         </button>
-                        <button
-                          type="button"
-                          className="options-confirm-btn"
-                          onClick={() => setClearHistoryConfirm(false)}
-                          disabled={clearHistoryLoading}
-                        >
-                          Cancelar
-                        </button>
-                      </div>
-                    ) : (
-                      <button
-                        type="button"
-                        className="home-side-clear-btn"
-                        onClick={() => setClearHistoryConfirm(true)}
-                      >
-                        Limpar histórico
-                      </button>
-                    )}
-                  </details>
-                </div>
-                <div className="home-side-menu-footer">
-                  <button
-                    type="button"
-                    className="home-side-logout-btn"
-                    onClick={() => { setSideMenuOpen(false); handleLogout() }}
-                  >
-                    Sair
-                  </button>
-                </div>
-              </aside>
-            </>
-          )}
-
-          <div className="home-card home-card--wide">
-            {activeTab === 'inicio' && (
-              <div className="home-tab-content home-tab-content--inicio">
-                <div className="home-inicio">
-                  <h1 className="home-inicio-title">Bem-vindo!</h1>
-                  <p className="home-inicio-subtitle">Escolha um caminho para começar</p>
-                  <div className="home-inicio-cards">
-                    <button
-                      type="button"
-                      className="home-inicio-card"
-                      onClick={() => switchTab('responder')}
-                    >
-                      <span className="home-inicio-card-icon"><ClipboardCheckIcon /></span>
-                      <span className="home-inicio-card-title">Responder Questões</span>
-                      <span className="home-inicio-card-desc">
-                        Prova completa, sorteio ou trilhas
-                      </span>
-                    </button>
-                    {(user?.role === 'prof' || user?.role === 'admin') && (
-                      <button
-                        type="button"
-                        className="home-inicio-card"
-                        onClick={() => { switchTab('ensine'); setEnsineTool(null) }}
-                      >
-                        <span className="home-inicio-card-icon"><PenIcon /></span>
-                        <span className="home-inicio-card-title">Escrever Questões</span>
-                        <span className="home-inicio-card-desc">
-                          Criar listas, questões ou explicações
-                        </span>
-                      </button>
-                    )}
-                    {(user?.role === 'prof' || user?.role === 'admin') && (
-                      <button
-                        type="button"
-                        className="home-inicio-card"
-                        onClick={() => { switchTab('imprimir'); setEnsineTool('gerar-pdf') }}
-                      >
-                        <span className="home-inicio-card-icon"><PrinterIcon /></span>
-                        <span className="home-inicio-card-title">Gerar Lista para Impressão</span>
-                        <span className="home-inicio-card-desc">
-                          Baixar PDF de uma lista salva ou avulsas
-                        </span>
-                      </button>
-                    )}
+                      )}
+                    </div>
                   </div>
                 </div>
               </div>
             )}
-            {activeTab === 'jogos' && (
+            {activeTab === 'questoes-jogar' && (
               <div className="home-tab-content">
                 <div className="jogos-grid">
                   {[
@@ -3543,7 +3625,7 @@ export default function App() {
               </div>
             )}
 
-            {activeTab === 'pesquisar' && (
+            {activeTab === 'questoes-pesquisar' && (
               <div className="home-tab-content">
                 <Suspense fallback={<p className="qe-loading">Carregando…</p>}>
                   <EnemPicker
@@ -3556,59 +3638,15 @@ export default function App() {
               </div>
             )}
 
-            {activeTab === 'responder' && !responderMode && (
-              <div className="home-tab-content home-tab-content--responder">
-                <div className="home-inicio">
-                  <h1 className="home-inicio-title">Responder Questões</h1>
-                  <p className="home-inicio-subtitle">Escolha um modo de estudo</p>
-                  <div className="home-inicio-cards">
-                    <button
-                      type="button"
-                      className="home-inicio-card"
-                      onClick={() => { setResponderMode('prova'); setSelectedTest('ENEM') }}
-                    >
-                      <span className="home-inicio-card-icon"><ClipboardCheckIcon /></span>
-                      <span className="home-inicio-card-title">Prova Completa</span>
-                      <span className="home-inicio-card-desc">
-                        Simulado inteiro por área e ano
-                      </span>
-                    </button>
-                    <button
-                      type="button"
-                      className="home-inicio-card"
-                      onClick={() => setResponderMode('sorteio')}
-                    >
-                      <span className="home-inicio-card-icon"><ClipboardCheckIcon /></span>
-                      <span className="home-inicio-card-title">Sorteio</span>
-                      <span className="home-inicio-card-desc">
-                        5, 10 ou 20 questões aleatórias
-                      </span>
-                    </button>
-                    <button
-                      type="button"
-                      className="home-inicio-card"
-                      onClick={() => setResponderMode('trilha')}
-                    >
-                      <span className="home-inicio-card-icon"><ClipboardCheckIcon /></span>
-                      <span className="home-inicio-card-title">Trilhas</span>
-                      <span className="home-inicio-card-desc">
-                        Conjuntos temáticos curados
-                      </span>
-                    </button>
-                  </div>
-                </div>
-              </div>
-            )}
-
-            {activeTab === 'responder' && responderMode === 'prova' && (
+            {activeTab === 'provas-iniciar' && (
               <div className="home-tab-content">
                 <button
                   type="button"
                   className="btn--ghost"
-                  onClick={() => { setResponderMode(null); setSelectedProvaArea(null); setSelectedYear(null) }}
+                  onClick={() => { switchTab('provas'); setSelectedProvaArea(null); setSelectedYear(null) }}
                   style={{ alignSelf: 'flex-start' }}
                 >
-                  ← Voltar aos modos
+                  ← Voltar às Provas
                 </button>
                 <div className="home-filters">
                   <div className="home-filter-group">
@@ -3687,15 +3725,15 @@ export default function App() {
               </div>
             )}
 
-            {activeTab === 'responder' && responderMode === 'sorteio' && (
+            {activeTab === 'questoes-sorteio' && (
               <div className="home-tab-content">
                 <button
                   type="button"
                   className="btn--ghost"
-                  onClick={() => setResponderMode(null)}
+                  onClick={() => switchTab('questoes')}
                   style={{ alignSelf: 'flex-start' }}
                 >
-                  ← Voltar aos modos
+                  ← Voltar às Questões
                 </button>
                 <div className="home-filters">
                   <div className="home-filter-group">
@@ -3749,15 +3787,15 @@ export default function App() {
               </div>
             )}
 
-            {activeTab === 'responder' && responderMode === 'trilha' && (
+            {activeTab === 'trilhas-fazer' && (
               <div className="home-tab-content">
                 <button
                   type="button"
                   className="btn--ghost"
-                  onClick={() => setResponderMode(null)}
+                  onClick={() => switchTab('trilhas')}
                   style={{ alignSelf: 'flex-start' }}
                 >
-                  ← Voltar aos modos
+                  ← Voltar às Trilhas
                 </button>
                 <p className="home-ensine-message" style={{ marginTop: '1rem' }}>
                   Trilhas de estudo chegam em breve (fase B da v3.0.0).
@@ -3765,7 +3803,7 @@ export default function App() {
               </div>
             )}
 
-            {activeTab === 'imprimir' && (
+            {activeTab === 'listas-imprimir' && (
               <div className="home-tab-content">
                 {(user?.role === 'prof' || user?.role === 'admin') ? (
                   <Suspense fallback={<p className="qe-loading">Carregando…</p>}>
@@ -3779,69 +3817,64 @@ export default function App() {
               </div>
             )}
 
-            {activeTab === 'ensine' && (
+            {activeTab === 'questoes-criar' && (
               <div className="home-tab-content">
                 {(user?.role === 'prof' || user?.role === 'admin') ? (
-                  ensineTool === 'criar-lista' ? (
-                    <Suspense fallback={<p className="qe-loading">Carregando…</p>}>
-                      <QuestionEditor embedded onClose={() => setEnsineTool(null)} />
-                    </Suspense>
-                  ) : ensineTool === 'criar-questao' ? (
-                    <Suspense fallback={<p className="qe-loading">Carregando…</p>}>
-                      <QuestionEditor embedded quickAdd onClose={() => setEnsineTool(null)} />
-                    </Suspense>
-                  ) : ensineTool === 'explicar' ? (
-                    <Suspense fallback={<p className="qe-loading">Carregando…</p>}>
-                      <ExplanationsEditor
-                        allQuestions={allQuestions}
-                        contexts={contexts}
-                        explanationOverrides={explanationOverrides}
-                        setExplanationOverrides={setExplanationOverrides}
-                        token={token}
-                        onClose={() => setEnsineTool(null)}
-                      />
-                    </Suspense>
-                  ) : ensineTool === 'gerar-pdf' ? (
-                    <Suspense fallback={<p className="qe-loading">Carregando…</p>}>
-                      <PdfExporter token={token} onClose={() => setEnsineTool(null)} />
-                    </Suspense>
-                  ) : (
-                    <>
-                      <button
-                        type="button"
-                        className="home-start-btn"
-                        onClick={() => setEnsineTool('criar-lista')}
-                      >
-                        Criar Lista de Questões
-                      </button>
-                      <button
-                        type="button"
-                        className="home-start-btn"
-                        onClick={() => setEnsineTool('criar-questao')}
-                      >
-                        Criar Questão
-                      </button>
-                      <button
-                        type="button"
-                        className="home-start-btn"
-                        onClick={() => setEnsineTool('explicar')}
-                      >
-                        Explicar Questão do Enem
-                      </button>
-                      <button
-                        type="button"
-                        className="home-start-btn"
-                        onClick={() => setEnsineTool('gerar-pdf')}
-                      >
-                        Gerar Lista para Impressão
-                      </button>
-                    </>
-                  )
+                  <Suspense fallback={<p className="qe-loading">Carregando…</p>}>
+                    <QuestionEditor embedded quickAdd onClose={() => switchTab('questoes')} />
+                  </Suspense>
                 ) : (
                   <p className="home-ensine-message">
                     Esta área é para professores. Fale com seu professor se você acredita que deveria ter acesso.
                   </p>
                 )}
+              </div>
+            )}
+
+            {activeTab === 'questoes-resolucao' && (
+              <div className="home-tab-content">
+                {(user?.role === 'prof' || user?.role === 'admin') ? (
+                  <Suspense fallback={<p className="qe-loading">Carregando…</p>}>
+                    <ExplanationsEditor
+                      allQuestions={allQuestions}
+                      contexts={contexts}
+                      explanationOverrides={explanationOverrides}
+                      setExplanationOverrides={setExplanationOverrides}
+                      token={token}
+                      onClose={() => switchTab('questoes')}
+                    />
+                  </Suspense>
+                ) : (
+                  <p className="home-ensine-message">
+                    Esta área é para professores. Fale com seu professor se você acredita que deveria ter acesso.
+                  </p>
+                )}
+              </div>
+            )}
+
+            {activeTab === 'listas-criar' && (
+              <div className="home-tab-content">
+                {(user?.role === 'prof' || user?.role === 'admin') ? (
+                  <Suspense fallback={<p className="qe-loading">Carregando…</p>}>
+                    <QuestionEditor embedded onClose={() => switchTab('listas')} />
+                  </Suspense>
+                ) : (
+                  <p className="home-ensine-message">
+                    Esta área é para professores. Fale com seu professor se você acredita que deveria ter acesso.
+                  </p>
+                )}
+              </div>
+            )}
+
+            {(activeTab === 'questoes-aleatoria'
+              || activeTab === 'questoes-imprimir'
+              || activeTab === 'provas-imprimir'
+              || activeTab === 'trilhas-criar'
+              || activeTab === 'trilhas-aprovar') && (
+              <div className="home-tab-content">
+                <p className="home-ensine-message" style={{ marginTop: '1rem' }}>
+                  Em breve (fase B da v3.0.0).
+                </p>
               </div>
             )}
 
