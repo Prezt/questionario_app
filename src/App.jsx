@@ -434,8 +434,8 @@ function formatTime(seconds) {
   return `${m}:${String(s).padStart(2, '0')}`
 }
 
-const APP_VERSION = '3.0.1'
-const APP_VERSION_DATE = '05/09/2026'
+const APP_VERSION = '3.1.0'
+const APP_VERSION_DATE = '16/09/2026'
 
 const REVIEW_STATUS = [
   { year: 2025, linguagens: true, humanas: true, natureza: true, matematica: true },
@@ -450,10 +450,27 @@ const REVIEW_STATUS = [
 
 const CHANGELOG = [
   {
+    version: '3.1.0',
+    date: '16/09/2026',
+    items: [
+      'Navegação por categoria Questões/Provas/Listas/Trilhas',
+      'Menu popover no avatar com accordion',
+      'Nova tela Preferências com toggles de sessão',
+      'Início mostra 4 categorias em coluna',
+      'Barra horizontal de abas removida',
+      'Login obrigatório para toda navegação',
+    ],
+  },
+  {
     version: '3.0.1',
     date: '05/09/2026',
     items: [
       'Baixar Lista e Gabarito em botões separados',
+      'Nova paleta sóbria vermelho/vinho',
+      'Favicons coloridos por aba removidos',
+      'Nova tela Início com atalhos rápidos',
+      'Painel Admin e abas seguem paleta vermelho',
+      'Cards do Início com ícones SVG',
     ],
   },
   {
@@ -937,6 +954,35 @@ function LogoutIcon() {
   )
 }
 
+function ClipboardCheckIcon() {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
+      <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2" />
+      <rect x="8" y="2" width="8" height="4" rx="1" />
+      <path d="M9 14l2 2 4-4" />
+    </svg>
+  )
+}
+
+function PenIcon() {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
+      <path d="M12 20h9" />
+      <path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z" />
+    </svg>
+  )
+}
+
+function PrinterIcon() {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
+      <polyline points="6 9 6 2 18 2 18 9" />
+      <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2" />
+      <rect x="6" y="14" width="12" height="8" />
+    </svg>
+  )
+}
+
 const SESSION_NOTES_KEY = 'trilha-integrar-caderno'
 
 function readNotesFromSession() {
@@ -1127,6 +1173,11 @@ export default function App() {
   const [user, setUser] = useState(null)
   // Active tool inside the Ensine tab: null = tool launcher, otherwise the tool id.
   const [ensineTool, setEnsineTool] = useState(null)
+  // v3.0.0: modo ativo da aba Responder Questões ('prova' | 'sorteio' | 'trilha' | null).
+  // v3.0.0: seleções específicas de cada modo em Responder Questões.
+  const [selectedProvaArea, setSelectedProvaArea] = useState(null)  // 'math' | 'nature' | 'linguagens' | 'humanas'
+  const [sorteioSize, setSorteioSize] = useState(10)                // 5 | 10 | 20
+  const [sorteioArea, setSorteioArea] = useState('all')             // 'all' | area
   useEffect(() => {
     const p = window.location.pathname
     if (
@@ -1300,26 +1351,98 @@ export default function App() {
   const [optionsOpen, setOptionsOpen] = useState(false)
   const [headerMenuOpen, setHeaderMenuOpen] = useState(false)
   const [sideMenuOpen, setSideMenuOpen] = useState(false)
+  const [openMenuCategory, setOpenMenuCategory] = useState(null)
+  // v3.0.0 (fase A2): IA por categoria de objeto (Questões · Provas · Listas · Trilhas).
+  // IDs no formato 'categoria' (landing) ou 'categoria-acao' (ação).
+  // Ver ADR docs/adr/0001-nav-por-categoria.md e glossário CONTEXT.md.
+  const VALID_TABS = [
+    'inicio', 'preferencias', 'administre',
+    'questoes', 'questoes-aleatoria', 'questoes-sorteio', 'questoes-pesquisar', 'questoes-jogar', 'questoes-imprimir', 'questoes-criar', 'questoes-resolucao',
+    'provas', 'provas-iniciar', 'provas-imprimir',
+    'listas', 'listas-imprimir', 'listas-criar',
+    'trilhas', 'trilhas-fazer', 'trilhas-criar', 'trilhas-aprovar',
+  ]
+  const LEGACY_TAB_MAP = {
+    // IDs de fase A ondas 1-4 (barra horizontal, agora removida)
+    jogos: 'questoes-jogar',
+    pesquisar: 'questoes-pesquisar',
+    pesquise: 'questoes-pesquisar',
+    responder: 'inicio',
+    imprimir: 'listas-imprimir',
+    ensine: 'inicio',
+    // IDs originais v2
+    simule: 'provas-iniciar',
+    estude: 'questoes-sorteio',
+    listas: 'listas',
+  }
+  const normalizeTab = (t) => LEGACY_TAB_MAP[t] || t
+  const parseView = (v) => {
+    if (!v) return { category: null, action: null }
+    const i = v.indexOf('-')
+    if (i < 0) return { category: v, action: null }
+    return { category: v.slice(0, i), action: v.slice(i + 1) }
+  }
+  const userRole = user?.role || 'user'
+  const roleAllows = (roles) => roles.includes(userRole)
+  const NAV_CATEGORIES = [
+    {
+      id: 'questoes', label: 'Questões',
+      actions: [
+        { id: 'aleatoria', label: 'Aleatória',  desc: 'Uma questão por vez, sem parar', roles: ['user','prof','admin'] },
+        { id: 'sorteio',   label: 'Sorteio',    desc: '5, 10 ou 20 questões aleatórias', roles: ['user','prof','admin'] },
+        { id: 'pesquisar', label: 'Pesquisar',  desc: 'Buscar por tema ou palavra',      roles: ['user','prof','admin'] },
+        { id: 'jogar',     label: 'Jogar',      desc: 'Streak, Blitz, Milhão, Diário',   roles: ['user','prof','admin'] },
+        { id: 'imprimir',  label: 'Imprimir',   desc: 'PDF de questões avulsas',         roles: ['prof','admin'] },
+        { id: 'criar',     label: 'Criar',      desc: 'Editor de questão nova',          roles: ['prof','admin'] },
+        { id: 'resolucao', label: 'Resolução',  desc: 'Escrever explicações',            roles: ['prof','admin'] },
+      ],
+    },
+    {
+      id: 'provas', label: 'Provas',
+      actions: [
+        { id: 'iniciar',  label: 'Iniciar',   desc: 'Simulado inteiro por área e ano', roles: ['user','prof','admin'] },
+        { id: 'imprimir', label: 'Imprimir',  desc: 'PDF da prova completa',           roles: ['prof','admin'] },
+      ],
+    },
+    {
+      id: 'listas', label: 'Listas',
+      actions: [
+        { id: 'imprimir', label: 'Imprimir',  desc: 'PDF de uma lista salva',          roles: ['user','prof','admin'] },
+        { id: 'criar',    label: 'Criar',     desc: 'Editor de listas de questões',    roles: ['prof','admin'] },
+      ],
+    },
+    {
+      id: 'trilhas', label: 'Trilhas',
+      actions: [
+        { id: 'fazer',   label: 'Fazer',    desc: 'Trilhas temáticas curadas',        roles: ['user','prof','admin'] },
+        { id: 'criar',   label: 'Criar',    desc: 'Montar uma nova trilha',           roles: ['prof','admin'] },
+        { id: 'aprovar', label: 'Aprovar',  desc: 'Revisar trilhas pendentes',        roles: ['admin'] },
+      ],
+    },
+  ]
+  const visibleCategories = NAV_CATEGORIES.map((c) => ({
+    ...c,
+    actions: c.actions.filter((a) => roleAllows(a.roles)),
+  })).filter((c) => c.actions.length > 0)
   const [activeTab, setActiveTab] = useState(() => {
-    const VALID = ['estude', 'listas', 'simule', 'jogos', 'pesquise', 'ensine', 'administre']
-    // Guest (sem token) só pode estar na aba Jogos.
-    const hasToken = typeof window !== 'undefined' && !!localStorage.getItem('token')
-    if (!hasToken) return 'jogos'
-    // Deep-link via path (e.g. /ensine). URL is rewritten back to / by the effect above for cleanliness.
+    const isValid = (t) => VALID_TABS.includes(t)
+    // v3.0.0 fase A2 (Q30): sem uso guest — home só existe com sessão.
+    // Deep-link via path (e.g. /questoes-sorteio); normalizado contra LEGACY_TAB_MAP.
     if (typeof window !== 'undefined') {
       const p = window.location.pathname.replace(/^\/+|\/+$/g, '')
-      if (VALID.includes(p)) return p
-      // Mode-specific deeplinks land on the Jogos tab.
-      if (p === 'milhao' || p === 'jogos/milhao') return 'jogos'
+      const normalized = normalizeTab(p)
+      if (isValid(normalized)) return normalized
+      if (p === 'milhao' || p === 'jogos/milhao') return 'questoes-jogar'
     }
     try {
-      const stored = localStorage.getItem('trilha-integrar-active-tab')
-      return VALID.includes(stored) ? stored : 'estude'
-    } catch { return 'estude' }
+      const stored = normalizeTab(localStorage.getItem('trilha-integrar-active-tab'))
+      return isValid(stored) ? stored : 'inicio'
+    } catch { return 'inicio' }
   })
-  const switchTab = (tab) => {
-    // Guest só pode ficar na aba Jogos; outras opções abrem a tela de login.
-    if (!token && tab !== 'jogos') {
+  const switchTab = (rawTab) => {
+    const tab = normalizeTab(rawTab)
+    // Guest cai em login pra qualquer navegação (v3.0.0 fase A2, Q30).
+    if (!token) {
       setPhase('login')
       return
     }
@@ -1328,17 +1451,14 @@ export default function App() {
     setSelectedYear(null)
     setSelectedDay(null)
     setSelectedIntegrarYear(null)
-    setSelectedTest(tab === 'simule' ? 'ENEM' : null)
-    if (tab !== 'ensine') setEnsineTool(null)
+    // Fase A2: ações de simulado precisam de test='ENEM' setado
+    // antes do startQuiz filtrar por (q.test === selectedTest).
+    setSelectedTest(tab === 'provas-iniciar' ? 'ENEM' : null)
+    setEnsineTool(null)
+    setSelectedProvaArea(null)
   }
-  useEffect(() => {
-    const FAVICON_COLOR_BY_TAB = { estude: 'red', listas: 'red', simule: 'amber', jogos: 'amber', pesquise: 'green', ensine: 'blue', administre: 'purple' }
-    const color = FAVICON_COLOR_BY_TAB[activeTab] ?? 'red'
-    const ico = document.querySelector('link[rel="icon"][type="image/x-icon"]')
-    const png = document.querySelector('link[rel="icon"][type="image/png"]')
-    if (ico) ico.href = `/favicon-${color}.ico`
-    if (png) png.href = `/favicon-${color}-32.png`
-  }, [activeTab])
+  // Favicon estático — a paleta v3 removeu o esquema colorido por aba.
+  // Mantido só o /favicon.ico + /favicon-32.png padrão.
 
   useEffect(() => {
     if (!sideMenuOpen) return
@@ -2033,9 +2153,12 @@ export default function App() {
       if (!selectedDay) return
     } else {
       if (!selectedTest || !selectedYear) return
-      if (selectedTest === 'ENEM' && !selectedDay) return
+      // v3.0.0 Prova Completa: exige área OU (dia ENEM). Restante mantém dia.
+      if (selectedTest === 'ENEM' && !selectedDay && !selectedProvaArea) return
     }
-    const areas = (!isIntegrarStart && selectedDay) ? DAY_AREAS[selectedDay] : null
+    const areas = selectedProvaArea
+      ? [selectedProvaArea]
+      : ((!isIntegrarStart && selectedDay) ? DAY_AREAS[selectedDay] : null)
     // For Integrar, selectedDay is "teacher::setName"
     const [integrarTeacher, integrarSetName] = isIntegrarStart && selectedDay
       ? (() => { const i = selectedDay.indexOf('::'); return [selectedDay.slice(0, i), selectedDay.slice(i + 2)] })()
@@ -2078,7 +2201,48 @@ export default function App() {
     setTotalElapsed(0)
     setQuestionElapsed(0)
     setPhase('quiz')
-  }, [allQuestions, selectedTest, selectedYear, selectedDay, foreignLang])
+  }, [allQuestions, selectedTest, selectedYear, selectedDay, selectedProvaArea, foreignLang])
+
+  const startSorteio = useCallback(() => {
+    if (!sorteioSize) return
+    const pool = allQuestions.filter((q) => q.test === 'ENEM')
+      .filter((q) => sorteioArea === 'all' || q.area === sorteioArea)
+    if (pool.length === 0) return
+
+    const variants = {}
+    pool.forEach((q) => {
+      if (q.language) {
+        if (!variants[q.number]) variants[q.number] = {}
+        variants[q.number][q.language] = q
+      }
+    })
+    langVariantsRef.current = variants
+    const deduped = pool.filter((q) => !q.language || q.language === foreignLang)
+
+    const shuffled = [...deduped]
+    for (let i = shuffled.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1))
+      ;[shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]]
+    }
+    const picked = shuffled.slice(0, sorteioSize)
+    if (picked.length === 0) return
+
+    clearPausedSession()
+    setAttempts({})
+    saveAttemptsToSession({})
+    setSelectedArea(sorteioArea === 'all' ? null : sorteioArea)
+    setIsDailyChallenge(false)
+    const now = Date.now()
+    startTimeRef.current = now
+    questionStartRef.current = now
+    accQuestionTimesRef.current = {}
+    prevQuestionNumRef.current = null
+    setQuestions(picked)
+    setQuestion(picked[0])
+    setTotalElapsed(0)
+    setQuestionElapsed(0)
+    setPhase('quiz')
+  }, [allQuestions, sorteioSize, sorteioArea, foreignLang])
 
   // Open a single ENEM question in study mode (used by the Pesquise tab).
   const startSingleQuestionStudy = useCallback((rawQ) => {
@@ -2997,147 +3161,204 @@ export default function App() {
     return (
       <div className="app-shell">
         <div className={`home-screen home-screen--${activeTab}`}>
-          {!token && (
-            <div className="home-guest-banner" role="status">
-              <span className="home-guest-banner-text">
-                Faça login pra acessar simulados, listas e estatísticas
-              </span>
-              <button
-                type="button"
-                className="home-guest-banner-btn"
-                onClick={() => setPhase('login')}
-              >
-                Fazer login
-              </button>
-            </div>
-          )}
           <header className="home-header">
             <div className="home-header-row">
-              <button
-                type="button"
-                className="home-menu-btn"
-                onClick={() => setSideMenuOpen(true)}
-                aria-label="Abrir menu"
-                aria-expanded={sideMenuOpen}
-              >
-                <MenuIcon />
-              </button>
-              <img
-                src="/figuras/logos/integrar-logo-transparent.png"
-                alt="Integrar"
-                className="home-header-logo"
-              />
-              <span className="home-header-title">Trilha Integrar</span>
-              <ChangelogSection />
-              <div className="home-header-actions">
+              <div className="home-header-brand-group">
                 <button
                   type="button"
-                  className="theme-toggle home-theme-btn"
-                  onClick={() => setDark((d) => !d)}
-                  aria-label="Alternar tema"
+                  className="home-header-brand"
+                  onClick={() => switchTab('inicio')}
+                  aria-label="Ir para Início"
                 >
-                  {dark ? <SunIcon /> : <MoonIcon />}
+                  <img
+                    src="/figuras/logos/integrar-logo-transparent.png"
+                    alt="Integrar"
+                    className="home-header-logo"
+                  />
+                  <span className="home-header-title">Trilha Integrar</span>
                 </button>
+                <ChangelogSection />
+              </div>
+              <div className="home-header-actions">
+                {token && (
+                  <div className="avatar-menu-wrap">
+                    <button
+                      type="button"
+                      className={`home-avatar-btn${sideMenuOpen ? ' active' : ''}`}
+                      onClick={() => setSideMenuOpen((o) => !o)}
+                      aria-label="Menu do usuário"
+                      aria-expanded={sideMenuOpen}
+                    >
+                      <span className="home-avatar-initial">
+                        {(user?.username ?? '?').charAt(0).toUpperCase()}
+                      </span>
+                    </button>
+                    {sideMenuOpen && (
+                      <>
+                        <div
+                          className="avatar-menu-backdrop"
+                          onClick={() => { setSideMenuOpen(false); setOpenMenuCategory(null) }}
+                          aria-hidden
+                        />
+                        <div
+                          className="avatar-menu-popover"
+                          role="menu"
+                          aria-label="Menu de navegação"
+                        >
+                          <div className="avatar-menu-greeting">
+                            Olá, <strong>{user?.username}</strong>
+                          </div>
+                          <div className="avatar-menu-sep" />
+                          {visibleCategories.map((cat) => {
+                            const isOpen = openMenuCategory === cat.id
+                            const currentCategory = parseView(activeTab).category
+                            return (
+                              <div key={cat.id} className="avatar-menu-cat-group">
+                                <button
+                                  type="button"
+                                  className={`avatar-menu-cat${isOpen ? ' is-open' : ''}${currentCategory === cat.id ? ' is-current' : ''}`}
+                                  onClick={() => setOpenMenuCategory(isOpen ? null : cat.id)}
+                                  aria-expanded={isOpen}
+                                >
+                                  <span>{cat.label}</span>
+                                  <span className="avatar-menu-cat-chevron" aria-hidden>›</span>
+                                </button>
+                                {isOpen && (
+                                  <div className="avatar-menu-actions">
+                                    {cat.actions.map((a) => {
+                                      const tabId = `${cat.id}-${a.id}`
+                                      return (
+                                        <button
+                                          key={a.id}
+                                          type="button"
+                                          className={`avatar-menu-action${activeTab === tabId ? ' is-active' : ''}`}
+                                          onClick={() => {
+                                            switchTab(tabId)
+                                            setSideMenuOpen(false)
+                                            setOpenMenuCategory(null)
+                                          }}
+                                        >
+                                          {a.label}
+                                        </button>
+                                      )
+                                    })}
+                                  </div>
+                                )}
+                              </div>
+                            )
+                          })}
+                          <div className="avatar-menu-sep" />
+                          <button
+                            type="button"
+                            className={`avatar-menu-utility${activeTab === 'inicio' ? ' is-active' : ''}`}
+                            onClick={() => { switchTab('inicio'); setSideMenuOpen(false); setOpenMenuCategory(null) }}
+                          >
+                            Início
+                          </button>
+                          <button
+                            type="button"
+                            className={`avatar-menu-utility${activeTab === 'preferencias' ? ' is-active' : ''}`}
+                            onClick={() => { switchTab('preferencias'); setSideMenuOpen(false); setOpenMenuCategory(null) }}
+                          >
+                            Preferências
+                          </button>
+                          {user?.role === 'admin' && (
+                            <button
+                              type="button"
+                              className={`avatar-menu-utility${activeTab === 'administre' ? ' is-active' : ''}`}
+                              onClick={() => { switchTab('administre'); setSideMenuOpen(false); setOpenMenuCategory(null) }}
+                            >
+                              Administrar
+                            </button>
+                          )}
+                          <div className="avatar-menu-sep" />
+                          <button
+                            type="button"
+                            className="avatar-menu-utility avatar-menu-logout"
+                            onClick={() => { setSideMenuOpen(false); setOpenMenuCategory(null); handleLogout() }}
+                          >
+                            Sair
+                          </button>
+                        </div>
+                      </>
+                    )}
+                  </div>
+                )}
               </div>
             </div>
           </header>
 
-          {sideMenuOpen && (
-            <>
-              <div
-                className="home-side-backdrop"
-                onClick={() => setSideMenuOpen(false)}
-                aria-hidden
-              />
-              <aside
-                className="home-side-menu"
-                role="dialog"
-                aria-label="Menu de navegação"
-              >
-                <div className="home-side-menu-header">
-                  <span className="home-side-menu-greeting">
-                    Olá, <strong>{user?.username}</strong>
-                  </span>
-                  <button
-                    type="button"
-                    className="home-side-menu-close"
-                    onClick={() => setSideMenuOpen(false)}
-                    aria-label="Fechar menu"
-                  >
-                    ×
-                  </button>
+          <div className="home-card home-card--wide">
+            {activeTab === 'inicio' && (
+              <div className="home-tab-content home-tab-content--inicio">
+                <div className="home-inicio">
+                  <h1 className="home-inicio-title">Bem-vindo!</h1>
+                  <p className="home-inicio-subtitle">Escolha uma categoria para começar</p>
+                  <div className="home-inicio-cards home-inicio-cards--col">
+                    {visibleCategories.map((cat) => {
+                      const icon = cat.id === 'questoes' ? <ClipboardCheckIcon />
+                        : cat.id === 'provas' ? <NotebookIcon />
+                        : cat.id === 'listas' ? <PrinterIcon />
+                        : <PenIcon />
+                      const desc = cat.id === 'questoes' ? 'Responder, jogar, pesquisar ou imprimir'
+                        : cat.id === 'provas' ? 'Simulado completo por ano'
+                        : cat.id === 'listas' ? 'Coleções curadas pelo professor'
+                        : 'Sequências temáticas de estudo'
+                      return (
+                        <button
+                          key={cat.id}
+                          type="button"
+                          className="home-inicio-card"
+                          onClick={() => switchTab(cat.id)}
+                        >
+                          <span className="home-inicio-card-icon">{icon}</span>
+                          <span className="home-inicio-card-title">{cat.label}</span>
+                          <span className="home-inicio-card-desc">{desc}</span>
+                        </button>
+                      )
+                    })}
+                  </div>
                 </div>
-                <div className="home-side-menu-body">
-                  <nav className="home-side-menu-nav" role="tablist" aria-label="Modo">
-                    <button
-                      type="button"
-                      role="tab"
-                      aria-selected={activeTab === 'jogos'}
-                      className={`home-side-menu-item home-side-menu-item--jogos${activeTab === 'jogos' ? ' active' : ''}`}
-                      onClick={() => { switchTab('jogos'); setSideMenuOpen(false) }}
-                    >
-                      Jogos
-                    </button>
-
-                    {token && (
-                      <>
-                        <details className="home-side-menu-group">
-                          <summary className="home-side-menu-item home-side-menu-group-header">
-                            <span>ENEM</span>
-                          </summary>
-                          <div className="home-side-menu-group-items">
-                            {[
-                              { id: 'simule', label: 'Provas Completas' },
-                              { id: 'estude', label: 'Por Matéria' },
-                              { id: 'pesquise', label: 'Pesquisar' },
-                            ].map(({ id, label }) => (
-                              <button
-                                key={id}
-                                type="button"
-                                role="tab"
-                                aria-selected={activeTab === id}
-                                className={`home-side-menu-item home-side-menu-item--sub home-side-menu-item--${id}${activeTab === id ? ' active' : ''}`}
-                                onClick={() => { switchTab(id); setSideMenuOpen(false) }}
-                              >
-                                {label}
-                              </button>
-                            ))}
-                          </div>
-                        </details>
-
-                        {[
-                          { id: 'listas', label: 'Listas de Exercícios', show: true },
-                          { id: 'ensine', label: 'Criar Material', show: user?.role === 'prof' || user?.role === 'admin' },
-                          { id: 'administre', label: 'Administrar', show: user?.role === 'admin' },
-                        ].filter((t) => t.show).map(({ id, label }) => (
+              </div>
+            )}
+            {(() => {
+              const { category, action } = parseView(activeTab)
+              if (action) return null
+              const cat = visibleCategories.find((c) => c.id === category)
+              if (!cat) return null
+              return (
+                <div className="home-tab-content home-tab-content--category">
+                  <div className="home-inicio">
+                    <h1 className="home-inicio-title">{cat.label}</h1>
+                    <p className="home-inicio-subtitle">Escolha uma ação</p>
+                    <div className="category-actions">
+                      {cat.actions.map((a) => {
+                        const tabId = `${cat.id}-${a.id}`
+                        return (
                           <button
-                            key={id}
+                            key={a.id}
                             type="button"
-                            role="tab"
-                            aria-selected={activeTab === id}
-                            className={`home-side-menu-item home-side-menu-item--${id}${activeTab === id ? ' active' : ''}`}
-                            onClick={() => { switchTab(id); setSideMenuOpen(false) }}
+                            className="category-action-card"
+                            onClick={() => switchTab(tabId)}
                           >
-                            {label}
+                            <span className="category-action-title">{a.label}</span>
+                            <span className="category-action-desc">{a.desc}</span>
                           </button>
-                        ))}
-                      </>
-                    )}
-                    {!token && (
-                      <button
-                        type="button"
-                        className="home-side-menu-item home-side-menu-item--login"
-                        onClick={() => { setSideMenuOpen(false); setPhase('login') }}
-                      >
-                        Fazer login
-                      </button>
-                    )}
-                  </nav>
-
-                  <details className="home-side-menu-section home-side-menu-section--collapsible">
-                    <summary className="home-side-menu-section-label home-side-menu-section-summary">Opções</summary>
-                    <label className="home-side-toggle-row">
-                      <span className="home-side-toggle-label">Embaralhar alternativas</span>
+                        )
+                      })}
+                    </div>
+                  </div>
+                </div>
+              )
+            })()}
+            {activeTab === 'preferencias' && (
+              <div className="home-tab-content home-tab-content--preferencias">
+                <div className="preferencias-screen">
+                  <h1 className="preferencias-title">Preferências</h1>
+                  <p className="preferencias-subtitle">Ajustes de sessão · aplicam a esse aluno</p>
+                  <div className="preferencias-list">
+                    <label className="preferencias-row">
+                      <span className="preferencias-row-label">Embaralhar alternativas</span>
                       <span className={`options-toggle-switch${randomizeAlts ? ' on' : ''}`}>
                         <input
                           type="checkbox"
@@ -3150,8 +3371,8 @@ export default function App() {
                         <span className="options-toggle-thumb" />
                       </span>
                     </label>
-                    <label className="home-side-toggle-row">
-                      <span className="home-side-toggle-label">Mostrar resposta</span>
+                    <label className="preferencias-row">
+                      <span className="preferencias-row-label">Mostrar resposta</span>
                       <span className={`options-toggle-switch${showAnswer ? ' on' : ''}`}>
                         <input
                           type="checkbox"
@@ -3165,8 +3386,8 @@ export default function App() {
                         <span className="options-toggle-thumb" />
                       </span>
                     </label>
-                    <label className="home-side-toggle-row">
-                      <span className="home-side-toggle-label">Mostrar dificuldade</span>
+                    <label className="preferencias-row">
+                      <span className="preferencias-row-label">Mostrar dificuldade</span>
                       <span className={`options-toggle-switch${showDifficulty ? ' on' : ''}`}>
                         <input
                           type="checkbox"
@@ -3179,8 +3400,8 @@ export default function App() {
                         <span className="options-toggle-thumb" />
                       </span>
                     </label>
-                    <label className="home-side-toggle-row">
-                      <span className="home-side-toggle-label">
+                    <label className="preferencias-row">
+                      <span className="preferencias-row-label">
                         {soundMuted ? <SoundOffIcon /> : <SoundOnIcon />} Som
                       </span>
                       <span className={`options-toggle-switch${!soundMuted ? ' on' : ''}`}>
@@ -3196,8 +3417,8 @@ export default function App() {
                         <span className="options-toggle-thumb" />
                       </span>
                     </label>
-                    <label className="home-side-toggle-row">
-                      <span className="home-side-toggle-label">
+                    <label className="preferencias-row">
+                      <span className="preferencias-row-label">
                         {dark ? <MoonIcon /> : <SunIcon />} {dark ? 'Modo escuro' : 'Modo claro'}
                       </span>
                       <span className={`options-toggle-switch options-toggle-switch--theme${dark ? ' on' : ''}`}>
@@ -3205,426 +3426,42 @@ export default function App() {
                         <span className="options-toggle-thumb" />
                       </span>
                     </label>
-                    {clearHistoryConfirm ? (
-                      <div className="home-side-confirm-row">
-                        <span className="home-side-confirm-label">Tem certeza?</span>
-                        <button
-                          type="button"
-                          className="options-confirm-btn options-confirm-btn--danger"
-                          onClick={handleClearHistory}
-                          disabled={clearHistoryLoading}
-                        >
-                          {clearHistoryLoading ? 'Limpando…' : 'Confirmar'}
-                        </button>
-                        <button
-                          type="button"
-                          className="options-confirm-btn"
-                          onClick={() => setClearHistoryConfirm(false)}
-                          disabled={clearHistoryLoading}
-                        >
-                          Cancelar
-                        </button>
-                      </div>
-                    ) : (
-                      <button
-                        type="button"
-                        className="home-side-clear-btn"
-                        onClick={() => setClearHistoryConfirm(true)}
-                      >
-                        Limpar histórico
-                      </button>
-                    )}
-                  </details>
-                </div>
-                <div className="home-side-menu-footer">
-                  <button
-                    type="button"
-                    className="home-side-logout-btn"
-                    onClick={() => { setSideMenuOpen(false); handleLogout() }}
-                  >
-                    Sair
-                  </button>
-                </div>
-              </aside>
-            </>
-          )}
-
-          <div className="home-card home-card--wide">
-            {activeTab === 'estude' && (
-              <div className="home-tab-content">
-                <div className="home-area-section">
-                  <span className="home-filter-label">Estudar por disciplina</span>
-
-                  {/* ── Disciplina dropdown (single-select) ── */}
-                  <details className="home-dropdown">
-                    <summary className="home-dropdown-summary">
-                      <span className="home-dropdown-label">Disciplina</span>
-                      <span className={`home-dropdown-value${selectedDisciplina ? ' home-dropdown-value--filled' : ''}`}>
-                        {selectedDisciplina
-                          ? DISCIPLINA_LABELS[selectedDisciplina]
-                          : 'Selecionar…'}
-                      </span>
-                    </summary>
-                    <div className="home-dropdown-panel">
-                      {(['linguagens', 'humanas', 'nature', 'math']).map((area) => (
-                        <div key={area} className="home-dropdown-group">
-                          <span className="home-dropdown-group-label">{AREA_LABELS[area]}</span>
-                          {DISCIPLINAS_BY_AREA[area].map((slug) => (
-                            <label key={slug} className="home-dropdown-option">
-                              <input
-                                type="radio"
-                                name="disciplina"
-                                checked={selectedDisciplina === slug}
-                                onChange={(e) => {
-                                  setSelectedDisciplina(slug)
-                                  setSelectedSubtags([])
-                                  e.currentTarget.closest('details')?.removeAttribute('open')
-                                }}
-                              />
-                              <span>{DISCIPLINA_LABELS[slug]}</span>
-                            </label>
-                          ))}
-                        </div>
-                      ))}
-                    </div>
-                  </details>
-
-                  {/* ── Always-visible multidisciplinar toggle ── */}
-                  <label className="home-toggle-row">
-                    <input
-                      type="checkbox"
-                      checked={allowMultidisciplinar}
-                      onChange={() => {
-                        setSelectedSubtags([])
-                        setAllowMultidisciplinar((v) => !v)
-                      }}
-                    />
-                    <span>Incluir questões multidisciplinares</span>
-                  </label>
-
-                  {/* ── Subtag dropdown (only when disciplina chosen) ── */}
-                  {selectedDisciplina && availableSubtags.length > 0 && (
-                    <details className="home-dropdown">
-                      <summary className="home-dropdown-summary">
-                        <span className="home-dropdown-label">Subtemas</span>
-                        <span className="home-dropdown-value">
-                          {selectedSubtags.length === 0
-                            ? `Todos (${availableSubtags.length})`
-                            : selectedSubtags.length <= 2
-                              ? selectedSubtags.join(', ')
-                              : `${selectedSubtags.length} selecionados`}
-                        </span>
-                      </summary>
-                      <div className="home-dropdown-panel">
-                        <div className="home-dropdown-group home-dropdown-group--cols-2">
-                          {availableSubtags.map((tag) => (
-                            <label key={tag} className="home-dropdown-option">
-                              <input
-                                type="checkbox"
-                                checked={selectedSubtags.includes(tag)}
-                                onChange={() =>
-                                  setSelectedSubtags((prev) =>
-                                    prev.includes(tag)
-                                      ? prev.filter((t) => t !== tag)
-                                      : [...prev, tag]
-                                  )
-                                }
-                              />
-                              <span>{tag}</span>
-                            </label>
-                          ))}
-                        </div>
-                      </div>
-                    </details>
-                  )}
-
-                  {/* ── Quantidade ── */}
-                  {selectedDisciplina && (
-                    <div className="home-area-day-group">
-                      <span className="home-area-day-label">
-                        Quantidade <span style={{ fontWeight: 400, opacity: 0.6 }}>({disciplinaPoolSize} disponíveis)</span>
-                      </span>
-                      <div className="home-test-seg">
-                        {[10, 20, 45, 'all'].map((n) => (
+                    <div className="preferencias-row preferencias-row--danger">
+                      {clearHistoryConfirm ? (
+                        <div className="preferencias-confirm">
+                          <span className="preferencias-confirm-label">Tem certeza?</span>
                           <button
-                            key={n}
                             type="button"
-                            className={`home-test-seg-btn${disciplinaQuizLength === n ? ' active' : ''}`}
-                            onClick={() => setDisciplinaQuizLength(n)}
+                            className="options-confirm-btn options-confirm-btn--danger"
+                            onClick={handleClearHistory}
+                            disabled={clearHistoryLoading}
                           >
-                            {n === 'all' ? 'Todas' : n}
+                            {clearHistoryLoading ? 'Limpando…' : 'Confirmar'}
                           </button>
-                        ))}
-                      </div>
-                      <label className="home-area-custom-qty">
-                        <span>Outra quantidade:</span>
-                        <input
-                          type="number"
-                          min={1}
-                          max={disciplinaPoolSize || undefined}
-                          inputMode="numeric"
-                          value={typeof disciplinaQuizLength === 'number' && ![10, 20, 45].includes(disciplinaQuizLength)
-                            ? disciplinaQuizLength
-                            : ''}
-                          placeholder="qualquer número"
-                          onChange={(e) => {
-                            const raw = e.target.value
-                            if (raw === '') return
-                            const v = parseInt(raw, 10)
-                            if (Number.isFinite(v) && v > 0) setDisciplinaQuizLength(v)
-                          }}
-                          onFocus={(e) => e.target.select()}
-                        />
-                      </label>
-                    </div>
-                  )}
-
-                  {/* ── Começar button ── */}
-                  {(() => {
-                    const effective = disciplinaQuizLength === 'all'
-                      ? disciplinaPoolSize
-                      : Math.min(disciplinaQuizLength, disciplinaPoolSize)
-                    const label = effective === 0
-                      ? 'Começar simulado'
-                      : `Começar simulado · ${effective} ${effective === 1 ? 'questão' : 'questões'}`
-                    return (
-                      <button
-                        type="button"
-                        className="home-area-pill home-area-pill--primary"
-                        disabled={effective === 0}
-                        onClick={() => startDisciplinaQuiz(selectedDisciplina, {
-                          allowMultidisciplinar,
-                          tags: selectedSubtags,
-                          length: disciplinaQuizLength,
-                        })}
-                      >
-                        {label}
-                      </button>
-                    )
-                  })()}
-                </div>
-
-              </div>
-            )}
-
-            {activeTab === 'listas' && (
-              <div className="home-tab-content">
-                {allIntegrarQs.length === 0 ? (
-                  <p className="home-ensine-message">
-                    Nenhuma lista disponível ainda.
-                  </p>
-                ) : (
-                  <>
-                    <div className="home-filters">
-                      <div className="home-filter-group">
-                        <span className="home-filter-label">Listas Integrar</span>
-                      </div>
-
-                      {integrarYears.length > 0 && (
-                        <div className="home-filter-group">
-                          <span className="home-filter-label">Ano <span style={{ fontWeight: 400, opacity: 0.6 }}>(opcional)</span></span>
-                          <div className="home-filter-pills home-year-grid">
-                            {integrarYears.map((y) => (
-                              <button
-                                key={y}
-                                type="button"
-                                className={`home-filter-pill home-year-pill ${selectedIntegrarYear === y ? 'active' : ''}`}
-                                onClick={() => {
-                                  setSelectedIntegrarYear(prev => prev === y ? null : y)
-                                  setSelectedDay(null)
-                                }}
-                              >
-                                <span>{y}</span>
-                              </button>
-                            ))}
-                          </div>
+                          <button
+                            type="button"
+                            className="options-confirm-btn"
+                            onClick={() => setClearHistoryConfirm(false)}
+                            disabled={clearHistoryLoading}
+                          >
+                            Cancelar
+                          </button>
                         </div>
+                      ) : (
+                        <button
+                          type="button"
+                          className="preferencias-clear-btn"
+                          onClick={() => setClearHistoryConfirm(true)}
+                        >
+                          Limpar histórico
+                        </button>
                       )}
-
-                      <div className="home-filter-group">
-                        <span className="home-filter-label">Lista</span>
-                        <div className="home-filter-pills">
-                          {integrarSetsFiltered.length === 0 && (
-                            <span style={{ fontSize: '0.85rem', color: 'var(--text-soft)' }}>Nenhuma lista disponível</span>
-                          )}
-                          {integrarSetsFiltered.map(({ name, teacher, year }) => {
-                            const setKey = `${teacher}::${name}`
-                            const isActive = isIntegrar && selectedDay === setKey
-                            return (
-                              <button
-                                key={setKey}
-                                type="button"
-                                className={`home-filter-pill home-filter-pill--wide home-day-pill ${isActive ? 'active' : ''}`}
-                                onClick={() => {
-                                  setSelectedTest('Integrar')
-                                  setSelectedYear(year ?? null)
-                                  setSelectedDay(setKey)
-                                }}
-                              >
-                                <span className="home-day-label-text">
-                                  {name}
-                                  {year ? <span style={{ opacity: 0.6 }}> · {year}</span> : ''}
-                                </span>
-                                <span style={{ fontSize: '0.75rem', opacity: 0.6 }}>{teacher}</span>
-                              </button>
-                            )
-                          })}
-                        </div>
-                      </div>
-                    </div>
-
-                    {isIntegrar && !!selectedDay && (
-                      <button
-                        type="button"
-                        className="home-start-btn"
-                        onClick={startQuiz}
-                      >
-                        Iniciar lista
-                      </button>
-                    )}
-                  </>
-                )}
-              </div>
-            )}
-
-            {activeTab === 'simule' && (
-              <div className="home-tab-content">
-                <div className="home-filters">
-                  {/* Step 1 — Prova */}
-                  <div className="home-filter-group">
-                    <span className="home-filter-label">Prova</span>
-                    <div className="home-test-seg">
-                      {simuleAvailableTests.map((t) => (
-                        <button
-                          key={t}
-                          type="button"
-                          className={`home-test-seg-btn${selectedTest === t ? ' active' : ''}`}
-                          onClick={() => {
-                            setSelectedTest(t)
-                            setSelectedYear(null)
-                            setSelectedDay(null)
-                          }}
-                        >
-                          {t}
-                        </button>
-                      ))}
                     </div>
                   </div>
-
-                  {/* Step 2 — Ano */}
-                  <div className="home-filter-group">
-                    <span className="home-filter-label">Ano</span>
-                    <div className="home-filter-pills home-year-grid">
-                      {availableYears.map((y) => {
-                        const tier = yearTier(y)
-                        const pct = yearPercent(y)
-                        return (
-                          <button
-                            key={y}
-                            type="button"
-                            className={`home-filter-pill home-year-pill ${selectedYear === y ? 'active' : ''} ${tier ?? ''}`}
-                            onClick={() => {
-                              setSelectedYear(y)
-                              setSelectedDay(null)
-                            }}
-                          >
-                            <span className="home-year-label">
-                              <span>{y}</span>
-                              {tier === 'perfect' && <span className="home-year-star">★</span>}
-                              {tier === 'great'   && <span className="home-year-star">✓</span>}
-                              {tier === 'done'    && <span className="home-year-check">●</span>}
-                            </span>
-                            {pct != null && <span className="home-year-pct">{pct}%</span>}
-                          </button>
-                        )
-                      })}
-                    </div>
-                  </div>
-
-                  {/* Step 3 — Dia (ENEM only) */}
-                  {selectedTest === 'ENEM' && selectedYear && (
-                    <div className="home-filter-group">
-                      <span className="home-filter-label">Dia</span>
-                      <div className="home-filter-pills">
-                        {[1, 2].map((day) => {
-                          const label = day === 1
-                            ? 'Dia 1 · Linguagens e Ciências Humanas'
-                            : 'Dia 2 · Matemática e Ciências da Natureza'
-                          const r = getResult(selectedTest, selectedYear, day)
-                          const tier = r ? resultTier(r.score, r.total) : null
-                          return (
-                            <button
-                              key={day}
-                              type="button"
-                              className={`home-filter-pill home-filter-pill--wide home-day-pill ${selectedDay === day ? 'active' : ''} ${tier ?? ''}`}
-                              onClick={() => setSelectedDay(day)}
-                            >
-                              <span className="home-day-label-text">
-                                {tier === 'perfect' && <span className="home-day-tier-icon">★ </span>}
-                                {tier === 'great'   && <span className="home-day-tier-icon">✓ </span>}
-                                {label}
-                              </span>
-                              {r && (
-                                <span className="home-day-result">
-                                  {r.score}/{r.total} · {Math.round(r.score / r.total * 100)}%
-                                </span>
-                              )}
-                            </button>
-                          )
-                        })}
-                      </div>
-                    </div>
-                  )}
-                  {selectedTest === 'ENEM' && !selectedYear && (
-                    <div className="home-filter-group">
-                      <span className="home-filter-label">Dia</span>
-                      <div className="home-filter-pills">
-                        <button type="button" className="home-filter-pill home-filter-pill--wide" disabled>
-                          Dia 1 · Linguagens e Ciências Humanas
-                        </button>
-                        <button type="button" className="home-filter-pill home-filter-pill--wide" disabled>
-                          Dia 2 · Matemática e Ciências da Natureza
-                        </button>
-                      </div>
-                    </div>
-                  )}
-
-                  {/* Step 4 — Língua estrangeira (Dia 1 ENEM only) */}
-                  {selectedTest === 'ENEM' && selectedYear && selectedDay === 1 && (
-                    <div className="home-filter-group">
-                      <span className="home-filter-label">Língua estrangeira</span>
-                      <div className="home-test-seg">
-                        <button
-                          type="button"
-                          className={`home-test-seg-btn${foreignLang === 'en' ? ' active' : ''}`}
-                          onClick={() => setForeignLang('en')}
-                        >
-                          🇺🇸 Inglês
-                        </button>
-                        <button
-                          type="button"
-                          className={`home-test-seg-btn${foreignLang === 'es' ? ' active' : ''}`}
-                          onClick={() => setForeignLang('es')}
-                        >
-                          🇪🇸 Espanhol
-                        </button>
-                      </div>
-                    </div>
-                  )}
                 </div>
-
-                <button
-                  type="button"
-                  className="home-start-btn"
-                  onClick={startQuiz}
-                  disabled={!canStart}
-                >
-                  Iniciar
-                </button>
               </div>
             )}
-
-            {activeTab === 'jogos' && (
+            {activeTab === 'questoes-jogar' && (
               <div className="home-tab-content">
                 <div className="jogos-grid">
                   {[
@@ -3788,7 +3625,7 @@ export default function App() {
               </div>
             )}
 
-            {activeTab === 'pesquise' && (
+            {activeTab === 'questoes-pesquisar' && (
               <div className="home-tab-content">
                 <Suspense fallback={<p className="qe-loading">Carregando…</p>}>
                   <EnemPicker
@@ -3801,69 +3638,243 @@ export default function App() {
               </div>
             )}
 
-            {activeTab === 'ensine' && (
+            {activeTab === 'provas-iniciar' && (
+              <div className="home-tab-content">
+                <button
+                  type="button"
+                  className="btn--ghost"
+                  onClick={() => { switchTab('provas'); setSelectedProvaArea(null); setSelectedYear(null) }}
+                  style={{ alignSelf: 'flex-start' }}
+                >
+                  ← Voltar às Provas
+                </button>
+                <div className="home-filters">
+                  <div className="home-filter-group">
+                    <span className="home-filter-label">Área</span>
+                    <div className="home-filter-pills">
+                      {['math', 'nature', 'linguagens', 'humanas'].map((area) => (
+                        <button
+                          key={area}
+                          type="button"
+                          className={`home-filter-pill${selectedProvaArea === area ? ' active' : ''}`}
+                          onClick={() => setSelectedProvaArea(area)}
+                        >
+                          {AREA_LABELS[area]}
+                        </button>
+                      ))}
+                    </div>
+                  </div>
+
+                  <div className="home-filter-group">
+                    <span className="home-filter-label">Ano</span>
+                    <div className="home-filter-pills home-year-grid">
+                      {availableYears.map((y) => {
+                        const tier = yearTier(y)
+                        const pct = yearPercent(y)
+                        return (
+                          <button
+                            key={y}
+                            type="button"
+                            className={`home-filter-pill home-year-pill ${selectedYear === y ? 'active' : ''} ${tier ?? ''}`}
+                            onClick={() => setSelectedYear(y)}
+                          >
+                            <span className="home-year-label">
+                              <span>{y}</span>
+                              {tier === 'perfect' && <span className="home-year-star">★</span>}
+                              {tier === 'great'   && <span className="home-year-star">✓</span>}
+                              {tier === 'done'    && <span className="home-year-check">●</span>}
+                            </span>
+                            {pct != null && <span className="home-year-pct">{pct}%</span>}
+                          </button>
+                        )
+                      })}
+                    </div>
+                  </div>
+
+                  {selectedProvaArea === 'linguagens' && (
+                    <div className="home-filter-group">
+                      <span className="home-filter-label">Língua estrangeira</span>
+                      <div className="home-test-seg">
+                        <button
+                          type="button"
+                          className={`home-test-seg-btn${foreignLang === 'en' ? ' active' : ''}`}
+                          onClick={() => setForeignLang('en')}
+                        >
+                          🇺🇸 Inglês
+                        </button>
+                        <button
+                          type="button"
+                          className={`home-test-seg-btn${foreignLang === 'es' ? ' active' : ''}`}
+                          onClick={() => setForeignLang('es')}
+                        >
+                          🇪🇸 Espanhol
+                        </button>
+                      </div>
+                    </div>
+                  )}
+                </div>
+
+                <button
+                  type="button"
+                  className="home-start-btn"
+                  onClick={startQuiz}
+                  disabled={!selectedProvaArea || !selectedYear}
+                >
+                  Iniciar
+                </button>
+              </div>
+            )}
+
+            {activeTab === 'questoes-sorteio' && (
+              <div className="home-tab-content">
+                <button
+                  type="button"
+                  className="btn--ghost"
+                  onClick={() => switchTab('questoes')}
+                  style={{ alignSelf: 'flex-start' }}
+                >
+                  ← Voltar às Questões
+                </button>
+                <div className="home-filters">
+                  <div className="home-filter-group">
+                    <span className="home-filter-label">Quantidade</span>
+                    <div className="home-filter-pills">
+                      {[5, 10, 20].map((n) => (
+                        <button
+                          key={n}
+                          type="button"
+                          className={`home-filter-pill${sorteioSize === n ? ' active' : ''}`}
+                          onClick={() => setSorteioSize(n)}
+                        >
+                          {n} questões
+                        </button>
+                      ))}
+                    </div>
+                  </div>
+
+                  <div className="home-filter-group">
+                    <span className="home-filter-label">Área</span>
+                    <div className="home-filter-pills">
+                      <button
+                        type="button"
+                        className={`home-filter-pill${sorteioArea === 'all' ? ' active' : ''}`}
+                        onClick={() => setSorteioArea('all')}
+                      >
+                        Todas
+                      </button>
+                      {['math', 'nature', 'linguagens', 'humanas'].map((area) => (
+                        <button
+                          key={area}
+                          type="button"
+                          className={`home-filter-pill${sorteioArea === area ? ' active' : ''}`}
+                          onClick={() => setSorteioArea(area)}
+                        >
+                          {AREA_LABELS[area]}
+                        </button>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+
+                <button
+                  type="button"
+                  className="home-start-btn"
+                  onClick={startSorteio}
+                  disabled={!sorteioSize}
+                >
+                  Sortear e iniciar
+                </button>
+              </div>
+            )}
+
+            {activeTab === 'trilhas-fazer' && (
+              <div className="home-tab-content">
+                <button
+                  type="button"
+                  className="btn--ghost"
+                  onClick={() => switchTab('trilhas')}
+                  style={{ alignSelf: 'flex-start' }}
+                >
+                  ← Voltar às Trilhas
+                </button>
+                <p className="home-ensine-message" style={{ marginTop: '1rem' }}>
+                  Trilhas de estudo chegam em breve (fase B da v3.0.0).
+                </p>
+              </div>
+            )}
+
+            {activeTab === 'listas-imprimir' && (
               <div className="home-tab-content">
                 {(user?.role === 'prof' || user?.role === 'admin') ? (
-                  ensineTool === 'criar-lista' ? (
-                    <Suspense fallback={<p className="qe-loading">Carregando…</p>}>
-                      <QuestionEditor embedded onClose={() => setEnsineTool(null)} />
-                    </Suspense>
-                  ) : ensineTool === 'criar-questao' ? (
-                    <Suspense fallback={<p className="qe-loading">Carregando…</p>}>
-                      <QuestionEditor embedded quickAdd onClose={() => setEnsineTool(null)} />
-                    </Suspense>
-                  ) : ensineTool === 'explicar' ? (
-                    <Suspense fallback={<p className="qe-loading">Carregando…</p>}>
-                      <ExplanationsEditor
-                        allQuestions={allQuestions}
-                        contexts={contexts}
-                        explanationOverrides={explanationOverrides}
-                        setExplanationOverrides={setExplanationOverrides}
-                        token={token}
-                        onClose={() => setEnsineTool(null)}
-                      />
-                    </Suspense>
-                  ) : ensineTool === 'gerar-pdf' ? (
-                    <Suspense fallback={<p className="qe-loading">Carregando…</p>}>
-                      <PdfExporter token={token} onClose={() => setEnsineTool(null)} />
-                    </Suspense>
-                  ) : (
-                    <>
-                      <button
-                        type="button"
-                        className="home-start-btn"
-                        onClick={() => setEnsineTool('criar-lista')}
-                      >
-                        Criar Lista de Questões
-                      </button>
-                      <button
-                        type="button"
-                        className="home-start-btn"
-                        onClick={() => setEnsineTool('criar-questao')}
-                      >
-                        Criar Questão
-                      </button>
-                      <button
-                        type="button"
-                        className="home-start-btn"
-                        onClick={() => setEnsineTool('explicar')}
-                      >
-                        Explicar Questão do Enem
-                      </button>
-                      <button
-                        type="button"
-                        className="home-start-btn"
-                        onClick={() => setEnsineTool('gerar-pdf')}
-                      >
-                        Gerar Lista para Impressão
-                      </button>
-                    </>
-                  )
+                  <Suspense fallback={<p className="qe-loading">Carregando…</p>}>
+                    <PdfExporter token={token} onClose={() => switchTab('inicio')} />
+                  </Suspense>
                 ) : (
                   <p className="home-ensine-message">
                     Esta área é para professores. Fale com seu professor se você acredita que deveria ter acesso.
                   </p>
                 )}
+              </div>
+            )}
+
+            {activeTab === 'questoes-criar' && (
+              <div className="home-tab-content">
+                {(user?.role === 'prof' || user?.role === 'admin') ? (
+                  <Suspense fallback={<p className="qe-loading">Carregando…</p>}>
+                    <QuestionEditor embedded quickAdd onClose={() => switchTab('questoes')} />
+                  </Suspense>
+                ) : (
+                  <p className="home-ensine-message">
+                    Esta área é para professores. Fale com seu professor se você acredita que deveria ter acesso.
+                  </p>
+                )}
+              </div>
+            )}
+
+            {activeTab === 'questoes-resolucao' && (
+              <div className="home-tab-content">
+                {(user?.role === 'prof' || user?.role === 'admin') ? (
+                  <Suspense fallback={<p className="qe-loading">Carregando…</p>}>
+                    <ExplanationsEditor
+                      allQuestions={allQuestions}
+                      contexts={contexts}
+                      explanationOverrides={explanationOverrides}
+                      setExplanationOverrides={setExplanationOverrides}
+                      token={token}
+                      onClose={() => switchTab('questoes')}
+                    />
+                  </Suspense>
+                ) : (
+                  <p className="home-ensine-message">
+                    Esta área é para professores. Fale com seu professor se você acredita que deveria ter acesso.
+                  </p>
+                )}
+              </div>
+            )}
+
+            {activeTab === 'listas-criar' && (
+              <div className="home-tab-content">
+                {(user?.role === 'prof' || user?.role === 'admin') ? (
+                  <Suspense fallback={<p className="qe-loading">Carregando…</p>}>
+                    <QuestionEditor embedded onClose={() => switchTab('listas')} />
+                  </Suspense>
+                ) : (
+                  <p className="home-ensine-message">
+                    Esta área é para professores. Fale com seu professor se você acredita que deveria ter acesso.
+                  </p>
+                )}
+              </div>
+            )}
+
+            {(activeTab === 'questoes-aleatoria'
+              || activeTab === 'questoes-imprimir'
+              || activeTab === 'provas-imprimir'
+              || activeTab === 'trilhas-criar'
+              || activeTab === 'trilhas-aprovar') && (
+              <div className="home-tab-content">
+                <p className="home-ensine-message" style={{ marginTop: '1rem' }}>
+                  Em breve (fase B da v3.0.0).
+                </p>
               </div>
             )}
 
