@@ -72,11 +72,11 @@ REVISAO:
     [x] humanas
     [x] ciencias
     [x] matematica
- [] ENEM 2019
+ [x] ENEM 2019
     [x] linguagens
     [x] humanas
-    [] ciencias
-    [] matematica
+    [x] ciencias
+    [x] matematica
  [x] ENEM 2018
     [x] linguagens
     [x] humanas

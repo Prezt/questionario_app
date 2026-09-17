@@ -15,6 +15,7 @@ import React, { useEffect, useMemo, useState } from 'react'
 import { pdf } from '@react-pdf/renderer'
 import PrintableList from './PrintableList.jsx'
 import PrintableAnswerKey from './PrintableAnswerKey.jsx'
+import '../QuestionEditor.css'
 import './PdfExporter.css'
 
 const AREAS = [

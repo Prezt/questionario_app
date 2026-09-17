@@ -1,4 +1,41 @@
-/* Layout do formulario de gerar PDF. Reusa as classes qe-* do QuestionEditor. */
+/* Layout do formulario de gerar PDF. Reusa as classes qe-* do QuestionEditor
+   (importadas no .jsx) e ajusta a paleta pra v3 (vermelho/vinho). */
+
+.pdf-exporter { width: 100%; }
+.pdf-exporter .qe-btn--primary {
+  background: var(--brand);
+  color: #fff;
+}
+.pdf-exporter .qe-btn--primary:hover:not(:disabled) {
+  background: var(--accent-dark);
+}
+.pdf-exporter .qe-btn--export {
+  background: var(--brand);
+  color: #fff;
+  border-radius: 999px;
+}
+.pdf-exporter .qe-btn--export:hover:not(:disabled) {
+  background: var(--accent-dark);
+}
+.pdf-exporter .qe-input:focus,
+.pdf-exporter .qe-textarea:focus,
+.pdf-exporter .qe-select:focus {
+  border-color: var(--brand);
+}
+.pdf-exporter .qe-section {
+  background: var(--surface);
+  border-radius: 0.85rem;
+}
+.pdf-exporter .qe-title { text-align: left; }
+.pdf-exporter .qe-error {
+  background: color-mix(in srgb, var(--brand) 8%, transparent);
+  color: var(--brand);
+  border: 1px solid color-mix(in srgb, var(--brand) 25%, var(--border));
+}
+.dark .pdf-exporter .qe-error {
+  background: color-mix(in srgb, var(--brand) 15%, transparent);
+  color: #fca5a5;
+}
 
 .pdf-exporter-hint {
   margin: 0 0 1rem;

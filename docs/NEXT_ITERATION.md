@@ -1,15 +1,16 @@
 # Próxima iteração — instruções pós Fase A2
 
-Estado no fim desta sessão: v3.1.0 (16/09/2026), branch `feat/v3.0.0`.
-Fase A2 (nav por categoria) committada. Build limpo.
+Estado no fim desta sessão: v3.1.1 (17/09/2026), branch `feat/v3.0.0`.
+Fase A2 (nav por categoria) committada. ENEM 2019 fechado nas quatro áreas.
+PdfExporter voltou a herdar paleta v3. Banner "Reconectar" cobre 401 em qualquer request. Build limpo.
 
 ## QA visual pendente (não passei no browser)
 
 Um humano precisa passar por cada fluxo abaixo antes de fechar Fase A:
 
-- [ ] Popover accordion no avatar: abre, fecha por click fora / ESC / retoggle no avatar
-- [ ] Apenas uma categoria aberta por vez no accordion
-- [ ] Click em cada ação do accordion navega e fecha o menu
+- [x] Popover accordion no avatar: abre, fecha por click fora / ESC / retoggle no avatar
+- [x] Apenas uma categoria aberta por vez no accordion
+- [x] Click em cada ação do accordion navega e fecha o menu
 - [ ] Início: 4 cards Questões/Provas/Listas/Trilhas, click leva pra categoria
 - [ ] Category screens: grid de ações, click leva pra ação
 - [ ] `provas-iniciar` → seleciona área + ano → Iniciar → entra no quiz
@@ -17,8 +18,8 @@ Um humano precisa passar por cada fluxo abaixo antes de fechar Fase A:
 - [ ] `questoes-jogar` → funciona igual antes
 - [ ] `questoes-pesquisar` → funciona igual antes
 - [ ] `listas-imprimir` → PdfExporter carrega
-- [ ] `questoes-criar`, `questoes-resolucao`, `listas-criar` → editores carregam pra prof/admin
-- [ ] Placeholders "Em breve" aparecem em: `questoes-aleatoria`, `questoes-imprimir`, `provas-imprimir`, `trilhas-criar`, `trilhas-aprovar`
+- [ ] `questoes-criar`, `questoes-resolucao-adicionar`, `listas-criar` → editores carregam pra prof/admin
+- [ ] Placeholders "Em breve" aparecem em: `questoes-imprimir`, `questoes-resolucao-ver`, `provas-imprimir`, `trilhas-criar`, `trilhas-aprovar`
 - [ ] Preferências: todos os toggles gravam em localStorage; Limpar histórico com confirmação
 - [ ] Mobile: cards de Início em coluna renderizam com desc empilhada abaixo
 - [ ] Dark mode: paleta funciona nos novos elementos (popover, category cards, preferencias)
@@ -34,8 +35,8 @@ Um humano precisa passar por cada fluxo abaixo antes de fechar Fase A:
 
 Ações stub que precisam de tela real:
 
-- [ ] `questoes-aleatoria` — loop infinito de uma questão por vez, sem timer, para revisão relaxada
 - [ ] `questoes-imprimir` — PDF de questões avulsas (talvez fundir com pesquisar + botão "gerar PDF")
+- [ ] `questoes-resolucao-ver` — leitor de explicações pra aluno (renderizar cada questão + resolução, com filtro por área/ano/tag)
 - [ ] `provas-imprimir` — PDF da prova completa por ano/área
 - [ ] `trilhas-fazer` — motor de trilhas temáticas (hoje é só um placeholder "chegam em breve")
 - [ ] `trilhas-criar` — editor de trilha (definir schema)
@@ -43,7 +44,6 @@ Ações stub que precisam de tela real:
 
 ## Backlog longo prazo (NOTES.MD)
 
-- [ ] REVISAO ENEM 2019 ciências + matemática
 - [ ] Comentário de resolução da questão (v3.1 tem stub `questoes-resolucao` → ExplanationsEditor; pode ser suficiente)
 - [ ] Tutorial de uso da plataforma
 - [ ] Legal disclaimer
