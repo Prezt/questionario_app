@@ -434,8 +434,8 @@ function formatTime(seconds) {
   return `${m}:${String(s).padStart(2, '0')}`
 }
 
-const APP_VERSION = '3.1.1'
-const APP_VERSION_DATE = '17/09/2026'
+const APP_VERSION = '3.1.2'
+const APP_VERSION_DATE = '21/09/2026'
 
 const REVIEW_STATUS = [
   { year: 2025, linguagens: true, humanas: true, natureza: true, matematica: true },
@@ -449,6 +449,18 @@ const REVIEW_STATUS = [
 ]
 
 const CHANGELOG = [
+  {
+    version: '3.1.2',
+    date: '21/09/2026',
+    items: [
+      'Gabaritos conferidos contra o oficial do INEP',
+      'Espanhol de 2018 a 2020 corrigido',
+      'Três questões com alternativas trocadas corrigidas',
+      'Anuladas de 2020 não viram alternativa A',
+      'Contexto da questão sempre em array',
+      'Testes travam divergência de gabarito',
+    ],
+  },
   {
     version: '3.1.1',
     date: '17/09/2026',
