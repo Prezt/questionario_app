@@ -591,7 +591,6 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "b",
-    "contextId": "enem_2021_linguagens_q16_ctx1",
     "contextIds": [
       "enem_2021_linguagens_q16_ctx1"
     ],
@@ -648,7 +647,6 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "d",
-    "contextId": "enem_2021_linguagens_q18_ctx1",
     "contextIds": [
       "enem_2021_linguagens_q18_ctx1"
     ],
@@ -706,7 +704,6 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "d",
-    "contextId": "enem_2021_linguagens_q20_ctx1",
     "contextIds": [
       "enem_2021_linguagens_q20_ctx1"
     ],
@@ -875,11 +872,13 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "d",
-    "contextId": "enem_2021_linguagens_q26_ctx1",
     "disciplinas": [
       "interpretacao"
     ],
-    "explanation": "Sem explicação ainda."
+    "explanation": "Sem explicação ainda.",
+    "contextIds": [
+      "enem_2021_linguagens_q26_ctx1"
+    ]
   },
   {
     "number": 27,
@@ -902,12 +901,14 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "e",
-    "contextId": "enem_2021_linguagens_q27_ctx1",
     "disciplinas": [
       "artes",
       "interpretacao"
     ],
-    "explanation": "Sem explicação ainda."
+    "explanation": "Sem explicação ainda.",
+    "contextIds": [
+      "enem_2021_linguagens_q27_ctx1"
+    ]
   },
   {
     "number": 28,
@@ -929,12 +930,14 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "b",
-    "contextId": "enem_2021_linguagens_q28_ctx1",
     "disciplinas": [
       "interpretacao",
       "linguistica"
     ],
-    "explanation": "Sem explicação ainda."
+    "explanation": "Sem explicação ainda.",
+    "contextIds": [
+      "enem_2021_linguagens_q28_ctx1"
+    ]
   },
   {
     "number": 29,
@@ -957,11 +960,13 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "c",
-    "contextId": "enem_2021_linguagens_q29_ctx1",
     "disciplinas": [
       "interpretacao"
     ],
-    "explanation": "Sem explicação ainda."
+    "explanation": "Sem explicação ainda.",
+    "contextIds": [
+      "enem_2021_linguagens_q29_ctx1"
+    ]
   },
   {
     "number": 30,
@@ -983,12 +988,14 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "e",
-    "contextId": "enem_2021_linguagens_q30_ctx1",
     "disciplinas": [
       "interpretacao",
       "literatura"
     ],
-    "explanation": "Sem explicação ainda."
+    "explanation": "Sem explicação ainda.",
+    "contextIds": [
+      "enem_2021_linguagens_q30_ctx1"
+    ]
   },
   {
     "number": 31,
@@ -1011,11 +1018,13 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "a",
-    "contextId": "enem_2021_linguagens_q31_ctx1",
     "disciplinas": [
       "interpretacao"
     ],
-    "explanation": "Sem explicação ainda."
+    "explanation": "Sem explicação ainda.",
+    "contextIds": [
+      "enem_2021_linguagens_q31_ctx1"
+    ]
   },
   {
     "number": 32,
@@ -1037,11 +1046,13 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "d",
-    "contextId": "enem_2021_linguagens_q32_ctx1",
     "disciplinas": [
       "interpretacao"
     ],
-    "explanation": "Sem explicação ainda."
+    "explanation": "Sem explicação ainda.",
+    "contextIds": [
+      "enem_2021_linguagens_q32_ctx1"
+    ]
   },
   {
     "number": 33,
@@ -1063,11 +1074,13 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "a",
-    "contextId": "enem_2021_linguagens_q33_ctx1",
     "disciplinas": [
       "interpretacao"
     ],
-    "explanation": "Sem explicação ainda."
+    "explanation": "Sem explicação ainda.",
+    "contextIds": [
+      "enem_2021_linguagens_q33_ctx1"
+    ]
   },
   {
     "number": 34,
@@ -1090,11 +1103,13 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "b",
-    "contextId": "enem_2021_linguagens_q34_ctx1",
     "disciplinas": [
       "interpretacao"
     ],
-    "explanation": "Sem explicação ainda."
+    "explanation": "Sem explicação ainda.",
+    "contextIds": [
+      "enem_2021_linguagens_q34_ctx1"
+    ]
   },
   {
     "number": 35,
@@ -1116,12 +1131,14 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "d",
-    "contextId": "enem_2021_linguagens_q35_ctx1",
     "disciplinas": [
       "interpretacao",
       "literatura"
     ],
-    "explanation": "Sem explicação ainda."
+    "explanation": "Sem explicação ainda.",
+    "contextIds": [
+      "enem_2021_linguagens_q35_ctx1"
+    ]
   },
   {
     "number": 36,
@@ -1140,11 +1157,13 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "b",
-    "contextId": "enem_2021_linguagens_q36_ctx1",
     "disciplinas": [
       "artes"
     ],
-    "explanation": "Sem explicação ainda."
+    "explanation": "Sem explicação ainda.",
+    "contextIds": [
+      "enem_2021_linguagens_q36_ctx1"
+    ]
   },
   {
     "number": 37,
@@ -1167,12 +1186,14 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "a",
-    "contextId": "enem_2021_linguagens_q37_ctx1",
     "disciplinas": [
       "interpretacao",
       "literatura"
     ],
-    "explanation": "Sem explicação ainda."
+    "explanation": "Sem explicação ainda.",
+    "contextIds": [
+      "enem_2021_linguagens_q37_ctx1"
+    ]
   },
   {
     "number": 38,
@@ -1194,12 +1215,14 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "c",
-    "contextId": "enem_2021_linguagens_q38_ctx1",
     "disciplinas": [
       "interpretacao",
       "literatura"
     ],
-    "explanation": "Sem explicação ainda."
+    "explanation": "Sem explicação ainda.",
+    "contextIds": [
+      "enem_2021_linguagens_q38_ctx1"
+    ]
   },
   {
     "number": 39,
@@ -1221,12 +1244,14 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "a",
-    "contextId": "enem_2021_linguagens_q39_ctx1",
     "disciplinas": [
       "interpretacao",
       "literatura"
     ],
-    "explanation": "Sem explicação ainda."
+    "explanation": "Sem explicação ainda.",
+    "contextIds": [
+      "enem_2021_linguagens_q39_ctx1"
+    ]
   },
   {
     "number": 40,
@@ -1248,12 +1273,14 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "c",
-    "contextId": "enem_2021_linguagens_q40_ctx1",
     "disciplinas": [
       "interpretacao",
       "literatura"
     ],
-    "explanation": "Sem explicação ainda."
+    "explanation": "Sem explicação ainda.",
+    "contextIds": [
+      "enem_2021_linguagens_q40_ctx1"
+    ]
   },
   {
     "number": 41,
@@ -1275,12 +1302,14 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "d",
-    "contextId": "enem_2021_linguagens_q41_ctx1",
     "disciplinas": [
       "interpretacao",
       "literatura"
     ],
-    "explanation": "Sem explicação ainda."
+    "explanation": "Sem explicação ainda.",
+    "contextIds": [
+      "enem_2021_linguagens_q41_ctx1"
+    ]
   },
   {
     "number": 42,
@@ -1302,11 +1331,13 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "c",
-    "contextId": "enem_2021_linguagens_q42_ctx1",
     "disciplinas": [
       "artes"
     ],
-    "explanation": "Sem explicação ainda."
+    "explanation": "Sem explicação ainda.",
+    "contextIds": [
+      "enem_2021_linguagens_q42_ctx1"
+    ]
   },
   {
     "number": 43,
@@ -1329,13 +1360,15 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "d",
-    "contextId": "enem_2021_linguagens_q43_ctx1",
     "disciplinas": [
       "interpretacao",
       "linguistica",
       "literatura"
     ],
-    "explanation": "Sem explicação ainda."
+    "explanation": "Sem explicação ainda.",
+    "contextIds": [
+      "enem_2021_linguagens_q43_ctx1"
+    ]
   },
   {
     "number": 44,
@@ -1357,12 +1390,14 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "d",
-    "contextId": "enem_2021_linguagens_q44_ctx1",
     "disciplinas": [
       "interpretacao",
       "literatura"
     ],
-    "explanation": "Sem explicação ainda."
+    "explanation": "Sem explicação ainda.",
+    "contextIds": [
+      "enem_2021_linguagens_q44_ctx1"
+    ]
   },
   {
     "number": 45,
@@ -1385,11 +1420,13 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "c",
-    "contextId": "enem_2021_linguagens_q45_ctx1",
     "disciplinas": [
       "artes",
       "interpretacao"
     ],
-    "explanation": "Sem explicação ainda."
+    "explanation": "Sem explicação ainda.",
+    "contextIds": [
+      "enem_2021_linguagens_q45_ctx1"
+    ]
   }
 ]

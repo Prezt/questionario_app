@@ -42,6 +42,7 @@
       "química orgânica"
     ],
     "difficulty": 4,
+    "contextIds": [],
     "year": 2020,
     "test": "ENEM",
     "area": "nature",
@@ -73,6 +74,7 @@
       "eletricidade e magnetismo"
     ],
     "difficulty": 6,
+    "contextIds": [],
     "year": 2020,
     "test": "ENEM",
     "area": "nature",
@@ -99,6 +101,7 @@
       "química orgânica"
     ],
     "difficulty": 5,
+    "contextIds": [],
     "year": 2020,
     "test": "ENEM",
     "area": "nature",
@@ -124,6 +127,7 @@
       "meio ambiente e sustentabilidade"
     ],
     "difficulty": 5,
+    "contextIds": [],
     "year": 2020,
     "test": "ENEM",
     "area": "nature",
@@ -149,6 +153,7 @@
       "estequiometria"
     ],
     "difficulty": 6,
+    "contextIds": [],
     "year": 2020,
     "test": "ENEM",
     "area": "nature",
@@ -174,6 +179,7 @@
       "meio ambiente e sustentabilidade"
     ],
     "difficulty": 5,
+    "contextIds": [],
     "year": 2020,
     "test": "ENEM",
     "area": "nature",
@@ -198,6 +204,7 @@
       "eletricidade e magnetismo"
     ],
     "difficulty": 6,
+    "contextIds": [],
     "year": 2020,
     "test": "ENEM",
     "area": "nature",
@@ -224,12 +231,12 @@
       "cinemática"
     ],
     "difficulty": 6,
+    "contextIds": [],
     "year": 2020,
     "test": "ENEM",
     "area": "nature",
     "answer": "d",
     "review": true,
-    "contextIds": [],
     "disciplinas": [
       "fisica"
     ],
@@ -253,6 +260,7 @@
       "química geral e inorgânica"
     ],
     "difficulty": 5,
+    "contextIds": [],
     "year": 2020,
     "test": "ENEM",
     "area": "nature",
@@ -280,6 +288,7 @@
       "genética e hereditariedade"
     ],
     "difficulty": 5,
+    "contextIds": [],
     "year": 2020,
     "test": "ENEM",
     "area": "nature",
@@ -304,6 +313,7 @@
       "química geral e inorgânica"
     ],
     "difficulty": 5,
+    "contextIds": [],
     "year": 2020,
     "test": "ENEM",
     "area": "nature",
@@ -329,6 +339,7 @@
       "química geral e inorgânica"
     ],
     "difficulty": 6,
+    "contextIds": [],
     "year": 2020,
     "test": "ENEM",
     "area": "nature",
@@ -355,6 +366,7 @@
       "ecologia"
     ],
     "difficulty": 4,
+    "contextIds": [],
     "year": 2020,
     "test": "ENEM",
     "area": "nature",
@@ -379,6 +391,7 @@
       "termologia"
     ],
     "difficulty": 6,
+    "contextIds": [],
     "year": 2020,
     "test": "ENEM",
     "area": "nature",
@@ -406,6 +419,7 @@
       "fisiologia humana"
     ],
     "difficulty": 6,
+    "contextIds": [],
     "year": 2020,
     "test": "ENEM",
     "area": "nature",
@@ -433,6 +447,7 @@
       "mecânica newtoniana"
     ],
     "difficulty": 6,
+    "contextIds": [],
     "year": 2020,
     "test": "ENEM",
     "area": "nature",
@@ -486,6 +501,7 @@
       "termologia"
     ],
     "difficulty": 4,
+    "contextIds": [],
     "year": 2020,
     "test": "ENEM",
     "area": "nature",
@@ -510,6 +526,7 @@
       "cinética química"
     ],
     "difficulty": 5,
+    "contextIds": [],
     "year": 2020,
     "test": "ENEM",
     "area": "nature",
@@ -562,6 +579,7 @@
       "termoquímica"
     ],
     "difficulty": 6,
+    "contextIds": [],
     "year": 2020,
     "test": "ENEM",
     "area": "nature",
@@ -592,6 +610,7 @@
       "cinemática"
     ],
     "difficulty": 4,
+    "contextIds": [],
     "year": 2020,
     "test": "ENEM",
     "area": "nature",
@@ -616,6 +635,7 @@
       "ondulatória"
     ],
     "difficulty": 6,
+    "contextIds": [],
     "year": 2020,
     "test": "ENEM",
     "area": "nature",
@@ -670,6 +690,7 @@
       "eletricidade e magnetismo"
     ],
     "difficulty": 6,
+    "contextIds": [],
     "year": 2020,
     "test": "ENEM",
     "area": "nature",
@@ -722,6 +743,7 @@
       "zoologia"
     ],
     "difficulty": 4,
+    "contextIds": [],
     "year": 2020,
     "test": "ENEM",
     "area": "nature",
@@ -751,11 +773,13 @@
     "test": "ENEM",
     "area": "nature",
     "answer": "a",
-    "contextId": "enem_2020_nature_q119_ctx1",
     "disciplinas": [
       "biologia"
     ],
-    "explanation": "Sem explicação ainda."
+    "explanation": "Sem explicação ainda.",
+    "contextIds": [
+      "enem_2020_nature_q119_ctx1"
+    ]
   },
   {
     "number": 120,
@@ -803,6 +827,7 @@
       "citologia"
     ],
     "difficulty": 5,
+    "contextIds": [],
     "year": 2020,
     "test": "ENEM",
     "area": "nature",
@@ -855,6 +880,7 @@
       "química geral e inorgânica"
     ],
     "difficulty": 5,
+    "contextIds": [],
     "year": 2020,
     "test": "ENEM",
     "area": "nature",
@@ -881,6 +907,7 @@
       "química orgânica"
     ],
     "difficulty": 5,
+    "contextIds": [],
     "year": 2020,
     "test": "ENEM",
     "area": "nature",
@@ -906,6 +933,7 @@
       "genética e hereditariedade"
     ],
     "difficulty": 6,
+    "contextIds": [],
     "year": 2020,
     "test": "ENEM",
     "area": "nature",
@@ -930,6 +958,7 @@
       "física nuclear"
     ],
     "difficulty": 4,
+    "contextIds": [],
     "year": 2020,
     "test": "ENEM",
     "area": "nature",
@@ -982,6 +1011,7 @@
       "termologia"
     ],
     "difficulty": 5,
+    "contextIds": [],
     "year": 2020,
     "test": "ENEM",
     "area": "nature",
@@ -1009,6 +1039,7 @@
       "fisiologia humana"
     ],
     "difficulty": 5,
+    "contextIds": [],
     "year": 2020,
     "test": "ENEM",
     "area": "nature",
@@ -1064,6 +1095,7 @@
       "meio ambiente e sustentabilidade"
     ],
     "difficulty": 5,
+    "contextIds": [],
     "year": 2020,
     "test": "ENEM",
     "area": "nature",
@@ -1148,6 +1180,7 @@
       "hidrostática"
     ],
     "difficulty": 5,
+    "contextIds": [],
     "year": 2020,
     "test": "ENEM",
     "area": "nature",
@@ -1174,6 +1207,7 @@
       "citologia"
     ],
     "difficulty": 6,
+    "contextIds": [],
     "year": 2020,
     "test": "ENEM",
     "area": "nature",

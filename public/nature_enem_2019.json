@@ -15,6 +15,7 @@
       "termoquímica e cinética"
     ],
     "difficulty": 7,
+    "contextIds": [],
     "year": 2019,
     "test": "ENEM",
     "area": "nature",
@@ -41,6 +42,7 @@
       "segurança"
     ],
     "difficulty": 6,
+    "contextIds": [],
     "year": 2019,
     "test": "ENEM",
     "area": "nature",
@@ -67,6 +69,7 @@
       "fisiologia humana"
     ],
     "difficulty": 6,
+    "contextIds": [],
     "year": 2019,
     "test": "ENEM",
     "area": "nature",
@@ -93,6 +96,7 @@
       "fisiologia humana"
     ],
     "difficulty": 6,
+    "contextIds": [],
     "year": 2019,
     "test": "ENEM",
     "area": "nature",
@@ -120,6 +124,7 @@
       "termoquímica e cinética"
     ],
     "difficulty": 6,
+    "contextIds": [],
     "year": 2019,
     "test": "ENEM",
     "area": "nature",
@@ -150,12 +155,14 @@
     "test": "ENEM",
     "area": "nature",
     "answer": "c",
-    "contextId": "enem_2019_nature_q96_ctx1",
     "disciplinas": [
       "biologia"
     ],
     "explanation": "Sem explicação ainda.",
-    "review": true
+    "review": true,
+    "contextIds": [
+      "enem_2019_nature_q96_ctx1"
+    ]
   },
   {
     "number": 97,
@@ -173,6 +180,7 @@
       "zoologia"
     ],
     "difficulty": 5,
+    "contextIds": [],
     "year": 2019,
     "test": "ENEM",
     "area": "nature",
@@ -199,6 +207,7 @@
       "óptica"
     ],
     "difficulty": 6,
+    "contextIds": [],
     "year": 2019,
     "test": "ENEM",
     "area": "nature",
@@ -226,6 +235,7 @@
       "biotecnologia"
     ],
     "difficulty": 6,
+    "contextIds": [],
     "year": 2019,
     "test": "ENEM",
     "area": "nature",
@@ -252,6 +262,7 @@
       "ecologia"
     ],
     "difficulty": 4,
+    "contextIds": [],
     "year": 2019,
     "test": "ENEM",
     "area": "nature",
@@ -282,12 +293,14 @@
     "test": "ENEM",
     "area": "nature",
     "answer": "c",
-    "contextId": "enem_2019_nature_q101_ctx1",
     "disciplinas": [
       "biologia"
     ],
     "explanation": "Sem explicação ainda.",
-    "review": true
+    "review": true,
+    "contextIds": [
+      "enem_2019_nature_q101_ctx1"
+    ]
   },
   {
     "number": 102,
@@ -305,6 +318,7 @@
       "transferência de calor"
     ],
     "difficulty": 7,
+    "contextIds": [],
     "year": 2019,
     "test": "ENEM",
     "area": "nature",
@@ -331,6 +345,7 @@
       "eletroquímica"
     ],
     "difficulty": 6,
+    "contextIds": [],
     "year": 2019,
     "test": "ENEM",
     "area": "nature",
@@ -358,6 +373,7 @@
       "ecologia"
     ],
     "difficulty": 6,
+    "contextIds": [],
     "year": 2019,
     "test": "ENEM",
     "area": "nature",
@@ -385,6 +401,7 @@
       "física moderna"
     ],
     "difficulty": 6,
+    "contextIds": [],
     "year": 2019,
     "test": "ENEM",
     "area": "nature",
@@ -411,6 +428,7 @@
       "mecânica newtoniana"
     ],
     "difficulty": 6,
+    "contextIds": [],
     "year": 2019,
     "test": "ENEM",
     "area": "nature",
@@ -437,6 +455,7 @@
       "ecologia"
     ],
     "difficulty": 5,
+    "contextIds": [],
     "year": 2019,
     "test": "ENEM",
     "area": "nature",
@@ -463,6 +482,7 @@
       "ligações químicas"
     ],
     "difficulty": 6,
+    "contextIds": [],
     "year": 2019,
     "test": "ENEM",
     "area": "nature",
@@ -489,6 +509,7 @@
       "mecânica newtoniana"
     ],
     "difficulty": 7,
+    "contextIds": [],
     "year": 2019,
     "test": "ENEM",
     "area": "nature",
@@ -515,6 +536,7 @@
       "evolução"
     ],
     "difficulty": 6,
+    "contextIds": [],
     "year": 2019,
     "test": "ENEM",
     "area": "nature",
@@ -540,6 +562,7 @@
       "mecânica newtoniana"
     ],
     "difficulty": 6,
+    "contextIds": [],
     "year": 2019,
     "test": "ENEM",
     "area": "nature",
@@ -566,6 +589,7 @@
       "termoquímica e cinética"
     ],
     "difficulty": 6,
+    "contextIds": [],
     "year": 2019,
     "test": "ENEM",
     "area": "nature",
@@ -594,6 +618,7 @@
       "física moderna"
     ],
     "difficulty": 8,
+    "contextIds": [],
     "year": 2019,
     "test": "ENEM",
     "area": "nature",
@@ -620,6 +645,7 @@
       "biotecnologia"
     ],
     "difficulty": 6,
+    "contextIds": [],
     "year": 2019,
     "test": "ENEM",
     "area": "nature",
@@ -646,6 +672,7 @@
       "química geral e inorgânica"
     ],
     "difficulty": 5,
+    "contextIds": [],
     "year": 2019,
     "test": "ENEM",
     "area": "nature",
@@ -675,6 +702,7 @@
       "soluções e solubilidade"
     ],
     "difficulty": 6,
+    "contextIds": [],
     "year": 2019,
     "test": "ENEM",
     "area": "nature",
@@ -702,6 +730,7 @@
       "estequiometria"
     ],
     "difficulty": 6,
+    "contextIds": [],
     "year": 2019,
     "test": "ENEM",
     "area": "nature",
@@ -758,6 +787,7 @@
       "termologia"
     ],
     "difficulty": 6,
+    "contextIds": [],
     "year": 2019,
     "test": "ENEM",
     "area": "nature",
@@ -785,6 +815,7 @@
       "química orgânica"
     ],
     "difficulty": 6,
+    "contextIds": [],
     "year": 2019,
     "test": "ENEM",
     "area": "nature",
@@ -811,6 +842,7 @@
       "energia e conservação"
     ],
     "difficulty": 7,
+    "contextIds": [],
     "year": 2019,
     "test": "ENEM",
     "area": "nature",
@@ -837,6 +869,7 @@
       "eletroquímica"
     ],
     "difficulty": 6,
+    "contextIds": [],
     "year": 2019,
     "test": "ENEM",
     "area": "nature",
@@ -868,13 +901,15 @@
     "test": "ENEM",
     "area": "nature",
     "answer": "e",
-    "contextId": "enem_2019_nature_q123_ctx1",
     "disciplinas": [
       "biologia",
       "fisica"
     ],
     "explanation": "Sem explicação ainda.",
-    "review": true
+    "review": true,
+    "contextIds": [
+      "enem_2019_nature_q123_ctx1"
+    ]
   },
   {
     "number": 124,
@@ -892,6 +927,7 @@
       "estequiometria"
     ],
     "difficulty": 6,
+    "contextIds": [],
     "year": 2019,
     "test": "ENEM",
     "area": "nature",
@@ -922,12 +958,14 @@
     "test": "ENEM",
     "area": "nature",
     "answer": "c",
-    "contextId": "enem_2019_nature_q125_ctx1",
     "disciplinas": [
       "biologia"
     ],
     "explanation": "Sem explicação ainda.",
-    "review": true
+    "review": true,
+    "contextIds": [
+      "enem_2019_nature_q125_ctx1"
+    ]
   },
   {
     "number": 126,
@@ -944,6 +982,7 @@
       "eletricidade e magnetismo"
     ],
     "difficulty": 7,
+    "contextIds": [],
     "year": 2019,
     "test": "ENEM",
     "area": "nature",
@@ -971,6 +1010,7 @@
       "química geral e inorgânica"
     ],
     "difficulty": 7,
+    "contextIds": [],
     "year": 2019,
     "test": "ENEM",
     "area": "nature",
@@ -998,6 +1038,7 @@
       "história da cultura e arte"
     ],
     "difficulty": 6,
+    "contextIds": [],
     "year": 2019,
     "test": "ENEM",
     "area": "nature",
@@ -1024,6 +1065,7 @@
       "estequiometria"
     ],
     "difficulty": 6,
+    "contextIds": [],
     "year": 2019,
     "test": "ENEM",
     "area": "nature",
@@ -1050,6 +1092,7 @@
       "fisiologia humana"
     ],
     "difficulty": 5,
+    "contextIds": [],
     "year": 2019,
     "test": "ENEM",
     "area": "nature",
@@ -1076,6 +1119,7 @@
       "física moderna"
     ],
     "difficulty": 6,
+    "contextIds": [],
     "year": 2019,
     "test": "ENEM",
     "area": "nature",
@@ -1102,6 +1146,7 @@
       "fisiologia humana"
     ],
     "difficulty": 6,
+    "contextIds": [],
     "year": 2019,
     "test": "ENEM",
     "area": "nature",
@@ -1129,6 +1174,7 @@
       "biotecnologia"
     ],
     "difficulty": 6,
+    "contextIds": [],
     "year": 2019,
     "test": "ENEM",
     "area": "nature",
@@ -1155,6 +1201,7 @@
       "propriedades dos líquidos"
     ],
     "difficulty": 6,
+    "contextIds": [],
     "year": 2019,
     "test": "ENEM",
     "area": "nature",
@@ -1181,6 +1228,7 @@
       "história moderna"
     ],
     "difficulty": 6,
+    "contextIds": [],
     "year": 2019,
     "test": "ENEM",
     "area": "nature",

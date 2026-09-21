@@ -226,8 +226,7 @@
     "year": 2018,
     "test": "ENEM",
     "area": "linguagens",
-    "answer": "d",
-    "contextId": "enem_2018_linguagens_q3_ctx1_es",
+    "answer": "c",
     "language": "es",
     "contextIds": [
       "enem_2018_linguagens_q3_ctx1_es"
@@ -257,8 +256,7 @@
     "year": 2018,
     "test": "ENEM",
     "area": "linguagens",
-    "answer": "e",
-    "contextId": "enem_2018_linguagens_q4_ctx1_es",
+    "answer": "d",
     "language": "es",
     "contextIds": [
       "enem_2018_linguagens_q4_ctx1_es"
@@ -287,7 +285,7 @@
     "year": 2018,
     "test": "ENEM",
     "area": "linguagens",
-    "answer": "c",
+    "answer": "b",
     "contextIds": [
       "enem_2018_linguagens_q5_ctx1_es"
     ],
@@ -317,7 +315,6 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "c",
-    "contextId": "enem_2018_linguagens_q6_ctx1",
     "contextIds": [
       "enem_2018_linguagens_q6_ctx1"
     ],
@@ -377,7 +374,6 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "c",
-    "contextId": "enem_2018_linguagens_q8_ctx1",
     "contextIds": [
       "enem_2018_linguagens_q8_ctx1"
     ],
@@ -437,7 +433,6 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "a",
-    "contextId": "enem_2018_linguagens_q10_ctx1",
     "contextIds": [
       "enem_2018_linguagens_q10_ctx1"
     ],
@@ -499,7 +494,6 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "d",
-    "contextId": "enem_2018_linguagens_q12_ctx1",
     "contextIds": [
       "enem_2018_linguagens_q12_ctx1"
     ],
@@ -559,7 +553,6 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "e",
-    "contextId": "enem_2018_linguagens_q14_ctx1",
     "contextIds": [
       "enem_2018_linguagens_q14_ctx1"
     ],
@@ -588,7 +581,6 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "d",
-    "contextId": "enem_2018_linguagens_q15_ctx1",
     "contextIds": [
       "enem_2018_linguagens_q15_ctx1"
     ],
@@ -648,7 +640,6 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "c",
-    "contextId": "enem_2018_linguagens_q17_ctx1",
     "contextIds": [
       "enem_2018_linguagens_q17_ctx1"
     ],
@@ -679,7 +670,6 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "d",
-    "contextId": "enem_2018_linguagens_q18_ctx1",
     "contextIds": [
       "enem_2018_linguagens_q18_ctx1"
     ],
@@ -767,7 +757,6 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "b",
-    "contextId": "enem_2018_linguagens_q21_ctx1",
     "contextIds": [
       "enem_2018_linguagens_q21_ctx1"
     ],
@@ -795,6 +784,7 @@
       "comunicação e mídia"
     ],
     "difficulty": 6,
+    "contextIds": [],
     "year": 2018,
     "test": "ENEM",
     "area": "linguagens",
@@ -884,6 +874,7 @@
       "artes visuais"
     ],
     "difficulty": 6,
+    "contextIds": [],
     "year": 2018,
     "test": "ENEM",
     "area": "linguagens",
@@ -943,7 +934,6 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "c",
-    "contextId": "enem_2018_linguagens_q27_ctx1",
     "contextIds": [
       "enem_2018_linguagens_q27_ctx1"
     ],
@@ -1030,7 +1020,6 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "e",
-    "contextId": "enem_2018_linguagens_q30_ctx1",
     "contextIds": [
       "enem_2018_linguagens_q30_ctx1"
     ],
@@ -1060,7 +1049,6 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "d",
-    "contextId": "enem_2018_linguagens_q31_ctx1",
     "contextIds": [
       "enem_2018_linguagens_q31_ctx1"
     ],
@@ -1088,6 +1076,7 @@
       "artes visuais"
     ],
     "difficulty": 5,
+    "contextIds": [],
     "year": 2018,
     "test": "ENEM",
     "area": "linguagens",
@@ -1118,7 +1107,6 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "e",
-    "contextId": "enem_2018_linguagens_q33_ctx1",
     "contextIds": [
       "enem_2018_linguagens_q33_ctx1"
     ],
@@ -1177,7 +1165,6 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "a",
-    "contextId": "enem_2018_linguagens_q35_ctx1",
     "contextIds": [
       "enem_2018_linguagens_q35_ctx1"
     ],
@@ -1270,7 +1257,6 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "b",
-    "contextId": "enem_2018_linguagens_q38_ctx1",
     "contextIds": [
       "enem_2018_linguagens_q38_ctx1"
     ],
@@ -1300,7 +1286,6 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "e",
-    "contextId": "enem_2018_linguagens_q39_ctx1",
     "contextIds": [
       "enem_2018_linguagens_q39_ctx1"
     ],
@@ -1358,7 +1343,6 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "e",
-    "contextId": "enem_2018_linguagens_q41_ctx1",
     "contextIds": [
       "enem_2018_linguagens_q41_ctx1"
     ],
@@ -1445,7 +1429,6 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "d",
-    "contextId": "enem_2018_linguagens_q44_ctx1",
     "contextIds": [
       "enem_2018_linguagens_q44_ctx1"
     ],

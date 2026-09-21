@@ -21,6 +21,7 @@
     "area": "math",
     "answer": "c",
     "difficulty": 3,
+    "contextIds": [],
     "disciplinas": [
       "matematica"
     ],
@@ -50,6 +51,7 @@
     "area": "math",
     "answer": "b",
     "difficulty": 2,
+    "contextIds": [],
     "disciplinas": [
       "matematica"
     ],
@@ -82,6 +84,7 @@
     "area": "math",
     "answer": "e",
     "difficulty": 8,
+    "contextIds": [],
     "disciplinas": [
       "matematica"
     ],
@@ -110,6 +113,7 @@
     "area": "math",
     "answer": "c",
     "difficulty": 4,
+    "contextIds": [],
     "disciplinas": [
       "matematica"
     ],
@@ -136,6 +140,7 @@
     "area": "math",
     "answer": "e",
     "difficulty": 5,
+    "contextIds": [],
     "disciplinas": [
       "matematica"
     ],
@@ -162,6 +167,7 @@
     "area": "math",
     "answer": "c",
     "difficulty": 4,
+    "contextIds": [],
     "disciplinas": [
       "matematica"
     ],
@@ -187,6 +193,7 @@
     "area": "math",
     "answer": "c",
     "difficulty": 2,
+    "contextIds": [],
     "disciplinas": [
       "matematica"
     ],
@@ -214,6 +221,7 @@
     "area": "math",
     "answer": "a",
     "difficulty": 2,
+    "contextIds": [],
     "disciplinas": [
       "matematica"
     ],
@@ -238,6 +246,7 @@
     "area": "math",
     "answer": "d",
     "difficulty": 6,
+    "contextIds": [],
     "disciplinas": [
       "matematica"
     ],
@@ -267,6 +276,7 @@
     "area": "math",
     "answer": "d",
     "difficulty": 1,
+    "contextIds": [],
     "disciplinas": [
       "matematica"
     ],
@@ -291,6 +301,7 @@
     "area": "math",
     "answer": "b",
     "difficulty": 1,
+    "contextIds": [],
     "disciplinas": [
       "matematica"
     ],
@@ -319,6 +330,7 @@
     "area": "math",
     "answer": "e",
     "difficulty": 2,
+    "contextIds": [],
     "disciplinas": [
       "matematica"
     ],
@@ -347,6 +359,7 @@
     "area": "math",
     "answer": "c",
     "difficulty": 3,
+    "contextIds": [],
     "disciplinas": [
       "matematica"
     ],
@@ -373,6 +386,7 @@
     "area": "math",
     "answer": "b",
     "difficulty": 6,
+    "contextIds": [],
     "disciplinas": [
       "matematica"
     ],
@@ -397,6 +411,7 @@
     "area": "math",
     "answer": "d",
     "difficulty": 3,
+    "contextIds": [],
     "disciplinas": [
       "matematica"
     ],
@@ -422,6 +437,7 @@
     "area": "math",
     "answer": "d",
     "difficulty": 2,
+    "contextIds": [],
     "disciplinas": [
       "matematica"
     ],
@@ -448,6 +464,7 @@
     "area": "math",
     "answer": "d",
     "difficulty": 3,
+    "contextIds": [],
     "disciplinas": [
       "matematica"
     ],
@@ -476,6 +493,7 @@
     "area": "math",
     "answer": "a",
     "difficulty": 5,
+    "contextIds": [],
     "disciplinas": [
       "matematica"
     ],
@@ -502,6 +520,7 @@
     "area": "math",
     "answer": "c",
     "difficulty": 2,
+    "contextIds": [],
     "disciplinas": [
       "matematica"
     ],
@@ -526,6 +545,7 @@
     "area": "math",
     "answer": "b",
     "difficulty": 5,
+    "contextIds": [],
     "disciplinas": [
       "matematica"
     ],
@@ -554,6 +574,7 @@
     "area": "math",
     "answer": "e",
     "difficulty": 2,
+    "contextIds": [],
     "disciplinas": [
       "matematica"
     ],
@@ -609,6 +630,7 @@
     "area": "math",
     "answer": "c",
     "difficulty": 4,
+    "contextIds": [],
     "disciplinas": [
       "matematica"
     ],
@@ -634,6 +656,7 @@
     "area": "math",
     "answer": "d",
     "difficulty": 2,
+    "contextIds": [],
     "disciplinas": [
       "matematica"
     ],
@@ -663,6 +686,7 @@
     "area": "math",
     "answer": "e",
     "difficulty": 8,
+    "contextIds": [],
     "disciplinas": [
       "matematica"
     ],
@@ -692,6 +716,7 @@
     "area": "math",
     "answer": "a",
     "difficulty": 4,
+    "contextIds": [],
     "disciplinas": [
       "matematica"
     ],
@@ -719,6 +744,7 @@
     "area": "math",
     "answer": "b",
     "difficulty": 5,
+    "contextIds": [],
     "disciplinas": [
       "matematica"
     ],
@@ -747,6 +773,7 @@
     "area": "math",
     "answer": "b",
     "difficulty": 4,
+    "contextIds": [],
     "disciplinas": [
       "matematica"
     ],
@@ -775,6 +802,7 @@
     "area": "math",
     "answer": "a",
     "difficulty": 8,
+    "contextIds": [],
     "disciplinas": [
       "matematica"
     ],
@@ -799,6 +827,7 @@
     "area": "math",
     "answer": "d",
     "difficulty": 5,
+    "contextIds": [],
     "disciplinas": [
       "matematica"
     ],
@@ -827,6 +856,7 @@
     "area": "math",
     "answer": "e",
     "difficulty": 3,
+    "contextIds": [],
     "disciplinas": [
       "matematica"
     ],
@@ -857,6 +887,7 @@
     "area": "math",
     "answer": "d",
     "difficulty": 4,
+    "contextIds": [],
     "disciplinas": [
       "matematica"
     ],
@@ -882,6 +913,7 @@
     "area": "math",
     "answer": "e",
     "difficulty": 2,
+    "contextIds": [],
     "disciplinas": [
       "matematica"
     ],
@@ -913,6 +945,7 @@
     "area": "math",
     "answer": "a",
     "difficulty": 4,
+    "contextIds": [],
     "disciplinas": [
       "matematica"
     ],
@@ -940,6 +973,7 @@
     "area": "math",
     "answer": "b",
     "difficulty": 5,
+    "contextIds": [],
     "disciplinas": [
       "matematica"
     ],
@@ -965,6 +999,7 @@
     "area": "math",
     "answer": "e",
     "difficulty": 5,
+    "contextIds": [],
     "disciplinas": [
       "matematica"
     ],
@@ -990,6 +1025,7 @@
     "area": "math",
     "answer": "a",
     "difficulty": 7,
+    "contextIds": [],
     "disciplinas": [
       "matematica"
     ],
@@ -1017,6 +1053,7 @@
     "area": "math",
     "answer": "a",
     "difficulty": 5,
+    "contextIds": [],
     "disciplinas": [
       "matematica"
     ],
@@ -1042,6 +1079,7 @@
     "area": "math",
     "answer": "annulled",
     "difficulty": 6,
+    "contextIds": [],
     "disciplinas": [
       "matematica"
     ],
@@ -1066,6 +1104,7 @@
     "area": "math",
     "answer": "c",
     "difficulty": 7,
+    "contextIds": [],
     "disciplinas": [
       "matematica"
     ],
@@ -1092,6 +1131,7 @@
     "area": "math",
     "answer": "c",
     "difficulty": 2,
+    "contextIds": [],
     "disciplinas": [
       "matematica"
     ],
@@ -1119,6 +1159,7 @@
     "area": "math",
     "answer": "b",
     "difficulty": 6,
+    "contextIds": [],
     "disciplinas": [
       "matematica"
     ],
@@ -1145,6 +1186,7 @@
     "area": "math",
     "answer": "e",
     "difficulty": 7,
+    "contextIds": [],
     "disciplinas": [
       "matematica"
     ],
@@ -1171,6 +1213,7 @@
     "area": "math",
     "answer": "a",
     "difficulty": 1,
+    "contextIds": [],
     "disciplinas": [
       "matematica"
     ],
@@ -1198,6 +1241,7 @@
     "area": "math",
     "answer": "d",
     "difficulty": 4,
+    "contextIds": [],
     "disciplinas": [
       "matematica"
     ],

@@ -19,12 +19,14 @@
     "area": "humanas",
     "answer": "d",
     "difficulty": 5,
-    "contextId": "enem_2022_humanas_q46_ctx1",
     "disciplinas": [
       "historia",
       "sociologia"
     ],
-    "explanation": "Sem explicação ainda."
+    "explanation": "Sem explicação ainda.",
+    "contextIds": [
+      "enem_2022_humanas_q46_ctx1"
+    ]
   },
   {
     "number": 47,
@@ -45,11 +47,13 @@
     "area": "humanas",
     "answer": "e",
     "difficulty": 5,
-    "contextId": "enem_2022_humanas_q47_ctx1",
     "disciplinas": [
       "sociologia"
     ],
-    "explanation": "Sem explicação ainda."
+    "explanation": "Sem explicação ainda.",
+    "contextIds": [
+      "enem_2022_humanas_q47_ctx1"
+    ]
   },
   {
     "number": 48,
@@ -70,11 +74,13 @@
     "area": "humanas",
     "answer": "a",
     "difficulty": 4,
-    "contextId": "enem_2022_humanas_q48_ctx1",
     "disciplinas": [
       "sociologia"
     ],
-    "explanation": "Sem explicação ainda."
+    "explanation": "Sem explicação ainda.",
+    "contextIds": [
+      "enem_2022_humanas_q48_ctx1"
+    ]
   },
   {
     "number": 49,
@@ -98,11 +104,13 @@
     "area": "humanas",
     "answer": "b",
     "difficulty": 5,
-    "contextId": "enem_2022_humanas_q49_ctx1",
     "disciplinas": [
       "geografia"
     ],
-    "explanation": "Sem explicação ainda."
+    "explanation": "Sem explicação ainda.",
+    "contextIds": [
+      "enem_2022_humanas_q49_ctx1"
+    ]
   },
   {
     "number": 50,
@@ -123,11 +131,13 @@
     "area": "humanas",
     "answer": "e",
     "difficulty": 6,
-    "contextId": "enem_2022_humanas_q50_ctx1",
     "disciplinas": [
       "sociologia"
     ],
-    "explanation": "Sem explicação ainda."
+    "explanation": "Sem explicação ainda.",
+    "contextIds": [
+      "enem_2022_humanas_q50_ctx1"
+    ]
   },
   {
     "number": 51,
@@ -148,11 +158,13 @@
     "area": "humanas",
     "answer": "e",
     "difficulty": 5,
-    "contextId": "enem_2022_humanas_q51_ctx1",
     "disciplinas": [
       "sociologia"
     ],
-    "explanation": "Sem explicação ainda."
+    "explanation": "Sem explicação ainda.",
+    "contextIds": [
+      "enem_2022_humanas_q51_ctx1"
+    ]
   },
   {
     "number": 52,
@@ -173,11 +185,13 @@
     "area": "humanas",
     "answer": "d",
     "difficulty": 5,
-    "contextId": "enem_2022_humanas_q52_ctx1",
     "disciplinas": [
       "sociologia"
     ],
-    "explanation": "Sem explicação ainda."
+    "explanation": "Sem explicação ainda.",
+    "contextIds": [
+      "enem_2022_humanas_q52_ctx1"
+    ]
   },
   {
     "number": 53,
@@ -197,12 +211,14 @@
     "test": "ENEM",
     "area": "humanas",
     "images": [],
-    "contextId": "enem_2022_humanas_q53_ctx1",
     "difficulty": 6,
     "disciplinas": [
       "sociologia"
     ],
-    "explanation": "Sem explicação ainda."
+    "explanation": "Sem explicação ainda.",
+    "contextIds": [
+      "enem_2022_humanas_q53_ctx1"
+    ]
   },
   {
     "number": 54,
@@ -250,11 +266,13 @@
     "area": "humanas",
     "answer": "b",
     "difficulty": 5,
-    "contextId": "enem_2022_humanas_q55_ctx1",
     "disciplinas": [
       "geografia"
     ],
-    "explanation": "Sem explicação ainda."
+    "explanation": "Sem explicação ainda.",
+    "contextIds": [
+      "enem_2022_humanas_q55_ctx1"
+    ]
   },
   {
     "number": 56,
@@ -303,11 +321,13 @@
     "area": "humanas",
     "answer": "a",
     "difficulty": 8,
-    "contextId": "enem_2022_humanas_q57_ctx1",
     "disciplinas": [
       "sociologia"
     ],
-    "explanation": "Sem explicação ainda."
+    "explanation": "Sem explicação ainda.",
+    "contextIds": [
+      "enem_2022_humanas_q57_ctx1"
+    ]
   },
   {
     "number": 58,
@@ -357,12 +377,14 @@
     "area": "humanas",
     "answer": "c",
     "difficulty": 4,
-    "contextId": "enem_2022_humanas_q59_ctx1",
     "disciplinas": [
       "geografia",
       "sociologia"
     ],
-    "explanation": "Sem explicação ainda."
+    "explanation": "Sem explicação ainda.",
+    "contextIds": [
+      "enem_2022_humanas_q59_ctx1"
+    ]
   },
   {
     "number": 60,
@@ -383,11 +405,13 @@
     "area": "humanas",
     "answer": "b",
     "difficulty": 5,
-    "contextId": "enem_2022_humanas_q60_ctx1",
     "disciplinas": [
       "sociologia"
     ],
-    "explanation": "Sem explicação ainda."
+    "explanation": "Sem explicação ainda.",
+    "contextIds": [
+      "enem_2022_humanas_q60_ctx1"
+    ]
   },
   {
     "number": 61,
@@ -408,11 +432,13 @@
     "area": "humanas",
     "answer": "e",
     "difficulty": 5,
-    "contextId": "enem_2022_humanas_q61_ctx1",
     "disciplinas": [
       "sociologia"
     ],
-    "explanation": "Sem explicação ainda."
+    "explanation": "Sem explicação ainda.",
+    "contextIds": [
+      "enem_2022_humanas_q61_ctx1"
+    ]
   },
   {
     "number": 62,
@@ -434,12 +460,14 @@
     "area": "humanas",
     "answer": "c",
     "difficulty": 6,
-    "contextId": "enem_2022_humanas_q62_ctx1",
     "disciplinas": [
       "geografia",
       "sociologia"
     ],
-    "explanation": "Sem explicação ainda."
+    "explanation": "Sem explicação ainda.",
+    "contextIds": [
+      "enem_2022_humanas_q62_ctx1"
+    ]
   },
   {
     "number": 63,
@@ -460,11 +488,13 @@
     "area": "humanas",
     "answer": "b",
     "difficulty": 7,
-    "contextId": "enem_2022_humanas_q63_ctx1",
     "disciplinas": [
       "historia"
     ],
-    "explanation": "Sem explicação ainda."
+    "explanation": "Sem explicação ainda.",
+    "contextIds": [
+      "enem_2022_humanas_q63_ctx1"
+    ]
   },
   {
     "number": 64,
@@ -485,11 +515,13 @@
     "area": "humanas",
     "answer": "a",
     "difficulty": 6,
-    "contextId": "enem_2022_humanas_q64_ctx1",
     "disciplinas": [
       "sociologia"
     ],
-    "explanation": "Sem explicação ainda."
+    "explanation": "Sem explicação ainda.",
+    "contextIds": [
+      "enem_2022_humanas_q64_ctx1"
+    ]
   },
   {
     "number": 65,
@@ -512,11 +544,13 @@
     "area": "humanas",
     "answer": "b",
     "difficulty": 5,
-    "contextId": "enem_2022_humanas_q65_ctx1",
     "disciplinas": [
       "filosofia"
     ],
-    "explanation": "Sem explicação ainda."
+    "explanation": "Sem explicação ainda.",
+    "contextIds": [
+      "enem_2022_humanas_q65_ctx1"
+    ]
   },
   {
     "number": 66,
@@ -566,11 +600,13 @@
     "area": "humanas",
     "answer": "d",
     "difficulty": 5,
-    "contextId": "enem_2022_humanas_q67_ctx1",
     "disciplinas": [
       "sociologia"
     ],
-    "explanation": "Sem explicação ainda."
+    "explanation": "Sem explicação ainda.",
+    "contextIds": [
+      "enem_2022_humanas_q67_ctx1"
+    ]
   },
   {
     "number": 68,
@@ -620,11 +656,13 @@
     "area": "humanas",
     "answer": "a",
     "difficulty": 7,
-    "contextId": "enem_2022_humanas_q69_ctx1",
     "disciplinas": [
       "geografia"
     ],
-    "explanation": "Sem explicação ainda."
+    "explanation": "Sem explicação ainda.",
+    "contextIds": [
+      "enem_2022_humanas_q69_ctx1"
+    ]
   },
   {
     "number": 70,
@@ -675,11 +713,13 @@
     "area": "humanas",
     "answer": "a",
     "difficulty": 5,
-    "contextId": "enem_2022_humanas_q71_ctx1",
     "disciplinas": [
       "filosofia"
     ],
-    "explanation": "Sem explicação ainda."
+    "explanation": "Sem explicação ainda.",
+    "contextIds": [
+      "enem_2022_humanas_q71_ctx1"
+    ]
   },
   {
     "number": 72,
@@ -699,12 +739,14 @@
     "test": "ENEM",
     "area": "humanas",
     "images": [],
-    "contextId": "enem_2022_humanas_q72_ctx1",
     "difficulty": 5,
     "disciplinas": [
       "geografia"
     ],
-    "explanation": "Sem explicação ainda."
+    "explanation": "Sem explicação ainda.",
+    "contextIds": [
+      "enem_2022_humanas_q72_ctx1"
+    ]
   },
   {
     "number": 73,
@@ -725,11 +767,13 @@
     "area": "humanas",
     "answer": "b",
     "difficulty": 6,
-    "contextId": "enem_2022_humanas_q73_ctx1",
     "disciplinas": [
       "sociologia"
     ],
-    "explanation": "Sem explicação ainda."
+    "explanation": "Sem explicação ainda.",
+    "contextIds": [
+      "enem_2022_humanas_q73_ctx1"
+    ]
   },
   {
     "number": 74,
@@ -752,11 +796,13 @@
     "area": "humanas",
     "answer": "c",
     "difficulty": 5,
-    "contextId": "enem_2022_humanas_q74_ctx1",
     "disciplinas": [
       "geografia"
     ],
-    "explanation": "Sem explicação ainda."
+    "explanation": "Sem explicação ainda.",
+    "contextIds": [
+      "enem_2022_humanas_q74_ctx1"
+    ]
   },
   {
     "number": 75,
@@ -777,11 +823,13 @@
     "area": "humanas",
     "answer": "e",
     "difficulty": 3,
-    "contextId": "enem_2022_humanas_q75_ctx1",
     "disciplinas": [
       "sociologia"
     ],
-    "explanation": "Sem explicação ainda."
+    "explanation": "Sem explicação ainda.",
+    "contextIds": [
+      "enem_2022_humanas_q75_ctx1"
+    ]
   },
   {
     "number": 76,
@@ -829,11 +877,13 @@
     "area": "humanas",
     "answer": "a",
     "difficulty": 7,
-    "contextId": "enem_2022_humanas_q77_ctx1",
     "disciplinas": [
       "sociologia"
     ],
-    "explanation": "Sem explicação ainda."
+    "explanation": "Sem explicação ainda.",
+    "contextIds": [
+      "enem_2022_humanas_q77_ctx1"
+    ]
   },
   {
     "number": 78,
@@ -881,11 +931,13 @@
     "area": "humanas",
     "answer": "a",
     "difficulty": 5,
-    "contextId": "enem_2022_humanas_q79_ctx1",
     "disciplinas": [
       "historia"
     ],
-    "explanation": "Sem explicação ainda."
+    "explanation": "Sem explicação ainda.",
+    "contextIds": [
+      "enem_2022_humanas_q79_ctx1"
+    ]
   },
   {
     "number": 80,
@@ -933,11 +985,13 @@
     "area": "humanas",
     "answer": "d",
     "difficulty": 6,
-    "contextId": "enem_2022_humanas_q81_ctx1",
     "disciplinas": [
       "filosofia"
     ],
-    "explanation": "Sem explicação ainda."
+    "explanation": "Sem explicação ainda.",
+    "contextIds": [
+      "enem_2022_humanas_q81_ctx1"
+    ]
   },
   {
     "number": 82,
@@ -986,12 +1040,14 @@
     "area": "humanas",
     "answer": "b",
     "difficulty": 4,
-    "contextId": "enem_2022_humanas_q83_ctx1",
     "disciplinas": [
       "filosofia",
       "sociologia"
     ],
-    "explanation": "Sem explicação ainda."
+    "explanation": "Sem explicação ainda.",
+    "contextIds": [
+      "enem_2022_humanas_q83_ctx1"
+    ]
   },
   {
     "number": 84,
@@ -1069,11 +1125,13 @@
     "area": "humanas",
     "answer": "c",
     "difficulty": 7,
-    "contextId": "enem_2022_humanas_q86_ctx1",
     "disciplinas": [
       "filosofia"
     ],
-    "explanation": "Sem explicação ainda."
+    "explanation": "Sem explicação ainda.",
+    "contextIds": [
+      "enem_2022_humanas_q86_ctx1"
+    ]
   },
   {
     "number": 87,
@@ -1094,11 +1152,13 @@
     "area": "humanas",
     "answer": "b",
     "difficulty": 3,
-    "contextId": "enem_2022_humanas_q87_ctx1",
     "disciplinas": [
       "geografia"
     ],
-    "explanation": "Sem explicação ainda."
+    "explanation": "Sem explicação ainda.",
+    "contextIds": [
+      "enem_2022_humanas_q87_ctx1"
+    ]
   },
   {
     "number": 88,
@@ -1119,11 +1179,13 @@
     "area": "humanas",
     "answer": "e",
     "difficulty": 5,
-    "contextId": "enem_2022_humanas_q88_ctx1",
     "disciplinas": [
       "filosofia"
     ],
-    "explanation": "Sem explicação ainda."
+    "explanation": "Sem explicação ainda.",
+    "contextIds": [
+      "enem_2022_humanas_q88_ctx1"
+    ]
   },
   {
     "number": 89,
@@ -1144,11 +1206,13 @@
     "area": "humanas",
     "answer": "c",
     "difficulty": 3,
-    "contextId": "enem_2022_humanas_q89_ctx1",
     "disciplinas": [
       "sociologia"
     ],
-    "explanation": "Sem explicação ainda."
+    "explanation": "Sem explicação ainda.",
+    "contextIds": [
+      "enem_2022_humanas_q89_ctx1"
+    ]
   },
   {
     "number": 90,
@@ -1170,11 +1234,13 @@
     "area": "humanas",
     "answer": "a",
     "difficulty": 3,
-    "contextId": "enem_2022_humanas_q90_ctx1",
     "disciplinas": [
       "historia",
       "sociologia"
     ],
-    "explanation": "Sem explicação ainda."
+    "explanation": "Sem explicação ainda.",
+    "contextIds": [
+      "enem_2022_humanas_q90_ctx1"
+    ]
   }
 ]

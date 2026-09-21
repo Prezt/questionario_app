@@ -52,6 +52,7 @@
     "year": 2025,
     "answer": "d",
     "difficulty": 5,
+    "contextIds": [],
     "disciplinas": [
       "geografia"
     ],
@@ -294,11 +295,11 @@
     "number": 56,
     "text": "Qual é o efeito econômico do problema ambiental apresentado no texto?",
     "alternatives": {
-      "a": "histórias conectadas e recordações do lugar.",
-      "b": "direitos trabalhistas e produção industrial.",
-      "c": "preconceitos linguísticos e dinâmicas territoriais.",
-      "d": "lembranças fabris e discriminação dos operários.",
-      "e": "experiências profissionais e segregação regional."
+      "a": "Supressão da extração de minério.",
+      "b": "Intensificação da atividade de pesca.",
+      "c": "Encarecimento da logística de transporte.",
+      "d": "Inviabilização da agricultura de subsistência.",
+      "e": "Sucateamento da indústria de transformação."
     },
     "images": [],
     "tags": [
@@ -309,7 +310,7 @@
     "area": "humanas",
     "test": "ENEM",
     "year": 2025,
-    "answer": "a",
+    "answer": "c",
     "difficulty": 3,
     "contextIds": [
       "enem_2025_humanas_q56_ctx1"
@@ -516,6 +517,7 @@
     "year": 2025,
     "answer": "b",
     "difficulty": 5,
+    "contextIds": [],
     "disciplinas": [
       "geografia"
     ],
@@ -657,6 +659,7 @@
     "year": 2025,
     "answer": "e",
     "difficulty": 3,
+    "contextIds": [],
     "disciplinas": [
       "geografia",
       "sociologia"

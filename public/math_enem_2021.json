@@ -16,6 +16,7 @@
       "proporção"
     ],
     "difficulty": 6,
+    "contextIds": [],
     "year": 2021,
     "test": "ENEM",
     "area": "math",
@@ -102,6 +103,7 @@
       "estatística"
     ],
     "difficulty": 3,
+    "contextIds": [],
     "year": 2021,
     "test": "ENEM",
     "area": "math",
@@ -127,6 +129,7 @@
       "aritmética e números"
     ],
     "difficulty": 4,
+    "contextIds": [],
     "year": 2021,
     "test": "ENEM",
     "area": "math",
@@ -153,6 +156,7 @@
       "proporção"
     ],
     "difficulty": 3,
+    "contextIds": [],
     "year": 2021,
     "test": "ENEM",
     "area": "math",
@@ -178,6 +182,7 @@
       "frações"
     ],
     "difficulty": 6,
+    "contextIds": [],
     "year": 2021,
     "test": "ENEM",
     "area": "math",
@@ -205,6 +210,7 @@
       "aritmética e números"
     ],
     "difficulty": 3,
+    "contextIds": [],
     "year": 2021,
     "test": "ENEM",
     "area": "math",
@@ -231,6 +237,7 @@
       "estatística"
     ],
     "difficulty": 3,
+    "contextIds": [],
     "year": 2021,
     "test": "ENEM",
     "area": "math",
@@ -285,6 +292,7 @@
       "proporção"
     ],
     "difficulty": 6,
+    "contextIds": [],
     "year": 2021,
     "test": "ENEM",
     "area": "math",
@@ -368,6 +376,7 @@
       "operações básicas"
     ],
     "difficulty": 4,
+    "contextIds": [],
     "year": 2021,
     "test": "ENEM",
     "area": "math",
@@ -396,6 +405,7 @@
       "proporção"
     ],
     "difficulty": 3,
+    "contextIds": [],
     "year": 2021,
     "test": "ENEM",
     "area": "math",
@@ -424,6 +434,7 @@
       "proporção"
     ],
     "difficulty": 5,
+    "contextIds": [],
     "year": 2021,
     "test": "ENEM",
     "area": "math",
@@ -451,6 +462,7 @@
       "operações básicas"
     ],
     "difficulty": 7,
+    "contextIds": [],
     "year": 2021,
     "test": "ENEM",
     "area": "math",
@@ -481,11 +493,11 @@
       "regra de três"
     ],
     "difficulty": 4,
+    "contextIds": [],
     "year": 2021,
     "test": "ENEM",
     "area": "math",
     "answer": "c",
-    "contextIds": [],
     "disciplinas": [
       "matematica"
     ],
@@ -537,6 +549,7 @@
       "proporção"
     ],
     "difficulty": 4,
+    "contextIds": [],
     "year": 2021,
     "test": "ENEM",
     "area": "math",
@@ -564,6 +577,7 @@
       "trigonometria"
     ],
     "difficulty": 6,
+    "contextIds": [],
     "year": 2021,
     "test": "ENEM",
     "area": "math",
@@ -589,6 +603,7 @@
       "aritmética e números"
     ],
     "difficulty": 5,
+    "contextIds": [],
     "year": 2021,
     "test": "ENEM",
     "area": "math",
@@ -614,6 +629,7 @@
       "proporção"
     ],
     "difficulty": 4,
+    "contextIds": [],
     "year": 2021,
     "test": "ENEM",
     "area": "math",
@@ -640,6 +656,7 @@
       "regra de três"
     ],
     "difficulty": 4,
+    "contextIds": [],
     "year": 2021,
     "test": "ENEM",
     "area": "math",
@@ -665,6 +682,7 @@
       "matemática financeira"
     ],
     "difficulty": 6,
+    "contextIds": [],
     "year": 2021,
     "test": "ENEM",
     "area": "math",
@@ -696,6 +714,7 @@
       "matemática financeira"
     ],
     "difficulty": 6,
+    "contextIds": [],
     "year": 2021,
     "test": "ENEM",
     "area": "math",
@@ -728,6 +747,7 @@
       "proporção"
     ],
     "difficulty": 5,
+    "contextIds": [],
     "year": 2021,
     "test": "ENEM",
     "area": "math",
@@ -755,6 +775,7 @@
       "regra de três"
     ],
     "difficulty": 5,
+    "contextIds": [],
     "year": 2021,
     "test": "ENEM",
     "area": "math",
@@ -780,6 +801,7 @@
       "aritmética e números"
     ],
     "difficulty": 6,
+    "contextIds": [],
     "year": 2021,
     "test": "ENEM",
     "area": "math",
@@ -805,6 +827,7 @@
       "regra de três"
     ],
     "difficulty": 4,
+    "contextIds": [],
     "year": 2021,
     "test": "ENEM",
     "area": "math",
@@ -830,6 +853,7 @@
       "proporção"
     ],
     "difficulty": 6,
+    "contextIds": [],
     "year": 2021,
     "test": "ENEM",
     "area": "math",
@@ -856,6 +880,7 @@
       "frações"
     ],
     "difficulty": 5,
+    "contextIds": [],
     "year": 2021,
     "test": "ENEM",
     "area": "math",
@@ -882,6 +907,7 @@
       "geometria espacial"
     ],
     "difficulty": 6,
+    "contextIds": [],
     "year": 2021,
     "test": "ENEM",
     "area": "math",
@@ -909,6 +935,7 @@
       "proporção"
     ],
     "difficulty": 4,
+    "contextIds": [],
     "year": 2021,
     "test": "ENEM",
     "area": "math",
@@ -935,6 +962,7 @@
       "geometria espacial"
     ],
     "difficulty": 6,
+    "contextIds": [],
     "year": 2021,
     "test": "ENEM",
     "area": "math",
@@ -959,6 +987,7 @@
       "geometria plana"
     ],
     "difficulty": 5,
+    "contextIds": [],
     "year": 2021,
     "test": "ENEM",
     "area": "math",
@@ -984,6 +1013,7 @@
       "proporção"
     ],
     "difficulty": 4,
+    "contextIds": [],
     "year": 2021,
     "test": "ENEM",
     "area": "math",
@@ -1008,6 +1038,7 @@
       "aritmética e números"
     ],
     "difficulty": 3,
+    "contextIds": [],
     "year": 2021,
     "test": "ENEM",
     "area": "math",
@@ -1034,6 +1065,7 @@
       "proporção"
     ],
     "difficulty": 5,
+    "contextIds": [],
     "year": 2021,
     "test": "ENEM",
     "area": "math",
@@ -1060,6 +1092,7 @@
       "geometria espacial"
     ],
     "difficulty": 5,
+    "contextIds": [],
     "year": 2021,
     "test": "ENEM",
     "area": "math",
@@ -1085,11 +1118,11 @@
       "operações básicas"
     ],
     "difficulty": 3,
+    "contextIds": [],
     "year": 2021,
     "test": "ENEM",
     "area": "math",
     "answer": "d",
-    "contextIds": [],
     "disciplinas": [
       "matematica"
     ],
@@ -1111,6 +1144,7 @@
       "operações básicas"
     ],
     "difficulty": 4,
+    "contextIds": [],
     "year": 2021,
     "test": "ENEM",
     "area": "math",
@@ -1136,6 +1170,7 @@
       "matemática financeira"
     ],
     "difficulty": 4,
+    "contextIds": [],
     "year": 2021,
     "test": "ENEM",
     "area": "math",
@@ -1161,10 +1196,11 @@
       "frações"
     ],
     "difficulty": 5,
+    "contextIds": [],
     "year": 2021,
     "test": "ENEM",
     "area": "math",
-    "answer": "b",
+    "answer": "a",
     "disciplinas": [
       "matematica"
     ],
@@ -1186,6 +1222,7 @@
       "aritmética e números"
     ],
     "difficulty": 5,
+    "contextIds": [],
     "year": 2021,
     "test": "ENEM",
     "area": "math",

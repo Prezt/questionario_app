@@ -223,6 +223,7 @@
     "area": "humanas",
     "answer": "c",
     "difficulty": 5,
+    "contextIds": [],
     "disciplinas": [
       "geografia"
     ],
@@ -911,6 +912,7 @@
     "area": "humanas",
     "answer": "a",
     "difficulty": 5,
+    "contextIds": [],
     "disciplinas": [
       "historia"
     ],
@@ -1173,6 +1175,7 @@
     "area": "humanas",
     "answer": "d",
     "difficulty": 3,
+    "contextIds": [],
     "disciplinas": [
       "geografia"
     ],

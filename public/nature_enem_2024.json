@@ -73,6 +73,7 @@
     "area": "nature",
     "answer": "e",
     "difficulty": 2,
+    "contextIds": [],
     "disciplinas": [
       "quimica"
     ],
@@ -125,6 +126,7 @@
     "area": "nature",
     "answer": "a",
     "difficulty": 5,
+    "contextIds": [],
     "disciplinas": [
       "biologia"
     ],
@@ -152,6 +154,7 @@
     "area": "nature",
     "answer": "c",
     "difficulty": 5,
+    "contextIds": [],
     "disciplinas": [
       "fisica",
       "quimica"
@@ -179,6 +182,7 @@
     "area": "nature",
     "answer": "d",
     "difficulty": 5,
+    "contextIds": [],
     "disciplinas": [
       "biologia",
       "quimica"
@@ -233,6 +237,7 @@
     "area": "nature",
     "answer": "d",
     "difficulty": 6,
+    "contextIds": [],
     "disciplinas": [
       "fisica"
     ],
@@ -313,6 +318,7 @@
     "area": "nature",
     "answer": "a",
     "difficulty": 3,
+    "contextIds": [],
     "disciplinas": [
       "biologia",
       "quimica"
@@ -423,6 +429,7 @@
     "area": "nature",
     "answer": "d",
     "difficulty": 3,
+    "contextIds": [],
     "disciplinas": [
       "fisica"
     ],
@@ -447,6 +454,7 @@
     "area": "nature",
     "answer": "e",
     "difficulty": 5,
+    "contextIds": [],
     "disciplinas": [
       "quimica"
     ],
@@ -555,6 +563,7 @@
     "area": "nature",
     "answer": "d",
     "difficulty": 2,
+    "contextIds": [],
     "disciplinas": [
       "biologia"
     ],
@@ -644,6 +653,7 @@
     "area": "nature",
     "answer": "c",
     "difficulty": 6,
+    "contextIds": [],
     "disciplinas": [
       "biologia",
       "fisica"
@@ -671,6 +681,7 @@
     "area": "nature",
     "answer": "c",
     "difficulty": 5,
+    "contextIds": [],
     "disciplinas": [
       "biologia"
     ],
@@ -695,6 +706,7 @@
     "area": "nature",
     "answer": "a",
     "difficulty": 2,
+    "contextIds": [],
     "disciplinas": [
       "quimica"
     ],
@@ -779,6 +791,7 @@
     "area": "nature",
     "answer": "b",
     "difficulty": 8,
+    "contextIds": [],
     "disciplinas": [
       "biologia"
     ],
@@ -838,6 +851,7 @@
     "area": "nature",
     "answer": "a",
     "difficulty": 5,
+    "contextIds": [],
     "disciplinas": [
       "fisica"
     ],
@@ -864,6 +878,7 @@
     "area": "nature",
     "answer": "a",
     "difficulty": 4,
+    "contextIds": [],
     "disciplinas": [
       "fisica"
     ],
@@ -892,6 +907,7 @@
     "area": "nature",
     "answer": "a",
     "difficulty": 5,
+    "contextIds": [],
     "disciplinas": [
       "biologia",
       "quimica"
@@ -920,6 +936,7 @@
     "area": "nature",
     "answer": "c",
     "difficulty": 5,
+    "contextIds": [],
     "disciplinas": [
       "biologia"
     ],
@@ -927,13 +944,13 @@
   },
   {
     "number": 125,
-    "text": "Indústrias farmacêuticas e instituições científicas têm trabalhado no desenvolvimento de diferentes vacinas contra a covid-19. Em algumas dessas vacinas, a principal estrutura antigênica é uma proteína de superfície viral chamada espícula ( spike , em inglês). Essa proteína só existe em coronavírus, incluindo o SARS-CoV-2. Ela se liga aos receptores de membrana específicos das células humanas por um mecanismo do tipo “chave-fechadura”. Dessa forma, os vírus entram nas células, podendo se multiplicar e acarretar a doença.",
+    "text": "O aparecimento do brilho nessas condições ocorre como consequência de",
     "alternatives": {
-      "a": "produção de anticorpos específicos contra os vírus",
-      "b": "imunidade passiva contra o desenvolvimento da doença",
-      "c": "alteração genômica para formação da memória imunológica",
-      "d": "neutralização direta dos vírus presentes na circulação sanguínea",
-      "e": "modificação dos receptores de membrana específicos para o vírus"
+      "a": "colisões interatômicas.",
+      "b": "coloração dos átomos.",
+      "c": "transições eletrônicas.",
+      "d": "reações nucleares.",
+      "e": "reflexão da luz."
     },
     "images": [],
     "tags": [
@@ -942,7 +959,7 @@
     "year": 2024,
     "test": "ENEM",
     "area": "nature",
-    "answer": "a",
+    "answer": "c",
     "difficulty": 5,
     "contextIds": [
       "enem_2024_nature_q125_ctx1"
@@ -1005,6 +1022,7 @@
     "area": "nature",
     "answer": "e",
     "difficulty": 7,
+    "contextIds": [],
     "disciplinas": [
       "fisica"
     ],
@@ -1033,6 +1051,7 @@
     "area": "nature",
     "answer": "e",
     "difficulty": 6,
+    "contextIds": [],
     "disciplinas": [
       "biologia",
       "fisica",
@@ -1059,6 +1078,7 @@
     "area": "nature",
     "answer": "annulled",
     "difficulty": 5,
+    "contextIds": [],
     "disciplinas": [
       "quimica"
     ],
@@ -1120,6 +1140,7 @@
     "area": "nature",
     "answer": "b",
     "difficulty": 7,
+    "contextIds": [],
     "disciplinas": [
       "fisica"
     ],
@@ -1146,6 +1167,7 @@
     "area": "nature",
     "answer": "b",
     "difficulty": 9,
+    "contextIds": [],
     "disciplinas": [
       "fisica"
     ],
@@ -1172,6 +1194,7 @@
     "area": "nature",
     "answer": "c",
     "difficulty": 7,
+    "contextIds": [],
     "disciplinas": [
       "biologia",
       "quimica"

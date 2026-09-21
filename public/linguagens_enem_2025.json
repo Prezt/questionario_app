@@ -145,6 +145,7 @@
     "test": "ENEM",
     "answer": "a",
     "difficulty": 3,
+    "contextIds": [],
     "disciplinas": [
       "ingles"
     ],
@@ -269,6 +270,7 @@
     "test": "ENEM",
     "answer": "d",
     "difficulty": 5,
+    "contextIds": [],
     "disciplinas": [
       "espanhol"
     ],
@@ -324,13 +326,15 @@
     "area": "linguagens",
     "test": "ENEM",
     "answer": "e",
-    "contextId": "enem_2025_linguagens_q6_q10_ctx1",
     "difficulty": 5,
     "disciplinas": [
       "interpretacao",
       "linguistica"
     ],
-    "explanation": "Sem explicação ainda."
+    "explanation": "Sem explicação ainda.",
+    "contextIds": [
+      "enem_2025_linguagens_q6_q10_ctx1"
+    ]
   },
   {
     "number": 7,
@@ -350,12 +354,14 @@
     "area": "linguagens",
     "test": "ENEM",
     "answer": "c",
-    "contextId": "enem_2025_linguagens_q6_q10_ctx1",
     "difficulty": 5,
     "disciplinas": [
       "interpretacao"
     ],
-    "explanation": "Sem explicação ainda."
+    "explanation": "Sem explicação ainda.",
+    "contextIds": [
+      "enem_2025_linguagens_q6_q10_ctx1"
+    ]
   },
   {
     "number": 8,
@@ -377,13 +383,15 @@
     "area": "linguagens",
     "test": "ENEM",
     "answer": "d",
-    "contextId": "enem_2025_linguagens_q6_q10_ctx1",
     "difficulty": 4,
     "disciplinas": [
       "interpretacao",
       "linguistica"
     ],
-    "explanation": "Sem explicação ainda."
+    "explanation": "Sem explicação ainda.",
+    "contextIds": [
+      "enem_2025_linguagens_q6_q10_ctx1"
+    ]
   },
   {
     "number": 9,
@@ -405,13 +413,15 @@
     "area": "linguagens",
     "test": "ENEM",
     "answer": "c",
-    "contextId": "enem_2025_linguagens_q6_q10_ctx1",
     "difficulty": 4,
     "disciplinas": [
       "interpretacao",
       "linguistica"
     ],
-    "explanation": "Sem explicação ainda."
+    "explanation": "Sem explicação ainda.",
+    "contextIds": [
+      "enem_2025_linguagens_q6_q10_ctx1"
+    ]
   },
   {
     "number": 10,
@@ -433,13 +443,15 @@
     "area": "linguagens",
     "test": "ENEM",
     "answer": "e",
-    "contextId": "enem_2025_linguagens_q6_q10_ctx1",
     "difficulty": 7,
     "disciplinas": [
       "interpretacao",
       "linguistica"
     ],
-    "explanation": "Sem explicação ainda."
+    "explanation": "Sem explicação ainda.",
+    "contextIds": [
+      "enem_2025_linguagens_q6_q10_ctx1"
+    ]
   },
   {
     "number": 11,
@@ -460,12 +472,14 @@
     "area": "linguagens",
     "test": "ENEM",
     "answer": "b",
-    "contextId": "enem_2025_linguagens_q11_ctx1",
     "difficulty": 6,
     "disciplinas": [
       "literatura"
     ],
-    "explanation": "Sem explicação ainda."
+    "explanation": "Sem explicação ainda.",
+    "contextIds": [
+      "enem_2025_linguagens_q11_ctx1"
+    ]
   },
   {
     "number": 12,
@@ -549,6 +563,7 @@
     "test": "ENEM",
     "answer": "c",
     "difficulty": 5,
+    "contextIds": [],
     "disciplinas": [
       "interpretacao",
       "literatura"
@@ -577,6 +592,7 @@
     "test": "ENEM",
     "answer": "a",
     "difficulty": 5,
+    "contextIds": [],
     "disciplinas": [
       "artes"
     ],
@@ -839,6 +855,7 @@
     "test": "ENEM",
     "answer": "b",
     "difficulty": 4,
+    "contextIds": [],
     "disciplinas": [
       "interpretacao"
     ],
@@ -899,6 +916,7 @@
     "test": "ENEM",
     "answer": "b",
     "difficulty": 3,
+    "contextIds": [],
     "disciplinas": [
       "linguistica",
       "literatura"
@@ -1044,6 +1062,7 @@
     "test": "ENEM",
     "answer": "d",
     "difficulty": 6,
+    "contextIds": [],
     "disciplinas": [
       "interpretacao",
       "linguistica",
@@ -1101,6 +1120,7 @@
     "test": "ENEM",
     "answer": "b",
     "difficulty": 3,
+    "contextIds": [],
     "disciplinas": [
       "interpretacao"
     ],
@@ -1130,6 +1150,7 @@
     "test": "ENEM",
     "answer": "c",
     "difficulty": 6,
+    "contextIds": [],
     "disciplinas": [
       "interpretacao",
       "linguistica",

@@ -20,6 +20,7 @@
     "area": "math",
     "answer": "e",
     "difficulty": 6,
+    "contextIds": [],
     "disciplinas": [
       "matematica"
     ],
@@ -46,6 +47,7 @@
     "area": "math",
     "answer": "c",
     "difficulty": 8,
+    "contextIds": [],
     "disciplinas": [
       "matematica"
     ],
@@ -73,6 +75,7 @@
     "area": "math",
     "answer": "d",
     "difficulty": 6,
+    "contextIds": [],
     "disciplinas": [
       "matematica"
     ],
@@ -100,6 +103,7 @@
     "area": "math",
     "answer": "a",
     "difficulty": 4,
+    "contextIds": [],
     "disciplinas": [
       "matematica"
     ],
@@ -125,6 +129,7 @@
     "area": "math",
     "answer": "b",
     "difficulty": 7,
+    "contextIds": [],
     "disciplinas": [
       "matematica"
     ],
@@ -153,7 +158,7 @@
     "area": "math",
     "answer": "e",
     "difficulty": 6,
-    "contextId": null,
+    "contextIds": [],
     "disciplinas": [
       "matematica"
     ],
@@ -179,6 +184,7 @@
     "area": "math",
     "answer": "b",
     "difficulty": 6,
+    "contextIds": [],
     "disciplinas": [
       "matematica"
     ],
@@ -213,7 +219,7 @@
     "area": "math",
     "answer": "d",
     "difficulty": 7,
-    "contextId": null,
+    "contextIds": [],
     "disciplinas": [
       "matematica"
     ],
@@ -242,6 +248,7 @@
     "area": "math",
     "answer": "c",
     "difficulty": 5,
+    "contextIds": [],
     "disciplinas": [
       "matematica"
     ],
@@ -268,6 +275,7 @@
     "area": "math",
     "answer": "e",
     "difficulty": 4,
+    "contextIds": [],
     "disciplinas": [
       "matematica"
     ],
@@ -292,6 +300,7 @@
     "area": "math",
     "answer": "e",
     "difficulty": 6,
+    "contextIds": [],
     "disciplinas": [
       "matematica"
     ],
@@ -319,6 +328,7 @@
     "area": "math",
     "answer": "c",
     "difficulty": 7,
+    "contextIds": [],
     "disciplinas": [
       "matematica"
     ],
@@ -346,11 +356,13 @@
     "area": "math",
     "answer": "d",
     "difficulty": 7,
-    "contextId": "enem_2022_math_q148_ctx1",
     "disciplinas": [
       "matematica"
     ],
-    "explanation": "Sem explicação ainda."
+    "explanation": "Sem explicação ainda.",
+    "contextIds": [
+      "enem_2022_math_q148_ctx1"
+    ]
   },
   {
     "number": 149,
@@ -371,6 +383,7 @@
     "area": "math",
     "answer": "b",
     "difficulty": 5,
+    "contextIds": [],
     "disciplinas": [
       "matematica"
     ],
@@ -399,7 +412,7 @@
     "area": "math",
     "answer": "d",
     "difficulty": 7,
-    "contextId": null,
+    "contextIds": [],
     "disciplinas": [
       "matematica"
     ],
@@ -425,7 +438,6 @@
     "area": "math",
     "answer": "c",
     "difficulty": 5,
-    "contextId": null,
     "contextIds": [],
     "disciplinas": [
       "matematica"
@@ -455,11 +467,13 @@
     "area": "math",
     "answer": "c",
     "difficulty": 7,
-    "contextId": "enem_2022_math_q152_ctx1",
     "disciplinas": [
       "matematica"
     ],
-    "explanation": "Sem explicação ainda."
+    "explanation": "Sem explicação ainda.",
+    "contextIds": [
+      "enem_2022_math_q152_ctx1"
+    ]
   },
   {
     "number": 153,
@@ -484,6 +498,7 @@
     "area": "math",
     "answer": "c",
     "difficulty": 6,
+    "contextIds": [],
     "disciplinas": [
       "matematica"
     ],
@@ -509,11 +524,13 @@
     "area": "math",
     "answer": "c",
     "difficulty": 5,
-    "contextId": "enem_2022_math_q154_ctx1",
     "disciplinas": [
       "matematica"
     ],
-    "explanation": "Sem explicação ainda."
+    "explanation": "Sem explicação ainda.",
+    "contextIds": [
+      "enem_2022_math_q154_ctx1"
+    ]
   },
   {
     "number": 155,
@@ -536,6 +553,7 @@
     "area": "math",
     "answer": "b",
     "difficulty": 7,
+    "contextIds": [],
     "disciplinas": [
       "matematica"
     ],
@@ -570,7 +588,7 @@
     "area": "math",
     "answer": "c",
     "difficulty": 8,
-    "contextId": null,
+    "contextIds": [],
     "disciplinas": [
       "matematica"
     ],
@@ -594,8 +612,8 @@
     "test": "ENEM",
     "area": "math",
     "images": [],
-    "contextId": null,
     "difficulty": 7,
+    "contextIds": [],
     "disciplinas": [
       "matematica"
     ],
@@ -621,7 +639,7 @@
     "area": "math",
     "answer": "c",
     "difficulty": 6,
-    "contextId": null,
+    "contextIds": [],
     "disciplinas": [
       "matematica"
     ],
@@ -647,7 +665,7 @@
     "area": "math",
     "answer": "b",
     "difficulty": 5,
-    "contextId": null,
+    "contextIds": [],
     "disciplinas": [
       "matematica"
     ],
@@ -680,7 +698,7 @@
     "area": "math",
     "answer": "a",
     "difficulty": 9,
-    "contextId": null,
+    "contextIds": [],
     "disciplinas": [
       "matematica"
     ],
@@ -710,7 +728,7 @@
     "area": "math",
     "answer": "a",
     "difficulty": 5,
-    "contextId": null,
+    "contextIds": [],
     "disciplinas": [
       "matematica"
     ],
@@ -738,7 +756,7 @@
     "area": "math",
     "answer": "c",
     "difficulty": 6,
-    "contextId": null,
+    "contextIds": [],
     "disciplinas": [
       "matematica"
     ],
@@ -764,7 +782,7 @@
     "area": "math",
     "answer": "d",
     "difficulty": 7,
-    "contextId": null,
+    "contextIds": [],
     "disciplinas": [
       "matematica"
     ],
@@ -790,6 +808,7 @@
     "area": "math",
     "answer": "b",
     "difficulty": 4,
+    "contextIds": [],
     "disciplinas": [
       "matematica"
     ],
@@ -814,6 +833,7 @@
     "area": "math",
     "answer": "a",
     "difficulty": 5,
+    "contextIds": [],
     "disciplinas": [
       "matematica"
     ],
@@ -841,6 +861,7 @@
     "area": "math",
     "answer": "a",
     "difficulty": 5,
+    "contextIds": [],
     "disciplinas": [
       "matematica"
     ],
@@ -867,6 +888,7 @@
     "area": "math",
     "answer": "a",
     "difficulty": 5,
+    "contextIds": [],
     "disciplinas": [
       "matematica"
     ],
@@ -894,6 +916,7 @@
     "area": "math",
     "answer": "c",
     "difficulty": 7,
+    "contextIds": [],
     "disciplinas": [
       "matematica"
     ],
@@ -921,6 +944,7 @@
     "area": "math",
     "answer": "e",
     "difficulty": 6,
+    "contextIds": [],
     "disciplinas": [
       "matematica"
     ],
@@ -949,6 +973,7 @@
     "area": "math",
     "answer": "b",
     "difficulty": 5,
+    "contextIds": [],
     "disciplinas": [
       "matematica"
     ],
@@ -974,6 +999,7 @@
     "area": "math",
     "answer": "a",
     "difficulty": 5,
+    "contextIds": [],
     "disciplinas": [
       "matematica"
     ],
@@ -999,6 +1025,7 @@
     "area": "math",
     "answer": "b",
     "difficulty": 7,
+    "contextIds": [],
     "disciplinas": [
       "matematica"
     ],
@@ -1023,6 +1050,7 @@
     "area": "math",
     "answer": "d",
     "difficulty": 5,
+    "contextIds": [],
     "disciplinas": [
       "matematica"
     ],
@@ -1048,6 +1076,7 @@
     "area": "math",
     "answer": "d",
     "difficulty": 5,
+    "contextIds": [],
     "disciplinas": [
       "matematica"
     ],
@@ -1072,6 +1101,7 @@
     "area": "math",
     "answer": "e",
     "difficulty": 1,
+    "contextIds": [],
     "disciplinas": [
       "matematica"
     ],
@@ -1099,6 +1129,7 @@
     "area": "math",
     "answer": "d",
     "difficulty": 8,
+    "contextIds": [],
     "disciplinas": [
       "matematica"
     ],
@@ -1124,6 +1155,7 @@
     "area": "math",
     "answer": "a",
     "difficulty": 4,
+    "contextIds": [],
     "disciplinas": [
       "matematica"
     ],
@@ -1149,6 +1181,7 @@
     "area": "math",
     "answer": "e",
     "difficulty": 7,
+    "contextIds": [],
     "disciplinas": [
       "matematica"
     ],
@@ -1173,11 +1206,13 @@
     "area": "math",
     "answer": "b",
     "difficulty": 5,
-    "contextId": "enem_2022_math_q179_ctx1",
     "disciplinas": [
       "matematica"
     ],
-    "explanation": "Sem explicação ainda."
+    "explanation": "Sem explicação ainda.",
+    "contextIds": [
+      "enem_2022_math_q179_ctx1"
+    ]
   },
   {
     "number": 180,
@@ -1206,6 +1241,7 @@
     "area": "math",
     "answer": "e",
     "difficulty": 9,
+    "contextIds": [],
     "disciplinas": [
       "matematica"
     ],

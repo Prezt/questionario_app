@@ -45,6 +45,7 @@
       "institucionalismo religioso"
     ],
     "difficulty": 6,
+    "contextIds": [],
     "year": 2018,
     "test": "ENEM",
     "area": "humanas",
@@ -77,7 +78,6 @@
     "test": "ENEM",
     "area": "humanas",
     "answer": "c",
-    "contextId": "enem_2018_humanas_q48_ctx1",
     "contextIds": [
       "enem_2018_humanas_q48_ctx1"
     ],
@@ -107,7 +107,6 @@
     "test": "ENEM",
     "area": "humanas",
     "answer": "d",
-    "contextId": "enem_2018_humanas_q49_ctx1",
     "contextIds": [
       "enem_2018_humanas_q49_ctx1"
     ],
@@ -168,7 +167,6 @@
     "test": "ENEM",
     "area": "humanas",
     "answer": "b",
-    "contextId": "enem_2018_humanas_q51_ctx1",
     "contextIds": [
       "enem_2018_humanas_q51_ctx1"
     ],
@@ -226,7 +224,6 @@
     "test": "ENEM",
     "area": "humanas",
     "answer": "d",
-    "contextId": "enem_2018_humanas_q53_ctx1",
     "contextIds": [
       "enem_2018_humanas_q53_ctx1"
     ],
@@ -284,7 +281,6 @@
     "test": "ENEM",
     "area": "humanas",
     "answer": "c",
-    "contextId": "enem_2018_humanas_q55_ctx1",
     "contextIds": [
       "enem_2018_humanas_q55_ctx1"
     ],
@@ -316,6 +312,7 @@
       "geografia humana e urbana"
     ],
     "difficulty": 5,
+    "contextIds": [],
     "year": 2018,
     "test": "ENEM",
     "area": "humanas",
@@ -345,7 +342,6 @@
     "test": "ENEM",
     "area": "humanas",
     "answer": "e",
-    "contextId": "enem_2018_humanas_q57_ctx1",
     "contextIds": [
       "enem_2018_humanas_q57_ctx1"
     ],
@@ -374,7 +370,6 @@
     "test": "ENEM",
     "area": "humanas",
     "answer": "d",
-    "contextId": null,
     "contextIds": [
       "enem_2018_humanas_q58_ctx1"
     ],
@@ -404,7 +399,6 @@
     "test": "ENEM",
     "area": "humanas",
     "answer": "e",
-    "contextId": "enem_2018_humanas_q59_ctx1",
     "contextIds": [
       "enem_2018_humanas_q59_ctx1"
     ],
@@ -521,6 +515,7 @@
       "meio ambiente e sustentabilidade"
     ],
     "difficulty": 6,
+    "contextIds": [],
     "year": 2018,
     "test": "ENEM",
     "area": "humanas",
@@ -550,7 +545,6 @@
     "test": "ENEM",
     "area": "humanas",
     "answer": "e",
-    "contextId": "enem_2018_humanas_q64_ctx1",
     "contextIds": [
       "enem_2018_humanas_q64_ctx1"
     ],
@@ -580,7 +574,6 @@
     "test": "ENEM",
     "area": "humanas",
     "answer": "a",
-    "contextId": "enem_2018_humanas_q65_ctx1",
     "contextIds": [
       "enem_2018_humanas_q65_ctx1"
     ],
@@ -639,7 +632,6 @@
     "test": "ENEM",
     "area": "humanas",
     "answer": "e",
-    "contextId": "enem_2018_humanas_q67_ctx1",
     "contextIds": [
       "enem_2018_humanas_q67_ctx1"
     ],
@@ -668,7 +660,6 @@
     "test": "ENEM",
     "area": "humanas",
     "answer": "c",
-    "contextId": "enem_2018_humanas_q68_ctx1",
     "contextIds": [
       "enem_2018_humanas_q68_ctx1"
     ],
@@ -698,7 +689,6 @@
     "test": "ENEM",
     "area": "humanas",
     "answer": "b",
-    "contextId": "enem_2018_humanas_q69_ctx1",
     "contextIds": [
       "enem_2018_humanas_q69_ctx1"
     ],
@@ -729,7 +719,6 @@
     "test": "ENEM",
     "area": "humanas",
     "answer": "b",
-    "contextId": "enem_2018_humanas_q70_ctx1",
     "contextIds": [
       "enem_2018_humanas_q70_ctx1"
     ],
@@ -759,7 +748,6 @@
     "test": "ENEM",
     "area": "humanas",
     "answer": "e",
-    "contextId": "enem_2018_humanas_q71_ctx1",
     "contextIds": [
       "enem_2018_humanas_q71_ctx1"
     ],
@@ -790,7 +778,6 @@
     "test": "ENEM",
     "area": "humanas",
     "answer": "b",
-    "contextId": "enem_2018_humanas_q72_ctx1",
     "contextIds": [
       "enem_2018_humanas_q72_ctx1"
     ],
@@ -848,6 +835,7 @@
       "cultura e identidade"
     ],
     "difficulty": 6,
+    "contextIds": [],
     "year": 2018,
     "test": "ENEM",
     "area": "humanas",
@@ -907,7 +895,6 @@
     "test": "ENEM",
     "area": "humanas",
     "answer": "e",
-    "contextId": "enem_2018_humanas_q76_ctx1",
     "contextIds": [
       "enem_2018_humanas_q76_ctx1"
     ],
@@ -1022,7 +1009,6 @@
     "test": "ENEM",
     "area": "humanas",
     "answer": "b",
-    "contextId": "enem_2018_humanas_q80_ctx1",
     "contextIds": [
       "enem_2018_humanas_q80_ctx1"
     ],
@@ -1111,7 +1097,6 @@
     "test": "ENEM",
     "area": "humanas",
     "answer": "d",
-    "contextId": null,
     "contextIds": [
       "enem_2018_humanas_q83_ctx1"
     ],
@@ -1140,7 +1125,6 @@
     "test": "ENEM",
     "area": "humanas",
     "answer": "c",
-    "contextId": "enem_2018_humanas_q84_ctx1",
     "contextIds": [
       "enem_2018_humanas_q84_ctx1"
     ],
@@ -1170,7 +1154,6 @@
     "test": "ENEM",
     "area": "humanas",
     "answer": "a",
-    "contextId": "enem_2018_humanas_q85_ctx1",
     "contextIds": [
       "enem_2018_humanas_q85_ctx1"
     ],
@@ -1200,7 +1183,6 @@
     "test": "ENEM",
     "area": "humanas",
     "answer": "a",
-    "contextId": "enem_2018_humanas_q86_ctx1",
     "contextIds": [
       "enem_2018_humanas_q86_ctx1"
     ],
@@ -1230,7 +1212,6 @@
     "test": "ENEM",
     "area": "humanas",
     "answer": "b",
-    "contextId": "enem_2018_humanas_q87_ctx1",
     "contextIds": [
       "enem_2018_humanas_q87_ctx1"
     ],
@@ -1260,7 +1241,6 @@
     "test": "ENEM",
     "area": "humanas",
     "answer": "c",
-    "contextId": "enem_2018_humanas_q88_ctx1",
     "contextIds": [
       "enem_2018_humanas_q88_ctx1"
     ],

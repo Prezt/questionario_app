@@ -19,12 +19,14 @@
     "test": "ENEM",
     "area": "humanas",
     "answer": "b",
-    "contextId": "enem_2019_humanas_q46_q78_ctx1",
     "disciplinas": [
       "geografia"
     ],
     "explanation": "Sem explicação ainda.",
-    "review": true
+    "review": true,
+    "contextIds": [
+      "enem_2019_humanas_q46_q78_ctx1"
+    ]
   },
   {
     "number": 47,
@@ -46,12 +48,14 @@
     "test": "ENEM",
     "area": "humanas",
     "answer": "a",
-    "contextId": "enem_2019_humanas_q47_ctx1",
     "disciplinas": [
       "geografia"
     ],
     "explanation": "Sem explicação ainda.",
-    "review": true
+    "review": true,
+    "contextIds": [
+      "enem_2019_humanas_q47_ctx1"
+    ]
   },
   {
     "number": 48,
@@ -73,12 +77,14 @@
     "test": "ENEM",
     "area": "humanas",
     "answer": "c",
-    "contextId": "enem_2019_humanas_q46_q78_ctx1",
     "disciplinas": [
       "filosofia"
     ],
     "explanation": "Sem explicação ainda.",
-    "review": true
+    "review": true,
+    "contextIds": [
+      "enem_2019_humanas_q46_q78_ctx1"
+    ]
   },
   {
     "number": 49,
@@ -96,6 +102,7 @@
       "ecologia"
     ],
     "difficulty": 5,
+    "contextIds": [],
     "year": 2019,
     "test": "ENEM",
     "area": "humanas",
@@ -127,13 +134,15 @@
     "test": "ENEM",
     "area": "humanas",
     "answer": "c",
-    "contextId": "enem_2019_humanas_q50_ctx1",
     "disciplinas": [
       "filosofia",
       "sociologia"
     ],
     "explanation": "Sem explicação ainda.",
-    "review": true
+    "review": true,
+    "contextIds": [
+      "enem_2019_humanas_q50_ctx1"
+    ]
   },
   {
     "number": 51,
@@ -156,13 +165,15 @@
     "test": "ENEM",
     "area": "humanas",
     "answer": "b",
-    "contextId": "enem_2019_humanas_q51_ctx1",
     "disciplinas": [
       "filosofia",
       "sociologia"
     ],
     "explanation": "Sem explicação ainda.",
-    "review": true
+    "review": true,
+    "contextIds": [
+      "enem_2019_humanas_q51_ctx1"
+    ]
   },
   {
     "number": 52,
@@ -180,6 +191,7 @@
       "geopolítica e relações internacionais"
     ],
     "difficulty": 6,
+    "contextIds": [],
     "year": 2019,
     "test": "ENEM",
     "area": "humanas",
@@ -211,12 +223,14 @@
     "test": "ENEM",
     "area": "humanas",
     "answer": "b",
-    "contextId": "enem_2019_humanas_q53_ctx1",
     "disciplinas": [
       "geografia"
     ],
     "explanation": "Sem explicação ainda.",
-    "review": true
+    "review": true,
+    "contextIds": [
+      "enem_2019_humanas_q53_ctx1"
+    ]
   },
   {
     "number": 54,
@@ -235,6 +249,7 @@
       "história da cultura e arte"
     ],
     "difficulty": 6,
+    "contextIds": [],
     "year": 2019,
     "test": "ENEM",
     "area": "humanas",
@@ -266,13 +281,15 @@
     "test": "ENEM",
     "area": "humanas",
     "answer": "a",
-    "contextId": "enem_2019_humanas_q55_ctx1",
     "disciplinas": [
       "historia",
       "sociologia"
     ],
     "explanation": "Sem explicação ainda.",
-    "review": true
+    "review": true,
+    "contextIds": [
+      "enem_2019_humanas_q55_ctx1"
+    ]
   },
   {
     "number": 56,
@@ -290,6 +307,7 @@
       "geografia humana e urbana"
     ],
     "difficulty": 6,
+    "contextIds": [],
     "year": 2019,
     "test": "ENEM",
     "area": "humanas",
@@ -320,12 +338,14 @@
     "test": "ENEM",
     "area": "humanas",
     "answer": "c",
-    "contextId": "enem_2019_humanas_q57_ctx1",
     "disciplinas": [
       "geografia"
     ],
     "explanation": "Sem explicação ainda.",
-    "review": true
+    "review": true,
+    "contextIds": [
+      "enem_2019_humanas_q57_ctx1"
+    ]
   },
   {
     "number": 58,
@@ -347,12 +367,14 @@
     "test": "ENEM",
     "area": "humanas",
     "answer": "b",
-    "contextId": "enem_2019_humanas_q58_ctx1",
     "disciplinas": [
       "filosofia"
     ],
     "explanation": "Sem explicação ainda.",
-    "review": true
+    "review": true,
+    "contextIds": [
+      "enem_2019_humanas_q58_ctx1"
+    ]
   },
   {
     "number": 59,
@@ -378,8 +400,10 @@
       "geografia"
     ],
     "explanation": "Sem explicação ainda.",
-    "contextId": "enem_2019_humanas_q59_ctx1",
-    "review": true
+    "review": true,
+    "contextIds": [
+      "enem_2019_humanas_q59_ctx1"
+    ]
   },
   {
     "number": 60,
@@ -402,13 +426,15 @@
     "test": "ENEM",
     "area": "humanas",
     "answer": "e",
-    "contextId": "enem_2019_humanas_q46_q78_ctx1",
     "disciplinas": [
       "geografia",
       "historia"
     ],
     "explanation": "Sem explicação ainda.",
-    "review": true
+    "review": true,
+    "contextIds": [
+      "enem_2019_humanas_q46_q78_ctx1"
+    ]
   },
   {
     "number": 61,
@@ -461,13 +487,15 @@
     "test": "ENEM",
     "area": "humanas",
     "answer": "e",
-    "contextId": "enem_2019_humanas_q46_q78_ctx1",
     "disciplinas": [
       "filosofia",
       "sociologia"
     ],
     "explanation": "Sem explicação ainda.",
-    "review": true
+    "review": true,
+    "contextIds": [
+      "enem_2019_humanas_q46_q78_ctx1"
+    ]
   },
   {
     "number": 63,
@@ -520,13 +548,15 @@
     "test": "ENEM",
     "area": "humanas",
     "answer": "c",
-    "contextId": "enem_2019_humanas_q46_q78_ctx1",
     "disciplinas": [
       "filosofia",
       "historia"
     ],
     "explanation": "Sem explicação ainda.",
-    "review": true
+    "review": true,
+    "contextIds": [
+      "enem_2019_humanas_q46_q78_ctx1"
+    ]
   },
   {
     "number": 65,
@@ -548,12 +578,14 @@
     "test": "ENEM",
     "area": "humanas",
     "answer": "a",
-    "contextId": "enem_2019_humanas_q65_ctx1",
     "disciplinas": [
       "filosofia"
     ],
     "explanation": "Sem explicação ainda.",
-    "review": true
+    "review": true,
+    "contextIds": [
+      "enem_2019_humanas_q65_ctx1"
+    ]
   },
   {
     "number": 66,
@@ -572,6 +604,7 @@
       "filosofia moderna e contemporânea"
     ],
     "difficulty": 5,
+    "contextIds": [],
     "year": 2019,
     "test": "ENEM",
     "area": "humanas",
@@ -635,13 +668,15 @@
     "test": "ENEM",
     "area": "humanas",
     "answer": "c",
-    "contextId": "enem_2019_humanas_q68_ctx1",
     "disciplinas": [
       "geografia",
       "sociologia"
     ],
     "explanation": "Sem explicação ainda.",
-    "review": true
+    "review": true,
+    "contextIds": [
+      "enem_2019_humanas_q68_ctx1"
+    ]
   },
   {
     "number": 69,
@@ -660,6 +695,7 @@
       "história do brasil república"
     ],
     "difficulty": 6,
+    "contextIds": [],
     "year": 2019,
     "test": "ENEM",
     "area": "humanas",
@@ -691,12 +727,14 @@
     "test": "ENEM",
     "area": "humanas",
     "answer": "e",
-    "contextId": "enem_2019_humanas_q70_ctx1",
     "disciplinas": [
       "sociologia"
     ],
     "explanation": "Sem explicação ainda.",
-    "review": true
+    "review": true,
+    "contextIds": [
+      "enem_2019_humanas_q70_ctx1"
+    ]
   },
   {
     "number": 71,
@@ -718,13 +756,15 @@
     "test": "ENEM",
     "area": "humanas",
     "answer": "d",
-    "contextId": "enem_2019_humanas_q71_ctx1",
     "disciplinas": [
       "filosofia",
       "sociologia"
     ],
     "explanation": "Sem explicação ainda.",
-    "review": true
+    "review": true,
+    "contextIds": [
+      "enem_2019_humanas_q71_ctx1"
+    ]
   },
   {
     "number": 72,
@@ -776,13 +816,15 @@
     "test": "ENEM",
     "area": "humanas",
     "answer": "c",
-    "contextId": "enem_2019_humanas_q73_ctx1",
     "disciplinas": [
       "historia",
       "sociologia"
     ],
     "explanation": "Sem explicação ainda.",
-    "review": true
+    "review": true,
+    "contextIds": [
+      "enem_2019_humanas_q73_ctx1"
+    ]
   },
   {
     "number": 74,
@@ -804,12 +846,14 @@
     "test": "ENEM",
     "area": "humanas",
     "answer": "c",
-    "contextId": "enem_2019_humanas_q74_ctx1",
     "disciplinas": [
       "filosofia"
     ],
     "explanation": "Sem explicação ainda.",
-    "review": true
+    "review": true,
+    "contextIds": [
+      "enem_2019_humanas_q74_ctx1"
+    ]
   },
   {
     "number": 75,
@@ -864,14 +908,16 @@
     "test": "ENEM",
     "area": "humanas",
     "answer": "d",
-    "contextId": "enem_2019_humanas_q76_ctx1",
     "disciplinas": [
       "filosofia",
       "geografia",
       "sociologia"
     ],
     "explanation": "Sem explicação ainda.",
-    "review": true
+    "review": true,
+    "contextIds": [
+      "enem_2019_humanas_q76_ctx1"
+    ]
   },
   {
     "number": 77,
@@ -900,8 +946,10 @@
       "sociologia"
     ],
     "explanation": "Sem explicação ainda.",
-    "contextId": "enem_2019_humanas_q77_ctx1",
-    "review": true
+    "review": true,
+    "contextIds": [
+      "enem_2019_humanas_q77_ctx1"
+    ]
   },
   {
     "number": 78,
@@ -953,13 +1001,15 @@
     "test": "ENEM",
     "area": "humanas",
     "answer": "a",
-    "contextId": "enem_2019_humanas_q79_ctx1",
     "disciplinas": [
       "filosofia",
       "historia"
     ],
     "explanation": "Sem explicação ainda.",
-    "review": true
+    "review": true,
+    "contextIds": [
+      "enem_2019_humanas_q79_ctx1"
+    ]
   },
   {
     "number": 80,
@@ -981,13 +1031,15 @@
     "test": "ENEM",
     "area": "humanas",
     "answer": "d",
-    "contextId": "enem_2019_humanas_q80_ctx1",
     "disciplinas": [
       "historia",
       "sociologia"
     ],
     "explanation": "Sem explicação ainda.",
-    "review": true
+    "review": true,
+    "contextIds": [
+      "enem_2019_humanas_q80_ctx1"
+    ]
   },
   {
     "number": 81,
@@ -1006,6 +1058,7 @@
       "geopolítica e relações internacionais"
     ],
     "difficulty": 6,
+    "contextIds": [],
     "year": 2019,
     "test": "ENEM",
     "area": "humanas",
@@ -1037,12 +1090,14 @@
     "test": "ENEM",
     "area": "humanas",
     "answer": "a",
-    "contextId": "enem_2019_humanas_q82_ctx1",
     "disciplinas": [
       "historia"
     ],
     "explanation": "Sem explicação ainda.",
-    "review": true
+    "review": true,
+    "contextIds": [
+      "enem_2019_humanas_q82_ctx1"
+    ]
   },
   {
     "number": 83,
@@ -1061,6 +1116,7 @@
       "direitos humanos e cidadania"
     ],
     "difficulty": 4,
+    "contextIds": [],
     "year": 2019,
     "test": "ENEM",
     "area": "humanas",
@@ -1094,14 +1150,16 @@
     "test": "ENEM",
     "area": "humanas",
     "answer": "b",
-    "contextId": "enem_2019_humanas_q84_ctx1",
     "disciplinas": [
       "geografia",
       "historia",
       "sociologia"
     ],
     "explanation": "Sem explicação ainda.",
-    "review": true
+    "review": true,
+    "contextIds": [
+      "enem_2019_humanas_q84_ctx1"
+    ]
   },
   {
     "number": 85,
@@ -1128,8 +1186,10 @@
       "sociologia"
     ],
     "explanation": "Sem explicação ainda.",
-    "contextId": "enem_2019_humanas_q85_ctx1",
-    "review": true
+    "review": true,
+    "contextIds": [
+      "enem_2019_humanas_q85_ctx1"
+    ]
   },
   {
     "number": 86,
@@ -1151,13 +1211,15 @@
     "test": "ENEM",
     "area": "humanas",
     "answer": "b",
-    "contextId": "enem_2019_humanas_q86_ctx1",
     "disciplinas": [
       "geografia",
       "historia"
     ],
     "explanation": "Sem explicação ainda.",
-    "review": true
+    "review": true,
+    "contextIds": [
+      "enem_2019_humanas_q86_ctx1"
+    ]
   },
   {
     "number": 87,
@@ -1175,6 +1237,7 @@
       "sociologia e estrutura social"
     ],
     "difficulty": 4,
+    "contextIds": [],
     "year": 2019,
     "test": "ENEM",
     "area": "humanas",
@@ -1201,6 +1264,7 @@
       "geopolítica e território"
     ],
     "difficulty": 6,
+    "contextIds": [],
     "year": 2019,
     "test": "ENEM",
     "area": "humanas",
@@ -1231,12 +1295,14 @@
     "test": "ENEM",
     "area": "humanas",
     "answer": "d",
-    "contextId": "enem_2019_humanas_q89_ctx1",
     "disciplinas": [
       "geografia"
     ],
     "explanation": "Sem explicação ainda.",
-    "review": true
+    "review": true,
+    "contextIds": [
+      "enem_2019_humanas_q89_ctx1"
+    ]
   },
   {
     "number": 90,
@@ -1259,12 +1325,14 @@
     "test": "ENEM",
     "area": "humanas",
     "answer": "b",
-    "contextId": "enem_2019_humanas_q90_ctx1",
     "disciplinas": [
       "filosofia",
       "geografia"
     ],
     "explanation": "Sem explicação ainda.",
-    "review": true
+    "review": true,
+    "contextIds": [
+      "enem_2019_humanas_q90_ctx1"
+    ]
   }
 ]

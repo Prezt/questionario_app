@@ -17,6 +17,7 @@
       "geometria plana"
     ],
     "difficulty": 6,
+    "contextIds": [],
     "year": 2019,
     "test": "ENEM",
     "area": "math",
@@ -43,6 +44,7 @@
       "álgebra"
     ],
     "difficulty": 6,
+    "contextIds": [],
     "year": 2019,
     "test": "ENEM",
     "area": "math",
@@ -71,6 +73,7 @@
       "proporção"
     ],
     "difficulty": 5,
+    "contextIds": [],
     "year": 2019,
     "test": "ENEM",
     "area": "math",
@@ -106,6 +109,7 @@
       "regra de três"
     ],
     "difficulty": 5,
+    "contextIds": [],
     "year": 2019,
     "test": "ENEM",
     "area": "math",
@@ -131,6 +135,7 @@
       "aritmética e números"
     ],
     "difficulty": 3,
+    "contextIds": [],
     "year": 2019,
     "test": "ENEM",
     "area": "math",
@@ -160,6 +165,7 @@
       "regra de três"
     ],
     "difficulty": 6,
+    "contextIds": [],
     "year": 2019,
     "test": "ENEM",
     "area": "math",
@@ -186,6 +192,7 @@
       "aritmética e números"
     ],
     "difficulty": 5,
+    "contextIds": [],
     "year": 2019,
     "test": "ENEM",
     "area": "math",
@@ -217,12 +224,14 @@
     "test": "ENEM",
     "area": "math",
     "answer": "b",
-    "contextId": "enem_2019_math_q143_ctx1",
     "disciplinas": [
       "matematica"
     ],
     "explanation": "Sem explicação ainda.",
-    "review": true
+    "review": true,
+    "contextIds": [
+      "enem_2019_math_q143_ctx1"
+    ]
   },
   {
     "number": 144,
@@ -240,6 +249,7 @@
       "estatística"
     ],
     "difficulty": 2,
+    "contextIds": [],
     "year": 2019,
     "test": "ENEM",
     "area": "math",
@@ -267,6 +277,7 @@
       "proporção"
     ],
     "difficulty": 6,
+    "contextIds": [],
     "year": 2019,
     "test": "ENEM",
     "area": "math",
@@ -294,6 +305,7 @@
       "proporção"
     ],
     "difficulty": 6,
+    "contextIds": [],
     "year": 2019,
     "test": "ENEM",
     "area": "math",
@@ -321,6 +333,7 @@
       "operações básicas"
     ],
     "difficulty": 5,
+    "contextIds": [],
     "year": 2019,
     "test": "ENEM",
     "area": "math",
@@ -348,6 +361,7 @@
       "proporção"
     ],
     "difficulty": 4,
+    "contextIds": [],
     "year": 2019,
     "test": "ENEM",
     "area": "math",
@@ -374,6 +388,7 @@
       "sequências e progressões"
     ],
     "difficulty": 4,
+    "contextIds": [],
     "year": 2019,
     "test": "ENEM",
     "area": "math",
@@ -401,6 +416,7 @@
       "proporção"
     ],
     "difficulty": 6,
+    "contextIds": [],
     "year": 2019,
     "test": "ENEM",
     "area": "math",
@@ -430,6 +446,7 @@
       "frações"
     ],
     "difficulty": 6,
+    "contextIds": [],
     "year": 2019,
     "test": "ENEM",
     "area": "math",
@@ -458,6 +475,7 @@
       "regra de três"
     ],
     "difficulty": 5,
+    "contextIds": [],
     "year": 2019,
     "test": "ENEM",
     "area": "math",
@@ -485,6 +503,7 @@
       "proporção"
     ],
     "difficulty": 3,
+    "contextIds": [],
     "year": 2019,
     "test": "ENEM",
     "area": "math",
@@ -513,6 +532,7 @@
       "regra de três"
     ],
     "difficulty": 6,
+    "contextIds": [],
     "year": 2019,
     "test": "ENEM",
     "area": "math",
@@ -539,6 +559,7 @@
       "análise combinatória"
     ],
     "difficulty": 4,
+    "contextIds": [],
     "year": 2019,
     "test": "ENEM",
     "area": "math",
@@ -564,6 +585,7 @@
       "análise combinatória"
     ],
     "difficulty": 7,
+    "contextIds": [],
     "year": 2019,
     "test": "ENEM",
     "area": "math",
@@ -591,6 +613,7 @@
       "frações"
     ],
     "difficulty": 7,
+    "contextIds": [],
     "year": 2019,
     "test": "ENEM",
     "area": "math",
@@ -619,6 +642,7 @@
       "regra de três"
     ],
     "difficulty": 6,
+    "contextIds": [],
     "year": 2019,
     "test": "ENEM",
     "area": "math",
@@ -645,6 +669,7 @@
       "aritmética e números"
     ],
     "difficulty": 6,
+    "contextIds": [],
     "year": 2019,
     "test": "ENEM",
     "area": "math",
@@ -672,6 +697,7 @@
       "proporção"
     ],
     "difficulty": 4,
+    "contextIds": [],
     "year": 2019,
     "test": "ENEM",
     "area": "math",
@@ -698,6 +724,7 @@
       "estatística"
     ],
     "difficulty": 3,
+    "contextIds": [],
     "year": 2019,
     "test": "ENEM",
     "area": "math",
@@ -724,6 +751,7 @@
       "matemática financeira"
     ],
     "difficulty": 3,
+    "contextIds": [],
     "year": 2019,
     "test": "ENEM",
     "area": "math",
@@ -751,6 +779,7 @@
       "frações"
     ],
     "difficulty": 6,
+    "contextIds": [],
     "year": 2019,
     "test": "ENEM",
     "area": "math",
@@ -777,6 +806,7 @@
       "matemática financeira"
     ],
     "difficulty": 5,
+    "contextIds": [],
     "year": 2019,
     "test": "ENEM",
     "area": "math",
@@ -804,6 +834,7 @@
       "proporção"
     ],
     "difficulty": 4,
+    "contextIds": [],
     "year": 2019,
     "test": "ENEM",
     "area": "math",
@@ -831,6 +862,7 @@
       "proporção"
     ],
     "difficulty": 6,
+    "contextIds": [],
     "year": 2019,
     "test": "ENEM",
     "area": "math",
@@ -857,6 +889,7 @@
       "análise combinatória"
     ],
     "difficulty": 6,
+    "contextIds": [],
     "year": 2019,
     "test": "ENEM",
     "area": "math",
@@ -883,6 +916,7 @@
       "álgebra"
     ],
     "difficulty": 3,
+    "contextIds": [],
     "year": 2019,
     "test": "ENEM",
     "area": "math",
@@ -913,12 +947,14 @@
     "test": "ENEM",
     "area": "math",
     "answer": "a",
-    "contextId": "enem_2019_math_q169_ctx1",
     "disciplinas": [
       "matematica"
     ],
     "explanation": "Sem explicação ainda.",
-    "review": true
+    "review": true,
+    "contextIds": [
+      "enem_2019_math_q169_ctx1"
+    ]
   },
   {
     "number": 170,
@@ -936,6 +972,7 @@
       "matemática financeira"
     ],
     "difficulty": 4,
+    "contextIds": [],
     "year": 2019,
     "test": "ENEM",
     "area": "math",
@@ -962,6 +999,7 @@
       "aritmética e números"
     ],
     "difficulty": 6,
+    "contextIds": [],
     "year": 2019,
     "test": "ENEM",
     "area": "math",
@@ -989,6 +1027,7 @@
       "operações básicas"
     ],
     "difficulty": 6,
+    "contextIds": [],
     "year": 2019,
     "test": "ENEM",
     "area": "math",
@@ -1016,6 +1055,7 @@
       "proporção"
     ],
     "difficulty": 6,
+    "contextIds": [],
     "year": 2019,
     "test": "ENEM",
     "area": "math",
@@ -1046,6 +1086,7 @@
       "operações básicas"
     ],
     "difficulty": 4,
+    "contextIds": [],
     "year": 2019,
     "test": "ENEM",
     "area": "math",
@@ -1072,6 +1113,7 @@
       "álgebra"
     ],
     "difficulty": 7,
+    "contextIds": [],
     "year": 2019,
     "test": "ENEM",
     "area": "math",
@@ -1099,6 +1141,7 @@
       "proporção"
     ],
     "difficulty": 6,
+    "contextIds": [],
     "year": 2019,
     "test": "ENEM",
     "area": "math",
@@ -1126,6 +1169,7 @@
       "regra de três"
     ],
     "difficulty": 7,
+    "contextIds": [],
     "year": 2019,
     "test": "ENEM",
     "area": "math",
@@ -1155,6 +1199,7 @@
       "operações básicas"
     ],
     "difficulty": 5,
+    "contextIds": [],
     "year": 2019,
     "test": "ENEM",
     "area": "math",
@@ -1181,6 +1226,7 @@
       "aritmética e números"
     ],
     "difficulty": 6,
+    "contextIds": [],
     "year": 2019,
     "test": "ENEM",
     "area": "math",
@@ -1208,6 +1254,7 @@
       "proporção"
     ],
     "difficulty": 3,
+    "contextIds": [],
     "year": 2019,
     "test": "ENEM",
     "area": "math",
