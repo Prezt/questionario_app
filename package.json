@@ -13,6 +13,7 @@
     "preview": "vite preview",
     "test": "vitest run",
     "test:watch": "vitest",
+    "test:all": "vitest run && npm run audit",
     "audit": "node scripts/extract-gabarito.js && node scripts/audit-questions.js && cp scripts/audit-report.json public/audit-report.json",
     "audit:gabarito": "node scripts/extract-gabarito.js",
     "migrate:questions": "node --env-file=.env scripts/migrate-questions-to-db.js",
