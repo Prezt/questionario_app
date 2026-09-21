@@ -6,3 +6,39 @@
 /ENEMs
 /Pages
 /public/Pages
+# --- Acervo de resoluções de fontes externas ---
+# As JPGs (~930 MB) e as transcrições cruas ficam de fora: são reproduzíveis
+# pelos crawlers em scripts/fetchers/. Exceção para data/transcricoes/combinado/,
+# que é produto derivado e pequeno (~3,5 MB) — o merge das duas bases com o
+# pareamento por conteúdo e as resoluções fundidas.
+#
+# Git não entra em diretório excluído, então o caminho precisa ser aberto
+# nível a nível antes do `!` final funcionar.
+/data/*
+!/data/transcricoes/
+/data/transcricoes/*
+!/data/transcricoes/combinado/
+
+# Ferramentas de obtenção de dados externos: crawlers, scrapers,
+# transcritores e o que monitora essas rodadas. Ficam fora do repositório.
+/scripts/fetchers
+
+# Documentação dessas mesmas ferramentas.
+/docs/CRAWLERS.md
+/docs/HANDOFF-TRANSCRICAO-MANUAL.md
+/docs/SESSION-CRAWLERS-2026-09-17.md
+
+# --- Artefatos de build e temporários ---
+# A Vercel roda `npm run build` e gera o dist por conta própria (vercel.json:
+# buildCommand + outputDirectory), então versionar o dist não serve ao deploy.
+/dist
+
+# Saída de teste e cobertura
+/coverage
+.vitest
+
+# Sistema operacional / editor
+.DS_Store
+Thumbs.db
+*.swp
+.idea/
