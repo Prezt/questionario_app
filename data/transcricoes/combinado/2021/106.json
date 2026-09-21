@@ -1,0 +1,33 @@
+{
+  "year": 2021,
+  "number": 106,
+  "cor": "Azul",
+  "day": 2,
+  "comando": "Na fototerapia, a luz provoca a conversão da bilirrubina no seu isômero",
+  "alternativas": {
+    "A": "ótico.",
+    "B": "funcional.",
+    "C": "de cadeia.",
+    "D": "de posição.",
+    "E": "geométrico."
+  },
+  "gabarito": "C",
+  "resolucao": "As duas moléculas têm a mesma fórmula molecular e fórmulas estruturais diferentes — logo, é um caso de isomeria. A questão pede qual tipo.\n\nComparando as estruturas antes e depois da irradiação, a lumirrubina tem um ciclo a mais que a bilirrubina: o fonte B conta 5 contra 4 no total, e a fonte A, olhando só as regiões circuladas no esquema, conta 3 contra 2 — contagens diferentes, mesma conclusão. A contrapartida desse anel extra é uma insaturação a menos (a fonte A registra 4 na lumirrubina contra 5 na bilirrubina). Ou seja, a fototerapia fecha um ciclo às custas de uma dupla-ligação: o esqueleto carbônico se reorganiza. Isso é isomeria de cadeia, alternativa C.\n\nVale entender por que a alternativa B (funcional) é tentadora. Olhando as funções nitrogenadas, os dois compostos não são idênticos: a lumirrubina apresenta ácido carboxílico, amida, amina e imina, enquanto a bilirrubina tem ácido carboxílico, amida e amina. Funções orgânicas diferentes caracterizariam isomeria funcional — e, por definição, isômeros de cadeia precisariam ter as mesmas funções, o que estritamente não ocorre aqui. É por isso que o fonte B defende B como a resposta quimicamente mais rigorosa.\n\nO que desempata é o recorte do Ensino Médio: a imina é uma função definida pela IUPAC, mas não está entre as trabalhadas nesse nível e praticamente não aparece em vestibular. Desconsiderada a imina, sobra como diferença justamente a cadeia carbônica. fonte A e fonte B chegam a essa mesma leitura por caminhos distintos, e é a que a banca adotou.\n\nGabarito oficial: C.\n\n(Resolução produzida por IA a partir das resoluções de duas fontes externas.)",
+  "fontes": {
+    "fonte_a": {
+      "arquivo": "fonte_a/2021/Azul/106.json",
+      "cor": "Azul",
+      "gabarito": "C"
+    },
+    "fonte_b": {
+      "arquivo": "fonte_b/2021/Azul/106.json",
+      "cor": "Azul",
+      "gabarito": "C",
+      "gabarito_original": "B / C*"
+    }
+  },
+  "pareamento": "direto (mesma cor Azul nos dois cursinhos)",
+  "divergencia": "O fonte B defende B (isomeria funcional) como quimicamente mais rigoroso e registra C como gabarito oficial; a fonte A vai direto em C. A resolução combinada mantém as duas leituras.",
+  "gerado_em": "2026-09-20T15:12:29.473396Z",
+  "gerado_por": "claude-opus-5"
+}
