@@ -111,6 +111,7 @@ import {
 } from './parseQuestionFigures.js'
 import { calcTriScores } from './triScoring.js'
 import { richHtml, richHtmlBr } from './richHtml.js'
+import { parseQuestionPath } from './questionPath.js'
 import { subscribeToKatexReady } from './renderMath.js'
 import {
   DISCIPLINAS_BY_AREA,
@@ -124,6 +125,7 @@ const QuestionEditor = lazy(() => import('./QuestionEditor.jsx'))
 const ExplanationsEditor = lazy(() => import('./ExplanationsEditor.jsx'))
 const EnemPicker = lazy(() => import('./EnemPicker.jsx'))
 const PdfExporter = lazy(() => import('./pdf/PdfExporter.jsx'))
+const QuestionRoute = lazy(() => import('./QuestionRoute.jsx'))
 
 const ATTEMPTS_SESSION_KEY = 'trilha-integrar-tentativas'
 const PAUSED_SESSION_KEY   = 'trilha-integrar-sessao'
@@ -434,8 +436,8 @@ function formatTime(seconds) {
   return `${m}:${String(s).padStart(2, '0')}`
 }
 
-const APP_VERSION = '3.1.2'
-const APP_VERSION_DATE = '21/09/2026'
+const APP_VERSION = '3.2.0'
+const APP_VERSION_DATE = '28/09/2026'
 
 const REVIEW_STATUS = [
   { year: 2025, linguagens: true, humanas: true, natureza: true, matematica: true },
@@ -449,6 +451,18 @@ const REVIEW_STATUS = [
 ]
 
 const CHANGELOG = [
+  {
+    version: '3.2.0',
+    date: '28/09/2026',
+    items: [
+      'Cada questão tem link próprio',
+      'Tabelas saem na lista impressa',
+      'Alternativas em imagem aparecem no PDF',
+      'Figura vai no lugar do marcador',
+      'Miniatura da questão ao montar lista',
+      'Botão ver questão na seleção',
+    ],
+  },
   {
     version: '3.1.2',
     date: '21/09/2026',
@@ -1388,6 +1402,7 @@ export default function App() {
     'provas', 'provas-iniciar', 'provas-imprimir',
     'listas', 'listas-imprimir', 'listas-criar',
     'trilhas', 'trilhas-fazer', 'trilhas-criar', 'trilhas-aprovar',
+    'questao',
   ]
   const LEGACY_TAB_MAP = {
     // IDs de fase A ondas 1-4 (barra horizontal, agora removida)
@@ -1456,6 +1471,7 @@ export default function App() {
     // Deep-link via path (e.g. /questoes-sorteio); normalizado contra LEGACY_TAB_MAP.
     if (typeof window !== 'undefined') {
       const p = window.location.pathname.replace(/^\/+|\/+$/g, '')
+      if (parseQuestionPath(p)) return 'questao'
       const normalized = normalizeTab(p)
       if (isValid(normalized)) return normalized
       if (p === 'milhao' || p === 'jogos/milhao') return 'questoes-jogar'
@@ -1465,6 +1481,18 @@ export default function App() {
       return isValid(stored) ? stored : 'inicio'
     } catch { return 'inicio' }
   })
+  // Rota /ano/numero[/idioma] — lida uma vez no mount e mantida enquanto a aba
+  // 'questao' estiver ativa.
+  const [questionRoute, setQuestionRoute] = useState(() =>
+    typeof window === 'undefined' ? null : parseQuestionPath(window.location.pathname))
+
+  const openQuestionRoute = (year, number, lang = null) => {
+    setQuestionRoute({ year, number, lang })
+    setActiveTab('questao')
+    const path = `/${year}/${number}${lang ? `/${lang}` : ''}`
+    try { window.history.pushState({}, '', path) } catch {}
+  }
+
   const switchTab = (rawTab) => {
     const tab = normalizeTab(rawTab)
     // Guest cai em login pra qualquer navegação (v3.0.0 fase A2, Q30).
@@ -1473,6 +1501,13 @@ export default function App() {
       return
     }
     setActiveTab(tab)
+    if (tab !== 'questao') {
+      setQuestionRoute(null)
+      // Sai da URL da questao pra nao reabrir a tela num reload.
+      try {
+        if (parseQuestionPath(window.location.pathname)) window.history.pushState({}, '', '/')
+      } catch {}
+    }
     try { localStorage.setItem('trilha-integrar-active-tab', tab) } catch {}
     setSelectedYear(null)
     setSelectedDay(null)
@@ -3863,6 +3898,20 @@ export default function App() {
                   Sortear e iniciar
                 </button>
               </div>
+            )}
+
+            {activeTab === 'questao' && questionRoute && (
+              <Suspense fallback={<p className="qe-loading">Carregando…</p>}>
+                <QuestionRoute
+                  year={questionRoute.year}
+                  number={questionRoute.number}
+                  lang={questionRoute.lang}
+                  token={token}
+                  foreignLang={foreignLang}
+                  onChangeForeignLang={setForeignLang}
+                  onClose={() => switchTab('inicio')}
+                />
+              </Suspense>
             )}
 
             {activeTab === 'trilhas-fazer' && (

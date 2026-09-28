@@ -8,6 +8,10 @@
  * Filtros aceitos:
  * - area:       'math' | 'nature' | 'humanas' | 'linguagens'
  * - year:       inteiro (ex: 2024)
+ * - number:     inteiro (ex: 10); com `year`, enderecam uma questao — e o que
+ *               sustenta a URL propria /2023/10. O par (year, number) e unico
+ *               em 1451 das 1491 questoes; as 40 restantes sao linguagens 1-5,
+ *               onde ingles e espanhol dividem o numero e `language` desempata.
  * - tag:        string unica; casa via `tags @> ARRAY[tag]` (GIN)
  * - difficulty: 'N' ou 'N-M' (range inclusivo)
  * - language:   'ingles' | 'espanhol'
@@ -26,6 +30,9 @@ export function parseSearchQuery(query) {
 
   if (query.area) push('area = ?', String(query.area))
   if (query.year) push('year = ?', Number.parseInt(query.year, 10))
+  if (query.number !== undefined && query.number !== '' && /^\d+$/.test(String(query.number))) {
+    push('number = ?', Number.parseInt(query.number, 10))
+  }
   if (query.source) push('source = ?', String(query.source))
   if (query.language) push('language = ?', String(query.language))
   if (query.tag) push('tags @> ARRAY[?]::TEXT[]', String(query.tag))
