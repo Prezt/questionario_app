@@ -826,6 +826,7 @@
     "area": "linguagens",
     "answer": "e",
     "difficulty": 3,
+    "contextIds": [],
     "disciplinas": [
       "interpretacao"
     ],
@@ -1389,6 +1390,7 @@
     "area": "linguagens",
     "answer": "a",
     "difficulty": 3,
+    "contextIds": [],
     "disciplinas": [
       "interpretacao"
     ],

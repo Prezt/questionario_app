@@ -47,6 +47,7 @@
     "area": "nature",
     "answer": "b",
     "difficulty": 2,
+    "contextIds": [],
     "disciplinas": [
       "biologia",
       "quimica"
@@ -72,6 +73,7 @@
     "area": "nature",
     "answer": "e",
     "difficulty": 2,
+    "contextIds": [],
     "disciplinas": [
       "fisica"
     ],
@@ -96,6 +98,7 @@
     "area": "nature",
     "answer": "a",
     "difficulty": 3,
+    "contextIds": [],
     "disciplinas": [
       "quimica"
     ],
@@ -121,6 +124,7 @@
     "area": "nature",
     "answer": "b",
     "difficulty": 4,
+    "contextIds": [],
     "disciplinas": [
       "biologia"
     ],
@@ -146,6 +150,7 @@
     "area": "nature",
     "answer": "d",
     "difficulty": 5,
+    "contextIds": [],
     "disciplinas": [
       "biologia",
       "quimica"
@@ -172,6 +177,7 @@
     "area": "nature",
     "answer": "a",
     "difficulty": 4,
+    "contextIds": [],
     "disciplinas": [
       "biologia",
       "quimica"
@@ -224,6 +230,7 @@
     "area": "nature",
     "answer": "d",
     "difficulty": 3,
+    "contextIds": [],
     "disciplinas": [
       "biologia"
     ],
@@ -248,6 +255,7 @@
     "area": "nature",
     "answer": "c",
     "difficulty": 3,
+    "contextIds": [],
     "disciplinas": [
       "fisica"
     ],
@@ -299,6 +307,7 @@
     "area": "nature",
     "answer": "c",
     "difficulty": 5,
+    "contextIds": [],
     "disciplinas": [
       "quimica"
     ],
@@ -324,6 +333,7 @@
     "area": "nature",
     "answer": "d",
     "difficulty": 3,
+    "contextIds": [],
     "disciplinas": [
       "biologia"
     ],
@@ -375,6 +385,7 @@
     "area": "nature",
     "answer": "e",
     "difficulty": 4,
+    "contextIds": [],
     "disciplinas": [
       "biologia"
     ],
@@ -427,6 +438,7 @@
     "area": "nature",
     "answer": "d",
     "difficulty": 6,
+    "contextIds": [],
     "disciplinas": [
       "biologia"
     ],
@@ -451,6 +463,7 @@
     "area": "nature",
     "answer": "d",
     "difficulty": 4,
+    "contextIds": [],
     "disciplinas": [
       "quimica"
     ],
@@ -477,6 +490,7 @@
     "area": "nature",
     "answer": "d",
     "difficulty": 5,
+    "contextIds": [],
     "disciplinas": [
       "fisica"
     ],
@@ -508,6 +522,7 @@
     "area": "nature",
     "answer": "b",
     "difficulty": 7,
+    "contextIds": [],
     "disciplinas": [
       "biologia",
       "quimica"
@@ -535,6 +550,7 @@
     "area": "nature",
     "answer": "c",
     "difficulty": 5,
+    "contextIds": [],
     "disciplinas": [
       "fisica"
     ],
@@ -559,6 +575,7 @@
     "area": "nature",
     "answer": "a",
     "difficulty": 6,
+    "contextIds": [],
     "disciplinas": [
       "fisica"
     ],
@@ -583,6 +600,7 @@
     "area": "nature",
     "answer": "a",
     "difficulty": 5,
+    "contextIds": [],
     "disciplinas": [
       "fisica"
     ],
@@ -609,6 +627,7 @@
     "area": "nature",
     "answer": "a",
     "difficulty": 8,
+    "contextIds": [],
     "disciplinas": [
       "fisica"
     ],
@@ -635,6 +654,7 @@
     "area": "nature",
     "answer": "b",
     "difficulty": 3,
+    "contextIds": [],
     "disciplinas": [
       "biologia"
     ],
@@ -662,6 +682,7 @@
     "area": "nature",
     "answer": "b",
     "difficulty": 4,
+    "contextIds": [],
     "disciplinas": [
       "biologia"
     ],
@@ -717,6 +738,7 @@
     "area": "nature",
     "answer": "c",
     "difficulty": 5,
+    "contextIds": [],
     "disciplinas": [
       "quimica"
     ],
@@ -770,6 +792,7 @@
     "area": "nature",
     "answer": "c",
     "difficulty": 6,
+    "contextIds": [],
     "disciplinas": [
       "fisica"
     ],
@@ -797,6 +820,7 @@
     "area": "nature",
     "answer": "a",
     "difficulty": 7,
+    "contextIds": [],
     "disciplinas": [
       "biologia",
       "quimica"
@@ -823,6 +847,7 @@
     "area": "nature",
     "answer": "d",
     "difficulty": 6,
+    "contextIds": [],
     "disciplinas": [
       "fisica",
       "quimica"
@@ -852,6 +877,7 @@
     "area": "nature",
     "answer": "e",
     "difficulty": 5,
+    "contextIds": [],
     "disciplinas": [
       "biologia",
       "quimica"
@@ -877,6 +903,7 @@
     "area": "nature",
     "answer": "b",
     "difficulty": 7,
+    "contextIds": [],
     "disciplinas": [
       "biologia"
     ],
@@ -929,6 +956,7 @@
     "area": "nature",
     "answer": "c",
     "difficulty": 6,
+    "contextIds": [],
     "disciplinas": [
       "biologia",
       "quimica"
@@ -981,6 +1009,7 @@
     "area": "nature",
     "answer": "c",
     "difficulty": 5,
+    "contextIds": [],
     "disciplinas": [
       "fisica"
     ],
@@ -1009,6 +1038,7 @@
     "area": "nature",
     "answer": "e",
     "difficulty": 7,
+    "contextIds": [],
     "disciplinas": [
       "biologia",
       "quimica"
@@ -1096,6 +1126,7 @@
     "area": "nature",
     "answer": "e",
     "difficulty": 5,
+    "contextIds": [],
     "disciplinas": [
       "fisica"
     ],
@@ -1123,6 +1154,7 @@
     "area": "nature",
     "answer": "e",
     "difficulty": 4,
+    "contextIds": [],
     "disciplinas": [
       "biologia",
       "quimica"
@@ -1177,6 +1209,7 @@
     "area": "nature",
     "answer": "d",
     "difficulty": 7,
+    "contextIds": [],
     "disciplinas": [
       "fisica"
     ],

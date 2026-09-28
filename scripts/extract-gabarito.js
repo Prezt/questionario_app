@@ -26,11 +26,17 @@ const OUT_PATH = path.join(ROOT, 'public', 'gabarito-oficial.json');
 // On a single layout line, find every "<num> <letter|Anulado>" pair.
 // Day 1 q1-5 lines carry two letters (English + Spanish); everything else
 // carries one. Captures preserve that distinction.
-const PAIR_RX = /(\d{1,3})\s+(Anulado|[A-E*])(?:\s+(Anulado|[A-E*]))?/g;
+//
+// INEP writes the annulment footnote as "* Questão 157 Anulada" — feminine,
+// agreeing with "Questão". Matching only "Anulado" made the bare [A-E] branch
+// swallow the leading "A" of "Anulada", turning every annulled question into
+// answer "a". Hence Anulad[ao], plus a guard so a single letter is only taken
+// when it is not the first letter of a longer word.
+const PAIR_RX = /(\d{1,3})\s+(Anulad[ao]|[A-E*](?![A-Za-z]))(?:\s+(Anulad[ao]|[A-E*](?![A-Za-z])))?/g;
 
 function normLetter(raw) {
   if (!raw) return null;
-  if (raw === 'Anulado' || raw === '*') return 'annulled';
+  if (raw === 'Anulado' || raw === 'Anulada' || raw === '*') return 'annulled';
   return raw.toLowerCase();
 }
 

@@ -24,6 +24,22 @@ describe('parseSearchQuery', () => {
     expect(params).toEqual(['math', 2024, 'enem', 'ingles', 'álgebra'])
   })
 
+  it('accepts number, sozinho e combinado com year', () => {
+    expect(parseSearchQuery({ number: '10' })).toMatchObject({
+      where: ['number = $1'],
+      params: [10],
+    })
+    const combined = parseSearchQuery({ year: '2023', number: '10' })
+    expect(combined.where).toEqual(['year = $1', 'number = $2'])
+    expect(combined.params).toEqual([2023, 10])
+  })
+
+  it('ignora number nao numerico', () => {
+    expect(parseSearchQuery({ number: 'abc' }).where).toEqual([])
+    expect(parseSearchQuery({ number: '' }).where).toEqual([])
+    expect(parseSearchQuery({ number: '1; DROP TABLE users' }).where).toEqual([])
+  })
+
   it('parses difficulty as a single value', () => {
     const { where, params } = parseSearchQuery({ difficulty: '5' })
     expect(where).toEqual(['difficulty = $1'])

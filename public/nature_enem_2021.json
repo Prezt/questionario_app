@@ -15,6 +15,7 @@
       "estequiometria"
     ],
     "difficulty": 6,
+    "contextIds": [],
     "year": 2021,
     "test": "ENEM",
     "area": "nature",
@@ -41,6 +42,7 @@
       "ondulatória e acústica"
     ],
     "difficulty": 5,
+    "contextIds": [],
     "year": 2021,
     "test": "ENEM",
     "area": "nature",
@@ -69,6 +71,7 @@
       "comportamento animal"
     ],
     "difficulty": 6,
+    "contextIds": [],
     "year": 2021,
     "test": "ENEM",
     "area": "nature",
@@ -95,6 +98,7 @@
       "mecânica newtoniana"
     ],
     "difficulty": 7,
+    "contextIds": [],
     "year": 2021,
     "test": "ENEM",
     "area": "nature",
@@ -119,6 +123,7 @@
       "química geral e inorgânica"
     ],
     "difficulty": 6,
+    "contextIds": [],
     "year": 2021,
     "test": "ENEM",
     "area": "nature",
@@ -144,6 +149,7 @@
       "biologia molecular"
     ],
     "difficulty": 5,
+    "contextIds": [],
     "year": 2021,
     "test": "ENEM",
     "area": "nature",
@@ -168,6 +174,7 @@
       "química orgânica"
     ],
     "difficulty": 5,
+    "contextIds": [],
     "year": 2021,
     "test": "ENEM",
     "area": "nature",
@@ -193,6 +200,7 @@
       "zoologia"
     ],
     "difficulty": 6,
+    "contextIds": [],
     "year": 2021,
     "test": "ENEM",
     "area": "nature",
@@ -219,6 +227,7 @@
       "termologia"
     ],
     "difficulty": 6,
+    "contextIds": [],
     "year": 2021,
     "test": "ENEM",
     "area": "nature",
@@ -243,6 +252,7 @@
       "mecânica newtoniana"
     ],
     "difficulty": 6,
+    "contextIds": [],
     "year": 2021,
     "test": "ENEM",
     "area": "nature",
@@ -270,6 +280,7 @@
       "química geral e inorgânica"
     ],
     "difficulty": 6,
+    "contextIds": [],
     "year": 2021,
     "test": "ENEM",
     "area": "nature",
@@ -297,6 +308,7 @@
       "química geral e inorgânica"
     ],
     "difficulty": 6,
+    "contextIds": [],
     "year": 2021,
     "test": "ENEM",
     "area": "nature",
@@ -324,6 +336,7 @@
       "análise qualitativa"
     ],
     "difficulty": 6,
+    "contextIds": [],
     "year": 2021,
     "test": "ENEM",
     "area": "nature",
@@ -353,11 +366,13 @@
     "test": "ENEM",
     "area": "nature",
     "answer": "b",
-    "contextId": "q104_2021_ctx1",
     "disciplinas": [
       "biologia"
     ],
-    "explanation": "Sem explicação ainda."
+    "explanation": "Sem explicação ainda.",
+    "contextIds": [
+      "q104_2021_ctx1"
+    ]
   },
   {
     "number": 105,
@@ -382,6 +397,7 @@
       "mecânica newtoniana"
     ],
     "difficulty": 8,
+    "contextIds": [],
     "year": 2021,
     "test": "ENEM",
     "area": "nature",
@@ -436,6 +452,7 @@
       "mecânica newtoniana"
     ],
     "difficulty": 6,
+    "contextIds": [],
     "year": 2021,
     "test": "ENEM",
     "area": "nature",
@@ -517,6 +534,7 @@
       "ecologia"
     ],
     "difficulty": 6,
+    "contextIds": [],
     "year": 2021,
     "test": "ENEM",
     "area": "nature",
@@ -542,6 +560,7 @@
       "meio ambiente e sustentabilidade"
     ],
     "difficulty": 5,
+    "contextIds": [],
     "year": 2021,
     "test": "ENEM",
     "area": "nature",
@@ -596,6 +615,7 @@
       "química geral e inorgânica"
     ],
     "difficulty": 5,
+    "contextIds": [],
     "year": 2021,
     "test": "ENEM",
     "area": "nature",
@@ -621,6 +641,7 @@
       "sistema nervoso"
     ],
     "difficulty": 3,
+    "contextIds": [],
     "year": 2021,
     "test": "ENEM",
     "area": "nature",
@@ -646,6 +667,7 @@
       "análise e interpretação de dados"
     ],
     "difficulty": 7,
+    "contextIds": [],
     "year": 2021,
     "test": "ENEM",
     "area": "nature",
@@ -673,6 +695,7 @@
       "chemistry estrutura molecular"
     ],
     "difficulty": 5,
+    "contextIds": [],
     "year": 2021,
     "test": "ENEM",
     "area": "nature",
@@ -702,12 +725,14 @@
     "test": "ENEM",
     "area": "nature",
     "answer": "b",
-    "contextId": "q117_2021_ctx1",
     "disciplinas": [
       "biologia",
       "quimica"
     ],
-    "explanation": "Sem explicação ainda."
+    "explanation": "Sem explicação ainda.",
+    "contextIds": [
+      "q117_2021_ctx1"
+    ]
   },
   {
     "number": 118,
@@ -753,6 +778,7 @@
       "citologia"
     ],
     "difficulty": 5,
+    "contextIds": [],
     "year": 2021,
     "test": "ENEM",
     "area": "nature",
@@ -812,11 +838,13 @@
     "test": "ENEM",
     "area": "nature",
     "answer": "e",
-    "contextId": "q121_2021_ctx1",
     "disciplinas": [
       "biologia"
     ],
-    "explanation": "Sem explicação ainda."
+    "explanation": "Sem explicação ainda.",
+    "contextIds": [
+      "q121_2021_ctx1"
+    ]
   },
   {
     "number": 122,
@@ -862,6 +890,7 @@
       "fisiologia humana"
     ],
     "difficulty": 5,
+    "contextIds": [],
     "year": 2021,
     "test": "ENEM",
     "area": "nature",
@@ -917,11 +946,11 @@
       "Eletroquímica"
     ],
     "difficulty": 6,
+    "contextIds": [],
     "year": 2021,
     "test": "ENEM",
     "area": "nature",
     "answer": "b",
-    "contextIds": [],
     "disciplinas": [
       "quimica"
     ],
@@ -950,6 +979,7 @@
       "análise de circuitos"
     ],
     "difficulty": 6,
+    "contextIds": [],
     "year": 2021,
     "test": "ENEM",
     "area": "nature",
@@ -1003,6 +1033,7 @@
       "eletricidade e magnetismo"
     ],
     "difficulty": 5,
+    "contextIds": [],
     "year": 2021,
     "test": "ENEM",
     "area": "nature",
@@ -1029,6 +1060,7 @@
       "reprodução vegetal"
     ],
     "difficulty": 5,
+    "contextIds": [],
     "year": 2021,
     "test": "ENEM",
     "area": "nature",
@@ -1054,6 +1086,7 @@
       "química geral e inorgânica"
     ],
     "difficulty": 6,
+    "contextIds": [],
     "year": 2021,
     "test": "ENEM",
     "area": "nature",
@@ -1081,6 +1114,7 @@
       "física moderna"
     ],
     "difficulty": 6,
+    "contextIds": [],
     "year": 2021,
     "test": "ENEM",
     "area": "nature",
@@ -1134,6 +1168,7 @@
       "química geral e inorgânica"
     ],
     "difficulty": 6,
+    "contextIds": [],
     "year": 2021,
     "test": "ENEM",
     "area": "nature",
@@ -1199,11 +1234,13 @@
     "test": "ENEM",
     "area": "nature",
     "answer": "d",
-    "contextId": "enem_2021_nature_q135_ctx1",
     "disciplinas": [
       "biologia",
       "quimica"
     ],
-    "explanation": "Sem explicação ainda."
+    "explanation": "Sem explicação ainda.",
+    "contextIds": [
+      "enem_2021_nature_q135_ctx1"
+    ]
   }
 ]

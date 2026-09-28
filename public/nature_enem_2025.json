@@ -20,6 +20,7 @@
     "area": "nature",
     "answer": "d",
     "difficulty": 2,
+    "contextIds": [],
     "disciplinas": [
       "quimica"
     ],
@@ -74,6 +75,7 @@
     "area": "nature",
     "answer": "c",
     "difficulty": 4,
+    "contextIds": [],
     "disciplinas": [
       "biologia"
     ],
@@ -100,6 +102,7 @@
     "area": "nature",
     "answer": "d",
     "difficulty": 5,
+    "contextIds": [],
     "disciplinas": [
       "fisica"
     ],
@@ -109,11 +112,11 @@
     "number": 95,
     "text": "Nesse contexto, o processo de transferência de calor para as mariposas que independe da presença de fluidos é a",
     "alternatives": {
-      "a": "diferença de umidade entre os ambientes.",
-      "b": "ausência de alimentação natural.",
-      "c": "adaptação ao novo ambiente.",
-      "d": "mudança de comportamento.",
-      "e": "variabilidade genética."
+      "a": "reflexão.",
+      "b": "refração.",
+      "c": "irradiação.",
+      "d": "dispersão.",
+      "e": "convecção."
     },
     "images": [],
     "tags": [
@@ -123,7 +126,7 @@
     "year": 2025,
     "test": "ENEM",
     "area": "nature",
-    "answer": "b",
+    "answer": "c",
     "difficulty": 2,
     "contextIds": [
       "enem_2025_nature_q95_ctx3",
@@ -184,6 +187,7 @@
     "area": "nature",
     "answer": "d",
     "difficulty": 3,
+    "contextIds": [],
     "disciplinas": [
       "biologia"
     ],
@@ -265,6 +269,7 @@
     "area": "nature",
     "answer": "d",
     "difficulty": 1,
+    "contextIds": [],
     "disciplinas": [
       "quimica"
     ],
@@ -319,6 +324,7 @@
     "area": "nature",
     "answer": "e",
     "difficulty": 3,
+    "contextIds": [],
     "disciplinas": [
       "biologia"
     ],
@@ -464,6 +470,7 @@
     "area": "nature",
     "answer": "e",
     "difficulty": 6,
+    "contextIds": [],
     "disciplinas": [
       "biologia"
     ],
@@ -494,6 +501,7 @@
     "area": "nature",
     "answer": "c",
     "difficulty": 6,
+    "contextIds": [],
     "disciplinas": [
       "fisica"
     ],
@@ -547,6 +555,7 @@
     "area": "nature",
     "answer": "e",
     "difficulty": 3,
+    "contextIds": [],
     "disciplinas": [
       "fisica",
       "quimica"
@@ -575,6 +584,7 @@
     "area": "nature",
     "answer": "b",
     "difficulty": 4,
+    "contextIds": [],
     "disciplinas": [
       "biologia"
     ],
@@ -630,6 +640,7 @@
     "area": "nature",
     "answer": "b",
     "difficulty": 6,
+    "contextIds": [],
     "disciplinas": [
       "fisica"
     ],
@@ -656,6 +667,7 @@
     "area": "nature",
     "answer": "b",
     "difficulty": 3,
+    "contextIds": [],
     "disciplinas": [
       "fisica"
     ],
@@ -737,6 +749,7 @@
     "area": "nature",
     "answer": "d",
     "difficulty": 5,
+    "contextIds": [],
     "disciplinas": [
       "quimica"
     ],
@@ -761,6 +774,7 @@
     "area": "nature",
     "answer": "c",
     "difficulty": 3,
+    "contextIds": [],
     "disciplinas": [
       "fisica"
     ],
@@ -792,6 +806,7 @@
     "area": "nature",
     "answer": "b",
     "difficulty": 8,
+    "contextIds": [],
     "disciplinas": [
       "fisica"
     ],
@@ -818,6 +833,7 @@
     "area": "nature",
     "answer": "b",
     "difficulty": 5,
+    "contextIds": [],
     "disciplinas": [
       "fisica"
     ],
@@ -842,6 +858,7 @@
     "area": "nature",
     "answer": "b",
     "difficulty": 4,
+    "contextIds": [],
     "disciplinas": [
       "quimica"
     ],
@@ -868,6 +885,7 @@
     "area": "nature",
     "answer": "d",
     "difficulty": 5,
+    "contextIds": [],
     "disciplinas": [
       "fisica"
     ],
@@ -950,6 +968,7 @@
     "area": "nature",
     "answer": "b",
     "difficulty": 5,
+    "contextIds": [],
     "disciplinas": [
       "fisica",
       "quimica"
@@ -977,6 +996,7 @@
     "area": "nature",
     "answer": "d",
     "difficulty": 7,
+    "contextIds": [],
     "disciplinas": [
       "fisica"
     ],
@@ -1009,6 +1029,7 @@
     "area": "nature",
     "answer": "c",
     "difficulty": 7,
+    "contextIds": [],
     "disciplinas": [
       "biologia",
       "quimica"
@@ -1037,6 +1058,7 @@
     "area": "nature",
     "answer": "e",
     "difficulty": 7,
+    "contextIds": [],
     "disciplinas": [
       "fisica"
     ],
@@ -1061,6 +1083,7 @@
     "area": "nature",
     "answer": "a",
     "difficulty": 4,
+    "contextIds": [],
     "disciplinas": [
       "biologia"
     ],
@@ -1091,6 +1114,7 @@
     "area": "nature",
     "answer": "e",
     "difficulty": 5,
+    "contextIds": [],
     "disciplinas": [
       "fisica"
     ],
@@ -1143,6 +1167,7 @@
     "area": "nature",
     "answer": "annulled",
     "difficulty": 5,
+    "contextIds": [],
     "disciplinas": [
       "fisica"
     ],
@@ -1169,6 +1194,7 @@
     "area": "nature",
     "answer": "a",
     "difficulty": 6,
+    "contextIds": [],
     "disciplinas": [
       "quimica"
     ],
@@ -1196,6 +1222,7 @@
     "area": "nature",
     "answer": "b",
     "difficulty": 7,
+    "contextIds": [],
     "disciplinas": [
       "quimica"
     ],
@@ -1228,6 +1255,7 @@
     "area": "nature",
     "answer": "a",
     "difficulty": 7,
+    "contextIds": [],
     "disciplinas": [
       "fisica"
     ],

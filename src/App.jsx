@@ -111,6 +111,7 @@ import {
 } from './parseQuestionFigures.js'
 import { calcTriScores } from './triScoring.js'
 import { richHtml, richHtmlBr } from './richHtml.js'
+import { parseQuestionPath } from './questionPath.js'
 import { subscribeToKatexReady } from './renderMath.js'
 import {
   DISCIPLINAS_BY_AREA,
@@ -124,6 +125,7 @@ const QuestionEditor = lazy(() => import('./QuestionEditor.jsx'))
 const ExplanationsEditor = lazy(() => import('./ExplanationsEditor.jsx'))
 const EnemPicker = lazy(() => import('./EnemPicker.jsx'))
 const PdfExporter = lazy(() => import('./pdf/PdfExporter.jsx'))
+const QuestionRoute = lazy(() => import('./QuestionRoute.jsx'))
 
 const ATTEMPTS_SESSION_KEY = 'trilha-integrar-tentativas'
 const PAUSED_SESSION_KEY   = 'trilha-integrar-sessao'
@@ -434,8 +436,8 @@ function formatTime(seconds) {
   return `${m}:${String(s).padStart(2, '0')}`
 }
 
-const APP_VERSION = '3.1.0'
-const APP_VERSION_DATE = '16/09/2026'
+const APP_VERSION = '3.2.0'
+const APP_VERSION_DATE = '28/09/2026'
 
 const REVIEW_STATUS = [
   { year: 2025, linguagens: true, humanas: true, natureza: true, matematica: true },
@@ -444,11 +446,49 @@ const REVIEW_STATUS = [
   { year: 2022, linguagens: true, humanas: true, natureza: true, matematica: true },
   { year: 2021, linguagens: true, humanas: true, natureza: true, matematica: true },
   { year: 2020, linguagens: true, humanas: true, natureza: true, matematica: true },
-  { year: 2019, linguagens: false, humanas: false, natureza: false, matematica: false },
+  { year: 2019, linguagens: true, humanas: true, natureza: true, matematica: true },
   { year: 2018, linguagens: true, humanas: true, natureza: true, matematica: true },
 ]
 
 const CHANGELOG = [
+  {
+    version: '3.2.0',
+    date: '28/09/2026',
+    items: [
+      'Cada questão tem link próprio',
+      'Tabelas saem na lista impressa',
+      'Alternativas em imagem aparecem no PDF',
+      'Figura vai no lugar do marcador',
+      'Miniatura da questão ao montar lista',
+      'Botão ver questão na seleção',
+    ],
+  },
+  {
+    version: '3.1.2',
+    date: '21/09/2026',
+    items: [
+      'Gabaritos conferidos contra o oficial do INEP',
+      'Espanhol de 2018 a 2020 corrigido',
+      'Três questões com alternativas trocadas corrigidas',
+      'Anuladas de 2020 não viram alternativa A',
+      'Contexto da questão sempre em array',
+      'Testes travam divergência de gabarito',
+    ],
+  },
+  {
+    version: '3.1.1',
+    date: '17/09/2026',
+    items: [
+      'ENEM 2019 revisado nas quatro áreas',
+      'Cold start em rota antiga cai no Início',
+      'Preferências vira accordion no menu do avatar',
+      'Limpar histórico movido pro rodapé do menu',
+      'Ação Aleatória removida (redundante com Sorteio)',
+      'Resolução dividida em Ver e Adicionar',
+      'PdfExporter volta a herdar estilo v3',
+      'Sessão expirada avisa com botão Reconectar',
+    ],
+  },
   {
     version: '3.1.0',
     date: '16/09/2026',
@@ -1231,6 +1271,7 @@ export default function App() {
   const prevContextIdRef = useRef([])
 
   const [token, setToken] = useState(() => localStorage.getItem('token') ?? null)
+  const [sessionExpired, setSessionExpired] = useState(false)
   const [authMode, setAuthMode] = useState('login') // 'login' | 'register'
   const [authError, setAuthError] = useState('')
   const [authLoading, setAuthLoading] = useState(false)
@@ -1357,23 +1398,23 @@ export default function App() {
   // Ver ADR docs/adr/0001-nav-por-categoria.md e glossário CONTEXT.md.
   const VALID_TABS = [
     'inicio', 'preferencias', 'administre',
-    'questoes', 'questoes-aleatoria', 'questoes-sorteio', 'questoes-pesquisar', 'questoes-jogar', 'questoes-imprimir', 'questoes-criar', 'questoes-resolucao',
+    'questoes', 'questoes-sorteio', 'questoes-pesquisar', 'questoes-jogar', 'questoes-imprimir', 'questoes-criar', 'questoes-resolucao-ver', 'questoes-resolucao-adicionar',
     'provas', 'provas-iniciar', 'provas-imprimir',
     'listas', 'listas-imprimir', 'listas-criar',
     'trilhas', 'trilhas-fazer', 'trilhas-criar', 'trilhas-aprovar',
+    'questao',
   ]
   const LEGACY_TAB_MAP = {
     // IDs de fase A ondas 1-4 (barra horizontal, agora removida)
-    jogos: 'questoes-jogar',
-    pesquisar: 'questoes-pesquisar',
-    pesquise: 'questoes-pesquisar',
+    // e IDs originais v2 — cold start em qualquer legado cai no Início.
+    jogos: 'inicio',
+    pesquisar: 'inicio',
+    pesquise: 'inicio',
     responder: 'inicio',
-    imprimir: 'listas-imprimir',
+    imprimir: 'inicio',
     ensine: 'inicio',
-    // IDs originais v2
-    simule: 'provas-iniciar',
-    estude: 'questoes-sorteio',
-    listas: 'listas',
+    simule: 'inicio',
+    estude: 'inicio',
   }
   const normalizeTab = (t) => LEGACY_TAB_MAP[t] || t
   const parseView = (v) => {
@@ -1388,13 +1429,13 @@ export default function App() {
     {
       id: 'questoes', label: 'Questões',
       actions: [
-        { id: 'aleatoria', label: 'Aleatória',  desc: 'Uma questão por vez, sem parar', roles: ['user','prof','admin'] },
         { id: 'sorteio',   label: 'Sorteio',    desc: '5, 10 ou 20 questões aleatórias', roles: ['user','prof','admin'] },
         { id: 'pesquisar', label: 'Pesquisar',  desc: 'Buscar por tema ou palavra',      roles: ['user','prof','admin'] },
         { id: 'jogar',     label: 'Jogar',      desc: 'Streak, Blitz, Milhão, Diário',   roles: ['user','prof','admin'] },
         { id: 'imprimir',  label: 'Imprimir',   desc: 'PDF de questões avulsas',         roles: ['prof','admin'] },
         { id: 'criar',     label: 'Criar',      desc: 'Editor de questão nova',          roles: ['prof','admin'] },
-        { id: 'resolucao', label: 'Resolução',  desc: 'Escrever explicações',            roles: ['prof','admin'] },
+        { id: 'resolucao-ver',       label: 'Ver Resolução',       desc: 'Ler explicações das questões', roles: ['user','prof','admin'] },
+        { id: 'resolucao-adicionar', label: 'Adicionar Resolução', desc: 'Escrever explicações',          roles: ['prof','admin'] },
       ],
     },
     {
@@ -1430,6 +1471,7 @@ export default function App() {
     // Deep-link via path (e.g. /questoes-sorteio); normalizado contra LEGACY_TAB_MAP.
     if (typeof window !== 'undefined') {
       const p = window.location.pathname.replace(/^\/+|\/+$/g, '')
+      if (parseQuestionPath(p)) return 'questao'
       const normalized = normalizeTab(p)
       if (isValid(normalized)) return normalized
       if (p === 'milhao' || p === 'jogos/milhao') return 'questoes-jogar'
@@ -1439,6 +1481,18 @@ export default function App() {
       return isValid(stored) ? stored : 'inicio'
     } catch { return 'inicio' }
   })
+  // Rota /ano/numero[/idioma] — lida uma vez no mount e mantida enquanto a aba
+  // 'questao' estiver ativa.
+  const [questionRoute, setQuestionRoute] = useState(() =>
+    typeof window === 'undefined' ? null : parseQuestionPath(window.location.pathname))
+
+  const openQuestionRoute = (year, number, lang = null) => {
+    setQuestionRoute({ year, number, lang })
+    setActiveTab('questao')
+    const path = `/${year}/${number}${lang ? `/${lang}` : ''}`
+    try { window.history.pushState({}, '', path) } catch {}
+  }
+
   const switchTab = (rawTab) => {
     const tab = normalizeTab(rawTab)
     // Guest cai em login pra qualquer navegação (v3.0.0 fase A2, Q30).
@@ -1447,6 +1501,13 @@ export default function App() {
       return
     }
     setActiveTab(tab)
+    if (tab !== 'questao') {
+      setQuestionRoute(null)
+      // Sai da URL da questao pra nao reabrir a tela num reload.
+      try {
+        if (parseQuestionPath(window.location.pathname)) window.history.pushState({}, '', '/')
+      } catch {}
+    }
     try { localStorage.setItem('trilha-integrar-active-tab', tab) } catch {}
     setSelectedYear(null)
     setSelectedDay(null)
@@ -1791,6 +1852,42 @@ export default function App() {
     }, 1000)
     return () => clearInterval(id)
   }, [phase])
+
+  // Intercept 401 on authenticated requests → show reconnect banner.
+  useEffect(() => {
+    const originalFetch = window.fetch
+    window.fetch = async (input, init) => {
+      const response = await originalFetch(input, init)
+      if (response.status === 401) {
+        const h = init?.headers
+        const hasAuth = h && (
+          (typeof h.get === 'function' && h.get('Authorization')) ||
+          h.Authorization || h.authorization
+        )
+        if (hasAuth) setSessionExpired(true)
+      }
+      return response
+    }
+    return () => { window.fetch = originalFetch }
+  }, [])
+
+  // Banner "Sua sessão expirou" — DOM direto pra não depender de fase.
+  useEffect(() => {
+    if (!sessionExpired) return
+    const banner = document.createElement('div')
+    banner.className = 'session-banner'
+    banner.innerHTML =
+      '<span class="session-banner-msg">Sua sessão expirou.</span>' +
+      '<button type="button" class="session-banner-btn">Reconectar</button>'
+    document.body.appendChild(banner)
+    const btn = banner.querySelector('.session-banner-btn')
+    btn.addEventListener('click', () => {
+      try { localStorage.removeItem('token') } catch {}
+      try { localStorage.removeItem('user') } catch {}
+      window.location.reload()
+    })
+    return () => banner.remove()
+  }, [sessionExpired])
 
   // Restore session on mount
   useEffect(() => {
@@ -3158,6 +3255,80 @@ export default function App() {
       return totalTotal ? Math.round((totalScore / totalTotal) * 100) : null
     }
 
+    const preferencesRowsMarkup = (
+      <div className="preferencias-list">
+        <label className="preferencias-row">
+          <span className="preferencias-row-label">Embaralhar alternativas</span>
+          <span className={`options-toggle-switch${randomizeAlts ? ' on' : ''}`}>
+            <input
+              type="checkbox"
+              checked={randomizeAlts}
+              onChange={(e) => {
+                setRandomizeAlts(e.target.checked)
+                localStorage.setItem('randomize-alts', e.target.checked)
+              }}
+            />
+            <span className="options-toggle-thumb" />
+          </span>
+        </label>
+        <label className="preferencias-row">
+          <span className="preferencias-row-label">Mostrar resposta</span>
+          <span className={`options-toggle-switch${showAnswer ? ' on' : ''}`}>
+            <input
+              type="checkbox"
+              checked={showAnswer}
+              onChange={(e) => {
+                setShowAnswer(e.target.checked)
+                localStorage.setItem('show-answer', e.target.checked)
+                if (!e.target.checked) { setSoundMuted(true); localStorage.setItem('sound-muted', true) }
+              }}
+            />
+            <span className="options-toggle-thumb" />
+          </span>
+        </label>
+        <label className="preferencias-row">
+          <span className="preferencias-row-label">Mostrar dificuldade</span>
+          <span className={`options-toggle-switch${showDifficulty ? ' on' : ''}`}>
+            <input
+              type="checkbox"
+              checked={showDifficulty}
+              onChange={(e) => {
+                setShowDifficulty(e.target.checked)
+                localStorage.setItem('show-difficulty', e.target.checked)
+              }}
+            />
+            <span className="options-toggle-thumb" />
+          </span>
+        </label>
+        <label className="preferencias-row">
+          <span className="preferencias-row-label">
+            {soundMuted ? <SoundOffIcon /> : <SoundOnIcon />} Som
+          </span>
+          <span className={`options-toggle-switch${!soundMuted ? ' on' : ''}`}>
+            <input
+              type="checkbox"
+              checked={!soundMuted}
+              onChange={(e) => {
+                setSoundMuted(!e.target.checked)
+                localStorage.setItem('sound-muted', !e.target.checked)
+                if (e.target.checked && !showAnswer) { setShowAnswer(true); localStorage.setItem('show-answer', true) }
+              }}
+            />
+            <span className="options-toggle-thumb" />
+          </span>
+        </label>
+        <label className="preferencias-row">
+          <span className="preferencias-row-label">
+            {dark ? <MoonIcon /> : <SunIcon />} {dark ? 'Modo escuro' : 'Modo claro'}
+          </span>
+          <span className={`options-toggle-switch options-toggle-switch--theme${dark ? ' on' : ''}`}>
+            <input type="checkbox" checked={dark} onChange={(e) => setDark(e.target.checked)} />
+            <span className="options-toggle-thumb" />
+          </span>
+        </label>
+      </div>
+    )
+
     return (
       <div className="app-shell">
         <div className={`home-screen home-screen--${activeTab}`}>
@@ -3247,6 +3418,27 @@ export default function App() {
                               </div>
                             )
                           })}
+                          {(() => {
+                            const isOpen = openMenuCategory === 'preferencias'
+                            return (
+                              <div className="avatar-menu-cat-group">
+                                <button
+                                  type="button"
+                                  className={`avatar-menu-cat${isOpen ? ' is-open' : ''}${activeTab === 'preferencias' ? ' is-current' : ''}`}
+                                  onClick={() => setOpenMenuCategory(isOpen ? null : 'preferencias')}
+                                  aria-expanded={isOpen}
+                                >
+                                  <span>Preferências</span>
+                                  <span className="avatar-menu-cat-chevron" aria-hidden>›</span>
+                                </button>
+                                {isOpen && (
+                                  <div className="avatar-menu-actions avatar-menu-actions--prefs">
+                                    {preferencesRowsMarkup}
+                                  </div>
+                                )}
+                              </div>
+                            )
+                          })()}
                           <div className="avatar-menu-sep" />
                           <button
                             type="button"
@@ -3254,13 +3446,6 @@ export default function App() {
                             onClick={() => { switchTab('inicio'); setSideMenuOpen(false); setOpenMenuCategory(null) }}
                           >
                             Início
-                          </button>
-                          <button
-                            type="button"
-                            className={`avatar-menu-utility${activeTab === 'preferencias' ? ' is-active' : ''}`}
-                            onClick={() => { switchTab('preferencias'); setSideMenuOpen(false); setOpenMenuCategory(null) }}
-                          >
-                            Preferências
                           </button>
                           {user?.role === 'admin' && (
                             <button
@@ -3272,6 +3457,35 @@ export default function App() {
                             </button>
                           )}
                           <div className="avatar-menu-sep" />
+                          {clearHistoryConfirm ? (
+                            <div className="avatar-menu-utility avatar-menu-clear-confirm">
+                              <span className="avatar-menu-clear-confirm-label">Tem certeza?</span>
+                              <button
+                                type="button"
+                                className="options-confirm-btn options-confirm-btn--danger"
+                                onClick={handleClearHistory}
+                                disabled={clearHistoryLoading}
+                              >
+                                {clearHistoryLoading ? 'Limpando…' : 'Confirmar'}
+                              </button>
+                              <button
+                                type="button"
+                                className="options-confirm-btn"
+                                onClick={() => setClearHistoryConfirm(false)}
+                                disabled={clearHistoryLoading}
+                              >
+                                Cancelar
+                              </button>
+                            </div>
+                          ) : (
+                            <button
+                              type="button"
+                              className="avatar-menu-utility avatar-menu-clear"
+                              onClick={() => setClearHistoryConfirm(true)}
+                            >
+                              Limpar histórico
+                            </button>
+                          )}
                           <button
                             type="button"
                             className="avatar-menu-utility avatar-menu-logout"
@@ -3356,108 +3570,7 @@ export default function App() {
                 <div className="preferencias-screen">
                   <h1 className="preferencias-title">Preferências</h1>
                   <p className="preferencias-subtitle">Ajustes de sessão · aplicam a esse aluno</p>
-                  <div className="preferencias-list">
-                    <label className="preferencias-row">
-                      <span className="preferencias-row-label">Embaralhar alternativas</span>
-                      <span className={`options-toggle-switch${randomizeAlts ? ' on' : ''}`}>
-                        <input
-                          type="checkbox"
-                          checked={randomizeAlts}
-                          onChange={(e) => {
-                            setRandomizeAlts(e.target.checked)
-                            localStorage.setItem('randomize-alts', e.target.checked)
-                          }}
-                        />
-                        <span className="options-toggle-thumb" />
-                      </span>
-                    </label>
-                    <label className="preferencias-row">
-                      <span className="preferencias-row-label">Mostrar resposta</span>
-                      <span className={`options-toggle-switch${showAnswer ? ' on' : ''}`}>
-                        <input
-                          type="checkbox"
-                          checked={showAnswer}
-                          onChange={(e) => {
-                            setShowAnswer(e.target.checked)
-                            localStorage.setItem('show-answer', e.target.checked)
-                            if (!e.target.checked) { setSoundMuted(true); localStorage.setItem('sound-muted', true) }
-                          }}
-                        />
-                        <span className="options-toggle-thumb" />
-                      </span>
-                    </label>
-                    <label className="preferencias-row">
-                      <span className="preferencias-row-label">Mostrar dificuldade</span>
-                      <span className={`options-toggle-switch${showDifficulty ? ' on' : ''}`}>
-                        <input
-                          type="checkbox"
-                          checked={showDifficulty}
-                          onChange={(e) => {
-                            setShowDifficulty(e.target.checked)
-                            localStorage.setItem('show-difficulty', e.target.checked)
-                          }}
-                        />
-                        <span className="options-toggle-thumb" />
-                      </span>
-                    </label>
-                    <label className="preferencias-row">
-                      <span className="preferencias-row-label">
-                        {soundMuted ? <SoundOffIcon /> : <SoundOnIcon />} Som
-                      </span>
-                      <span className={`options-toggle-switch${!soundMuted ? ' on' : ''}`}>
-                        <input
-                          type="checkbox"
-                          checked={!soundMuted}
-                          onChange={(e) => {
-                            setSoundMuted(!e.target.checked)
-                            localStorage.setItem('sound-muted', !e.target.checked)
-                            if (e.target.checked && !showAnswer) { setShowAnswer(true); localStorage.setItem('show-answer', true) }
-                          }}
-                        />
-                        <span className="options-toggle-thumb" />
-                      </span>
-                    </label>
-                    <label className="preferencias-row">
-                      <span className="preferencias-row-label">
-                        {dark ? <MoonIcon /> : <SunIcon />} {dark ? 'Modo escuro' : 'Modo claro'}
-                      </span>
-                      <span className={`options-toggle-switch options-toggle-switch--theme${dark ? ' on' : ''}`}>
-                        <input type="checkbox" checked={dark} onChange={(e) => setDark(e.target.checked)} />
-                        <span className="options-toggle-thumb" />
-                      </span>
-                    </label>
-                    <div className="preferencias-row preferencias-row--danger">
-                      {clearHistoryConfirm ? (
-                        <div className="preferencias-confirm">
-                          <span className="preferencias-confirm-label">Tem certeza?</span>
-                          <button
-                            type="button"
-                            className="options-confirm-btn options-confirm-btn--danger"
-                            onClick={handleClearHistory}
-                            disabled={clearHistoryLoading}
-                          >
-                            {clearHistoryLoading ? 'Limpando…' : 'Confirmar'}
-                          </button>
-                          <button
-                            type="button"
-                            className="options-confirm-btn"
-                            onClick={() => setClearHistoryConfirm(false)}
-                            disabled={clearHistoryLoading}
-                          >
-                            Cancelar
-                          </button>
-                        </div>
-                      ) : (
-                        <button
-                          type="button"
-                          className="preferencias-clear-btn"
-                          onClick={() => setClearHistoryConfirm(true)}
-                        >
-                          Limpar histórico
-                        </button>
-                      )}
-                    </div>
-                  </div>
+                  {preferencesRowsMarkup}
                 </div>
               </div>
             )}
@@ -3787,6 +3900,20 @@ export default function App() {
               </div>
             )}
 
+            {activeTab === 'questao' && questionRoute && (
+              <Suspense fallback={<p className="qe-loading">Carregando…</p>}>
+                <QuestionRoute
+                  year={questionRoute.year}
+                  number={questionRoute.number}
+                  lang={questionRoute.lang}
+                  token={token}
+                  foreignLang={foreignLang}
+                  onChangeForeignLang={setForeignLang}
+                  onClose={() => switchTab('inicio')}
+                />
+              </Suspense>
+            )}
+
             {activeTab === 'trilhas-fazer' && (
               <div className="home-tab-content">
                 <button
@@ -3831,7 +3958,7 @@ export default function App() {
               </div>
             )}
 
-            {activeTab === 'questoes-resolucao' && (
+            {activeTab === 'questoes-resolucao-adicionar' && (
               <div className="home-tab-content">
                 {(user?.role === 'prof' || user?.role === 'admin') ? (
                   <Suspense fallback={<p className="qe-loading">Carregando…</p>}>
@@ -3866,8 +3993,8 @@ export default function App() {
               </div>
             )}
 
-            {(activeTab === 'questoes-aleatoria'
-              || activeTab === 'questoes-imprimir'
+            {(activeTab === 'questoes-imprimir'
+              || activeTab === 'questoes-resolucao-ver'
               || activeTab === 'provas-imprimir'
               || activeTab === 'trilhas-criar'
               || activeTab === 'trilhas-aprovar') && (

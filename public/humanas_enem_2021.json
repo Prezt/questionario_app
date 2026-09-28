@@ -295,8 +295,8 @@
     "alternatives": {
       "a": "afirmação da igualdade de gênero.",
       "b": "transformação dos espaços de lazer.",
-      "c": "adequação do pensamento patriarcal.",
-      "d": "incorporação das estruturas sociais.",
+      "c": "superação do pensamento patriarcal.",
+      "d": "incorporação das estratificações sociais.",
       "e": "substituição das atividades domésticas."
     },
     "images": [],
@@ -309,7 +309,7 @@
     "year": 2021,
     "test": "ENEM",
     "area": "humanas",
-    "answer": "c",
+    "answer": "d",
     "contextIds": [
       "enem_2021_humanas_q56_ctx1"
     ],
@@ -1132,9 +1132,9 @@
     "number": 85,
     "text": "No anúncio publicado na segunda metade do século XIX, qual a estratégia de resistência escrava apresentada?",
     "alternatives": {
-      "a": "Criação de redes de trabalho.",
+      "a": "Criação de relações de trabalho.",
       "b": "Fundação de territórios quilombolas.",
-      "c": "Apropriação da aplicação de normas.",
+      "c": "Suavização da aplicação de normas.",
       "d": "Regularização das funções remuneradas.",
       "e": "Constituição de economia de subsistência."
     },
@@ -1147,7 +1147,7 @@
     "year": 2021,
     "test": "ENEM",
     "area": "humanas",
-    "answer": "c",
+    "answer": "a",
     "contextIds": [
       "enem_2021_humanas_q85_ctx1"
     ],

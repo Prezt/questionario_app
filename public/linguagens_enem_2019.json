@@ -19,13 +19,15 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "b",
-    "contextId": "enem_2019_linguagens_q1_q39_ctx1",
     "language": "en",
     "disciplinas": [
       "ingles"
     ],
     "explanation": "Sem explicação ainda.",
-    "review": true
+    "review": true,
+    "contextIds": [
+      "enem_2019_linguagens_q1_q39_ctx1"
+    ]
   },
   {
     "number": 2,
@@ -48,13 +50,15 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "d",
-    "contextId": "enem_2019_linguagens_q2_q4_ctx1",
     "language": "en",
     "disciplinas": [
       "ingles"
     ],
     "explanation": "Sem explicação ainda.",
-    "review": true
+    "review": true,
+    "contextIds": [
+      "enem_2019_linguagens_q2_q4_ctx1"
+    ]
   },
   {
     "number": 3,
@@ -73,6 +77,7 @@
       "língua inglesa"
     ],
     "difficulty": 3,
+    "contextIds": [],
     "year": 2019,
     "test": "ENEM",
     "area": "linguagens",
@@ -100,6 +105,7 @@
       "língua inglesa"
     ],
     "difficulty": 3,
+    "contextIds": [],
     "year": 2019,
     "test": "ENEM",
     "area": "linguagens",
@@ -135,9 +141,9 @@
     "contextIds": [
       "enem_2019_linguagens_q1_q5_ctx1"
     ],
-    "language": "es",
+    "language": "en",
     "disciplinas": [
-      "espanhol"
+      "ingles"
     ],
     "explanation": "Sem explicação ainda.",
     "review": true
@@ -162,15 +168,17 @@
     "year": 2019,
     "test": "ENEM",
     "area": "linguagens",
-    "answer": "b",
-    "contextId": "enem_2019_linguagens_q1_q5_ctx1",
+    "answer": "a",
     "language": "es",
     "disciplinas": [
       "espanhol",
       "literatura"
     ],
     "explanation": "Sem explicação ainda.",
-    "review": true
+    "review": true,
+    "contextIds": [
+      "enem_2019_linguagens_q1_q5_ctx1"
+    ]
   },
   {
     "number": 2,
@@ -191,14 +199,16 @@
     "year": 2019,
     "test": "ENEM",
     "area": "linguagens",
-    "answer": "d",
-    "contextId": "enem_2019_linguagens_q1_q5_ctx1",
+    "answer": "b",
     "language": "es",
     "disciplinas": [
       "espanhol"
     ],
     "explanation": "Sem explicação ainda.",
-    "review": true
+    "review": true,
+    "contextIds": [
+      "enem_2019_linguagens_q1_q5_ctx1"
+    ]
   },
   {
     "number": 3,
@@ -219,14 +229,16 @@
     "year": 2019,
     "test": "ENEM",
     "area": "linguagens",
-    "answer": "a",
-    "contextId": "enem_2019_linguagens_q1_q5_ctx1",
+    "answer": "c",
     "language": "es",
     "disciplinas": [
       "espanhol"
     ],
     "explanation": "Sem explicação ainda.",
-    "review": true
+    "review": true,
+    "contextIds": [
+      "enem_2019_linguagens_q1_q5_ctx1"
+    ]
   },
   {
     "number": 4,
@@ -245,10 +257,11 @@
       "gêneros textuais"
     ],
     "difficulty": 5,
+    "contextIds": [],
     "year": 2019,
     "test": "ENEM",
     "area": "linguagens",
-    "answer": "b",
+    "answer": "a",
     "language": "es",
     "disciplinas": [
       "espanhol",
@@ -276,14 +289,16 @@
     "year": 2019,
     "test": "ENEM",
     "area": "linguagens",
-    "answer": "e",
-    "contextId": "enem_2019_linguagens_q1_q5_ctx1",
+    "answer": "d",
     "language": "es",
     "disciplinas": [
       "espanhol"
     ],
     "explanation": "Sem explicação ainda.",
-    "review": true
+    "review": true,
+    "contextIds": [
+      "enem_2019_linguagens_q1_q5_ctx1"
+    ]
   },
   {
     "number": 6,
@@ -306,12 +321,14 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "b",
-    "contextId": "enem_2019_linguagens_q6_ctx1",
     "disciplinas": [
       "interpretacao"
     ],
     "explanation": "Sem explicação ainda.",
-    "review": true
+    "review": true,
+    "contextIds": [
+      "enem_2019_linguagens_q6_ctx1"
+    ]
   },
   {
     "number": 7,
@@ -334,12 +351,14 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "c",
-    "contextId": "enem_2019_linguagens_q7_ctx1",
     "disciplinas": [
       "interpretacao"
     ],
     "explanation": "Sem explicação ainda.",
-    "review": true
+    "review": true,
+    "contextIds": [
+      "enem_2019_linguagens_q7_ctx1"
+    ]
   },
   {
     "number": 8,
@@ -357,6 +376,7 @@
       "gêneros textuais"
     ],
     "difficulty": 5,
+    "contextIds": [],
     "year": 2019,
     "test": "ENEM",
     "area": "linguagens",
@@ -383,6 +403,7 @@
       "comunicação e mídia"
     ],
     "difficulty": 6,
+    "contextIds": [],
     "year": 2019,
     "test": "ENEM",
     "area": "linguagens",
@@ -417,8 +438,10 @@
       "interpretacao"
     ],
     "explanation": "Sem explicação ainda.",
-    "contextId": "enem_2019_linguagens_q10_ctx1",
-    "review": true
+    "review": true,
+    "contextIds": [
+      "enem_2019_linguagens_q10_ctx1"
+    ]
   },
   {
     "number": 11,
@@ -437,6 +460,7 @@
       "cultura e identidade"
     ],
     "difficulty": 6,
+    "contextIds": [],
     "year": 2019,
     "test": "ENEM",
     "area": "linguagens",
@@ -498,13 +522,15 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "b",
-    "contextId": "enem_2019_linguagens_q13_ctx1",
     "disciplinas": [
       "interpretacao",
       "literatura"
     ],
     "explanation": "Sem explicação ainda.",
-    "review": true
+    "review": true,
+    "contextIds": [
+      "enem_2019_linguagens_q13_ctx1"
+    ]
   },
   {
     "number": 14,
@@ -523,6 +549,7 @@
       "gêneros textuais"
     ],
     "difficulty": 6,
+    "contextIds": [],
     "year": 2019,
     "test": "ENEM",
     "area": "linguagens",
@@ -555,12 +582,14 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "c",
-    "contextId": "enem_2019_linguagens_q15_ctx1",
     "disciplinas": [
       "interpretacao"
     ],
     "explanation": "Sem explicação ainda.",
-    "review": true
+    "review": true,
+    "contextIds": [
+      "enem_2019_linguagens_q15_ctx1"
+    ]
   },
   {
     "number": 16,
@@ -582,12 +611,14 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "d",
-    "contextId": "enem_2019_linguagens_q16_ctx1",
     "disciplinas": [
       "interpretacao"
     ],
     "explanation": "Sem explicação ainda.",
-    "review": true
+    "review": true,
+    "contextIds": [
+      "enem_2019_linguagens_q16_ctx1"
+    ]
   },
   {
     "number": 17,
@@ -613,8 +644,10 @@
       "interpretacao"
     ],
     "explanation": "Sem explicação ainda.",
-    "contextId": "enem_2019_linguagens_q17_ctx1",
-    "review": true
+    "review": true,
+    "contextIds": [
+      "enem_2019_linguagens_q17_ctx1"
+    ]
   },
   {
     "number": 18,
@@ -632,6 +665,7 @@
       "comunicação e mídia"
     ],
     "difficulty": 5,
+    "contextIds": [],
     "year": 2019,
     "test": "ENEM",
     "area": "linguagens",
@@ -662,12 +696,14 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "e",
-    "contextId": "enem_2019_linguagens_q19_ctx1",
     "disciplinas": [
       "interpretacao"
     ],
     "explanation": "Sem explicação ainda.",
-    "review": true
+    "review": true,
+    "contextIds": [
+      "enem_2019_linguagens_q19_ctx1"
+    ]
   },
   {
     "number": 20,
@@ -689,12 +725,14 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "c",
-    "contextId": "enem_2019_linguagens_q20_ctx1",
     "disciplinas": [
       "interpretacao"
     ],
     "explanation": "Sem explicação ainda.",
-    "review": true
+    "review": true,
+    "contextIds": [
+      "enem_2019_linguagens_q20_ctx1"
+    ]
   },
   {
     "number": 21,
@@ -712,6 +750,7 @@
       "literatura brasileira"
     ],
     "difficulty": 6,
+    "contextIds": [],
     "year": 2019,
     "test": "ENEM",
     "area": "linguagens",
@@ -743,13 +782,15 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "a",
-    "contextId": "enem_2019_linguagens_q22_ctx1",
     "disciplinas": [
       "interpretacao",
       "literatura"
     ],
     "explanation": "Sem explicação ainda.",
-    "review": true
+    "review": true,
+    "contextIds": [
+      "enem_2019_linguagens_q22_ctx1"
+    ]
   },
   {
     "number": 23,
@@ -772,13 +813,15 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "e",
-    "contextId": "enem_2019_linguagens_q23_ctx1",
     "disciplinas": [
       "artes",
       "interpretacao"
     ],
     "explanation": "Sem explicação ainda.",
-    "review": true
+    "review": true,
+    "contextIds": [
+      "enem_2019_linguagens_q23_ctx1"
+    ]
   },
   {
     "number": 24,
@@ -801,13 +844,15 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "c",
-    "contextId": "enem_2019_linguagens_q24_ctx1",
     "disciplinas": [
       "interpretacao",
       "linguistica"
     ],
     "explanation": "Sem explicação ainda.",
-    "review": true
+    "review": true,
+    "contextIds": [
+      "enem_2019_linguagens_q24_ctx1"
+    ]
   },
   {
     "number": 25,
@@ -826,6 +871,7 @@
       "literatura brasileira"
     ],
     "difficulty": 4,
+    "contextIds": [],
     "year": 2019,
     "test": "ENEM",
     "area": "linguagens",
@@ -883,6 +929,7 @@
       "filosofia moderna e contemporânea"
     ],
     "difficulty": 5,
+    "contextIds": [],
     "year": 2019,
     "test": "ENEM",
     "area": "linguagens",
@@ -913,13 +960,15 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "b",
-    "contextId": "enem_2019_linguagens_q28_ctx1",
     "disciplinas": [
       "interpretacao",
       "literatura"
     ],
     "explanation": "Sem explicação ainda.",
-    "review": true
+    "review": true,
+    "contextIds": [
+      "enem_2019_linguagens_q28_ctx1"
+    ]
   },
   {
     "number": 29,
@@ -937,6 +986,7 @@
       "comunicação e mídia"
     ],
     "difficulty": 5,
+    "contextIds": [],
     "year": 2019,
     "test": "ENEM",
     "area": "linguagens",
@@ -1004,9 +1054,11 @@
       "artes",
       "interpretacao"
     ],
-    "contextId": "enem_2019_linguagens_q31_ctx1",
     "explanation": "Sem explicação ainda.",
-    "review": true
+    "review": true,
+    "contextIds": [
+      "enem_2019_linguagens_q31_ctx1"
+    ]
   },
   {
     "number": 32,
@@ -1028,12 +1080,14 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "e",
-    "contextId": "enem_2019_linguagens_q32_ctx1",
     "disciplinas": [
       "interpretacao"
     ],
     "explanation": "Sem explicação ainda.",
-    "review": true
+    "review": true,
+    "contextIds": [
+      "enem_2019_linguagens_q32_ctx1"
+    ]
   },
   {
     "number": 33,
@@ -1051,6 +1105,7 @@
       "interpretação de texto"
     ],
     "difficulty": 6,
+    "contextIds": [],
     "year": 2019,
     "test": "ENEM",
     "area": "linguagens",
@@ -1078,6 +1133,7 @@
       "história moderna"
     ],
     "difficulty": 6,
+    "contextIds": [],
     "year": 2019,
     "test": "ENEM",
     "area": "linguagens",
@@ -1104,6 +1160,7 @@
       "cultura e identidade"
     ],
     "difficulty": 4,
+    "contextIds": [],
     "year": 2019,
     "test": "ENEM",
     "area": "linguagens",
@@ -1167,13 +1224,15 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "d",
-    "contextId": "enem_2019_linguagens_q37_ctx1",
     "disciplinas": [
       "interpretacao",
       "linguistica"
     ],
     "explanation": "Sem explicação ainda.",
-    "review": true
+    "review": true,
+    "contextIds": [
+      "enem_2019_linguagens_q37_ctx1"
+    ]
   },
   {
     "number": 38,
@@ -1195,12 +1254,14 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "d",
-    "contextId": "enem_2019_linguagens_q38_ctx1",
     "disciplinas": [
       "interpretacao"
     ],
     "explanation": "Sem explicação ainda.",
-    "review": true
+    "review": true,
+    "contextIds": [
+      "enem_2019_linguagens_q38_ctx1"
+    ]
   },
   {
     "number": 39,
@@ -1218,6 +1279,7 @@
       "interpretação de texto"
     ],
     "difficulty": 6,
+    "contextIds": [],
     "year": 2019,
     "test": "ENEM",
     "area": "linguagens",
@@ -1249,13 +1311,15 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "b",
-    "contextId": "enem_2019_linguagens_q40_ctx1",
     "disciplinas": [
       "interpretacao",
       "literatura"
     ],
     "explanation": "Sem explicação ainda.",
-    "review": true
+    "review": true,
+    "contextIds": [
+      "enem_2019_linguagens_q40_ctx1"
+    ]
   },
   {
     "number": 41,
@@ -1277,13 +1341,15 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "c",
-    "contextId": "enem_2019_linguagens_q41_ctx1",
     "disciplinas": [
       "interpretacao",
       "literatura"
     ],
     "explanation": "Sem explicação ainda.",
-    "review": true
+    "review": true,
+    "contextIds": [
+      "enem_2019_linguagens_q41_ctx1"
+    ]
   },
   {
     "number": 42,
@@ -1306,12 +1372,14 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "d",
-    "contextId": "enem_2019_linguagens_q42_ctx1",
     "disciplinas": [
       "interpretacao"
     ],
     "explanation": "Sem explicação ainda.",
-    "review": true
+    "review": true,
+    "contextIds": [
+      "enem_2019_linguagens_q42_ctx1"
+    ]
   },
   {
     "number": 43,
@@ -1337,8 +1405,10 @@
       "interpretacao"
     ],
     "explanation": "Sem explicação ainda.",
-    "contextId": "enem_2019_linguagens_q43_ctx1",
-    "review": true
+    "review": true,
+    "contextIds": [
+      "enem_2019_linguagens_q43_ctx1"
+    ]
   },
   {
     "number": 44,
@@ -1361,14 +1431,16 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "e",
-    "contextId": "enem_2019_linguagens_q44_ctx1",
     "disciplinas": [
       "interpretacao",
       "linguistica",
       "literatura"
     ],
     "explanation": "Sem explicação ainda.",
-    "review": true
+    "review": true,
+    "contextIds": [
+      "enem_2019_linguagens_q44_ctx1"
+    ]
   },
   {
     "number": 45,
@@ -1392,13 +1464,15 @@
     "test": "ENEM",
     "area": "linguagens",
     "answer": "b",
-    "contextId": "enem_2019_linguagens_q45_ctx1",
     "disciplinas": [
       "interpretacao",
       "linguistica",
       "literatura"
     ],
     "explanation": "Sem explicação ainda.",
-    "review": true
+    "review": true,
+    "contextIds": [
+      "enem_2019_linguagens_q45_ctx1"
+    ]
   }
 ]

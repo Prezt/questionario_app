@@ -1,8 +1,8 @@
 {
   "summary": {
     "totalQuestions": 1480,
-    "totalIssues": 57,
-    "filesWithIssues": 22,
+    "totalIssues": 33,
+    "filesWithIssues": 13,
     "orphanedImages": 221
   },
   "byFile": {
@@ -56,26 +56,7 @@
     },
     "humanas_enem_2021.json": {
       "datasetIssues": [],
-      "questionIssues": [
-        {
-          "number": 56,
-          "issues": [
-            {
-              "type": "ANSWER_MISMATCH_VS_OFFICIAL",
-              "detail": "JSON=c, INEP=d"
-            }
-          ]
-        },
-        {
-          "number": 85,
-          "issues": [
-            {
-              "type": "ANSWER_MISMATCH_VS_OFFICIAL",
-              "detail": "JSON=c, INEP=a"
-            }
-          ]
-        }
-      ]
+      "questionIssues": []
     },
     "humanas_enem_2022.json": {
       "datasetIssues": [],
@@ -140,48 +121,11 @@
     },
     "humanas_enem_2025.json": {
       "datasetIssues": [],
-      "questionIssues": [
-        {
-          "number": 56,
-          "issues": [
-            {
-              "type": "ANSWER_MISMATCH_VS_OFFICIAL",
-              "detail": "JSON=a, INEP=c"
-            }
-          ]
-        }
-      ]
+      "questionIssues": []
     },
     "linguagens_enem_2018.json": {
       "datasetIssues": [],
       "questionIssues": [
-        {
-          "number": 3,
-          "issues": [
-            {
-              "type": "ANSWER_MISMATCH_VS_OFFICIAL",
-              "detail": "JSON=d, INEP=c"
-            }
-          ]
-        },
-        {
-          "number": 4,
-          "issues": [
-            {
-              "type": "ANSWER_MISMATCH_VS_OFFICIAL",
-              "detail": "JSON=e, INEP=d"
-            }
-          ]
-        },
-        {
-          "number": 5,
-          "issues": [
-            {
-              "type": "ANSWER_MISMATCH_VS_OFFICIAL",
-              "detail": "JSON=c, INEP=b"
-            }
-          ]
-        },
         {
           "number": 6,
           "issues": [
@@ -195,93 +139,11 @@
     },
     "linguagens_enem_2019.json": {
       "datasetIssues": [],
-      "questionIssues": [
-        {
-          "number": 5,
-          "issues": [
-            {
-              "type": "ANSWER_MISMATCH_VS_OFFICIAL",
-              "detail": "JSON=e, INEP=d"
-            }
-          ]
-        },
-        {
-          "number": 1,
-          "issues": [
-            {
-              "type": "ANSWER_MISMATCH_VS_OFFICIAL",
-              "detail": "JSON=b, INEP=a"
-            }
-          ]
-        },
-        {
-          "number": 2,
-          "issues": [
-            {
-              "type": "ANSWER_MISMATCH_VS_OFFICIAL",
-              "detail": "JSON=d, INEP=b"
-            }
-          ]
-        },
-        {
-          "number": 3,
-          "issues": [
-            {
-              "type": "ANSWER_MISMATCH_VS_OFFICIAL",
-              "detail": "JSON=a, INEP=c"
-            }
-          ]
-        },
-        {
-          "number": 4,
-          "issues": [
-            {
-              "type": "ANSWER_MISMATCH_VS_OFFICIAL",
-              "detail": "JSON=b, INEP=a"
-            }
-          ]
-        },
-        {
-          "number": 5,
-          "issues": [
-            {
-              "type": "ANSWER_MISMATCH_VS_OFFICIAL",
-              "detail": "JSON=e, INEP=d"
-            }
-          ]
-        }
-      ]
+      "questionIssues": []
     },
     "linguagens_enem_2020.json": {
       "datasetIssues": [],
       "questionIssues": [
-        {
-          "number": 2,
-          "issues": [
-            {
-              "type": "ANSWER_MISMATCH_VS_OFFICIAL",
-              "detail": "JSON=a, INEP=c"
-            }
-          ]
-        },
-        {
-          "number": 4,
-          "issues": [
-            {
-              "type": "ANSWER_MISMATCH_VS_OFFICIAL",
-              "detail": "JSON=d, INEP=e"
-            }
-          ]
-        },
-        {
-          "number": 5,
-          "issues": [
-            {
-              "type": "ANSWER_MISMATCH_VS_OFFICIAL",
-              "detail": "JSON=c, INEP=e"
-            }
-          ]
-        },
         {
           "number": 25,
           "issues": [
@@ -327,26 +189,7 @@
     },
     "linguagens_enem_2022.json": {
       "datasetIssues": [],
-      "questionIssues": [
-        {
-          "number": 1,
-          "issues": [
-            {
-              "type": "SHORT_TEXT",
-              "detail": "Text is only 34 chars: \"Esse cartaz tem a função social de\""
-            }
-          ]
-        },
-        {
-          "number": 2,
-          "issues": [
-            {
-              "type": "SHORT_TEXT",
-              "detail": "Text is only 39 chars: \"No texto, o autor faz uma crítica ao(à)\""
-            }
-          ]
-        }
-      ]
+      "questionIssues": []
     },
     "linguagens_enem_2023.json": {
       "datasetIssues": [],
@@ -454,15 +297,6 @@
               "detail": "8-word phrase shared with context \"enem_2020_math_q143_ctx1\": \"que o tempo médio de estudo de pessoas\""
             }
           ]
-        },
-        {
-          "number": 157,
-          "issues": [
-            {
-              "type": "ANSWER_MISMATCH_VS_OFFICIAL",
-              "detail": "JSON=annulled, INEP=a"
-            }
-          ]
         }
       ]
     },
@@ -475,15 +309,6 @@
             {
               "type": "CTX_STEM_SHARED_PHRASE",
               "detail": "8-word phrase shared with context \"enem_2021_math_q148_ctx1\": \"de terremotos de magnitude maior ou igual a\""
-            }
-          ]
-        },
-        {
-          "number": 179,
-          "issues": [
-            {
-              "type": "ANSWER_MISMATCH_VS_OFFICIAL",
-              "detail": "JSON=b, INEP=a"
             }
           ]
         }
@@ -509,17 +334,7 @@
     },
     "math_enem_2024.json": {
       "datasetIssues": [],
-      "questionIssues": [
-        {
-          "number": 166,
-          "issues": [
-            {
-              "type": "ANSWER_MISMATCH_VS_OFFICIAL",
-              "detail": "JSON=c, INEP=e"
-            }
-          ]
-        }
-      ]
+      "questionIssues": []
     },
     "math_enem_2025.json": {
       "datasetIssues": [],
@@ -567,17 +382,7 @@
     },
     "nature_enem_2020.json": {
       "datasetIssues": [],
-      "questionIssues": [
-        {
-          "number": 135,
-          "issues": [
-            {
-              "type": "ANSWER_MISMATCH_VS_OFFICIAL",
-              "detail": "JSON=annulled, INEP=a"
-            }
-          ]
-        }
-      ]
+      "questionIssues": []
     },
     "nature_enem_2021.json": {
       "datasetIssues": [],
@@ -585,17 +390,7 @@
     },
     "nature_enem_2022.json": {
       "datasetIssues": [],
-      "questionIssues": [
-        {
-          "number": 110,
-          "issues": [
-            {
-              "type": "SHORT_TEXT",
-              "detail": "Text is only 35 chars: \"Os padrões descritos evidenciam que\""
-            }
-          ]
-        }
-      ]
+      "questionIssues": []
     },
     "nature_enem_2023.json": {
       "datasetIssues": [],
@@ -603,31 +398,11 @@
     },
     "nature_enem_2024.json": {
       "datasetIssues": [],
-      "questionIssues": [
-        {
-          "number": 125,
-          "issues": [
-            {
-              "type": "ANSWER_MISMATCH_VS_OFFICIAL",
-              "detail": "JSON=a, INEP=c"
-            }
-          ]
-        }
-      ]
+      "questionIssues": []
     },
     "nature_enem_2025.json": {
       "datasetIssues": [],
-      "questionIssues": [
-        {
-          "number": 95,
-          "issues": [
-            {
-              "type": "ANSWER_MISMATCH_VS_OFFICIAL",
-              "detail": "JSON=b, INEP=c"
-            }
-          ]
-        }
-      ]
+      "questionIssues": []
     }
   },
   "orphanedImages": [

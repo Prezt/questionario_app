@@ -46,6 +46,7 @@
       "proporção"
     ],
     "difficulty": 2,
+    "contextIds": [],
     "year": 2020,
     "test": "ENEM",
     "area": "math",
@@ -73,6 +74,7 @@
       "regra de três"
     ],
     "difficulty": 5,
+    "contextIds": [],
     "year": 2020,
     "test": "ENEM",
     "area": "math",
@@ -101,6 +103,7 @@
       "proporção"
     ],
     "difficulty": 4,
+    "contextIds": [],
     "year": 2020,
     "test": "ENEM",
     "area": "math",
@@ -127,6 +130,7 @@
       "proporção"
     ],
     "difficulty": 6,
+    "contextIds": [],
     "year": 2020,
     "test": "ENEM",
     "area": "math",
@@ -152,6 +156,7 @@
       "aritmética e números"
     ],
     "difficulty": 5,
+    "contextIds": [],
     "year": 2020,
     "test": "ENEM",
     "area": "math",
@@ -177,6 +182,7 @@
       "frações"
     ],
     "difficulty": 5,
+    "contextIds": [],
     "year": 2020,
     "test": "ENEM",
     "area": "math",
@@ -231,6 +237,7 @@
       "proporção"
     ],
     "difficulty": 5,
+    "contextIds": [],
     "year": 2020,
     "test": "ENEM",
     "area": "math",
@@ -260,6 +267,7 @@
       "regra de três"
     ],
     "difficulty": 6,
+    "contextIds": [],
     "year": 2020,
     "test": "ENEM",
     "area": "math",
@@ -286,6 +294,7 @@
       "álgebra"
     ],
     "difficulty": 4,
+    "contextIds": [],
     "year": 2020,
     "test": "ENEM",
     "area": "math",
@@ -312,6 +321,7 @@
       "frações"
     ],
     "difficulty": 4,
+    "contextIds": [],
     "year": 2020,
     "test": "ENEM",
     "area": "math",
@@ -395,6 +405,7 @@
       "frações"
     ],
     "difficulty": 6,
+    "contextIds": [],
     "year": 2020,
     "test": "ENEM",
     "area": "math",
@@ -420,6 +431,7 @@
       "geometria plana"
     ],
     "difficulty": 3,
+    "contextIds": [],
     "year": 2020,
     "test": "ENEM",
     "area": "math",
@@ -448,6 +460,7 @@
       "proporção"
     ],
     "difficulty": 6,
+    "contextIds": [],
     "year": 2020,
     "test": "ENEM",
     "area": "math",
@@ -472,6 +485,7 @@
       "aritmética e números"
     ],
     "difficulty": 4,
+    "contextIds": [],
     "year": 2020,
     "test": "ENEM",
     "area": "math",
@@ -498,6 +512,7 @@
       "aritmética e números"
     ],
     "difficulty": 2,
+    "contextIds": [],
     "year": 2020,
     "test": "ENEM",
     "area": "math",
@@ -525,6 +540,7 @@
       "frações"
     ],
     "difficulty": 5,
+    "contextIds": [],
     "year": 2020,
     "test": "ENEM",
     "area": "math",
@@ -553,6 +569,7 @@
       "proporção"
     ],
     "difficulty": 5,
+    "contextIds": [],
     "year": 2020,
     "test": "ENEM",
     "area": "math",
@@ -578,6 +595,7 @@
       "frações"
     ],
     "difficulty": 6,
+    "contextIds": [],
     "year": 2020,
     "test": "ENEM",
     "area": "math",
@@ -604,6 +622,7 @@
       "análise combinatória"
     ],
     "difficulty": 6,
+    "contextIds": [],
     "year": 2020,
     "test": "ENEM",
     "area": "math",
@@ -629,6 +648,7 @@
       "matemática financeira"
     ],
     "difficulty": 4,
+    "contextIds": [],
     "year": 2020,
     "test": "ENEM",
     "area": "math",
@@ -654,6 +674,7 @@
       "regra de três"
     ],
     "difficulty": 6,
+    "contextIds": [],
     "year": 2020,
     "test": "ENEM",
     "area": "math",
@@ -681,6 +702,7 @@
       "proporção"
     ],
     "difficulty": 5,
+    "contextIds": [],
     "year": 2020,
     "test": "ENEM",
     "area": "math",
@@ -710,6 +732,7 @@
       "regra de três"
     ],
     "difficulty": 6,
+    "contextIds": [],
     "year": 2020,
     "test": "ENEM",
     "area": "math",
@@ -735,6 +758,7 @@
       "frações"
     ],
     "difficulty": 6,
+    "contextIds": [],
     "year": 2020,
     "test": "ENEM",
     "area": "math",
@@ -787,6 +811,7 @@
       "aritmética e números"
     ],
     "difficulty": 5,
+    "contextIds": [],
     "year": 2020,
     "test": "ENEM",
     "area": "math",
@@ -819,6 +844,7 @@
       "geometria espacial"
     ],
     "difficulty": 6,
+    "contextIds": [],
     "year": 2020,
     "test": "ENEM",
     "area": "math",
@@ -845,6 +871,7 @@
       "proporção"
     ],
     "difficulty": 4,
+    "contextIds": [],
     "year": 2020,
     "test": "ENEM",
     "area": "math",
@@ -871,6 +898,7 @@
       "geometria espacial"
     ],
     "difficulty": 5,
+    "contextIds": [],
     "year": 2020,
     "test": "ENEM",
     "area": "math",
@@ -926,6 +954,7 @@
       "proporção"
     ],
     "difficulty": 6,
+    "contextIds": [],
     "year": 2020,
     "test": "ENEM",
     "area": "math",
@@ -953,6 +982,7 @@
       "análise combinatória"
     ],
     "difficulty": 6,
+    "contextIds": [],
     "year": 2020,
     "test": "ENEM",
     "area": "math",
@@ -981,6 +1011,7 @@
       "geometria analítica"
     ],
     "difficulty": 7,
+    "contextIds": [],
     "year": 2020,
     "test": "ENEM",
     "area": "math",
@@ -1009,6 +1040,7 @@
       "frações"
     ],
     "difficulty": 7,
+    "contextIds": [],
     "year": 2020,
     "test": "ENEM",
     "area": "math",
@@ -1038,6 +1070,7 @@
       "regra de três"
     ],
     "difficulty": 6,
+    "contextIds": [],
     "year": 2020,
     "test": "ENEM",
     "area": "math",
@@ -1070,6 +1103,7 @@
       "análise combinatória"
     ],
     "difficulty": 6,
+    "contextIds": [],
     "year": 2020,
     "test": "ENEM",
     "area": "math",
@@ -1102,6 +1136,7 @@
       "geometria analítica"
     ],
     "difficulty": 6,
+    "contextIds": [],
     "year": 2020,
     "test": "ENEM",
     "area": "math",
@@ -1134,6 +1169,7 @@
       "análise combinatória"
     ],
     "difficulty": 5,
+    "contextIds": [],
     "year": 2020,
     "test": "ENEM",
     "area": "math",
@@ -1161,6 +1197,7 @@
       "proporção"
     ],
     "difficulty": 5,
+    "contextIds": [],
     "year": 2020,
     "test": "ENEM",
     "area": "math",
@@ -1191,11 +1228,13 @@
     "test": "ENEM",
     "area": "math",
     "answer": "e",
-    "contextId": "enem_2020_math_q179_ctx1",
     "disciplinas": [
       "matematica"
     ],
-    "explanation": "Sem explicação ainda."
+    "explanation": "Sem explicação ainda.",
+    "contextIds": [
+      "enem_2020_math_q179_ctx1"
+    ]
   },
   {
     "number": 180,
@@ -1213,6 +1252,7 @@
       "matemática financeira"
     ],
     "difficulty": 4,
+    "contextIds": [],
     "year": 2020,
     "test": "ENEM",
     "area": "math",

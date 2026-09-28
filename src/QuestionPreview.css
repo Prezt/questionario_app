@@ -1,0 +1,122 @@
+/* Preview de questao — usado no modal da montagem de lista e na tela /ano/numero.
+   Herda a paleta v3 pelas variaveis globais de App.css, entao acompanha o tema. */
+
+.qprev {
+  color: var(--text);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.qprev-meta {
+  font-size: 0.8rem;
+  color: var(--text-soft);
+  text-transform: lowercase;
+  letter-spacing: 0.02em;
+  margin-bottom: 0.75rem;
+}
+
+.qprev-text {
+  margin: 0 0 0.7rem;
+  white-space: pre-wrap;
+}
+
+.qprev-text:last-child { margin-bottom: 0; }
+
+/* ── Contexto ─────────────────────────────────────────── */
+
+.qprev-context {
+  border-left: 3px solid var(--accent);
+  padding: 0.6rem 0 0.6rem 0.85rem;
+  margin-bottom: 1rem;
+  background: var(--accent-soft);
+  border-radius: 0 6px 6px 0;
+}
+
+.qprev-context-title {
+  font-weight: 700;
+  margin-bottom: 0.3rem;
+}
+
+.qprev-context-subtitle {
+  font-size: 0.88rem;
+  color: var(--text-soft);
+  margin-bottom: 0.4rem;
+}
+
+.qprev-context-ref {
+  font-size: 0.8rem;
+  font-style: italic;
+  color: var(--text-soft);
+  margin-top: 0.5rem;
+}
+
+/* ── Figuras ──────────────────────────────────────────── */
+
+.qprev-figure {
+  margin: 0.6rem 0;
+  text-align: center;
+}
+
+.qprev-img {
+  max-width: 100%;
+  max-height: 420px;
+  border-radius: 6px;
+  border: 1px solid var(--border);
+  background: #fff;
+}
+
+.qprev-figure-caption {
+  font-size: 0.78rem;
+  color: var(--text-soft);
+  margin-top: 0.3rem;
+}
+
+/* ── Alternativas ─────────────────────────────────────── */
+
+.qprev-alts {
+  list-style: none;
+  margin: 1rem 0 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.qprev-alt {
+  display: flex;
+  gap: 0.6rem;
+  align-items: flex-start;
+  padding: 0.45rem 0.6rem;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--card-bg);
+}
+
+.qprev-alt--correct {
+  border-color: var(--accent);
+  background: var(--accent-soft);
+}
+
+.qprev-alt-letter {
+  font-weight: 700;
+  min-width: 1.4rem;
+  color: var(--accent);
+}
+
+.qprev-alt-body { flex: 1; min-width: 0; }
+
+/* Figura de alternativa nao precisa ser grande — sao ate 5 por questao. */
+.qprev-alt .qprev-img { max-height: 200px; }
+.qprev-alt .qprev-figure { margin: 0; text-align: left; }
+
+.qprev-annulled {
+  margin-top: 0.8rem;
+  font-size: 0.85rem;
+  color: var(--text-soft);
+  font-style: italic;
+}
+
+@media (max-width: 640px) {
+  .qprev { font-size: 0.9rem; }
+  .qprev-img { max-height: 300px; }
+}

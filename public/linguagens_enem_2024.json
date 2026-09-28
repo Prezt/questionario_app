@@ -23,6 +23,7 @@
     "language": "en",
     "answer": "c",
     "difficulty": 3,
+    "contextIds": [],
     "disciplinas": [
       "ingles"
     ],
@@ -82,6 +83,7 @@
     "language": "en",
     "answer": "a",
     "difficulty": 4,
+    "contextIds": [],
     "disciplinas": [
       "ingles"
     ],
@@ -139,6 +141,7 @@
     "language": "en",
     "answer": "e",
     "difficulty": 3,
+    "contextIds": [],
     "disciplinas": [
       "ingles"
     ],
@@ -858,6 +861,7 @@
     "area": "linguagens",
     "answer": "c",
     "difficulty": 6,
+    "contextIds": [],
     "disciplinas": [
       "artes",
       "literatura"
@@ -1085,6 +1089,7 @@
     "area": "linguagens",
     "answer": "d",
     "difficulty": 3,
+    "contextIds": [],
     "disciplinas": [
       "interpretacao"
     ],

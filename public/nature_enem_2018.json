@@ -17,6 +17,7 @@
       "física moderna"
     ],
     "difficulty": 7,
+    "contextIds": [],
     "year": 2018,
     "test": "ENEM",
     "area": "nature",
@@ -43,6 +44,7 @@
       "Termoquímica e cinética"
     ],
     "difficulty": 6,
+    "contextIds": [],
     "year": 2018,
     "test": "ENEM",
     "area": "nature",
@@ -70,6 +72,7 @@
       "química geral e inorgânica"
     ],
     "difficulty": 6,
+    "contextIds": [],
     "year": 2018,
     "test": "ENEM",
     "area": "nature",
@@ -95,6 +98,7 @@
       "endocrinologia"
     ],
     "difficulty": 6,
+    "contextIds": [],
     "year": 2018,
     "test": "ENEM",
     "area": "nature",
@@ -127,6 +131,7 @@
       "soluções e solubilidade"
     ],
     "difficulty": 6,
+    "contextIds": [],
     "year": 2018,
     "test": "ENEM",
     "area": "nature",
@@ -152,6 +157,7 @@
       "fisiologia humana"
     ],
     "difficulty": 6,
+    "contextIds": [],
     "year": 2018,
     "test": "ENEM",
     "area": "nature",
@@ -182,7 +188,6 @@
     "test": "ENEM",
     "area": "nature",
     "answer": "c",
-    "contextId": "enem_2018_nature_q97_ctx1",
     "contextIds": [
       "enem_2018_nature_q97_ctx1"
     ],
@@ -292,6 +297,7 @@
       "fisiologia humana"
     ],
     "difficulty": 4,
+    "contextIds": [],
     "year": 2018,
     "test": "ENEM",
     "area": "nature",
@@ -374,6 +380,7 @@
       "mecânica newtoniana"
     ],
     "difficulty": 5,
+    "contextIds": [],
     "year": 2018,
     "test": "ENEM",
     "area": "nature",
@@ -402,7 +409,6 @@
     "test": "ENEM",
     "area": "nature",
     "answer": "c",
-    "contextId": "enem_2018_nature_q105_ctx1",
     "contextIds": [
       "enem_2018_nature_q105_ctx1"
     ],
@@ -457,6 +463,7 @@
       "biotecnologia"
     ],
     "difficulty": 6,
+    "contextIds": [],
     "year": 2018,
     "test": "ENEM",
     "area": "nature",
@@ -490,6 +497,7 @@
       "funções"
     ],
     "difficulty": 6,
+    "contextIds": [],
     "year": 2018,
     "test": "ENEM",
     "area": "nature",
@@ -518,6 +526,7 @@
       "química geral e inorgânica"
     ],
     "difficulty": 7,
+    "contextIds": [],
     "year": 2018,
     "test": "ENEM",
     "area": "nature",
@@ -543,6 +552,7 @@
       "citologia"
     ],
     "difficulty": 6,
+    "contextIds": [],
     "year": 2018,
     "test": "ENEM",
     "area": "nature",
@@ -568,6 +578,7 @@
       "evolução"
     ],
     "difficulty": 5,
+    "contextIds": [],
     "year": 2018,
     "test": "ENEM",
     "area": "nature",
@@ -594,6 +605,7 @@
       "eletricidade e magnetismo"
     ],
     "difficulty": 6,
+    "contextIds": [],
     "year": 2018,
     "test": "ENEM",
     "area": "nature",
@@ -675,6 +687,7 @@
       "física moderna"
     ],
     "difficulty": 4,
+    "contextIds": [],
     "year": 2018,
     "test": "ENEM",
     "area": "nature",
@@ -702,6 +715,7 @@
       "eletroquímica"
     ],
     "difficulty": 6,
+    "contextIds": [],
     "year": 2018,
     "test": "ENEM",
     "area": "nature",
@@ -730,6 +744,7 @@
       "biotecnologia"
     ],
     "difficulty": 6,
+    "contextIds": [],
     "year": 2018,
     "test": "ENEM",
     "area": "nature",
@@ -757,6 +772,7 @@
       "termoquímica e cinética"
     ],
     "difficulty": 6,
+    "contextIds": [],
     "year": 2018,
     "test": "ENEM",
     "area": "nature",
@@ -782,6 +798,7 @@
       "botânica"
     ],
     "difficulty": 6,
+    "contextIds": [],
     "year": 2018,
     "test": "ENEM",
     "area": "nature",
@@ -809,6 +826,7 @@
       "eletricidade e magnetismo"
     ],
     "difficulty": 6,
+    "contextIds": [],
     "year": 2018,
     "test": "ENEM",
     "area": "nature",
@@ -862,6 +880,7 @@
       "mecânica newtoniana"
     ],
     "difficulty": 5,
+    "contextIds": [],
     "year": 2018,
     "test": "ENEM",
     "area": "nature",
@@ -889,6 +908,7 @@
       "termoquímica e cinética"
     ],
     "difficulty": 6,
+    "contextIds": [],
     "year": 2018,
     "test": "ENEM",
     "area": "nature",
@@ -915,6 +935,7 @@
       "química orgânica"
     ],
     "difficulty": 5,
+    "contextIds": [],
     "year": 2018,
     "test": "ENEM",
     "area": "nature",
@@ -942,6 +963,7 @@
       "dispersão da luz"
     ],
     "difficulty": 6,
+    "contextIds": [],
     "year": 2018,
     "test": "ENEM",
     "area": "nature",
@@ -1005,11 +1027,11 @@
       "biotecnologia"
     ],
     "difficulty": 7,
+    "contextIds": [],
     "year": 2018,
     "test": "ENEM",
     "area": "nature",
     "answer": "e",
-    "contextIds": [],
     "disciplinas": [
       "biologia"
     ],
@@ -1032,6 +1054,7 @@
       "mecânica newtoniana"
     ],
     "difficulty": 6,
+    "contextIds": [],
     "year": 2018,
     "test": "ENEM",
     "area": "nature",
@@ -1059,6 +1082,7 @@
       "física moderna"
     ],
     "difficulty": 6,
+    "contextIds": [],
     "year": 2018,
     "test": "ENEM",
     "area": "nature",
@@ -1087,6 +1111,7 @@
       "química orgânica"
     ],
     "difficulty": 6,
+    "contextIds": [],
     "year": 2018,
     "test": "ENEM",
     "area": "nature",
@@ -1114,6 +1139,7 @@
       "energia e trabalho"
     ],
     "difficulty": 6,
+    "contextIds": [],
     "year": 2018,
     "test": "ENEM",
     "area": "nature",
@@ -1167,6 +1193,7 @@
       "evolução"
     ],
     "difficulty": 5,
+    "contextIds": [],
     "year": 2018,
     "test": "ENEM",
     "area": "nature",
@@ -1192,6 +1219,7 @@
       "pressão"
     ],
     "difficulty": 6,
+    "contextIds": [],
     "year": 2018,
     "test": "ENEM",
     "area": "nature",
@@ -1221,7 +1249,6 @@
     "test": "ENEM",
     "area": "nature",
     "answer": "d",
-    "contextId": "enem_2018_nature_q135_ctx1",
     "contextIds": [
       "enem_2018_nature_q135_ctx1"
     ],

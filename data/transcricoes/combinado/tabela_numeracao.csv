@@ -1,0 +1,1481 @@
+ano,area,local,fonte_b,fonte_a,gab_local,gab_fonte_b,gab_fonte_a,via_fonte_b,via_fonte_a,sim_fonte_b,sim_fonte_a
+2018,humanas,46,46,,C,C,,conteudo,—,0.341,
+2018,humanas,47,47,,A,A,,conteudo,—,0.37,
+2018,humanas,48,48,,C,C,,conteudo,—,0.326,
+2018,humanas,49,49,,D,D,,conteudo,—,0.42,
+2018,humanas,50,50,,D,D,,conteudo,—,1.0,
+2018,humanas,51,51,,B,B,,conteudo,—,0.411,
+2018,humanas,52,52,,D,D,,conteudo,—,0.245,
+2018,humanas,53,53,,D,D,,conteudo,—,0.312,
+2018,humanas,54,54,,E,E,,conteudo,—,0.25,
+2018,humanas,55,55,,C,C,,conteudo,—,0.29,
+2018,humanas,56,56,,C,C,,conteudo,—,0.781,
+2018,humanas,57,57,,E,E,,numero,—,,
+2018,humanas,58,58,,D,D,,conteudo,—,0.61,
+2018,humanas,59,59,,E,E,,conteudo,—,0.386,
+2018,humanas,60,60,,E,E,,conteudo,—,0.38,
+2018,humanas,61,61,,E,E,,conteudo,—,0.361,
+2018,humanas,62,62,,B,B,,conteudo,—,0.429,
+2018,humanas,63,63,,C,C,,conteudo,—,0.829,
+2018,humanas,64,64,,E,E,,conteudo,—,0.327,
+2018,humanas,65,65,,A,A,,conteudo,—,0.309,
+2018,humanas,66,66,,E,E,,conteudo,—,0.457,
+2018,humanas,67,67,,E,E,,conteudo,—,0.719,
+2018,humanas,68,68,,C,C,,conteudo,—,0.411,
+2018,humanas,69,69,,B,B,,conteudo,—,0.275,
+2018,humanas,70,70,,B,B,,conteudo,—,0.274,
+2018,humanas,71,71,,E,E,,conteudo,—,0.477,
+2018,humanas,72,72,,B,B,,conteudo,—,0.272,
+2018,humanas,73,73,,E,E,,conteudo,—,0.274,
+2018,humanas,74,74,,D,D,,conteudo,—,0.507,
+2018,humanas,75,75,,B,B,,conteudo,—,0.377,
+2018,humanas,76,76,,E,E,,conteudo,—,0.348,
+2018,humanas,77,77,,D,D,,conteudo,—,0.379,
+2018,humanas,78,78,,E,E,,conteudo,—,0.286,
+2018,humanas,79,79,,C,C,,conteudo,—,0.425,
+2018,humanas,80,80,,B,B,,conteudo,—,0.291,
+2018,humanas,81,81,,E,E,,conteudo,—,0.333,
+2018,humanas,82,82,,B,B,,conteudo,—,0.314,
+2018,humanas,83,83,,D,D,,conteudo,—,0.371,
+2018,humanas,84,84,,C,C,,conteudo,—,0.359,
+2018,humanas,85,85,,A,A,,conteudo,—,0.543,
+2018,humanas,86,86,,A,A,,conteudo,—,0.381,
+2018,humanas,87,87,,B,B,,conteudo,—,0.451,
+2018,humanas,88,88,,C,C,,conteudo,—,0.277,
+2018,humanas,89,89,,D,D,,conteudo,—,0.308,
+2018,humanas,90,90,,E,E,,conteudo,—,0.328,
+2018,linguagens,1,1,,B,B,,conteudo,—,0.344,
+2018,linguagens,2,2,,B,B,,conteudo,—,0.378,
+2018,linguagens,3,3,,D,D,,conteudo,—,0.457,
+2018,linguagens,4,4,,E,E,,conteudo,—,0.421,
+2018,linguagens,5,5,,C,C,,conteudo,—,0.349,
+2018,linguagens,1,1,,B,B,,numero,—,,
+2018,linguagens,2,2,,B,B,,numero,—,,
+2018,linguagens,3,3,,D,D,,numero,—,,
+2018,linguagens,4,4,,E,E,,numero,—,,
+2018,linguagens,5,5,,C,C,,numero,—,,
+2018,linguagens,6,6,,C,C,,conteudo,—,0.328,
+2018,linguagens,7,7,,E,E,,conteudo,—,0.782,
+2018,linguagens,8,8,,C,C,,conteudo,—,0.329,
+2018,linguagens,9,9,,B,B,,conteudo,—,0.363,
+2018,linguagens,10,10,,A,A,,conteudo,—,0.488,
+2018,linguagens,11,11,,B,B,,conteudo,—,0.367,
+2018,linguagens,12,12,,D,D,,conteudo,—,0.363,
+2018,linguagens,13,13,,B,B,,conteudo,—,0.352,
+2018,linguagens,14,14,,E,E,,conteudo,—,0.5,
+2018,linguagens,15,15,,D,D,,conteudo,—,0.475,
+2018,linguagens,16,16,,A,A,,conteudo,—,0.306,
+2018,linguagens,17,17,,C,C,,conteudo,—,0.351,
+2018,linguagens,18,18,,D,D,,conteudo,—,0.275,
+2018,linguagens,19,19,,D,D,,conteudo,—,0.362,
+2018,linguagens,20,20,,B,B,,conteudo,—,0.239,
+2018,linguagens,21,21,,B,B,,conteudo,—,0.364,
+2018,linguagens,22,22,,B,B,,conteudo,—,0.976,
+2018,linguagens,23,23,,E,E,,conteudo,—,0.317,
+2018,linguagens,24,24,,A,A,,conteudo,—,0.426,
+2018,linguagens,25,25,,D,D,,conteudo,—,0.979,
+2018,linguagens,26,26,,E,E,,conteudo,—,0.702,
+2018,linguagens,27,27,,C,C,,conteudo,—,0.382,
+2018,linguagens,28,28,,A,A,,conteudo,—,0.418,
+2018,linguagens,29,29,,C,C,,conteudo,—,0.435,
+2018,linguagens,30,30,,E,E,,conteudo,—,0.486,
+2018,linguagens,31,31,,D,D,,conteudo,—,0.389,
+2018,linguagens,32,32,,B,B,,conteudo,—,0.796,
+2018,linguagens,33,33,,E,E,,conteudo,—,0.311,
+2018,linguagens,34,34,,B,B,,conteudo,—,0.692,
+2018,linguagens,35,35,,A,A,,conteudo,—,0.424,
+2018,linguagens,36,36,,B,B,,conteudo,—,0.441,
+2018,linguagens,37,37,,C,C,,conteudo,—,0.23,
+2018,linguagens,38,38,,B,B,,conteudo,—,0.447,
+2018,linguagens,39,39,,E,E,,conteudo,—,0.846,
+2018,linguagens,40,40,,A,A,,conteudo,—,0.376,
+2018,linguagens,41,41,,E,E,,conteudo,—,0.833,
+2018,linguagens,42,42,,C,C,,conteudo,—,0.428,
+2018,linguagens,43,43,,A,A,,conteudo,—,0.358,
+2018,linguagens,44,44,,D,D,,conteudo,—,0.245,
+2018,linguagens,45,45,,A,A,,conteudo,—,0.42,
+2018,math,136,136,,A,A,,conteudo,—,0.75,
+2018,math,137,137,,C,C,,conteudo,—,0.906,
+2018,math,138,138,,E,E,,conteudo,—,0.949,
+2018,math,139,139,,A,A,,conteudo,—,0.75,
+2018,math,140,140,,D,D,,conteudo,—,0.947,
+2018,math,141,141,,C,C,,conteudo,—,0.778,
+2018,math,142,142,,E,E,,conteudo,—,0.719,
+2018,math,143,143,,B,B,,conteudo,—,0.971,
+2018,math,144,144,,B,B,,conteudo,—,1.0,
+2018,math,145,145,,D,D,,conteudo,—,0.971,
+2018,math,146,146,,A,A,,conteudo,—,0.977,
+2018,math,147,147,,D,D,,conteudo,—,0.884,
+2018,math,148,148,,A,A,,conteudo,—,0.985,
+2018,math,149,149,,A,A,,conteudo,—,0.984,
+2018,math,150,150,,E,E,,conteudo,—,1.0,
+2018,math,151,151,,B,B,,conteudo,—,0.923,
+2018,math,152,152,,B,B,,conteudo,—,0.73,
+2018,math,153,153,,D,D,,conteudo,—,0.964,
+2018,math,154,154,,D,D,,conteudo,—,0.81,
+2018,math,155,155,,E,E,,conteudo,—,0.646,
+2018,math,156,156,,D,D,,conteudo,—,1.0,
+2018,math,157,157,,A,A,,conteudo,—,0.659,
+2018,math,158,158,,B,B,,conteudo,—,1.0,
+2018,math,159,159,,A,A,,conteudo,—,0.906,
+2018,math,160,160,,D,D,,conteudo,—,0.954,
+2018,math,161,161,,B,B,,conteudo,—,1.0,
+2018,math,162,162,,E,E,,conteudo,—,0.976,
+2018,math,163,163,,ANNULLED,A,,conteudo,—,1.0,
+2018,math,164,164,,C,C,,conteudo,—,0.904,
+2018,math,165,165,,C,C,,conteudo,—,0.644,
+2018,math,166,166,,C,C,,conteudo,—,1.0,
+2018,math,167,167,,D,D,,conteudo,—,1.0,
+2018,math,168,168,,B,B,,conteudo,—,0.966,
+2018,math,169,169,,C,C,,conteudo,—,0.81,
+2018,math,170,170,,A,A,,conteudo,—,0.826,
+2018,math,171,171,,E,E,,conteudo,—,0.797,
+2018,math,172,172,,E,E,,conteudo,—,0.969,
+2018,math,173,173,,A,A,,conteudo,—,0.406,
+2018,math,174,174,,C,C,,conteudo,—,0.232,
+2018,math,175,175,,B,B,,conteudo,—,0.98,
+2018,math,176,176,,C,C,,conteudo,—,0.763,
+2018,math,177,177,,D,D,,conteudo,—,0.694,
+2018,math,178,178,,D,D,,conteudo,—,0.903,
+2018,math,179,179,,A,A,,conteudo,—,0.968,
+2018,math,180,180,,B,B,,conteudo,—,0.889,
+2018,nature,91,91,,B,B,,conteudo,—,0.391,
+2018,nature,92,92,,D,D,,conteudo,—,0.966,
+2018,nature,93,93,,D,D,,conteudo,—,0.921,
+2018,nature,94,94,,E,E,,conteudo,—,0.787,
+2018,nature,95,95,,D,D,,conteudo,—,0.891,
+2018,nature,96,96,,B,B,,conteudo,—,0.689,
+2018,nature,97,97,,C,C,,conteudo,—,0.289,
+2018,nature,98,98,,A,A,,conteudo,—,0.41,
+2018,nature,99,99,,C,C,,conteudo,—,0.184,
+2018,nature,100,100,,E,E,,conteudo,—,0.564,
+2018,nature,101,101,,B,B,,conteudo,—,0.882,
+2018,nature,102,102,,C,C,,conteudo,—,0.343,
+2018,nature,103,103,,C,C,,conteudo,—,0.267,
+2018,nature,104,104,,A,A,,conteudo,—,0.933,
+2018,nature,105,105,,C,C,,conteudo,—,0.356,
+2018,nature,106,106,,D,D,,numero,—,,
+2018,nature,107,107,,C,C,,conteudo,—,0.975,
+2018,nature,108,108,,D,D,,conteudo,—,0.857,
+2018,nature,109,109,,D,D,,conteudo,—,0.829,
+2018,nature,110,110,,A,A,,conteudo,—,0.967,
+2018,nature,111,111,,E,E,,conteudo,—,0.976,
+2018,nature,112,112,,C,C,,conteudo,—,0.949,
+2018,nature,113,113,,A,A,,conteudo,—,0.418,
+2018,nature,114,114,,A,A,,conteudo,—,0.196,
+2018,nature,115,115,,D,D,,conteudo,—,0.936,
+2018,nature,116,116,,B,B,,conteudo,—,0.946,
+2018,nature,117,117,,D,D,,conteudo,—,0.94,
+2018,nature,118,118,,B,B,,conteudo,—,0.972,
+2018,nature,119,119,,C,C,,conteudo,—,1.0,
+2018,nature,120,120,,E,E,,conteudo,—,1.0,
+2018,nature,121,121,,E,E,,conteudo,—,0.372,
+2018,nature,122,122,,A,A,,conteudo,—,1.0,
+2018,nature,123,123,,E,E,,conteudo,—,0.973,
+2018,nature,124,124,,A,A,,conteudo,—,1.0,
+2018,nature,125,125,,A,A,,conteudo,—,0.957,
+2018,nature,126,126,,B,B,,numero,—,,
+2018,nature,127,127,,E,E,,conteudo,—,0.513,
+2018,nature,128,128,,B,B,,conteudo,—,0.636,
+2018,nature,129,129,,E,E,,conteudo,—,0.965,
+2018,nature,130,130,,B,B,,conteudo,—,0.903,
+2018,nature,131,131,,B,B,,conteudo,—,0.898,
+2018,nature,132,132,,A,A,,conteudo,—,0.318,
+2018,nature,133,133,,C,C,,conteudo,—,0.985,
+2018,nature,134,134,,E,E,,conteudo,—,1.0,
+2018,nature,135,135,,D,D,,conteudo,—,0.216,
+2019,humanas,46,46,79,B,B,B,conteudo,via fonte B,0.234,0.865
+2019,humanas,47,47,80,A,A,A,conteudo,via fonte B,1.0,1.0
+2019,humanas,48,48,81,C,C,C,conteudo,via fonte B,0.275,0.975
+2019,humanas,49,49,82,C,C,C,conteudo,via fonte B,0.851,1.0
+2019,humanas,50,50,46,C,C,C,conteudo,via fonte B,0.236,1.0
+2019,humanas,51,51,47,B,B,B,conteudo,via fonte B,0.426,1.0
+2019,humanas,52,52,48,A,A,A,conteudo,via fonte B,0.762,1.0
+2019,humanas,53,53,49,B,B,B,conteudo,via fonte B,0.255,0.94
+2019,humanas,54,54,60,B,B,B,conteudo,via fonte B,0.823,0.878
+2019,humanas,55,55,61,A,A,A,conteudo,via fonte B,0.354,1.0
+2019,humanas,56,56,62,D,D,D,conteudo,via fonte B,0.861,1.0
+2019,humanas,57,57,63,C,C,C,conteudo,via fonte B,0.646,0.413
+2019,humanas,58,58,64,B,B,B,conteudo,via fonte B,0.295,1.0
+2019,humanas,59,59,54,C,C,C,conteudo,via fonte B,0.72,0.706
+2019,humanas,60,60,55,E,E,E,conteudo,via fonte B,0.323,0.979
+2019,humanas,61,61,56,E,E,E,numero,via fonte B,,0.617
+2019,humanas,62,62,57,E,E,E,conteudo,via fonte B,0.329,0.973
+2019,humanas,63,63,58,B,B,B,conteudo,via fonte B,0.697,0.805
+2019,humanas,64,64,59,C,C,C,conteudo,via fonte B,0.222,1.0
+2019,humanas,65,65,87,A,A,A,conteudo,via fonte B,0.301,1.0
+2019,humanas,66,66,88,C,C,C,conteudo,via fonte B,0.845,1.0
+2019,humanas,67,67,89,A,A,A,conteudo,via fonte B,0.328,0.817
+2019,humanas,68,68,90,C,C,C,conteudo,via fonte B,0.303,1.0
+2019,humanas,69,69,65,E,E,E,conteudo,via fonte B,0.866,0.928
+2019,humanas,70,70,66,E,E,E,conteudo,via fonte B,0.274,0.877
+2019,humanas,71,71,67,D,D,D,conteudo,via fonte B,0.855,1.0
+2019,humanas,72,72,68,B,B,B,conteudo,via fonte B,0.235,0.992
+2019,humanas,73,73,83,C,C,C,conteudo,via fonte B,0.27,0.89
+2019,humanas,74,74,84,C,C,C,conteudo,via fonte B,0.371,1.0
+2019,humanas,75,75,85,A,A,A,conteudo,via fonte B,0.31,0.944
+2019,humanas,76,76,86,D,D,D,conteudo,via fonte B,0.362,0.884
+2019,humanas,77,77,69,B,B,B,conteudo,via fonte B,0.375,1.0
+2019,humanas,78,78,70,E,E,E,conteudo,via fonte B,0.588,0.71
+2019,humanas,79,79,71,A,A,A,conteudo,via fonte B,0.439,1.0
+2019,humanas,80,80,72,D,D,D,conteudo,via fonte B,0.769,1.0
+2019,humanas,81,81,73,B,B,B,conteudo,via fonte B,0.855,0.714
+2019,humanas,82,82,50,A,A,A,conteudo,via fonte B,0.28,0.852
+2019,humanas,83,83,51,D,D,D,conteudo,via fonte B,0.891,0.982
+2019,humanas,84,84,52,B,B,B,conteudo,via fonte B,0.364,1.0
+2019,humanas,85,85,53,B,B,B,conteudo,via fonte B,0.596,0.702
+2019,humanas,86,86,74,B,B,B,conteudo,via fonte B,0.352,0.978
+2019,humanas,87,87,75,A,A,A,conteudo,via fonte B,0.897,0.975
+2019,humanas,88,88,76,C,C,C,conteudo,via fonte B,0.902,1.0
+2019,humanas,89,89,77,D,D,D,conteudo,via fonte B,0.242,0.955
+2019,humanas,90,90,78,B,B,B,conteudo,via fonte B,0.591,0.985
+2019,linguagens,1,1,2,B,B,B,conteudo,via fonte B,0.293,0.888
+2019,linguagens,2,2,4,D,D,D,conteudo,via fonte B,0.203,0.939
+2019,linguagens,3,3,5,A,A,A,conteudo,via fonte B,0.462,1.0
+2019,linguagens,4,4,1,B,B,B,conteudo,via fonte B,0.326,0.859
+2019,linguagens,5,5,3,E,E,E,conteudo,via fonte B,0.625,0.476
+2019,linguagens,1,1,,B,A,,conteudo,—,0.49,
+2019,linguagens,2,2,,D,B,,conteudo,—,0.2,
+2019,linguagens,3,3,,A,C,,conteudo,—,0.188,
+2019,linguagens,4,4,,B,A,,conteudo,—,0.386,
+2019,linguagens,5,5,,E,D,,conteudo,—,0.238,
+2019,linguagens,6,6,7,B,B,B,conteudo,via fonte B,0.413,0.88
+2019,linguagens,7,7,6,C,C,C,conteudo,via fonte B,0.414,0.838
+2019,linguagens,8,8,9,B,B,B,conteudo,via fonte B,0.347,0.951
+2019,linguagens,9,9,8,A,A,A,conteudo,via fonte B,0.221,0.97
+2019,linguagens,10,10,17,A,A,A,conteudo,via fonte B,0.313,0.464
+2019,linguagens,11,11,18,D,D,D,conteudo,via fonte B,0.728,1.0
+2019,linguagens,12,12,22,D,D,D,numero,via fonte B,,0.574
+2019,linguagens,13,13,23,B,B,B,conteudo,via fonte B,0.336,0.758
+2019,linguagens,14,14,43,E,E,E,conteudo,via fonte B,0.415,0.964
+2019,linguagens,15,15,44,C,C,C,conteudo,via fonte B,0.322,1.0
+2019,linguagens,16,16,45,D,D,D,conteudo,via fonte B,0.313,0.919
+2019,linguagens,17,17,41,A,A,A,conteudo,via fonte B,0.8,1.0
+2019,linguagens,18,18,42,A,A,A,conteudo,via fonte B,0.267,0.985
+2019,linguagens,19,19,36,E,E,E,conteudo,via fonte B,0.32,0.954
+2019,linguagens,20,20,37,C,C,C,conteudo,via fonte B,0.216,1.0
+2019,linguagens,21,21,38,D,D,D,conteudo,via fonte B,0.27,0.913
+2019,linguagens,22,22,10,A,A,A,conteudo,via fonte B,0.322,0.833
+2019,linguagens,23,23,11,E,E,E,conteudo,via fonte B,0.795,0.809
+2019,linguagens,24,24,12,C,C,C,conteudo,via fonte B,0.603,0.923
+2019,linguagens,25,25,13,B,B,B,conteudo,via fonte B,1.0,0.91
+2019,linguagens,26,26,39,E,E,E,conteudo,via fonte B,0.216,0.992
+2019,linguagens,27,27,40,C,C,C,conteudo,via fonte B,0.845,0.966
+2019,linguagens,28,28,14,B,B,B,conteudo,via fonte B,0.243,0.944
+2019,linguagens,29,29,15,C,C,C,conteudo,via fonte B,0.224,1.0
+2019,linguagens,30,30,16,C,C,C,conteudo,via fonte B,0.366,0.992
+2019,linguagens,31,31,27,D,D,D,conteudo,via fonte B,0.667,0.978
+2019,linguagens,32,32,28,E,E,E,conteudo,via fonte B,0.196,0.957
+2019,linguagens,33,33,29,E,C,E,conteudo,via fonte B,0.299,0.814
+2019,linguagens,34,34,30,A,A,A,conteudo,via fonte B,0.316,0.885
+2019,linguagens,35,35,31,A,A,A,conteudo,via fonte B,0.806,0.973
+2019,linguagens,36,36,32,A,A,A,conteudo,via fonte B,0.506,0.794
+2019,linguagens,37,37,33,D,D,D,conteudo,via fonte B,0.549,1.0
+2019,linguagens,38,38,34,D,D,D,numero,via fonte B,,0.714
+2019,linguagens,39,39,35,B,B,B,conteudo,via fonte B,0.323,0.742
+2019,linguagens,40,40,24,B,B,B,numero,via fonte B,,0.877
+2019,linguagens,41,41,25,C,C,C,conteudo,via fonte B,0.207,0.957
+2019,linguagens,42,42,26,D,D,D,conteudo,via fonte B,0.324,1.0
+2019,linguagens,43,43,19,C,C,C,conteudo,via fonte B,0.736,0.722
+2019,linguagens,44,44,20,E,E,E,conteudo,via fonte B,0.381,0.77
+2019,linguagens,45,45,21,B,B,B,conteudo,via fonte B,0.325,0.859
+2019,math,136,136,139,E,E,E,conteudo,via fonte B,0.94,1.0
+2019,math,137,137,140,E,E,E,conteudo,via fonte B,0.818,0.852
+2019,math,138,138,141,E,E,E,conteudo,via fonte B,0.97,1.0
+2019,math,139,139,163,A,A,A,conteudo,via fonte B,0.936,1.0
+2019,math,140,140,144,D,D,D,conteudo,via fonte B,0.841,1.0
+2019,math,141,141,145,B,B,B,conteudo,via fonte B,1.0,1.0
+2019,math,142,142,146,E,E,E,conteudo,via fonte B,1.0,1.0
+2019,math,143,143,147,B,B,B,conteudo,via fonte B,1.0,1.0
+2019,math,144,144,148,A,A,A,conteudo,via fonte B,1.0,1.0
+2019,math,145,145,149,C,C,C,conteudo,via fonte B,0.857,0.87
+2019,math,146,146,150,A,A,A,conteudo,via fonte B,0.781,0.68
+2019,math,147,147,151,B,B,B,conteudo,via fonte B,0.96,0.961
+2019,math,148,148,152,C,C,C,conteudo,via fonte B,1.0,1.0
+2019,math,149,149,153,D,D,D,conteudo,via fonte B,0.831,0.831
+2019,math,150,150,154,B,B,B,conteudo,via fonte B,1.0,1.0
+2019,math,151,151,155,A,A,A,conteudo,via fonte B,0.922,0.952
+2019,math,152,152,156,B,B,B,conteudo,via fonte B,1.0,1.0
+2019,math,153,153,157,E,E,E,conteudo,via fonte B,0.848,0.848
+2019,math,154,154,158,C,C,C,conteudo,via fonte B,0.847,0.934
+2019,math,155,155,159,E,E,E,conteudo,via fonte B,0.484,0.597
+2019,math,156,156,160,C,C,C,conteudo,via fonte B,1.0,1.0
+2019,math,157,157,161,A,A,A,conteudo,via fonte B,0.606,0.597
+2019,math,158,158,162,C,C,C,conteudo,via fonte B,0.617,1.0
+2019,math,159,159,164,D,D,D,conteudo,via fonte B,0.976,1.0
+2019,math,160,160,165,C,C,C,conteudo,via fonte B,0.939,0.939
+2019,math,161,161,166,B,B,B,conteudo,via fonte B,0.943,0.943
+2019,math,162,162,167,D,D,D,conteudo,via fonte B,0.947,1.0
+2019,math,163,163,168,C,C,C,conteudo,via fonte B,0.941,0.961
+2019,math,164,164,169,C,C,C,conteudo,via fonte B,1.0,0.886
+2019,math,165,165,170,E,E,E,conteudo,via fonte B,0.867,1.0
+2019,math,166,166,171,D,D,D,conteudo,via fonte B,0.725,0.679
+2019,math,167,167,172,C,C,C,conteudo,via fonte B,0.857,0.857
+2019,math,168,168,173,D,D,D,conteudo,via fonte B,0.733,0.75
+2019,math,169,169,174,A,A,A,conteudo,via fonte B,0.988,1.0
+2019,math,170,170,136,B,B,B,conteudo,via fonte B,1.0,0.898
+2019,math,171,171,137,E,E,E,conteudo,via fonte B,0.926,0.815
+2019,math,172,172,138,D,D,D,conteudo,via fonte B,0.674,0.673
+2019,math,173,173,176,E,E,E,conteudo,via fonte B,0.73,1.0
+2019,math,174,174,177,C,C,C,conteudo,via fonte B,0.974,0.809
+2019,math,175,175,178,D,D,D,conteudo,via fonte B,0.908,0.984
+2019,math,176,176,179,D,D,D,conteudo,via fonte B,0.962,1.0
+2019,math,177,177,180,D,D,D,conteudo,via fonte B,1.0,0.827
+2019,math,178,178,175,B,B,B,conteudo,via fonte B,0.87,0.658
+2019,math,179,179,142,A,A,A,conteudo,via fonte B,0.547,0.853
+2019,math,180,180,143,A,A,A,conteudo,via fonte B,0.908,1.0
+2019,nature,91,91,94,A,A,A,conteudo,via fonte B,0.922,0.94
+2019,nature,92,92,95,A,A,A,conteudo,via fonte B,1.0,1.0
+2019,nature,93,93,96,E,E,E,conteudo,via fonte B,0.841,1.0
+2019,nature,94,94,124,C,C,C,conteudo,via fonte B,0.447,0.975
+2019,nature,95,95,125,A,A,A,conteudo,via fonte B,0.472,0.757
+2019,nature,96,96,126,C,C,C,conteudo,via fonte B,0.767,1.0
+2019,nature,97,97,102,D,D,D,conteudo,via fonte B,0.791,1.0
+2019,nature,98,98,103,E,E,E,conteudo,via fonte B,1.0,1.0
+2019,nature,99,99,104,A,A,A,conteudo,via fonte B,0.79,1.0
+2019,nature,100,100,105,D,D,D,conteudo,via fonte B,0.815,0.831
+2019,nature,101,101,121,C,C,C,conteudo,via fonte B,0.397,1.0
+2019,nature,102,102,122,B,B,B,conteudo,via fonte B,0.955,0.941
+2019,nature,103,103,123,C,C,C,conteudo,via fonte B,0.755,0.99
+2019,nature,104,104,115,D,D,D,conteudo,via fonte B,0.926,1.0
+2019,nature,105,105,116,D,D,D,conteudo,via fonte B,1.0,1.0
+2019,nature,106,106,117,D,D,D,conteudo,via fonte B,1.0,1.0
+2019,nature,107,107,118,B,B,B,conteudo,via fonte B,0.961,0.961
+2019,nature,108,108,119,C,C,C,conteudo,via fonte B,0.885,0.952
+2019,nature,109,109,120,B,B,B,conteudo,via fonte B,1.0,1.0
+2019,nature,110,110,106,D,D,D,conteudo,via fonte B,0.49,0.987
+2019,nature,111,111,107,A,A,A,conteudo,via fonte B,0.6,0.956
+2019,nature,112,112,108,D,D,D,conteudo,via fonte B,0.815,0.562
+2019,nature,113,113,109,A,A,A,conteudo,via fonte B,0.945,1.0
+2019,nature,114,114,110,E,E,E,conteudo,via fonte B,1.0,1.0
+2019,nature,115,115,111,A,A,A,conteudo,via fonte B,1.0,1.0
+2019,nature,116,116,112,B,B,B,conteudo,via fonte B,0.955,1.0
+2019,nature,117,117,113,C,C,C,conteudo,via fonte B,0.909,0.808
+2019,nature,118,118,114,E,E,E,conteudo,via fonte B,0.867,0.722
+2019,nature,119,119,100,B,B,B,conteudo,via fonte B,0.694,1.0
+2019,nature,120,120,101,A,A,A,conteudo,via fonte B,0.591,0.954
+2019,nature,121,121,97,B,B,B,conteudo,via fonte B,0.837,0.768
+2019,nature,122,122,98,E,E,E,conteudo,via fonte B,0.812,0.867
+2019,nature,123,123,99,E,E,E,conteudo,via fonte B,0.267,0.974
+2019,nature,124,124,127,B,B,B,conteudo,via fonte B,0.528,0.532
+2019,nature,125,125,128,C,C,C,conteudo,via fonte B,0.833,0.769
+2019,nature,126,126,91,B,B,B,conteudo,via fonte B,1.0,1.0
+2019,nature,127,127,92,E,E,E,conteudo,via fonte B,0.819,1.0
+2019,nature,128,128,93,E,E,E,conteudo,via fonte B,0.889,1.0
+2019,nature,129,129,133,C,C,C,conteudo,via fonte B,0.587,0.578
+2019,nature,130,130,134,E,E,E,conteudo,via fonte B,1.0,0.883
+2019,nature,131,131,135,B,B,B,conteudo,via fonte B,0.74,0.563
+2019,nature,132,132,129,D,D,D,conteudo,via fonte B,0.972,0.821
+2019,nature,133,133,130,A,A,A,conteudo,via fonte B,0.85,1.0
+2019,nature,134,134,131,D,D,D,conteudo,via fonte B,1.0,1.0
+2019,nature,135,135,132,C,C,C,conteudo,via fonte B,0.885,0.979
+2020,humanas,46,46,68,D,D,D,conteudo,via fonte B,0.295,0.832
+2020,humanas,47,47,69,A,A,A,conteudo,via fonte B,0.326,0.978
+2020,humanas,48,48,70,B,B,B,conteudo,via fonte B,0.473,0.978
+2020,humanas,49,49,71,C,C,C,conteudo,via fonte B,0.344,0.819
+2020,humanas,50,50,59,B,B,B,conteudo,via fonte B,0.333,0.783
+2020,humanas,51,51,60,D,D,D,conteudo,via fonte B,0.522,0.522
+2020,humanas,52,52,55,D,D,D,conteudo,via fonte B,0.359,0.937
+2020,humanas,53,53,56,D,D,D,conteudo,via fonte B,0.256,1.0
+2020,humanas,54,54,57,A,A,A,conteudo,via fonte B,0.319,1.0
+2020,humanas,55,55,58,E,E,E,conteudo,via fonte B,0.435,0.957
+2020,humanas,56,56,86,D,D,D,conteudo,via fonte B,0.481,0.964
+2020,humanas,57,57,87,B,B,B,conteudo,via fonte B,0.322,0.978
+2020,humanas,58,58,88,E,E,E,conteudo,via fonte B,0.371,0.938
+2020,humanas,59,59,89,C,C,C,conteudo,via fonte B,0.358,1.0
+2020,humanas,60,60,90,E,E,E,conteudo,via fonte B,0.45,0.988
+2020,humanas,61,61,64,C,C,C,conteudo,via fonte B,0.458,1.0
+2020,humanas,62,62,65,B,B,B,conteudo,via fonte B,0.407,1.0
+2020,humanas,63,63,66,B,B,B,conteudo,via fonte B,0.495,0.866
+2020,humanas,64,64,67,E,E,E,conteudo,via fonte B,0.478,0.978
+2020,humanas,65,65,53,D,D,D,conteudo,via fonte B,0.333,0.971
+2020,humanas,66,66,54,E,E,E,conteudo,via fonte B,0.417,1.0
+2020,humanas,67,67,77,B,B,B,conteudo,via fonte B,0.786,0.917
+2020,humanas,68,68,78,D,D,D,conteudo,via fonte B,0.4,1.0
+2020,humanas,69,69,79,E,E,E,conteudo,via fonte B,0.301,1.0
+2020,humanas,70,70,80,E,E,E,conteudo,via fonte B,0.338,1.0
+2020,humanas,71,71,49,C,C,C,conteudo,via fonte B,0.366,0.886
+2020,humanas,72,72,50,B,B,B,conteudo,via fonte B,0.491,0.964
+2020,humanas,73,73,51,C,C,C,conteudo,via fonte B,0.375,0.982
+2020,humanas,74,74,52,C,C,C,conteudo,via fonte B,0.508,0.45
+2020,humanas,75,75,72,C,C,C,conteudo,via fonte B,0.377,0.77
+2020,humanas,76,76,73,B,B,B,conteudo,via fonte B,0.237,0.755
+2020,humanas,77,77,74,A,A,A,conteudo,via fonte B,0.543,1.0
+2020,humanas,78,78,75,C,C,C,conteudo,via fonte B,0.442,0.788
+2020,humanas,79,79,76,D,D,D,conteudo,via fonte B,0.329,1.0
+2020,humanas,80,80,81,C,C,C,conteudo,via fonte B,0.457,0.886
+2020,humanas,81,81,82,C,C,C,conteudo,via fonte B,0.274,0.976
+2020,humanas,82,82,83,A,A,A,conteudo,via fonte B,0.216,0.898
+2020,humanas,83,83,84,D,D,D,conteudo,via fonte B,0.494,0.918
+2020,humanas,84,84,85,E,E,E,conteudo,via fonte B,0.321,1.0
+2020,humanas,85,85,46,B,B,B,conteudo,via fonte B,0.455,1.0
+2020,humanas,86,86,47,D,D,D,conteudo,via fonte B,0.361,0.986
+2020,humanas,87,87,48,E,E,E,conteudo,via fonte B,0.379,0.894
+2020,humanas,88,88,61,C,C,C,conteudo,via fonte B,0.359,0.856
+2020,humanas,89,89,62,D,D,D,conteudo,via fonte B,0.253,1.0
+2020,humanas,90,90,63,D,D,D,conteudo,via fonte B,0.216,1.0
+2020,linguagens,1,1,5,A,A,A,conteudo,via fonte B,1.0,1.0
+2020,linguagens,2,2,4,A,A,A,conteudo,via fonte B,1.0,1.0
+2020,linguagens,3,3,3,E,E,E,conteudo,via fonte B,0.301,0.935
+2020,linguagens,4,4,2,D,D,D,conteudo,via fonte B,0.368,0.826
+2020,linguagens,5,5,1,C,C,C,conteudo,via fonte B,0.234,0.932
+2020,linguagens,1,1,,A,A,,conteudo,—,0.545,
+2020,linguagens,2,2,,A,C,,conteudo,—,0.282,
+2020,linguagens,3,3,,E,E,,conteudo,—,0.269,
+2020,linguagens,4,4,,D,E,,conteudo,—,0.27,
+2020,linguagens,5,5,,C,E,,conteudo,—,0.256,
+2020,linguagens,6,6,35,C,C,C,conteudo,via fonte B,0.338,0.846
+2020,linguagens,7,7,36,E,E,E,conteudo,via fonte B,0.711,0.6
+2020,linguagens,8,8,16,A,A,A,conteudo,via fonte B,0.181,0.722
+2020,linguagens,9,9,17,A,A,A,conteudo,via fonte B,0.215,0.984
+2020,linguagens,10,10,18,C,C,C,conteudo,via fonte B,0.256,0.876
+2020,linguagens,11,11,19,B,B,B,conteudo,via fonte B,0.333,0.973
+2020,linguagens,12,12,20,A,A,A,conteudo,via fonte B,0.3,0.926
+2020,linguagens,13,13,21,E,E,E,conteudo,via fonte B,0.355,1.0
+2020,linguagens,14,14,22,B,B,B,conteudo,via fonte B,0.69,0.577
+2020,linguagens,15,15,44,B,B,B,conteudo,via fonte B,1.0,0.439
+2020,linguagens,16,16,45,E,E,E,conteudo,via fonte B,0.346,0.932
+2020,linguagens,17,17,26,D,D,D,conteudo,via fonte B,0.353,0.912
+2020,linguagens,18,18,27,A,A,A,conteudo,via fonte B,0.451,0.806
+2020,linguagens,19,19,28,C,C,C,conteudo,via fonte B,0.383,0.833
+2020,linguagens,20,20,32,D,D,D,conteudo,via fonte B,0.204,0.925
+2020,linguagens,21,21,33,B,B,B,conteudo,via fonte B,0.582,0.834
+2020,linguagens,22,22,34,A,A,A,conteudo,via fonte B,0.719,0.719
+2020,linguagens,23,23,9,A,A,A,conteudo,via fonte B,0.455,0.879
+2020,linguagens,24,24,10,D,D,D,conteudo,via fonte B,0.213,0.705
+2020,linguagens,25,25,11,A,A,C,conteudo,via fonte B,1.0,0.698
+2020,linguagens,26,26,12,D,D,D,conteudo,via fonte B,0.984,0.887
+2020,linguagens,27,27,41,D,D,D,conteudo,via fonte B,0.628,0.989
+2020,linguagens,28,28,42,E,E,E,conteudo,via fonte B,0.464,0.932
+2020,linguagens,29,29,43,B,B,B,conteudo,via fonte B,0.358,0.963
+2020,linguagens,30,30,6,B,B,B,conteudo,via fonte B,0.936,0.957
+2020,linguagens,31,31,7,E,E,E,conteudo,via fonte B,0.259,0.939
+2020,linguagens,32,32,8,B,B,B,conteudo,via fonte B,0.31,0.94
+2020,linguagens,33,33,13,A,A,A,conteudo,via fonte B,0.442,0.856
+2020,linguagens,34,34,14,A,D,D,conteudo,via fonte B,0.24,0.829
+2020,linguagens,35,35,15,A,A,A,conteudo,via fonte B,0.387,0.892
+2020,linguagens,36,36,23,D,D,D,conteudo,via fonte B,0.513,0.853
+2020,linguagens,37,37,24,E,E,E,conteudo,via fonte B,0.812,0.851
+2020,linguagens,38,38,25,A,B,A,conteudo,via fonte B,0.504,0.881
+2020,linguagens,39,39,37,C,C,C,conteudo,via fonte B,0.349,0.838
+2020,linguagens,40,40,38,A,A,A,conteudo,via fonte B,0.321,0.9
+2020,linguagens,41,41,39,A,A,A,conteudo,via fonte B,0.347,0.925
+2020,linguagens,42,42,40,A,A,A,conteudo,via fonte B,0.32,0.898
+2020,linguagens,43,43,29,D,D,D,numero,via fonte B,,0.724
+2020,linguagens,44,44,30,B,B,B,conteudo,via fonte B,1.0,1.0
+2020,linguagens,45,45,31,B,D,B,conteudo,via fonte B,0.463,0.864
+2020,math,136,136,136,D,D,D,conteudo,via fonte B,0.286,0.75
+2020,math,137,137,137,A,A,A,conteudo,via fonte B,0.972,0.875
+2020,math,138,138,138,B,B,B,conteudo,via fonte B,1.0,1.0
+2020,math,139,139,139,C,C,C,conteudo,via fonte B,0.977,0.894
+2020,math,140,140,140,C,C,C,conteudo,via fonte B,1.0,0.718
+2020,math,141,141,141,A,A,A,conteudo,via fonte B,1.0,1.0
+2020,math,142,142,142,E,E,E,conteudo,via fonte B,0.767,0.767
+2020,math,143,143,143,D,D,D,conteudo,via fonte B,0.5,1.0
+2020,math,144,144,144,B,B,B,conteudo,via fonte B,0.9,1.0
+2020,math,145,145,145,B,B,B,conteudo,via fonte B,0.807,0.837
+2020,math,146,146,146,C,C,C,conteudo,via fonte B,0.978,1.0
+2020,math,147,147,147,C,C,C,conteudo,via fonte B,0.982,0.982
+2020,math,148,148,148,C,C,C,conteudo,via fonte B,0.327,1.0
+2020,math,149,149,149,A,A,A,conteudo,via fonte B,0.286,0.976
+2020,math,150,150,150,B,B,B,conteudo,via fonte B,0.776,0.861
+2020,math,151,151,151,C,C,C,conteudo,via fonte B,1.0,0.972
+2020,math,152,152,152,A,A,A,conteudo,via fonte B,0.803,0.827
+2020,math,153,153,153,C,C,C,conteudo,via fonte B,0.686,0.7
+2020,math,154,154,154,C,C,C,conteudo,via fonte B,0.895,0.982
+2020,math,155,155,155,B,B,B,conteudo,via fonte B,0.93,0.904
+2020,math,156,156,156,D,D,D,conteudo,via fonte B,0.879,0.8
+2020,math,157,157,157,ANNULLED,B,B,conteudo,via fonte B,0.925,0.925
+2020,math,158,158,158,C,C,C,conteudo,via fonte B,1.0,1.0
+2020,math,159,159,159,C,C,C,conteudo,via fonte B,0.792,0.792
+2020,math,160,160,160,C,C,C,conteudo,via fonte B,1.0,1.0
+2020,math,161,161,161,B,B,B,conteudo,via fonte B,0.958,0.957
+2020,math,162,162,162,E,E,E,conteudo,via fonte B,1.0,1.0
+2020,math,163,163,163,E,E,E,conteudo,via fonte B,0.586,0.636
+2020,math,164,164,164,E,E,E,numero,via fonte B,,0.852
+2020,math,165,165,165,D,D,D,conteudo,via fonte B,1.0,1.0
+2020,math,166,166,166,B,B,B,conteudo,via fonte B,0.737,0.737
+2020,math,167,167,167,B,B,B,conteudo,via fonte B,1.0,1.0
+2020,math,168,168,168,A,A,A,conteudo,via fonte B,0.911,1.0
+2020,math,169,169,169,C,C,C,conteudo,via fonte B,0.521,0.724
+2020,math,170,170,170,C,C,C,conteudo,via fonte B,0.962,0.962
+2020,math,171,171,171,D,D,D,conteudo,via fonte B,0.58,0.417
+2020,math,172,172,172,A,A,A,conteudo,via fonte B,0.944,0.986
+2020,math,173,173,173,C,C,C,conteudo,via fonte B,0.74,0.694
+2020,math,174,174,174,B,B,B,conteudo,via fonte B,0.879,0.934
+2020,math,175,175,175,A,A,A,conteudo,via fonte B,0.857,0.857
+2020,math,176,176,176,E,E,E,conteudo,via fonte B,0.984,0.984
+2020,math,177,177,177,B,B,B,conteudo,via fonte B,1.0,0.5
+2020,math,178,178,178,A,A,A,conteudo,via fonte B,0.967,1.0
+2020,math,179,179,179,E,E,E,conteudo,via fonte B,0.316,0.789
+2020,math,180,180,180,C,C,C,conteudo,via fonte B,0.755,0.74
+2020,nature,91,91,91,D,D,D,conteudo,via fonte B,0.548,0.535
+2020,nature,92,92,92,D,D,D,conteudo,via fonte B,1.0,1.0
+2020,nature,93,93,93,B,B,B,conteudo,via fonte B,0.978,0.978
+2020,nature,94,94,94,A,A,A,conteudo,via fonte B,0.805,0.731
+2020,nature,95,95,95,C,C,C,conteudo,via fonte B,1.0,1.0
+2020,nature,96,96,96,B,B,B,conteudo,via fonte B,0.891,0.907
+2020,nature,97,97,97,D,D,D,conteudo,via fonte B,0.833,0.833
+2020,nature,98,98,98,D,D,D,conteudo,via fonte B,1.0,1.0
+2020,nature,99,99,99,D,D,D,conteudo,via fonte B,0.825,0.846
+2020,nature,100,100,100,E,E,E,conteudo,via fonte B,0.941,0.988
+2020,nature,101,101,101,C,C,C,conteudo,via fonte B,1.0,1.0
+2020,nature,102,102,102,D,D,D,conteudo,via fonte B,1.0,1.0
+2020,nature,103,103,103,A,A,A,conteudo,via fonte B,1.0,0.978
+2020,nature,104,104,104,E,E,E,conteudo,via fonte B,1.0,1.0
+2020,nature,105,105,105,D,D,A,conteudo,via fonte B,1.0,1.0
+2020,nature,106,106,106,C,C,C,conteudo,via fonte B,0.934,0.853
+2020,nature,107,107,107,C,C,C,conteudo,via fonte B,0.93,0.806
+2020,nature,108,108,108,C,C,C,conteudo,via fonte B,0.36,0.978
+2020,nature,109,109,109,E,E,E,conteudo,via fonte B,1.0,0.979
+2020,nature,110,110,110,D,D,D,conteudo,via fonte B,1.0,0.984
+2020,nature,111,111,111,B,B,B,conteudo,via fonte B,0.185,0.889
+2020,nature,112,112,112,D,D,D,conteudo,via fonte B,0.898,1.0
+2020,nature,113,113,113,D,D,D,conteudo,via fonte B,0.958,0.676
+2020,nature,114,114,114,C,C,C,conteudo,via fonte B,0.948,0.948
+2020,nature,115,115,115,B,B,B,conteudo,via fonte B,0.214,1.0
+2020,nature,116,116,116,D,D,D,conteudo,via fonte B,0.847,0.847
+2020,nature,117,117,117,D,D,D,conteudo,via fonte B,0.186,1.0
+2020,nature,118,118,118,C,C,C,conteudo,via fonte B,0.859,0.859
+2020,nature,119,119,119,A,A,A,numero,via fonte B,,0.783
+2020,nature,120,120,120,A,A,A,numero,via fonte B,,0.957
+2020,nature,121,121,121,E,E,E,conteudo,via fonte B,0.977,0.741
+2020,nature,122,122,122,C,C,C,conteudo,via fonte B,0.41,0.619
+2020,nature,123,123,123,E,E,E,conteudo,via fonte B,0.933,0.966
+2020,nature,124,124,124,D,D,D,conteudo,via fonte B,0.971,1.0
+2020,nature,125,125,125,D,D,D,conteudo,via fonte B,0.964,0.844
+2020,nature,126,126,126,A,A,A,conteudo,via fonte B,1.0,1.0
+2020,nature,127,127,127,C,C,C,conteudo,via fonte B,0.291,0.574
+2020,nature,128,128,128,C,C,C,conteudo,via fonte B,0.947,1.0
+2020,nature,129,129,129,B,B,B,conteudo,via fonte B,0.797,0.705
+2020,nature,130,130,130,A,A,A,numero,via fonte B,,0.505
+2020,nature,131,131,131,E,E,E,conteudo,via fonte B,0.756,0.702
+2020,nature,132,132,132,D,D,D,conteudo,via fonte B,0.629,0.831
+2020,nature,133,133,133,C,C,C,conteudo,via fonte B,0.384,0.849
+2020,nature,134,134,134,D,D,D,conteudo,via fonte B,0.693,0.692
+2020,nature,135,135,135,ANNULLED,,A,conteudo,via fonte B,1.0,0.968
+2021,humanas,46,46,83,B,B,B,conteudo,via fonte B,0.307,1.0
+2021,humanas,47,47,84,A,A,A,conteudo,via fonte B,0.29,1.0
+2021,humanas,48,48,85,D,D,D,conteudo,via fonte B,0.271,1.0
+2021,humanas,49,49,86,C,C,C,conteudo,via fonte B,0.235,0.795
+2021,humanas,50,50,71,B,B,B,conteudo,via fonte B,0.281,0.989
+2021,humanas,51,51,72,A,A,A,conteudo,via fonte B,0.329,0.971
+2021,humanas,52,52,73,D,D,D,conteudo,via fonte B,0.31,1.0
+2021,humanas,53,53,74,B,B,B,conteudo,via fonte B,0.414,0.837
+2021,humanas,54,54,75,C,C,C,conteudo,via fonte B,0.299,1.0
+2021,humanas,55,55,65,E,E,E,conteudo,via fonte B,0.425,0.869
+2021,humanas,56,56,66,C,D,D,conteudo,via fonte B,0.343,0.862
+2021,humanas,57,57,67,D,D,D,conteudo,via fonte B,0.344,1.0
+2021,humanas,58,58,68,E,E,E,conteudo,via fonte B,0.319,0.989
+2021,humanas,59,59,69,B,B,B,conteudo,via fonte B,0.208,1.0
+2021,humanas,60,60,70,B,B,B,conteudo,via fonte B,0.388,1.0
+2021,humanas,61,61,55,A,A,A,conteudo,via fonte B,0.256,1.0
+2021,humanas,62,62,56,D,D,D,conteudo,via fonte B,0.282,0.795
+2021,humanas,63,63,57,B,B,B,conteudo,via fonte B,0.298,1.0
+2021,humanas,64,64,58,C,C,C,conteudo,via fonte B,0.345,1.0
+2021,humanas,65,65,59,A,A,A,conteudo,via fonte B,0.274,1.0
+2021,humanas,66,66,46,B,B,B,conteudo,via fonte B,0.348,1.0
+2021,humanas,67,67,47,E,E,E,conteudo,via fonte B,0.244,0.915
+2021,humanas,68,68,48,E,E,E,conteudo,via fonte B,0.349,1.0
+2021,humanas,69,69,49,C,C,C,conteudo,via fonte B,0.388,0.954
+2021,humanas,70,70,50,C,C,C,conteudo,via fonte B,0.283,1.0
+2021,humanas,71,71,51,A,A,A,conteudo,via fonte B,0.265,0.955
+2021,humanas,72,72,52,E,E,E,conteudo,via fonte B,0.244,0.978
+2021,humanas,73,73,53,A,A,A,conteudo,via fonte B,0.297,0.859
+2021,humanas,74,74,54,B,B,B,conteudo,via fonte B,0.323,0.806
+2021,humanas,75,75,60,E,E,E,conteudo,via fonte B,0.301,0.863
+2021,humanas,76,76,61,B,B,B,conteudo,via fonte B,0.291,0.861
+2021,humanas,77,77,62,A,A,A,conteudo,via fonte B,0.366,1.0
+2021,humanas,78,78,63,A,A,A,conteudo,via fonte B,0.299,1.0
+2021,humanas,79,79,64,E,E,E,conteudo,via fonte B,0.429,1.0
+2021,humanas,80,80,87,C,C,C,conteudo,via fonte B,0.355,1.0
+2021,humanas,81,81,88,B,B,B,conteudo,via fonte B,0.375,0.914
+2021,humanas,82,82,89,B,B,B,conteudo,via fonte B,0.327,0.788
+2021,humanas,83,83,90,A,A,A,conteudo,via fonte B,0.237,0.858
+2021,humanas,84,84,76,B,B,B,conteudo,via fonte B,0.338,0.962
+2021,humanas,85,85,77,C,A,A,conteudo,via fonte B,0.226,0.892
+2021,humanas,86,86,78,A,A,A,conteudo,via fonte B,0.452,0.968
+2021,humanas,87,87,79,E,E,E,conteudo,via fonte B,0.493,1.0
+2021,humanas,88,88,80,E,E,E,conteudo,via fonte B,0.317,1.0
+2021,humanas,89,89,81,B,B,B,conteudo,via fonte B,0.353,0.353
+2021,humanas,90,90,82,B,B,B,conteudo,via fonte B,0.439,0.774
+2021,linguagens,1,1,5,C,C,C,conteudo,via fonte B,0.188,0.97
+2021,linguagens,2,2,4,A,A,A,conteudo,via fonte B,0.208,0.956
+2021,linguagens,3,3,1,A,A,A,conteudo,via fonte B,0.352,1.0
+2021,linguagens,4,4,2,B,B,B,conteudo,via fonte B,1.0,0.565
+2021,linguagens,5,5,3,B,B,B,conteudo,via fonte B,0.216,0.864
+2021,linguagens,1,1,,C,C,,conteudo,—,0.254,
+2021,linguagens,2,2,,A,A,,conteudo,—,0.31,
+2021,linguagens,3,3,,E,E,,conteudo,—,0.194,
+2021,linguagens,4,4,,A,A,,conteudo,—,0.522,
+2021,linguagens,5,5,,A,A,,conteudo,—,1.0,
+2021,linguagens,6,6,18,B,B,B,conteudo,via fonte B,0.226,0.938
+2021,linguagens,7,7,19,D,D,D,conteudo,via fonte B,0.28,1.0
+2021,linguagens,8,8,6,C,C,C,conteudo,via fonte B,0.424,0.942
+2021,linguagens,9,9,7,D,D,D,conteudo,via fonte B,0.287,0.864
+2021,linguagens,10,10,34,E,E,E,conteudo,via fonte B,0.354,0.927
+2021,linguagens,11,11,35,A,A,A,conteudo,via fonte B,0.516,0.909
+2021,linguagens,12,12,31,D,D,D,conteudo,via fonte B,1.0,1.0
+2021,linguagens,13,13,32,C,C,C,conteudo,via fonte B,0.375,0.375
+2021,linguagens,14,14,33,E,E,E,conteudo,via fonte B,0.399,1.0
+2021,linguagens,15,15,22,D,D,D,conteudo,via fonte B,0.304,1.0
+2021,linguagens,16,16,23,B,B,B,conteudo,via fonte B,0.237,0.922
+2021,linguagens,17,17,24,E,E,E,conteudo,via fonte B,0.204,0.947
+2021,linguagens,18,18,25,D,D,D,conteudo,via fonte B,0.974,0.974
+2021,linguagens,19,19,26,D,D,D,conteudo,via fonte B,0.316,1.0
+2021,linguagens,20,20,10,D,D,D,conteudo,via fonte B,0.368,0.901
+2021,linguagens,21,21,11,A,A,A,conteudo,via fonte B,0.246,0.922
+2021,linguagens,22,22,27,B,B,B,conteudo,via fonte B,0.442,0.938
+2021,linguagens,23,23,28,B,B,B,conteudo,via fonte B,0.461,0.941
+2021,linguagens,24,24,29,B,E,B,conteudo,via fonte B,0.294,1.0
+2021,linguagens,25,25,30,B,B,B,conteudo,via fonte B,0.192,0.935
+2021,linguagens,26,26,12,D,D,D,conteudo,via fonte B,0.235,0.941
+2021,linguagens,27,27,13,E,E,E,conteudo,via fonte B,0.398,0.906
+2021,linguagens,28,28,14,B,B,B,conteudo,via fonte B,0.277,0.993
+2021,linguagens,29,29,20,C,C,C,conteudo,via fonte B,0.199,0.861
+2021,linguagens,30,30,21,E,E,E,conteudo,via fonte B,0.243,0.977
+2021,linguagens,31,31,36,A,A,A,conteudo,via fonte B,0.253,1.0
+2021,linguagens,32,32,37,D,D,D,conteudo,via fonte B,0.262,0.988
+2021,linguagens,33,33,38,A,A,A,conteudo,via fonte B,0.509,0.509
+2021,linguagens,34,34,8,B,B,B,conteudo,via fonte B,1.0,0.979
+2021,linguagens,35,35,9,D,D,D,conteudo,via fonte B,0.306,0.912
+2021,linguagens,36,36,39,B,B,B,conteudo,via fonte B,0.366,0.722
+2021,linguagens,37,37,40,A,A,A,conteudo,via fonte B,0.462,0.979
+2021,linguagens,38,38,41,C,C,C,conteudo,via fonte B,0.368,0.977
+2021,linguagens,39,39,42,A,A,A,conteudo,via fonte B,0.341,0.966
+2021,linguagens,40,40,43,C,C,C,conteudo,via fonte B,0.304,0.947
+2021,linguagens,41,41,44,D,D,D,conteudo,via fonte B,0.344,0.938
+2021,linguagens,42,42,45,C,C,C,conteudo,via fonte B,0.592,0.587
+2021,linguagens,43,43,15,D,D,D,conteudo,via fonte B,1.0,0.612
+2021,linguagens,44,44,16,D,D,D,numero,via fonte B,,0.81
+2021,linguagens,45,45,17,C,C,C,conteudo,via fonte B,0.318,1.0
+2021,math,136,136,136,E,E,E,conteudo,via fonte B,1.0,1.0
+2021,math,137,137,137,E,E,E,numero,via fonte B,,0.99
+2021,math,138,138,138,ANNULLED,,E,numero,via fonte B,,0.707
+2021,math,139,139,139,E,E,E,conteudo,via fonte B,0.803,0.775
+2021,math,140,140,140,B,B,B,conteudo,via fonte B,0.512,0.512
+2021,math,141,141,141,A,A,A,conteudo,via fonte B,0.976,1.0
+2021,math,142,142,142,B,B,B,conteudo,via fonte B,0.946,0.982
+2021,math,143,143,143,D,D,D,conteudo,via fonte B,0.75,1.0
+2021,math,144,144,144,D,D,D,conteudo,via fonte B,1.0,0.727
+2021,math,145,145,145,C,C,C,numero,via fonte B,,0.807
+2021,math,146,146,146,E,E,E,conteudo,via fonte B,0.951,0.952
+2021,math,147,147,147,C,C,C,conteudo,via fonte B,0.388,0.686
+2021,math,148,148,148,C,C,C,conteudo,via fonte B,0.263,0.673
+2021,math,149,149,149,B,B,B,conteudo,via fonte B,1.0,1.0
+2021,math,150,150,150,C,C,C,conteudo,via fonte B,0.864,0.796
+2021,math,151,151,151,C,C,C,conteudo,via fonte B,0.819,0.934
+2021,math,152,152,152,E,E,E,conteudo,via fonte B,0.966,1.0
+2021,math,153,153,153,C,C,C,conteudo,via fonte B,1.0,1.0
+2021,math,154,154,154,D,D,D,conteudo,via fonte B,0.186,0.986
+2021,math,155,155,155,C,C,C,conteudo,via fonte B,1.0,1.0
+2021,math,156,156,156,A,A,A,conteudo,via fonte B,1.0,1.0
+2021,math,157,157,157,E,E,E,conteudo,via fonte B,0.919,0.967
+2021,math,158,158,158,B,B,B,conteudo,via fonte B,1.0,1.0
+2021,math,159,159,159,A,A,A,conteudo,via fonte B,0.812,1.0
+2021,math,160,160,160,D,D,D,conteudo,via fonte B,1.0,1.0
+2021,math,161,161,161,E,E,E,conteudo,via fonte B,1.0,0.978
+2021,math,162,162,162,A,A,A,conteudo,via fonte B,0.933,0.933
+2021,math,163,163,163,B,B,B,conteudo,via fonte B,0.774,1.0
+2021,math,164,164,164,B,B,B,conteudo,via fonte B,1.0,1.0
+2021,math,165,165,165,D,D,D,conteudo,via fonte B,1.0,1.0
+2021,math,166,166,166,B,B,B,conteudo,via fonte B,0.988,0.988
+2021,math,167,167,167,D,D,D,conteudo,via fonte B,0.841,0.97
+2021,math,168,168,168,E,E,E,conteudo,via fonte B,0.872,0.895
+2021,math,169,169,169,D,D,D,conteudo,via fonte B,0.941,1.0
+2021,math,170,170,170,C,C,C,conteudo,via fonte B,0.974,0.902
+2021,math,171,171,171,E,E,E,conteudo,via fonte B,0.883,1.0
+2021,math,172,172,172,D,D,D,conteudo,via fonte B,0.964,1.0
+2021,math,173,173,173,C,C,C,conteudo,via fonte B,0.875,1.0
+2021,math,174,174,174,C,C,C,conteudo,via fonte B,0.955,0.811
+2021,math,175,175,175,A,A,A,conteudo,via fonte B,0.981,1.0
+2021,math,176,176,176,D,D,D,conteudo,via fonte B,0.987,1.0
+2021,math,177,177,177,D,D,D,conteudo,via fonte B,0.979,1.0
+2021,math,178,178,178,C,C,C,conteudo,via fonte B,1.0,1.0
+2021,math,179,179,179,B,A,A,conteudo,via fonte B,0.923,1.0
+2021,math,180,180,180,B,B,B,conteudo,via fonte B,1.0,1.0
+2021,nature,91,91,91,E,E,E,conteudo,via fonte B,0.85,0.845
+2021,nature,92,92,92,D,D,D,conteudo,via fonte B,0.9,0.947
+2021,nature,93,93,93,E,E,E,conteudo,via fonte B,0.534,1.0
+2021,nature,94,94,94,C,C,C,conteudo,via fonte B,0.855,0.882
+2021,nature,95,95,95,A,A,A,conteudo,via fonte B,1.0,1.0
+2021,nature,96,96,96,B,B,B,conteudo,via fonte B,0.778,0.672
+2021,nature,97,97,97,E,E,E,conteudo,via fonte B,0.803,0.803
+2021,nature,98,98,98,D,D,D,conteudo,via fonte B,0.968,0.953
+2021,nature,99,99,99,A,A,A,conteudo,via fonte B,0.949,0.786
+2021,nature,100,100,100,B,B,B,conteudo,via fonte B,0.863,0.98
+2021,nature,101,101,101,C,C,C,conteudo,via fonte B,0.837,0.957
+2021,nature,102,102,102,B,B,B,conteudo,via fonte B,0.963,0.5
+2021,nature,103,103,103,E,E,E,conteudo,via fonte B,0.9,1.0
+2021,nature,104,104,104,B,B,B,conteudo,via fonte B,0.23,0.754
+2021,nature,105,105,105,A,A,A,conteudo,via fonte B,0.98,0.842
+2021,nature,106,106,106,C,C,C,numero,via fonte B,,0.909
+2021,nature,107,107,107,C,C,C,conteudo,via fonte B,0.932,0.9
+2021,nature,108,108,108,D,D,D,conteudo,via fonte B,0.231,0.81
+2021,nature,109,109,109,C,C,C,numero,via fonte B,,0.742
+2021,nature,110,110,110,B,B,B,conteudo,via fonte B,0.963,1.0
+2021,nature,111,111,111,B,B,B,conteudo,via fonte B,0.978,1.0
+2021,nature,112,112,112,E,E,E,conteudo,via fonte B,0.267,1.0
+2021,nature,113,113,113,E,E,E,conteudo,via fonte B,0.955,0.808
+2021,nature,114,114,114,B,B,B,conteudo,via fonte B,1.0,1.0
+2021,nature,115,115,115,B,B,B,conteudo,via fonte B,0.902,0.915
+2021,nature,116,116,116,C,C,C,conteudo,via fonte B,0.962,0.962
+2021,nature,117,117,117,B,B,B,numero,via fonte B,,1.0
+2021,nature,118,118,118,D,D,D,conteudo,via fonte B,0.29,0.917
+2021,nature,119,119,119,A,A,A,conteudo,via fonte B,0.943,0.919
+2021,nature,120,120,120,A,A,A,conteudo,via fonte B,0.211,1.0
+2021,nature,121,121,121,E,E,E,conteudo,via fonte B,0.598,0.916
+2021,nature,122,122,122,C,C,C,numero,via fonte B,,1.0
+2021,nature,123,123,123,D,D,D,conteudo,via fonte B,1.0,1.0
+2021,nature,124,124,124,C,C,C,conteudo,via fonte B,0.538,0.26
+2021,nature,125,125,125,B,B,B,conteudo,via fonte B,0.78,0.769
+2021,nature,126,126,126,D,D,D,conteudo,via fonte B,0.886,0.848
+2021,nature,127,127,127,C,C,C,conteudo,via fonte B,0.304,1.0
+2021,nature,128,128,128,D,D,D,conteudo,via fonte B,0.725,0.725
+2021,nature,129,129,129,B,B,B,conteudo,via fonte B,0.824,0.8
+2021,nature,130,130,130,B,B,B,conteudo,via fonte B,0.714,0.633
+2021,nature,131,131,131,B,B,B,conteudo,via fonte B,0.941,0.865
+2021,nature,132,132,132,A,A,A,conteudo,via fonte B,0.237,0.633
+2021,nature,133,133,133,D,D,D,conteudo,via fonte B,0.846,1.0
+2021,nature,134,134,134,C,C,C,conteudo,via fonte B,0.389,0.852
+2021,nature,135,135,135,D,D,D,numero,via fonte B,,0.561
+2022,humanas,46,46,79,D,D,D,conteudo,via fonte B,0.359,0.891
+2022,humanas,47,47,80,E,E,E,conteudo,via fonte B,0.257,0.909
+2022,humanas,48,48,81,A,A,A,conteudo,via fonte B,0.388,0.845
+2022,humanas,49,49,82,B,B,B,conteudo,via fonte B,0.266,0.266
+2022,humanas,50,50,71,E,E,E,conteudo,via fonte B,0.375,0.88
+2022,humanas,51,51,72,E,E,E,conteudo,via fonte B,0.317,0.857
+2022,humanas,52,52,73,D,D,D,conteudo,via fonte B,0.403,0.848
+2022,humanas,53,53,74,A,A,A,conteudo,via fonte B,0.314,0.887
+2022,humanas,54,54,64,E,E,E,conteudo,via fonte B,0.434,0.815
+2022,humanas,55,55,65,B,B,B,conteudo,via fonte B,0.36,0.934
+2022,humanas,56,56,66,A,A,A,numero,via fonte B,,0.696
+2022,humanas,57,57,55,A,A,A,conteudo,via fonte B,0.303,0.916
+2022,humanas,58,58,56,E,E,E,conteudo,via fonte B,0.306,0.857
+2022,humanas,59,59,57,C,C,C,conteudo,via fonte B,0.288,1.0
+2022,humanas,60,60,58,B,B,B,conteudo,via fonte B,0.419,1.0
+2022,humanas,61,61,46,E,E,E,conteudo,via fonte B,0.328,0.897
+2022,humanas,62,62,47,C,C,C,conteudo,via fonte B,0.338,0.899
+2022,humanas,63,63,48,B,B,B,conteudo,via fonte B,0.469,0.905
+2022,humanas,64,64,49,A,A,A,conteudo,via fonte B,0.489,1.0
+2022,humanas,65,65,50,B,B,B,conteudo,via fonte B,0.212,0.552
+2022,humanas,66,66,51,C,C,C,conteudo,via fonte B,0.242,0.975
+2022,humanas,67,67,52,D,D,D,conteudo,via fonte B,0.349,0.887
+2022,humanas,68,68,53,D,D,D,conteudo,via fonte B,0.223,0.554
+2022,humanas,69,69,54,A,A,A,conteudo,via fonte B,0.612,0.944
+2022,humanas,70,70,87,A,A,A,conteudo,via fonte B,0.407,0.649
+2022,humanas,71,71,88,A,A,A,conteudo,via fonte B,0.476,1.0
+2022,humanas,72,72,89,D,D,D,conteudo,via fonte B,0.246,0.631
+2022,humanas,73,73,90,B,B,B,conteudo,via fonte B,0.329,0.875
+2022,humanas,74,74,83,C,C,C,conteudo,via fonte B,0.318,0.318
+2022,humanas,75,75,84,E,E,E,conteudo,via fonte B,0.264,0.86
+2022,humanas,76,76,85,D,D,D,conteudo,via fonte B,0.263,0.894
+2022,humanas,77,77,86,A,A,A,conteudo,via fonte B,0.25,0.779
+2022,humanas,78,78,67,E,E,E,conteudo,via fonte B,0.417,0.576
+2022,humanas,79,79,68,A,A,A,conteudo,via fonte B,0.269,0.856
+2022,humanas,80,80,69,C,C,C,conteudo,via fonte B,0.386,0.989
+2022,humanas,81,81,70,D,D,D,conteudo,via fonte B,0.348,0.841
+2022,humanas,82,82,75,B,B,B,conteudo,via fonte B,0.328,0.3
+2022,humanas,83,83,76,B,B,B,conteudo,via fonte B,0.295,1.0
+2022,humanas,84,84,77,C,C,C,conteudo,via fonte B,0.5,0.789
+2022,humanas,85,85,78,D,D,D,conteudo,via fonte B,0.212,0.98
+2022,humanas,86,86,59,C,C,C,conteudo,via fonte B,0.453,0.901
+2022,humanas,87,87,60,B,B,B,conteudo,via fonte B,0.414,0.829
+2022,humanas,88,88,61,E,E,E,conteudo,via fonte B,0.522,0.885
+2022,humanas,89,89,62,C,C,C,conteudo,via fonte B,0.29,0.939
+2022,humanas,90,90,63,A,A,A,conteudo,via fonte B,0.286,0.919
+2022,linguagens,1,5,4,D,D,D,conteudo,direto,0.205,0.205
+2022,linguagens,1,1,,E,E,,conteudo,—,0.357,
+2022,linguagens,2,2,3,C,C,C,conteudo,via fonte B,0.264,0.94
+2022,linguagens,2,2,,D,D,,conteudo,—,0.195,
+2022,linguagens,3,3,5,B,B,B,conteudo,via fonte B,0.209,0.235
+2022,linguagens,3,3,,C,C,,conteudo,—,0.484,
+2022,linguagens,4,4,1,D,D,D,conteudo,via fonte B,0.227,1.0
+2022,linguagens,4,4,,A,A,,conteudo,—,0.38,
+2022,linguagens,5,5,2,E,D,E,numero,direto,,0.299
+2022,linguagens,5,5,,A,A,,conteudo,—,0.301,
+2022,linguagens,6,6,41,E,E,E,conteudo,via fonte B,0.441,0.865
+2022,linguagens,7,7,30,A,A,A,conteudo,via fonte B,0.222,0.83
+2022,linguagens,8,8,31,A,A,A,conteudo,via fonte B,0.233,0.952
+2022,linguagens,9,9,32,A,A,A,conteudo,via fonte B,0.542,0.617
+2022,linguagens,10,10,38,C,C,C,conteudo,via fonte B,0.248,1.0
+2022,linguagens,11,11,39,A,A,A,conteudo,via fonte B,0.309,1.0
+2022,linguagens,12,12,40,B,B,B,conteudo,via fonte B,0.425,0.88
+2022,linguagens,13,13,33,B,B,B,conteudo,via fonte B,0.355,1.0
+2022,linguagens,14,14,34,D,D,D,conteudo,via fonte B,0.564,1.0
+2022,linguagens,15,15,35,B,B,B,conteudo,via fonte B,0.61,0.825
+2022,linguagens,16,16,24,E,E,E,conteudo,via fonte B,0.221,1.0
+2022,linguagens,17,17,25,B,B,B,conteudo,via fonte B,0.462,1.0
+2022,linguagens,18,18,26,A,A,A,conteudo,via fonte B,0.246,0.949
+2022,linguagens,19,19,36,C,C,C,conteudo,via fonte B,0.224,1.0
+2022,linguagens,20,20,37,C,C,C,conteudo,via fonte B,0.381,0.948
+2022,linguagens,21,21,27,B,B,B,conteudo,via fonte B,0.328,0.986
+2022,linguagens,22,22,28,E,E,E,numero,via fonte B,,0.953
+2022,linguagens,23,23,29,E,E,E,conteudo,via fonte B,0.322,0.989
+2022,linguagens,24,24,42,E,E,E,conteudo,via fonte B,0.196,0.946
+2022,linguagens,25,25,9,C,C,C,conteudo,via fonte B,0.305,0.938
+2022,linguagens,26,26,43,C,C,C,conteudo,via fonte B,0.476,0.887
+2022,linguagens,27,27,44,B,B,B,conteudo,via fonte B,0.5,0.5
+2022,linguagens,28,28,45,B,B,B,conteudo,via fonte B,0.264,0.954
+2022,linguagens,29,29,13,D,D,D,conteudo,via fonte B,0.287,0.937
+2022,linguagens,30,30,14,C,C,C,conteudo,via fonte B,0.363,0.917
+2022,linguagens,31,31,15,A,A,A,conteudo,via fonte B,0.272,1.0
+2022,linguagens,32,32,16,A,A,A,conteudo,via fonte B,0.324,0.833
+2022,linguagens,33,33,17,A,A,A,conteudo,via fonte B,0.305,1.0
+2022,linguagens,34,34,18,D,D,D,conteudo,via fonte B,0.218,1.0
+2022,linguagens,35,35,19,C,C,C,conteudo,via fonte B,0.215,0.992
+2022,linguagens,36,36,20,C,C,C,conteudo,via fonte B,0.366,0.914
+2022,linguagens,37,37,10,A,A,A,conteudo,via fonte B,0.26,0.922
+2022,linguagens,38,38,11,B,B,B,conteudo,via fonte B,0.316,0.401
+2022,linguagens,39,39,12,E,E,E,conteudo,via fonte B,0.277,0.617
+2022,linguagens,40,40,7,D,D,D,conteudo,via fonte B,0.319,0.886
+2022,linguagens,41,41,8,B,B,B,conteudo,via fonte B,0.261,0.886
+2022,linguagens,42,42,6,D,D,D,conteudo,via fonte B,0.307,0.918
+2022,linguagens,43,43,21,E,E,E,conteudo,via fonte B,0.234,0.955
+2022,linguagens,44,44,22,C,C,C,conteudo,via fonte B,0.352,0.684
+2022,linguagens,45,45,23,E,E,E,conteudo,via fonte B,0.336,0.892
+2022,math,136,136,178,E,E,E,conteudo,via fonte B,0.741,0.741
+2022,math,137,137,179,C,C,C,conteudo,via fonte B,0.974,0.923
+2022,math,138,138,180,D,D,D,conteudo,via fonte B,0.681,0.66
+2022,math,139,139,175,A,A,A,conteudo,via fonte B,0.921,1.0
+2022,math,140,140,176,B,B,B,conteudo,via fonte B,0.971,1.0
+2022,math,141,141,177,E,E,E,conteudo,via fonte B,0.852,0.768
+2022,math,142,142,172,B,B,B,conteudo,via fonte B,1.0,0.773
+2022,math,143,143,173,D,D,D,conteudo,via fonte B,0.622,0.569
+2022,math,144,144,174,C,C,C,conteudo,via fonte B,0.87,0.909
+2022,math,145,145,169,E,D,E,conteudo,via fonte B,0.857,1.0
+2022,math,146,146,170,E,E,E,conteudo,via fonte B,1.0,1.0
+2022,math,147,147,171,C,C,C,conteudo,via fonte B,1.0,0.98
+2022,math,148,148,166,D,D,D,conteudo,via fonte B,0.567,0.757
+2022,math,149,149,167,B,B,B,conteudo,via fonte B,1.0,1.0
+2022,math,150,150,168,D,D,D,conteudo,via fonte B,0.759,0.768
+2022,math,151,151,164,C,C,C,conteudo,via fonte B,0.947,1.0
+2022,math,152,152,165,C,C,C,conteudo,via fonte B,0.475,0.869
+2022,math,153,153,161,C,C,C,conteudo,via fonte B,0.87,0.87
+2022,math,154,154,162,C,C,C,conteudo,via fonte B,0.354,1.0
+2022,math,155,155,163,B,B,B,conteudo,via fonte B,0.937,1.0
+2022,math,156,156,160,C,C,C,conteudo,via fonte B,0.47,0.474
+2022,math,157,157,157,ANNULLED,,D,conteudo,via fonte B,1.0,1.0
+2022,math,158,158,158,C,C,C,conteudo,via fonte B,1.0,0.918
+2022,math,159,159,159,B,B,B,conteudo,via fonte B,0.881,0.745
+2022,math,160,160,154,A,A,A,conteudo,via fonte B,0.526,0.513
+2022,math,161,161,155,A,A,A,conteudo,via fonte B,0.596,0.574
+2022,math,162,162,156,C,C,C,conteudo,via fonte B,0.762,0.734
+2022,math,163,163,149,D,D,D,conteudo,via fonte B,1.0,1.0
+2022,math,164,164,150,B,B,B,conteudo,via fonte B,1.0,1.0
+2022,math,165,165,151,A,A,A,conteudo,via fonte B,1.0,1.0
+2022,math,166,166,152,A,A,A,conteudo,via fonte B,0.613,0.613
+2022,math,167,167,153,A,A,A,conteudo,via fonte B,1.0,1.0
+2022,math,168,168,146,C,C,C,conteudo,via fonte B,0.697,0.568
+2022,math,169,169,147,E,E,E,conteudo,via fonte B,1.0,1.0
+2022,math,170,170,148,B,B,B,conteudo,via fonte B,0.769,0.684
+2022,math,171,171,142,A,A,A,conteudo,via fonte B,1.0,1.0
+2022,math,172,172,143,B,B,B,conteudo,via fonte B,0.978,1.0
+2022,math,173,173,144,D,D,D,conteudo,via fonte B,1.0,1.0
+2022,math,174,174,145,D,D,D,conteudo,via fonte B,1.0,1.0
+2022,math,175,175,138,E,E,E,conteudo,via fonte B,1.0,1.0
+2022,math,176,176,139,D,D,D,conteudo,via fonte B,0.771,0.826
+2022,math,177,177,140,A,A,A,conteudo,via fonte B,1.0,1.0
+2022,math,178,178,141,E,E,E,conteudo,via fonte B,1.0,1.0
+2022,math,179,179,136,B,B,B,conteudo,via fonte B,0.544,0.723
+2022,math,180,180,137,E,E,E,conteudo,via fonte B,0.315,0.315
+2022,nature,91,91,132,A,A,A,numero,via fonte B,,0.625
+2022,nature,92,92,133,D,D,D,conteudo,via fonte B,1.0,1.0
+2022,nature,93,93,134,B,B,B,conteudo,via fonte B,0.348,1.0
+2022,nature,94,94,135,A,A,A,numero,via fonte B,,0.854
+2022,nature,95,95,131,D,D,D,numero,via fonte B,,0.506
+2022,nature,96,96,128,A,A,A,numero,via fonte B,,0.717
+2022,nature,97,97,129,B,B,B,conteudo,via fonte B,0.296,1.0
+2022,nature,98,98,130,E,E,E,conteudo,via fonte B,0.464,1.0
+2022,nature,99,99,124,A,A,A,conteudo,via fonte B,0.604,0.978
+2022,nature,100,100,125,B,B,B,conteudo,via fonte B,0.944,1.0
+2022,nature,101,101,126,C,C,C,conteudo,via fonte B,0.537,0.893
+2022,nature,102,102,127,E,E,E,conteudo,via fonte B,1.0,1.0
+2022,nature,103,103,123,E,E,E,conteudo,via fonte B,0.783,0.783
+2022,nature,104,104,120,E,E,E,conteudo,via fonte B,1.0,1.0
+2022,nature,105,105,121,A,A,A,conteudo,via fonte B,0.962,1.0
+2022,nature,106,106,122,C,C,C,conteudo,via fonte B,0.729,0.902
+2022,nature,107,107,118,C,C,C,conteudo,via fonte B,0.244,0.5
+2022,nature,108,108,119,B,B,B,numero,via fonte B,,0.771
+2022,nature,109,109,115,D,D,D,conteudo,via fonte B,1.0,1.0
+2022,nature,110,110,116,D,D,D,conteudo,via fonte B,0.259,1.0
+2022,nature,111,111,117,A,A,A,numero,via fonte B,,0.52
+2022,nature,112,112,111,D,D,D,conteudo,via fonte B,0.983,1.0
+2022,nature,113,113,112,D,D,D,conteudo,via fonte B,0.429,0.903
+2022,nature,114,114,113,C,C,C,conteudo,via fonte B,1.0,1.0
+2022,nature,115,115,114,B,B,B,numero,via fonte B,,0.893
+2022,nature,116,116,108,B,B,B,conteudo,via fonte B,0.918,0.787
+2022,nature,117,117,109,C,C,C,conteudo,via fonte B,0.625,0.532
+2022,nature,118,118,110,C,C,C,conteudo,via fonte B,0.225,0.818
+2022,nature,119,119,105,A,A,A,conteudo,via fonte B,1.0,1.0
+2022,nature,120,120,106,E,E,E,conteudo,via fonte B,0.925,0.922
+2022,nature,121,121,107,B,B,B,conteudo,via fonte B,0.405,0.638
+2022,nature,122,122,101,A,A,A,conteudo,via fonte B,0.469,0.872
+2022,nature,123,123,102,E,E,E,conteudo,via fonte B,0.406,0.791
+2022,nature,124,124,103,B,B,B,conteudo,via fonte B,0.225,0.821
+2022,nature,125,125,104,E,E,E,conteudo,via fonte B,0.348,0.657
+2022,nature,126,126,96,B,B,B,conteudo,via fonte B,0.3,0.951
+2022,nature,127,127,97,E,E,E,conteudo,via fonte B,0.415,1.0
+2022,nature,128,128,98,A,A,A,numero,via fonte B,,1.0
+2022,nature,129,129,99,C,C,C,numero,via fonte B,,0.368
+2022,nature,130,130,100,C,C,C,conteudo,via fonte B,0.469,1.0
+2022,nature,131,131,94,C,C,C,numero,via fonte B,,0.731
+2022,nature,132,132,95,D,D,D,conteudo,via fonte B,0.296,0.845
+2022,nature,133,133,91,D,D,D,conteudo,via fonte B,0.265,0.901
+2022,nature,134,134,92,D,D,D,numero,via fonte B,,0.578
+2022,nature,135,135,93,E,E,E,numero,via fonte B,,0.688
+2023,humanas,46,46,79,C,C,C,conteudo,via fonte B,0.371,0.349
+2023,humanas,47,47,80,D,D,D,conteudo,via fonte B,0.485,0.767
+2023,humanas,48,48,81,A,A,A,conteudo,via fonte B,0.387,0.877
+2023,humanas,49,49,82,E,E,E,conteudo,via fonte B,0.31,1.0
+2023,humanas,50,50,71,E,E,E,conteudo,via fonte B,0.284,1.0
+2023,humanas,51,51,72,C,C,C,conteudo,via fonte B,0.329,0.9
+2023,humanas,52,52,73,A,A,A,conteudo,via fonte B,0.333,1.0
+2023,humanas,53,53,74,B,B,B,conteudo,via fonte B,0.306,0.9
+2023,humanas,54,54,75,A,A,A,conteudo,via fonte B,0.413,0.84
+2023,humanas,55,55,76,A,A,A,conteudo,via fonte B,0.392,1.0
+2023,humanas,56,56,77,C,C,C,conteudo,via fonte B,0.377,0.377
+2023,humanas,57,57,78,E,E,E,conteudo,via fonte B,0.5,1.0
+2023,humanas,58,58,48,A,A,A,conteudo,via fonte B,0.269,0.917
+2023,humanas,59,59,49,A,A,A,conteudo,via fonte B,0.255,0.922
+2023,humanas,60,60,50,D,D,D,conteudo,via fonte B,0.358,0.827
+2023,humanas,61,61,51,E,E,E,conteudo,via fonte B,0.258,0.846
+2023,humanas,62,62,83,C,C,C,conteudo,via fonte B,0.314,0.89
+2023,humanas,63,63,84,B,B,B,conteudo,via fonte B,0.2,0.841
+2023,humanas,64,64,85,D,D,D,conteudo,via fonte B,0.447,0.667
+2023,humanas,65,65,86,A,A,A,conteudo,via fonte B,0.231,0.773
+2023,humanas,66,66,87,A,A,A,conteudo,via fonte B,0.22,0.752
+2023,humanas,67,67,88,B,B,B,conteudo,via fonte B,0.32,0.852
+2023,humanas,68,68,89,C,C,C,conteudo,via fonte B,0.267,0.904
+2023,humanas,69,69,90,D,D,D,conteudo,via fonte B,0.216,0.906
+2023,humanas,70,70,56,C,C,C,conteudo,via fonte B,0.364,0.927
+2023,humanas,71,71,57,A,A,A,conteudo,via fonte B,0.315,0.88
+2023,humanas,72,72,58,B,B,B,numero,via fonte B,,0.574
+2023,humanas,73,73,52,A,A,A,conteudo,via fonte B,0.299,0.854
+2023,humanas,74,74,53,D,D,D,conteudo,via fonte B,0.323,0.87
+2023,humanas,75,75,54,C,C,C,conteudo,via fonte B,0.4,0.887
+2023,humanas,76,76,55,D,D,D,conteudo,via fonte B,0.482,0.595
+2023,humanas,77,77,67,E,E,E,conteudo,via fonte B,0.355,0.836
+2023,humanas,78,78,68,A,A,A,conteudo,via fonte B,0.279,0.792
+2023,humanas,79,79,69,B,B,B,conteudo,via fonte B,0.243,1.0
+2023,humanas,80,80,70,A,A,A,conteudo,via fonte B,0.467,1.0
+2023,humanas,81,81,59,A,A,A,conteudo,via fonte B,0.352,0.881
+2023,humanas,82,82,60,B,B,B,conteudo,via fonte B,0.378,0.845
+2023,humanas,83,83,61,C,C,C,conteudo,via fonte B,0.241,0.892
+2023,humanas,84,84,62,D,D,D,conteudo,via fonte B,0.269,0.857
+2023,humanas,85,85,63,D,D,D,conteudo,via fonte B,0.394,0.892
+2023,humanas,86,86,64,E,E,E,conteudo,via fonte B,0.221,0.861
+2023,humanas,87,87,65,B,B,B,conteudo,via fonte B,0.209,0.982
+2023,humanas,88,88,66,A,A,A,conteudo,via fonte B,0.325,0.875
+2023,humanas,89,89,46,D,D,D,conteudo,via fonte B,0.355,0.553
+2023,humanas,90,90,47,B,B,B,conteudo,via fonte B,0.443,1.0
+2023,linguagens,1,1,,A,A,,conteudo,—,0.276,
+2023,linguagens,2,2,,A,A,,conteudo,—,0.491,
+2023,linguagens,3,3,,E,E,,conteudo,—,0.284,
+2023,linguagens,4,4,,B,B,,conteudo,—,0.19,
+2023,linguagens,5,5,,A,A,,conteudo,—,0.256,
+2023,linguagens,1,1,3,B,B,B,conteudo,via fonte B,0.328,0.595
+2023,linguagens,2,2,2,B,B,B,conteudo,via fonte B,0.533,0.811
+2023,linguagens,3,3,4,D,D,D,conteudo,via fonte B,0.209,0.991
+2023,linguagens,4,4,5,A,A,A,conteudo,via fonte B,0.262,0.818
+2023,linguagens,5,5,1,B,B,B,conteudo,via fonte B,0.343,0.457
+2023,linguagens,6,6,43,D,D,D,conteudo,via fonte B,0.361,0.843
+2023,linguagens,7,7,44,A,A,A,conteudo,via fonte B,0.297,0.962
+2023,linguagens,8,8,45,C,C,C,conteudo,via fonte B,0.441,0.91
+2023,linguagens,9,9,9,E,E,E,conteudo,via fonte B,0.294,0.972
+2023,linguagens,10,10,10,E,E,E,conteudo,via fonte B,0.246,0.942
+2023,linguagens,11,11,11,D,D,D,conteudo,via fonte B,0.284,1.0
+2023,linguagens,12,12,35,C,C,C,conteudo,via fonte B,0.267,0.917
+2023,linguagens,13,13,36,C,C,C,conteudo,via fonte B,0.416,0.875
+2023,linguagens,14,14,33,D,D,D,conteudo,via fonte B,0.203,1.0
+2023,linguagens,15,15,34,B,B,B,conteudo,via fonte B,0.25,0.952
+2023,linguagens,16,16,37,A,A,A,conteudo,via fonte B,0.255,1.0
+2023,linguagens,17,17,38,D,D,D,conteudo,via fonte B,0.431,0.964
+2023,linguagens,18,18,39,B,B,B,conteudo,via fonte B,0.416,0.989
+2023,linguagens,19,19,40,D,D,D,conteudo,via fonte B,0.371,0.929
+2023,linguagens,20,20,41,E,E,E,conteudo,via fonte B,0.248,0.946
+2023,linguagens,21,21,42,D,D,D,conteudo,via fonte B,0.409,0.897
+2023,linguagens,22,22,6,C,C,C,conteudo,via fonte B,0.278,0.947
+2023,linguagens,23,23,7,C,C,C,conteudo,via fonte B,0.181,0.931
+2023,linguagens,24,24,8,E,E,E,conteudo,via fonte B,0.477,0.495
+2023,linguagens,25,25,15,B,B,B,conteudo,via fonte B,0.336,0.973
+2023,linguagens,26,26,16,C,B,C,conteudo,via fonte B,0.281,0.979
+2023,linguagens,27,27,17,A,A,A,conteudo,via fonte B,0.324,0.929
+2023,linguagens,28,28,18,C,C,C,conteudo,via fonte B,0.49,0.689
+2023,linguagens,29,29,12,E,E,E,conteudo,via fonte B,0.214,0.868
+2023,linguagens,30,30,13,A,A,A,conteudo,via fonte B,0.273,0.943
+2023,linguagens,31,31,14,C,C,C,conteudo,via fonte B,0.287,0.91
+2023,linguagens,32,32,19,A,A,A,conteudo,via fonte B,0.432,0.889
+2023,linguagens,33,33,20,A,A,A,conteudo,via fonte B,0.5,0.698
+2023,linguagens,34,34,21,C,C,C,conteudo,via fonte B,0.41,0.832
+2023,linguagens,35,35,22,A,A,A,conteudo,via fonte B,0.231,0.92
+2023,linguagens,36,36,23,A,A,A,conteudo,via fonte B,0.519,1.0
+2023,linguagens,37,37,24,C,D,C,conteudo,via fonte B,0.591,1.0
+2023,linguagens,38,38,25,A,A,A,conteudo,via fonte B,0.269,0.937
+2023,linguagens,39,39,29,C,C,C,conteudo,via fonte B,0.309,1.0
+2023,linguagens,40,40,30,B,B,B,conteudo,via fonte B,0.265,0.934
+2023,linguagens,41,41,31,B,B,B,numero,via fonte B,,0.945
+2023,linguagens,42,42,32,E,E,E,conteudo,via fonte B,0.247,0.925
+2023,linguagens,43,43,26,A,A,A,conteudo,via fonte B,0.296,0.94
+2023,linguagens,44,44,27,A,A,A,conteudo,via fonte B,0.429,0.738
+2023,linguagens,45,45,28,E,E,E,conteudo,via fonte B,0.257,0.924
+2023,math,136,136,166,B,B,B,conteudo,via fonte B,0.833,0.859
+2023,math,137,137,167,C,C,C,conteudo,via fonte B,1.0,1.0
+2023,math,138,138,168,C,C,C,conteudo,via fonte B,1.0,1.0
+2023,math,139,139,161,D,D,D,conteudo,via fonte B,0.677,1.0
+2023,math,140,140,162,E,E,E,conteudo,via fonte B,0.818,0.864
+2023,math,141,141,156,E,E,E,conteudo,via fonte B,0.982,1.0
+2023,math,142,142,157,A,A,A,conteudo,via fonte B,1.0,1.0
+2023,math,143,143,158,B,B,B,conteudo,via fonte B,1.0,1.0
+2023,math,144,144,147,C,C,C,conteudo,via fonte B,0.684,0.796
+2023,math,145,145,148,B,B,B,conteudo,via fonte B,0.724,0.737
+2023,math,146,146,149,E,E,D,conteudo,via fonte B,0.87,0.83
+2023,math,147,147,150,D,D,D,conteudo,via fonte B,0.594,0.831
+2023,math,148,148,151,C,C,C,conteudo,via fonte B,0.864,0.851
+2023,math,149,149,152,E,E,E,conteudo,via fonte B,0.789,0.814
+2023,math,150,150,175,A,A,A,conteudo,via fonte B,0.306,1.0
+2023,math,151,151,176,B,B,B,conteudo,via fonte B,0.675,0.744
+2023,math,152,152,177,B,B,B,conteudo,via fonte B,0.586,0.867
+2023,math,153,153,136,E,E,E,conteudo,via fonte B,1.0,1.0
+2023,math,154,154,137,B,B,B,conteudo,via fonte B,0.75,0.656
+2023,math,155,155,138,D,D,D,conteudo,via fonte B,0.757,0.778
+2023,math,156,156,139,A,A,A,conteudo,via fonte B,0.604,0.646
+2023,math,157,157,171,B,B,B,conteudo,via fonte B,0.717,0.797
+2023,math,158,158,172,D,D,D,conteudo,via fonte B,1.0,1.0
+2023,math,159,159,173,D,D,D,conteudo,via fonte B,1.0,1.0
+2023,math,160,160,174,A,A,A,conteudo,via fonte B,1.0,0.969
+2023,math,161,161,140,D,D,D,conteudo,via fonte B,0.959,1.0
+2023,math,162,162,141,D,D,D,conteudo,via fonte B,1.0,1.0
+2023,math,163,163,142,A,A,A,conteudo,via fonte B,0.564,0.534
+2023,math,164,164,169,ANNULLED,D,D,conteudo,via fonte B,0.714,0.681
+2023,math,165,165,170,E,E,E,conteudo,via fonte B,0.75,0.75
+2023,math,166,166,159,C,C,C,conteudo,via fonte B,1.0,0.967
+2023,math,167,167,160,A,A,A,conteudo,via fonte B,1.0,1.0
+2023,math,168,168,178,A,A,A,conteudo,via fonte B,0.981,0.981
+2023,math,169,169,179,D,D,D,conteudo,via fonte B,0.742,0.906
+2023,math,170,170,180,D,D,D,conteudo,via fonte B,0.979,0.94
+2023,math,171,171,153,C,C,C,conteudo,via fonte B,0.396,1.0
+2023,math,172,172,154,C,C,C,conteudo,via fonte B,0.784,0.804
+2023,math,173,173,155,B,B,B,conteudo,via fonte B,0.6,1.0
+2023,math,174,174,143,E,E,E,conteudo,via fonte B,0.378,0.772
+2023,math,175,175,144,B,B,B,conteudo,via fonte B,1.0,1.0
+2023,math,176,176,145,E,E,E,conteudo,via fonte B,0.757,0.462
+2023,math,177,177,146,A,A,A,conteudo,via fonte B,0.528,0.848
+2023,math,178,178,163,B,B,B,conteudo,via fonte B,0.691,0.809
+2023,math,179,179,164,C,C,C,conteudo,via fonte B,0.683,0.636
+2023,math,180,180,165,C,C,C,conteudo,via fonte B,1.0,1.0
+2023,nature,91,91,100,D,D,D,conteudo,via fonte B,0.266,1.0
+2023,nature,92,92,101,B,B,B,conteudo,via fonte B,0.981,1.0
+2023,nature,93,93,102,E,E,E,conteudo,via fonte B,1.0,0.984
+2023,nature,94,94,103,A,A,A,conteudo,via fonte B,0.925,1.0
+2023,nature,95,95,104,B,B,B,conteudo,via fonte B,0.952,1.0
+2023,nature,96,96,105,D,D,D,conteudo,via fonte B,0.947,0.947
+2023,nature,97,97,119,A,A,A,conteudo,via fonte B,0.95,1.0
+2023,nature,98,98,120,B,B,B,conteudo,via fonte B,0.298,0.87
+2023,nature,99,99,121,D,D,D,conteudo,via fonte B,0.969,1.0
+2023,nature,100,100,122,C,C,C,conteudo,via fonte B,0.938,0.868
+2023,nature,101,101,131,A,A,A,conteudo,via fonte B,0.421,0.792
+2023,nature,102,102,132,C,C,C,conteudo,via fonte B,0.952,1.0
+2023,nature,103,103,133,D,D,D,conteudo,via fonte B,0.978,1.0
+2023,nature,104,104,134,B,B,B,conteudo,via fonte B,0.403,0.857
+2023,nature,105,105,135,E,E,E,conteudo,via fonte B,0.981,0.815
+2023,nature,106,106,91,C,C,C,conteudo,via fonte B,0.481,0.91
+2023,nature,107,107,92,D,D,D,conteudo,via fonte B,0.966,1.0
+2023,nature,108,108,93,D,D,D,conteudo,via fonte B,0.971,1.0
+2023,nature,109,109,94,D,D,D,conteudo,via fonte B,0.77,0.857
+2023,nature,110,110,99,B,B,B,conteudo,via fonte B,0.713,0.72
+2023,nature,111,111,123,C,C,C,conteudo,via fonte B,0.733,0.746
+2023,nature,112,112,124,A,A,A,conteudo,via fonte B,1.0,1.0
+2023,nature,113,113,125,A,A,A,conteudo,via fonte B,0.672,0.984
+2023,nature,114,114,95,A,A,A,conteudo,via fonte B,0.775,0.829
+2023,nature,115,115,96,B,B,B,conteudo,via fonte B,0.958,1.0
+2023,nature,116,116,97,B,B,B,conteudo,via fonte B,0.571,0.543
+2023,nature,117,117,98,A,A,A,conteudo,via fonte B,0.222,0.988
+2023,nature,118,118,126,C,C,C,conteudo,via fonte B,1.0,0.964
+2023,nature,119,119,127,C,C,C,conteudo,via fonte B,0.329,1.0
+2023,nature,120,120,128,C,C,C,conteudo,via fonte B,0.825,0.559
+2023,nature,121,121,129,A,A,A,conteudo,via fonte B,0.921,0.908
+2023,nature,122,122,130,D,D,D,conteudo,via fonte B,1.0,0.976
+2023,nature,123,123,117,E,E,E,conteudo,via fonte B,0.482,0.54
+2023,nature,124,124,118,B,B,B,conteudo,via fonte B,0.924,0.955
+2023,nature,125,125,106,E,E,E,conteudo,via fonte B,0.429,1.0
+2023,nature,126,126,107,C,C,C,conteudo,via fonte B,0.94,0.976
+2023,nature,127,127,108,C,C,C,numero,via fonte B,,0.735
+2023,nature,128,128,113,C,C,C,conteudo,via fonte B,0.965,0.982
+2023,nature,129,129,114,E,E,E,conteudo,via fonte B,0.855,0.763
+2023,nature,130,130,115,D,D,D,conteudo,via fonte B,0.442,0.895
+2023,nature,131,131,116,A,A,A,conteudo,via fonte B,0.352,1.0
+2023,nature,132,132,109,E,E,E,conteudo,via fonte B,0.711,0.632
+2023,nature,133,133,110,E,E,E,conteudo,via fonte B,0.829,0.843
+2023,nature,134,134,111,E,E,E,conteudo,via fonte B,0.233,0.857
+2023,nature,135,135,112,D,D,D,conteudo,via fonte B,0.881,0.929
+2024,humanas,46,46,53,C,C,C,conteudo,via fonte B,0.269,0.974
+2024,humanas,47,47,54,E,E,E,conteudo,via fonte B,0.345,1.0
+2024,humanas,48,48,55,C,C,C,conteudo,via fonte B,0.342,1.0
+2024,humanas,49,49,56,E,E,E,conteudo,via fonte B,0.284,0.831
+2024,humanas,50,50,61,B,B,B,conteudo,via fonte B,0.398,1.0
+2024,humanas,51,51,62,E,E,E,conteudo,via fonte B,0.38,1.0
+2024,humanas,52,52,63,B,B,B,conteudo,via fonte B,0.418,1.0
+2024,humanas,53,53,64,C,C,C,conteudo,via fonte B,0.556,0.379
+2024,humanas,54,54,65,D,D,D,conteudo,via fonte B,0.46,0.84
+2024,humanas,55,55,66,B,B,B,conteudo,via fonte B,0.266,0.969
+2024,humanas,56,56,67,A,A,A,conteudo,via fonte B,0.231,0.978
+2024,humanas,57,57,68,D,D,D,conteudo,via fonte B,0.362,1.0
+2024,humanas,58,58,57,D,D,D,conteudo,via fonte B,0.25,0.99
+2024,humanas,59,59,58,E,E,E,conteudo,via fonte B,0.5,1.0
+2024,humanas,60,60,59,B,B,B,conteudo,via fonte B,0.422,0.976
+2024,humanas,61,61,60,B,B,B,conteudo,via fonte B,0.241,0.922
+2024,humanas,62,62,49,A,A,A,conteudo,via fonte B,0.279,1.0
+2024,humanas,63,63,50,B,B,B,conteudo,via fonte B,0.481,0.812
+2024,humanas,64,64,51,C,C,C,numero,via fonte B,,0.992
+2024,humanas,65,65,52,D,D,D,conteudo,via fonte B,0.357,0.965
+2024,humanas,66,66,84,C,C,C,conteudo,via fonte B,0.563,0.972
+2024,humanas,67,67,85,A,A,A,conteudo,via fonte B,0.418,1.0
+2024,humanas,68,68,86,E,E,E,conteudo,via fonte B,0.264,0.966
+2024,humanas,69,69,87,C,C,C,conteudo,via fonte B,0.291,1.0
+2024,humanas,70,70,88,E,E,E,conteudo,via fonte B,0.309,1.0
+2024,humanas,71,71,89,D,D,D,conteudo,via fonte B,0.246,0.968
+2024,humanas,72,72,90,A,A,A,conteudo,via fonte B,0.403,1.0
+2024,humanas,73,73,80,D,D,D,conteudo,via fonte B,0.339,0.836
+2024,humanas,74,74,81,B,B,B,conteudo,via fonte B,0.391,1.0
+2024,humanas,75,75,82,A,A,A,conteudo,via fonte B,0.323,1.0
+2024,humanas,76,76,83,E,E,E,conteudo,via fonte B,0.344,1.0
+2024,humanas,77,77,79,A,A,A,conteudo,via fonte B,0.652,0.405
+2024,humanas,78,78,77,B,B,B,conteudo,via fonte B,0.393,0.984
+2024,humanas,79,79,78,E,E,E,conteudo,via fonte B,0.444,1.0
+2024,humanas,80,80,73,A,A,A,conteudo,via fonte B,0.304,0.992
+2024,humanas,81,81,74,D,D,D,conteudo,via fonte B,0.462,1.0
+2024,humanas,82,82,75,C,C,C,conteudo,via fonte B,0.436,0.885
+2024,humanas,83,83,76,E,E,E,conteudo,via fonte B,0.44,1.0
+2024,humanas,84,84,46,D,D,D,conteudo,via fonte B,0.34,0.802
+2024,humanas,85,85,47,A,A,A,conteudo,via fonte B,0.281,0.908
+2024,humanas,86,86,48,D,D,D,conteudo,via fonte B,0.5,0.478
+2024,humanas,87,87,69,A,A,A,conteudo,via fonte B,0.364,1.0
+2024,humanas,88,88,70,C,C,C,conteudo,via fonte B,0.323,1.0
+2024,humanas,89,89,71,B,B,B,conteudo,via fonte B,0.361,0.967
+2024,humanas,90,90,72,C,C,C,conteudo,via fonte B,0.466,1.0
+2024,linguagens,1,1,3,C,C,C,conteudo,via fonte B,0.679,0.574
+2024,linguagens,2,2,2,A,A,A,conteudo,via fonte B,0.42,0.641
+2024,linguagens,3,3,1,A,A,A,conteudo,via fonte B,0.59,0.66
+2024,linguagens,4,4,5,A,A,A,conteudo,via fonte B,0.33,0.693
+2024,linguagens,5,5,4,E,E,E,conteudo,via fonte B,0.319,0.756
+2024,linguagens,1,1,,C,C,,conteudo,—,0.214,
+2024,linguagens,2,2,,D,D,,conteudo,—,0.276,
+2024,linguagens,3,3,,D,D,,conteudo,—,0.252,
+2024,linguagens,4,4,,D,D,,conteudo,—,0.283,
+2024,linguagens,5,5,,A,A,,conteudo,—,0.377,
+2024,linguagens,6,6,9,E,E,E,conteudo,via fonte B,0.274,0.831
+2024,linguagens,7,7,10,C,C,C,conteudo,via fonte B,0.2,0.929
+2024,linguagens,8,8,11,B,B,B,conteudo,via fonte B,0.336,0.806
+2024,linguagens,9,9,40,E,E,E,conteudo,via fonte B,0.211,0.942
+2024,linguagens,10,10,41,C,C,C,conteudo,via fonte B,0.344,0.899
+2024,linguagens,11,11,42,E,E,E,conteudo,via fonte B,0.273,0.934
+2024,linguagens,12,12,25,D,D,D,conteudo,via fonte B,0.226,0.937
+2024,linguagens,13,13,26,D,D,D,conteudo,via fonte B,0.255,1.0
+2024,linguagens,14,14,27,C,C,C,numero,via fonte B,,0.949
+2024,linguagens,15,15,31,B,B,B,conteudo,via fonte B,0.272,0.958
+2024,linguagens,16,16,32,D,D,D,conteudo,via fonte B,0.393,0.913
+2024,linguagens,17,17,33,E,E,E,conteudo,via fonte B,0.429,0.919
+2024,linguagens,18,18,43,D,D,D,conteudo,via fonte B,0.336,0.932
+2024,linguagens,19,19,44,D,D,D,conteudo,via fonte B,0.286,0.911
+2024,linguagens,20,20,45,C,C,C,conteudo,via fonte B,0.323,0.91
+2024,linguagens,21,21,20,E,E,E,conteudo,via fonte B,0.583,0.835
+2024,linguagens,22,22,21,C,C,C,conteudo,via fonte B,0.342,0.789
+2024,linguagens,23,23,37,B,B,B,conteudo,via fonte B,0.328,0.901
+2024,linguagens,24,24,38,D,D,D,conteudo,via fonte B,0.43,0.93
+2024,linguagens,25,25,39,C,C,C,conteudo,via fonte B,0.735,0.641
+2024,linguagens,26,26,34,B,B,B,conteudo,via fonte B,0.297,0.927
+2024,linguagens,27,27,35,C,C,C,conteudo,via fonte B,0.39,0.944
+2024,linguagens,28,28,36,E,E,E,conteudo,via fonte B,0.269,0.918
+2024,linguagens,29,29,28,A,A,A,conteudo,via fonte B,0.29,0.917
+2024,linguagens,30,30,29,D,D,D,numero,via fonte B,,0.922
+2024,linguagens,31,31,30,B,B,B,conteudo,via fonte B,0.275,0.942
+2024,linguagens,32,32,12,B,B,B,conteudo,via fonte B,0.208,0.828
+2024,linguagens,33,33,13,D,D,D,conteudo,via fonte B,0.544,0.444
+2024,linguagens,34,34,14,B,B,B,conteudo,via fonte B,0.203,0.877
+2024,linguagens,35,35,18,D,D,D,numero,via fonte B,,0.959
+2024,linguagens,36,36,19,D,D,D,conteudo,via fonte B,0.617,0.402
+2024,linguagens,37,37,22,C,C,C,conteudo,via fonte B,0.275,0.919
+2024,linguagens,38,38,23,B,B,B,conteudo,via fonte B,0.548,0.792
+2024,linguagens,39,39,24,E,E,E,conteudo,via fonte B,0.238,0.994
+2024,linguagens,40,40,6,D,D,D,conteudo,via fonte B,0.343,0.898
+2024,linguagens,41,41,7,A,A,A,conteudo,via fonte B,0.255,0.938
+2024,linguagens,42,42,8,D,D,D,conteudo,via fonte B,0.207,0.855
+2024,linguagens,43,43,15,E,E,E,conteudo,via fonte B,0.337,0.811
+2024,linguagens,44,44,16,E,E,E,conteudo,via fonte B,0.206,0.901
+2024,linguagens,45,45,17,B,B,B,conteudo,via fonte B,0.196,0.958
+2024,math,136,136,146,A,A,A,conteudo,via fonte B,0.688,0.684
+2024,math,137,137,147,B,B,B,conteudo,via fonte B,0.564,0.564
+2024,math,138,138,148,B,B,B,conteudo,via fonte B,0.713,0.676
+2024,math,139,139,174,A,A,A,conteudo,via fonte B,0.6,0.6
+2024,math,140,140,175,B,B,B,conteudo,via fonte B,0.617,0.617
+2024,math,141,141,176,B,B,B,conteudo,via fonte B,0.457,0.44
+2024,math,142,142,177,A,A,A,conteudo,via fonte B,0.477,0.431
+2024,math,143,143,178,D,D,D,conteudo,via fonte B,0.802,0.802
+2024,math,144,144,179,D,D,D,conteudo,via fonte B,0.426,0.391
+2024,math,145,145,180,D,D,D,conteudo,via fonte B,0.234,0.638
+2024,math,146,146,163,B,B,B,conteudo,via fonte B,1.0,1.0
+2024,math,147,147,164,B,B,B,conteudo,via fonte B,0.711,0.667
+2024,math,148,148,165,C,C,C,conteudo,via fonte B,0.469,0.453
+2024,math,149,149,166,E,E,E,conteudo,via fonte B,0.865,0.914
+2024,math,150,150,170,C,C,C,conteudo,via fonte B,0.638,0.581
+2024,math,151,151,171,E,E,E,conteudo,via fonte B,0.277,0.604
+2024,math,152,152,172,A,A,A,conteudo,via fonte B,0.467,0.429
+2024,math,153,153,173,D,D,D,conteudo,via fonte B,0.541,0.541
+2024,math,154,154,167,C,C,C,conteudo,via fonte B,0.245,0.642
+2024,math,155,155,168,E,E,E,conteudo,via fonte B,0.681,0.691
+2024,math,156,156,169,B,B,B,conteudo,via fonte B,0.836,0.87
+2024,math,157,157,159,C,C,C,conteudo,via fonte B,0.646,0.646
+2024,math,158,158,157,C,C,C,conteudo,via fonte B,0.609,0.58
+2024,math,159,159,160,C,C,C,conteudo,via fonte B,0.636,0.662
+2024,math,160,160,158,D,D,D,conteudo,via fonte B,1.0,1.0
+2024,math,161,161,162,B,B,B,conteudo,via fonte B,0.477,0.438
+2024,math,162,162,154,A,A,A,conteudo,via fonte B,0.8,0.8
+2024,math,163,163,155,D,D,D,conteudo,via fonte B,0.63,0.578
+2024,math,164,164,156,C,C,C,conteudo,via fonte B,0.516,0.603
+2024,math,165,165,151,B,B,B,conteudo,via fonte B,0.653,0.7
+2024,math,166,166,152,C,E,E,conteudo,via fonte B,0.579,0.6
+2024,math,167,167,153,D,D,D,conteudo,via fonte B,0.643,0.59
+2024,math,168,168,161,A,A,A,conteudo,via fonte B,0.474,0.495
+2024,math,169,169,149,E,E,E,conteudo,via fonte B,0.527,0.675
+2024,math,170,170,150,C,C,C,conteudo,via fonte B,0.667,0.708
+2024,math,171,171,144,A,A,A,conteudo,via fonte B,0.283,0.549
+2024,math,172,172,145,D,D,D,conteudo,via fonte B,0.513,0.636
+2024,math,173,173,142,A,A,A,conteudo,via fonte B,0.722,0.702
+2024,math,174,174,143,C,C,C,conteudo,via fonte B,0.402,0.303
+2024,math,175,175,136,D,D,D,conteudo,via fonte B,0.65,0.671
+2024,math,176,176,137,B,B,B,conteudo,via fonte B,0.541,0.529
+2024,math,177,177,138,C,C,C,conteudo,via fonte B,0.547,0.547
+2024,math,178,178,139,E,E,E,conteudo,via fonte B,0.5,0.5
+2024,math,179,179,140,C,C,C,conteudo,via fonte B,0.643,0.643
+2024,math,180,180,141,E,E,E,conteudo,via fonte B,0.591,0.591
+2024,nature,91,91,126,B,B,B,conteudo,via fonte B,0.33,0.77
+2024,nature,92,92,127,C,C,C,conteudo,via fonte B,0.22,0.638
+2024,nature,93,93,128,E,E,E,conteudo,via fonte B,1.0,1.0
+2024,nature,94,94,132,A,A,A,conteudo,via fonte B,0.2,0.605
+2024,nature,95,95,133,A,A,A,conteudo,via fonte B,0.98,1.0
+2024,nature,96,96,134,C,C,C,conteudo,via fonte B,0.776,0.648
+2024,nature,97,97,135,D,D,D,conteudo,via fonte B,1.0,1.0
+2024,nature,98,98,129,E,E,E,conteudo,via fonte B,0.567,0.581
+2024,nature,99,99,130,D,D,D,conteudo,via fonte B,0.977,1.0
+2024,nature,100,100,131,C,C,C,numero,via fonte B,,0.685
+2024,nature,101,101,115,A,A,A,conteudo,via fonte B,0.2,0.659
+2024,nature,102,102,116,A,A,A,conteudo,via fonte B,1.0,1.0
+2024,nature,103,103,117,E,E,E,conteudo,via fonte B,0.278,0.529
+2024,nature,104,104,118,D,D,D,conteudo,via fonte B,0.366,0.675
+2024,nature,105,105,119,D,D,D,conteudo,via fonte B,0.283,0.956
+2024,nature,106,106,120,D,D,D,conteudo,via fonte B,0.985,1.0
+2024,nature,107,107,121,E,E,E,conteudo,via fonte B,0.942,0.98
+2024,nature,108,108,122,B,B,B,conteudo,via fonte B,0.2,0.988
+2024,nature,109,109,123,B,B,B,conteudo,via fonte B,0.333,0.773
+2024,nature,110,110,105,D,D,D,conteudo,via fonte B,0.388,0.565
+2024,nature,111,111,106,D,D,D,conteudo,via fonte B,0.75,0.75
+2024,nature,112,112,107,B,B,B,numero,via fonte B,,0.464
+2024,nature,113,113,124,E,E,E,conteudo,via fonte B,0.186,0.41
+2024,nature,114,114,125,C,C,C,conteudo,via fonte B,0.71,0.667
+2024,nature,115,115,108,C,C,C,conteudo,via fonte B,0.679,0.534
+2024,nature,116,116,109,A,A,A,conteudo,via fonte B,0.88,0.938
+2024,nature,117,117,110,E,E,E,conteudo,via fonte B,0.404,1.0
+2024,nature,118,118,111,D,D,D,conteudo,via fonte B,0.206,0.554
+2024,nature,119,119,96,B,B,B,conteudo,via fonte B,0.802,0.673
+2024,nature,120,120,97,B,B,B,conteudo,via fonte B,0.238,1.0
+2024,nature,121,121,98,A,A,A,conteudo,via fonte B,0.477,0.402
+2024,nature,122,122,112,A,A,A,conteudo,via fonte B,0.76,0.611
+2024,nature,123,123,113,A,A,A,conteudo,via fonte B,0.708,0.609
+2024,nature,124,124,114,C,C,C,conteudo,via fonte B,0.716,0.653
+2024,nature,125,126,103,A,A,A,conteudo,via fonte B,0.939,0.97
+2024,nature,126,126,103,A,A,A,numero,via fonte B,,0.97
+2024,nature,127,127,104,E,E,E,conteudo,via fonte B,0.458,0.371
+2024,nature,128,128,99,E,E,E,conteudo,via fonte B,0.75,0.652
+2024,nature,129,129,100,ANNULLED,,B,conteudo,via fonte B,1.0,1.0
+2024,nature,130,130,101,C,C,C,numero,via fonte B,,0.321
+2024,nature,131,131,91,B,B,B,conteudo,via fonte B,0.529,0.478
+2024,nature,132,132,92,B,B,B,conteudo,via fonte B,0.675,0.678
+2024,nature,133,133,93,C,C,C,conteudo,via fonte B,0.912,0.912
+2024,nature,134,134,94,E,E,E,conteudo,via fonte B,0.541,0.731
+2024,nature,135,135,95,D,D,D,conteudo,via fonte B,0.317,0.933
+2025,humanas,46,46,49,E,E,E,conteudo,via fonte B,0.277,0.795
+2025,humanas,47,47,50,D,D,D,conteudo,via fonte B,0.444,0.436
+2025,humanas,48,48,51,E,E,E,conteudo,via fonte B,0.482,0.776
+2025,humanas,49,49,46,C,C,C,conteudo,via fonte B,0.325,0.574
+2025,humanas,50,50,47,A,A,A,conteudo,via fonte B,0.377,0.754
+2025,humanas,51,51,48,D,D,D,conteudo,via fonte B,0.219,0.829
+2025,humanas,52,52,57,C,C,C,conteudo,via fonte B,0.347,0.832
+2025,humanas,53,53,58,E,E,E,conteudo,via fonte B,0.269,0.817
+2025,humanas,54,54,59,E,E,E,conteudo,via fonte B,0.237,0.825
+2025,humanas,55,55,60,D,D,D,conteudo,via fonte B,0.267,0.782
+2025,humanas,56,56,61,A,C,C,numero,via fonte B,,0.785
+2025,humanas,57,57,52,A,A,A,conteudo,via fonte B,0.266,0.82
+2025,humanas,58,58,53,D,D,D,conteudo,via fonte B,0.271,0.8
+2025,humanas,59,59,54,B,B,B,conteudo,via fonte B,0.284,0.79
+2025,humanas,60,60,55,D,D,D,conteudo,via fonte B,0.352,0.761
+2025,humanas,61,61,56,E,E,E,conteudo,via fonte B,0.338,0.77
+2025,humanas,62,62,72,B,B,B,conteudo,via fonte B,0.267,0.802
+2025,humanas,63,63,73,B,B,B,conteudo,via fonte B,0.5,0.541
+2025,humanas,64,64,74,A,A,A,conteudo,via fonte B,0.319,0.8
+2025,humanas,65,65,62,C,C,C,conteudo,via fonte B,0.211,0.821
+2025,humanas,66,66,63,D,D,D,conteudo,via fonte B,0.215,0.785
+2025,humanas,67,67,64,D,D,D,conteudo,via fonte B,0.231,0.813
+2025,humanas,68,68,65,E,E,E,conteudo,via fonte B,0.5,0.483
+2025,humanas,69,69,66,C,C,C,conteudo,via fonte B,0.241,0.805
+2025,humanas,70,70,85,B,B,B,conteudo,via fonte B,0.21,0.83
+2025,humanas,71,71,86,A,A,A,conteudo,via fonte B,0.286,0.757
+2025,humanas,72,72,87,D,D,D,conteudo,via fonte B,0.377,0.677
+2025,humanas,73,73,88,A,A,A,conteudo,via fonte B,0.237,0.776
+2025,humanas,74,74,89,B,B,B,conteudo,via fonte B,0.409,0.807
+2025,humanas,75,75,90,B,B,B,conteudo,via fonte B,0.373,0.712
+2025,humanas,76,76,75,C,C,C,conteudo,via fonte B,0.244,0.802
+2025,humanas,77,77,76,A,A,A,conteudo,via fonte B,0.3,0.647
+2025,humanas,78,78,77,B,B,B,conteudo,via fonte B,0.288,0.767
+2025,humanas,79,79,78,A,A,A,conteudo,via fonte B,0.361,0.795
+2025,humanas,80,80,79,C,C,C,conteudo,via fonte B,0.333,0.742
+2025,humanas,81,81,80,E,E,E,conteudo,via fonte B,0.338,0.77
+2025,humanas,82,82,81,E,E,E,conteudo,via fonte B,0.342,0.763
+2025,humanas,83,83,82,D,D,D,conteudo,via fonte B,0.388,0.787
+2025,humanas,84,84,83,D,D,D,conteudo,via fonte B,0.21,0.821
+2025,humanas,85,85,84,B,B,B,conteudo,via fonte B,0.286,0.829
+2025,humanas,86,86,67,C,C,C,conteudo,via fonte B,0.315,0.793
+2025,humanas,87,87,68,B,B,B,conteudo,via fonte B,0.493,0.761
+2025,humanas,88,88,69,C,C,C,conteudo,via fonte B,0.26,0.753
+2025,humanas,89,89,70,E,E,E,conteudo,via fonte B,0.356,0.789
+2025,humanas,90,90,71,A,A,A,conteudo,via fonte B,0.184,0.835
+2025,linguagens,1,1,5,D,D,D,conteudo,via fonte B,0.242,0.871
+2025,linguagens,2,2,3,D,D,D,conteudo,via fonte B,0.303,0.809
+2025,linguagens,3,3,4,D,D,D,conteudo,via fonte B,0.277,0.819
+2025,linguagens,4,4,2,E,E,E,conteudo,via fonte B,0.238,0.861
+2025,linguagens,5,5,1,A,A,A,conteudo,via fonte B,0.51,0.333
+2025,linguagens,1,1,,B,B,,conteudo,—,0.405,
+2025,linguagens,2,2,,A,A,,conteudo,—,0.187,
+2025,linguagens,3,3,,D,D,,conteudo,—,0.337,
+2025,linguagens,4,4,,D,D,,conteudo,—,0.413,
+2025,linguagens,5,5,,C,C,,conteudo,—,0.239,
+2025,linguagens,6,6,9,E,E,E,conteudo,via fonte B,0.545,0.31
+2025,linguagens,7,7,8,C,C,C,conteudo,via fonte B,0.607,0.463
+2025,linguagens,8,8,10,D,D,D,conteudo,via fonte B,0.579,0.277
+2025,linguagens,9,9,,C,C,,conteudo,—,0.49,
+2025,linguagens,10,10,7,E,E,E,conteudo,via fonte B,0.671,0.571
+2025,linguagens,11,11,20,B,B,B,conteudo,via fonte B,0.196,0.857
+2025,linguagens,12,12,21,C,C,C,conteudo,via fonte B,0.367,0.811
+2025,linguagens,13,13,22,E,E,E,conteudo,via fonte B,0.26,0.802
+2025,linguagens,14,14,23,C,C,C,conteudo,via fonte B,0.603,0.368
+2025,linguagens,15,15,11,A,A,A,conteudo,via fonte B,0.673,0.648
+2025,linguagens,16,16,12,E,E,E,conteudo,via fonte B,0.311,0.766
+2025,linguagens,17,17,13,C,C,C,conteudo,via fonte B,0.309,0.862
+2025,linguagens,18,18,14,A,A,A,conteudo,via fonte B,0.255,0.883
+2025,linguagens,19,19,15,E,E,E,conteudo,via fonte B,0.212,0.837
+2025,linguagens,20,20,16,B,B,B,conteudo,via fonte B,0.226,0.858
+2025,linguagens,21,21,17,C,C,C,conteudo,via fonte B,0.257,0.838
+2025,linguagens,22,22,35,B,B,B,conteudo,via fonte B,0.262,0.695
+2025,linguagens,23,23,36,C,C,C,conteudo,via fonte B,0.371,0.559
+2025,linguagens,24,24,18,B,B,B,conteudo,via fonte B,0.582,0.392
+2025,linguagens,25,25,19,E,E,E,conteudo,via fonte B,0.287,0.89
+2025,linguagens,26,26,31,B,B,B,conteudo,via fonte B,0.456,0.287
+2025,linguagens,27,27,32,A,A,A,conteudo,via fonte B,0.25,0.765
+2025,linguagens,28,28,33,B,B,B,conteudo,via fonte B,0.341,0.802
+2025,linguagens,29,29,34,A,A,A,conteudo,via fonte B,0.215,0.874
+2025,linguagens,30,30,24,B,B,B,conteudo,via fonte B,0.293,0.829
+2025,linguagens,31,31,25,D,D,D,conteudo,via fonte B,0.545,0.33
+2025,linguagens,32,32,26,E,E,E,numero,via fonte B,,0.89
+2025,linguagens,33,33,27,B,B,B,conteudo,via fonte B,0.603,0.385
+2025,linguagens,34,34,28,C,C,C,conteudo,via fonte B,0.625,0.423
+2025,linguagens,35,35,29,E,E,E,conteudo,via fonte B,0.286,0.88
+2025,linguagens,36,36,30,D,D,D,conteudo,via fonte B,0.208,0.84
+2025,linguagens,37,37,42,A,A,A,numero,via fonte B,,0.898
+2025,linguagens,38,38,43,B,B,B,conteudo,via fonte B,0.264,0.581
+2025,linguagens,39,39,40,C,C,C,conteudo,via fonte B,0.197,0.85
+2025,linguagens,40,40,41,A,A,A,conteudo,via fonte B,0.182,0.884
+2025,linguagens,41,41,44,B,B,B,conteudo,via fonte B,0.291,0.66
+2025,linguagens,42,42,45,A,A,A,conteudo,via fonte B,0.307,0.842
+2025,linguagens,43,43,37,D,D,D,conteudo,via fonte B,0.238,0.853
+2025,linguagens,44,44,38,D,D,D,conteudo,via fonte B,0.331,0.85
+2025,linguagens,45,45,39,C,C,C,conteudo,via fonte B,0.394,0.505
+2025,math,136,136,141,C,C,C,conteudo,via fonte B,0.746,0.746
+2025,math,137,137,140,B,B,B,conteudo,via fonte B,0.492,0.485
+2025,math,138,138,142,E,E,E,conteudo,via fonte B,0.413,0.424
+2025,math,139,139,143,C,C,C,conteudo,via fonte B,0.659,0.678
+2025,math,140,140,144,E,E,E,conteudo,via fonte B,0.595,0.595
+2025,math,141,141,145,C,C,C,conteudo,via fonte B,0.705,0.705
+2025,math,142,142,146,C,C,C,conteudo,via fonte B,0.603,0.603
+2025,math,143,143,136,A,A,A,conteudo,via fonte B,0.618,0.568
+2025,math,144,144,137,D,D,D,conteudo,via fonte B,0.77,0.77
+2025,math,145,145,138,D,D,D,conteudo,via fonte B,0.632,0.632
+2025,math,146,146,139,B,B,B,conteudo,via fonte B,0.66,0.66
+2025,math,147,147,151,E,E,E,conteudo,via fonte B,0.508,0.508
+2025,math,148,148,152,C,C,C,conteudo,via fonte B,0.587,0.552
+2025,math,149,149,147,B,B,B,conteudo,via fonte B,0.51,0.458
+2025,math,150,150,148,D,D,D,conteudo,via fonte B,0.707,0.707
+2025,math,151,151,149,D,D,D,conteudo,via fonte B,0.525,0.525
+2025,math,152,152,150,D,D,D,conteudo,via fonte B,0.589,0.6
+2025,math,153,153,153,A,A,A,conteudo,via fonte B,0.707,0.678
+2025,math,154,154,154,C,C,C,conteudo,via fonte B,0.688,0.639
+2025,math,155,155,160,B,B,B,conteudo,via fonte B,0.54,0.54
+2025,math,156,156,161,E,E,E,conteudo,via fonte B,0.588,0.586
+2025,math,157,157,162,C,C,C,numero,via fonte B,,0.646
+2025,math,158,158,163,C,C,C,conteudo,via fonte B,0.779,0.779
+2025,math,159,159,164,D,D,D,conteudo,via fonte B,0.528,0.528
+2025,math,160,160,155,E,E,E,conteudo,via fonte B,0.553,0.566
+2025,math,161,161,156,A,A,A,conteudo,via fonte B,0.648,0.61
+2025,math,162,162,157,B,B,B,conteudo,via fonte B,0.717,0.717
+2025,math,163,163,165,B,B,B,conteudo,via fonte B,0.538,0.5
+2025,math,164,164,166,A,A,A,conteudo,via fonte B,0.693,0.709
+2025,math,165,165,158,D,D,D,conteudo,via fonte B,0.653,0.653
+2025,math,166,166,159,E,E,E,conteudo,via fonte B,0.565,0.52
+2025,math,167,167,179,D,D,D,conteudo,via fonte B,0.64,0.613
+2025,math,168,168,180,E,E,E,conteudo,via fonte B,0.672,0.672
+2025,math,169,169,170,A,A,A,conteudo,via fonte B,0.367,0.337
+2025,math,170,170,167,B,B,B,conteudo,via fonte B,0.69,0.709
+2025,math,171,171,168,E,E,E,conteudo,via fonte B,0.795,0.795
+2025,math,172,172,169,A,A,A,conteudo,via fonte B,0.667,0.689
+2025,math,173,173,171,A,A,A,conteudo,via fonte B,0.742,0.692
+2025,math,174,174,172,ANNULLED,,B,conteudo,via fonte B,0.5,0.5
+2025,math,175,175,173,C,C,C,conteudo,via fonte B,0.707,0.707
+2025,math,176,176,174,C,C,C,conteudo,via fonte B,0.685,0.685
+2025,math,177,177,175,B,B,B,conteudo,via fonte B,0.62,0.616
+2025,math,178,178,176,E,E,E,conteudo,via fonte B,0.6,0.611
+2025,math,179,179,177,A,A,A,conteudo,via fonte B,0.521,0.521
+2025,math,180,180,178,D,D,D,conteudo,via fonte B,0.507,0.545
+2025,nature,91,91,129,D,D,D,conteudo,via fonte B,0.634,0.624
+2025,nature,92,92,130,D,D,D,conteudo,via fonte B,0.203,0.712
+2025,nature,93,93,131,C,C,C,conteudo,via fonte B,0.712,0.712
+2025,nature,94,94,132,D,D,D,conteudo,via fonte B,0.701,0.701
+2025,nature,95,95,97,B,C,C,numero,via fonte B,,0.793
+2025,nature,96,96,98,B,B,B,conteudo,via fonte B,0.293,0.652
+2025,nature,97,97,99,D,D,D,conteudo,via fonte B,0.657,0.561
+2025,nature,98,98,100,D,D,D,conteudo,via fonte B,0.287,0.805
+2025,nature,99,99,91,C,C,C,conteudo,via fonte B,0.377,0.754
+2025,nature,100,100,92,D,D,D,conteudo,via fonte B,0.672,0.672
+2025,nature,101,101,93,A,A,A,conteudo,via fonte B,0.343,0.701
+2025,nature,102,102,94,E,E,E,conteudo,via fonte B,0.75,0.75
+2025,nature,103,103,95,A,A,A,conteudo,via fonte B,0.278,0.685
+2025,nature,104,104,96,A,A,A,conteudo,via fonte B,0.306,0.827
+2025,nature,105,105,107,E,E,E,conteudo,via fonte B,0.235,0.55
+2025,nature,106,106,108,A,A,A,conteudo,via fonte B,0.253,0.685
+2025,nature,107,107,101,E,E,E,conteudo,via fonte B,0.273,0.242
+2025,nature,108,108,102,C,C,C,conteudo,via fonte B,0.5,0.438
+2025,nature,109,109,103,E,E,E,numero,via fonte B,,0.571
+2025,nature,110,110,104,E,E,E,conteudo,via fonte B,0.726,0.726
+2025,nature,111,111,105,B,B,B,conteudo,via fonte B,0.606,0.449
+2025,nature,112,112,106,D,D,D,conteudo,via fonte B,0.278,0.685
+2025,nature,113,113,109,B,B,B,conteudo,via fonte B,0.646,0.511
+2025,nature,114,114,110,B,B,B,conteudo,via fonte B,0.592,0.577
+2025,nature,115,115,111,C,C,C,numero,via fonte B,,0.627
+2025,nature,116,116,122,C,C,C,numero,via fonte B,,0.761
+2025,nature,117,117,123,D,D,D,conteudo,via fonte B,0.742,0.742
+2025,nature,118,118,124,C,C,C,conteudo,via fonte B,0.646,0.646
+2025,nature,119,119,125,B,B,B,conteudo,via fonte B,0.561,0.543
+2025,nature,120,120,112,B,B,B,conteudo,via fonte B,0.691,0.679
+2025,nature,121,121,113,B,B,B,conteudo,via fonte B,0.754,0.754
+2025,nature,122,122,114,D,D,D,conteudo,via fonte B,0.686,0.652
+2025,nature,123,123,115,ANNULLED,,E,numero,via fonte B,,0.723
+2025,nature,124,124,119,B,B,B,numero,via fonte B,,0.727
+2025,nature,125,125,120,B,B,B,conteudo,via fonte B,0.77,0.761
+2025,nature,126,126,121,D,D,D,conteudo,via fonte B,0.748,0.736
+2025,nature,127,127,133,C,C,C,conteudo,via fonte B,0.439,0.364
+2025,nature,128,128,134,E,E,E,conteudo,via fonte B,0.538,0.5
+2025,nature,129,129,135,A,A,A,conteudo,via fonte B,0.375,0.375
+2025,nature,130,130,116,E,E,E,conteudo,via fonte B,0.569,0.559
+2025,nature,131,131,117,E,E,E,numero,via fonte B,,0.725
+2025,nature,132,132,118,ANNULLED,,C,conteudo,via fonte B,0.729,0.765
+2025,nature,133,133,127,A,A,A,conteudo,via fonte B,0.708,0.711
+2025,nature,134,134,128,B,B,B,conteudo,via fonte B,0.769,0.727
+2025,nature,135,135,126,A,A,A,conteudo,via fonte B,0.584,0.493

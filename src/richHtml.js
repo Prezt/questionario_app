@@ -103,27 +103,53 @@ export function escapeInline(text) {
     .replace(/<sup>(.*?)<\/sup><sub>(.*?)<\/sub>/g, '<span class="supsub"><sup>$1</sup><sub>$2</sub></span>')
 }
 
-export function parseMarkdownTable(tableLines) {
+// Estrutura da tabela, sem HTML — usada tanto pelo render web (parseMarkdownTable)
+// quanto pelo PDF (src/pdf/PdfTable.jsx), que nao tem <table> nativo.
+//
+// Retorna { header: Cell[], rows: Cell[][], columnCount }, onde
+// Cell = { text, colspan }. Celulas cujo conteudo e ">" sao merges da anterior.
+export function parseTableGrid(tableLines) {
   const dataRows = tableLines.filter(l => !/^\|[\s\-:|]+\|$/.test(l.trim()))
-  if (!dataRows.length) return ''
+  if (!dataRows.length) return null
   const parseRow = l => l.split('|').slice(1, -1).map(c => c.trim())
-  // Build a row of <th> or <td> elements, merging cells whose content is ">"
-  const buildCells = (cells, tag) => {
+  const buildCells = (cells) => {
     const out = []
     let i = 0
     while (i < cells.length) {
       let span = 1
       while (i + span < cells.length && cells[i + span] === '>') span++
-      const attr = span > 1 ? ` colspan="${span}"` : ''
-      out.push(`<${tag}${attr}>${escapeInline(cells[i])}</${tag}>`)
+      out.push({ text: cells[i], colspan: span })
       i += span
     }
-    return out.join('')
+    return out
   }
   const [header, ...body] = dataRows
-  const ths = buildCells(parseRow(header), 'th')
-  const trs = body.map(l => `<tr>${buildCells(parseRow(l), 'td')}</tr>`).join('')
+  const grid = {
+    header: buildCells(parseRow(header)),
+    rows: body.map(l => buildCells(parseRow(l))),
+  }
+  grid.columnCount = Math.max(
+    grid.header.reduce((n, c) => n + c.colspan, 0),
+    ...grid.rows.map(r => r.reduce((n, c) => n + c.colspan, 0)),
+  )
+  return grid
+}
+
+export function parseMarkdownTable(tableLines) {
+  const grid = parseTableGrid(tableLines)
+  if (!grid) return ''
+  const buildCells = (cells, tag) => cells.map(({ text, colspan }) => {
+    const attr = colspan > 1 ? ` colspan="${colspan}"` : ''
+    return `<${tag}${attr}>${escapeInline(text)}</${tag}>`
+  }).join('')
+  const ths = buildCells(grid.header, 'th')
+  const trs = grid.rows.map(cells => `<tr>${buildCells(cells, 'td')}</tr>`).join('')
   return `<table class="q-table"><thead><tr>${ths}</tr></thead><tbody>${trs}</tbody></table>`
+}
+
+/** Linhas de uma tabela markdown comecam com "|". */
+export function isTableLine(line) {
+  return String(line ?? '').trim().startsWith('|')
 }
 
 export function richHtmlBr(text) {

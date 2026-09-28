@@ -15,6 +15,10 @@ import React, { useEffect, useMemo, useState } from 'react'
 import { pdf } from '@react-pdf/renderer'
 import PrintableList from './PrintableList.jsx'
 import PrintableAnswerKey from './PrintableAnswerKey.jsx'
+import QuestionPreview from '../QuestionPreview.jsx'
+import { questionThumb } from './questionThumb.js'
+import { questionPath } from '../questionPath.js'
+import '../QuestionEditor.css'
 import './PdfExporter.css'
 
 const AREAS = [
@@ -99,7 +103,17 @@ export default function PdfExporter({ token, onClose }) {
   const [busy, setBusy] = useState(false)
   const [genError, setGenError] = useState(null)
 
+  // Modal "ver questao": { question, contexts }
+  const [preview, setPreview] = useState(null)
+
   const authHeaders = useMemo(() => ({ Authorization: `Bearer ${token}` }), [token])
+
+  useEffect(() => {
+    if (!preview) return
+    const onKey = (e) => { if (e.key === 'Escape') setPreview(null) }
+    window.addEventListener('keydown', onKey)
+    return () => window.removeEventListener('keydown', onKey)
+  }, [preview])
 
   useEffect(() => {
     let cancelled = false
@@ -320,22 +334,43 @@ export default function PdfExporter({ token, onClose }) {
               <ul className="pdf-exporter-results">
                 {searchResults.map((q) => {
                   const already = alreadyIn.has(q.id)
-                  const preview = String(q.text ?? '').slice(0, 70).replace(/\s+/g, ' ')
+                  const resumo = String(q.text ?? '').slice(0, 70).replace(/\s+/g, ' ')
+                  const thumb = questionThumb(q, searchContexts)
                   return (
                     <li key={q.id} className="pdf-exporter-result">
-                      <div className="pdf-exporter-result-meta">
-                        <strong>#{q.number}</strong> · {q.area ?? '?'} · {q.year ?? '?'}
-                        {q.language ? ` · ${q.language}` : ''}
+                      {thumb && (
+                        <img
+                          className="pdf-exporter-thumb"
+                          src={thumb.src}
+                          alt={thumb.caption || 'Figura da questão'}
+                          title={thumb.from === 'contexto' ? 'Figura do texto-base' : 'Figura da questão'}
+                          loading="lazy"
+                        />
+                      )}
+                      <div className="pdf-exporter-result-main">
+                        <div className="pdf-exporter-result-meta">
+                          <strong>#{q.number}</strong> · {q.area ?? '?'} · {q.year ?? '?'}
+                          {q.language ? ` · ${q.language}` : ''}
+                        </div>
+                        <div className="pdf-exporter-result-text">{resumo}…</div>
                       </div>
-                      <div className="pdf-exporter-result-text">{preview}…</div>
-                      <button
-                        type="button"
-                        className="qe-btn qe-btn--ghost pdf-exporter-add"
-                        onClick={() => addSearchResult(q)}
-                        disabled={already || busy}
-                      >
-                        {already ? 'já adicionada' : '+ adicionar'}
-                      </button>
+                      <div className="pdf-exporter-result-actions">
+                        <button
+                          type="button"
+                          className="qe-btn qe-btn--ghost pdf-exporter-view"
+                          onClick={() => setPreview({ question: q, contexts: searchContexts })}
+                        >
+                          ver questão
+                        </button>
+                        <button
+                          type="button"
+                          className="qe-btn qe-btn--ghost pdf-exporter-add"
+                          onClick={() => addSearchResult(q)}
+                          disabled={already || busy}
+                        >
+                          {already ? 'já adicionada' : '+ adicionar'}
+                        </button>
+                      </div>
                     </li>
                   )
                 })}
@@ -381,14 +416,30 @@ export default function PdfExporter({ token, onClose }) {
                   const origin = q._fromList
                     ? `lista: ${q._listName ?? q._fromList}`
                     : `${q.source ?? ''}${q.area ? ` · ${q.area}` : ''}${q.year ? ` · ${q.year}` : ''}`
+                  const thumb = questionThumb(q, contextMap)
                   return (
                     <li key={q.id} className="pdf-exporter-selected-item">
                       <span className="pdf-exporter-selected-num">{i + 1}.</span>
+                      {thumb && (
+                        <img
+                          className="pdf-exporter-thumb pdf-exporter-thumb--small"
+                          src={thumb.src}
+                          alt={thumb.caption || 'Figura da questão'}
+                          loading="lazy"
+                        />
+                      )}
                       <div className="pdf-exporter-selected-body">
                         <div className="pdf-exporter-selected-title">
                           #{q.number} — {String(q.text ?? '').slice(0, 60)}…
                         </div>
                         <div className="pdf-exporter-selected-origin">{origin}</div>
+                        <button
+                          type="button"
+                          className="pdf-exporter-view-link"
+                          onClick={() => setPreview({ question: q, contexts: contextMap })}
+                        >
+                          ver questão
+                        </button>
                       </div>
                       <button
                         type="button"
@@ -428,6 +479,47 @@ export default function PdfExporter({ token, onClose }) {
           </section>
         </div>
       </div>
+
+      {preview && (
+        <div
+          className="pdf-preview-overlay"
+          role="dialog"
+          aria-modal="true"
+          aria-label="Visualização da questão"
+          onClick={() => setPreview(null)}
+        >
+          <div className="pdf-preview-panel" onClick={(e) => e.stopPropagation()}>
+            <div className="pdf-preview-header">
+              <span className="pdf-preview-title">
+                Questão {preview.question.number}
+                {preview.question.year ? ` · ${preview.question.year}` : ''}
+              </span>
+              {preview.question.year && preview.question.number && (
+                <a
+                  className="pdf-preview-link"
+                  href={questionPath(preview.question)}
+                  target="_blank"
+                  rel="noreferrer"
+                  title="Abrir a questão em uma aba nova"
+                >
+                  {questionPath(preview.question)}
+                </a>
+              )}
+              <button
+                type="button"
+                className="pdf-preview-close"
+                onClick={() => setPreview(null)}
+                aria-label="Fechar"
+              >
+                ×
+              </button>
+            </div>
+            <div className="pdf-preview-body">
+              <QuestionPreview question={preview.question} contexts={preview.contexts} />
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   )
 }
