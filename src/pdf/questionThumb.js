@@ -18,6 +18,20 @@ function publicImageSrc(path) {
 }
 
 /**
+ * Chaves de contexto da questao, venha ela do banco ou de public/.
+ *
+ * A coluna do banco e `context_keys`; os arquivos JSON usam `contextIds`, e
+ * questoes antigas ainda podem trazer `contextId` solto. O EnemPicker le os
+ * arquivos, entao olhar so um dos tres deixa a miniatura de fora.
+ */
+function contextKeysOf(q) {
+  if (Array.isArray(q.context_keys) && q.context_keys.length) return q.context_keys
+  if (Array.isArray(q.contextIds) && q.contextIds.length) return q.contextIds
+  if (q.contextId) return [q.contextId]
+  return []
+}
+
+/**
  * Retorna { src, caption, from: 'questao' | 'contexto' } ou null.
  * `from` existe para a UI poder sinalizar que a figura veio do texto-base.
  */
@@ -29,7 +43,7 @@ export function questionThumb(q, contexts = {}) {
     return { src: publicImageSrc(stemImages[0].src), caption: stemImages[0].caption ?? '', from: 'questao' }
   }
 
-  for (const key of q.context_keys ?? []) {
+  for (const key of contextKeysOf(q)) {
     const images = contexts?.[key]?.images ?? []
     for (const img of images) {
       const src = publicImageSrc(img)

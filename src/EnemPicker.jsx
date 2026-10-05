@@ -1,9 +1,8 @@
 import { useState, useEffect, useLayoutEffect, useMemo, useRef } from 'react'
 import './QuestionEditor.css'
-import {
-  DISCIPLINAS_BY_AREA,
-  disciplinaLabel,
-} from './data/disciplinas.js'
+import { disciplinaLabel } from './data/disciplinas.js'
+import { questionThumb } from './pdf/questionThumb.js'
+import { applyFilters, facetOptions, paresParaCarregar, norm } from './pickerFacets.js'
 
 export const ENEM_AREAS = [
   { key: 'math',       label: 'Matemática' },
@@ -18,11 +17,6 @@ export function diffLabel(d) {
   return d <= 3 ? 'easy' : d <= 6 ? 'medium' : 'hard'
 }
 
-const DIACRITICS_RE = /\p{Diacritic}/gu
-function norm(s) {
-  return (s ?? '').toString().normalize('NFD').replace(DIACRITICS_RE, '').toLowerCase()
-}
-
 export default function EnemPicker({
   actionLabel = 'Usar',
   onSelect,
@@ -32,6 +26,7 @@ export default function EnemPicker({
 }) {
   const useCache = Array.isArray(allQuestions) && allQuestions.length > 0
 
+  // '' e null sao "Todas"/"Todos" — a busca deixa de filtrar por esse campo.
   const [area, setArea] = useState('math')
   const [year, setYear] = useState(2025)
   const [questions, setQuestions] = useState([])
@@ -59,7 +54,7 @@ export default function EnemPicker({
     setSelectedAssuntos([])
     if (useCache) {
       const matched = allQuestions.filter(q =>
-        q.test === 'ENEM' && q.year === year && q.area === area
+        q.test === 'ENEM' && (!year || q.year === year) && (!area || q.area === area)
       )
       setQuestions(matched)
       setFetching(false)
@@ -67,40 +62,35 @@ export default function EnemPicker({
     }
     setFetching(true)
     setQuestions([])
-    fetch(`/${area}_enem_${year}.json`)
-      .then(r => r.ok ? r.json() : [])
-      .catch(() => [])
-      .then(qs => { setQuestions(qs); setFetching(false) })
+    let cancelado = false
+    const pares = paresParaCarregar(area, year, ENEM_AREAS.map(a => a.key), ENEM_YEARS)
+    Promise.all(pares.map(([a, y]) =>
+      fetch(`/${a}_enem_${y}.json`).then(r => (r.ok ? r.json() : [])).catch(() => []),
+    )).then(listas => {
+      if (cancelado) return
+      setQuestions(listas.flat())
+      setFetching(false)
+    })
+    return () => { cancelado = true }
   }, [area, year, useCache, allQuestions])
 
   useLayoutEffect(() => {
     if (listRef.current) listRef.current.scrollTop = 0
   }, [search, selectedDisciplinas, selectedAssuntos])
 
-  const areaDisciplinas = DISCIPLINAS_BY_AREA[area] ?? []
-
-  const assuntoVocab = useMemo(() => {
-    const set = new Set()
-    for (const q of questions) for (const t of (q.tags ?? [])) set.add(t)
-    return Array.from(set).sort((a, b) => a.localeCompare(b, 'pt'))
-  }, [questions])
-
   const queryNorm = norm(search.trim())
 
-  const filtered = useMemo(() => questions.filter(q => {
-    if (selectedDisciplinas.length > 0) {
-      const qd = q.disciplinas ?? []
-      if (!qd.some(d => selectedDisciplinas.includes(d))) return false
-    }
-    if (selectedAssuntos.length > 0) {
-      const qt = q.tags ?? []
-      if (!qt.some(t => selectedAssuntos.includes(t))) return false
-    }
-    if (queryNorm) {
-      if (!norm(q.text ?? q.stem ?? '').includes(queryNorm)) return false
-    }
-    return true
-  }), [questions, selectedDisciplinas, selectedAssuntos, queryNorm])
+  // Cada dropdown so oferece o que ainda leva a alguma questao, levando em
+  // conta os outros filtros ativos — ver src/pickerFacets.js.
+  const filtros = useMemo(
+    () => ({ disciplinas: selectedDisciplinas, assuntos: selectedAssuntos, queryNorm }),
+    [selectedDisciplinas, selectedAssuntos, queryNorm],
+  )
+  const facetas = useMemo(() => facetOptions(questions, filtros), [questions, filtros])
+  const areaDisciplinas = facetas.disciplinas
+  const assuntoVocab = facetas.assuntos
+
+  const filtered = useMemo(() => applyFilters(questions, filtros), [questions, filtros])
 
   const toggleDisciplina = (slug) => {
     setSelectedDisciplinas(prev =>
@@ -113,13 +103,16 @@ export default function EnemPicker({
     )
   }
 
+  // Com "Todos" ativo convivem varias provas, entao `number` sozinho repete:
+  // a identidade de uma questao e area+ano+numero+idioma.
+  const chaveDe = (q) => `${q.area ?? ''}-${q.year ?? ''}-${q.number}-${q.language ?? ''}`
   const selectedQuestion = mode === 'number' && selectedNum
-    ? questions.find(q => q.number === Number(selectedNum))
+    ? questions.find(q => chaveDe(q) === selectedNum)
     : null
 
   const handleSelect = (q) => onSelect?.(q, contexts)
 
-  const areaLabel = ENEM_AREAS.find(a => a.key === area)?.label ?? ''
+  const areaLabel = area ? (ENEM_AREAS.find(a => a.key === area)?.label ?? '') : 'Todas'
   const summarizeMulti = (selected, labelFor, total, allWord) => {
     if (selected.length === 0) return total != null ? `${allWord} (${total})` : allWord
     if (selected.length <= 2) return selected.map(labelFor).join(', ')
@@ -151,8 +144,8 @@ export default function EnemPicker({
           </summary>
           <div className="home-dropdown-panel">
             <div className="home-dropdown-group">
-              {ENEM_AREAS.map(a => (
-                <label key={a.key} className="home-dropdown-option">
+              {[{ key: '', label: 'Todas' }, ...ENEM_AREAS].map(a => (
+                <label key={a.key || 'todas'} className="home-dropdown-option">
                   <input
                     type="radio"
                     name="enem-picker-area"
@@ -173,12 +166,12 @@ export default function EnemPicker({
         <details className="home-dropdown">
           <summary className="home-dropdown-summary">
             <span className="home-dropdown-label">Ano</span>
-            <span className="home-dropdown-value home-dropdown-value--filled">{year}</span>
+            <span className="home-dropdown-value home-dropdown-value--filled">{year ?? 'Todos'}</span>
           </summary>
           <div className="home-dropdown-panel">
             <div className="home-dropdown-group home-dropdown-group--cols-2">
-              {ENEM_YEARS.map(y => (
-                <label key={y} className="home-dropdown-option">
+              {[null, ...ENEM_YEARS].map(y => (
+                <label key={y ?? 'todos'} className="home-dropdown-option">
                   <input
                     type="radio"
                     name="enem-picker-year"
@@ -188,7 +181,7 @@ export default function EnemPicker({
                       e.currentTarget.closest('details')?.removeAttribute('open')
                     }}
                   />
-                  <span>{y}</span>
+                  <span>{y ?? 'Todos'}</span>
                 </label>
               ))}
             </div>
@@ -265,23 +258,27 @@ export default function EnemPicker({
               <summary className="home-dropdown-summary">
                 <span className="home-dropdown-label">Questão</span>
                 <span className={`home-dropdown-value${selectedNum ? ' home-dropdown-value--filled' : ''}`}>
-                  {fetching ? 'Carregando…' : selectedNum ? `Q${selectedNum}` : 'Selecionar…'}
+                  {fetching
+                    ? 'Carregando…'
+                    : selectedQuestion
+                      ? `Q${selectedQuestion.number} · ${selectedQuestion.year}`
+                      : 'Selecionar…'}
                 </span>
               </summary>
               <div className="home-dropdown-panel">
                 <div className="home-dropdown-group home-dropdown-group--cols-2">
                   {questions.map(q => (
-                    <label key={q.number} className="home-dropdown-option">
+                    <label key={chaveDe(q)} className="home-dropdown-option">
                       <input
                         type="radio"
                         name="enem-picker-question"
-                        checked={selectedNum === String(q.number)}
+                        checked={selectedNum === chaveDe(q)}
                         onChange={(e) => {
-                          setSelectedNum(String(q.number))
+                          setSelectedNum(chaveDe(q))
                           e.currentTarget.closest('details')?.removeAttribute('open')
                         }}
                       />
-                      <span>Q{q.number}</span>
+                      <span>Q{q.number}{!year || !area ? ` · ${q.year}` : ''}</span>
                     </label>
                   ))}
                 </div>
@@ -305,6 +302,7 @@ export default function EnemPicker({
           {!fetching && filtered.length === 0 && <p key="empty" className="qe-picker-empty">Nenhuma questão encontrada.</p>}
           {filtered.map(q => {
             const rowClickable = !actionLabel
+            const thumb = questionThumb(q, contexts)
             const rowProps = rowClickable
               ? {
                   role: 'button',
@@ -315,10 +313,19 @@ export default function EnemPicker({
               : {}
             return (
               <div
-                key={q.number}
+                key={chaveDe(q)}
                 className={`qe-picker-item${rowClickable ? ' qe-picker-item--clickable' : ''}`}
                 {...rowProps}
               >
+                {thumb && (
+                  <img
+                    className="qe-picker-item-thumb"
+                    src={thumb.src}
+                    alt={thumb.caption || 'Figura da questão'}
+                    title={thumb.from === 'contexto' ? 'Figura do texto-base' : 'Figura da questão'}
+                    loading="lazy"
+                  />
+                )}
                 <div className="qe-picker-item-meta">
                   <span className="qe-picker-item-num">Q{q.number}</span>
                   {q.tags?.slice(0, 2).map(t => (

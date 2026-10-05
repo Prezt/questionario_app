@@ -156,3 +156,72 @@ describe('PrintableList', () => {
     expect(text).not.toContain('[Gráfico')
   })
 })
+
+describe('PrintableList · fonte da referencia do contexto', () => {
+  // 148 questoes do banco quebravam aqui: a referencia do contexto e italica e
+  // o titulo do livro vem em <b>, entao o trecho pedia Helvetica-Bold com
+  // fontStyle italic herdado — combinacao que nao existe registrada e derruba
+  // o render inteiro com "Could not resolve font".
+  it('renderiza <b> dentro da referencia italica do contexto', async () => {
+    const q = {
+      id: 90, number: 46, year: 2018, area: 'humanas',
+      text: 'Com base no texto, responda.',
+      alternatives: { a: 'x', b: 'y' },
+      context_keys: ['ctx'],
+    }
+    const contexts = {
+      ctx: {
+        text: 'Texto base.',
+        reference: 'SAID, E. <b>Cultura e política</b>. São Paulo: Cia. das Letras, 1995.',
+        images: [],
+      },
+    }
+    const buffer = await render([q], contexts)
+    if (!hasPdftotext) return
+    const text = pdfText(buffer)
+    expect(text).toContain('Cultura e política')
+    expect(text).not.toContain('<b>')
+  })
+})
+
+describe('PrintableList · lista longa com figuras', () => {
+  // "unsupported number: -1.97e+22" ao baixar uma lista de 16 questoes: quando
+  // a quebra de pagina cai dentro de um bloco de figura marcado wrap={false},
+  // o layout devolve um offset lixo e o documento inteiro nao sai. Uma questao
+  // sozinha nunca reproduz — precisa da lista passando de uma pagina.
+  const figura = `${PUBLIC.slice(1)}/figuras/q136_2024_fig1.png`
+  const lista = (n) => Array.from({ length: n }, (_, i) => ({
+    id: i, number: i + 1, year: 2024, area: 'math',
+    text: 'Observe a figura a seguir e responda. '.repeat(6),
+    alternatives: { a: 'a', b: 'b', c: 'c', d: 'd', e: 'e' },
+    images: [figura],
+  }))
+
+  it('gera 16 questoes com figura sem estourar o layout', async () => {
+    const buffer = await render(lista(16))
+    expect(buffer.length).toBeGreaterThan(0)
+  })
+
+  it('gera 30 questoes com figura sem estourar o layout', async () => {
+    const buffer = await render(lista(30))
+    expect(buffer.length).toBeGreaterThan(0)
+  })
+})
+
+describe('PrintableList · rodape', () => {
+  // O rodape era `position: absolute` e nao saia em nenhuma folha: herdava o
+  // `lineHeight` da pagina e o documento vinha sem marca nenhuma.
+  const lista = (n) => Array.from({ length: n }, (_, i) => ({
+    id: i, number: i + 1, year: 2024, area: 'math',
+    text: 'Texto do enunciado. '.repeat(30),
+    alternatives: { a: 'a', b: 'b', c: 'c', d: 'd', e: 'e' },
+  }))
+
+  it('imprime a marca do Projeto no pe de todas as folhas', async () => {
+    const buffer = await render(lista(10))
+    if (!hasPdftotext) return
+    const paginas = pdfText(buffer).split('\f').filter((p) => p.trim())
+    expect(paginas.length).toBeGreaterThan(1)
+    for (const p of paginas) expect(p).toContain('Projeto de Educação Comunitária Integrar')
+  })
+})

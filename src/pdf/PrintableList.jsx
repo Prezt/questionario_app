@@ -28,6 +28,10 @@ function publicImageSrc(path) {
 
 const styles = StyleSheet.create({
   page: {
+    // Coluna flex para o rodape poder ser empurrado pro pe com marginTop auto.
+    display: 'flex',
+    flexDirection: 'column',
+    minHeight: '100%',
     paddingTop: 40,
     paddingBottom: 40,
     paddingHorizontal: 48,
@@ -60,7 +64,10 @@ const styles = StyleSheet.create({
   },
   contextTitle: { fontSize: 9, fontWeight: 'bold', marginBottom: 2 },
   contextText: { marginBottom: 2 },
-  contextReference: { fontStyle: 'italic', color: '#666', marginTop: 2 },
+  // Sem `fontStyle: italic` aqui: o italico vem pela familia, via a prop
+  // `italic` do RichText. `fontStyle` era herdado pelos <Text> aninhados e
+  // pedia "Helvetica-Bold + italic", par que nao existe registrado.
+  contextReference: { color: '#666', marginTop: 2 },
   statement: { marginBottom: 4 },
   altLine: { flexDirection: 'row', marginBottom: 2 },
   altKey: { width: 16, fontWeight: 'bold' },
@@ -76,11 +83,14 @@ const styles = StyleSheet.create({
   },
   bubble: { marginRight: 10 },
   image: { maxWidth: 220, maxHeight: 160, marginVertical: 4 },
+  // Em fluxo, nao `position: absolute`. O rodape absoluto nao renderizava:
+  // com `lineHeight` herdado da pagina ele saia do documento calado, e tirar o
+  // lineHeight da pagina custa 25% a 50% de folha a mais (o padrao do
+  // @react-pdf e mais alto que 1.4). `marginTop: auto` numa pagina flex-column
+  // prega ele no pe de toda folha sem tocar na metrica do corpo.
   footer: {
-    position: 'absolute',
-    bottom: 18,
-    left: 48,
-    right: 48,
+    marginTop: 'auto',
+    paddingTop: 8,
     fontSize: 7,
     color: '#C9C9C9',
     flexDirection: 'row',
@@ -93,24 +103,34 @@ const styles = StyleSheet.create({
   sub: { fontSize: 6, verticalAlign: 'sub' },
 })
 
-/** Texto com <b>/<i>/<sub>/<sup> resolvidos em <Text> aninhado. */
-function RichText({ children, style }) {
+/**
+ * Texto com <b>/<i>/<sub>/<sup> resolvidos em <Text> aninhado.
+ *
+ * `italic` marca que o bloco inteiro e italico (a referencia do contexto e).
+ * A variacao tem que virar nome de familia — Helvetica-BoldOblique — e nunca
+ * `fontStyle`, que o @react-pdf herda e combina com a familia do trecho ate
+ * pedir um par inexistente. Mesma convencao do PdfTable.
+ */
+function RichText({ children, style, italic: blockItalic = false }) {
   const segments = inlineSegments(children)
   if (!segments.length) return null
   return (
     <Text style={style}>
-      {segments.map((seg, i) => (
-        <Text
-          key={i}
-          style={[
-            seg.bold && seg.italic ? styles.boldItalic : seg.bold ? styles.bold : seg.italic ? styles.italic : null,
-            seg.sup ? styles.sup : null,
-            seg.sub ? styles.sub : null,
-          ]}
-        >
-          {seg.text}
-        </Text>
-      ))}
+      {segments.map((seg, i) => {
+        const it = seg.italic || blockItalic
+        return (
+          <Text
+            key={i}
+            style={[
+              seg.bold && it ? styles.boldItalic : seg.bold ? styles.bold : it ? styles.italic : null,
+              seg.sup ? styles.sup : null,
+              seg.sub ? styles.sub : null,
+            ]}
+          >
+            {seg.text}
+          </Text>
+        )
+      })}
     </Text>
   )
 }
@@ -158,11 +178,16 @@ function Header({ title }) {
 
 const CURRENT_YEAR = new Date().getFullYear()
 
+/**
+ * Sem numero de pagina: `render` nao produz nada nesta versao do @react-pdf,
+ * nem no <Text> filho, nem com `fixed` proprio, nem na View do rodape — foram
+ * sete construcoes testadas, todas mudas ou derrubando o rodape junto. Ficava
+ * codigo morto pendurado no documento.
+ */
 function Footer() {
   return (
     <View style={styles.footer} fixed>
       <Text>{`Projeto de Educação Comunitária Integrar · ${CURRENT_YEAR}`}</Text>
-      <Text render={({ pageNumber, totalPages }) => `${pageNumber} / ${totalPages}`} />
     </View>
   )
 }
@@ -178,7 +203,7 @@ function ContextBlock({ context }) {
       {hasText || hasImages
         ? <Blocks raw={context.text ?? ''} images={context.images ?? []} textStyle={styles.contextText} imageStyle={styles.image} />
         : null}
-      {context.reference ? <RichText style={styles.contextReference}>{context.reference}</RichText> : null}
+      {context.reference ? <RichText style={styles.contextReference} italic>{context.reference}</RichText> : null}
     </View>
   )
 }
@@ -225,16 +250,45 @@ function QuestionBlock({ q, index, contexts }) {
   )
 }
 
+/**
+ * Quantas questoes entram em cada <Page>. NAO e quantas cabem por folha: a
+ * Page continua quebrando sozinha em quantas folhas precisar.
+ *
+ * Existe porque uma unica <Page> com a lista inteira estoura o layout a partir
+ * de ~15 questoes com figura — o erro "unsupported number: -1.97e+22", que e
+ * uma coordenada lixo vindo da arvore de layout saturada. O limite e
+ * cumulativo (quanto conteudo, nao quantas questoes), entao remover qualquer
+ * pedaco do bloco so empurra o limiar: com 40 questoes quebra de todo jeito.
+ *
+ * Fatiar da a cada grupo a sua propria arvore. 6 foi medido contra o banco (8 ainda quebrava nas
+ * 60 questoes mais pesadas): custa ~5% de folha a mais que a pagina unica.
+ */
+const QUESTOES_POR_PAGINA = 6
+
+function chunk(arr, n) {
+  const out = []
+  for (let i = 0; i < arr.length; i += n) out.push(arr.slice(i, i + n))
+  return out
+}
+
 export default function PrintableList({ title = 'Lista de Exercícios', questions = [], contexts = {} }) {
+  const grupos = chunk(questions, QUESTOES_POR_PAGINA)
   return (
     <Document title={title} author="Trilha Integrar">
-      <Page size="A4" style={styles.page}>
-        <Header title={title} />
-        {questions.map((q, i) => (
-          <QuestionBlock key={q.id ?? i} q={q} index={i} contexts={contexts} />
-        ))}
-        <Footer />
-      </Page>
+      {(grupos.length ? grupos : [[]]).map((grupo, gi) => (
+        <Page key={gi} size="A4" style={styles.page}>
+          <Header title={title} />
+          {grupo.map((q, i) => (
+            <QuestionBlock
+              key={q.id ?? `${gi}-${i}`}
+              q={q}
+              index={gi * QUESTOES_POR_PAGINA + i}
+              contexts={contexts}
+            />
+          ))}
+          <Footer />
+        </Page>
+      ))}
     </Document>
   )
 }

@@ -48,3 +48,21 @@ describe('questionThumb', () => {
     expect(questionThumb(q({ images: ['https://x/y.png'] }), {}).src).toBe('https://x/y.png')
   })
 })
+
+describe('questionThumb · contextIds do JSON publico', () => {
+  // O banco chama a coluna de context_keys; os arquivos em public/ usam
+  // contextIds. O EnemPicker le os arquivos, entao a busca precisa dos dois.
+  it('cai para a imagem do contexto quando a questao usa contextIds', () => {
+    const contexts = { ctx1: { images: ['figuras/ctx.png'] } }
+    const question = { alternatives: { a: 'a', b: 'b' }, contextIds: ['ctx1'] }
+    expect(questionThumb(question, contexts)).toEqual({
+      src: '/figuras/ctx.png', caption: '', from: 'contexto',
+    })
+  })
+
+  it('aceita contextId singular (formato antigo)', () => {
+    const contexts = { ctx1: { images: ['figuras/ctx.png'] } }
+    const question = { alternatives: { a: 'a' }, contextId: 'ctx1' }
+    expect(questionThumb(question, contexts).src).toBe('/figuras/ctx.png')
+  })
+})

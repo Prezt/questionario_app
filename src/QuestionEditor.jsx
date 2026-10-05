@@ -8,6 +8,29 @@ function MoonIcon() { return <svg width="18" height="18" viewBox="0 0 24 24" fil
 
 const ALT_KEYS = ['a', 'b', 'c', 'd', 'e']
 
+/** Primeira figura da questao, para a miniatura da lista. */
+export function firstImageSrc(q) {
+  for (const img of q?.images ?? []) {
+    const src = typeof img === 'string' ? img : img?.src
+    if (src) return src
+  }
+  return ''
+}
+
+/**
+ * URL servivel para a miniatura da imagem.
+ *
+ * Arquivo carregado na hora chega como data: URL; questao importada do ENEM
+ * chega como caminho relativo ("figuras/q108_2025_fig1.png"), que precisa da
+ * barra inicial pra nao ser resolvido contra a rota atual. Mesma regra de
+ * QuestionPreview.jsx e PrintableList.jsx.
+ */
+export function imagePreviewSrc(src) {
+  if (!src) return ''
+  if (src.startsWith('http://') || src.startsWith('https://') || src.startsWith('data:')) return src
+  return src.startsWith('/') ? src : `/${src}`
+}
+
 const SUGGESTED_TAGS = [
   "álgebra","análise combinatória","análise de dados","aritmética e números",
   "biologia","biologia molecular","biotecnologia","botânica",
@@ -144,8 +167,8 @@ function ImageInput({ images, onChange, onInsertTag, onAdd }) {
               onChange={e => update(i, 'caption', e.target.value)}
             />
           </div>
-          {img.src.startsWith('data:') && (
-            <img src={img.src} alt="preview" className="qe-image-preview" />
+          {img.src && (
+            <img src={imagePreviewSrc(img.src)} alt={img.caption || 'preview'} className="qe-image-preview" loading="lazy" />
           )}
         </div>
       ))}
@@ -600,6 +623,14 @@ export default function QuestionEditor({ onClose, embedded = false, quickAdd = f
             <div className="qe-question-list">
               {questions.map(q => (
                 <div key={q.id} className={`qe-question-item${editingQ?.id === q.id ? ' qe-question-item--active' : ''}`}>
+                  {firstImageSrc(q) && (
+                    <img
+                      className="qe-question-item-thumb"
+                      src={imagePreviewSrc(firstImageSrc(q))}
+                      alt="Figura da questão"
+                      loading="lazy"
+                    />
+                  )}
                   <div className="qe-question-item-left">
                     <div className="qe-question-item-meta">
                       <span className="qe-question-num">Q{q.number}</span>

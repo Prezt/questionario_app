@@ -417,3 +417,26 @@
   font-size: 0.82rem;
 }
 .qe-export-msg { margin: 0.75rem 0 0; font-size: 0.85rem; color: #16a34a; font-weight: 500; }
+
+/* Miniatura da figura na linha da questao salva. `contain` porque grafico e
+   tabela larga viram recorte ilegivel com `cover`. */
+.qe-question-item-thumb {
+  width: 54px;
+  height: 54px;
+  object-fit: contain;
+  border-radius: 6px;
+  border: 1px solid var(--border);
+  background: #fff;
+  flex-shrink: 0;
+}
+
+/* Miniatura no resultado do importador do ENEM. */
+.qe-picker-item-thumb {
+  width: 64px;
+  height: 64px;
+  object-fit: contain;
+  border-radius: 6px;
+  border: 1px solid var(--border);
+  background: #fff;
+  align-self: flex-start;
+}

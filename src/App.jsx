@@ -461,6 +461,13 @@ const CHANGELOG = [
       'Figura vai no lugar do marcador',
       'Miniatura da questão ao montar lista',
       'Botão ver questão na seleção',
+      'Imagem aparece ao criar lista',
+      'Miniatura ao importar questão do ENEM',
+      'Lista longa não quebra mais o PDF',
+      'Citação em negrito não derruba o PDF',
+      'Buscar sem filtrar ano ou área',
+      'Subfiltros mostram só o que resta',
+      'Rodapé do Projeto volta a imprimir',
     ],
   },
   {
