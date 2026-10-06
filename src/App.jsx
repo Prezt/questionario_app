@@ -111,6 +111,7 @@ import {
 } from './parseQuestionFigures.js'
 import { calcTriScores } from './triScoring.js'
 import { richHtml, richHtmlBr } from './richHtml.js'
+import { explanationKey } from './explanationKey.js'
 import { parseQuestionPath } from './questionPath.js'
 import { subscribeToKatexReady } from './renderMath.js'
 import {
@@ -436,8 +437,8 @@ function formatTime(seconds) {
   return `${m}:${String(s).padStart(2, '0')}`
 }
 
-const APP_VERSION = '3.2.0'
-const APP_VERSION_DATE = '28/09/2026'
+const APP_VERSION = '3.2.2'
+const APP_VERSION_DATE = '06/10/2026'
 
 const REVIEW_STATUS = [
   { year: 2025, linguagens: true, humanas: true, natureza: true, matematica: true },
@@ -451,6 +452,24 @@ const REVIEW_STATUS = [
 ]
 
 const CHANGELOG = [
+  {
+    version: '3.2.2',
+    date: '06/10/2026',
+    items: [
+      'Resolução em quase todas as questões',
+      'Explicação de professor nunca é sobrescrita',
+      'Espanhol e inglês com resolução própria',
+      'ENEM 2018 ganhou resoluções',
+    ],
+  },
+  {
+    version: '3.2.1',
+    date: '05/10/2026',
+    items: [
+      'Inglês e espanhol têm explicação própria',
+      'Mais resoluções disponíveis nas questões',
+    ],
+  },
   {
     version: '3.2.0',
     date: '28/09/2026',
@@ -5382,7 +5401,7 @@ export default function App() {
                   })()}
 
                   {showAnswer && attempt && (() => {
-                    const expKey = `${question.area}:${question.year}:${question.test}:${question.number}`
+                    const expKey = explanationKey(question)
                     const currentText = explanationOverrides[expKey] ?? question.explanation ?? ''
                     const canEdit = user?.role === 'prof' || user?.role === 'admin'
                     return (
@@ -5398,6 +5417,7 @@ export default function App() {
                               year: question.year,
                               test: question.test,
                               number: question.number,
+                              language: question.language ?? null,
                               explanation: newText,
                             }),
                           })

@@ -4,11 +4,10 @@ import { readFile, writeFile } from 'node:fs/promises'
 import { dirname, resolve } from 'node:path'
 import { fileURLToPath } from 'node:url'
 import { verifyToken } from '../api/_auth.js'
+import { explanationKey } from '../src/explanationKey.js'
 
 const __dirname = dirname(fileURLToPath(import.meta.url))
 const STORE_PATH = resolve(__dirname, '../public/explanations.json')
-
-const keyFor = (area, year, test, number) => `${area}:${year}:${test}:${number}`
 
 async function readStore() {
   try {
@@ -39,11 +38,12 @@ export default async function handler(req, res) {
 
   if (req.method === 'POST') {
     const { area, year, test, number, explanation } = req.body ?? {}
+    const language = req.body?.language || null
     if (!area || !Number.isInteger(year) || !test || !Number.isInteger(number) || typeof explanation !== 'string') {
       return res.status(400).json({ error: 'Campos inválidos' })
     }
     const store = await readStore()
-    const k = keyFor(area, year, test, number)
+    const k = explanationKey({ area, year, test, number, language })
     store[k] = explanation
     await writeStore(store)
     return res.json({ ok: true, key: k, explanation })
@@ -54,9 +54,10 @@ export default async function handler(req, res) {
       return res.status(403).json({ error: 'Apenas admin pode limpar' })
     }
     const { area, year, test, number } = req.query ?? {}
+    const language = req.query?.language || null
     const store = await readStore()
     if (area && year && test && number) {
-      const k = keyFor(area, Number(year), test, Number(number))
+      const k = explanationKey({ area, year: Number(year), test, number: Number(number), language })
       const had = k in store
       delete store[k]
       await writeStore(store)

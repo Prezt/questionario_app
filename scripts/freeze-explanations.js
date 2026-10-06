@@ -8,6 +8,7 @@ import fs from 'fs'
 import path from 'path'
 import { fileURLToPath } from 'url'
 import { neon } from '@neondatabase/serverless'
+import { explanationKey } from '../src/explanationKey.js'
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
 const ROOT = path.resolve(__dirname, '..')
@@ -16,7 +17,7 @@ const PUBLIC_DIR = path.join(ROOT, 'public')
 const sql = neon(process.env.DATABASE_URL)
 
 const rows = await sql`
-  SELECT area, year, test, number, explanation
+  SELECT area, year, test, number, language, explanation
   FROM explanations
 `
 
@@ -30,8 +31,9 @@ const byFile = new Map()
 for (const r of rows) {
   const filename = `${r.area}_enem_${r.year}.json`
   if (!byFile.has(filename)) byFile.set(filename, new Map())
-  // key by (test, number) — area/year are implicit in the filename
-  byFile.get(filename).set(`${r.test}:${r.number}`, r.explanation)
+  // Chave completa dos dois lados (inclui idioma): linguagens 1-5 repete o
+  // numero entre ingles e espanhol, e `test:number` colava as duas.
+  byFile.get(filename).set(explanationKey(r), r.explanation)
 }
 
 let totalUpdated = 0
@@ -48,7 +50,7 @@ for (const [filename, edits] of byFile) {
   const data = JSON.parse(fs.readFileSync(filepath, 'utf8'))
   let changed = 0
   for (const q of data) {
-    const k = `${q.test}:${q.number}`
+    const k = explanationKey(q)
     if (edits.has(k) && q.explanation !== edits.get(k)) {
       q.explanation = edits.get(k)
       changed++

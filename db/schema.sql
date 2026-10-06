@@ -54,16 +54,20 @@ CREATE TABLE IF NOT EXISTS daily_challenge_results (
   UNIQUE(user_id, challenge_date)
 );
 
--- Teacher/admin explanations per ENEM question, keyed by (area, year, test, number).
+-- Teacher/admin explanations per ENEM question, keyed by
+-- (area, year, test, number, language). O idioma entra porque linguagens 1-5
+-- repete o numero entre ingles e espanhol; e UNIQUE NULLS NOT DISTINCT em vez
+-- de PRIMARY KEY porque language e NULL na maioria das questoes (ver 011).
 CREATE TABLE IF NOT EXISTS explanations (
   area        TEXT NOT NULL,
   year        INTEGER NOT NULL,
   test        TEXT NOT NULL,
   number      INTEGER NOT NULL,
+  language    TEXT,
   explanation TEXT NOT NULL,
   updated_by  INTEGER REFERENCES users(id) ON DELETE SET NULL,
   updated_at  TIMESTAMPTZ DEFAULT NOW(),
-  PRIMARY KEY (area, year, test, number)
+  CONSTRAINT explanations_key UNIQUE NULLS NOT DISTINCT (area, year, test, number, language)
 );
 
 -- Indexes

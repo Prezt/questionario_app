@@ -7,6 +7,7 @@ import { readFile, writeFile, readdir } from 'node:fs/promises'
 import { dirname, resolve, join } from 'node:path'
 import { fileURLToPath } from 'node:url'
 import { verifyToken } from '../api/_auth.js'
+import { explanationKey } from '../src/explanationKey.js'
 
 const __dirname = dirname(fileURLToPath(import.meta.url))
 const PUBLIC_DIR = resolve(__dirname, '../public')
@@ -38,13 +39,15 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: 'Falha ao ler explanations.json' })
   }
 
-  // Group by `${area}_enem_${year}.json` → Map of `${test}:${number}` → explanation
+  // Agrupa por `${area}_enem_${year}.json`. A chave guardada no Map e a propria
+  // chave da explicacao, que ja carrega o idioma — sem ele, linguagens 1-5
+  // colava ingles e espanhol na mesma entrada.
   const byFile = new Map()
   for (const [k, text] of Object.entries(store)) {
-    const [area, year, test, number] = k.split(':')
+    const [area, year] = k.split(':')
     const filename = `${area}_enem_${year}.json`
     if (!byFile.has(filename)) byFile.set(filename, new Map())
-    byFile.get(filename).set(`${test}:${number}`, text)
+    byFile.get(filename).set(k, text)
   }
 
   const files = (await readdir(PUBLIC_DIR)).filter(isQuestionFile)
@@ -61,7 +64,7 @@ export default async function handler(req, res) {
     const data = JSON.parse(await readFile(filepath, 'utf8'))
     let changed = 0
     for (const q of data) {
-      const k = `${q.test}:${q.number}`
+      const k = explanationKey(q)
       if (edits.has(k) && q.explanation !== edits.get(k)) {
         q.explanation = edits.get(k)
         changed++
